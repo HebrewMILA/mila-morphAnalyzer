@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/smip/jars/jax-qname.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/xsdlib.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/jaxb-libs.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/namespace.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/javaee-api-6.0.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/xerces-2_11_0/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/mysql-connector-java-3.1.11-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/home/smip/jars/DBPool_v4.7.1.jar"/>
+	<classpathentry kind="lib" path="/home/smip/jars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Mar 15 17:37:52 IST 2012
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=/home/smip/morphologicalAnalizer.jar
+manifest.mergeall=true
+manifest.mainclass=mw.MWXMLMorphAnalyzer
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=<jar|jaxb-api.jar>;<jar|namespace.jar>;<jar|javaee-api-6.0.jar>;<jar|xercesImpl.jar>;<jar|mysql-connector-java-3.1.11-bin.jar>
+includes=
