@@ -132,7 +132,7 @@ public class HMM2Morph {
 		System.exit(0);
 	}
 
-	final String JAXB_PACKAGE = "generated";
+	final String JAXB_PACKAGE = "mila.generated";
 	final static String UNSPECIFED = "unspecified";
 	String outputFile = "";
 	BufferedReader bi = null;

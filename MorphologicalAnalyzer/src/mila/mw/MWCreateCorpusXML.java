@@ -86,7 +86,7 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 	public void createXMLDoc() {
 		// System.out.println("(F) createXMLdOC() ");
 		try {
-			jc = JAXBContext.newInstance("generated");
+			jc = JAXBContext.newInstance("mila.generated");
 		} catch (JAXBException e) {
 			System.out
 					.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");

@@ -25,7 +25,7 @@ public class CorpusAnalysisReader {
 	private List articleTypeList;
 	private String xmlFile;
 	private Corpus collection;
-	private static final String JAXB_PACKAGE = "generated";
+	private static final String JAXB_PACKAGE = "mila.generated";
 	JAXBContext jc;
 
 	// -------------------------------------------------------------------------------------------------------------------------------

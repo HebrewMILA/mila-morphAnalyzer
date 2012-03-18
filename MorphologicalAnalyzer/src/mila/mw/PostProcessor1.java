@@ -1,6 +1,5 @@
 ﻿package mila.mw;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -75,6 +74,22 @@ public class PostProcessor1 extends Connected {
 
 	// -----------------------------------------------------------------------------------------------------------------------------------
 	public boolean checkBackwords(String id, String expectedPrevId,
+			String prevId, String transliterated,
+			ArrayList prevTransliteratedList, AnalysisType analysis,
+			TokenType prevToken, TokenType token)
+			throws UnsupportedEncodingException, JAXBException {
+		if (this.useDataFiles) {
+			return this.checkBackwordsNew(id, expectedPrevId, prevId,
+					transliterated, prevTransliteratedList, analysis,
+					prevToken, token);
+		} else {
+			return this.checkBackwordsOld(id, expectedPrevId, prevId,
+					transliterated, prevTransliteratedList, analysis,
+					prevToken, token);
+		}
+	}
+
+	public boolean checkBackwordsNew(String id, String expectedPrevId,
 			String prevId, String transliterated,
 			ArrayList prevTransliteratedList, AnalysisType analysis,
 			TokenType prevToken, TokenType token)
@@ -689,7 +704,7 @@ public class PostProcessor1 extends Connected {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------------------------
-	public boolean checkBackwordsOLD(String id, String expectedPrevId,
+	public boolean checkBackwordsOld(String id, String expectedPrevId,
 			String prevId, String transliterated,
 			ArrayList prevTransliteratedList, AnalysisType analysis,
 			TokenType prevToken, TokenType token)
@@ -1101,12 +1116,14 @@ public class PostProcessor1 extends Connected {
 			String nextTransliterated, String pos, String type)
 			throws UnsupportedEncodingException {
 		if (this.useDataFiles) {
-			return this.checkForwardNew(transliterated, nextTransliterated, pos, type);
+			return this.checkForwardNew(transliterated, nextTransliterated,
+					pos, type);
 		} else {
-			return this.checkForwardOld(transliterated, nextTransliterated, pos, type);
+			return this.checkForwardOld(transliterated, nextTransliterated,
+					pos, type);
 		}
 	}
-	
+
 	public boolean checkForwardNew(String transliterated,
 			String nextTransliterated, String pos, String type)
 			throws UnsupportedEncodingException {

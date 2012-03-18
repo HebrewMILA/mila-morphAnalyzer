@@ -34,86 +34,86 @@ public class ObjectFactory extends
 	static {
 		defaultImplementations.put(
 				(mila.generated.TransliterationType.StringType.class),
-				"generated.impl.TransliterationTypeImpl.StringTypeImpl");
+				"mila.generated.impl.TransliterationTypeImpl.StringTypeImpl");
 		defaultImplementations.put((mila.generated.InterjectionType.class),
-				"generated.impl.InterjectionTypeImpl");
+				"mila.generated.impl.InterjectionTypeImpl");
 		defaultImplementations.put((mila.generated.WprefixType.class),
-				"generated.impl.WprefixTypeImpl");
+				"mila.generated.impl.WprefixTypeImpl");
 		defaultImplementations.put((mila.generated.ExistentialType.class),
-				"generated.impl.ExistentialTypeImpl");
+				"mila.generated.impl.ExistentialTypeImpl");
 		defaultImplementations.put((mila.generated.ArticleType.class),
-				"generated.impl.ArticleTypeImpl");
+				"mila.generated.impl.ArticleTypeImpl");
 		defaultImplementations.put((mila.generated.NegationType.class),
-				"generated.impl.NegationTypeImpl");
+				"mila.generated.impl.NegationTypeImpl");
 		defaultImplementations.put((mila.generated.SuffixType.class),
-				"generated.impl.SuffixTypeImpl");
+				"mila.generated.impl.SuffixTypeImpl");
 		defaultImplementations.put((mila.generated.SourceType.class),
-				"generated.impl.SourceTypeImpl");
+				"mila.generated.impl.SourceTypeImpl");
 		defaultImplementations.put((mila.generated.NumeralType.class),
-				"generated.impl.NumeralTypeImpl");
+				"mila.generated.impl.NumeralTypeImpl");
 		defaultImplementations.put((mila.generated.AnalysisType.class),
-				"generated.impl.AnalysisTypeImpl");
+				"mila/generated.impl.AnalysisTypeImpl");
 		defaultImplementations.put((mila.generated.PronounType.class),
-				"generated.impl.PronounTypeImpl");
+				"mila.generated.impl.PronounTypeImpl");
 		defaultImplementations.put((mila.generated.MetadataType.class),
-				"generated.impl.MetadataTypeImpl");
+				"mila.generated.impl.MetadataTypeImpl");
 		defaultImplementations.put((mila.generated.GenderNumberPersonType.class),
-				"generated.impl.GenderNumberPersonTypeImpl");
+				"mila.generated.impl.GenderNumberPersonTypeImpl");
 		defaultImplementations.put((mila.generated.ZVLType.class),
-				"generated.impl.ZVLTypeImpl");
+				"mila.generated.impl.ZVLTypeImpl");
 		defaultImplementations.put((mila.generated.VerbType.class),
-				"generated.impl.VerbTypeImpl");
+				"mila.generated.impl.VerbTypeImpl");
 		defaultImplementations.put(
 				(mila.generated.GenderNumberStatusDefinitenessType.class),
-				"generated.impl.GenderNumberStatusDefinitenessTypeImpl");
+				"mila.generated.impl.GenderNumberStatusDefinitenessTypeImpl");
 		defaultImplementations.put((mila.generated.UnknownType.class),
-				"generated.impl.UnknownTypeImpl");
+				"mila.generated.impl.UnknownTypeImpl");
 		defaultImplementations.put((mila.generated.ConjunctionType.class),
-				"generated.impl.ConjunctionTypeImpl");
+				"mila.generated.impl.ConjunctionTypeImpl");
 		defaultImplementations.put((mila.generated.MWEType.class),
-				"generated.impl.MWETypeImpl");
+				"mila.generated.impl.MWETypeImpl");
 		defaultImplementations.put((mila.generated.CopulaType.class),
-				"generated.impl.CopulaTypeImpl");
+				"mila.generated.impl.CopulaTypeImpl");
 		defaultImplementations.put((mila.generated.ImpersonalType.class),
-				"generated.impl.ImpersonalTypeImpl");
+				"mila.generated.impl.ImpersonalTypeImpl");
 		defaultImplementations.put((mila.generated.ModalType.class),
-				"generated.impl.ModalTypeImpl");
+				"mila.generated.impl.ModalTypeImpl");
 		defaultImplementations.put((mila.generated.GenderNumberStatusType.class),
-				"generated.impl.GenderNumberStatusTypeImpl");
+				"mila.generated.impl.GenderNumberStatusTypeImpl");
 		defaultImplementations.put((mila.generated.URLType.class),
-				"generated.impl.URLTypeImpl");
+				"mila.generated.impl.URLTypeImpl");
 		defaultImplementations.put((mila.generated.CorpusType.class),
-				"generated.impl.CorpusTypeImpl");
+				"mila.generated.impl.CorpusTypeImpl");
 		defaultImplementations.put((mila.generated.TitleType.class),
-				"generated.impl.TitleTypeImpl");
+				"mila.generated.impl.TitleTypeImpl");
 		defaultImplementations.put((mila.generated.Corpus.class),
-				"generated.impl.CorpusImpl");
+				"mila.generated.impl.CorpusImpl");
 		defaultImplementations.put((mila.generated.ProperNameType.class),
-				"generated.impl.ProperNameTypeImpl");
+				"mila.generated.impl.ProperNameTypeImpl");
 		defaultImplementations.put((mila.generated.PrefixType.class),
-				"generated.impl.PrefixTypeImpl");
+				"mila.generated.impl.PrefixTypeImpl");
 		defaultImplementations.put((mila.generated.TransliterationType.class),
-				"generated.impl.TransliterationTypeImpl");
+				"mila.generated.impl.TransliterationTypeImpl");
 		defaultImplementations.put((mila.generated.SentenceType.class),
-				"generated.impl.SentenceTypeImpl");
+				"mila.generated.impl.SentenceTypeImpl");
 		defaultImplementations.put((mila.generated.ParagraphType.class),
-				"generated.impl.ParagraphTypeImpl");
+				"mila.generated.impl.ParagraphTypeImpl");
 		defaultImplementations.put((mila.generated.TokenType.class),
-				"generated.impl.TokenTypeImpl");
+				"mila.generated.impl.TokenTypeImpl");
 		defaultImplementations.put((mila.generated.QuantifierType.class),
-				"generated.impl.QuantifierTypeImpl");
+				"mila.generated.impl.QuantifierTypeImpl");
 		defaultImplementations.put((mila.generated.InterrogativeType.class),
-				"generated.impl.InterrogativeTypeImpl");
+				"mila.generated.impl.InterrogativeTypeImpl");
 		defaultImplementations.put((mila.generated.PunctuationType.class),
-				"generated.impl.PunctuationTypeImpl");
+				"mila.generated.impl.PunctuationTypeImpl");
 		defaultImplementations.put((mila.generated.NumberExpressionType.class),
-				"generated.impl.NumberExpressionTypeImpl");
+				"mila.generated.impl.NumberExpressionTypeImpl");
 		defaultImplementations.put((mila.generated.ParticipleType.class),
-				"generated.impl.ParticipleTypeImpl");
+				"mila.generated.impl.ParticipleTypeImpl");
 		defaultImplementations.put((mila.generated.ForeignType.class),
-				"generated.impl.ForeignTypeImpl");
+				"mila.generated.impl.ForeignTypeImpl");
 		defaultImplementations.put((mila.generated.BaseType.class),
-				"generated.impl.BaseTypeImpl");
+				"mila.generated.impl.BaseTypeImpl");
 		rootTagMap.put(new javax.xml.namespace.QName("", "corpus"),
 				(mila.generated.Corpus.class));
 	}

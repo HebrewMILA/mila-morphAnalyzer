@@ -50,7 +50,7 @@ import mila.lexicon.utils.Translate;
  *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class MorphMult2TaggerFormat implements Constants {
-	// final String JAXB_PACKAGE = "generated";
+	// final String JAXB_PACKAGE = "mila.generated";
 
 	public static void main(String[] args) {
 		String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\output1.xml";
