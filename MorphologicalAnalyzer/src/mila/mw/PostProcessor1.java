@@ -1100,6 +1100,16 @@ public class PostProcessor1 extends Connected {
 	public boolean checkForward(String transliterated,
 			String nextTransliterated, String pos, String type)
 			throws UnsupportedEncodingException {
+		if (this.useDataFiles) {
+			return this.checkForwardNew(transliterated, nextTransliterated, pos, type);
+		} else {
+			return this.checkForwardOld(transliterated, nextTransliterated, pos, type);
+		}
+	}
+	
+	public boolean checkForwardNew(String transliterated,
+			String nextTransliterated, String pos, String type)
+			throws UnsupportedEncodingException {
 		// System.out.println("############# (F) PostProcessor1:checkForward(pos="+pos+")");
 		boolean rt = false;
 		String selectSql = "";
@@ -1193,7 +1203,7 @@ public class PostProcessor1 extends Connected {
 	}
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
-	public boolean checkForwardOLD(String transliterated,
+	public boolean checkForwardOld(String transliterated,
 			String nextTransliterated, String pos, String type)
 			throws UnsupportedEncodingException {
 		boolean rt = false;
