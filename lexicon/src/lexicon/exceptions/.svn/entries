@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="6"
+   name=""
+   committed-date="2005-12-07T09:45:48.400693Z"
+   url="http://cl.haifa.ac.il/svn/repos/LEXICON/src/lexicon/exceptions"
+   last-author="dshach01"
+   kind="dir"
+   uuid="adf17a31-c606-0410-b649-cde64c528b1b"
+   repos="http://cl.haifa.ac.il/svn/repos"
+   revision="44"/>
+<entry
+   committed-rev="6"
+   name="AException.java"
+   text-time="2006-02-21T14:58:10.475808Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="aa51d4650235634be48021612f3b23e6"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.025160Z"/>
+<entry
+   committed-rev="6"
+   name="LSecurityException.java"
+   text-time="2006-02-21T14:58:10.545908Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="7a5b6090de64e000d66a5e70205f5096"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.085246Z"/>
+<entry
+   committed-rev="6"
+   name="NullItemListException.java"
+   text-time="2006-02-21T14:58:10.585966Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="80fcc302d419d8dbfe5b3b5313413ad7"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.135318Z"/>
+<entry
+   committed-rev="6"
+   name="CorpusParserException.java"
+   text-time="2006-02-21T14:58:10.656067Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="b368e25e73514cb8e598caed7c56a391"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.195404Z"/>
+<entry
+   committed-rev="6"
+   name="NullArticleListException.java"
+   text-time="2006-02-21T14:58:10.696124Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="9e8108847f97c9a7fc752ed1dc058e19"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.285534Z"/>
+<entry
+   committed-rev="6"
+   name="LAuthorizationException.java"
+   text-time="2006-02-21T14:58:10.726168Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="e55550ea18c43e42c6125099e93fc59e"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.335606Z"/>
+<entry
+   committed-rev="6"
+   name="LPasswordException.java"
+   text-time="2006-02-21T14:58:10.776240Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="bcb59445a0eef45cf3212c1e02d7132a"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.375664Z"/>
+<entry
+   committed-rev="6"
+   name="LexiconParserException.java"
+   text-time="2006-02-21T14:58:10.816297Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="bd9532e48b2509688559c35d696d5b79"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:10.425736Z"/>
+</wc-entries>

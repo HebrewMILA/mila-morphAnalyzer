@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="6"
+   name=""
+   committed-date="2005-12-07T09:45:48.400693Z"
+   url="http://cl.haifa.ac.il/svn/repos/LEXICON/src/lexicon/contents/exception_types"
+   last-author="dshach01"
+   kind="dir"
+   uuid="adf17a31-c606-0410-b649-cde64c528b1b"
+   repos="http://cl.haifa.ac.il/svn/repos"
+   revision="44"/>
+<entry
+   committed-rev="6"
+   name="VerbExceptionType.java"
+   text-time="2006-02-21T14:58:24.005262Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="b915f45158cb9e16f0a1c0531ee36c67"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:23.244168Z"/>
+<entry
+   committed-rev="6"
+   name="NounExceptionType.java"
+   text-time="2006-02-21T14:58:24.035305Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="221abcd2d5de714d27af4c709529b44a"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:23.334297Z"/>
+<entry
+   committed-rev="6"
+   name="InterrogativeExceptionType.java"
+   text-time="2006-02-21T14:58:24.235593Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="0228e640436e09612b1c7841d69c90dd"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:23.374355Z"/>
+<entry
+   committed-rev="6"
+   name="AdverbExceptionType.java"
+   text-time="2006-02-21T14:58:24.455910Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="aa42507d23af131bef1497b8f443974a"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:23.684801Z"/>
+<entry
+   committed-rev="6"
+   name="QuantifierExceptionType.java"
+   text-time="2006-02-21T14:58:24.546040Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="be6164d3e2ff4e0ad35eeda2db6c00cc"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:23.744888Z"/>
+<entry
+   committed-rev="6"
+   name="PrepositionExceptionType.java"
+   text-time="2006-02-21T14:58:24.606126Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="d1b9f607dd7257ace2ef84825d452d1f"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:23.784945Z"/>
+<entry
+   committed-rev="6"
+   name="InterjectionExceptionType.java"
+   text-time="2006-02-21T14:58:24.696256Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="f2f0423856cc29051ac4362cd6cdee26"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:23.875075Z"/>
+</wc-entries>

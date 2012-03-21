@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="6"
+   name=""
+   committed-date="2005-12-07T09:45:48.400693Z"
+   url="http://cl.haifa.ac.il/svn/repos/LEXICON/src/lexicon/tools"
+   last-author="dshach01"
+   kind="dir"
+   uuid="adf17a31-c606-0410-b649-cde64c528b1b"
+   repos="http://cl.haifa.ac.il/svn/repos"
+   revision="44"/>
+<entry
+   committed-rev="6"
+   name="LexiconUtils.java"
+   text-time="2006-02-21T14:58:09.574512Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="839bede6c6ee696b06b7d21c4d85573c"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:09.434310Z"/>
+<entry
+   committed-rev="6"
+   name="Names.java"
+   text-time="2006-02-21T14:58:09.624584Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="efd1be1fe1e0d82ddb1b437c06613c7e"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:09.464353Z"/>
+<entry
+   committed-rev="6"
+   name="LexiconReader.java"
+   text-time="2006-02-21T14:58:09.674656Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="70f0e470b025ab7f2d8dab6efaa1df76"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:09.524440Z"/>
+</wc-entries>

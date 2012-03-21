@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="6"
+   name=""
+   committed-date="2005-12-07T09:45:48.400693Z"
+   url="http://cl.haifa.ac.il/svn/repos/LEXICON/src/lexicon/jaxb/impl"
+   last-author="dshach01"
+   kind="dir"
+   uuid="adf17a31-c606-0410-b649-cde64c528b1b"
+   repos="http://cl.haifa.ac.il/svn/repos"
+   revision="44"/>
+<entry
+   committed-rev="6"
+   name="InterjectionExceptionTypeImpl.java"
+   text-time="2006-02-21T14:58:17.716219Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="6a44eb268af8354cf32f7907288e1990"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:11.527320Z"/>
+<entry
+   committed-rev="6"
+   name="VerbExceptionTypeImpl.java"
+   text-time="2006-02-21T14:58:17.786320Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="c981ffc66162bb10ae5b158f60bf80bc"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:11.727608Z"/>
+<entry
+   name="runtime"
+   kind="dir"/>
+<entry
+   committed-rev="6"
+   name="MetadataTypeImpl.java"
+   text-time="2006-02-21T14:58:17.846406Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="b79a3f237fd9d236e5848df92d3fd6a0"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.654692Z"/>
+<entry
+   committed-rev="6"
+   name="AdjectiveLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:17.876449Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="30acf0e65951800b648bbc8109c24686"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.684736Z"/>
+<entry
+   committed-rev="6"
+   name="AdverbLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.146838Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="a42f1c8197218af0436ecc60c592cba5"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.834952Z"/>
+<entry
+   committed-rev="6"
+   name="NegationLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.196910Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="b2ee7a94adf22487d18a32e874d2f776"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.915067Z"/>
+<entry
+   committed-rev="6"
+   name="QuantifierLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.287040Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="4fff06f9940b030b9c5bb04099ac9f84"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.225513Z"/>
+<entry
+   committed-rev="6"
+   name="EnglishTypeImpl.java"
+   text-time="2006-02-21T14:58:18.256996Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="59810dc7266f4f2a5ca91ef1a321bce2"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.135384Z"/>
+<entry
+   committed-rev="6"
+   name="PrepositionExceptionTypeImpl.java"
+   text-time="2006-02-21T14:58:18.317083Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="a7e30c19cb16302c0b3b29bcfa82b9cf"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.265571Z"/>
+<entry
+   committed-rev="6"
+   name="ExampleTypeImpl.java"
+   text-time="2006-02-21T14:58:18.387184Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="ebb51785fb8b48d7e89f7d8f926db116"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.325657Z"/>
+<entry
+   committed-rev="6"
+   name="ItemTypeImpl.java"
+   text-time="2006-02-21T14:58:18.457284Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="235cbf72e5af0e771eb01cff1676035d"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.425801Z"/>
+<entry
+   committed-rev="6"
+   name="SourceTypeImpl.java"
+   text-time="2006-02-21T14:58:18.557428Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="73bd7d3515833392dfc150581f8dfffb"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.495902Z"/>
+<entry
+   committed-rev="6"
+   name="NounLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.647558Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="8d29178b964cc70655a701e1b6e267f5"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.586032Z"/>
+<entry
+   committed-rev="6"
+   name="InterrogativeExceptionTypeImpl.java"
+   text-time="2006-02-21T14:58:18.617515Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="dce3dbf2e43a5b3f4263604276f57e1f"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.555988Z"/>
+<entry
+   committed-rev="6"
+   name="LexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.587472Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="5d0704ff4b3f4fac2c6505f4de1ab50f"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.525945Z"/>
+<entry
+   committed-rev="6"
+   name="ConjunctionLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:17.686176Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="6e042de3ce88b6ad071fbe56c1473aef"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:11.437190Z"/>
+<entry
+   committed-rev="6"
+   name="SenseTypeImpl.java"
+   text-time="2006-02-21T14:58:17.756276Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="3c2b10e3e53696cfe3accb3f2e4d4520"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:11.597420Z"/>
+<entry
+   committed-rev="6"
+   name="InterjectionLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:17.816363Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="2da0192fafef8c723f3ca44a36acaf55"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:11.787694Z"/>
+<entry
+   committed-rev="6"
+   name="VerbLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:17.966579Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="6d686ce3c325aef9983f477f539a3d38"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.714779Z"/>
+<entry
+   committed-rev="6"
+   name="AdverbExceptionTypeImpl.java"
+   text-time="2006-02-21T14:58:17.996622Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="874255e04fb9d8b50c0fdb24c8048eed"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.744822Z"/>
+<entry
+   committed-rev="6"
+   name="PronounLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.056708Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="341e3dadd82ea0f2aae7143e5c6ab9a2"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.764851Z"/>
+<entry
+   committed-rev="6"
+   name="TransliterationTypeImpl.java"
+   text-time="2006-02-21T14:58:18.106780Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="461b59138f7a6cd3b4e0fa42d989bbd9"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.804908Z"/>
+<entry
+   committed-rev="6"
+   name="SynsetTypeImpl.java"
+   text-time="2006-02-21T14:58:18.166867Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="7ad24ebcc7d16a3c2fb31b197ee2be77"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:16.864995Z"/>
+<entry
+   committed-rev="6"
+   name="QuantifierExceptionTypeImpl.java"
+   text-time="2006-02-21T14:58:18.226953Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="f4f703414dfab3f691f3b1a136f9c392"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.015211Z"/>
+<entry
+   committed-rev="6"
+   name="ProperNameLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.357140Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="a5f929d333e515a894dbbea705fdf3d9"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.305628Z"/>
+<entry
+   committed-rev="6"
+   name="PrepositionLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.427241Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="2e5a795d2500ae38fda0abe3ffc4a263"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.375729Z"/>
+<entry
+   committed-rev="6"
+   name="NounExceptionTypeImpl.java"
+   text-time="2006-02-21T14:58:18.487328Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="645f5eb53d927e56a57ce38070bc1f5c"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.455844Z"/>
+<entry
+   committed-rev="6"
+   name="LexiconImpl.java"
+   text-time="2006-02-21T14:58:18.517371Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="c3a03ec5ebceada419ef14204dc3ecf1"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.475873Z"/>
+<entry
+   committed-rev="6"
+   name="InterrogativeLexiconTypeImpl.java"
+   text-time="2006-02-21T14:58:18.687616Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="1914bb65ba96f20d81343da75abead99"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.626089Z"/>
+<entry
+   committed-rev="6"
+   name="JAXBVersion.java"
+   text-time="2006-02-21T14:58:18.717659Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="0d772ab54e93b71bc1ada4db82e64772"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:17.646118Z"/>
+</wc-entries>
