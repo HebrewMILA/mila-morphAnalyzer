@@ -5,14 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for MultiWordPrepositionLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1912)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1912)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="MultiWordPrepositionLexiconType">
  *   &lt;complexContent>
@@ -33,119 +36,109 @@ package lexicon.jaxb;
  */
 public interface MultiWordPrepositionLexiconType {
 
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getType();
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getType();
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setType(java.lang.String value);
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setType(java.lang.String value);
+	/**
+	 * Gets the value of the construct1 property.
+	 * 
+	 */
+	boolean isConstruct1();
 
-    /**
-     * Gets the value of the construct1 property.
-     * 
-     */
-    boolean isConstruct1();
+	/**
+	 * Sets the value of the construct1 property.
+	 * 
+	 */
+	void setConstruct1(boolean value);
 
-    /**
-     * Sets the value of the construct1 property.
-     * 
-     */
-    void setConstruct1(boolean value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the consecutive property.
+	 * 
+	 */
+	boolean isConsecutive();
 
-    /**
-     * Gets the value of the consecutive property.
-     * 
-     */
-    boolean isConsecutive();
+	/**
+	 * Sets the value of the consecutive property.
+	 * 
+	 */
+	void setConsecutive(boolean value);
 
-    /**
-     * Sets the value of the consecutive property.
-     * 
-     */
-    void setConsecutive(boolean value);
+	/**
+	 * Gets the value of the base2 property.
+	 * 
+	 */
+	boolean isBase2();
 
-    /**
-     * Gets the value of the base2 property.
-     * 
-     */
-    boolean isBase2();
+	/**
+	 * Sets the value of the base2 property.
+	 * 
+	 */
+	void setBase2(boolean value);
 
-    /**
-     * Sets the value of the base2 property.
-     * 
-     */
-    void setBase2(boolean value);
+	/**
+	 * Gets the value of the mwPos property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getMwPos();
 
-    /**
-     * Gets the value of the mwPos property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getMwPos();
+	/**
+	 * Sets the value of the mwPos property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setMwPos(java.lang.String value);
 
-    /**
-     * Sets the value of the mwPos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setMwPos(java.lang.String value);
+	/**
+	 * Gets the value of the possessive2 property.
+	 * 
+	 */
+	boolean isPossessive2();
 
-    /**
-     * Gets the value of the possessive2 property.
-     * 
-     */
-    boolean isPossessive2();
+	/**
+	 * Sets the value of the possessive2 property.
+	 * 
+	 */
+	void setPossessive2(boolean value);
 
-    /**
-     * Sets the value of the possessive2 property.
-     * 
-     */
-    void setPossessive2(boolean value);
+	/**
+	 * Gets the value of the base1 property.
+	 * 
+	 */
+	boolean isBase1();
 
-    /**
-     * Gets the value of the base1 property.
-     * 
-     */
-    boolean isBase1();
-
-    /**
-     * Sets the value of the base1 property.
-     * 
-     */
-    void setBase1(boolean value);
+	/**
+	 * Sets the value of the base1 property.
+	 * 
+	 */
+	void setBase1(boolean value);
 
 }

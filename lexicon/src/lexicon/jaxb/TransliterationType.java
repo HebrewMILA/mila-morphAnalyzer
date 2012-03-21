@@ -5,16 +5,20 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * îáðä äîúàø îéôåé áéï îçøåæåú áòáøéú ìîçøåæåú áúòúé÷ ìèéðé. áôøè, îúåàø îéôåé àåúéåú.
+ * ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
  * 
  * Java content class for TransliterationType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 82)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 82)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="TransliterationType">
  *   &lt;complexContent>
@@ -41,122 +45,113 @@ package lexicon.jaxb;
  */
 public interface TransliterationType {
 
+	/**
+	 * Gets the value of the String property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the String property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getString().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.TransliterationType.StringType}
+	 * 
+	 */
+	java.util.List getString();
 
-    /**
-     * Gets the value of the String property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the String property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getString().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.TransliterationType.StringType}
-     * 
-     */
-    java.util.List getString();
+	/**
+	 * Gets the value of the from property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getFrom();
 
-    /**
-     * Gets the value of the from property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getFrom();
+	/**
+	 * Sets the value of the from property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setFrom(java.lang.String value);
 
-    /**
-     * Sets the value of the from property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setFrom(java.lang.String value);
+	/**
+	 * Gets the value of the to property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getTo();
 
-    /**
-     * Gets the value of the to property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getTo();
+	/**
+	 * Sets the value of the to property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setTo(java.lang.String value);
 
-    /**
-     * Sets the value of the to property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setTo(java.lang.String value);
+	/**
+	 * Java content class for anonymous complex type.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 90)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;complexType>
+	 *   &lt;complexContent>
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+	 *       &lt;attribute name="hebrew" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+	 *       &lt;attribute name="latin" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+	 *     &lt;/restriction>
+	 *   &lt;/complexContent>
+	 * &lt;/complexType>
+	 * </pre>
+	 * 
+	 */
+	public interface StringType {
 
+		/**
+		 * Gets the value of the latin property.
+		 * 
+		 * @return possible object is {@link java.lang.String}
+		 */
+		java.lang.String getLatin();
 
-    /**
-     * Java content class for anonymous complex type.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 90)
-     * <p>
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="hebrew" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="latin" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     */
-    public interface StringType {
+		/**
+		 * Sets the value of the latin property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link java.lang.String}
+		 */
+		void setLatin(java.lang.String value);
 
+		/**
+		 * Gets the value of the hebrew property.
+		 * 
+		 * @return possible object is {@link java.lang.String}
+		 */
+		java.lang.String getHebrew();
 
-        /**
-         * Gets the value of the latin property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link java.lang.String}
-         */
-        java.lang.String getLatin();
+		/**
+		 * Sets the value of the hebrew property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link java.lang.String}
+		 */
+		void setHebrew(java.lang.String value);
 
-        /**
-         * Sets the value of the latin property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link java.lang.String}
-         */
-        void setLatin(java.lang.String value);
-
-        /**
-         * Gets the value of the hebrew property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link java.lang.String}
-         */
-        java.lang.String getHebrew();
-
-        /**
-         * Sets the value of the hebrew property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link java.lang.String}
-         */
-        void setHebrew(java.lang.String value);
-
-    }
+	}
 
 }

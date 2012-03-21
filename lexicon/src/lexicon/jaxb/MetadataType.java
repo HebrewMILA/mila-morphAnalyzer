@@ -5,16 +5,20 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * ùí äì÷ñé÷åï, âøñä, âøñä ôðéîéú, úàøéê òãëåï àçøåï, ùí îúçæ÷ äîñîê, ãåà"ì ùì îúçæ÷ äîñîê, øùéîú î÷åøåú, øùéåï ùéîåù, îéôåé îçøåæåú ìúòúé÷ ìåòæé.
+ * ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½"ï¿½ ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
  * 
  * Java content class for MetadataType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 51)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 51)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="MetadataType">
  *   &lt;complexContent>
@@ -39,184 +43,160 @@ package lexicon.jaxb;
  */
 public interface MetadataType {
 
+	/**
+	 * Gets the value of the comment property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getComment();
 
-    /**
-     * Gets the value of the comment property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getComment();
+	/**
+	 * Sets the value of the comment property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setComment(java.lang.String value);
 
-    /**
-     * Sets the value of the comment property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setComment(java.lang.String value);
+	/**
+	 * Gets the value of the email property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getEmail();
 
-    /**
-     * Gets the value of the email property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getEmail();
+	/**
+	 * Sets the value of the email property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setEmail(java.lang.String value);
 
-    /**
-     * Sets the value of the email property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setEmail(java.lang.String value);
+	/**
+	 * Gets the value of the version property.
+	 * 
+	 */
+	float getVersion();
 
-    /**
-     * Gets the value of the version property.
-     * 
-     */
-    float getVersion();
+	/**
+	 * Sets the value of the version property.
+	 * 
+	 */
+	void setVersion(float value);
 
-    /**
-     * Sets the value of the version property.
-     * 
-     */
-    void setVersion(float value);
+	/**
+	 * Gets the value of the license property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getLicense();
 
-    /**
-     * Gets the value of the license property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getLicense();
+	/**
+	 * Sets the value of the license property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setLicense(java.lang.String value);
 
-    /**
-     * Sets the value of the license property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setLicense(java.lang.String value);
+	/**
+	 * Gets the value of the date property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDate();
 
-    /**
-     * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDate();
+	/**
+	 * Sets the value of the date property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDate(java.lang.String value);
 
-    /**
-     * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDate(java.lang.String value);
+	/**
+	 * Gets the value of the transliteration property.
+	 * 
+	 * @return possible object is {@link lexicon.jaxb.TransliterationType}
+	 */
+	lexicon.jaxb.TransliterationType getTransliteration();
 
-    /**
-     * Gets the value of the transliteration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link lexicon.jaxb.TransliterationType}
-     */
-    lexicon.jaxb.TransliterationType getTransliteration();
+	/**
+	 * Sets the value of the transliteration property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link lexicon.jaxb.TransliterationType}
+	 */
+	void setTransliteration(lexicon.jaxb.TransliterationType value);
 
-    /**
-     * Sets the value of the transliteration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link lexicon.jaxb.TransliterationType}
-     */
-    void setTransliteration(lexicon.jaxb.TransliterationType value);
+	/**
+	 * Gets the value of the maintainer property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getMaintainer();
 
-    /**
-     * Gets the value of the maintainer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getMaintainer();
+	/**
+	 * Sets the value of the maintainer property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setMaintainer(java.lang.String value);
 
-    /**
-     * Sets the value of the maintainer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setMaintainer(java.lang.String value);
+	/**
+	 * Gets the value of the Source property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the Source property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getSource().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.SourceType}
+	 * 
+	 */
+	java.util.List getSource();
 
-    /**
-     * Gets the value of the Source property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the Source property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getSource().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.SourceType}
-     * 
-     */
-    java.util.List getSource();
+	/**
+	 * Gets the value of the name property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getName();
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getName();
+	/**
+	 * Sets the value of the name property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setName(java.lang.String value);
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setName(java.lang.String value);
+	/**
+	 * Gets the value of the revision property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getRevision();
 
-    /**
-     * Gets the value of the revision property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getRevision();
-
-    /**
-     * Sets the value of the revision property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setRevision(java.lang.String value);
+	/**
+	 * Sets the value of the revision property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setRevision(java.lang.String value);
 
 }

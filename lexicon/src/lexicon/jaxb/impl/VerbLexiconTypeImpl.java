@@ -5,3389 +5,3721 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb.impl;
 
-public class VerbLexiconTypeImpl implements lexicon.jaxb.VerbLexiconType, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-{
-
-    protected java.lang.String _Feminine;
-    protected boolean has_InflectInfinitiveIndependent;
-    protected boolean _InflectInfinitiveIndependent;
-    protected boolean has_InflectInfinitive;
-    protected boolean _InflectInfinitive;
-    protected boolean has_InflectFuture;
-    protected boolean _InflectFuture;
-    protected boolean has_InflectBeinoniConstruct;
-    protected boolean _InflectBeinoniConstruct;
-    protected boolean has_InflectBeinoniPossessive;
-    protected boolean _InflectBeinoniPossessive;
-    protected java.lang.String _IpSource;
-    protected boolean has_Foreign;
-    protected boolean _Foreign;
-    protected java.lang.String _InflectionPattern;
-    protected boolean has_InflectBeinoni;
-    protected boolean _InflectBeinoni;
-    protected boolean has_InflectInfinitivel;
-    protected boolean _InflectInfinitivel;
-    protected java.lang.String _Valence;
-    protected boolean has_InflectOrigin;
-    protected boolean _InflectOrigin;
-    protected java.lang.String _Root;
-    protected boolean has_InflectPast;
-    protected boolean _InflectPast;
-    protected com.sun.xml.bind.util.ListImpl _AddOrReplaceOrRemove;
-    protected java.lang.String _Binyan;
-    protected boolean has_InflectImperative;
-    protected boolean _InflectImperative;
-    protected boolean has_InflectInfinitiveb;
-    protected boolean _InflectInfinitiveb;
-    public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-    private static com.sun.msv.grammar.Grammar schemaFragment;
-
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.VerbLexiconType.class);
-    }
-
-    public java.lang.String getFeminine() {
-        if (_Feminine == null) {
-            return "unspecified";
-        } else {
-            return _Feminine;
-        }
-    }
-
-    public void setFeminine(java.lang.String value) {
-        _Feminine = value;
-    }
-
-    public boolean isInflectInfinitiveIndependent() {
-        if (!has_InflectInfinitiveIndependent) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("false"));
-        } else {
-            return _InflectInfinitiveIndependent;
-        }
-    }
-
-    public void setInflectInfinitiveIndependent(boolean value) {
-        _InflectInfinitiveIndependent = value;
-        has_InflectInfinitiveIndependent = true;
-    }
-
-    public boolean isInflectInfinitive() {
-        if (!has_InflectInfinitive) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectInfinitive;
-        }
-    }
-
-    public void setInflectInfinitive(boolean value) {
-        _InflectInfinitive = value;
-        has_InflectInfinitive = true;
-    }
-
-    public boolean isInflectFuture() {
-        if (!has_InflectFuture) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectFuture;
-        }
-    }
-
-    public void setInflectFuture(boolean value) {
-        _InflectFuture = value;
-        has_InflectFuture = true;
-    }
-
-    public boolean isInflectBeinoniConstruct() {
-        if (!has_InflectBeinoniConstruct) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectBeinoniConstruct;
-        }
-    }
-
-    public void setInflectBeinoniConstruct(boolean value) {
-        _InflectBeinoniConstruct = value;
-        has_InflectBeinoniConstruct = true;
-    }
-
-    public boolean isInflectBeinoniPossessive() {
-        if (!has_InflectBeinoniPossessive) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectBeinoniPossessive;
-        }
-    }
-
-    public void setInflectBeinoniPossessive(boolean value) {
-        _InflectBeinoniPossessive = value;
-        has_InflectBeinoniPossessive = true;
-    }
-
-    public java.lang.String getIpSource() {
-        if (_IpSource == null) {
-            return "Mila";
-        } else {
-            return _IpSource;
-        }
-    }
-
-    public void setIpSource(java.lang.String value) {
-        _IpSource = value;
-    }
-
-    public boolean isForeign() {
-        if (!has_Foreign) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("false"));
-        } else {
-            return _Foreign;
-        }
-    }
-
-    public void setForeign(boolean value) {
-        _Foreign = value;
-        has_Foreign = true;
-    }
-
-    public java.lang.String getInflectionPattern() {
-        return _InflectionPattern;
-    }
-
-    public void setInflectionPattern(java.lang.String value) {
-        _InflectionPattern = value;
-    }
-
-    public boolean isInflectBeinoni() {
-        if (!has_InflectBeinoni) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectBeinoni;
-        }
-    }
-
-    public void setInflectBeinoni(boolean value) {
-        _InflectBeinoni = value;
-        has_InflectBeinoni = true;
-    }
-
-    public boolean isInflectInfinitivel() {
-        if (!has_InflectInfinitivel) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectInfinitivel;
-        }
-    }
-
-    public void setInflectInfinitivel(boolean value) {
-        _InflectInfinitivel = value;
-        has_InflectInfinitivel = true;
-    }
-
-    public java.lang.String getValence() {
-        if (_Valence == null) {
-            return "unspecified";
-        } else {
-            return _Valence;
-        }
-    }
-
-    public void setValence(java.lang.String value) {
-        _Valence = value;
-    }
-
-    public boolean isInflectOrigin() {
-        if (!has_InflectOrigin) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("false"));
-        } else {
-            return _InflectOrigin;
-        }
-    }
-
-    public void setInflectOrigin(boolean value) {
-        _InflectOrigin = value;
-        has_InflectOrigin = true;
-    }
-
-    public java.lang.String getRoot() {
-        return _Root;
-    }
-
-    public void setRoot(java.lang.String value) {
-        _Root = value;
-    }
-
-    public boolean isInflectPast() {
-        if (!has_InflectPast) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectPast;
-        }
-    }
-
-    public void setInflectPast(boolean value) {
-        _InflectPast = value;
-        has_InflectPast = true;
-    }
-
-    protected com.sun.xml.bind.util.ListImpl _getAddOrReplaceOrRemove() {
-        if (_AddOrReplaceOrRemove == null) {
-            _AddOrReplaceOrRemove = new com.sun.xml.bind.util.ListImpl(new java.util.ArrayList());
-        }
-        return _AddOrReplaceOrRemove;
-    }
-
-    public java.util.List getAddOrReplaceOrRemove() {
-        return _getAddOrReplaceOrRemove();
-    }
-
-    public java.lang.String getBinyan() {
-        if (_Binyan == null) {
-            return "unspecified";
-        } else {
-            return _Binyan;
-        }
-    }
-
-    public void setBinyan(java.lang.String value) {
-        _Binyan = value;
-    }
-
-    public boolean isInflectImperative() {
-        if (!has_InflectImperative) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectImperative;
-        }
-    }
-
-    public void setInflectImperative(boolean value) {
-        _InflectImperative = value;
-        has_InflectImperative = true;
-    }
-
-    public boolean isInflectInfinitiveb() {
-        if (!has_InflectInfinitiveb) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("true"));
-        } else {
-            return _InflectInfinitiveb;
-        }
-    }
-
-    public void setInflectInfinitiveb(boolean value) {
-        _InflectInfinitiveb = value;
-        has_InflectInfinitiveb = true;
-    }
-
-    public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-        return new lexicon.jaxb.impl.VerbLexiconTypeImpl.Unmarshaller(context);
-    }
-
-    public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx16 = 0;
-        final int len16 = ((_AddOrReplaceOrRemove == null)? 0 :_AddOrReplaceOrRemove.size());
-        while (idx16 != len16) {
-            while (idx16 != len16) {
-                context.childAsBody(((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove.get(idx16 ++)), "AddOrReplaceOrRemove");
-            }
-        }
-    }
-
-    public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx16 = 0;
-        final int len16 = ((_AddOrReplaceOrRemove == null)? 0 :_AddOrReplaceOrRemove.size());
-        if (_Binyan!= null) {
-            context.startAttribute("", "binyan");
-            try {
-                context.text(((java.lang.String) _Binyan), "Binyan");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_Feminine!= null) {
-            context.startAttribute("", "feminine");
-            try {
-                context.text(((java.lang.String) _Feminine), "Feminine");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_Foreign) {
-            context.startAttribute("", "foreign");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _Foreign)), "Foreign");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectBeinoni) {
-            context.startAttribute("", "inflectBeinoni");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectBeinoni)), "InflectBeinoni");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectBeinoniConstruct) {
-            context.startAttribute("", "inflectBeinoniConstruct");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectBeinoniConstruct)), "InflectBeinoniConstruct");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectBeinoniPossessive) {
-            context.startAttribute("", "inflectBeinoniPossessive");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectBeinoniPossessive)), "InflectBeinoniPossessive");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectFuture) {
-            context.startAttribute("", "inflectFuture");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectFuture)), "InflectFuture");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectImperative) {
-            context.startAttribute("", "inflectImperative");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectImperative)), "InflectImperative");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectInfinitive) {
-            context.startAttribute("", "inflectInfinitive");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectInfinitive)), "InflectInfinitive");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectInfinitiveIndependent) {
-            context.startAttribute("", "inflectInfinitiveIndependent");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectInfinitiveIndependent)), "InflectInfinitiveIndependent");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectInfinitiveb) {
-            context.startAttribute("", "inflectInfinitiveb");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectInfinitiveb)), "InflectInfinitiveb");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectInfinitivel) {
-            context.startAttribute("", "inflectInfinitivel");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectInfinitivel)), "InflectInfinitivel");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectOrigin) {
-            context.startAttribute("", "inflectOrigin");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectOrigin)), "InflectOrigin");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_InflectPast) {
-            context.startAttribute("", "inflectPast");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _InflectPast)), "InflectPast");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        context.startAttribute("", "inflectionPattern");
-        try {
-            context.text(((java.lang.String) _InflectionPattern), "InflectionPattern");
-        } catch (java.lang.Exception e) {
-            lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-        }
-        context.endAttribute();
-        if (_IpSource!= null) {
-            context.startAttribute("", "ipSource");
-            try {
-                context.text(((java.lang.String) _IpSource), "IpSource");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        context.startAttribute("", "root");
-        try {
-            context.text(((java.lang.String) _Root), "Root");
-        } catch (java.lang.Exception e) {
-            lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-        }
-        context.endAttribute();
-        if (_Valence!= null) {
-            context.startAttribute("", "valence");
-            try {
-                context.text(((java.lang.String) _Valence), "Valence");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        while (idx16 != len16) {
-            while (idx16 != len16) {
-                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove.get(idx16 ++)), "AddOrReplaceOrRemove");
-            }
-        }
-    }
-
-    public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx16 = 0;
-        final int len16 = ((_AddOrReplaceOrRemove == null)? 0 :_AddOrReplaceOrRemove.size());
-        while (idx16 != len16) {
-            while (idx16 != len16) {
-                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove.get(idx16 ++)), "AddOrReplaceOrRemove");
-            }
-        }
-    }
-
-    public java.lang.Class getPrimaryInterface() {
-        return (lexicon.jaxb.VerbLexiconType.class);
-    }
-
-    public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-        if (schemaFragment == null) {
-            schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\u001fcom.sun.msv.grammar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.su"
-+"n.msv.grammar.BinaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1t\u0000 Lcom/sun/msv/gra"
-+"mmar/Expression;L\u0000\u0004exp2q\u0000~\u0000\u0002xr\u0000\u001ecom.sun.msv.grammar.Expressi"
-+"on\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Ljava/lang/Boolean;L\u0000\u000b"
-+"expandedExpq\u0000~\u0000\u0002xpppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000pp"
-+"sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~"
-+"\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsr\u0000 com.sun.msv.grammar."
-+"OneOrMoreExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001ccom.sun.msv.grammar.UnaryExp\u0000\u0000\u0000\u0000\u0000"
-+"\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0003expq\u0000~\u0000\u0002xq\u0000~\u0000\u0003ppsr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000"
-+"\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0001ppsq\u0000~\u0000\u001appsq\u0000~\u0000\u001appsq\u0000~\u0000\u0017sr\u0000\u0011java.lang.Boolean"
-+"\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psr\u0000\'com.sun.msv.grammar.trex.ElementP"
-+"attern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameCla"
-+"ss;xr\u0000\u001ecom.sun.msv.grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUnd"
-+"eclaredAttributesL\u0000\fcontentModelq\u0000~\u0000\u0002xq\u0000~\u0000\u0003q\u0000~\u0000 p\u0000sq\u0000~\u0000\u001appsq"
-+"\u0000~\u0000\u0017q\u0000~\u0000 psr\u0000 com.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003"
-+"expq\u0000~\u0000\u0002L\u0000\tnameClassq\u0000~\u0000\"xq\u0000~\u0000\u0003q\u0000~\u0000 psr\u00002com.sun.msv.grammar"
-+".Expression$AnyStringExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003sq\u0000~\u0000\u001f\u0001q\u0000~\u0000*"
-+"sr\u0000 com.sun.msv.grammar.AnyNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.m"
-+"sv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpsr\u00000com.sun.msv.grammar.Exp"
-+"ression$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003q\u0000~\u0000+q\u0000~\u00000sr\u0000#com."
-+"sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNamet\u0000\u0012Lja"
-+"va/lang/String;L\u0000\fnamespaceURIq\u0000~\u00002xq\u0000~\u0000-t\u0000 lexicon.jaxb.Ver"
-+"bLexiconType.Addt\u0000+http://java.sun.com/jaxb/xjc/dummy-elemen"
-+"tsq\u0000~\u00000sq\u0000~\u0000\u0017ppsq\u0000~\u0000!pp\u0000sq\u0000~\u0000\u001appsq\u0000~\u0000\u0017q\u0000~\u0000 psq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000"
-+"*q\u0000~\u0000.q\u0000~\u00000sq\u0000~\u00001t\u0000$lexicon.jaxb.VerbLexiconType.Replaceq\u0000~\u0000"
-+"5sq\u0000~\u0000\u0017ppsq\u0000~\u0000!pp\u0000sq\u0000~\u0000\u001appsq\u0000~\u0000\u0017q\u0000~\u0000 psq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000*q\u0000~\u0000."
-+"q\u0000~\u00000sq\u0000~\u00001t\u0000#lexicon.jaxb.VerbLexiconType.Removeq\u0000~\u00005sq\u0000~\u0000\u001a"
-+"ppsq\u0000~\u0000\'q\u0000~\u0000 psr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002d"
-+"tt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~\u0000\u0002L\u0000\u0004namet\u0000\u001dL"
-+"com/sun/msv/util/StringPair;xq\u0000~\u0000\u0003ppsr\u0000)com.sun.msv.datatype"
-+".xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;x"
-+"r\u00009com.sun.msv.datatype.xsd.DataTypeWithValueConstraintFacet"
-+"\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000"
-+"\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lc"
-+"om/sun/msv/datatype/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lco"
-+"m/sun/msv/datatype/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u00002xr\u0000\'com"
-+".sun.msv.datatype.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceU"
-+"riq\u0000~\u00002L\u0000\btypeNameq\u0000~\u00002L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
-+"/xsd/WhiteSpaceProcessor;xpt\u0000\u0000t\u0000\nBinyanTypesr\u00005com.sun.msv.d"
-+"atatype.xsd.WhiteSpaceProcessor$Collapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.s"
-+"un.msv.datatype.xsd.WhiteSpaceProcessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0000\u0000sr\u0000\"co"
-+"m.sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.d"
-+"atatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun"
-+".msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.ms"
-+"v.datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000Pt\u0000 http://www.w3"
-+".org/2001/XMLSchemat\u0000\u0005tokenq\u0000~\u0000W\u0001q\u0000~\u0000\\t\u0000\u000benumerationsr\u0000\u0011java"
-+".util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bunspecifiedt\u0000\u0006Nif"
-+"\'alt\u0000\u0006Hif\'ilt\u0000\bHitpa\'elt\u0000\u0005Pa\'alt\u0000\u0006Huf\'alt\u0000\u0005Pu\'alt\u0000\u0005Pi\'elxsr\u0000"
-+"0com.sun.msv.grammar.Expression$NullSetExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000"
-+"xq\u0000~\u0000\u0003ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNa"
-+"meq\u0000~\u00002L\u0000\fnamespaceURIq\u0000~\u00002xpq\u0000~\u0000Tq\u0000~\u0000Ssq\u0000~\u00001t\u0000\u0006binyanq\u0000~\u0000Sq"
-+"\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 psq\u0000~\u0000Fppsq\u0000~\u0000Jq\u0000~\u0000St\u0000\fFeminineTypeq\u0000"
-+"~\u0000W\u0000\u0000q\u0000~\u0000\\q\u0000~\u0000\\q\u0000~\u0000_sq\u0000~\u0000`w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000\u000bunspecifiedt\u0000\u0002itt"
-+"\u0000\u0001ht\u0000\u0001txq\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000tq\u0000~\u0000Ssq\u0000~\u00001t\u0000\bfeminineq\u0000~\u0000Sq\u0000~\u00000sq\u0000~"
-+"\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 psq\u0000~\u0000Fppsr\u0000$com.sun.msv.datatype.xsd.Boolean"
-+"Type\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000Zq\u0000~\u0000]t\u0000\u0007booleanq\u0000~\u0000Wq\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000\u0082q\u0000~"
-+"\u0000]sq\u0000~\u00001t\u0000\u0007foreignq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t"
-+"\u0000\u000einflectBeinoniq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0017"
-+"inflectBeinoniConstructq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq"
-+"\u0000~\u00001t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 "
-+"pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\rinflectFutureq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000"
-+"~\u0000\u007fsq\u0000~\u00001t\u0000\u0011inflectImperativeq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq"
-+"\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0011inflectInfinitiveq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 p"
-+"q\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u001cinflectInfinitiveIndependentq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001app"
-+"sq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0012inflectInfinitivebq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001a"
-+"ppsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0012inflectInfinitivelq\u0000~\u0000Sq\u0000~\u00000sq\u0000~"
-+"\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\rinflectOriginq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001ap"
-+"psq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u000binflectPastq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\'ppsq\u0000~"
-+"\u0000Fppq\u0000~\u0000\\q\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000^q\u0000~\u0000]sq\u0000~\u00001t\u0000\u0011inflectionPatternq\u0000~\u0000"
-+"Ssq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u00b3sq\u0000~\u00001t\u0000\bipSourceq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\'p"
-+"pq\u0000~\u0000\u00b3sq\u0000~\u00001t\u0000\u0004rootq\u0000~\u0000Ssq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 psq\u0000~\u0000Fppsq\u0000~\u0000Jq\u0000"
-+"~\u0000St\u0000\u000bValenceTypeq\u0000~\u0000W\u0000\u0000q\u0000~\u0000\\q\u0000~\u0000\\q\u0000~\u0000_sq\u0000~\u0000`w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt"
-+"\u0000\u000bunspecifiedt\u0000\u0012transitiveWithPault\u0000\u0017intransitiveWithoutPaul"
-+"t\u0000\u0015transitiveWithoutPault\u0000\ntransitivet\u0000\u0014intransitiveWithPaul"
-+"t\u0000\fintransitivet\u0000\fditransitivexq\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000\u00c2q\u0000~\u0000Ssq\u0000~\u00001t\u0000"
-+"\u0007valenceq\u0000~\u0000Sq\u0000~\u00000sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000"
-+"\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/Lcom/sun/msv/grammar/ExpressionPool$Clo"
-+"sedHash;xpsr\u0000-com.sun.msv.grammar.ExpressionPool$ClosedHash\u00d7"
-+"j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/g"
-+"rammar/ExpressionPool;xp\u0000\u0000\u0000/\u0001pq\u0000~\u0000\u0010q\u0000~\u0000\u00a6q\u0000~\u0000\u0016q\u0000~\u0000}q\u0000~\u0000\u000bq\u0000~\u0000\b"
-+"q\u0000~\u0000\u00aeq\u0000~\u0000\u00b7q\u0000~\u0000\u009aq\u0000~\u0000\u00a2q\u0000~\u0000\u0011q\u0000~\u0000\u000fq\u0000~\u0000\u00aaq\u0000~\u0000\u0007q\u0000~\u0000\u008aq\u0000~\u0000\u001dq\u0000~\u0000\u0013q\u0000~\u0000\n"
-+"q\u0000~\u0000Dq\u0000~\u0000\fq\u0000~\u0000\u001cq\u0000~\u0000\u000eq\u0000~\u0000\u0015q\u0000~\u0000%q\u0000~\u00008q\u0000~\u0000?q\u0000~\u0000\u0092q\u0000~\u0000\u0019q\u0000~\u0000\u00beq\u0000~\u0000\u0096"
-+"q\u0000~\u0000\u0005q\u0000~\u0000\u0086q\u0000~\u0000\u001eq\u0000~\u00006q\u0000~\u0000=q\u0000~\u0000\rq\u0000~\u0000\u0006q\u0000~\u0000\u0012q\u0000~\u0000\u008eq\u0000~\u0000\u001bq\u0000~\u0000pq\u0000~\u0000\u0014"
-+"q\u0000~\u0000&q\u0000~\u00009q\u0000~\u0000@q\u0000~\u0000\u009eq\u0000~\u0000\tx"));
-        }
-        return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-    }
-
-    public static class AddImpl
-        extends lexicon.jaxb.impl.VerbExceptionTypeImpl
-        implements lexicon.jaxb.VerbLexiconType.Add, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-    {
-
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-        private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.VerbLexiconType.Add.class);
-        }
-
-        public java.lang.String ____jaxb_ri____getNamespaceURI() {
-            return "";
-        }
-
-        public java.lang.String ____jaxb_ri____getLocalName() {
-            return "add";
-        }
-
-        public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            return new lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.Unmarshaller(context);
-        }
-
-        public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-            context.startElement("", "add");
-            super.serializeURIs(context);
-            context.endNamespaceDecls();
-            super.serializeAttributes(context);
-            context.endAttributes();
-            super.serializeBody(context);
-            context.endElement();
-        }
-
-        public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public java.lang.Class getPrimaryInterface() {
-            return (lexicon.jaxb.VerbLexiconType.Add.class);
-        }
-
-        public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-            if (schemaFragment == null) {
-                schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
-+"\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
-+"grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
-+"\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
-+"msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
-+"ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
-+"mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
-+"q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000"
-+"\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000"
-+"\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~"
-+"\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com.sun"
-+".msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.dataty"
-+"pe.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv."
-+"datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.dat"
-+"atype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xs"
-+"d.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/Stri"
-+"ng;L\u0000\btypeNameq\u0000~\u0000 L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd"
-+"/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000"
-+"\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Colla"
-+"pse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcess"
-+"or\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetEx"
-+"pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t"
-+"\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespaceURIq\u0000~\u0000 xpq\u0000~\u0000$q\u0000~\u0000#sr"
-+"\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 com.su"
-+"n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameClass"
-+"q\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psq\u0000~\u0000"
-+"\u0017ppsr\u0000$com.sun.msv.datatype.xsd.BooleanType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001d"
-+"q\u0000~\u0000#t\u0000\u0007booleanq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u00005q\u0000~\u0000#sr\u0000#com.sun.msv.gra"
-+"mmar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespace"
-+"URIq\u0000~\u0000 xr\u0000\u001dcom.sun.msv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0010bei"
-+"noniConstructt\u0000\u0000sr\u00000com.sun.msv.grammar.Expression$EpsilonEx"
-+"pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u00000\u0001q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001pq\u0000~"
-+"\u00002sq\u0000~\u00007t\u0000\u0013beinoniDefinitenessq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001p"
-+"q\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u0006dottedq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsr"
-+"\u0000)com.sun.msv.datatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006val"
-+"uest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWi"
-+"thValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xs"
-+"d.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueChe"
-+"ckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl"
-+";L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000"
-+"\tfacetNameq\u0000~\u0000 xq\u0000~\u0000\u001fq\u0000~\u0000;t\u0000\nGenderTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"t\u0000\u000be"
-+"numerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000"
-+"\u000bunspecifiedt\u0000\bfemininet\u0000\u0016masculine and femininet\u0000\tmasculine"
-+"xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000Qq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006genderq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
-+".q\u0000~\u00001pq\u0000~\u00002sq\u0000~\u00007t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000"
-+",ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nNumberTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q"
-+"\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0006t\u0000\u000bunspecifiedt\u0000\u0013singular and p"
-+"luralt\u0000\u0004dualt\u0000\u000fdual and pluralt\u0000\bsingulart\u0000\u0006pluralxq\u0000~\u0000)sq\u0000~"
-+"\u0000*q\u0000~\u0000dq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006numberq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000"
-+"~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nPersonTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000"
-+"\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0005t\u0000\u000bunspecifiedt\u0000\u00013t\u0000\u00012t\u0000\u0003anyt\u0000\u00011xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000s"
-+"q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006personq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\u0007"
-+"PGNTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/S"
-+"gt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p"
-+"/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecified"
-+"t\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/"
-+"MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u0080q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0003pgnq\u0000~\u0000;sq\u0000~\u0000,"
-+"ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fRegisterTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\""
-+"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq"
-+"\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u009cq\u0000~\u0000;sq\u0000~\u00007t\u0000\bregisterq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
-+".q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fSpellingTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000"
-+"~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000)sq\u0000~\u0000*q\u0000"
-+"~\u0000\u00a8q\u0000~\u0000;sq\u0000~\u00007t\u0000\bspellingq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~"
-+"\u0000;t\u0000\tTenseTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bu"
-+"nspecifiedt\u0000\u0004pastt\u0000\nimperativet\u0000\u0007beinonit\u0000\ninfinitivet\u0000\u0006futu"
-+"ret\u0000\u000ebareInfinitivet\u0000\u0011passiveParticiplexq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00b2q\u0000~\u0000"
-+";sq\u0000~\u00007t\u0000\u0005tenseq\u0000~\u0000;sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u000etransliteratedq\u0000~\u0000"
-+";sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\bundottedq\u0000~\u0000;sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~"
-+"\u0000\u0017ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001dq"
-+"\u0000~\u0000#t\u0000\u0005QNameq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00caq\u0000~\u0000#sq\u0000~\u00007t\u0000\u0004typet\u0000)http:/"
-+"/www.w3.org/2001/XMLSchema-instanceq\u0000~\u0000=sq\u0000~\u00007t\u0000\u0003addq\u0000~\u0000;sr\u0000"
-+"\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/"
-+"Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.sun"
-+".msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\r"
-+"streamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPool"
-+";xp\u0000\u0000\u0000\u0018\u0001pq\u0000~\u0000\u000eq\u0000~\u0000\u00a4q\u0000~\u0000\u00c5q\u0000~\u0000Gq\u0000~\u0000\\q\u0000~\u0000\u0013q\u0000~\u0000Cq\u0000~\u0000\u000bq\u0000~\u0000\u0011q\u0000~\u0000?q"
-+"\u0000~\u0000oq\u0000~\u0000\u000fq\u0000~\u0000\u0012q\u0000~\u0000\u0098q\u0000~\u0000\u0016q\u0000~\u0000\u0014q\u0000~\u0000-q\u0000~\u0000`q\u0000~\u0000\tq\u0000~\u0000\u0010q\u0000~\u0000\u0015q\u0000~\u0000\rq"
-+"\u0000~\u0000\nq\u0000~\u0000\fx"));
-            }
-            return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-        }
-
-        public class Unmarshaller
-            extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-        {
-
-
-            public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-                super(context, "----");
-            }
-
-            protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-                this(context);
-                state = startState;
-            }
-
-            public java.lang.Object owner() {
-                return lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this;
-            }
-
-            public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  0 :
-                            if (("add" == ___local)&&("" == ___uri)) {
-                                context.pushAttributes(__atts, true);
-                                state = 1;
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            break;
-                    }
-                    super.enterElement(___uri, ___local, ___qname, __atts);
-                    break;
-                }
-            }
-
-            public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  2 :
-                            if (("add" == ___local)&&("" == ___uri)) {
-                                context.popAttributes();
-                                state = 3;
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                            return ;
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                    }
-                    super.leaveElement(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  3 :
-                            revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                            return ;
-                        case  1 :
-                            if (("beinoniConstruct" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("beinoniDefiniteness" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("dotted" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("gender" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("inflectBeinoniPossessive" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("number" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("person" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("pgn" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                    }
-                    super.enterAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  3 :
-                            revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                    }
-                    super.leaveAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void handleText(final java.lang.String value)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    try {
-                        switch (state) {
-                            case  3 :
-                                revertToParentFromText(value);
-                                return ;
-                            case  1 :
-                                attIdx = context.getAttribute("", "beinoniConstruct");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "beinoniDefiniteness");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "dotted");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "gender");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "number");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "person");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "pgn");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                break;
-                        }
-                    } catch (java.lang.RuntimeException e) {
-                        handleUnexpectedTextException(value, e);
-                    }
-                    break;
-                }
-            }
-
-        }
-
-    }
-
-    public static class RemoveImpl
-        extends lexicon.jaxb.impl.VerbExceptionTypeImpl
-        implements lexicon.jaxb.VerbLexiconType.Remove, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-    {
-
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-        private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.VerbLexiconType.Remove.class);
-        }
-
-        public java.lang.String ____jaxb_ri____getNamespaceURI() {
-            return "";
-        }
-
-        public java.lang.String ____jaxb_ri____getLocalName() {
-            return "remove";
-        }
-
-        public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            return new lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.Unmarshaller(context);
-        }
-
-        public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-            context.startElement("", "remove");
-            super.serializeURIs(context);
-            context.endNamespaceDecls();
-            super.serializeAttributes(context);
-            context.endAttributes();
-            super.serializeBody(context);
-            context.endElement();
-        }
-
-        public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public java.lang.Class getPrimaryInterface() {
-            return (lexicon.jaxb.VerbLexiconType.Remove.class);
-        }
-
-        public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-            if (schemaFragment == null) {
-                schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
-+"\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
-+"grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
-+"\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
-+"msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
-+"ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
-+"mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
-+"q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000"
-+"\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000"
-+"\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~"
-+"\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com.sun"
-+".msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.dataty"
-+"pe.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv."
-+"datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.dat"
-+"atype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xs"
-+"d.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/Stri"
-+"ng;L\u0000\btypeNameq\u0000~\u0000 L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd"
-+"/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000"
-+"\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Colla"
-+"pse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcess"
-+"or\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetEx"
-+"pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t"
-+"\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespaceURIq\u0000~\u0000 xpq\u0000~\u0000$q\u0000~\u0000#sr"
-+"\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 com.su"
-+"n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameClass"
-+"q\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psq\u0000~\u0000"
-+"\u0017ppsr\u0000$com.sun.msv.datatype.xsd.BooleanType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001d"
-+"q\u0000~\u0000#t\u0000\u0007booleanq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u00005q\u0000~\u0000#sr\u0000#com.sun.msv.gra"
-+"mmar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespace"
-+"URIq\u0000~\u0000 xr\u0000\u001dcom.sun.msv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0010bei"
-+"noniConstructt\u0000\u0000sr\u00000com.sun.msv.grammar.Expression$EpsilonEx"
-+"pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u00000\u0001q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001pq\u0000~"
-+"\u00002sq\u0000~\u00007t\u0000\u0013beinoniDefinitenessq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001p"
-+"q\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u0006dottedq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsr"
-+"\u0000)com.sun.msv.datatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006val"
-+"uest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWi"
-+"thValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xs"
-+"d.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueChe"
-+"ckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl"
-+";L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000"
-+"\tfacetNameq\u0000~\u0000 xq\u0000~\u0000\u001fq\u0000~\u0000;t\u0000\nGenderTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"t\u0000\u000be"
-+"numerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000"
-+"\u000bunspecifiedt\u0000\bfemininet\u0000\u0016masculine and femininet\u0000\tmasculine"
-+"xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000Qq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006genderq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
-+".q\u0000~\u00001pq\u0000~\u00002sq\u0000~\u00007t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000"
-+",ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nNumberTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q"
-+"\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0006t\u0000\u000bunspecifiedt\u0000\u0013singular and p"
-+"luralt\u0000\u0004dualt\u0000\u000fdual and pluralt\u0000\bsingulart\u0000\u0006pluralxq\u0000~\u0000)sq\u0000~"
-+"\u0000*q\u0000~\u0000dq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006numberq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000"
-+"~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nPersonTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000"
-+"\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0005t\u0000\u000bunspecifiedt\u0000\u00013t\u0000\u00012t\u0000\u0003anyt\u0000\u00011xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000s"
-+"q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006personq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\u0007"
-+"PGNTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/S"
-+"gt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p"
-+"/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecified"
-+"t\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/"
-+"MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u0080q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0003pgnq\u0000~\u0000;sq\u0000~\u0000,"
-+"ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fRegisterTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\""
-+"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq"
-+"\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u009cq\u0000~\u0000;sq\u0000~\u00007t\u0000\bregisterq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
-+".q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fSpellingTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000"
-+"~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000)sq\u0000~\u0000*q\u0000"
-+"~\u0000\u00a8q\u0000~\u0000;sq\u0000~\u00007t\u0000\bspellingq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~"
-+"\u0000;t\u0000\tTenseTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bu"
-+"nspecifiedt\u0000\u0004pastt\u0000\nimperativet\u0000\u0007beinonit\u0000\ninfinitivet\u0000\u0006futu"
-+"ret\u0000\u000ebareInfinitivet\u0000\u0011passiveParticiplexq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00b2q\u0000~\u0000"
-+";sq\u0000~\u00007t\u0000\u0005tenseq\u0000~\u0000;sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u000etransliteratedq\u0000~\u0000"
-+";sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\bundottedq\u0000~\u0000;sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~"
-+"\u0000\u0017ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001dq"
-+"\u0000~\u0000#t\u0000\u0005QNameq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00caq\u0000~\u0000#sq\u0000~\u00007t\u0000\u0004typet\u0000)http:/"
-+"/www.w3.org/2001/XMLSchema-instanceq\u0000~\u0000=sq\u0000~\u00007t\u0000\u0006removeq\u0000~\u0000;"
-+"sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTable"
-+"t\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com."
-+"sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005count"
-+"B\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionP"
-+"ool;xp\u0000\u0000\u0000\u0018\u0001pq\u0000~\u0000\u000eq\u0000~\u0000\u00a4q\u0000~\u0000\u00c5q\u0000~\u0000Gq\u0000~\u0000\\q\u0000~\u0000\u0013q\u0000~\u0000Cq\u0000~\u0000\u000bq\u0000~\u0000\u0011q\u0000~"
-+"\u0000?q\u0000~\u0000oq\u0000~\u0000\u000fq\u0000~\u0000\u0012q\u0000~\u0000\u0098q\u0000~\u0000\u0016q\u0000~\u0000\u0014q\u0000~\u0000-q\u0000~\u0000`q\u0000~\u0000\tq\u0000~\u0000\u0010q\u0000~\u0000\u0015q\u0000~"
-+"\u0000\rq\u0000~\u0000\nq\u0000~\u0000\fx"));
-            }
-            return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-        }
-
-        public class Unmarshaller
-            extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-        {
-
-
-            public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-                super(context, "----");
-            }
-
-            protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-                this(context);
-                state = startState;
-            }
-
-            public java.lang.Object owner() {
-                return lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this;
-            }
-
-            public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  3 :
-                            revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        case  0 :
-                            if (("remove" == ___local)&&("" == ___uri)) {
-                                context.pushAttributes(__atts, true);
-                                state = 1;
-                                return ;
-                            }
-                            break;
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            break;
-                    }
-                    super.enterElement(___uri, ___local, ___qname, __atts);
-                    break;
-                }
-            }
-
-            public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  3 :
-                            revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                            return ;
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  2 :
-                            if (("remove" == ___local)&&("" == ___uri)) {
-                                context.popAttributes();
-                                state = 3;
-                                return ;
-                            }
-                            break;
-                    }
-                    super.leaveElement(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  3 :
-                            revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                            return ;
-                        case  1 :
-                            if (("beinoniConstruct" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("beinoniDefiniteness" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("dotted" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("gender" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("inflectBeinoniPossessive" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("number" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("person" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("pgn" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                    }
-                    super.enterAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  3 :
-                            revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                    }
-                    super.leaveAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void handleText(final java.lang.String value)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    try {
-                        switch (state) {
-                            case  3 :
-                                revertToParentFromText(value);
-                                return ;
-                            case  1 :
-                                attIdx = context.getAttribute("", "beinoniConstruct");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "beinoniDefiniteness");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "dotted");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "gender");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "number");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "person");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "pgn");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                break;
-                        }
-                    } catch (java.lang.RuntimeException e) {
-                        handleUnexpectedTextException(value, e);
-                    }
-                    break;
-                }
-            }
-
-        }
-
-    }
-
-    public static class ReplaceImpl
-        extends lexicon.jaxb.impl.VerbExceptionTypeImpl
-        implements lexicon.jaxb.VerbLexiconType.Replace, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-    {
-
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-        private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.VerbLexiconType.Replace.class);
-        }
-
-        public java.lang.String ____jaxb_ri____getNamespaceURI() {
-            return "";
-        }
-
-        public java.lang.String ____jaxb_ri____getLocalName() {
-            return "replace";
-        }
-
-        public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            return new lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.Unmarshaller(context);
-        }
-
-        public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-            context.startElement("", "replace");
-            super.serializeURIs(context);
-            context.endNamespaceDecls();
-            super.serializeAttributes(context);
-            context.endAttributes();
-            super.serializeBody(context);
-            context.endElement();
-        }
-
-        public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public java.lang.Class getPrimaryInterface() {
-            return (lexicon.jaxb.VerbLexiconType.Replace.class);
-        }
-
-        public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-            if (schemaFragment == null) {
-                schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
-+"\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
-+"grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
-+"\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
-+"msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
-+"ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
-+"mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
-+"q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000"
-+"\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000"
-+"\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~"
-+"\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com.sun"
-+".msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.dataty"
-+"pe.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv."
-+"datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.dat"
-+"atype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xs"
-+"d.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/Stri"
-+"ng;L\u0000\btypeNameq\u0000~\u0000 L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd"
-+"/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000"
-+"\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Colla"
-+"pse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcess"
-+"or\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetEx"
-+"pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t"
-+"\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespaceURIq\u0000~\u0000 xpq\u0000~\u0000$q\u0000~\u0000#sr"
-+"\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 com.su"
-+"n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameClass"
-+"q\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psq\u0000~\u0000"
-+"\u0017ppsr\u0000$com.sun.msv.datatype.xsd.BooleanType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001d"
-+"q\u0000~\u0000#t\u0000\u0007booleanq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u00005q\u0000~\u0000#sr\u0000#com.sun.msv.gra"
-+"mmar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespace"
-+"URIq\u0000~\u0000 xr\u0000\u001dcom.sun.msv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0010bei"
-+"noniConstructt\u0000\u0000sr\u00000com.sun.msv.grammar.Expression$EpsilonEx"
-+"pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u00000\u0001q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001pq\u0000~"
-+"\u00002sq\u0000~\u00007t\u0000\u0013beinoniDefinitenessq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001p"
-+"q\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u0006dottedq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsr"
-+"\u0000)com.sun.msv.datatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006val"
-+"uest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWi"
-+"thValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xs"
-+"d.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueChe"
-+"ckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl"
-+";L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000"
-+"\tfacetNameq\u0000~\u0000 xq\u0000~\u0000\u001fq\u0000~\u0000;t\u0000\nGenderTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"t\u0000\u000be"
-+"numerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000"
-+"\u000bunspecifiedt\u0000\bfemininet\u0000\u0016masculine and femininet\u0000\tmasculine"
-+"xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000Qq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006genderq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
-+".q\u0000~\u00001pq\u0000~\u00002sq\u0000~\u00007t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000"
-+",ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nNumberTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q"
-+"\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0006t\u0000\u000bunspecifiedt\u0000\u0013singular and p"
-+"luralt\u0000\u0004dualt\u0000\u000fdual and pluralt\u0000\bsingulart\u0000\u0006pluralxq\u0000~\u0000)sq\u0000~"
-+"\u0000*q\u0000~\u0000dq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006numberq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000"
-+"~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nPersonTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000"
-+"\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0005t\u0000\u000bunspecifiedt\u0000\u00013t\u0000\u00012t\u0000\u0003anyt\u0000\u00011xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000s"
-+"q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006personq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\u0007"
-+"PGNTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/S"
-+"gt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p"
-+"/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecified"
-+"t\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/"
-+"MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u0080q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0003pgnq\u0000~\u0000;sq\u0000~\u0000,"
-+"ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fRegisterTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\""
-+"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq"
-+"\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u009cq\u0000~\u0000;sq\u0000~\u00007t\u0000\bregisterq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
-+".q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fSpellingTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000"
-+"~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000)sq\u0000~\u0000*q\u0000"
-+"~\u0000\u00a8q\u0000~\u0000;sq\u0000~\u00007t\u0000\bspellingq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~"
-+"\u0000;t\u0000\tTenseTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bu"
-+"nspecifiedt\u0000\u0004pastt\u0000\nimperativet\u0000\u0007beinonit\u0000\ninfinitivet\u0000\u0006futu"
-+"ret\u0000\u000ebareInfinitivet\u0000\u0011passiveParticiplexq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00b2q\u0000~\u0000"
-+";sq\u0000~\u00007t\u0000\u0005tenseq\u0000~\u0000;sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u000etransliteratedq\u0000~\u0000"
-+";sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\bundottedq\u0000~\u0000;sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~"
-+"\u0000\u0017ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001dq"
-+"\u0000~\u0000#t\u0000\u0005QNameq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00caq\u0000~\u0000#sq\u0000~\u00007t\u0000\u0004typet\u0000)http:/"
-+"/www.w3.org/2001/XMLSchema-instanceq\u0000~\u0000=sq\u0000~\u00007t\u0000\u0007replaceq\u0000~\u0000"
-+";sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTabl"
-+"et\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com"
-+".sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005coun"
-+"tB\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/Expression"
-+"Pool;xp\u0000\u0000\u0000\u0018\u0001pq\u0000~\u0000\u000eq\u0000~\u0000\u00a4q\u0000~\u0000\u00c5q\u0000~\u0000Gq\u0000~\u0000\\q\u0000~\u0000\u0013q\u0000~\u0000Cq\u0000~\u0000\u000bq\u0000~\u0000\u0011q\u0000"
-+"~\u0000?q\u0000~\u0000oq\u0000~\u0000\u000fq\u0000~\u0000\u0012q\u0000~\u0000\u0098q\u0000~\u0000\u0016q\u0000~\u0000\u0014q\u0000~\u0000-q\u0000~\u0000`q\u0000~\u0000\tq\u0000~\u0000\u0010q\u0000~\u0000\u0015q\u0000"
-+"~\u0000\rq\u0000~\u0000\nq\u0000~\u0000\fx"));
-            }
-            return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-        }
-
-        public class Unmarshaller
-            extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-        {
-
-
-            public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-                super(context, "----");
-            }
-
-            protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-                this(context);
-                state = startState;
-            }
-
-            public java.lang.Object owner() {
-                return lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this;
-            }
-
-            public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            break;
-                        case  0 :
-                            if (("replace" == ___local)&&("" == ___uri)) {
-                                context.pushAttributes(__atts, true);
-                                state = 1;
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                    }
-                    super.enterElement(___uri, ___local, ___qname, __atts);
-                    break;
-                }
-            }
-
-            public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  2 :
-                            if (("replace" == ___local)&&("" == ___uri)) {
-                                context.popAttributes();
-                                state = 3;
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.leaveElement(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            if (("beinoniConstruct" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("beinoniDefiniteness" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("dotted" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("gender" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("inflectBeinoniPossessive" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("number" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("person" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("pgn" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.VerbExceptionTypeImpl)lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.enterAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "beinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "beinoniDefiniteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.leaveAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void handleText(final java.lang.String value)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    try {
-                        switch (state) {
-                            case  1 :
-                                attIdx = context.getAttribute("", "beinoniConstruct");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "beinoniDefiniteness");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "dotted");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "gender");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "number");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "person");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "pgn");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                break;
-                            case  3 :
-                                revertToParentFromText(value);
-                                return ;
-                        }
-                    } catch (java.lang.RuntimeException e) {
-                        handleUnexpectedTextException(value, e);
-                    }
-                    break;
-                }
-            }
-
-        }
-
-    }
-
-    public class Unmarshaller
-        extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-    {
-
-
-        public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            super(context, "--------------------------------------------------------");
-        }
-
-        protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-            this(context);
-            state = startState;
-        }
-
-        public java.lang.Object owner() {
-            return lexicon.jaxb.impl.VerbLexiconTypeImpl.this;
-        }
-
-        public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  33 :
-                        attIdx = context.getAttribute("", "inflectInfinitivel");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 36;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 36;
-                        continue outer;
-                    case  21 :
-                        attIdx = context.getAttribute("", "inflectImperative");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 24;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  48 :
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 51;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        break;
-                    case  54 :
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.class), 55, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.class), 55, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.class), 55, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        state = 55;
-                        continue outer;
-                    case  12 :
-                        attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        state = 15;
-                        continue outer;
-                    case  39 :
-                        attIdx = context.getAttribute("", "inflectPast");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 42;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 42;
-                        continue outer;
-                    case  55 :
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.class), 55, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.class), 55, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.class), 55, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                        return ;
-                    case  15 :
-                        attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  24 :
-                        attIdx = context.getAttribute("", "inflectInfinitive");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 27;
-                            eatText7(v);
-                            continue outer;
-                        }
-                        state = 27;
-                        continue outer;
-                    case  45 :
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 48;
-                            eatText8(v);
-                            continue outer;
-                        }
-                        state = 48;
-                        continue outer;
-                    case  0 :
-                        attIdx = context.getAttribute("", "binyan");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText9(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  3 :
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText10(v);
-                            continue outer;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  42 :
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 45;
-                            eatText11(v);
-                            continue outer;
-                        }
-                        break;
-                    case  51 :
-                        attIdx = context.getAttribute("", "valence");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 54;
-                            eatText12(v);
-                            continue outer;
-                        }
-                        state = 54;
-                        continue outer;
-                    case  36 :
-                        attIdx = context.getAttribute("", "inflectOrigin");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 39;
-                            eatText13(v);
-                            continue outer;
-                        }
-                        state = 39;
-                        continue outer;
-                    case  6 :
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText14(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  30 :
-                        attIdx = context.getAttribute("", "inflectInfinitiveb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 33;
-                            eatText15(v);
-                            continue outer;
-                        }
-                        state = 33;
-                        continue outer;
-                    case  18 :
-                        attIdx = context.getAttribute("", "inflectFuture");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 21;
-                            eatText16(v);
-                            continue outer;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  9 :
-                        attIdx = context.getAttribute("", "inflectBeinoni");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText17(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  27 :
-                        attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 30;
-                            eatText18(v);
-                            continue outer;
-                        }
-                        state = 30;
-                        continue outer;
-                }
-                super.enterElement(___uri, ___local, ___qname, __atts);
-                break;
-            }
-        }
-
-        private void eatText1(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectInfinitivel = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectInfinitivel = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText2(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectImperative = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectImperative = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText3(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Root = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText4(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectBeinoniConstruct = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectBeinoniConstruct = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText5(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectPast = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectPast = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText6(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectBeinoniPossessive = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectBeinoniPossessive = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText7(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectInfinitive = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectInfinitive = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText8(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _IpSource = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText9(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Binyan = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText10(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Feminine = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText11(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectionPattern = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText12(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Valence = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText13(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectOrigin = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectOrigin = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText14(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Foreign = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_Foreign = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText15(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectInfinitiveb = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectInfinitiveb = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText16(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectFuture = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectFuture = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText17(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectBeinoni = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectBeinoni = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText18(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectInfinitiveIndependent = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_InflectInfinitiveIndependent = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  33 :
-                        attIdx = context.getAttribute("", "inflectInfinitivel");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 36;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 36;
-                        continue outer;
-                    case  21 :
-                        attIdx = context.getAttribute("", "inflectImperative");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 24;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  48 :
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 51;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        break;
-                    case  54 :
-                        state = 55;
-                        continue outer;
-                    case  12 :
-                        attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        state = 15;
-                        continue outer;
-                    case  39 :
-                        attIdx = context.getAttribute("", "inflectPast");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 42;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 42;
-                        continue outer;
-                    case  55 :
-                        revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                        return ;
-                    case  15 :
-                        attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  24 :
-                        attIdx = context.getAttribute("", "inflectInfinitive");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 27;
-                            eatText7(v);
-                            continue outer;
-                        }
-                        state = 27;
-                        continue outer;
-                    case  45 :
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 48;
-                            eatText8(v);
-                            continue outer;
-                        }
-                        state = 48;
-                        continue outer;
-                    case  0 :
-                        attIdx = context.getAttribute("", "binyan");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText9(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  3 :
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText10(v);
-                            continue outer;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  42 :
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 45;
-                            eatText11(v);
-                            continue outer;
-                        }
-                        break;
-                    case  51 :
-                        attIdx = context.getAttribute("", "valence");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 54;
-                            eatText12(v);
-                            continue outer;
-                        }
-                        state = 54;
-                        continue outer;
-                    case  36 :
-                        attIdx = context.getAttribute("", "inflectOrigin");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 39;
-                            eatText13(v);
-                            continue outer;
-                        }
-                        state = 39;
-                        continue outer;
-                    case  6 :
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText14(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  30 :
-                        attIdx = context.getAttribute("", "inflectInfinitiveb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 33;
-                            eatText15(v);
-                            continue outer;
-                        }
-                        state = 33;
-                        continue outer;
-                    case  18 :
-                        attIdx = context.getAttribute("", "inflectFuture");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 21;
-                            eatText16(v);
-                            continue outer;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  9 :
-                        attIdx = context.getAttribute("", "inflectBeinoni");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText17(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  27 :
-                        attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 30;
-                            eatText18(v);
-                            continue outer;
-                        }
-                        state = 30;
-                        continue outer;
-                }
-                super.leaveElement(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  33 :
-                        if (("inflectInfinitivel" == ___local)&&("" == ___uri)) {
-                            state = 34;
-                            return ;
-                        }
-                        state = 36;
-                        continue outer;
-                    case  21 :
-                        if (("inflectImperative" == ___local)&&("" == ___uri)) {
-                            state = 22;
-                            return ;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  48 :
-                        if (("root" == ___local)&&("" == ___uri)) {
-                            state = 49;
-                            return ;
-                        }
-                        break;
-                    case  54 :
-                        state = 55;
-                        continue outer;
-                    case  12 :
-                        if (("inflectBeinoniConstruct" == ___local)&&("" == ___uri)) {
-                            state = 13;
-                            return ;
-                        }
-                        state = 15;
-                        continue outer;
-                    case  39 :
-                        if (("inflectPast" == ___local)&&("" == ___uri)) {
-                            state = 40;
-                            return ;
-                        }
-                        state = 42;
-                        continue outer;
-                    case  55 :
-                        revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                        return ;
-                    case  15 :
-                        if (("inflectBeinoniPossessive" == ___local)&&("" == ___uri)) {
-                            state = 16;
-                            return ;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  24 :
-                        if (("inflectInfinitive" == ___local)&&("" == ___uri)) {
-                            state = 25;
-                            return ;
-                        }
-                        state = 27;
-                        continue outer;
-                    case  45 :
-                        if (("ipSource" == ___local)&&("" == ___uri)) {
-                            state = 46;
-                            return ;
-                        }
-                        state = 48;
-                        continue outer;
-                    case  0 :
-                        if (("binyan" == ___local)&&("" == ___uri)) {
-                            state = 1;
-                            return ;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  3 :
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            state = 4;
-                            return ;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  42 :
-                        if (("inflectionPattern" == ___local)&&("" == ___uri)) {
-                            state = 43;
-                            return ;
-                        }
-                        break;
-                    case  51 :
-                        if (("valence" == ___local)&&("" == ___uri)) {
-                            state = 52;
-                            return ;
-                        }
-                        state = 54;
-                        continue outer;
-                    case  36 :
-                        if (("inflectOrigin" == ___local)&&("" == ___uri)) {
-                            state = 37;
-                            return ;
-                        }
-                        state = 39;
-                        continue outer;
-                    case  6 :
-                        if (("foreign" == ___local)&&("" == ___uri)) {
-                            state = 7;
-                            return ;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  30 :
-                        if (("inflectInfinitiveb" == ___local)&&("" == ___uri)) {
-                            state = 31;
-                            return ;
-                        }
-                        state = 33;
-                        continue outer;
-                    case  18 :
-                        if (("inflectFuture" == ___local)&&("" == ___uri)) {
-                            state = 19;
-                            return ;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  9 :
-                        if (("inflectBeinoni" == ___local)&&("" == ___uri)) {
-                            state = 10;
-                            return ;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  27 :
-                        if (("inflectInfinitiveIndependent" == ___local)&&("" == ___uri)) {
-                            state = 28;
-                            return ;
-                        }
-                        state = 30;
-                        continue outer;
-                }
-                super.enterAttribute(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  14 :
-                        if (("inflectBeinoniConstruct" == ___local)&&("" == ___uri)) {
-                            state = 15;
-                            return ;
-                        }
-                        break;
-                    case  33 :
-                        attIdx = context.getAttribute("", "inflectInfinitivel");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 36;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 36;
-                        continue outer;
-                    case  32 :
-                        if (("inflectInfinitiveb" == ___local)&&("" == ___uri)) {
-                            state = 33;
-                            return ;
-                        }
-                        break;
-                    case  29 :
-                        if (("inflectInfinitiveIndependent" == ___local)&&("" == ___uri)) {
-                            state = 30;
-                            return ;
-                        }
-                        break;
-                    case  50 :
-                        if (("root" == ___local)&&("" == ___uri)) {
-                            state = 51;
-                            return ;
-                        }
-                        break;
-                    case  21 :
-                        attIdx = context.getAttribute("", "inflectImperative");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 24;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  48 :
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 51;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        break;
-                    case  54 :
-                        state = 55;
-                        continue outer;
-                    case  2 :
-                        if (("binyan" == ___local)&&("" == ___uri)) {
-                            state = 3;
-                            return ;
-                        }
-                        break;
-                    case  35 :
-                        if (("inflectInfinitivel" == ___local)&&("" == ___uri)) {
-                            state = 36;
-                            return ;
-                        }
-                        break;
-                    case  47 :
-                        if (("ipSource" == ___local)&&("" == ___uri)) {
-                            state = 48;
-                            return ;
-                        }
-                        break;
-                    case  8 :
-                        if (("foreign" == ___local)&&("" == ___uri)) {
-                            state = 9;
-                            return ;
-                        }
-                        break;
-                    case  12 :
-                        attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        state = 15;
-                        continue outer;
-                    case  39 :
-                        attIdx = context.getAttribute("", "inflectPast");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 42;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 42;
-                        continue outer;
-                    case  55 :
-                        revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                        return ;
-                    case  15 :
-                        attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  26 :
-                        if (("inflectInfinitive" == ___local)&&("" == ___uri)) {
-                            state = 27;
-                            return ;
-                        }
-                        break;
-                    case  24 :
-                        attIdx = context.getAttribute("", "inflectInfinitive");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 27;
-                            eatText7(v);
-                            continue outer;
-                        }
-                        state = 27;
-                        continue outer;
-                    case  11 :
-                        if (("inflectBeinoni" == ___local)&&("" == ___uri)) {
-                            state = 12;
-                            return ;
-                        }
-                        break;
-                    case  17 :
-                        if (("inflectBeinoniPossessive" == ___local)&&("" == ___uri)) {
-                            state = 18;
-                            return ;
-                        }
-                        break;
-                    case  44 :
-                        if (("inflectionPattern" == ___local)&&("" == ___uri)) {
-                            state = 45;
-                            return ;
-                        }
-                        break;
-                    case  5 :
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            state = 6;
-                            return ;
-                        }
-                        break;
-                    case  53 :
-                        if (("valence" == ___local)&&("" == ___uri)) {
-                            state = 54;
-                            return ;
-                        }
-                        break;
-                    case  45 :
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 48;
-                            eatText8(v);
-                            continue outer;
-                        }
-                        state = 48;
-                        continue outer;
-                    case  23 :
-                        if (("inflectImperative" == ___local)&&("" == ___uri)) {
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  38 :
-                        if (("inflectOrigin" == ___local)&&("" == ___uri)) {
-                            state = 39;
-                            return ;
-                        }
-                        break;
-                    case  0 :
-                        attIdx = context.getAttribute("", "binyan");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText9(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  41 :
-                        if (("inflectPast" == ___local)&&("" == ___uri)) {
-                            state = 42;
-                            return ;
-                        }
-                        break;
-                    case  3 :
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText10(v);
-                            continue outer;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  42 :
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 45;
-                            eatText11(v);
-                            continue outer;
-                        }
-                        break;
-                    case  51 :
-                        attIdx = context.getAttribute("", "valence");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 54;
-                            eatText12(v);
-                            continue outer;
-                        }
-                        state = 54;
-                        continue outer;
-                    case  36 :
-                        attIdx = context.getAttribute("", "inflectOrigin");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 39;
-                            eatText13(v);
-                            continue outer;
-                        }
-                        state = 39;
-                        continue outer;
-                    case  6 :
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText14(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  30 :
-                        attIdx = context.getAttribute("", "inflectInfinitiveb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 33;
-                            eatText15(v);
-                            continue outer;
-                        }
-                        state = 33;
-                        continue outer;
-                    case  18 :
-                        attIdx = context.getAttribute("", "inflectFuture");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 21;
-                            eatText16(v);
-                            continue outer;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  9 :
-                        attIdx = context.getAttribute("", "inflectBeinoni");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText17(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  20 :
-                        if (("inflectFuture" == ___local)&&("" == ___uri)) {
-                            state = 21;
-                            return ;
-                        }
-                        break;
-                    case  27 :
-                        attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 30;
-                            eatText18(v);
-                            continue outer;
-                        }
-                        state = 30;
-                        continue outer;
-                }
-                super.leaveAttribute(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void handleText(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                try {
-                    switch (state) {
-                        case  28 :
-                            state = 29;
-                            eatText18(value);
-                            return ;
-                        case  33 :
-                            attIdx = context.getAttribute("", "inflectInfinitivel");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 36;
-                                eatText1(v);
-                                continue outer;
-                            }
-                            state = 36;
-                            continue outer;
-                        case  19 :
-                            state = 20;
-                            eatText16(value);
-                            return ;
-                        case  31 :
-                            state = 32;
-                            eatText15(value);
-                            return ;
-                        case  40 :
-                            state = 41;
-                            eatText5(value);
-                            return ;
-                        case  21 :
-                            attIdx = context.getAttribute("", "inflectImperative");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 24;
-                                eatText2(v);
-                                continue outer;
-                            }
-                            state = 24;
-                            continue outer;
-                        case  16 :
-                            state = 17;
-                            eatText6(value);
-                            return ;
-                        case  7 :
-                            state = 8;
-                            eatText14(value);
-                            return ;
-                        case  48 :
-                            attIdx = context.getAttribute("", "root");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 51;
-                                eatText3(v);
-                                continue outer;
-                            }
-                            break;
-                        case  54 :
-                            state = 55;
-                            continue outer;
-                        case  4 :
-                            state = 5;
-                            eatText10(value);
-                            return ;
-                        case  12 :
-                            attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 15;
-                                eatText4(v);
-                                continue outer;
-                            }
-                            state = 15;
-                            continue outer;
-                        case  39 :
-                            attIdx = context.getAttribute("", "inflectPast");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 42;
-                                eatText5(v);
-                                continue outer;
-                            }
-                            state = 42;
-                            continue outer;
-                        case  55 :
-                            revertToParentFromText(value);
-                            return ;
-                        case  15 :
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 18;
-                                eatText6(v);
-                                continue outer;
-                            }
-                            state = 18;
-                            continue outer;
-                        case  24 :
-                            attIdx = context.getAttribute("", "inflectInfinitive");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 27;
-                                eatText7(v);
-                                continue outer;
-                            }
-                            state = 27;
-                            continue outer;
-                        case  25 :
-                            state = 26;
-                            eatText7(value);
-                            return ;
-                        case  52 :
-                            state = 53;
-                            eatText12(value);
-                            return ;
-                        case  22 :
-                            state = 23;
-                            eatText2(value);
-                            return ;
-                        case  45 :
-                            attIdx = context.getAttribute("", "ipSource");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 48;
-                                eatText8(v);
-                                continue outer;
-                            }
-                            state = 48;
-                            continue outer;
-                        case  34 :
-                            state = 35;
-                            eatText1(value);
-                            return ;
-                        case  1 :
-                            state = 2;
-                            eatText9(value);
-                            return ;
-                        case  13 :
-                            state = 14;
-                            eatText4(value);
-                            return ;
-                        case  0 :
-                            attIdx = context.getAttribute("", "binyan");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 3;
-                                eatText9(v);
-                                continue outer;
-                            }
-                            state = 3;
-                            continue outer;
-                        case  37 :
-                            state = 38;
-                            eatText13(value);
-                            return ;
-                        case  49 :
-                            state = 50;
-                            eatText3(value);
-                            return ;
-                        case  3 :
-                            attIdx = context.getAttribute("", "feminine");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 6;
-                                eatText10(v);
-                                continue outer;
-                            }
-                            state = 6;
-                            continue outer;
-                        case  46 :
-                            state = 47;
-                            eatText8(value);
-                            return ;
-                        case  42 :
-                            attIdx = context.getAttribute("", "inflectionPattern");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 45;
-                                eatText11(v);
-                                continue outer;
-                            }
-                            break;
-                        case  10 :
-                            state = 11;
-                            eatText17(value);
-                            return ;
-                        case  51 :
-                            attIdx = context.getAttribute("", "valence");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 54;
-                                eatText12(v);
-                                continue outer;
-                            }
-                            state = 54;
-                            continue outer;
-                        case  36 :
-                            attIdx = context.getAttribute("", "inflectOrigin");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 39;
-                                eatText13(v);
-                                continue outer;
-                            }
-                            state = 39;
-                            continue outer;
-                        case  6 :
-                            attIdx = context.getAttribute("", "foreign");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 9;
-                                eatText14(v);
-                                continue outer;
-                            }
-                            state = 9;
-                            continue outer;
-                        case  30 :
-                            attIdx = context.getAttribute("", "inflectInfinitiveb");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 33;
-                                eatText15(v);
-                                continue outer;
-                            }
-                            state = 33;
-                            continue outer;
-                        case  18 :
-                            attIdx = context.getAttribute("", "inflectFuture");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 21;
-                                eatText16(v);
-                                continue outer;
-                            }
-                            state = 21;
-                            continue outer;
-                        case  9 :
-                            attIdx = context.getAttribute("", "inflectBeinoni");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 12;
-                                eatText17(v);
-                                continue outer;
-                            }
-                            state = 12;
-                            continue outer;
-                        case  43 :
-                            state = 44;
-                            eatText11(value);
-                            return ;
-                        case  27 :
-                            attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 30;
-                                eatText18(v);
-                                continue outer;
-                            }
-                            state = 30;
-                            continue outer;
-                    }
-                } catch (java.lang.RuntimeException e) {
-                    handleUnexpectedTextException(value, e);
-                }
-                break;
-            }
-        }
-
-    }
+public class VerbLexiconTypeImpl implements lexicon.jaxb.VerbLexiconType,
+		com.sun.xml.bind.JAXBObject,
+		lexicon.jaxb.impl.runtime.UnmarshallableObject,
+		lexicon.jaxb.impl.runtime.XMLSerializable,
+		lexicon.jaxb.impl.runtime.ValidatableObject {
+
+	protected java.lang.String _Feminine;
+	protected boolean has_InflectInfinitiveIndependent;
+	protected boolean _InflectInfinitiveIndependent;
+	protected boolean has_InflectInfinitive;
+	protected boolean _InflectInfinitive;
+	protected boolean has_InflectFuture;
+	protected boolean _InflectFuture;
+	protected boolean has_InflectBeinoniConstruct;
+	protected boolean _InflectBeinoniConstruct;
+	protected boolean has_InflectBeinoniPossessive;
+	protected boolean _InflectBeinoniPossessive;
+	protected java.lang.String _IpSource;
+	protected boolean has_Foreign;
+	protected boolean _Foreign;
+	protected java.lang.String _InflectionPattern;
+	protected boolean has_InflectBeinoni;
+	protected boolean _InflectBeinoni;
+	protected boolean has_InflectInfinitivel;
+	protected boolean _InflectInfinitivel;
+	protected java.lang.String _Valence;
+	protected boolean has_InflectOrigin;
+	protected boolean _InflectOrigin;
+	protected java.lang.String _Root;
+	protected boolean has_InflectPast;
+	protected boolean _InflectPast;
+	protected com.sun.xml.bind.util.ListImpl _AddOrReplaceOrRemove;
+	protected java.lang.String _Binyan;
+	protected boolean has_InflectImperative;
+	protected boolean _InflectImperative;
+	protected boolean has_InflectInfinitiveb;
+	protected boolean _InflectInfinitiveb;
+	public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+	private static com.sun.msv.grammar.Grammar schemaFragment;
+
+	private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+		return (lexicon.jaxb.VerbLexiconType.class);
+	}
+
+	public java.lang.String getFeminine() {
+		if (_Feminine == null) {
+			return "unspecified";
+		} else {
+			return _Feminine;
+		}
+	}
+
+	public void setFeminine(java.lang.String value) {
+		_Feminine = value;
+	}
+
+	public boolean isInflectInfinitiveIndependent() {
+		if (!has_InflectInfinitiveIndependent) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("false"));
+		} else {
+			return _InflectInfinitiveIndependent;
+		}
+	}
+
+	public void setInflectInfinitiveIndependent(boolean value) {
+		_InflectInfinitiveIndependent = value;
+		has_InflectInfinitiveIndependent = true;
+	}
+
+	public boolean isInflectInfinitive() {
+		if (!has_InflectInfinitive) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectInfinitive;
+		}
+	}
+
+	public void setInflectInfinitive(boolean value) {
+		_InflectInfinitive = value;
+		has_InflectInfinitive = true;
+	}
+
+	public boolean isInflectFuture() {
+		if (!has_InflectFuture) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectFuture;
+		}
+	}
+
+	public void setInflectFuture(boolean value) {
+		_InflectFuture = value;
+		has_InflectFuture = true;
+	}
+
+	public boolean isInflectBeinoniConstruct() {
+		if (!has_InflectBeinoniConstruct) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectBeinoniConstruct;
+		}
+	}
+
+	public void setInflectBeinoniConstruct(boolean value) {
+		_InflectBeinoniConstruct = value;
+		has_InflectBeinoniConstruct = true;
+	}
+
+	public boolean isInflectBeinoniPossessive() {
+		if (!has_InflectBeinoniPossessive) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectBeinoniPossessive;
+		}
+	}
+
+	public void setInflectBeinoniPossessive(boolean value) {
+		_InflectBeinoniPossessive = value;
+		has_InflectBeinoniPossessive = true;
+	}
+
+	public java.lang.String getIpSource() {
+		if (_IpSource == null) {
+			return "Mila";
+		} else {
+			return _IpSource;
+		}
+	}
+
+	public void setIpSource(java.lang.String value) {
+		_IpSource = value;
+	}
+
+	public boolean isForeign() {
+		if (!has_Foreign) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("false"));
+		} else {
+			return _Foreign;
+		}
+	}
+
+	public void setForeign(boolean value) {
+		_Foreign = value;
+		has_Foreign = true;
+	}
+
+	public java.lang.String getInflectionPattern() {
+		return _InflectionPattern;
+	}
+
+	public void setInflectionPattern(java.lang.String value) {
+		_InflectionPattern = value;
+	}
+
+	public boolean isInflectBeinoni() {
+		if (!has_InflectBeinoni) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectBeinoni;
+		}
+	}
+
+	public void setInflectBeinoni(boolean value) {
+		_InflectBeinoni = value;
+		has_InflectBeinoni = true;
+	}
+
+	public boolean isInflectInfinitivel() {
+		if (!has_InflectInfinitivel) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectInfinitivel;
+		}
+	}
+
+	public void setInflectInfinitivel(boolean value) {
+		_InflectInfinitivel = value;
+		has_InflectInfinitivel = true;
+	}
+
+	public java.lang.String getValence() {
+		if (_Valence == null) {
+			return "unspecified";
+		} else {
+			return _Valence;
+		}
+	}
+
+	public void setValence(java.lang.String value) {
+		_Valence = value;
+	}
+
+	public boolean isInflectOrigin() {
+		if (!has_InflectOrigin) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("false"));
+		} else {
+			return _InflectOrigin;
+		}
+	}
+
+	public void setInflectOrigin(boolean value) {
+		_InflectOrigin = value;
+		has_InflectOrigin = true;
+	}
+
+	public java.lang.String getRoot() {
+		return _Root;
+	}
+
+	public void setRoot(java.lang.String value) {
+		_Root = value;
+	}
+
+	public boolean isInflectPast() {
+		if (!has_InflectPast) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectPast;
+		}
+	}
+
+	public void setInflectPast(boolean value) {
+		_InflectPast = value;
+		has_InflectPast = true;
+	}
+
+	protected com.sun.xml.bind.util.ListImpl _getAddOrReplaceOrRemove() {
+		if (_AddOrReplaceOrRemove == null) {
+			_AddOrReplaceOrRemove = new com.sun.xml.bind.util.ListImpl(
+					new java.util.ArrayList());
+		}
+		return _AddOrReplaceOrRemove;
+	}
+
+	public java.util.List getAddOrReplaceOrRemove() {
+		return _getAddOrReplaceOrRemove();
+	}
+
+	public java.lang.String getBinyan() {
+		if (_Binyan == null) {
+			return "unspecified";
+		} else {
+			return _Binyan;
+		}
+	}
+
+	public void setBinyan(java.lang.String value) {
+		_Binyan = value;
+	}
+
+	public boolean isInflectImperative() {
+		if (!has_InflectImperative) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectImperative;
+		}
+	}
+
+	public void setInflectImperative(boolean value) {
+		_InflectImperative = value;
+		has_InflectImperative = true;
+	}
+
+	public boolean isInflectInfinitiveb() {
+		if (!has_InflectInfinitiveb) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("true"));
+		} else {
+			return _InflectInfinitiveb;
+		}
+	}
+
+	public void setInflectInfinitiveb(boolean value) {
+		_InflectInfinitiveb = value;
+		has_InflectInfinitiveb = true;
+	}
+
+	public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+			lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+		return new lexicon.jaxb.impl.VerbLexiconTypeImpl.Unmarshaller(context);
+	}
+
+	public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx16 = 0;
+		final int len16 = ((_AddOrReplaceOrRemove == null) ? 0
+				: _AddOrReplaceOrRemove.size());
+		while (idx16 != len16) {
+			while (idx16 != len16) {
+				context.childAsBody(
+						((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove
+								.get(idx16++)), "AddOrReplaceOrRemove");
+			}
+		}
+	}
+
+	public void serializeAttributes(
+			lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx16 = 0;
+		final int len16 = ((_AddOrReplaceOrRemove == null) ? 0
+				: _AddOrReplaceOrRemove.size());
+		if (_Binyan != null) {
+			context.startAttribute("", "binyan");
+			try {
+				context.text(((java.lang.String) _Binyan), "Binyan");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_Feminine != null) {
+			context.startAttribute("", "feminine");
+			try {
+				context.text(((java.lang.String) _Feminine), "Feminine");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_Foreign) {
+			context.startAttribute("", "foreign");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _Foreign)), "Foreign");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectBeinoni) {
+			context.startAttribute("", "inflectBeinoni");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectBeinoni)),
+						"InflectBeinoni");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectBeinoniConstruct) {
+			context.startAttribute("", "inflectBeinoniConstruct");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectBeinoniConstruct)),
+						"InflectBeinoniConstruct");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectBeinoniPossessive) {
+			context.startAttribute("", "inflectBeinoniPossessive");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectBeinoniPossessive)),
+						"InflectBeinoniPossessive");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectFuture) {
+			context.startAttribute("", "inflectFuture");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectFuture)),
+						"InflectFuture");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectImperative) {
+			context.startAttribute("", "inflectImperative");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectImperative)),
+						"InflectImperative");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectInfinitive) {
+			context.startAttribute("", "inflectInfinitive");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectInfinitive)),
+						"InflectInfinitive");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectInfinitiveIndependent) {
+			context.startAttribute("", "inflectInfinitiveIndependent");
+			try {
+				context.text(
+						javax.xml.bind.DatatypeConverter
+								.printBoolean(((boolean) _InflectInfinitiveIndependent)),
+						"InflectInfinitiveIndependent");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectInfinitiveb) {
+			context.startAttribute("", "inflectInfinitiveb");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectInfinitiveb)),
+						"InflectInfinitiveb");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectInfinitivel) {
+			context.startAttribute("", "inflectInfinitivel");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectInfinitivel)),
+						"InflectInfinitivel");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectOrigin) {
+			context.startAttribute("", "inflectOrigin");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectOrigin)),
+						"InflectOrigin");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_InflectPast) {
+			context.startAttribute("", "inflectPast");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _InflectPast)), "InflectPast");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		context.startAttribute("", "inflectionPattern");
+		try {
+			context.text(((java.lang.String) _InflectionPattern),
+					"InflectionPattern");
+		} catch (java.lang.Exception e) {
+			lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this,
+					e, context);
+		}
+		context.endAttribute();
+		if (_IpSource != null) {
+			context.startAttribute("", "ipSource");
+			try {
+				context.text(((java.lang.String) _IpSource), "IpSource");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		context.startAttribute("", "root");
+		try {
+			context.text(((java.lang.String) _Root), "Root");
+		} catch (java.lang.Exception e) {
+			lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this,
+					e, context);
+		}
+		context.endAttribute();
+		if (_Valence != null) {
+			context.startAttribute("", "valence");
+			try {
+				context.text(((java.lang.String) _Valence), "Valence");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		while (idx16 != len16) {
+			while (idx16 != len16) {
+				context.childAsAttributes(
+						((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove
+								.get(idx16++)), "AddOrReplaceOrRemove");
+			}
+		}
+	}
+
+	public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx16 = 0;
+		final int len16 = ((_AddOrReplaceOrRemove == null) ? 0
+				: _AddOrReplaceOrRemove.size());
+		while (idx16 != len16) {
+			while (idx16 != len16) {
+				context.childAsURIs(
+						((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove
+								.get(idx16++)), "AddOrReplaceOrRemove");
+			}
+		}
+	}
+
+	public java.lang.Class getPrimaryInterface() {
+		return (lexicon.jaxb.VerbLexiconType.class);
+	}
+
+	public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+		if (schemaFragment == null) {
+			schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+					.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\u001fcom.sun.msv.grammar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.su"
+							+ "n.msv.grammar.BinaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1t\u0000 Lcom/sun/msv/gra"
+							+ "mmar/Expression;L\u0000\u0004exp2q\u0000~\u0000\u0002xr\u0000\u001ecom.sun.msv.grammar.Expressi"
+							+ "on\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Ljava/lang/Boolean;L\u0000\u000b"
+							+ "expandedExpq\u0000~\u0000\u0002xpppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000pp"
+							+ "sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~"
+							+ "\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsr\u0000 com.sun.msv.grammar."
+							+ "OneOrMoreExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001ccom.sun.msv.grammar.UnaryExp\u0000\u0000\u0000\u0000\u0000"
+							+ "\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0003expq\u0000~\u0000\u0002xq\u0000~\u0000\u0003ppsr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000"
+							+ "\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0001ppsq\u0000~\u0000\u001appsq\u0000~\u0000\u001appsq\u0000~\u0000\u0017sr\u0000\u0011java.lang.Boolean"
+							+ "\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psr\u0000\'com.sun.msv.grammar.trex.ElementP"
+							+ "attern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameCla"
+							+ "ss;xr\u0000\u001ecom.sun.msv.grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUnd"
+							+ "eclaredAttributesL\u0000\fcontentModelq\u0000~\u0000\u0002xq\u0000~\u0000\u0003q\u0000~\u0000 p\u0000sq\u0000~\u0000\u001appsq"
+							+ "\u0000~\u0000\u0017q\u0000~\u0000 psr\u0000 com.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003"
+							+ "expq\u0000~\u0000\u0002L\u0000\tnameClassq\u0000~\u0000\"xq\u0000~\u0000\u0003q\u0000~\u0000 psr\u00002com.sun.msv.grammar"
+							+ ".Expression$AnyStringExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003sq\u0000~\u0000\u001f\u0001q\u0000~\u0000*"
+							+ "sr\u0000 com.sun.msv.grammar.AnyNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.m"
+							+ "sv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpsr\u00000com.sun.msv.grammar.Exp"
+							+ "ression$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003q\u0000~\u0000+q\u0000~\u00000sr\u0000#com."
+							+ "sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNamet\u0000\u0012Lja"
+							+ "va/lang/String;L\u0000\fnamespaceURIq\u0000~\u00002xq\u0000~\u0000-t\u0000 lexicon.jaxb.Ver"
+							+ "bLexiconType.Addt\u0000+http://java.sun.com/jaxb/xjc/dummy-elemen"
+							+ "tsq\u0000~\u00000sq\u0000~\u0000\u0017ppsq\u0000~\u0000!pp\u0000sq\u0000~\u0000\u001appsq\u0000~\u0000\u0017q\u0000~\u0000 psq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000"
+							+ "*q\u0000~\u0000.q\u0000~\u00000sq\u0000~\u00001t\u0000$lexicon.jaxb.VerbLexiconType.Replaceq\u0000~\u0000"
+							+ "5sq\u0000~\u0000\u0017ppsq\u0000~\u0000!pp\u0000sq\u0000~\u0000\u001appsq\u0000~\u0000\u0017q\u0000~\u0000 psq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000*q\u0000~\u0000."
+							+ "q\u0000~\u00000sq\u0000~\u00001t\u0000#lexicon.jaxb.VerbLexiconType.Removeq\u0000~\u00005sq\u0000~\u0000\u001a"
+							+ "ppsq\u0000~\u0000\'q\u0000~\u0000 psr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002d"
+							+ "tt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~\u0000\u0002L\u0000\u0004namet\u0000\u001dL"
+							+ "com/sun/msv/util/StringPair;xq\u0000~\u0000\u0003ppsr\u0000)com.sun.msv.datatype"
+							+ ".xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;x"
+							+ "r\u00009com.sun.msv.datatype.xsd.DataTypeWithValueConstraintFacet"
+							+ "\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000"
+							+ "\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lc"
+							+ "om/sun/msv/datatype/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lco"
+							+ "m/sun/msv/datatype/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u00002xr\u0000\'com"
+							+ ".sun.msv.datatype.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceU"
+							+ "riq\u0000~\u00002L\u0000\btypeNameq\u0000~\u00002L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
+							+ "/xsd/WhiteSpaceProcessor;xpt\u0000\u0000t\u0000\nBinyanTypesr\u00005com.sun.msv.d"
+							+ "atatype.xsd.WhiteSpaceProcessor$Collapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.s"
+							+ "un.msv.datatype.xsd.WhiteSpaceProcessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0000\u0000sr\u0000\"co"
+							+ "m.sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.d"
+							+ "atatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun"
+							+ ".msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.ms"
+							+ "v.datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000Pt\u0000 http://www.w3"
+							+ ".org/2001/XMLSchemat\u0000\u0005tokenq\u0000~\u0000W\u0001q\u0000~\u0000\\t\u0000\u000benumerationsr\u0000\u0011java"
+							+ ".util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bunspecifiedt\u0000\u0006Nif"
+							+ "\'alt\u0000\u0006Hif\'ilt\u0000\bHitpa\'elt\u0000\u0005Pa\'alt\u0000\u0006Huf\'alt\u0000\u0005Pu\'alt\u0000\u0005Pi\'elxsr\u0000"
+							+ "0com.sun.msv.grammar.Expression$NullSetExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000"
+							+ "xq\u0000~\u0000\u0003ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNa"
+							+ "meq\u0000~\u00002L\u0000\fnamespaceURIq\u0000~\u00002xpq\u0000~\u0000Tq\u0000~\u0000Ssq\u0000~\u00001t\u0000\u0006binyanq\u0000~\u0000Sq"
+							+ "\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 psq\u0000~\u0000Fppsq\u0000~\u0000Jq\u0000~\u0000St\u0000\fFeminineTypeq\u0000"
+							+ "~\u0000W\u0000\u0000q\u0000~\u0000\\q\u0000~\u0000\\q\u0000~\u0000_sq\u0000~\u0000`w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000\u000bunspecifiedt\u0000\u0002itt"
+							+ "\u0000\u0001ht\u0000\u0001txq\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000tq\u0000~\u0000Ssq\u0000~\u00001t\u0000\bfeminineq\u0000~\u0000Sq\u0000~\u00000sq\u0000~"
+							+ "\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 psq\u0000~\u0000Fppsr\u0000$com.sun.msv.datatype.xsd.Boolean"
+							+ "Type\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000Zq\u0000~\u0000]t\u0000\u0007booleanq\u0000~\u0000Wq\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000\u0082q\u0000~"
+							+ "\u0000]sq\u0000~\u00001t\u0000\u0007foreignq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t"
+							+ "\u0000\u000einflectBeinoniq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0017"
+							+ "inflectBeinoniConstructq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq"
+							+ "\u0000~\u00001t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 "
+							+ "pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\rinflectFutureq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000"
+							+ "~\u0000\u007fsq\u0000~\u00001t\u0000\u0011inflectImperativeq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq"
+							+ "\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0011inflectInfinitiveq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 p"
+							+ "q\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u001cinflectInfinitiveIndependentq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001app"
+							+ "sq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0012inflectInfinitivebq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001a"
+							+ "ppsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u0012inflectInfinitivelq\u0000~\u0000Sq\u0000~\u00000sq\u0000~"
+							+ "\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\rinflectOriginq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\u001ap"
+							+ "psq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u007fsq\u0000~\u00001t\u0000\u000binflectPastq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\'ppsq\u0000~"
+							+ "\u0000Fppq\u0000~\u0000\\q\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000^q\u0000~\u0000]sq\u0000~\u00001t\u0000\u0011inflectionPatternq\u0000~\u0000"
+							+ "Ssq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 pq\u0000~\u0000\u00b3sq\u0000~\u00001t\u0000\bipSourceq\u0000~\u0000Sq\u0000~\u00000sq\u0000~\u0000\'p"
+							+ "pq\u0000~\u0000\u00b3sq\u0000~\u00001t\u0000\u0004rootq\u0000~\u0000Ssq\u0000~\u0000\u001appsq\u0000~\u0000\'q\u0000~\u0000 psq\u0000~\u0000Fppsq\u0000~\u0000Jq\u0000"
+							+ "~\u0000St\u0000\u000bValenceTypeq\u0000~\u0000W\u0000\u0000q\u0000~\u0000\\q\u0000~\u0000\\q\u0000~\u0000_sq\u0000~\u0000`w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt"
+							+ "\u0000\u000bunspecifiedt\u0000\u0012transitiveWithPault\u0000\u0017intransitiveWithoutPaul"
+							+ "t\u0000\u0015transitiveWithoutPault\u0000\ntransitivet\u0000\u0014intransitiveWithPaul"
+							+ "t\u0000\fintransitivet\u0000\fditransitivexq\u0000~\u0000ksq\u0000~\u0000lq\u0000~\u0000\u00c2q\u0000~\u0000Ssq\u0000~\u00001t\u0000"
+							+ "\u0007valenceq\u0000~\u0000Sq\u0000~\u00000sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000"
+							+ "\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/Lcom/sun/msv/grammar/ExpressionPool$Clo"
+							+ "sedHash;xpsr\u0000-com.sun.msv.grammar.ExpressionPool$ClosedHash\u00d7"
+							+ "j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/g"
+							+ "rammar/ExpressionPool;xp\u0000\u0000\u0000/\u0001pq\u0000~\u0000\u0010q\u0000~\u0000\u00a6q\u0000~\u0000\u0016q\u0000~\u0000}q\u0000~\u0000\u000bq\u0000~\u0000\b"
+							+ "q\u0000~\u0000\u00aeq\u0000~\u0000\u00b7q\u0000~\u0000\u009aq\u0000~\u0000\u00a2q\u0000~\u0000\u0011q\u0000~\u0000\u000fq\u0000~\u0000\u00aaq\u0000~\u0000\u0007q\u0000~\u0000\u008aq\u0000~\u0000\u001dq\u0000~\u0000\u0013q\u0000~\u0000\n"
+							+ "q\u0000~\u0000Dq\u0000~\u0000\fq\u0000~\u0000\u001cq\u0000~\u0000\u000eq\u0000~\u0000\u0015q\u0000~\u0000%q\u0000~\u00008q\u0000~\u0000?q\u0000~\u0000\u0092q\u0000~\u0000\u0019q\u0000~\u0000\u00beq\u0000~\u0000\u0096"
+							+ "q\u0000~\u0000\u0005q\u0000~\u0000\u0086q\u0000~\u0000\u001eq\u0000~\u00006q\u0000~\u0000=q\u0000~\u0000\rq\u0000~\u0000\u0006q\u0000~\u0000\u0012q\u0000~\u0000\u008eq\u0000~\u0000\u001bq\u0000~\u0000pq\u0000~\u0000\u0014"
+							+ "q\u0000~\u0000&q\u0000~\u00009q\u0000~\u0000@q\u0000~\u0000\u009eq\u0000~\u0000\tx"));
+		}
+		return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+				schemaFragment);
+	}
+
+	public static class AddImpl extends lexicon.jaxb.impl.VerbExceptionTypeImpl
+			implements lexicon.jaxb.VerbLexiconType.Add,
+			com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject,
+			lexicon.jaxb.impl.runtime.UnmarshallableObject,
+			lexicon.jaxb.impl.runtime.XMLSerializable,
+			lexicon.jaxb.impl.runtime.ValidatableObject {
+
+		public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+		private static com.sun.msv.grammar.Grammar schemaFragment;
+
+		private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+			return (lexicon.jaxb.VerbLexiconType.Add.class);
+		}
+
+		public java.lang.String ____jaxb_ri____getNamespaceURI() {
+			return "";
+		}
+
+		public java.lang.String ____jaxb_ri____getLocalName() {
+			return "add";
+		}
+
+		public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			return new lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.Unmarshaller(
+					context);
+		}
+
+		public void serializeBody(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+			context.startElement("", "add");
+			super.serializeURIs(context);
+			context.endNamespaceDecls();
+			super.serializeAttributes(context);
+			context.endAttributes();
+			super.serializeBody(context);
+			context.endElement();
+		}
+
+		public void serializeAttributes(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public void serializeURIs(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public java.lang.Class getPrimaryInterface() {
+			return (lexicon.jaxb.VerbLexiconType.Add.class);
+		}
+
+		public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+			if (schemaFragment == null) {
+				schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+						.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
+								+ "\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
+								+ "grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
+								+ "\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
+								+ "msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
+								+ "ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
+								+ "mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
+								+ "q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000"
+								+ "\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~"
+								+ "\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com.sun"
+								+ ".msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.dataty"
+								+ "pe.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv."
+								+ "datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.dat"
+								+ "atype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xs"
+								+ "d.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/Stri"
+								+ "ng;L\u0000\btypeNameq\u0000~\u0000 L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd"
+								+ "/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000"
+								+ "\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Colla"
+								+ "pse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcess"
+								+ "or\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetEx"
+								+ "pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t"
+								+ "\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespaceURIq\u0000~\u0000 xpq\u0000~\u0000$q\u0000~\u0000#sr"
+								+ "\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 com.su"
+								+ "n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameClass"
+								+ "q\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psq\u0000~\u0000"
+								+ "\u0017ppsr\u0000$com.sun.msv.datatype.xsd.BooleanType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001d"
+								+ "q\u0000~\u0000#t\u0000\u0007booleanq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u00005q\u0000~\u0000#sr\u0000#com.sun.msv.gra"
+								+ "mmar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespace"
+								+ "URIq\u0000~\u0000 xr\u0000\u001dcom.sun.msv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0010bei"
+								+ "noniConstructt\u0000\u0000sr\u00000com.sun.msv.grammar.Expression$EpsilonEx"
+								+ "pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u00000\u0001q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001pq\u0000~"
+								+ "\u00002sq\u0000~\u00007t\u0000\u0013beinoniDefinitenessq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001p"
+								+ "q\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u0006dottedq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsr"
+								+ "\u0000)com.sun.msv.datatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006val"
+								+ "uest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWi"
+								+ "thValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xs"
+								+ "d.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueChe"
+								+ "ckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl"
+								+ ";L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000"
+								+ "\tfacetNameq\u0000~\u0000 xq\u0000~\u0000\u001fq\u0000~\u0000;t\u0000\nGenderTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"t\u0000\u000be"
+								+ "numerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000"
+								+ "\u000bunspecifiedt\u0000\bfemininet\u0000\u0016masculine and femininet\u0000\tmasculine"
+								+ "xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000Qq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006genderq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
+								+ ".q\u0000~\u00001pq\u0000~\u00002sq\u0000~\u00007t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000"
+								+ ",ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nNumberTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q"
+								+ "\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0006t\u0000\u000bunspecifiedt\u0000\u0013singular and p"
+								+ "luralt\u0000\u0004dualt\u0000\u000fdual and pluralt\u0000\bsingulart\u0000\u0006pluralxq\u0000~\u0000)sq\u0000~"
+								+ "\u0000*q\u0000~\u0000dq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006numberq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000"
+								+ "~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nPersonTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000"
+								+ "\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0005t\u0000\u000bunspecifiedt\u0000\u00013t\u0000\u00012t\u0000\u0003anyt\u0000\u00011xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000s"
+								+ "q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006personq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\u0007"
+								+ "PGNTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/S"
+								+ "gt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p"
+								+ "/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecified"
+								+ "t\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/"
+								+ "MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u0080q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0003pgnq\u0000~\u0000;sq\u0000~\u0000,"
+								+ "ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fRegisterTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\""
+								+ "q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq"
+								+ "\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u009cq\u0000~\u0000;sq\u0000~\u00007t\u0000\bregisterq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
+								+ ".q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fSpellingTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000"
+								+ "~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000)sq\u0000~\u0000*q\u0000"
+								+ "~\u0000\u00a8q\u0000~\u0000;sq\u0000~\u00007t\u0000\bspellingq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~"
+								+ "\u0000;t\u0000\tTenseTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bu"
+								+ "nspecifiedt\u0000\u0004pastt\u0000\nimperativet\u0000\u0007beinonit\u0000\ninfinitivet\u0000\u0006futu"
+								+ "ret\u0000\u000ebareInfinitivet\u0000\u0011passiveParticiplexq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00b2q\u0000~\u0000"
+								+ ";sq\u0000~\u00007t\u0000\u0005tenseq\u0000~\u0000;sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u000etransliteratedq\u0000~\u0000"
+								+ ";sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\bundottedq\u0000~\u0000;sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~"
+								+ "\u0000\u0017ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001dq"
+								+ "\u0000~\u0000#t\u0000\u0005QNameq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00caq\u0000~\u0000#sq\u0000~\u00007t\u0000\u0004typet\u0000)http:/"
+								+ "/www.w3.org/2001/XMLSchema-instanceq\u0000~\u0000=sq\u0000~\u00007t\u0000\u0003addq\u0000~\u0000;sr\u0000"
+								+ "\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/"
+								+ "Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.sun"
+								+ ".msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\r"
+								+ "streamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPool"
+								+ ";xp\u0000\u0000\u0000\u0018\u0001pq\u0000~\u0000\u000eq\u0000~\u0000\u00a4q\u0000~\u0000\u00c5q\u0000~\u0000Gq\u0000~\u0000\\q\u0000~\u0000\u0013q\u0000~\u0000Cq\u0000~\u0000\u000bq\u0000~\u0000\u0011q\u0000~\u0000?q"
+								+ "\u0000~\u0000oq\u0000~\u0000\u000fq\u0000~\u0000\u0012q\u0000~\u0000\u0098q\u0000~\u0000\u0016q\u0000~\u0000\u0014q\u0000~\u0000-q\u0000~\u0000`q\u0000~\u0000\tq\u0000~\u0000\u0010q\u0000~\u0000\u0015q\u0000~\u0000\rq"
+								+ "\u0000~\u0000\nq\u0000~\u0000\fx"));
+			}
+			return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+					schemaFragment);
+		}
+
+		public class Unmarshaller extends
+				lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+			public Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+				super(context, "----");
+			}
+
+			protected Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+					int startState) {
+				this(context);
+				state = startState;
+			}
+
+			public java.lang.Object owner() {
+				return lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this;
+			}
+
+			public void enterElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname,
+					org.xml.sax.Attributes __atts)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 0:
+						if (("add" == ___local) && ("" == ___uri)) {
+							context.pushAttributes(__atts, true);
+							state = 1;
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterElement(___uri, ___local,
+								___qname, __atts);
+						return;
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						break;
+					}
+					super.enterElement(___uri, ___local, ___qname, __atts);
+					break;
+				}
+			}
+
+			public void leaveElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 2:
+						if (("add" == ___local) && ("" == ___uri)) {
+							context.popAttributes();
+							state = 3;
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveElement(___uri, ___local,
+								___qname);
+						return;
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					}
+					super.leaveElement(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void enterAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 3:
+						revertToParentFromEnterAttribute(___uri, ___local,
+								___qname);
+						return;
+					case 1:
+						if (("beinoniConstruct" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("beinoniDefiniteness" == ___local)
+								&& ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("dotted" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("gender" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("inflectBeinoniPossessive" == ___local)
+								&& ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("number" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("person" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("pgn" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						break;
+					}
+					super.enterAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void leaveAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 3:
+						revertToParentFromLeaveAttribute(___uri, ___local,
+								___qname);
+						return;
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					}
+					super.leaveAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void handleText(final java.lang.String value)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					try {
+						switch (state) {
+						case 3:
+							revertToParentFromText(value);
+							return;
+						case 1:
+							attIdx = context.getAttribute("",
+									"beinoniConstruct");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"beinoniDefiniteness");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "dotted");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "gender");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"inflectBeinoniPossessive");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "number");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "person");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "pgn");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							break;
+						}
+					} catch (java.lang.RuntimeException e) {
+						handleUnexpectedTextException(value, e);
+					}
+					break;
+				}
+			}
+
+		}
+
+	}
+
+	public static class RemoveImpl extends
+			lexicon.jaxb.impl.VerbExceptionTypeImpl implements
+			lexicon.jaxb.VerbLexiconType.Remove, com.sun.xml.bind.RIElement,
+			com.sun.xml.bind.JAXBObject,
+			lexicon.jaxb.impl.runtime.UnmarshallableObject,
+			lexicon.jaxb.impl.runtime.XMLSerializable,
+			lexicon.jaxb.impl.runtime.ValidatableObject {
+
+		public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+		private static com.sun.msv.grammar.Grammar schemaFragment;
+
+		private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+			return (lexicon.jaxb.VerbLexiconType.Remove.class);
+		}
+
+		public java.lang.String ____jaxb_ri____getNamespaceURI() {
+			return "";
+		}
+
+		public java.lang.String ____jaxb_ri____getLocalName() {
+			return "remove";
+		}
+
+		public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			return new lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.Unmarshaller(
+					context);
+		}
+
+		public void serializeBody(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+			context.startElement("", "remove");
+			super.serializeURIs(context);
+			context.endNamespaceDecls();
+			super.serializeAttributes(context);
+			context.endAttributes();
+			super.serializeBody(context);
+			context.endElement();
+		}
+
+		public void serializeAttributes(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public void serializeURIs(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public java.lang.Class getPrimaryInterface() {
+			return (lexicon.jaxb.VerbLexiconType.Remove.class);
+		}
+
+		public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+			if (schemaFragment == null) {
+				schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+						.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
+								+ "\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
+								+ "grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
+								+ "\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
+								+ "msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
+								+ "ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
+								+ "mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
+								+ "q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000"
+								+ "\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~"
+								+ "\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com.sun"
+								+ ".msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.dataty"
+								+ "pe.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv."
+								+ "datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.dat"
+								+ "atype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xs"
+								+ "d.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/Stri"
+								+ "ng;L\u0000\btypeNameq\u0000~\u0000 L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd"
+								+ "/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000"
+								+ "\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Colla"
+								+ "pse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcess"
+								+ "or\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetEx"
+								+ "pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t"
+								+ "\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespaceURIq\u0000~\u0000 xpq\u0000~\u0000$q\u0000~\u0000#sr"
+								+ "\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 com.su"
+								+ "n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameClass"
+								+ "q\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psq\u0000~\u0000"
+								+ "\u0017ppsr\u0000$com.sun.msv.datatype.xsd.BooleanType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001d"
+								+ "q\u0000~\u0000#t\u0000\u0007booleanq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u00005q\u0000~\u0000#sr\u0000#com.sun.msv.gra"
+								+ "mmar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespace"
+								+ "URIq\u0000~\u0000 xr\u0000\u001dcom.sun.msv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0010bei"
+								+ "noniConstructt\u0000\u0000sr\u00000com.sun.msv.grammar.Expression$EpsilonEx"
+								+ "pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u00000\u0001q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001pq\u0000~"
+								+ "\u00002sq\u0000~\u00007t\u0000\u0013beinoniDefinitenessq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001p"
+								+ "q\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u0006dottedq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsr"
+								+ "\u0000)com.sun.msv.datatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006val"
+								+ "uest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWi"
+								+ "thValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xs"
+								+ "d.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueChe"
+								+ "ckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl"
+								+ ";L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000"
+								+ "\tfacetNameq\u0000~\u0000 xq\u0000~\u0000\u001fq\u0000~\u0000;t\u0000\nGenderTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"t\u0000\u000be"
+								+ "numerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000"
+								+ "\u000bunspecifiedt\u0000\bfemininet\u0000\u0016masculine and femininet\u0000\tmasculine"
+								+ "xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000Qq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006genderq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
+								+ ".q\u0000~\u00001pq\u0000~\u00002sq\u0000~\u00007t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000"
+								+ ",ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nNumberTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q"
+								+ "\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0006t\u0000\u000bunspecifiedt\u0000\u0013singular and p"
+								+ "luralt\u0000\u0004dualt\u0000\u000fdual and pluralt\u0000\bsingulart\u0000\u0006pluralxq\u0000~\u0000)sq\u0000~"
+								+ "\u0000*q\u0000~\u0000dq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006numberq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000"
+								+ "~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nPersonTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000"
+								+ "\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0005t\u0000\u000bunspecifiedt\u0000\u00013t\u0000\u00012t\u0000\u0003anyt\u0000\u00011xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000s"
+								+ "q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006personq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\u0007"
+								+ "PGNTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/S"
+								+ "gt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p"
+								+ "/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecified"
+								+ "t\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/"
+								+ "MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u0080q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0003pgnq\u0000~\u0000;sq\u0000~\u0000,"
+								+ "ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fRegisterTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\""
+								+ "q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq"
+								+ "\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u009cq\u0000~\u0000;sq\u0000~\u00007t\u0000\bregisterq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
+								+ ".q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fSpellingTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000"
+								+ "~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000)sq\u0000~\u0000*q\u0000"
+								+ "~\u0000\u00a8q\u0000~\u0000;sq\u0000~\u00007t\u0000\bspellingq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~"
+								+ "\u0000;t\u0000\tTenseTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bu"
+								+ "nspecifiedt\u0000\u0004pastt\u0000\nimperativet\u0000\u0007beinonit\u0000\ninfinitivet\u0000\u0006futu"
+								+ "ret\u0000\u000ebareInfinitivet\u0000\u0011passiveParticiplexq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00b2q\u0000~\u0000"
+								+ ";sq\u0000~\u00007t\u0000\u0005tenseq\u0000~\u0000;sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u000etransliteratedq\u0000~\u0000"
+								+ ";sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\bundottedq\u0000~\u0000;sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~"
+								+ "\u0000\u0017ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001dq"
+								+ "\u0000~\u0000#t\u0000\u0005QNameq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00caq\u0000~\u0000#sq\u0000~\u00007t\u0000\u0004typet\u0000)http:/"
+								+ "/www.w3.org/2001/XMLSchema-instanceq\u0000~\u0000=sq\u0000~\u00007t\u0000\u0006removeq\u0000~\u0000;"
+								+ "sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTable"
+								+ "t\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com."
+								+ "sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005count"
+								+ "B\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionP"
+								+ "ool;xp\u0000\u0000\u0000\u0018\u0001pq\u0000~\u0000\u000eq\u0000~\u0000\u00a4q\u0000~\u0000\u00c5q\u0000~\u0000Gq\u0000~\u0000\\q\u0000~\u0000\u0013q\u0000~\u0000Cq\u0000~\u0000\u000bq\u0000~\u0000\u0011q\u0000~"
+								+ "\u0000?q\u0000~\u0000oq\u0000~\u0000\u000fq\u0000~\u0000\u0012q\u0000~\u0000\u0098q\u0000~\u0000\u0016q\u0000~\u0000\u0014q\u0000~\u0000-q\u0000~\u0000`q\u0000~\u0000\tq\u0000~\u0000\u0010q\u0000~\u0000\u0015q\u0000~"
+								+ "\u0000\rq\u0000~\u0000\nq\u0000~\u0000\fx"));
+			}
+			return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+					schemaFragment);
+		}
+
+		public class Unmarshaller extends
+				lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+			public Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+				super(context, "----");
+			}
+
+			protected Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+					int startState) {
+				this(context);
+				state = startState;
+			}
+
+			public java.lang.Object owner() {
+				return lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this;
+			}
+
+			public void enterElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname,
+					org.xml.sax.Attributes __atts)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 3:
+						revertToParentFromEnterElement(___uri, ___local,
+								___qname, __atts);
+						return;
+					case 0:
+						if (("remove" == ___local) && ("" == ___uri)) {
+							context.pushAttributes(__atts, true);
+							state = 1;
+							return;
+						}
+						break;
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						break;
+					}
+					super.enterElement(___uri, ___local, ___qname, __atts);
+					break;
+				}
+			}
+
+			public void leaveElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 3:
+						revertToParentFromLeaveElement(___uri, ___local,
+								___qname);
+						return;
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 2:
+						if (("remove" == ___local) && ("" == ___uri)) {
+							context.popAttributes();
+							state = 3;
+							return;
+						}
+						break;
+					}
+					super.leaveElement(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void enterAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 3:
+						revertToParentFromEnterAttribute(___uri, ___local,
+								___qname);
+						return;
+					case 1:
+						if (("beinoniConstruct" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("beinoniDefiniteness" == ___local)
+								&& ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("dotted" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("gender" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("inflectBeinoniPossessive" == ___local)
+								&& ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("number" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("person" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("pgn" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						break;
+					}
+					super.enterAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void leaveAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 3:
+						revertToParentFromLeaveAttribute(___uri, ___local,
+								___qname);
+						return;
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					}
+					super.leaveAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void handleText(final java.lang.String value)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					try {
+						switch (state) {
+						case 3:
+							revertToParentFromText(value);
+							return;
+						case 1:
+							attIdx = context.getAttribute("",
+									"beinoniConstruct");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"beinoniDefiniteness");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "dotted");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "gender");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"inflectBeinoniPossessive");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "number");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "person");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "pgn");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							break;
+						}
+					} catch (java.lang.RuntimeException e) {
+						handleUnexpectedTextException(value, e);
+					}
+					break;
+				}
+			}
+
+		}
+
+	}
+
+	public static class ReplaceImpl extends
+			lexicon.jaxb.impl.VerbExceptionTypeImpl implements
+			lexicon.jaxb.VerbLexiconType.Replace, com.sun.xml.bind.RIElement,
+			com.sun.xml.bind.JAXBObject,
+			lexicon.jaxb.impl.runtime.UnmarshallableObject,
+			lexicon.jaxb.impl.runtime.XMLSerializable,
+			lexicon.jaxb.impl.runtime.ValidatableObject {
+
+		public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+		private static com.sun.msv.grammar.Grammar schemaFragment;
+
+		private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+			return (lexicon.jaxb.VerbLexiconType.Replace.class);
+		}
+
+		public java.lang.String ____jaxb_ri____getNamespaceURI() {
+			return "";
+		}
+
+		public java.lang.String ____jaxb_ri____getLocalName() {
+			return "replace";
+		}
+
+		public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			return new lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.Unmarshaller(
+					context);
+		}
+
+		public void serializeBody(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+			context.startElement("", "replace");
+			super.serializeURIs(context);
+			context.endNamespaceDecls();
+			super.serializeAttributes(context);
+			context.endAttributes();
+			super.serializeBody(context);
+			context.endElement();
+		}
+
+		public void serializeAttributes(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public void serializeURIs(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public java.lang.Class getPrimaryInterface() {
+			return (lexicon.jaxb.VerbLexiconType.Replace.class);
+		}
+
+		public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+			if (schemaFragment == null) {
+				schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+						.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
+								+ "\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
+								+ "grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
+								+ "\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
+								+ "msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
+								+ "ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
+								+ "mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
+								+ "q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000"
+								+ "\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~"
+								+ "\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com.sun"
+								+ ".msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.dataty"
+								+ "pe.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv."
+								+ "datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.dat"
+								+ "atype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xs"
+								+ "d.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/Stri"
+								+ "ng;L\u0000\btypeNameq\u0000~\u0000 L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd"
+								+ "/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000"
+								+ "\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Colla"
+								+ "pse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcess"
+								+ "or\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetEx"
+								+ "pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t"
+								+ "\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespaceURIq\u0000~\u0000 xpq\u0000~\u0000$q\u0000~\u0000#sr"
+								+ "\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 com.su"
+								+ "n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameClass"
+								+ "q\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000psq\u0000~\u0000"
+								+ "\u0017ppsr\u0000$com.sun.msv.datatype.xsd.BooleanType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001d"
+								+ "q\u0000~\u0000#t\u0000\u0007booleanq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u00005q\u0000~\u0000#sr\u0000#com.sun.msv.gra"
+								+ "mmar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000 L\u0000\fnamespace"
+								+ "URIq\u0000~\u0000 xr\u0000\u001dcom.sun.msv.grammar.NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0010bei"
+								+ "noniConstructt\u0000\u0000sr\u00000com.sun.msv.grammar.Expression$EpsilonEx"
+								+ "pression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u00000\u0001q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001pq\u0000~"
+								+ "\u00002sq\u0000~\u00007t\u0000\u0013beinoniDefinitenessq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001p"
+								+ "q\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u0006dottedq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsr"
+								+ "\u0000)com.sun.msv.datatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006val"
+								+ "uest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWi"
+								+ "thValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xs"
+								+ "d.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueChe"
+								+ "ckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl"
+								+ ";L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000"
+								+ "\tfacetNameq\u0000~\u0000 xq\u0000~\u0000\u001fq\u0000~\u0000;t\u0000\nGenderTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"t\u0000\u000be"
+								+ "numerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000"
+								+ "\u000bunspecifiedt\u0000\bfemininet\u0000\u0016masculine and femininet\u0000\tmasculine"
+								+ "xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000Qq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006genderq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
+								+ ".q\u0000~\u00001pq\u0000~\u00002sq\u0000~\u00007t\u0000\u0018inflectBeinoniPossessiveq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000"
+								+ ",ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nNumberTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q"
+								+ "\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0006t\u0000\u000bunspecifiedt\u0000\u0013singular and p"
+								+ "luralt\u0000\u0004dualt\u0000\u000fdual and pluralt\u0000\bsingulart\u0000\u0006pluralxq\u0000~\u0000)sq\u0000~"
+								+ "\u0000*q\u0000~\u0000dq\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006numberq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000"
+								+ "~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\nPersonTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000"
+								+ "\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0005t\u0000\u000bunspecifiedt\u0000\u00013t\u0000\u00012t\u0000\u0003anyt\u0000\u00011xq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000s"
+								+ "q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0006personq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\u0007"
+								+ "PGNTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/S"
+								+ "gt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p"
+								+ "/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecified"
+								+ "t\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/"
+								+ "MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u0080q\u0000~\u0000;sq\u0000~\u00007t\u0000\u0003pgnq\u0000~\u0000;sq\u0000~\u0000,"
+								+ "ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fRegisterTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\""
+								+ "q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq"
+								+ "\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u009cq\u0000~\u0000;sq\u0000~\u00007t\u0000\bregisterq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000,ppsq\u0000~\u0000"
+								+ ".q\u0000~\u00001psq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~\u0000;t\u0000\fSpellingTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000"
+								+ "~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000)sq\u0000~\u0000*q\u0000"
+								+ "~\u0000\u00a8q\u0000~\u0000;sq\u0000~\u00007t\u0000\bspellingq\u0000~\u0000;q\u0000~\u0000=sq\u0000~\u0000.ppsq\u0000~\u0000\u0017ppsq\u0000~\u0000Jq\u0000~"
+								+ "\u0000;t\u0000\tTenseTypeq\u0000~\u0000\'\u0000\u0000q\u0000~\u0000\"q\u0000~\u0000\"q\u0000~\u0000Rsq\u0000~\u0000Sw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\bt\u0000\u000bu"
+								+ "nspecifiedt\u0000\u0004pastt\u0000\nimperativet\u0000\u0007beinonit\u0000\ninfinitivet\u0000\u0006futu"
+								+ "ret\u0000\u000ebareInfinitivet\u0000\u0011passiveParticiplexq\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00b2q\u0000~\u0000"
+								+ ";sq\u0000~\u00007t\u0000\u0005tenseq\u0000~\u0000;sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\u000etransliteratedq\u0000~\u0000"
+								+ ";sq\u0000~\u0000.ppq\u0000~\u0000\u001asq\u0000~\u00007t\u0000\bundottedq\u0000~\u0000;sq\u0000~\u0000,ppsq\u0000~\u0000.q\u0000~\u00001psq\u0000~"
+								+ "\u0000\u0017ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001dq"
+								+ "\u0000~\u0000#t\u0000\u0005QNameq\u0000~\u0000\'q\u0000~\u0000)sq\u0000~\u0000*q\u0000~\u0000\u00caq\u0000~\u0000#sq\u0000~\u00007t\u0000\u0004typet\u0000)http:/"
+								+ "/www.w3.org/2001/XMLSchema-instanceq\u0000~\u0000=sq\u0000~\u00007t\u0000\u0007replaceq\u0000~\u0000"
+								+ ";sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTabl"
+								+ "et\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com"
+								+ ".sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005coun"
+								+ "tB\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/Expression"
+								+ "Pool;xp\u0000\u0000\u0000\u0018\u0001pq\u0000~\u0000\u000eq\u0000~\u0000\u00a4q\u0000~\u0000\u00c5q\u0000~\u0000Gq\u0000~\u0000\\q\u0000~\u0000\u0013q\u0000~\u0000Cq\u0000~\u0000\u000bq\u0000~\u0000\u0011q\u0000"
+								+ "~\u0000?q\u0000~\u0000oq\u0000~\u0000\u000fq\u0000~\u0000\u0012q\u0000~\u0000\u0098q\u0000~\u0000\u0016q\u0000~\u0000\u0014q\u0000~\u0000-q\u0000~\u0000`q\u0000~\u0000\tq\u0000~\u0000\u0010q\u0000~\u0000\u0015q\u0000"
+								+ "~\u0000\rq\u0000~\u0000\nq\u0000~\u0000\fx"));
+			}
+			return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+					schemaFragment);
+		}
+
+		public class Unmarshaller extends
+				lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+			public Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+				super(context, "----");
+			}
+
+			protected Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+					int startState) {
+				this(context);
+				state = startState;
+			}
+
+			public java.lang.Object owner() {
+				return lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this;
+			}
+
+			public void enterElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname,
+					org.xml.sax.Attributes __atts)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						break;
+					case 0:
+						if (("replace" == ___local) && ("" == ___uri)) {
+							context.pushAttributes(__atts, true);
+							state = 1;
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterElement(___uri, ___local,
+								___qname, __atts);
+						return;
+					}
+					super.enterElement(___uri, ___local, ___qname, __atts);
+					break;
+				}
+			}
+
+			public void leaveElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 2:
+						if (("replace" == ___local) && ("" == ___uri)) {
+							context.popAttributes();
+							state = 3;
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveElement(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.leaveElement(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void enterAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						if (("beinoniConstruct" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("beinoniDefiniteness" == ___local)
+								&& ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("dotted" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("gender" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("inflectBeinoniPossessive" == ___local)
+								&& ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("number" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("person" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("pgn" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.VerbExceptionTypeImpl) lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.enterAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void leaveAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "beinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context
+								.getAttribute("", "beinoniDefiniteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.leaveAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void handleText(final java.lang.String value)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					try {
+						switch (state) {
+						case 1:
+							attIdx = context.getAttribute("",
+									"beinoniConstruct");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"beinoniDefiniteness");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "dotted");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "gender");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"inflectBeinoniPossessive");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "number");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "person");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "pgn");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							break;
+						case 3:
+							revertToParentFromText(value);
+							return;
+						}
+					} catch (java.lang.RuntimeException e) {
+						handleUnexpectedTextException(value, e);
+					}
+					break;
+				}
+			}
+
+		}
+
+	}
+
+	public class Unmarshaller extends
+			lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+		public Unmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			super(context,
+					"--------------------------------------------------------");
+		}
+
+		protected Unmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+				int startState) {
+			this(context);
+			state = startState;
+		}
+
+		public java.lang.Object owner() {
+			return lexicon.jaxb.impl.VerbLexiconTypeImpl.this;
+		}
+
+		public void enterElement(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname,
+				org.xml.sax.Attributes __atts) throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 33:
+					attIdx = context.getAttribute("", "inflectInfinitivel");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 36;
+						eatText1(v);
+						continue outer;
+					}
+					state = 36;
+					continue outer;
+				case 21:
+					attIdx = context.getAttribute("", "inflectImperative");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 24;
+						eatText2(v);
+						continue outer;
+					}
+					state = 24;
+					continue outer;
+				case 48:
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 51;
+						eatText3(v);
+						continue outer;
+					}
+					break;
+				case 54:
+					if (("add" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.class),
+										55, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.class),
+										55, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.class),
+										55, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					state = 55;
+					continue outer;
+				case 12:
+					attIdx = context
+							.getAttribute("", "inflectBeinoniConstruct");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText4(v);
+						continue outer;
+					}
+					state = 15;
+					continue outer;
+				case 39:
+					attIdx = context.getAttribute("", "inflectPast");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 42;
+						eatText5(v);
+						continue outer;
+					}
+					state = 42;
+					continue outer;
+				case 55:
+					if (("add" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl.class),
+										55, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl.class),
+										55, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl.class),
+										55, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					revertToParentFromEnterElement(___uri, ___local, ___qname,
+							__atts);
+					return;
+				case 15:
+					attIdx = context.getAttribute("",
+							"inflectBeinoniPossessive");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText6(v);
+						continue outer;
+					}
+					state = 18;
+					continue outer;
+				case 24:
+					attIdx = context.getAttribute("", "inflectInfinitive");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 27;
+						eatText7(v);
+						continue outer;
+					}
+					state = 27;
+					continue outer;
+				case 45:
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 48;
+						eatText8(v);
+						continue outer;
+					}
+					state = 48;
+					continue outer;
+				case 0:
+					attIdx = context.getAttribute("", "binyan");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText9(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 3:
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText10(v);
+						continue outer;
+					}
+					state = 6;
+					continue outer;
+				case 42:
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 45;
+						eatText11(v);
+						continue outer;
+					}
+					break;
+				case 51:
+					attIdx = context.getAttribute("", "valence");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 54;
+						eatText12(v);
+						continue outer;
+					}
+					state = 54;
+					continue outer;
+				case 36:
+					attIdx = context.getAttribute("", "inflectOrigin");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 39;
+						eatText13(v);
+						continue outer;
+					}
+					state = 39;
+					continue outer;
+				case 6:
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText14(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 30:
+					attIdx = context.getAttribute("", "inflectInfinitiveb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 33;
+						eatText15(v);
+						continue outer;
+					}
+					state = 33;
+					continue outer;
+				case 18:
+					attIdx = context.getAttribute("", "inflectFuture");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 21;
+						eatText16(v);
+						continue outer;
+					}
+					state = 21;
+					continue outer;
+				case 9:
+					attIdx = context.getAttribute("", "inflectBeinoni");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText17(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 27:
+					attIdx = context.getAttribute("",
+							"inflectInfinitiveIndependent");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 30;
+						eatText18(v);
+						continue outer;
+					}
+					state = 30;
+					continue outer;
+				}
+				super.enterElement(___uri, ___local, ___qname, __atts);
+				break;
+			}
+		}
+
+		private void eatText1(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectInfinitivel = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectInfinitivel = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText2(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectImperative = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectImperative = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText3(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Root = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText4(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectBeinoniConstruct = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectBeinoniConstruct = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText5(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectPast = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectPast = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText6(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectBeinoniPossessive = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectBeinoniPossessive = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText7(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectInfinitive = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectInfinitive = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText8(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_IpSource = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText9(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Binyan = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText10(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Feminine = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText11(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectionPattern = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText12(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Valence = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText13(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectOrigin = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectOrigin = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText14(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Foreign = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_Foreign = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText15(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectInfinitiveb = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectInfinitiveb = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText16(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectFuture = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectFuture = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText17(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectBeinoni = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectBeinoni = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText18(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectInfinitiveIndependent = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_InflectInfinitiveIndependent = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		public void leaveElement(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 33:
+					attIdx = context.getAttribute("", "inflectInfinitivel");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 36;
+						eatText1(v);
+						continue outer;
+					}
+					state = 36;
+					continue outer;
+				case 21:
+					attIdx = context.getAttribute("", "inflectImperative");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 24;
+						eatText2(v);
+						continue outer;
+					}
+					state = 24;
+					continue outer;
+				case 48:
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 51;
+						eatText3(v);
+						continue outer;
+					}
+					break;
+				case 54:
+					state = 55;
+					continue outer;
+				case 12:
+					attIdx = context
+							.getAttribute("", "inflectBeinoniConstruct");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText4(v);
+						continue outer;
+					}
+					state = 15;
+					continue outer;
+				case 39:
+					attIdx = context.getAttribute("", "inflectPast");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 42;
+						eatText5(v);
+						continue outer;
+					}
+					state = 42;
+					continue outer;
+				case 55:
+					revertToParentFromLeaveElement(___uri, ___local, ___qname);
+					return;
+				case 15:
+					attIdx = context.getAttribute("",
+							"inflectBeinoniPossessive");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText6(v);
+						continue outer;
+					}
+					state = 18;
+					continue outer;
+				case 24:
+					attIdx = context.getAttribute("", "inflectInfinitive");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 27;
+						eatText7(v);
+						continue outer;
+					}
+					state = 27;
+					continue outer;
+				case 45:
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 48;
+						eatText8(v);
+						continue outer;
+					}
+					state = 48;
+					continue outer;
+				case 0:
+					attIdx = context.getAttribute("", "binyan");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText9(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 3:
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText10(v);
+						continue outer;
+					}
+					state = 6;
+					continue outer;
+				case 42:
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 45;
+						eatText11(v);
+						continue outer;
+					}
+					break;
+				case 51:
+					attIdx = context.getAttribute("", "valence");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 54;
+						eatText12(v);
+						continue outer;
+					}
+					state = 54;
+					continue outer;
+				case 36:
+					attIdx = context.getAttribute("", "inflectOrigin");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 39;
+						eatText13(v);
+						continue outer;
+					}
+					state = 39;
+					continue outer;
+				case 6:
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText14(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 30:
+					attIdx = context.getAttribute("", "inflectInfinitiveb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 33;
+						eatText15(v);
+						continue outer;
+					}
+					state = 33;
+					continue outer;
+				case 18:
+					attIdx = context.getAttribute("", "inflectFuture");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 21;
+						eatText16(v);
+						continue outer;
+					}
+					state = 21;
+					continue outer;
+				case 9:
+					attIdx = context.getAttribute("", "inflectBeinoni");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText17(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 27:
+					attIdx = context.getAttribute("",
+							"inflectInfinitiveIndependent");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 30;
+						eatText18(v);
+						continue outer;
+					}
+					state = 30;
+					continue outer;
+				}
+				super.leaveElement(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void enterAttribute(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 33:
+					if (("inflectInfinitivel" == ___local) && ("" == ___uri)) {
+						state = 34;
+						return;
+					}
+					state = 36;
+					continue outer;
+				case 21:
+					if (("inflectImperative" == ___local) && ("" == ___uri)) {
+						state = 22;
+						return;
+					}
+					state = 24;
+					continue outer;
+				case 48:
+					if (("root" == ___local) && ("" == ___uri)) {
+						state = 49;
+						return;
+					}
+					break;
+				case 54:
+					state = 55;
+					continue outer;
+				case 12:
+					if (("inflectBeinoniConstruct" == ___local)
+							&& ("" == ___uri)) {
+						state = 13;
+						return;
+					}
+					state = 15;
+					continue outer;
+				case 39:
+					if (("inflectPast" == ___local) && ("" == ___uri)) {
+						state = 40;
+						return;
+					}
+					state = 42;
+					continue outer;
+				case 55:
+					revertToParentFromEnterAttribute(___uri, ___local, ___qname);
+					return;
+				case 15:
+					if (("inflectBeinoniPossessive" == ___local)
+							&& ("" == ___uri)) {
+						state = 16;
+						return;
+					}
+					state = 18;
+					continue outer;
+				case 24:
+					if (("inflectInfinitive" == ___local) && ("" == ___uri)) {
+						state = 25;
+						return;
+					}
+					state = 27;
+					continue outer;
+				case 45:
+					if (("ipSource" == ___local) && ("" == ___uri)) {
+						state = 46;
+						return;
+					}
+					state = 48;
+					continue outer;
+				case 0:
+					if (("binyan" == ___local) && ("" == ___uri)) {
+						state = 1;
+						return;
+					}
+					state = 3;
+					continue outer;
+				case 3:
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						state = 4;
+						return;
+					}
+					state = 6;
+					continue outer;
+				case 42:
+					if (("inflectionPattern" == ___local) && ("" == ___uri)) {
+						state = 43;
+						return;
+					}
+					break;
+				case 51:
+					if (("valence" == ___local) && ("" == ___uri)) {
+						state = 52;
+						return;
+					}
+					state = 54;
+					continue outer;
+				case 36:
+					if (("inflectOrigin" == ___local) && ("" == ___uri)) {
+						state = 37;
+						return;
+					}
+					state = 39;
+					continue outer;
+				case 6:
+					if (("foreign" == ___local) && ("" == ___uri)) {
+						state = 7;
+						return;
+					}
+					state = 9;
+					continue outer;
+				case 30:
+					if (("inflectInfinitiveb" == ___local) && ("" == ___uri)) {
+						state = 31;
+						return;
+					}
+					state = 33;
+					continue outer;
+				case 18:
+					if (("inflectFuture" == ___local) && ("" == ___uri)) {
+						state = 19;
+						return;
+					}
+					state = 21;
+					continue outer;
+				case 9:
+					if (("inflectBeinoni" == ___local) && ("" == ___uri)) {
+						state = 10;
+						return;
+					}
+					state = 12;
+					continue outer;
+				case 27:
+					if (("inflectInfinitiveIndependent" == ___local)
+							&& ("" == ___uri)) {
+						state = 28;
+						return;
+					}
+					state = 30;
+					continue outer;
+				}
+				super.enterAttribute(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void leaveAttribute(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 14:
+					if (("inflectBeinoniConstruct" == ___local)
+							&& ("" == ___uri)) {
+						state = 15;
+						return;
+					}
+					break;
+				case 33:
+					attIdx = context.getAttribute("", "inflectInfinitivel");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 36;
+						eatText1(v);
+						continue outer;
+					}
+					state = 36;
+					continue outer;
+				case 32:
+					if (("inflectInfinitiveb" == ___local) && ("" == ___uri)) {
+						state = 33;
+						return;
+					}
+					break;
+				case 29:
+					if (("inflectInfinitiveIndependent" == ___local)
+							&& ("" == ___uri)) {
+						state = 30;
+						return;
+					}
+					break;
+				case 50:
+					if (("root" == ___local) && ("" == ___uri)) {
+						state = 51;
+						return;
+					}
+					break;
+				case 21:
+					attIdx = context.getAttribute("", "inflectImperative");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 24;
+						eatText2(v);
+						continue outer;
+					}
+					state = 24;
+					continue outer;
+				case 48:
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 51;
+						eatText3(v);
+						continue outer;
+					}
+					break;
+				case 54:
+					state = 55;
+					continue outer;
+				case 2:
+					if (("binyan" == ___local) && ("" == ___uri)) {
+						state = 3;
+						return;
+					}
+					break;
+				case 35:
+					if (("inflectInfinitivel" == ___local) && ("" == ___uri)) {
+						state = 36;
+						return;
+					}
+					break;
+				case 47:
+					if (("ipSource" == ___local) && ("" == ___uri)) {
+						state = 48;
+						return;
+					}
+					break;
+				case 8:
+					if (("foreign" == ___local) && ("" == ___uri)) {
+						state = 9;
+						return;
+					}
+					break;
+				case 12:
+					attIdx = context
+							.getAttribute("", "inflectBeinoniConstruct");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText4(v);
+						continue outer;
+					}
+					state = 15;
+					continue outer;
+				case 39:
+					attIdx = context.getAttribute("", "inflectPast");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 42;
+						eatText5(v);
+						continue outer;
+					}
+					state = 42;
+					continue outer;
+				case 55:
+					revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
+					return;
+				case 15:
+					attIdx = context.getAttribute("",
+							"inflectBeinoniPossessive");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText6(v);
+						continue outer;
+					}
+					state = 18;
+					continue outer;
+				case 26:
+					if (("inflectInfinitive" == ___local) && ("" == ___uri)) {
+						state = 27;
+						return;
+					}
+					break;
+				case 24:
+					attIdx = context.getAttribute("", "inflectInfinitive");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 27;
+						eatText7(v);
+						continue outer;
+					}
+					state = 27;
+					continue outer;
+				case 11:
+					if (("inflectBeinoni" == ___local) && ("" == ___uri)) {
+						state = 12;
+						return;
+					}
+					break;
+				case 17:
+					if (("inflectBeinoniPossessive" == ___local)
+							&& ("" == ___uri)) {
+						state = 18;
+						return;
+					}
+					break;
+				case 44:
+					if (("inflectionPattern" == ___local) && ("" == ___uri)) {
+						state = 45;
+						return;
+					}
+					break;
+				case 5:
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						state = 6;
+						return;
+					}
+					break;
+				case 53:
+					if (("valence" == ___local) && ("" == ___uri)) {
+						state = 54;
+						return;
+					}
+					break;
+				case 45:
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 48;
+						eatText8(v);
+						continue outer;
+					}
+					state = 48;
+					continue outer;
+				case 23:
+					if (("inflectImperative" == ___local) && ("" == ___uri)) {
+						state = 24;
+						return;
+					}
+					break;
+				case 38:
+					if (("inflectOrigin" == ___local) && ("" == ___uri)) {
+						state = 39;
+						return;
+					}
+					break;
+				case 0:
+					attIdx = context.getAttribute("", "binyan");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText9(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 41:
+					if (("inflectPast" == ___local) && ("" == ___uri)) {
+						state = 42;
+						return;
+					}
+					break;
+				case 3:
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText10(v);
+						continue outer;
+					}
+					state = 6;
+					continue outer;
+				case 42:
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 45;
+						eatText11(v);
+						continue outer;
+					}
+					break;
+				case 51:
+					attIdx = context.getAttribute("", "valence");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 54;
+						eatText12(v);
+						continue outer;
+					}
+					state = 54;
+					continue outer;
+				case 36:
+					attIdx = context.getAttribute("", "inflectOrigin");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 39;
+						eatText13(v);
+						continue outer;
+					}
+					state = 39;
+					continue outer;
+				case 6:
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText14(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 30:
+					attIdx = context.getAttribute("", "inflectInfinitiveb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 33;
+						eatText15(v);
+						continue outer;
+					}
+					state = 33;
+					continue outer;
+				case 18:
+					attIdx = context.getAttribute("", "inflectFuture");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 21;
+						eatText16(v);
+						continue outer;
+					}
+					state = 21;
+					continue outer;
+				case 9:
+					attIdx = context.getAttribute("", "inflectBeinoni");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText17(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 20:
+					if (("inflectFuture" == ___local) && ("" == ___uri)) {
+						state = 21;
+						return;
+					}
+					break;
+				case 27:
+					attIdx = context.getAttribute("",
+							"inflectInfinitiveIndependent");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 30;
+						eatText18(v);
+						continue outer;
+					}
+					state = 30;
+					continue outer;
+				}
+				super.leaveAttribute(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void handleText(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				try {
+					switch (state) {
+					case 28:
+						state = 29;
+						eatText18(value);
+						return;
+					case 33:
+						attIdx = context.getAttribute("", "inflectInfinitivel");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 36;
+							eatText1(v);
+							continue outer;
+						}
+						state = 36;
+						continue outer;
+					case 19:
+						state = 20;
+						eatText16(value);
+						return;
+					case 31:
+						state = 32;
+						eatText15(value);
+						return;
+					case 40:
+						state = 41;
+						eatText5(value);
+						return;
+					case 21:
+						attIdx = context.getAttribute("", "inflectImperative");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 24;
+							eatText2(v);
+							continue outer;
+						}
+						state = 24;
+						continue outer;
+					case 16:
+						state = 17;
+						eatText6(value);
+						return;
+					case 7:
+						state = 8;
+						eatText14(value);
+						return;
+					case 48:
+						attIdx = context.getAttribute("", "root");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 51;
+							eatText3(v);
+							continue outer;
+						}
+						break;
+					case 54:
+						state = 55;
+						continue outer;
+					case 4:
+						state = 5;
+						eatText10(value);
+						return;
+					case 12:
+						attIdx = context.getAttribute("",
+								"inflectBeinoniConstruct");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 15;
+							eatText4(v);
+							continue outer;
+						}
+						state = 15;
+						continue outer;
+					case 39:
+						attIdx = context.getAttribute("", "inflectPast");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 42;
+							eatText5(v);
+							continue outer;
+						}
+						state = 42;
+						continue outer;
+					case 55:
+						revertToParentFromText(value);
+						return;
+					case 15:
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 18;
+							eatText6(v);
+							continue outer;
+						}
+						state = 18;
+						continue outer;
+					case 24:
+						attIdx = context.getAttribute("", "inflectInfinitive");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 27;
+							eatText7(v);
+							continue outer;
+						}
+						state = 27;
+						continue outer;
+					case 25:
+						state = 26;
+						eatText7(value);
+						return;
+					case 52:
+						state = 53;
+						eatText12(value);
+						return;
+					case 22:
+						state = 23;
+						eatText2(value);
+						return;
+					case 45:
+						attIdx = context.getAttribute("", "ipSource");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 48;
+							eatText8(v);
+							continue outer;
+						}
+						state = 48;
+						continue outer;
+					case 34:
+						state = 35;
+						eatText1(value);
+						return;
+					case 1:
+						state = 2;
+						eatText9(value);
+						return;
+					case 13:
+						state = 14;
+						eatText4(value);
+						return;
+					case 0:
+						attIdx = context.getAttribute("", "binyan");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 3;
+							eatText9(v);
+							continue outer;
+						}
+						state = 3;
+						continue outer;
+					case 37:
+						state = 38;
+						eatText13(value);
+						return;
+					case 49:
+						state = 50;
+						eatText3(value);
+						return;
+					case 3:
+						attIdx = context.getAttribute("", "feminine");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 6;
+							eatText10(v);
+							continue outer;
+						}
+						state = 6;
+						continue outer;
+					case 46:
+						state = 47;
+						eatText8(value);
+						return;
+					case 42:
+						attIdx = context.getAttribute("", "inflectionPattern");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 45;
+							eatText11(v);
+							continue outer;
+						}
+						break;
+					case 10:
+						state = 11;
+						eatText17(value);
+						return;
+					case 51:
+						attIdx = context.getAttribute("", "valence");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 54;
+							eatText12(v);
+							continue outer;
+						}
+						state = 54;
+						continue outer;
+					case 36:
+						attIdx = context.getAttribute("", "inflectOrigin");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 39;
+							eatText13(v);
+							continue outer;
+						}
+						state = 39;
+						continue outer;
+					case 6:
+						attIdx = context.getAttribute("", "foreign");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 9;
+							eatText14(v);
+							continue outer;
+						}
+						state = 9;
+						continue outer;
+					case 30:
+						attIdx = context.getAttribute("", "inflectInfinitiveb");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 33;
+							eatText15(v);
+							continue outer;
+						}
+						state = 33;
+						continue outer;
+					case 18:
+						attIdx = context.getAttribute("", "inflectFuture");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 21;
+							eatText16(v);
+							continue outer;
+						}
+						state = 21;
+						continue outer;
+					case 9:
+						attIdx = context.getAttribute("", "inflectBeinoni");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 12;
+							eatText17(v);
+							continue outer;
+						}
+						state = 12;
+						continue outer;
+					case 43:
+						state = 44;
+						eatText11(value);
+						return;
+					case 27:
+						attIdx = context.getAttribute("",
+								"inflectInfinitiveIndependent");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 30;
+							eatText18(v);
+							continue outer;
+						}
+						state = 30;
+						continue outer;
+					}
+				} catch (java.lang.RuntimeException e) {
+					handleUnexpectedTextException(value, e);
+				}
+				break;
+			}
+		}
+
+	}
 
 }

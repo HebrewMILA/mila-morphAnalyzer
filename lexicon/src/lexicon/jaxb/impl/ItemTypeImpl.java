@@ -5,7381 +5,8866 @@
 // Generated on: 2011.01.11 at 04:13:16 PM IST 
 //
 
-
 package lexicon.jaxb.impl;
 
-public class ItemTypeImpl implements lexicon.jaxb.ItemType, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-{
-
-    protected java.lang.String _Register;
-    protected java.lang.String _Comment;
-    protected lexicon.jaxb.MultiWordNounAdjectiveLexiconType _MultiWordNounAdjective;
-    protected com.sun.xml.bind.util.ListImpl _Sense;
-    protected lexicon.jaxb.AdverbLexiconType _Adverb;
-    protected lexicon.jaxb.MultiWordFrozenLexiconType _MultiWordFrozen;
-    protected java.lang.String _Spelling;
-    protected java.lang.String _Transliterated;
-    protected lexicon.jaxb.WprefixLexiconType _WPrefix;
-    protected java.lang.String _Dotted;
-    protected lexicon.jaxb.AcronymLexiconType _Acronym;
-    protected lexicon.jaxb.ProperNameLexiconType _ProperName;
-    protected lexicon.jaxb.ImpersonalLexiconType _Impersonal;
-    protected lexicon.jaxb.ConjunctionLexiconType _Conjunction;
-    protected lexicon.jaxb.AdjectiveLexiconType _Adjective;
-    protected lexicon.jaxb.CopulaLexiconType _Copula;
-    protected lexicon.jaxb.InterjectionLexiconType _Interjection;
-    protected lexicon.jaxb.MultiWordVerbPhraseLexiconType _MultiWordVerbPhrase;
-    protected lexicon.jaxb.MultiWordPrepositionLexiconType _MultiWordPreposition;
-    protected lexicon.jaxb.ModalLexiconType _Modal;
-    protected lexicon.jaxb.NumeralLexiconType _Numeral;
-    protected lexicon.jaxb.PrepositionLexiconType _Preposition;
-    protected lexicon.jaxb.QuantifierLexiconType _Quantifier;
-    protected lexicon.jaxb.PronounLexiconType _Pronoun;
-    protected lexicon.jaxb.VerbLexiconType _Verb;
-    protected lexicon.jaxb.MultiWordNounLexiconType _MultiWordNoun;
-    protected lexicon.jaxb.NounLexiconType _Noun;
-    protected lexicon.jaxb.NegationLexiconType _Negation;
-    protected lexicon.jaxb.ExistentialLexiconType _Existential;
-    protected lexicon.jaxb.InterrogativeLexiconType _Interrogative;
-    protected java.lang.String _Undotted;
-    protected lexicon.jaxb.TitleLexiconType _Title;
-    protected java.lang.String _Id;
-    public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-    private static com.sun.msv.grammar.Grammar schemaFragment;
-
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.ItemType.class);
-    }
-
-    public java.lang.String getRegister() {
-        if (_Register == null) {
-            return "formal";
-        } else {
-            return _Register;
-        }
-    }
-
-    public void setRegister(java.lang.String value) {
-        _Register = value;
-    }
-
-    public java.lang.String getComment() {
-        return _Comment;
-    }
-
-    public void setComment(java.lang.String value) {
-        _Comment = value;
-    }
-
-    public lexicon.jaxb.MultiWordNounAdjectiveLexiconType getMultiWordNounAdjective() {
-        return _MultiWordNounAdjective;
-    }
-
-    public void setMultiWordNounAdjective(lexicon.jaxb.MultiWordNounAdjectiveLexiconType value) {
-        _MultiWordNounAdjective = value;
-    }
-
-    protected com.sun.xml.bind.util.ListImpl _getSense() {
-        if (_Sense == null) {
-            _Sense = new com.sun.xml.bind.util.ListImpl(new java.util.ArrayList());
-        }
-        return _Sense;
-    }
-
-    public java.util.List getSense() {
-        return _getSense();
-    }
-
-    public lexicon.jaxb.AdverbLexiconType getAdverb() {
-        return _Adverb;
-    }
-
-    public void setAdverb(lexicon.jaxb.AdverbLexiconType value) {
-        _Adverb = value;
-    }
-
-    public lexicon.jaxb.MultiWordFrozenLexiconType getMultiWordFrozen() {
-        return _MultiWordFrozen;
-    }
-
-    public void setMultiWordFrozen(lexicon.jaxb.MultiWordFrozenLexiconType value) {
-        _MultiWordFrozen = value;
-    }
-
-    public java.lang.String getSpelling() {
-        if (_Spelling == null) {
-            return "standard";
-        } else {
-            return _Spelling;
-        }
-    }
-
-    public void setSpelling(java.lang.String value) {
-        _Spelling = value;
-    }
-
-    public java.lang.String getTransliterated() {
-        return _Transliterated;
-    }
-
-    public void setTransliterated(java.lang.String value) {
-        _Transliterated = value;
-    }
-
-    public lexicon.jaxb.WprefixLexiconType getWPrefix() {
-        return _WPrefix;
-    }
-
-    public void setWPrefix(lexicon.jaxb.WprefixLexiconType value) {
-        _WPrefix = value;
-    }
-
-    public java.lang.String getDotted() {
-        if (_Dotted == null) {
-            return "";
-        } else {
-            return _Dotted;
-        }
-    }
-
-    public void setDotted(java.lang.String value) {
-        _Dotted = value;
-    }
-
-    public lexicon.jaxb.AcronymLexiconType getAcronym() {
-        return _Acronym;
-    }
-
-    public void setAcronym(lexicon.jaxb.AcronymLexiconType value) {
-        _Acronym = value;
-    }
-
-    public lexicon.jaxb.ProperNameLexiconType getProperName() {
-        return _ProperName;
-    }
-
-    public void setProperName(lexicon.jaxb.ProperNameLexiconType value) {
-        _ProperName = value;
-    }
-
-    public lexicon.jaxb.ImpersonalLexiconType getImpersonal() {
-        return _Impersonal;
-    }
-
-    public void setImpersonal(lexicon.jaxb.ImpersonalLexiconType value) {
-        _Impersonal = value;
-    }
-
-    public lexicon.jaxb.ConjunctionLexiconType getConjunction() {
-        return _Conjunction;
-    }
-
-    public void setConjunction(lexicon.jaxb.ConjunctionLexiconType value) {
-        _Conjunction = value;
-    }
-
-    public lexicon.jaxb.AdjectiveLexiconType getAdjective() {
-        return _Adjective;
-    }
-
-    public void setAdjective(lexicon.jaxb.AdjectiveLexiconType value) {
-        _Adjective = value;
-    }
-
-    public lexicon.jaxb.CopulaLexiconType getCopula() {
-        return _Copula;
-    }
-
-    public void setCopula(lexicon.jaxb.CopulaLexiconType value) {
-        _Copula = value;
-    }
-
-    public lexicon.jaxb.InterjectionLexiconType getInterjection() {
-        return _Interjection;
-    }
-
-    public void setInterjection(lexicon.jaxb.InterjectionLexiconType value) {
-        _Interjection = value;
-    }
-
-    public lexicon.jaxb.MultiWordVerbPhraseLexiconType getMultiWordVerbPhrase() {
-        return _MultiWordVerbPhrase;
-    }
-
-    public void setMultiWordVerbPhrase(lexicon.jaxb.MultiWordVerbPhraseLexiconType value) {
-        _MultiWordVerbPhrase = value;
-    }
-
-    public lexicon.jaxb.MultiWordPrepositionLexiconType getMultiWordPreposition() {
-        return _MultiWordPreposition;
-    }
-
-    public void setMultiWordPreposition(lexicon.jaxb.MultiWordPrepositionLexiconType value) {
-        _MultiWordPreposition = value;
-    }
-
-    public lexicon.jaxb.ModalLexiconType getModal() {
-        return _Modal;
-    }
-
-    public void setModal(lexicon.jaxb.ModalLexiconType value) {
-        _Modal = value;
-    }
-
-    public lexicon.jaxb.NumeralLexiconType getNumeral() {
-        return _Numeral;
-    }
-
-    public void setNumeral(lexicon.jaxb.NumeralLexiconType value) {
-        _Numeral = value;
-    }
-
-    public lexicon.jaxb.PrepositionLexiconType getPreposition() {
-        return _Preposition;
-    }
-
-    public void setPreposition(lexicon.jaxb.PrepositionLexiconType value) {
-        _Preposition = value;
-    }
-
-    public lexicon.jaxb.QuantifierLexiconType getQuantifier() {
-        return _Quantifier;
-    }
-
-    public void setQuantifier(lexicon.jaxb.QuantifierLexiconType value) {
-        _Quantifier = value;
-    }
-
-    public lexicon.jaxb.PronounLexiconType getPronoun() {
-        return _Pronoun;
-    }
-
-    public void setPronoun(lexicon.jaxb.PronounLexiconType value) {
-        _Pronoun = value;
-    }
-
-    public lexicon.jaxb.VerbLexiconType getVerb() {
-        return _Verb;
-    }
-
-    public void setVerb(lexicon.jaxb.VerbLexiconType value) {
-        _Verb = value;
-    }
-
-    public lexicon.jaxb.MultiWordNounLexiconType getMultiWordNoun() {
-        return _MultiWordNoun;
-    }
-
-    public void setMultiWordNoun(lexicon.jaxb.MultiWordNounLexiconType value) {
-        _MultiWordNoun = value;
-    }
-
-    public lexicon.jaxb.NounLexiconType getNoun() {
-        return _Noun;
-    }
-
-    public void setNoun(lexicon.jaxb.NounLexiconType value) {
-        _Noun = value;
-    }
-
-    public lexicon.jaxb.NegationLexiconType getNegation() {
-        return _Negation;
-    }
-
-    public void setNegation(lexicon.jaxb.NegationLexiconType value) {
-        _Negation = value;
-    }
-
-    public lexicon.jaxb.ExistentialLexiconType getExistential() {
-        return _Existential;
-    }
-
-    public void setExistential(lexicon.jaxb.ExistentialLexiconType value) {
-        _Existential = value;
-    }
-
-    public lexicon.jaxb.InterrogativeLexiconType getInterrogative() {
-        return _Interrogative;
-    }
-
-    public void setInterrogative(lexicon.jaxb.InterrogativeLexiconType value) {
-        _Interrogative = value;
-    }
-
-    public java.lang.String getUndotted() {
-        return _Undotted;
-    }
-
-    public void setUndotted(java.lang.String value) {
-        _Undotted = value;
-    }
-
-    public lexicon.jaxb.TitleLexiconType getTitle() {
-        return _Title;
-    }
-
-    public void setTitle(lexicon.jaxb.TitleLexiconType value) {
-        _Title = value;
-    }
-
-    public java.lang.String getId() {
-        return _Id;
-    }
-
-    public void setId(java.lang.String value) {
-        _Id = value;
-    }
-
-    public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-        return new lexicon.jaxb.impl.ItemTypeImpl.Unmarshaller(context);
-    }
-
-    public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx4 = 0;
-        final int len4 = ((_Sense == null)? 0 :_Sense.size());
-        if (_Comment!= null) {
-            context.startElement("", "comment");
-            context.endNamespaceDecls();
-            context.endAttributes();
-            try {
-                context.text(((java.lang.String) _Comment), "Comment");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endElement();
-        }
-        if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective!= null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-            context.startElement("", "adjective");
-            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Adjective), "Adjective");
-            context.endNamespaceDecls();
-            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Adjective), "Adjective");
-            context.endAttributes();
-            context.childAsBody(((com.sun.xml.bind.JAXBObject) _Adjective), "Adjective");
-            context.endElement();
-        } else {
-            if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb!= null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                context.startElement("", "adverb");
-                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Adverb), "Adverb");
-                context.endNamespaceDecls();
-                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Adverb), "Adverb");
-                context.endAttributes();
-                context.childAsBody(((com.sun.xml.bind.JAXBObject) _Adverb), "Adverb");
-                context.endElement();
-            } else {
-                if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction!= null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                    context.startElement("", "conjunction");
-                    context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Conjunction), "Conjunction");
-                    context.endNamespaceDecls();
-                    context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Conjunction), "Conjunction");
-                    context.endAttributes();
-                    context.childAsBody(((com.sun.xml.bind.JAXBObject) _Conjunction), "Conjunction");
-                    context.endElement();
-                } else {
-                    if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection!= null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                        context.startElement("", "interjection");
-                        context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Interjection), "Interjection");
-                        context.endNamespaceDecls();
-                        context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Interjection), "Interjection");
-                        context.endAttributes();
-                        context.childAsBody(((com.sun.xml.bind.JAXBObject) _Interjection), "Interjection");
-                        context.endElement();
-                    } else {
-                        if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative!= null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                            context.startElement("", "interrogative");
-                            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Interrogative), "Interrogative");
-                            context.endNamespaceDecls();
-                            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Interrogative), "Interrogative");
-                            context.endAttributes();
-                            context.childAsBody(((com.sun.xml.bind.JAXBObject) _Interrogative), "Interrogative");
-                            context.endElement();
-                        } else {
-                            if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation!= null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                context.startElement("", "negation");
-                                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Negation), "Negation");
-                                context.endNamespaceDecls();
-                                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Negation), "Negation");
-                                context.endAttributes();
-                                context.childAsBody(((com.sun.xml.bind.JAXBObject) _Negation), "Negation");
-                                context.endElement();
-                            } else {
-                                if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title!= null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                    context.startElement("", "title");
-                                    context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Title), "Title");
-                                    context.endNamespaceDecls();
-                                    context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Title), "Title");
-                                    context.endAttributes();
-                                    context.childAsBody(((com.sun.xml.bind.JAXBObject) _Title), "Title");
-                                    context.endElement();
-                                } else {
-                                    if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun!= null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                        context.startElement("", "noun");
-                                        context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Noun), "Noun");
-                                        context.endNamespaceDecls();
-                                        context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Noun), "Noun");
-                                        context.endAttributes();
-                                        context.childAsBody(((com.sun.xml.bind.JAXBObject) _Noun), "Noun");
-                                        context.endElement();
-                                    } else {
-                                        if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition!= null))&&(_Existential == null))&&(_Acronym == null)) {
-                                            context.startElement("", "preposition");
-                                            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Preposition), "Preposition");
-                                            context.endNamespaceDecls();
-                                            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Preposition), "Preposition");
-                                            context.endAttributes();
-                                            context.childAsBody(((com.sun.xml.bind.JAXBObject) _Preposition), "Preposition");
-                                            context.endElement();
-                                        } else {
-                                            if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun!= null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                context.startElement("", "pronoun");
-                                                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Pronoun), "Pronoun");
-                                                context.endNamespaceDecls();
-                                                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Pronoun), "Pronoun");
-                                                context.endAttributes();
-                                                context.childAsBody(((com.sun.xml.bind.JAXBObject) _Pronoun), "Pronoun");
-                                                context.endElement();
-                                            } else {
-                                                if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName!= null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                    context.startElement("", "properName");
-                                                    context.childAsURIs(((com.sun.xml.bind.JAXBObject) _ProperName), "ProperName");
-                                                    context.endNamespaceDecls();
-                                                    context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _ProperName), "ProperName");
-                                                    context.endAttributes();
-                                                    context.childAsBody(((com.sun.xml.bind.JAXBObject) _ProperName), "ProperName");
-                                                    context.endElement();
-                                                } else {
-                                                    if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal!= null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                        context.startElement("", "modal");
-                                                        context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Modal), "Modal");
-                                                        context.endNamespaceDecls();
-                                                        context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Modal), "Modal");
-                                                        context.endAttributes();
-                                                        context.childAsBody(((com.sun.xml.bind.JAXBObject) _Modal), "Modal");
-                                                        context.endElement();
-                                                    } else {
-                                                        if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier!= null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                            context.startElement("", "quantifier");
-                                                            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Quantifier), "Quantifier");
-                                                            context.endNamespaceDecls();
-                                                            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Quantifier), "Quantifier");
-                                                            context.endAttributes();
-                                                            context.childAsBody(((com.sun.xml.bind.JAXBObject) _Quantifier), "Quantifier");
-                                                            context.endElement();
-                                                        } else {
-                                                            if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb!= null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                context.startElement("", "verb");
-                                                                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Verb), "Verb");
-                                                                context.endNamespaceDecls();
-                                                                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Verb), "Verb");
-                                                                context.endAttributes();
-                                                                context.childAsBody(((com.sun.xml.bind.JAXBObject) _Verb), "Verb");
-                                                                context.endElement();
-                                                            } else {
-                                                                if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential!= null))&&(_Acronym == null)) {
-                                                                    context.startElement("", "existential");
-                                                                    context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Existential), "Existential");
-                                                                    context.endNamespaceDecls();
-                                                                    context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Existential), "Existential");
-                                                                    context.endAttributes();
-                                                                    context.childAsBody(((com.sun.xml.bind.JAXBObject) _Existential), "Existential");
-                                                                    context.endElement();
-                                                                } else {
-                                                                    if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal!= null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                        context.startElement("", "impersonal");
-                                                                        context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Impersonal), "Impersonal");
-                                                                        context.endNamespaceDecls();
-                                                                        context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Impersonal), "Impersonal");
-                                                                        context.endAttributes();
-                                                                        context.childAsBody(((com.sun.xml.bind.JAXBObject) _Impersonal), "Impersonal");
-                                                                        context.endElement();
-                                                                    } else {
-                                                                        if (((((((((((((((((((((((((_WPrefix!= null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                            context.startElement("", "wPrefix");
-                                                                            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _WPrefix), "WPrefix");
-                                                                            context.endNamespaceDecls();
-                                                                            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _WPrefix), "WPrefix");
-                                                                            context.endAttributes();
-                                                                            context.childAsBody(((com.sun.xml.bind.JAXBObject) _WPrefix), "WPrefix");
-                                                                            context.endElement();
-                                                                        } else {
-                                                                            if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula!= null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                                context.startElement("", "copula");
-                                                                                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Copula), "Copula");
-                                                                                context.endNamespaceDecls();
-                                                                                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Copula), "Copula");
-                                                                                context.endAttributes();
-                                                                                context.childAsBody(((com.sun.xml.bind.JAXBObject) _Copula), "Copula");
-                                                                                context.endElement();
-                                                                            } else {
-                                                                                if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral!= null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                                    context.startElement("", "numeral");
-                                                                                    context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Numeral), "Numeral");
-                                                                                    context.endNamespaceDecls();
-                                                                                    context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Numeral), "Numeral");
-                                                                                    context.endAttributes();
-                                                                                    context.childAsBody(((com.sun.xml.bind.JAXBObject) _Numeral), "Numeral");
-                                                                                    context.endElement();
-                                                                                } else {
-                                                                                    if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym!= null)) {
-                                                                                        context.startElement("", "acronym");
-                                                                                        context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Acronym), "Acronym");
-                                                                                        context.endNamespaceDecls();
-                                                                                        context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Acronym), "Acronym");
-                                                                                        context.endAttributes();
-                                                                                        context.childAsBody(((com.sun.xml.bind.JAXBObject) _Acronym), "Acronym");
-                                                                                        context.endElement();
-                                                                                    } else {
-                                                                                        if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen!= null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                                            context.startElement("", "multiWordFrozen");
-                                                                                            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _MultiWordFrozen), "MultiWordFrozen");
-                                                                                            context.endNamespaceDecls();
-                                                                                            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _MultiWordFrozen), "MultiWordFrozen");
-                                                                                            context.endAttributes();
-                                                                                            context.childAsBody(((com.sun.xml.bind.JAXBObject) _MultiWordFrozen), "MultiWordFrozen");
-                                                                                            context.endElement();
-                                                                                        } else {
-                                                                                            if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition!= null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                                                context.startElement("", "multiWordPreposition");
-                                                                                                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _MultiWordPreposition), "MultiWordPreposition");
-                                                                                                context.endNamespaceDecls();
-                                                                                                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _MultiWordPreposition), "MultiWordPreposition");
-                                                                                                context.endAttributes();
-                                                                                                context.childAsBody(((com.sun.xml.bind.JAXBObject) _MultiWordPreposition), "MultiWordPreposition");
-                                                                                                context.endElement();
-                                                                                            } else {
-                                                                                                if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun!= null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                                                    context.startElement("", "multiWordNoun");
-                                                                                                    context.childAsURIs(((com.sun.xml.bind.JAXBObject) _MultiWordNoun), "MultiWordNoun");
-                                                                                                    context.endNamespaceDecls();
-                                                                                                    context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _MultiWordNoun), "MultiWordNoun");
-                                                                                                    context.endAttributes();
-                                                                                                    context.childAsBody(((com.sun.xml.bind.JAXBObject) _MultiWordNoun), "MultiWordNoun");
-                                                                                                    context.endElement();
-                                                                                                } else {
-                                                                                                    if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective!= null))&&(_MultiWordVerbPhrase == null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                                                        context.startElement("", "multiWordNounAdjective");
-                                                                                                        context.childAsURIs(((com.sun.xml.bind.JAXBObject) _MultiWordNounAdjective), "MultiWordNounAdjective");
-                                                                                                        context.endNamespaceDecls();
-                                                                                                        context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _MultiWordNounAdjective), "MultiWordNounAdjective");
-                                                                                                        context.endAttributes();
-                                                                                                        context.childAsBody(((com.sun.xml.bind.JAXBObject) _MultiWordNounAdjective), "MultiWordNounAdjective");
-                                                                                                        context.endElement();
-                                                                                                    } else {
-                                                                                                        if (((((((((((((((((((((((((_WPrefix == null)&&(_Quantifier == null))&&(_Modal == null))&&(_Pronoun == null))&&(_Copula == null))&&(_Adverb == null))&&(_Negation == null))&&(_MultiWordPreposition == null))&&(_MultiWordFrozen == null))&&(_Title == null))&&(_Impersonal == null))&&(_MultiWordNoun == null))&&(_Verb == null))&&(_Numeral == null))&&(_Noun == null))&&(_MultiWordNounAdjective == null))&&(_MultiWordVerbPhrase!= null))&&(_Interjection == null))&&(_ProperName == null))&&(_Adjective == null))&&(_Interrogative == null))&&(_Conjunction == null))&&(_Preposition == null))&&(_Existential == null))&&(_Acronym == null)) {
-                                                                                                            context.startElement("", "multiWordVerbPhrase");
-                                                                                                            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _MultiWordVerbPhrase), "MultiWordVerbPhrase");
-                                                                                                            context.endNamespaceDecls();
-                                                                                                            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _MultiWordVerbPhrase), "MultiWordVerbPhrase");
-                                                                                                            context.endAttributes();
-                                                                                                            context.childAsBody(((com.sun.xml.bind.JAXBObject) _MultiWordVerbPhrase), "MultiWordVerbPhrase");
-                                                                                                            context.endElement();
-                                                                                                        }
-                                                                                                    }
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        while (idx4 != len4) {
-            context.startElement("", "sense");
-            int idx_52 = idx4;
-            context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Sense.get(idx_52 ++)), "Sense");
-            context.endNamespaceDecls();
-            int idx_53 = idx4;
-            context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _Sense.get(idx_53 ++)), "Sense");
-            context.endAttributes();
-            context.childAsBody(((com.sun.xml.bind.JAXBObject) _Sense.get(idx4 ++)), "Sense");
-            context.endElement();
-        }
-    }
-
-    public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx4 = 0;
-        final int len4 = ((_Sense == null)? 0 :_Sense.size());
-        if (_Dotted!= null) {
-            context.startAttribute("", "dotted");
-            try {
-                context.text(((java.lang.String) _Dotted), "Dotted");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        context.startAttribute("", "id");
-        try {
-            context.text(((java.lang.String) _Id), "Id");
-        } catch (java.lang.Exception e) {
-            lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-        }
-        context.endAttribute();
-        if (_Register!= null) {
-            context.startAttribute("", "register");
-            try {
-                context.text(((java.lang.String) _Register), "Register");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_Spelling!= null) {
-            context.startAttribute("", "spelling");
-            try {
-                context.text(((java.lang.String) _Spelling), "Spelling");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        context.startAttribute("", "transliterated");
-        try {
-            context.text(((java.lang.String) _Transliterated), "Transliterated");
-        } catch (java.lang.Exception e) {
-            lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-        }
-        context.endAttribute();
-        context.startAttribute("", "undotted");
-        try {
-            context.text(((java.lang.String) _Undotted), "Undotted");
-        } catch (java.lang.Exception e) {
-            lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-        }
-        context.endAttribute();
-        while (idx4 != len4) {
-            idx4 += 1;
-        }
-    }
-
-    public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx4 = 0;
-        final int len4 = ((_Sense == null)? 0 :_Sense.size());
-        while (idx4 != len4) {
-            idx4 += 1;
-        }
-    }
-
-    public java.lang.Class getPrimaryInterface() {
-        return (lexicon.jaxb.ItemType.class);
-    }
-
-    public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-        if (schemaFragment == null) {
-            schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\u001fcom.sun.msv.grammar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.su"
-+"n.msv.grammar.BinaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1t\u0000 Lcom/sun/msv/gra"
-+"mmar/Expression;L\u0000\u0004exp2q\u0000~\u0000\u0002xr\u0000\u001ecom.sun.msv.grammar.Expressi"
-+"on\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Ljava/lang/Boolean;L\u0000\u000b"
-+"expandedExpq\u0000~\u0000\u0002xpppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000pp"
-+"sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000"
-+"xq\u0000~\u0000\u0001ppsr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002"
-+"\u0000\u0001L\u0000\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun."
-+"msv.grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttribut"
-+"esL\u0000\fcontentModelq\u0000~\u0000\u0002xq\u0000~\u0000\u0003sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001"
-+"Z\u0000\u0005valuexp\u0000p\u0000sq\u0000~\u0000\u0000ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
-+"\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~\u0000\u0002L\u0000\u0004n"
-+"amet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0003ppsr\u0000\"com.sun.msv.d"
-+"atatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.datatype.xsd"
-+".StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv.dataty"
-+"pe.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.datatype."
-+"xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xsd.XSDa"
-+"tatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/String;L\u0000\b"
-+"typeNameq\u0000~\u0000\u001fL\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd/White"
-+"SpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000\u0005token"
-+"sr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Collapse\u0000\u0000\u0000"
-+"\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcessor\u0000\u0000\u0000\u0000"
-+"\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetExpressi"
-+"on\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t\u001ejB\u008f\u008d\u00a0"
-+"\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u001fL\u0000\fnamespaceURIq\u0000~\u0000\u001fxpq\u0000~\u0000#q\u0000~\u0000\"sq\u0000~\u0000\rpp"
-+"sr\u0000 com.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0002L\u0000"
-+"\tnameClassq\u0000~\u0000\u0010xq\u0000~\u0000\u0003q\u0000~\u0000\u0014psq\u0000~\u0000\u0016ppsr\u0000\"com.sun.msv.datatype."
-+"xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001cq\u0000~\u0000\"t\u0000\u0005QNameq\u0000~\u0000&q\u0000~\u0000(sq\u0000~\u0000)q"
-+"\u0000~\u00001q\u0000~\u0000\"sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L"
-+"\u0000\tlocalNameq\u0000~\u0000\u001fL\u0000\fnamespaceURIq\u0000~\u0000\u001fxr\u0000\u001dcom.sun.msv.grammar."
-+"NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0004typet\u0000)http://www.w3.org/2001/XMLSc"
-+"hema-instancesr\u00000com.sun.msv.grammar.Expression$EpsilonExpre"
-+"ssion\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003sq\u0000~\u0000\u0013\u0001q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007commentt\u0000\u0000q\u0000~\u00009sq"
-+"\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\r"
-+"ppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq"
-+"\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\r"
-+"ppsq\u0000~\u0000\rppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsr\u0000 com.sun.msv."
-+"grammar.OneOrMoreExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001ccom.sun.msv.grammar.Unary"
-+"Exp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0003expq\u0000~\u0000\u0002xq\u0000~\u0000\u0003q\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014psr\u00002com.sun"
-+".msv.grammar.Expression$AnyStringExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003"
-+"q\u0000~\u0000:q\u0000~\u0000_sr\u0000 com.sun.msv.grammar.AnyNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000"
-+"~\u00004q\u0000~\u00009sq\u0000~\u00003t\u0000!lexicon.jaxb.AdjectiveLexiconTypet\u0000+http://"
-+"java.sun.com/jaxb/xjc/dummy-elementssq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
-+".q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\tadjectiveq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000"
-+"sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001elexi"
-+"con.jaxb.AdverbLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u0000"
-+"5q\u0000~\u00009sq\u0000~\u00003t\u0000\u0006adverbq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rpp"
-+"sq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000#lexicon.jaxb"
-+".ConjunctionLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000"
-+"~\u00009sq\u0000~\u00003t\u0000\u000bconjunctionq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\r"
-+"ppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000$lexicon.ja"
-+"xb.InterjectionLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u0000"
-+"5q\u0000~\u00009sq\u0000~\u00003t\u0000\finterjectionq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq"
-+"\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000%lexico"
-+"n.jaxb.InterrogativeLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
-+".q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\rinterrogativeq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000"
-+"\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000 "
-+"lexicon.jaxb.NegationLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~"
-+"\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\bnegationq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000"
-+"sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001dlexi"
-+"con.jaxb.TitleLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005"
-+"q\u0000~\u00009sq\u0000~\u00003t\u0000\u0005titleq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq"
-+"\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001clexicon.jaxb.N"
-+"ounLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003"
-+"t\u0000\u0004nounq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq"
-+"\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000#lexicon.jaxb.PrepositionLe"
-+"xiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u000bpr"
-+"epositionq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014p"
-+"sq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001flexicon.jaxb.PronounLexi"
-+"conTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007pron"
-+"ounq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,"
-+"q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\"lexicon.jaxb.ProperNameLexicon"
-+"Typeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\nproperN"
-+"ameq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,"
-+"q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001dlexicon.jaxb.ModalLexiconTypeq"
-+"\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0005modalq\u0000~\u0000=sq"
-+"\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
-+"_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\"lexicon.jaxb.QuantifierLexiconTypeq\u0000~\u0000ds"
-+"q\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\nquantifierq\u0000~\u0000=sq"
-+"\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
-+"_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001clexicon.jaxb.VerbLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rp"
-+"psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0004verbq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000"
-+"\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009s"
-+"q\u0000~\u00003t\u0000#lexicon.jaxb.ExistentialLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~"
-+"\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u000bexistentialq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000"
-+"~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u0000"
-+"9sq\u0000~\u00003t\u0000\"lexicon.jaxb.ImpersonalLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000"
-+"~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\nimpersonalq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000"
-+"~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u0000"
-+"9sq\u0000~\u00003t\u0000\u001flexicon.jaxb.WprefixLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,"
-+"q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007wPrefixq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000pps"
-+"q\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u0000"
-+"3t\u0000\u001elexicon.jaxb.CopulaLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq"
-+"\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0006copulaq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000"
-+"sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001flexi"
-+"con.jaxb.NumeralLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~"
-+"\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007numeralq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\r"
-+"ppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001flexicon.ja"
-+"xb.AcronymLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u0000"
-+"9sq\u0000~\u00003t\u0000\u0007acronymq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~"
-+"\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\'lexicon.jaxb.Mul"
-+"tiWordFrozenLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000"
-+"~\u00009sq\u0000~\u00003t\u0000\u000fmultiWordFrozenq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq"
-+"\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000,lexico"
-+"n.jaxb.MultiWordPrepositionLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~"
-+"\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0014multiWordPrepositionq\u0000~\u0000=sq\u0000~\u0000\u000fpp"
-+"\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000a"
-+"q\u0000~\u00009sq\u0000~\u00003t\u0000%lexicon.jaxb.MultiWordNounLexiconTypeq\u0000~\u0000dsq\u0000~"
-+"\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\rmultiWordNounq\u0000~\u0000=sq"
-+"\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
-+"_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000.lexicon.jaxb.MultiWordNounAdjectiveLexic"
-+"onTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0016multi"
-+"WordNounAdjectiveq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~"
-+"\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000+lexicon.jaxb.Mul"
-+"tiWordVerbPhraseLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~"
-+"\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0013multiWordVerbPhraseq\u0000~\u0000=sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014p"
-+"sq\u0000~\u0000\u000fq\u0000~\u0000\u0014p\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000"
-+"\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u0016lexicon.jaxb.SenseTypeq\u0000~\u0000dsq\u0000~\u0000\rp"
-+"psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0005senseq\u0000~\u0000=q\u0000~\u00009sq\u0000~\u0000\rpp"
-+"sq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000\u0019sq\u0000~\u00003t\u0000\u0006dottedq\u0000~\u0000=q\u0000~\u00009sq\u0000~\u0000,ppq\u0000~\u0000\u0019sq\u0000~\u0000"
-+"3t\u0000\u0002idq\u0000~\u0000=sq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014psq\u0000~\u0000\u0016ppsr\u0000)com.sun.msv.datat"
-+"ype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Se"
-+"t;xr\u00009com.sun.msv.datatype.xsd.DataTypeWithValueConstraintFa"
-+"cet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.DataTypeWithFacet"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000"
-+")Lcom/sun/msv/datatype/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'"
-+"Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u001fxq\u0000~"
-+"\u0000\u001eq\u0000~\u0000=t\u0000\fRegisterTypeq\u0000~\u0000&\u0000\u0000q\u0000~\u0000!q\u0000~\u0000!t\u0000\u000benumerationsr\u0000\u0011jav"
-+"a.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent"
-+"\u0000\u0007archaicxq\u0000~\u0000(sq\u0000~\u0000)q\u0000~\u0001\u00a8q\u0000~\u0000=sq\u0000~\u00003t\u0000\bregisterq\u0000~\u0000=q\u0000~\u00009sq"
-+"\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014psq\u0000~\u0000\u0016ppsq\u0000~\u0001\u00a1q\u0000~\u0000=t\u0000\fSpellingTypeq\u0000~\u0000&\u0000\u0000q"
-+"\u0000~\u0000!q\u0000~\u0000!q\u0000~\u0001\u00a9sq\u0000~\u0001\u00aaw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000"
-+"~\u0000(sq\u0000~\u0000)q\u0000~\u0001\u00b6q\u0000~\u0000=sq\u0000~\u00003t\u0000\bspellingq\u0000~\u0000=q\u0000~\u00009sq\u0000~\u0000,ppq\u0000~\u0000\u0019s"
-+"q\u0000~\u00003t\u0000\u000etransliteratedq\u0000~\u0000=sq\u0000~\u0000,ppq\u0000~\u0000\u0019sq\u0000~\u00003t\u0000\bundottedq\u0000~"
-+"\u0000=sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTab"
-+"let\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-co"
-+"m.sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005cou"
-+"ntB\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/Expressio"
-+"nPool;xp\u0000\u0000\u0000\u0090\u0001pq\u0000~\u0001\u008aq\u0000~\u0001hq\u0000~\u0001\\q\u0000~\u0001Pq\u0000~\u0001Dq\u0000~\u00018q\u0000~\u0001,q\u0000~\u0001 q\u0000~\u0001\u0014q"
-+"\u0000~\u0001\bq\u0000~\u0000\u00fcq\u0000~\u0000\u00f0q\u0000~\u0000\u00e4q\u0000~\u0000Yq\u0000~\u0000lq\u0000~\u0000xq\u0000~\u0000\u0084q\u0000~\u0000\u0090q\u0000~\u0000\u009cq\u0000~\u0000\u00a8q\u0000~\u0000\u00b4q"
-+"\u0000~\u0001aq\u0000~\u0001Uq\u0000~\u0001Iq\u0000~\u0001=q\u0000~\u00011q\u0000~\u0001%q\u0000~\u0001\u0019q\u0000~\u0001\rq\u0000~\u0001\u0001q\u0000~\u0000\u00f5q\u0000~\u0000\u00e9q\u0000~\u0000+q"
-+"\u0000~\u0000eq\u0000~\u0000qq\u0000~\u0000}q\u0000~\u0000Rq\u0000~\u0000\u0089q\u0000~\u0000\u0095q\u0000~\u0000\u00a1q\u0000~\u0000\u00adq\u0000~\u0000\u00b9q\u0000~\u0000Jq\u0000~\u0000\u00c5q\u0000~\u0000\u00d1q"
-+"\u0000~\u0000\u00ddq\u0000~\u0000\u00c0q\u0000~\u0000\u00ccq\u0000~\u0000\u00d8q\u0000~\u0001mq\u0000~\u0001tq\u0000~\u0001yq\u0000~\u0001\u0080q\u0000~\u0001\u0085q\u0000~\u0001\u008eq\u0000~\u0001\u0093q\u0000~\u0000Tq"
-+"\u0000~\u0000Eq\u0000~\u0000\bq\u0000~\u0000Gq\u0000~\u0000Iq\u0000~\u0000Bq\u0000~\u0000Aq\u0000~\u0000Mq\u0000~\u0000Sq\u0000~\u0001Zq\u0000~\u0001Nq\u0000~\u0001Bq\u0000~\u00016q"
-+"\u0000~\u0001*q\u0000~\u0001\u001eq\u0000~\u0001\u0012q\u0000~\u0001\u0006q\u0000~\u0000\u00faq\u0000~\u0000\u00eeq\u0000~\u0000\u00e2q\u0000~\u0000Wq\u0000~\u0000jq\u0000~\u0000vq\u0000~\u0000\u0082q\u0000~\u0000\u008eq"
-+"\u0000~\u0000\u009aq\u0000~\u0000\u00a6q\u0000~\u0000\u00b2q\u0000~\u0000\u00beq\u0000~\u0000Uq\u0000~\u0000\u00caq\u0000~\u0000\u00d6q\u0000~\u0000Qq\u0000~\u0001fq\u0000~\u0001rq\u0000~\u0001~q\u0000~\u0001\u008cq"
-+"\u0000~\u0000\u0006q\u0000~\u0000Cq\u0000~\u0000Lq\u0000~\u0001\u009eq\u0000~\u0000@q\u0000~\u0000\fq\u0000~\u0000>q\u0000~\u0000Hq\u0000~\u0000?q\u0000~\u0001\u0089q\u0000~\u0000Dq\u0000~\u0000Pq"
-+"\u0000~\u0000\tq\u0000~\u0000\u0007q\u0000~\u0000\nq\u0000~\u0000Kq\u0000~\u0000Nq\u0000~\u0001\u0097q\u0000~\u0000\u000eq\u0000~\u0000Fq\u0000~\u0001\u00b2q\u0000~\u0000\u0015q\u0000~\u0000Oq\u0000~\u0000\u000bq"
-+"\u0000~\u0000\u0005q\u0000~\u0001iq\u0000~\u0001]q\u0000~\u0001Qq\u0000~\u0001Eq\u0000~\u00019q\u0000~\u0001-q\u0000~\u0001!q\u0000~\u0001\u0015q\u0000~\u0001\tq\u0000~\u0000\u00fdq\u0000~\u0000\u00f1q"
-+"\u0000~\u0000\u00e5q\u0000~\u0000\\q\u0000~\u0000mq\u0000~\u0000yq\u0000~\u0000\u0085q\u0000~\u0000\u0091q\u0000~\u0000\u009dq\u0000~\u0000\u00a9q\u0000~\u0000\u00b5q\u0000~\u0000\u00c1q\u0000~\u0000\u00cdq\u0000~\u0000\u00d9q"
-+"\u0000~\u0001uq\u0000~\u0001\u0081q\u0000~\u0001\u008fx"));
-        }
-        return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-    }
-
-    public class Unmarshaller
-        extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-    {
-
-
-        public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            super(context, "----------------------------------------------------------------------------");
-        }
-
-        protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-            this(context);
-            state = startState;
-        }
-
-        public java.lang.Object owner() {
-            return lexicon.jaxb.impl.ItemTypeImpl.this;
-        }
-
-        public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  68 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "person");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pgn");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        break;
-                    case  24 :
-                        if (("sense" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 25;
-                            return ;
-                        }
-                        state = 27;
-                        continue outer;
-                    case  21 :
-                        if (("adjective" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 72;
-                            return ;
-                        }
-                        if (("adverb" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 60;
-                            return ;
-                        }
-                        if (("conjunction" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 34;
-                            return ;
-                        }
-                        if (("interjection" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 22;
-                            return ;
-                        }
-                        if (("interrogative" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 46;
-                            return ;
-                        }
-                        if (("negation" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 36;
-                            return ;
-                        }
-                        if (("title" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 58;
-                            return ;
-                        }
-                        if (("noun" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 40;
-                            return ;
-                        }
-                        if (("preposition" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 32;
-                            return ;
-                        }
-                        if (("pronoun" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 68;
-                            return ;
-                        }
-                        if (("properName" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 56;
-                            return ;
-                        }
-                        if (("modal" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 38;
-                            return ;
-                        }
-                        if (("quantifier" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 30;
-                            return ;
-                        }
-                        if (("verb" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 42;
-                            return ;
-                        }
-                        if (("existential" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 48;
-                            return ;
-                        }
-                        if (("impersonal" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 44;
-                            return ;
-                        }
-                        if (("wPrefix" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 64;
-                            return ;
-                        }
-                        if (("copula" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 54;
-                            return ;
-                        }
-                        if (("numeral" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 52;
-                            return ;
-                        }
-                        if (("acronym" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 66;
-                            return ;
-                        }
-                        if (("multiWordFrozen" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 50;
-                            return ;
-                        }
-                        if (("multiWordPreposition" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 62;
-                            return ;
-                        }
-                        if (("multiWordNoun" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 74;
-                            return ;
-                        }
-                        if (("multiWordNounAdjective" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 28;
-                            return ;
-                        }
-                        if (("multiWordVerbPhrase" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 70;
-                            return ;
-                        }
-                        break;
-                    case  32 :
-                        attIdx = context.getAttribute("", "case");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  0 :
-                        attIdx = context.getAttribute("", "dotted");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  50 :
-                        attIdx = context.getAttribute("", "base2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "construct1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "possessive2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "prefix");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  18 :
-                        if (("comment" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, true);
-                            state = 19;
-                            return ;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  15 :
-                        attIdx = context.getAttribute("", "undotted");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        break;
-                    case  34 :
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        _Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class), 35, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  66 :
-                        attIdx = context.getAttribute("", "adjectiveLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "conjunctionType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "generateAdjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "istLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "meaning");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "niqLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "noInvertedCommas");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "properNameType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  36 :
-                        _Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NegationLexiconTypeImpl.class), 37, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  72 :
-                        attIdx = context.getAttribute("", "acronym");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dottedPlural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  28 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_female_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_female_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_male_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_male_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  52 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "value");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  44 :
-                        _Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class), 45, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  62 :
-                        attIdx = context.getAttribute("", "base1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "base2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "construct1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "possessive2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  12 :
-                        attIdx = context.getAttribute("", "transliterated");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        break;
-                    case  3 :
-                        attIdx = context.getAttribute("", "id");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        break;
-                    case  30 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  54 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "person");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  58 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  22 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  6 :
-                        attIdx = context.getAttribute("", "register");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  25 :
-                        attIdx = context.getAttribute("", "definition");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "id");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        break;
-                    case  42 :
-                        attIdx = context.getAttribute("", "binyan");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoni");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectFuture");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectImperative");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitiveb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitivel");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectOrigin");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPast");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        break;
-                    case  27 :
-                        if (("sense" == ___local)&&("" == ___uri)) {
-                            context.pushAttributes(__atts, false);
-                            state = 25;
-                            return ;
-                        }
-                        revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                        return ;
-                    case  60 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "interrogative");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesAdjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesAdverb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesVerb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "position");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  46 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "interrogativeType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  48 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pgn");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  9 :
-                        attIdx = context.getAttribute("", "spelling");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  70 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  56 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "direction");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  40 :
-                        attIdx = context.getAttribute("", "acronym");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "deverbal");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "direction");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dottedPlural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dual");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "lexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  74 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  38 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname, __atts));
-                        return ;
-                    case  64 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                        }
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname, __atts));
-                            return ;
-                        }
-                        _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname, __atts));
-                        return ;
-                }
-                super.enterElement(___uri, ___local, ___qname, __atts);
-                break;
-            }
-        }
-
-        private void eatText1(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Dotted = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText2(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Undotted = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText3(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Transliterated = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText4(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Id = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText5(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Register = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText6(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Spelling = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  68 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "person");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pgn");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        break;
-                    case  24 :
-                        state = 27;
-                        continue outer;
-                    case  61 :
-                        if (("adverb" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  55 :
-                        if (("copula" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  32 :
-                        attIdx = context.getAttribute("", "case");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname));
-                        return ;
-                    case  45 :
-                        if (("impersonal" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  0 :
-                        attIdx = context.getAttribute("", "dotted");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  50 :
-                        attIdx = context.getAttribute("", "base2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "construct1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "possessive2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "prefix");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                        return ;
-                    case  18 :
-                        state = 21;
-                        continue outer;
-                    case  37 :
-                        if (("negation" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  67 :
-                        if (("acronym" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  33 :
-                        if (("preposition" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  15 :
-                        attIdx = context.getAttribute("", "undotted");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        break;
-                    case  34 :
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class), 35, ___uri, ___local, ___qname));
-                        return ;
-                    case  66 :
-                        attIdx = context.getAttribute("", "adjectiveLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "conjunctionType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "generateAdjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "istLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "meaning");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "niqLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "noInvertedCommas");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "properNameType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                        return ;
-                    case  65 :
-                        if (("wPrefix" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  71 :
-                        if (("multiWordVerbPhrase" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  35 :
-                        if (("conjunction" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  36 :
-                        _Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.NegationLexiconTypeImpl.class), 37, ___uri, ___local, ___qname));
-                        return ;
-                    case  39 :
-                        if (("modal" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  72 :
-                        attIdx = context.getAttribute("", "acronym");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dottedPlural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                        return ;
-                    case  28 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_female_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_female_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_male_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_male_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                        return ;
-                    case  63 :
-                        if (("multiWordPreposition" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  52 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "value");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                        return ;
-                    case  73 :
-                        if (("adjective" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  47 :
-                        if (("interrogative" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  53 :
-                        if (("numeral" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  44 :
-                        _Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class), 45, ___uri, ___local, ___qname));
-                        return ;
-                    case  75 :
-                        if (("multiWordNoun" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  62 :
-                        attIdx = context.getAttribute("", "base1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "base2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "construct1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "possessive2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                        return ;
-                    case  12 :
-                        attIdx = context.getAttribute("", "transliterated");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        break;
-                    case  41 :
-                        if (("noun" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  3 :
-                        attIdx = context.getAttribute("", "id");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        break;
-                    case  30 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname));
-                        return ;
-                    case  54 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "person");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                        return ;
-                    case  58 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, ___uri, ___local, ___qname));
-                        return ;
-                    case  22 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname));
-                        return ;
-                    case  69 :
-                        if (("pronoun" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  20 :
-                        if (("comment" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 21;
-                            return ;
-                        }
-                        break;
-                    case  6 :
-                        attIdx = context.getAttribute("", "register");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  25 :
-                        attIdx = context.getAttribute("", "definition");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "id");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        break;
-                    case  42 :
-                        attIdx = context.getAttribute("", "binyan");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoni");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectFuture");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectImperative");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitiveb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitivel");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectOrigin");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPast");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        break;
-                    case  51 :
-                        if (("multiWordFrozen" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  31 :
-                        if (("quantifier" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  27 :
-                        revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                        return ;
-                    case  60 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "interrogative");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesAdjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesAdverb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesVerb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "position");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                        return ;
-                    case  46 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "interrogativeType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname));
-                        return ;
-                    case  48 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pgn");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                        return ;
-                    case  9 :
-                        attIdx = context.getAttribute("", "spelling");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  57 :
-                        if (("properName" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  59 :
-                        if (("title" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  26 :
-                        if (("sense" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 27;
-                            return ;
-                        }
-                        break;
-                    case  49 :
-                        if (("existential" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  70 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                        return ;
-                    case  23 :
-                        if (("interjection" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  56 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "direction");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                        return ;
-                    case  40 :
-                        attIdx = context.getAttribute("", "acronym");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "deverbal");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "direction");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dottedPlural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dual");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "lexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                        return ;
-                    case  74 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                        return ;
-                    case  38 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname));
-                        return ;
-                    case  64 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromLeaveElement((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname));
-                        return ;
-                    case  29 :
-                        if (("multiWordNounAdjective" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  43 :
-                        if (("verb" == ___local)&&("" == ___uri)) {
-                            context.popAttributes();
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                }
-                super.leaveElement(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  68 :
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PronounLexiconTypeImpl.class), 69, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PronounLexiconTypeImpl.class), 69, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PronounLexiconTypeImpl.class), 69, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("person" == ___local)&&("" == ___uri)) {
-                            _Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PronounLexiconTypeImpl.class), 69, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("pgn" == ___local)&&("" == ___uri)) {
-                            _Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PronounLexiconTypeImpl.class), 69, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PronounLexiconTypeImpl.class), 69, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        break;
-                    case  24 :
-                        state = 27;
-                        continue outer;
-                    case  32 :
-                        if (("case" == ___local)&&("" == ___uri)) {
-                            _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname));
-                        return ;
-                    case  0 :
-                        if (("dotted" == ___local)&&("" == ___uri)) {
-                            state = 1;
-                            return ;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  50 :
-                        if (("base2" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("consecutive" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("construct1" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("mwPos" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("possessive2" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("prefix" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                        return ;
-                    case  18 :
-                        state = 21;
-                        continue outer;
-                    case  15 :
-                        if (("undotted" == ___local)&&("" == ___uri)) {
-                            state = 16;
-                            return ;
-                        }
-                        break;
-                    case  34 :
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class), 35, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class), 35, ___uri, ___local, ___qname));
-                        return ;
-                    case  66 :
-                        if (("adjectiveLexicalLink" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("conjunctionType" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("generateAdjective" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectConstructP" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectConstructS" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("istLexicalLink" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("meaning" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("niqLexicalLink" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("noInvertedCommas" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("pos" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("properNameType" == ___local)&&("" == ___uri)) {
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                        return ;
-                    case  36 :
-                        _Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NegationLexiconTypeImpl.class), 37, ___uri, ___local, ___qname));
-                        return ;
-                    case  72 :
-                        if (("acronym" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("dottedPlural" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("foreign" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectConstructP" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectConstructS" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionPattern" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("ipSource" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("pattern" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("root" == ___local)&&("" == ___uri)) {
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                        return ;
-                    case  28 :
-                        if (("consecutive" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine_adjective" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine_noun" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveP" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveS" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("mwPos" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural_female_adjective" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural_female_noun" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural_male_adjective" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural_male_noun" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                        return ;
-                    case  52 :
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflect" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("value" == ___local)&&("" == ___uri)) {
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                        return ;
-                    case  44 :
-                        _Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class), 45, ___uri, ___local, ___qname));
-                        return ;
-                    case  62 :
-                        if (("base1" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("base2" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("consecutive" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("construct1" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("mwPos" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("possessive2" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                        return ;
-                    case  12 :
-                        if (("transliterated" == ___local)&&("" == ___uri)) {
-                            state = 13;
-                            return ;
-                        }
-                        break;
-                    case  3 :
-                        if (("id" == ___local)&&("" == ___uri)) {
-                            state = 4;
-                            return ;
-                        }
-                        break;
-                    case  30 :
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflect" == ___local)&&("" == ___uri)) {
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname));
-                        return ;
-                    case  54 :
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("person" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("polarity" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("tense" == ___local)&&("" == ___uri)) {
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                        return ;
-                    case  58 :
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, ___uri, ___local, ___qname));
-                        return ;
-                    case  22 :
-                        if (("inflect" == ___local)&&("" == ___uri)) {
-                            _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname));
-                        return ;
-                    case  6 :
-                        if (("register" == ___local)&&("" == ___uri)) {
-                            state = 7;
-                            return ;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  25 :
-                        if (("definition" == ___local)&&("" == ___uri)) {
-                            _getSense().add(((lexicon.jaxb.impl.SenseTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.SenseTypeImpl.class), 26, ___uri, ___local, ___qname)));
-                            return ;
-                        }
-                        if (("id" == ___local)&&("" == ___uri)) {
-                            _getSense().add(((lexicon.jaxb.impl.SenseTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.SenseTypeImpl.class), 26, ___uri, ___local, ___qname)));
-                            return ;
-                        }
-                        break;
-                    case  42 :
-                        if (("binyan" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("foreign" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectBeinoni" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectBeinoniConstruct" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectBeinoniPossessive" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectFuture" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectImperative" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectInfinitive" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectInfinitiveIndependent" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectInfinitiveb" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectInfinitivel" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectOrigin" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPast" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionPattern" == ___local)&&("" == ___uri)) {
-                            _Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.VerbLexiconTypeImpl.class), 43, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        break;
-                    case  27 :
-                        revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                        return ;
-                    case  60 :
-                        if (("inflect" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("interrogative" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("modifiesAdjective" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("modifiesAdverb" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("modifiesVerb" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("position" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                        return ;
-                    case  46 :
-                        if (("inflect" == ___local)&&("" == ___uri)) {
-                            _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("interrogativeType" == ___local)&&("" == ___uri)) {
-                            _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname));
-                        return ;
-                    case  48 :
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("pgn" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("polarity" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("root" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("tense" == ___local)&&("" == ___uri)) {
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                        return ;
-                    case  9 :
-                        if (("spelling" == ___local)&&("" == ___uri)) {
-                            state = 10;
-                            return ;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  70 :
-                        if (("consecutive" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveP" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveS" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("mwPos" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                        return ;
-                    case  56 :
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("direction" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                        return ;
-                    case  40 :
-                        if (("acronym" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("deverbal" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("direction" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("dottedPlural" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("dual" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("foreign" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectConstructP" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectConstructS" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveP" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveS" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionPattern" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("ipSource" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("lexicalLink" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("pattern" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("root" == ___local)&&("" == ___uri)) {
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                        return ;
-                    case  74 :
-                        if (("consecutive" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("definiteness" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("feminine" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveP" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectPossessiveS" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("mwPos" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("plural" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                        return ;
-                    case  38 :
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("inflectionType" == ___local)&&("" == ___uri)) {
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("tense" == ___local)&&("" == ___uri)) {
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname));
-                        return ;
-                    case  64 :
-                        if (("gender" == ___local)&&("" == ___uri)) {
-                            _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("number" == ___local)&&("" == ___uri)) {
-                            _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        if (("polarity" == ___local)&&("" == ___uri)) {
-                            _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname));
-                            return ;
-                        }
-                        _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname));
-                        return ;
-                }
-                super.enterAttribute(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  68 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "person");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pgn");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        break;
-                    case  24 :
-                        state = 27;
-                        continue outer;
-                    case  32 :
-                        attIdx = context.getAttribute("", "case");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, ___uri, ___local, ___qname));
-                        return ;
-                    case  8 :
-                        if (("register" == ___local)&&("" == ___uri)) {
-                            state = 9;
-                            return ;
-                        }
-                        break;
-                    case  0 :
-                        attIdx = context.getAttribute("", "dotted");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  50 :
-                        attIdx = context.getAttribute("", "base2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "construct1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "possessive2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "prefix");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, ___uri, ___local, ___qname));
-                        return ;
-                    case  18 :
-                        state = 21;
-                        continue outer;
-                    case  17 :
-                        if (("undotted" == ___local)&&("" == ___uri)) {
-                            state = 18;
-                            return ;
-                        }
-                        break;
-                    case  15 :
-                        attIdx = context.getAttribute("", "undotted");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        break;
-                    case  34 :
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class), 35, ___uri, ___local, ___qname));
-                        return ;
-                    case  66 :
-                        attIdx = context.getAttribute("", "adjectiveLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "conjunctionType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "generateAdjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "istLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "meaning");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "niqLexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "noInvertedCommas");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "properNameType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, ___uri, ___local, ___qname));
-                        return ;
-                    case  5 :
-                        if (("id" == ___local)&&("" == ___uri)) {
-                            state = 6;
-                            return ;
-                        }
-                        break;
-                    case  11 :
-                        if (("spelling" == ___local)&&("" == ___uri)) {
-                            state = 12;
-                            return ;
-                        }
-                        break;
-                    case  36 :
-                        _Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.NegationLexiconTypeImpl.class), 37, ___uri, ___local, ___qname));
-                        return ;
-                    case  72 :
-                        attIdx = context.getAttribute("", "acronym");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dottedPlural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, ___uri, ___local, ___qname));
-                        return ;
-                    case  28 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_female_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_female_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_male_adjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural_male_noun");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, ___uri, ___local, ___qname));
-                        return ;
-                    case  52 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "value");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, ___uri, ___local, ___qname));
-                        return ;
-                    case  44 :
-                        _Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class), 45, ___uri, ___local, ___qname));
-                        return ;
-                    case  62 :
-                        attIdx = context.getAttribute("", "base1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "base2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "construct1");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "possessive2");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, ___uri, ___local, ___qname));
-                        return ;
-                    case  12 :
-                        attIdx = context.getAttribute("", "transliterated");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        break;
-                    case  3 :
-                        attIdx = context.getAttribute("", "id");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        break;
-                    case  30 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, ___uri, ___local, ___qname));
-                        return ;
-                    case  54 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "person");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, ___uri, ___local, ___qname));
-                        return ;
-                    case  58 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, ___uri, ___local, ___qname));
-                        return ;
-                    case  22 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, ___uri, ___local, ___qname));
-                        return ;
-                    case  6 :
-                        attIdx = context.getAttribute("", "register");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  25 :
-                        attIdx = context.getAttribute("", "definition");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "id");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        break;
-                    case  42 :
-                        attIdx = context.getAttribute("", "binyan");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoni");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectFuture");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectImperative");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitiveb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectInfinitivel");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectOrigin");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPast");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        break;
-                    case  27 :
-                        revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                        return ;
-                    case  60 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "interrogative");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesAdjective");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesAdverb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "modifiesVerb");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "position");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, ___uri, ___local, ___qname));
-                        return ;
-                    case  46 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "interrogativeType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, ___uri, ___local, ___qname));
-                        return ;
-                    case  48 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pgn");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, ___uri, ___local, ___qname));
-                        return ;
-                    case  9 :
-                        attIdx = context.getAttribute("", "spelling");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  70 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, ___uri, ___local, ___qname));
-                        return ;
-                    case  2 :
-                        if (("dotted" == ___local)&&("" == ___uri)) {
-                            state = 3;
-                            return ;
-                        }
-                        break;
-                    case  56 :
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "direction");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, ___uri, ___local, ___qname));
-                        return ;
-                    case  40 :
-                        attIdx = context.getAttribute("", "acronym");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "deverbal");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "direction");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dottedPlural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "dual");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "foreign");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectConstructS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionPattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "ipSource");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "lexicalLink");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "pattern");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "root");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, ___uri, ___local, ___qname));
-                        return ;
-                    case  74 :
-                        attIdx = context.getAttribute("", "consecutive");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "definiteness");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "feminine");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveP");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectPossessiveS");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "mwPos");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "plural");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, ___uri, ___local, ___qname));
-                        return ;
-                    case  14 :
-                        if (("transliterated" == ___local)&&("" == ___uri)) {
-                            state = 15;
-                            return ;
-                        }
-                        break;
-                    case  38 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "inflectionType");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "tense");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, ___uri, ___local, ___qname));
-                        return ;
-                    case  64 :
-                        attIdx = context.getAttribute("", "gender");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "number");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        attIdx = context.getAttribute("", "polarity");
-                        if (attIdx >= 0) {
-                            context.consumeAttribute(attIdx);
-                            context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                        }
-                        _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromLeaveAttribute((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, ___uri, ___local, ___qname));
-                        return ;
-                }
-                super.leaveAttribute(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void handleText(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                try {
-                    switch (state) {
-                        case  68 :
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            break;
-                        case  24 :
-                            state = 27;
-                            continue outer;
-                        case  32 :
-                            attIdx = context.getAttribute("", "case");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class), 33, value));
-                            return ;
-                        case  0 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 3;
-                                eatText1(v);
-                                continue outer;
-                            }
-                            state = 3;
-                            continue outer;
-                        case  50 :
-                            attIdx = context.getAttribute("", "base2");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "consecutive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "construct1");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "mwPos");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessive2");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "prefix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class), 51, value));
-                            return ;
-                        case  18 :
-                            state = 21;
-                            continue outer;
-                        case  4 :
-                            state = 5;
-                            eatText4(value);
-                            return ;
-                        case  15 :
-                            attIdx = context.getAttribute("", "undotted");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 18;
-                                eatText2(v);
-                                continue outer;
-                            }
-                            break;
-                        case  34 :
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class), 35, value));
-                            return ;
-                        case  66 :
-                            attIdx = context.getAttribute("", "adjectiveLexicalLink");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "conjunctionType");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "generateAdjective");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectConstructP");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectConstructS");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "istLexicalLink");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "meaning");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "niqLexicalLink");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "noInvertedCommas");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pos");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "properNameType");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.AcronymLexiconTypeImpl.class), 67, value));
-                            return ;
-                        case  36 :
-                            _Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.NegationLexiconTypeImpl.class), 37, value));
-                            return ;
-                        case  72 :
-                            attIdx = context.getAttribute("", "acronym");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dottedPlural");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "foreign");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectConstructP");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectConstructS");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionPattern");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "ipSource");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pattern");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "root");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class), 73, value));
-                            return ;
-                        case  28 :
-                            attIdx = context.getAttribute("", "consecutive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine_adjective");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine_noun");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveP");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveS");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "mwPos");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural_female_adjective");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural_female_noun");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural_male_adjective");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural_male_noun");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class), 29, value));
-                            return ;
-                        case  52 :
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflect");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "value");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.NumeralLexiconTypeImpl.class), 53, value));
-                            return ;
-                        case  16 :
-                            state = 17;
-                            eatText2(value);
-                            return ;
-                        case  44 :
-                            _Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class), 45, value));
-                            return ;
-                        case  62 :
-                            attIdx = context.getAttribute("", "base1");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "base2");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "consecutive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "construct1");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "mwPos");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessive2");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class), 63, value));
-                            return ;
-                        case  12 :
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 15;
-                                eatText3(v);
-                                continue outer;
-                            }
-                            break;
-                        case  3 :
-                            attIdx = context.getAttribute("", "id");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 6;
-                                eatText4(v);
-                                continue outer;
-                            }
-                            break;
-                        case  30 :
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflect");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class), 31, value));
-                            return ;
-                        case  54 :
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "person");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "polarity");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "tense");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.CopulaLexiconTypeImpl.class), 55, value));
-                            return ;
-                        case  58 :
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59, value));
-                            return ;
-                        case  10 :
-                            state = 11;
-                            eatText6(value);
-                            return ;
-                        case  22 :
-                            attIdx = context.getAttribute("", "inflect");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class), 23, value));
-                            return ;
-                        case  6 :
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 9;
-                                eatText5(v);
-                                continue outer;
-                            }
-                            state = 9;
-                            continue outer;
-                        case  25 :
-                            attIdx = context.getAttribute("", "definition");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "id");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            break;
-                        case  42 :
-                            attIdx = context.getAttribute("", "binyan");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "foreign");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoni");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniConstruct");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectBeinoniPossessive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectFuture");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectImperative");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectInfinitive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectInfinitiveIndependent");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectInfinitiveb");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectInfinitivel");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectOrigin");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPast");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionPattern");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            break;
-                        case  13 :
-                            state = 14;
-                            eatText3(value);
-                            return ;
-                        case  19 :
-                            state = 20;
-                            eatText7(value);
-                            return ;
-                        case  27 :
-                            revertToParentFromText(value);
-                            return ;
-                        case  60 :
-                            attIdx = context.getAttribute("", "inflect");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "interrogative");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "modifiesAdjective");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "modifiesAdverb");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "modifiesVerb");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "position");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.AdverbLexiconTypeImpl.class), 61, value));
-                            return ;
-                        case  46 :
-                            attIdx = context.getAttribute("", "inflect");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "interrogativeType");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class), 47, value));
-                            return ;
-                        case  48 :
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pgn");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "polarity");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "root");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "tense");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class), 49, value));
-                            return ;
-                        case  7 :
-                            state = 8;
-                            eatText5(value);
-                            return ;
-                        case  9 :
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 12;
-                                eatText6(v);
-                                continue outer;
-                            }
-                            state = 12;
-                            continue outer;
-                        case  70 :
-                            attIdx = context.getAttribute("", "consecutive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveP");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveS");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "mwPos");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class), 71, value));
-                            return ;
-                        case  56 :
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "direction");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class), 57, value));
-                            return ;
-                        case  40 :
-                            attIdx = context.getAttribute("", "acronym");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "deverbal");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "direction");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dottedPlural");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "dual");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "foreign");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectConstructP");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectConstructS");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveP");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveS");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionPattern");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "ipSource");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "lexicalLink");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "pattern");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "root");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41, value));
-                            return ;
-                        case  74 :
-                            attIdx = context.getAttribute("", "consecutive");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "definiteness");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "feminine");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveP");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectPossessiveS");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "mwPos");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "plural");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class), 75, value));
-                            return ;
-                        case  38 :
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "inflectionType");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "tense");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39, value));
-                            return ;
-                        case  64 :
-                            attIdx = context.getAttribute("", "gender");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "number");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "polarity");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().text(value);
-                                return ;
-                            }
-                            _WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromText((lexicon.jaxb.impl.WprefixLexiconTypeImpl.class), 65, value));
-                            return ;
-                        case  1 :
-                            state = 2;
-                            eatText1(value);
-                            return ;
-                    }
-                } catch (java.lang.RuntimeException e) {
-                    handleUnexpectedTextException(value, e);
-                }
-                break;
-            }
-        }
-
-        private void eatText7(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Comment = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-    }
+public class ItemTypeImpl implements lexicon.jaxb.ItemType,
+		com.sun.xml.bind.JAXBObject,
+		lexicon.jaxb.impl.runtime.UnmarshallableObject,
+		lexicon.jaxb.impl.runtime.XMLSerializable,
+		lexicon.jaxb.impl.runtime.ValidatableObject {
+
+	protected java.lang.String _Register;
+	protected java.lang.String _Comment;
+	protected lexicon.jaxb.MultiWordNounAdjectiveLexiconType _MultiWordNounAdjective;
+	protected com.sun.xml.bind.util.ListImpl _Sense;
+	protected lexicon.jaxb.AdverbLexiconType _Adverb;
+	protected lexicon.jaxb.MultiWordFrozenLexiconType _MultiWordFrozen;
+	protected java.lang.String _Spelling;
+	protected java.lang.String _Transliterated;
+	protected lexicon.jaxb.WprefixLexiconType _WPrefix;
+	protected java.lang.String _Dotted;
+	protected lexicon.jaxb.AcronymLexiconType _Acronym;
+	protected lexicon.jaxb.ProperNameLexiconType _ProperName;
+	protected lexicon.jaxb.ImpersonalLexiconType _Impersonal;
+	protected lexicon.jaxb.ConjunctionLexiconType _Conjunction;
+	protected lexicon.jaxb.AdjectiveLexiconType _Adjective;
+	protected lexicon.jaxb.CopulaLexiconType _Copula;
+	protected lexicon.jaxb.InterjectionLexiconType _Interjection;
+	protected lexicon.jaxb.MultiWordVerbPhraseLexiconType _MultiWordVerbPhrase;
+	protected lexicon.jaxb.MultiWordPrepositionLexiconType _MultiWordPreposition;
+	protected lexicon.jaxb.ModalLexiconType _Modal;
+	protected lexicon.jaxb.NumeralLexiconType _Numeral;
+	protected lexicon.jaxb.PrepositionLexiconType _Preposition;
+	protected lexicon.jaxb.QuantifierLexiconType _Quantifier;
+	protected lexicon.jaxb.PronounLexiconType _Pronoun;
+	protected lexicon.jaxb.VerbLexiconType _Verb;
+	protected lexicon.jaxb.MultiWordNounLexiconType _MultiWordNoun;
+	protected lexicon.jaxb.NounLexiconType _Noun;
+	protected lexicon.jaxb.NegationLexiconType _Negation;
+	protected lexicon.jaxb.ExistentialLexiconType _Existential;
+	protected lexicon.jaxb.InterrogativeLexiconType _Interrogative;
+	protected java.lang.String _Undotted;
+	protected lexicon.jaxb.TitleLexiconType _Title;
+	protected java.lang.String _Id;
+	public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+	private static com.sun.msv.grammar.Grammar schemaFragment;
+
+	private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+		return (lexicon.jaxb.ItemType.class);
+	}
+
+	public java.lang.String getRegister() {
+		if (_Register == null) {
+			return "formal";
+		} else {
+			return _Register;
+		}
+	}
+
+	public void setRegister(java.lang.String value) {
+		_Register = value;
+	}
+
+	public java.lang.String getComment() {
+		return _Comment;
+	}
+
+	public void setComment(java.lang.String value) {
+		_Comment = value;
+	}
+
+	public lexicon.jaxb.MultiWordNounAdjectiveLexiconType getMultiWordNounAdjective() {
+		return _MultiWordNounAdjective;
+	}
+
+	public void setMultiWordNounAdjective(
+			lexicon.jaxb.MultiWordNounAdjectiveLexiconType value) {
+		_MultiWordNounAdjective = value;
+	}
+
+	protected com.sun.xml.bind.util.ListImpl _getSense() {
+		if (_Sense == null) {
+			_Sense = new com.sun.xml.bind.util.ListImpl(
+					new java.util.ArrayList());
+		}
+		return _Sense;
+	}
+
+	public java.util.List getSense() {
+		return _getSense();
+	}
+
+	public lexicon.jaxb.AdverbLexiconType getAdverb() {
+		return _Adverb;
+	}
+
+	public void setAdverb(lexicon.jaxb.AdverbLexiconType value) {
+		_Adverb = value;
+	}
+
+	public lexicon.jaxb.MultiWordFrozenLexiconType getMultiWordFrozen() {
+		return _MultiWordFrozen;
+	}
+
+	public void setMultiWordFrozen(lexicon.jaxb.MultiWordFrozenLexiconType value) {
+		_MultiWordFrozen = value;
+	}
+
+	public java.lang.String getSpelling() {
+		if (_Spelling == null) {
+			return "standard";
+		} else {
+			return _Spelling;
+		}
+	}
+
+	public void setSpelling(java.lang.String value) {
+		_Spelling = value;
+	}
+
+	public java.lang.String getTransliterated() {
+		return _Transliterated;
+	}
+
+	public void setTransliterated(java.lang.String value) {
+		_Transliterated = value;
+	}
+
+	public lexicon.jaxb.WprefixLexiconType getWPrefix() {
+		return _WPrefix;
+	}
+
+	public void setWPrefix(lexicon.jaxb.WprefixLexiconType value) {
+		_WPrefix = value;
+	}
+
+	public java.lang.String getDotted() {
+		if (_Dotted == null) {
+			return "";
+		} else {
+			return _Dotted;
+		}
+	}
+
+	public void setDotted(java.lang.String value) {
+		_Dotted = value;
+	}
+
+	public lexicon.jaxb.AcronymLexiconType getAcronym() {
+		return _Acronym;
+	}
+
+	public void setAcronym(lexicon.jaxb.AcronymLexiconType value) {
+		_Acronym = value;
+	}
+
+	public lexicon.jaxb.ProperNameLexiconType getProperName() {
+		return _ProperName;
+	}
+
+	public void setProperName(lexicon.jaxb.ProperNameLexiconType value) {
+		_ProperName = value;
+	}
+
+	public lexicon.jaxb.ImpersonalLexiconType getImpersonal() {
+		return _Impersonal;
+	}
+
+	public void setImpersonal(lexicon.jaxb.ImpersonalLexiconType value) {
+		_Impersonal = value;
+	}
+
+	public lexicon.jaxb.ConjunctionLexiconType getConjunction() {
+		return _Conjunction;
+	}
+
+	public void setConjunction(lexicon.jaxb.ConjunctionLexiconType value) {
+		_Conjunction = value;
+	}
+
+	public lexicon.jaxb.AdjectiveLexiconType getAdjective() {
+		return _Adjective;
+	}
+
+	public void setAdjective(lexicon.jaxb.AdjectiveLexiconType value) {
+		_Adjective = value;
+	}
+
+	public lexicon.jaxb.CopulaLexiconType getCopula() {
+		return _Copula;
+	}
+
+	public void setCopula(lexicon.jaxb.CopulaLexiconType value) {
+		_Copula = value;
+	}
+
+	public lexicon.jaxb.InterjectionLexiconType getInterjection() {
+		return _Interjection;
+	}
+
+	public void setInterjection(lexicon.jaxb.InterjectionLexiconType value) {
+		_Interjection = value;
+	}
+
+	public lexicon.jaxb.MultiWordVerbPhraseLexiconType getMultiWordVerbPhrase() {
+		return _MultiWordVerbPhrase;
+	}
+
+	public void setMultiWordVerbPhrase(
+			lexicon.jaxb.MultiWordVerbPhraseLexiconType value) {
+		_MultiWordVerbPhrase = value;
+	}
+
+	public lexicon.jaxb.MultiWordPrepositionLexiconType getMultiWordPreposition() {
+		return _MultiWordPreposition;
+	}
+
+	public void setMultiWordPreposition(
+			lexicon.jaxb.MultiWordPrepositionLexiconType value) {
+		_MultiWordPreposition = value;
+	}
+
+	public lexicon.jaxb.ModalLexiconType getModal() {
+		return _Modal;
+	}
+
+	public void setModal(lexicon.jaxb.ModalLexiconType value) {
+		_Modal = value;
+	}
+
+	public lexicon.jaxb.NumeralLexiconType getNumeral() {
+		return _Numeral;
+	}
+
+	public void setNumeral(lexicon.jaxb.NumeralLexiconType value) {
+		_Numeral = value;
+	}
+
+	public lexicon.jaxb.PrepositionLexiconType getPreposition() {
+		return _Preposition;
+	}
+
+	public void setPreposition(lexicon.jaxb.PrepositionLexiconType value) {
+		_Preposition = value;
+	}
+
+	public lexicon.jaxb.QuantifierLexiconType getQuantifier() {
+		return _Quantifier;
+	}
+
+	public void setQuantifier(lexicon.jaxb.QuantifierLexiconType value) {
+		_Quantifier = value;
+	}
+
+	public lexicon.jaxb.PronounLexiconType getPronoun() {
+		return _Pronoun;
+	}
+
+	public void setPronoun(lexicon.jaxb.PronounLexiconType value) {
+		_Pronoun = value;
+	}
+
+	public lexicon.jaxb.VerbLexiconType getVerb() {
+		return _Verb;
+	}
+
+	public void setVerb(lexicon.jaxb.VerbLexiconType value) {
+		_Verb = value;
+	}
+
+	public lexicon.jaxb.MultiWordNounLexiconType getMultiWordNoun() {
+		return _MultiWordNoun;
+	}
+
+	public void setMultiWordNoun(lexicon.jaxb.MultiWordNounLexiconType value) {
+		_MultiWordNoun = value;
+	}
+
+	public lexicon.jaxb.NounLexiconType getNoun() {
+		return _Noun;
+	}
+
+	public void setNoun(lexicon.jaxb.NounLexiconType value) {
+		_Noun = value;
+	}
+
+	public lexicon.jaxb.NegationLexiconType getNegation() {
+		return _Negation;
+	}
+
+	public void setNegation(lexicon.jaxb.NegationLexiconType value) {
+		_Negation = value;
+	}
+
+	public lexicon.jaxb.ExistentialLexiconType getExistential() {
+		return _Existential;
+	}
+
+	public void setExistential(lexicon.jaxb.ExistentialLexiconType value) {
+		_Existential = value;
+	}
+
+	public lexicon.jaxb.InterrogativeLexiconType getInterrogative() {
+		return _Interrogative;
+	}
+
+	public void setInterrogative(lexicon.jaxb.InterrogativeLexiconType value) {
+		_Interrogative = value;
+	}
+
+	public java.lang.String getUndotted() {
+		return _Undotted;
+	}
+
+	public void setUndotted(java.lang.String value) {
+		_Undotted = value;
+	}
+
+	public lexicon.jaxb.TitleLexiconType getTitle() {
+		return _Title;
+	}
+
+	public void setTitle(lexicon.jaxb.TitleLexiconType value) {
+		_Title = value;
+	}
+
+	public java.lang.String getId() {
+		return _Id;
+	}
+
+	public void setId(java.lang.String value) {
+		_Id = value;
+	}
+
+	public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+			lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+		return new lexicon.jaxb.impl.ItemTypeImpl.Unmarshaller(context);
+	}
+
+	public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx4 = 0;
+		final int len4 = ((_Sense == null) ? 0 : _Sense.size());
+		if (_Comment != null) {
+			context.startElement("", "comment");
+			context.endNamespaceDecls();
+			context.endAttributes();
+			try {
+				context.text(((java.lang.String) _Comment), "Comment");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endElement();
+		}
+		if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective != null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+				&& (_Acronym == null)) {
+			context.startElement("", "adjective");
+			context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Adjective),
+					"Adjective");
+			context.endNamespaceDecls();
+			context.childAsAttributes(
+					((com.sun.xml.bind.JAXBObject) _Adjective), "Adjective");
+			context.endAttributes();
+			context.childAsBody(((com.sun.xml.bind.JAXBObject) _Adjective),
+					"Adjective");
+			context.endElement();
+		} else {
+			if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb != null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+					&& (_Acronym == null)) {
+				context.startElement("", "adverb");
+				context.childAsURIs(((com.sun.xml.bind.JAXBObject) _Adverb),
+						"Adverb");
+				context.endNamespaceDecls();
+				context.childAsAttributes(
+						((com.sun.xml.bind.JAXBObject) _Adverb), "Adverb");
+				context.endAttributes();
+				context.childAsBody(((com.sun.xml.bind.JAXBObject) _Adverb),
+						"Adverb");
+				context.endElement();
+			} else {
+				if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction != null)) && (_Preposition == null)) && (_Existential == null))
+						&& (_Acronym == null)) {
+					context.startElement("", "conjunction");
+					context.childAsURIs(
+							((com.sun.xml.bind.JAXBObject) _Conjunction),
+							"Conjunction");
+					context.endNamespaceDecls();
+					context.childAsAttributes(
+							((com.sun.xml.bind.JAXBObject) _Conjunction),
+							"Conjunction");
+					context.endAttributes();
+					context.childAsBody(
+							((com.sun.xml.bind.JAXBObject) _Conjunction),
+							"Conjunction");
+					context.endElement();
+				} else {
+					if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection != null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+							&& (_Acronym == null)) {
+						context.startElement("", "interjection");
+						context.childAsURIs(
+								((com.sun.xml.bind.JAXBObject) _Interjection),
+								"Interjection");
+						context.endNamespaceDecls();
+						context.childAsAttributes(
+								((com.sun.xml.bind.JAXBObject) _Interjection),
+								"Interjection");
+						context.endAttributes();
+						context.childAsBody(
+								((com.sun.xml.bind.JAXBObject) _Interjection),
+								"Interjection");
+						context.endElement();
+					} else {
+						if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative != null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+								&& (_Acronym == null)) {
+							context.startElement("", "interrogative");
+							context.childAsURIs(
+									((com.sun.xml.bind.JAXBObject) _Interrogative),
+									"Interrogative");
+							context.endNamespaceDecls();
+							context.childAsAttributes(
+									((com.sun.xml.bind.JAXBObject) _Interrogative),
+									"Interrogative");
+							context.endAttributes();
+							context.childAsBody(
+									((com.sun.xml.bind.JAXBObject) _Interrogative),
+									"Interrogative");
+							context.endElement();
+						} else {
+							if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation != null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+									&& (_Acronym == null)) {
+								context.startElement("", "negation");
+								context.childAsURIs(
+										((com.sun.xml.bind.JAXBObject) _Negation),
+										"Negation");
+								context.endNamespaceDecls();
+								context.childAsAttributes(
+										((com.sun.xml.bind.JAXBObject) _Negation),
+										"Negation");
+								context.endAttributes();
+								context.childAsBody(
+										((com.sun.xml.bind.JAXBObject) _Negation),
+										"Negation");
+								context.endElement();
+							} else {
+								if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title != null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+										&& (_Acronym == null)) {
+									context.startElement("", "title");
+									context.childAsURIs(
+											((com.sun.xml.bind.JAXBObject) _Title),
+											"Title");
+									context.endNamespaceDecls();
+									context.childAsAttributes(
+											((com.sun.xml.bind.JAXBObject) _Title),
+											"Title");
+									context.endAttributes();
+									context.childAsBody(
+											((com.sun.xml.bind.JAXBObject) _Title),
+											"Title");
+									context.endElement();
+								} else {
+									if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun != null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+											&& (_Acronym == null)) {
+										context.startElement("", "noun");
+										context.childAsURIs(
+												((com.sun.xml.bind.JAXBObject) _Noun),
+												"Noun");
+										context.endNamespaceDecls();
+										context.childAsAttributes(
+												((com.sun.xml.bind.JAXBObject) _Noun),
+												"Noun");
+										context.endAttributes();
+										context.childAsBody(
+												((com.sun.xml.bind.JAXBObject) _Noun),
+												"Noun");
+										context.endElement();
+									} else {
+										if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition != null)) && (_Existential == null))
+												&& (_Acronym == null)) {
+											context.startElement("",
+													"preposition");
+											context.childAsURIs(
+													((com.sun.xml.bind.JAXBObject) _Preposition),
+													"Preposition");
+											context.endNamespaceDecls();
+											context.childAsAttributes(
+													((com.sun.xml.bind.JAXBObject) _Preposition),
+													"Preposition");
+											context.endAttributes();
+											context.childAsBody(
+													((com.sun.xml.bind.JAXBObject) _Preposition),
+													"Preposition");
+											context.endElement();
+										} else {
+											if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun != null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+													&& (_Acronym == null)) {
+												context.startElement("",
+														"pronoun");
+												context.childAsURIs(
+														((com.sun.xml.bind.JAXBObject) _Pronoun),
+														"Pronoun");
+												context.endNamespaceDecls();
+												context.childAsAttributes(
+														((com.sun.xml.bind.JAXBObject) _Pronoun),
+														"Pronoun");
+												context.endAttributes();
+												context.childAsBody(
+														((com.sun.xml.bind.JAXBObject) _Pronoun),
+														"Pronoun");
+												context.endElement();
+											} else {
+												if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName != null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+														&& (_Acronym == null)) {
+													context.startElement("",
+															"properName");
+													context.childAsURIs(
+															((com.sun.xml.bind.JAXBObject) _ProperName),
+															"ProperName");
+													context.endNamespaceDecls();
+													context.childAsAttributes(
+															((com.sun.xml.bind.JAXBObject) _ProperName),
+															"ProperName");
+													context.endAttributes();
+													context.childAsBody(
+															((com.sun.xml.bind.JAXBObject) _ProperName),
+															"ProperName");
+													context.endElement();
+												} else {
+													if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal != null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+															&& (_Acronym == null)) {
+														context.startElement(
+																"", "modal");
+														context.childAsURIs(
+																((com.sun.xml.bind.JAXBObject) _Modal),
+																"Modal");
+														context.endNamespaceDecls();
+														context.childAsAttributes(
+																((com.sun.xml.bind.JAXBObject) _Modal),
+																"Modal");
+														context.endAttributes();
+														context.childAsBody(
+																((com.sun.xml.bind.JAXBObject) _Modal),
+																"Modal");
+														context.endElement();
+													} else {
+														if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier != null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																&& (_Acronym == null)) {
+															context.startElement(
+																	"",
+																	"quantifier");
+															context.childAsURIs(
+																	((com.sun.xml.bind.JAXBObject) _Quantifier),
+																	"Quantifier");
+															context.endNamespaceDecls();
+															context.childAsAttributes(
+																	((com.sun.xml.bind.JAXBObject) _Quantifier),
+																	"Quantifier");
+															context.endAttributes();
+															context.childAsBody(
+																	((com.sun.xml.bind.JAXBObject) _Quantifier),
+																	"Quantifier");
+															context.endElement();
+														} else {
+															if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb != null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																	&& (_Acronym == null)) {
+																context.startElement(
+																		"",
+																		"verb");
+																context.childAsURIs(
+																		((com.sun.xml.bind.JAXBObject) _Verb),
+																		"Verb");
+																context.endNamespaceDecls();
+																context.childAsAttributes(
+																		((com.sun.xml.bind.JAXBObject) _Verb),
+																		"Verb");
+																context.endAttributes();
+																context.childAsBody(
+																		((com.sun.xml.bind.JAXBObject) _Verb),
+																		"Verb");
+																context.endElement();
+															} else {
+																if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential != null))
+																		&& (_Acronym == null)) {
+																	context.startElement(
+																			"",
+																			"existential");
+																	context.childAsURIs(
+																			((com.sun.xml.bind.JAXBObject) _Existential),
+																			"Existential");
+																	context.endNamespaceDecls();
+																	context.childAsAttributes(
+																			((com.sun.xml.bind.JAXBObject) _Existential),
+																			"Existential");
+																	context.endAttributes();
+																	context.childAsBody(
+																			((com.sun.xml.bind.JAXBObject) _Existential),
+																			"Existential");
+																	context.endElement();
+																} else {
+																	if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal != null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																			&& (_Acronym == null)) {
+																		context.startElement(
+																				"",
+																				"impersonal");
+																		context.childAsURIs(
+																				((com.sun.xml.bind.JAXBObject) _Impersonal),
+																				"Impersonal");
+																		context.endNamespaceDecls();
+																		context.childAsAttributes(
+																				((com.sun.xml.bind.JAXBObject) _Impersonal),
+																				"Impersonal");
+																		context.endAttributes();
+																		context.childAsBody(
+																				((com.sun.xml.bind.JAXBObject) _Impersonal),
+																				"Impersonal");
+																		context.endElement();
+																	} else {
+																		if (((((((((((((((((((((((((_WPrefix != null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																				&& (_Acronym == null)) {
+																			context.startElement(
+																					"",
+																					"wPrefix");
+																			context.childAsURIs(
+																					((com.sun.xml.bind.JAXBObject) _WPrefix),
+																					"WPrefix");
+																			context.endNamespaceDecls();
+																			context.childAsAttributes(
+																					((com.sun.xml.bind.JAXBObject) _WPrefix),
+																					"WPrefix");
+																			context.endAttributes();
+																			context.childAsBody(
+																					((com.sun.xml.bind.JAXBObject) _WPrefix),
+																					"WPrefix");
+																			context.endElement();
+																		} else {
+																			if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula != null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																					&& (_Acronym == null)) {
+																				context.startElement(
+																						"",
+																						"copula");
+																				context.childAsURIs(
+																						((com.sun.xml.bind.JAXBObject) _Copula),
+																						"Copula");
+																				context.endNamespaceDecls();
+																				context.childAsAttributes(
+																						((com.sun.xml.bind.JAXBObject) _Copula),
+																						"Copula");
+																				context.endAttributes();
+																				context.childAsBody(
+																						((com.sun.xml.bind.JAXBObject) _Copula),
+																						"Copula");
+																				context.endElement();
+																			} else {
+																				if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral != null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																						&& (_Acronym == null)) {
+																					context.startElement(
+																							"",
+																							"numeral");
+																					context.childAsURIs(
+																							((com.sun.xml.bind.JAXBObject) _Numeral),
+																							"Numeral");
+																					context.endNamespaceDecls();
+																					context.childAsAttributes(
+																							((com.sun.xml.bind.JAXBObject) _Numeral),
+																							"Numeral");
+																					context.endAttributes();
+																					context.childAsBody(
+																							((com.sun.xml.bind.JAXBObject) _Numeral),
+																							"Numeral");
+																					context.endElement();
+																				} else {
+																					if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																							&& (_Acronym != null)) {
+																						context.startElement(
+																								"",
+																								"acronym");
+																						context.childAsURIs(
+																								((com.sun.xml.bind.JAXBObject) _Acronym),
+																								"Acronym");
+																						context.endNamespaceDecls();
+																						context.childAsAttributes(
+																								((com.sun.xml.bind.JAXBObject) _Acronym),
+																								"Acronym");
+																						context.endAttributes();
+																						context.childAsBody(
+																								((com.sun.xml.bind.JAXBObject) _Acronym),
+																								"Acronym");
+																						context.endElement();
+																					} else {
+																						if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen != null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																								&& (_Acronym == null)) {
+																							context.startElement(
+																									"",
+																									"multiWordFrozen");
+																							context.childAsURIs(
+																									((com.sun.xml.bind.JAXBObject) _MultiWordFrozen),
+																									"MultiWordFrozen");
+																							context.endNamespaceDecls();
+																							context.childAsAttributes(
+																									((com.sun.xml.bind.JAXBObject) _MultiWordFrozen),
+																									"MultiWordFrozen");
+																							context.endAttributes();
+																							context.childAsBody(
+																									((com.sun.xml.bind.JAXBObject) _MultiWordFrozen),
+																									"MultiWordFrozen");
+																							context.endElement();
+																						} else {
+																							if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition != null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																									&& (_Acronym == null)) {
+																								context.startElement(
+																										"",
+																										"multiWordPreposition");
+																								context.childAsURIs(
+																										((com.sun.xml.bind.JAXBObject) _MultiWordPreposition),
+																										"MultiWordPreposition");
+																								context.endNamespaceDecls();
+																								context.childAsAttributes(
+																										((com.sun.xml.bind.JAXBObject) _MultiWordPreposition),
+																										"MultiWordPreposition");
+																								context.endAttributes();
+																								context.childAsBody(
+																										((com.sun.xml.bind.JAXBObject) _MultiWordPreposition),
+																										"MultiWordPreposition");
+																								context.endElement();
+																							} else {
+																								if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun != null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																										&& (_Acronym == null)) {
+																									context.startElement(
+																											"",
+																											"multiWordNoun");
+																									context.childAsURIs(
+																											((com.sun.xml.bind.JAXBObject) _MultiWordNoun),
+																											"MultiWordNoun");
+																									context.endNamespaceDecls();
+																									context.childAsAttributes(
+																											((com.sun.xml.bind.JAXBObject) _MultiWordNoun),
+																											"MultiWordNoun");
+																									context.endAttributes();
+																									context.childAsBody(
+																											((com.sun.xml.bind.JAXBObject) _MultiWordNoun),
+																											"MultiWordNoun");
+																									context.endElement();
+																								} else {
+																									if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective != null)) && (_MultiWordVerbPhrase == null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																											&& (_Acronym == null)) {
+																										context.startElement(
+																												"",
+																												"multiWordNounAdjective");
+																										context.childAsURIs(
+																												((com.sun.xml.bind.JAXBObject) _MultiWordNounAdjective),
+																												"MultiWordNounAdjective");
+																										context.endNamespaceDecls();
+																										context.childAsAttributes(
+																												((com.sun.xml.bind.JAXBObject) _MultiWordNounAdjective),
+																												"MultiWordNounAdjective");
+																										context.endAttributes();
+																										context.childAsBody(
+																												((com.sun.xml.bind.JAXBObject) _MultiWordNounAdjective),
+																												"MultiWordNounAdjective");
+																										context.endElement();
+																									} else {
+																										if (((((((((((((((((((((((((_WPrefix == null) && (_Quantifier == null)) && (_Modal == null)) && (_Pronoun == null)) && (_Copula == null)) && (_Adverb == null)) && (_Negation == null)) && (_MultiWordPreposition == null)) && (_MultiWordFrozen == null)) && (_Title == null)) && (_Impersonal == null)) && (_MultiWordNoun == null)) && (_Verb == null)) && (_Numeral == null)) && (_Noun == null)) && (_MultiWordNounAdjective == null)) && (_MultiWordVerbPhrase != null)) && (_Interjection == null)) && (_ProperName == null)) && (_Adjective == null)) && (_Interrogative == null)) && (_Conjunction == null)) && (_Preposition == null)) && (_Existential == null))
+																												&& (_Acronym == null)) {
+																											context.startElement(
+																													"",
+																													"multiWordVerbPhrase");
+																											context.childAsURIs(
+																													((com.sun.xml.bind.JAXBObject) _MultiWordVerbPhrase),
+																													"MultiWordVerbPhrase");
+																											context.endNamespaceDecls();
+																											context.childAsAttributes(
+																													((com.sun.xml.bind.JAXBObject) _MultiWordVerbPhrase),
+																													"MultiWordVerbPhrase");
+																											context.endAttributes();
+																											context.childAsBody(
+																													((com.sun.xml.bind.JAXBObject) _MultiWordVerbPhrase),
+																													"MultiWordVerbPhrase");
+																											context.endElement();
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		while (idx4 != len4) {
+			context.startElement("", "sense");
+			int idx_52 = idx4;
+			context.childAsURIs(
+					((com.sun.xml.bind.JAXBObject) _Sense.get(idx_52++)),
+					"Sense");
+			context.endNamespaceDecls();
+			int idx_53 = idx4;
+			context.childAsAttributes(
+					((com.sun.xml.bind.JAXBObject) _Sense.get(idx_53++)),
+					"Sense");
+			context.endAttributes();
+			context.childAsBody(
+					((com.sun.xml.bind.JAXBObject) _Sense.get(idx4++)), "Sense");
+			context.endElement();
+		}
+	}
+
+	public void serializeAttributes(
+			lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx4 = 0;
+		final int len4 = ((_Sense == null) ? 0 : _Sense.size());
+		if (_Dotted != null) {
+			context.startAttribute("", "dotted");
+			try {
+				context.text(((java.lang.String) _Dotted), "Dotted");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		context.startAttribute("", "id");
+		try {
+			context.text(((java.lang.String) _Id), "Id");
+		} catch (java.lang.Exception e) {
+			lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this,
+					e, context);
+		}
+		context.endAttribute();
+		if (_Register != null) {
+			context.startAttribute("", "register");
+			try {
+				context.text(((java.lang.String) _Register), "Register");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_Spelling != null) {
+			context.startAttribute("", "spelling");
+			try {
+				context.text(((java.lang.String) _Spelling), "Spelling");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		context.startAttribute("", "transliterated");
+		try {
+			context.text(((java.lang.String) _Transliterated), "Transliterated");
+		} catch (java.lang.Exception e) {
+			lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this,
+					e, context);
+		}
+		context.endAttribute();
+		context.startAttribute("", "undotted");
+		try {
+			context.text(((java.lang.String) _Undotted), "Undotted");
+		} catch (java.lang.Exception e) {
+			lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this,
+					e, context);
+		}
+		context.endAttribute();
+		while (idx4 != len4) {
+			idx4 += 1;
+		}
+	}
+
+	public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx4 = 0;
+		final int len4 = ((_Sense == null) ? 0 : _Sense.size());
+		while (idx4 != len4) {
+			idx4 += 1;
+		}
+	}
+
+	public java.lang.Class getPrimaryInterface() {
+		return (lexicon.jaxb.ItemType.class);
+	}
+
+	public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+		if (schemaFragment == null) {
+			schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+					.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\u001fcom.sun.msv.grammar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.su"
+							+ "n.msv.grammar.BinaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1t\u0000 Lcom/sun/msv/gra"
+							+ "mmar/Expression;L\u0000\u0004exp2q\u0000~\u0000\u0002xr\u0000\u001ecom.sun.msv.grammar.Expressi"
+							+ "on\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Ljava/lang/Boolean;L\u0000\u000b"
+							+ "expandedExpq\u0000~\u0000\u0002xpppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000pp"
+							+ "sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000"
+							+ "xq\u0000~\u0000\u0001ppsr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002"
+							+ "\u0000\u0001L\u0000\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun."
+							+ "msv.grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttribut"
+							+ "esL\u0000\fcontentModelq\u0000~\u0000\u0002xq\u0000~\u0000\u0003sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001"
+							+ "Z\u0000\u0005valuexp\u0000p\u0000sq\u0000~\u0000\u0000ppsr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
+							+ "\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006exceptq\u0000~\u0000\u0002L\u0000\u0004n"
+							+ "amet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0003ppsr\u0000\"com.sun.msv.d"
+							+ "atatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.datatype.xsd"
+							+ ".StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun.msv.dataty"
+							+ "pe.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.datatype."
+							+ "xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatype.xsd.XSDa"
+							+ "tatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/String;L\u0000\b"
+							+ "typeNameq\u0000~\u0000\u001fL\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype/xsd/White"
+							+ "SpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSchemat\u0000\u0005token"
+							+ "sr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$Collapse\u0000\u0000\u0000"
+							+ "\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpaceProcessor\u0000\u0000\u0000\u0000"
+							+ "\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullSetExpressi"
+							+ "on\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003ppsr\u0000\u001bcom.sun.msv.util.StringPair\u00d0t\u001ejB\u008f\u008d\u00a0"
+							+ "\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u001fL\u0000\fnamespaceURIq\u0000~\u0000\u001fxpq\u0000~\u0000#q\u0000~\u0000\"sq\u0000~\u0000\rpp"
+							+ "sr\u0000 com.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0002L\u0000"
+							+ "\tnameClassq\u0000~\u0000\u0010xq\u0000~\u0000\u0003q\u0000~\u0000\u0014psq\u0000~\u0000\u0016ppsr\u0000\"com.sun.msv.datatype."
+							+ "xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u001cq\u0000~\u0000\"t\u0000\u0005QNameq\u0000~\u0000&q\u0000~\u0000(sq\u0000~\u0000)q"
+							+ "\u0000~\u00001q\u0000~\u0000\"sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L"
+							+ "\u0000\tlocalNameq\u0000~\u0000\u001fL\u0000\fnamespaceURIq\u0000~\u0000\u001fxr\u0000\u001dcom.sun.msv.grammar."
+							+ "NameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0004typet\u0000)http://www.w3.org/2001/XMLSc"
+							+ "hema-instancesr\u00000com.sun.msv.grammar.Expression$EpsilonExpre"
+							+ "ssion\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003sq\u0000~\u0000\u0013\u0001q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007commentt\u0000\u0000q\u0000~\u00009sq"
+							+ "\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\r"
+							+ "ppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq"
+							+ "\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\rppsq\u0000~\u0000\r"
+							+ "ppsq\u0000~\u0000\rppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsr\u0000 com.sun.msv."
+							+ "grammar.OneOrMoreExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001ccom.sun.msv.grammar.Unary"
+							+ "Exp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0003expq\u0000~\u0000\u0002xq\u0000~\u0000\u0003q\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014psr\u00002com.sun"
+							+ ".msv.grammar.Expression$AnyStringExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003"
+							+ "q\u0000~\u0000:q\u0000~\u0000_sr\u0000 com.sun.msv.grammar.AnyNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000"
+							+ "~\u00004q\u0000~\u00009sq\u0000~\u00003t\u0000!lexicon.jaxb.AdjectiveLexiconTypet\u0000+http://"
+							+ "java.sun.com/jaxb/xjc/dummy-elementssq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
+							+ ".q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\tadjectiveq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000"
+							+ "sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001elexi"
+							+ "con.jaxb.AdverbLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u0000"
+							+ "5q\u0000~\u00009sq\u0000~\u00003t\u0000\u0006adverbq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rpp"
+							+ "sq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000#lexicon.jaxb"
+							+ ".ConjunctionLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000"
+							+ "~\u00009sq\u0000~\u00003t\u0000\u000bconjunctionq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\r"
+							+ "ppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000$lexicon.ja"
+							+ "xb.InterjectionLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u0000"
+							+ "5q\u0000~\u00009sq\u0000~\u00003t\u0000\finterjectionq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq"
+							+ "\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000%lexico"
+							+ "n.jaxb.InterrogativeLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
+							+ ".q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\rinterrogativeq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000"
+							+ "\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000 "
+							+ "lexicon.jaxb.NegationLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~"
+							+ "\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\bnegationq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000"
+							+ "sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001dlexi"
+							+ "con.jaxb.TitleLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005"
+							+ "q\u0000~\u00009sq\u0000~\u00003t\u0000\u0005titleq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq"
+							+ "\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001clexicon.jaxb.N"
+							+ "ounLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003"
+							+ "t\u0000\u0004nounq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq"
+							+ "\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000#lexicon.jaxb.PrepositionLe"
+							+ "xiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u000bpr"
+							+ "epositionq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014p"
+							+ "sq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001flexicon.jaxb.PronounLexi"
+							+ "conTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007pron"
+							+ "ounq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,"
+							+ "q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\"lexicon.jaxb.ProperNameLexicon"
+							+ "Typeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\nproperN"
+							+ "ameq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,"
+							+ "q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001dlexicon.jaxb.ModalLexiconTypeq"
+							+ "\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0005modalq\u0000~\u0000=sq"
+							+ "\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
+							+ "_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\"lexicon.jaxb.QuantifierLexiconTypeq\u0000~\u0000ds"
+							+ "q\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\nquantifierq\u0000~\u0000=sq"
+							+ "\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
+							+ "_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001clexicon.jaxb.VerbLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rp"
+							+ "psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0004verbq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000"
+							+ "\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009s"
+							+ "q\u0000~\u00003t\u0000#lexicon.jaxb.ExistentialLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~"
+							+ "\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u000bexistentialq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000"
+							+ "~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u0000"
+							+ "9sq\u0000~\u00003t\u0000\"lexicon.jaxb.ImpersonalLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000"
+							+ "~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\nimpersonalq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000"
+							+ "~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u0000"
+							+ "9sq\u0000~\u00003t\u0000\u001flexicon.jaxb.WprefixLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,"
+							+ "q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007wPrefixq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000pps"
+							+ "q\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u0000"
+							+ "3t\u0000\u001elexicon.jaxb.CopulaLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq"
+							+ "\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0006copulaq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000"
+							+ "sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001flexi"
+							+ "con.jaxb.NumeralLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~"
+							+ "\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0007numeralq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\r"
+							+ "ppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u001flexicon.ja"
+							+ "xb.AcronymLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u0000"
+							+ "9sq\u0000~\u00003t\u0000\u0007acronymq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~"
+							+ "\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\'lexicon.jaxb.Mul"
+							+ "tiWordFrozenLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000"
+							+ "~\u00009sq\u0000~\u00003t\u0000\u000fmultiWordFrozenq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq"
+							+ "\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000,lexico"
+							+ "n.jaxb.MultiWordPrepositionLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~"
+							+ "\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0014multiWordPrepositionq\u0000~\u0000=sq\u0000~\u0000\u000fpp"
+							+ "\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000a"
+							+ "q\u0000~\u00009sq\u0000~\u00003t\u0000%lexicon.jaxb.MultiWordNounLexiconTypeq\u0000~\u0000dsq\u0000~"
+							+ "\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\rmultiWordNounq\u0000~\u0000=sq"
+							+ "\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000"
+							+ "_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000.lexicon.jaxb.MultiWordNounAdjectiveLexic"
+							+ "onTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0016multi"
+							+ "WordNounAdjectiveq\u0000~\u0000=sq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~"
+							+ "\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000+lexicon.jaxb.Mul"
+							+ "tiWordVerbPhraseLexiconTypeq\u0000~\u0000dsq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~"
+							+ "\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0013multiWordVerbPhraseq\u0000~\u0000=sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014p"
+							+ "sq\u0000~\u0000\u000fq\u0000~\u0000\u0014p\u0000sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u000fpp\u0000sq\u0000~\u0000\rppsq\u0000~\u0000Zq\u0000~\u0000\u0014psq\u0000~\u0000,q\u0000~\u0000"
+							+ "\u0014pq\u0000~\u0000_q\u0000~\u0000aq\u0000~\u00009sq\u0000~\u00003t\u0000\u0016lexicon.jaxb.SenseTypeq\u0000~\u0000dsq\u0000~\u0000\rp"
+							+ "psq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000.q\u0000~\u00005q\u0000~\u00009sq\u0000~\u00003t\u0000\u0005senseq\u0000~\u0000=q\u0000~\u00009sq\u0000~\u0000\rpp"
+							+ "sq\u0000~\u0000,q\u0000~\u0000\u0014pq\u0000~\u0000\u0019sq\u0000~\u00003t\u0000\u0006dottedq\u0000~\u0000=q\u0000~\u00009sq\u0000~\u0000,ppq\u0000~\u0000\u0019sq\u0000~\u0000"
+							+ "3t\u0000\u0002idq\u0000~\u0000=sq\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014psq\u0000~\u0000\u0016ppsr\u0000)com.sun.msv.datat"
+							+ "ype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Se"
+							+ "t;xr\u00009com.sun.msv.datatype.xsd.DataTypeWithValueConstraintFa"
+							+ "cet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.DataTypeWithFacet"
+							+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000"
+							+ ")Lcom/sun/msv/datatype/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'"
+							+ "Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u001fxq\u0000~"
+							+ "\u0000\u001eq\u0000~\u0000=t\u0000\fRegisterTypeq\u0000~\u0000&\u0000\u0000q\u0000~\u0000!q\u0000~\u0000!t\u0000\u000benumerationsr\u0000\u0011jav"
+							+ "a.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent"
+							+ "\u0000\u0007archaicxq\u0000~\u0000(sq\u0000~\u0000)q\u0000~\u0001\u00a8q\u0000~\u0000=sq\u0000~\u00003t\u0000\bregisterq\u0000~\u0000=q\u0000~\u00009sq"
+							+ "\u0000~\u0000\rppsq\u0000~\u0000,q\u0000~\u0000\u0014psq\u0000~\u0000\u0016ppsq\u0000~\u0001\u00a1q\u0000~\u0000=t\u0000\fSpellingTypeq\u0000~\u0000&\u0000\u0000q"
+							+ "\u0000~\u0000!q\u0000~\u0000!q\u0000~\u0001\u00a9sq\u0000~\u0001\u00aaw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000"
+							+ "~\u0000(sq\u0000~\u0000)q\u0000~\u0001\u00b6q\u0000~\u0000=sq\u0000~\u00003t\u0000\bspellingq\u0000~\u0000=q\u0000~\u00009sq\u0000~\u0000,ppq\u0000~\u0000\u0019s"
+							+ "q\u0000~\u00003t\u0000\u000etransliteratedq\u0000~\u0000=sq\u0000~\u0000,ppq\u0000~\u0000\u0019sq\u0000~\u00003t\u0000\bundottedq\u0000~"
+							+ "\u0000=sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTab"
+							+ "let\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-co"
+							+ "m.sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005cou"
+							+ "ntB\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/Expressio"
+							+ "nPool;xp\u0000\u0000\u0000\u0090\u0001pq\u0000~\u0001\u008aq\u0000~\u0001hq\u0000~\u0001\\q\u0000~\u0001Pq\u0000~\u0001Dq\u0000~\u00018q\u0000~\u0001,q\u0000~\u0001 q\u0000~\u0001\u0014q"
+							+ "\u0000~\u0001\bq\u0000~\u0000\u00fcq\u0000~\u0000\u00f0q\u0000~\u0000\u00e4q\u0000~\u0000Yq\u0000~\u0000lq\u0000~\u0000xq\u0000~\u0000\u0084q\u0000~\u0000\u0090q\u0000~\u0000\u009cq\u0000~\u0000\u00a8q\u0000~\u0000\u00b4q"
+							+ "\u0000~\u0001aq\u0000~\u0001Uq\u0000~\u0001Iq\u0000~\u0001=q\u0000~\u00011q\u0000~\u0001%q\u0000~\u0001\u0019q\u0000~\u0001\rq\u0000~\u0001\u0001q\u0000~\u0000\u00f5q\u0000~\u0000\u00e9q\u0000~\u0000+q"
+							+ "\u0000~\u0000eq\u0000~\u0000qq\u0000~\u0000}q\u0000~\u0000Rq\u0000~\u0000\u0089q\u0000~\u0000\u0095q\u0000~\u0000\u00a1q\u0000~\u0000\u00adq\u0000~\u0000\u00b9q\u0000~\u0000Jq\u0000~\u0000\u00c5q\u0000~\u0000\u00d1q"
+							+ "\u0000~\u0000\u00ddq\u0000~\u0000\u00c0q\u0000~\u0000\u00ccq\u0000~\u0000\u00d8q\u0000~\u0001mq\u0000~\u0001tq\u0000~\u0001yq\u0000~\u0001\u0080q\u0000~\u0001\u0085q\u0000~\u0001\u008eq\u0000~\u0001\u0093q\u0000~\u0000Tq"
+							+ "\u0000~\u0000Eq\u0000~\u0000\bq\u0000~\u0000Gq\u0000~\u0000Iq\u0000~\u0000Bq\u0000~\u0000Aq\u0000~\u0000Mq\u0000~\u0000Sq\u0000~\u0001Zq\u0000~\u0001Nq\u0000~\u0001Bq\u0000~\u00016q"
+							+ "\u0000~\u0001*q\u0000~\u0001\u001eq\u0000~\u0001\u0012q\u0000~\u0001\u0006q\u0000~\u0000\u00faq\u0000~\u0000\u00eeq\u0000~\u0000\u00e2q\u0000~\u0000Wq\u0000~\u0000jq\u0000~\u0000vq\u0000~\u0000\u0082q\u0000~\u0000\u008eq"
+							+ "\u0000~\u0000\u009aq\u0000~\u0000\u00a6q\u0000~\u0000\u00b2q\u0000~\u0000\u00beq\u0000~\u0000Uq\u0000~\u0000\u00caq\u0000~\u0000\u00d6q\u0000~\u0000Qq\u0000~\u0001fq\u0000~\u0001rq\u0000~\u0001~q\u0000~\u0001\u008cq"
+							+ "\u0000~\u0000\u0006q\u0000~\u0000Cq\u0000~\u0000Lq\u0000~\u0001\u009eq\u0000~\u0000@q\u0000~\u0000\fq\u0000~\u0000>q\u0000~\u0000Hq\u0000~\u0000?q\u0000~\u0001\u0089q\u0000~\u0000Dq\u0000~\u0000Pq"
+							+ "\u0000~\u0000\tq\u0000~\u0000\u0007q\u0000~\u0000\nq\u0000~\u0000Kq\u0000~\u0000Nq\u0000~\u0001\u0097q\u0000~\u0000\u000eq\u0000~\u0000Fq\u0000~\u0001\u00b2q\u0000~\u0000\u0015q\u0000~\u0000Oq\u0000~\u0000\u000bq"
+							+ "\u0000~\u0000\u0005q\u0000~\u0001iq\u0000~\u0001]q\u0000~\u0001Qq\u0000~\u0001Eq\u0000~\u00019q\u0000~\u0001-q\u0000~\u0001!q\u0000~\u0001\u0015q\u0000~\u0001\tq\u0000~\u0000\u00fdq\u0000~\u0000\u00f1q"
+							+ "\u0000~\u0000\u00e5q\u0000~\u0000\\q\u0000~\u0000mq\u0000~\u0000yq\u0000~\u0000\u0085q\u0000~\u0000\u0091q\u0000~\u0000\u009dq\u0000~\u0000\u00a9q\u0000~\u0000\u00b5q\u0000~\u0000\u00c1q\u0000~\u0000\u00cdq\u0000~\u0000\u00d9q"
+							+ "\u0000~\u0001uq\u0000~\u0001\u0081q\u0000~\u0001\u008fx"));
+		}
+		return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+				schemaFragment);
+	}
+
+	public class Unmarshaller extends
+			lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+		public Unmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			super(context,
+					"----------------------------------------------------------------------------");
+		}
+
+		protected Unmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+				int startState) {
+			this(context);
+			state = startState;
+		}
+
+		public java.lang.Object owner() {
+			return lexicon.jaxb.impl.ItemTypeImpl.this;
+		}
+
+		public void enterElement(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname,
+				org.xml.sax.Attributes __atts) throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 68:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "person");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "pgn");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					break;
+				case 24:
+					if (("sense" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 25;
+						return;
+					}
+					state = 27;
+					continue outer;
+				case 21:
+					if (("adjective" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 72;
+						return;
+					}
+					if (("adverb" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 60;
+						return;
+					}
+					if (("conjunction" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 34;
+						return;
+					}
+					if (("interjection" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 22;
+						return;
+					}
+					if (("interrogative" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 46;
+						return;
+					}
+					if (("negation" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 36;
+						return;
+					}
+					if (("title" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 58;
+						return;
+					}
+					if (("noun" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 40;
+						return;
+					}
+					if (("preposition" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 32;
+						return;
+					}
+					if (("pronoun" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 68;
+						return;
+					}
+					if (("properName" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 56;
+						return;
+					}
+					if (("modal" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 38;
+						return;
+					}
+					if (("quantifier" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 30;
+						return;
+					}
+					if (("verb" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 42;
+						return;
+					}
+					if (("existential" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 48;
+						return;
+					}
+					if (("impersonal" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 44;
+						return;
+					}
+					if (("wPrefix" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 64;
+						return;
+					}
+					if (("copula" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 54;
+						return;
+					}
+					if (("numeral" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 52;
+						return;
+					}
+					if (("acronym" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 66;
+						return;
+					}
+					if (("multiWordFrozen" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 50;
+						return;
+					}
+					if (("multiWordPreposition" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 62;
+						return;
+					}
+					if (("multiWordNoun" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 74;
+						return;
+					}
+					if (("multiWordNounAdjective" == ___local)
+							&& ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 28;
+						return;
+					}
+					if (("multiWordVerbPhrase" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 70;
+						return;
+					}
+					break;
+				case 32:
+					attIdx = context.getAttribute("", "case");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+								33, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+								33, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+								33, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+							33, ___uri, ___local, ___qname, __atts));
+					return;
+				case 0:
+					attIdx = context.getAttribute("", "dotted");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText1(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 50:
+					attIdx = context.getAttribute("", "base2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "construct1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "possessive2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "prefix");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+							51, ___uri, ___local, ___qname, __atts));
+					return;
+				case 18:
+					if (("comment" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, true);
+						state = 19;
+						return;
+					}
+					state = 21;
+					continue outer;
+				case 15:
+					attIdx = context.getAttribute("", "undotted");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText2(v);
+						continue outer;
+					}
+					break;
+				case 34:
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					_Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class),
+							35, ___uri, ___local, ___qname, __atts));
+					return;
+				case 66:
+					attIdx = context.getAttribute("", "adjectiveLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "conjunctionType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "generateAdjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "istLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "meaning");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "niqLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "noInvertedCommas");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "pos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "properNameType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+							67, ___uri, ___local, ___qname, __atts));
+					return;
+				case 36:
+					_Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.NegationLexiconTypeImpl.class),
+							37, ___uri, ___local, ___qname, __atts));
+					return;
+				case 72:
+					attIdx = context.getAttribute("", "acronym");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "dottedPlural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "pattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+							73, ___uri, ___local, ___qname, __atts));
+					return;
+				case 28:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context
+							.getAttribute("", "plural_female_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_female_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_male_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_male_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+							29, ___uri, ___local, ___qname, __atts));
+					return;
+				case 52:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "value");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+							53, ___uri, ___local, ___qname, __atts));
+					return;
+				case 44:
+					_Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class),
+							45, ___uri, ___local, ___qname, __atts));
+					return;
+				case 62:
+					attIdx = context.getAttribute("", "base1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "base2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "construct1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "possessive2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+							63, ___uri, ___local, ___qname, __atts));
+					return;
+				case 12:
+					attIdx = context.getAttribute("", "transliterated");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText3(v);
+						continue outer;
+					}
+					break;
+				case 3:
+					attIdx = context.getAttribute("", "id");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText4(v);
+						continue outer;
+					}
+					break;
+				case 30:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+							31, ___uri, ___local, ___qname, __atts));
+					return;
+				case 54:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "person");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+							55, ___uri, ___local, ___qname, __atts));
+					return;
+				case 58:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59,
+							___uri, ___local, ___qname, __atts));
+					return;
+				case 22:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+								23, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+								23, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+								23, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+							23, ___uri, ___local, ___qname, __atts));
+					return;
+				case 6:
+					attIdx = context.getAttribute("", "register");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText5(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 25:
+					attIdx = context.getAttribute("", "definition");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "id");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					break;
+				case 42:
+					attIdx = context.getAttribute("", "binyan");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectBeinoni");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context
+							.getAttribute("", "inflectBeinoniConstruct");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("",
+							"inflectBeinoniPossessive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectFuture");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectImperative");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("",
+							"inflectInfinitiveIndependent");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitiveb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitivel");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectOrigin");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPast");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					break;
+				case 27:
+					if (("sense" == ___local) && ("" == ___uri)) {
+						context.pushAttributes(__atts, false);
+						state = 25;
+						return;
+					}
+					revertToParentFromEnterElement(___uri, ___local, ___qname,
+							__atts);
+					return;
+				case 60:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "interrogative");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesAdjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesAdverb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesVerb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "position");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+							61, ___uri, ___local, ___qname, __atts));
+					return;
+				case 46:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "interrogativeType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+								47, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+								47, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+								47, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+							47, ___uri, ___local, ___qname, __atts));
+					return;
+				case 48:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "pgn");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+							49, ___uri, ___local, ___qname, __atts));
+					return;
+				case 9:
+					attIdx = context.getAttribute("", "spelling");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText6(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 70:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+							71, ___uri, ___local, ___qname, __atts));
+					return;
+				case 56:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "direction");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+							57, ___uri, ___local, ___qname, __atts));
+					return;
+				case 40:
+					attIdx = context.getAttribute("", "acronym");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "deverbal");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "direction");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "dottedPlural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "dual");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "lexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "pattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41,
+							___uri, ___local, ___qname, __atts));
+					return;
+				case 74:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+							75, ___uri, ___local, ___qname, __atts));
+					return;
+				case 38:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39,
+							___uri, ___local, ___qname, __atts));
+					return;
+				case 64:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().enterElement(___uri,
+								___local, ___qname, __atts);
+						return;
+					}
+					if (("add" == ___local) && ("" == ___uri)) {
+						_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+								65, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+								65, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement(
+								(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+								65, ___uri, ___local, ___qname, __atts));
+						return;
+					}
+					_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterElement(
+							(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+							65, ___uri, ___local, ___qname, __atts));
+					return;
+				}
+				super.enterElement(___uri, ___local, ___qname, __atts);
+				break;
+			}
+		}
+
+		private void eatText1(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Dotted = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText2(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Undotted = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText3(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Transliterated = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText4(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Id = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText5(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Register = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText6(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Spelling = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		public void leaveElement(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 68:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "person");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pgn");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					break;
+				case 24:
+					state = 27;
+					continue outer;
+				case 61:
+					if (("adverb" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 55:
+					if (("copula" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 32:
+					attIdx = context.getAttribute("", "case");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+							33, ___uri, ___local, ___qname));
+					return;
+				case 45:
+					if (("impersonal" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 0:
+					attIdx = context.getAttribute("", "dotted");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText1(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 50:
+					attIdx = context.getAttribute("", "base2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "construct1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "possessive2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "prefix");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+							51, ___uri, ___local, ___qname));
+					return;
+				case 18:
+					state = 21;
+					continue outer;
+				case 37:
+					if (("negation" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 67:
+					if (("acronym" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 33:
+					if (("preposition" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 15:
+					attIdx = context.getAttribute("", "undotted");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText2(v);
+						continue outer;
+					}
+					break;
+				case 34:
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class),
+							35, ___uri, ___local, ___qname));
+					return;
+				case 66:
+					attIdx = context.getAttribute("", "adjectiveLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "conjunctionType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "generateAdjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "istLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "meaning");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "niqLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "noInvertedCommas");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "properNameType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+							67, ___uri, ___local, ___qname));
+					return;
+				case 65:
+					if (("wPrefix" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 71:
+					if (("multiWordVerbPhrase" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 35:
+					if (("conjunction" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 36:
+					_Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.NegationLexiconTypeImpl.class),
+							37, ___uri, ___local, ___qname));
+					return;
+				case 39:
+					if (("modal" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 72:
+					attIdx = context.getAttribute("", "acronym");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "dottedPlural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+							73, ___uri, ___local, ___qname));
+					return;
+				case 28:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context
+							.getAttribute("", "plural_female_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_female_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_male_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_male_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+							29, ___uri, ___local, ___qname));
+					return;
+				case 63:
+					if (("multiWordPreposition" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 52:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "value");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+							53, ___uri, ___local, ___qname));
+					return;
+				case 73:
+					if (("adjective" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 47:
+					if (("interrogative" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 53:
+					if (("numeral" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 44:
+					_Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class),
+							45, ___uri, ___local, ___qname));
+					return;
+				case 75:
+					if (("multiWordNoun" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 62:
+					attIdx = context.getAttribute("", "base1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "base2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "construct1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "possessive2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+							63, ___uri, ___local, ___qname));
+					return;
+				case 12:
+					attIdx = context.getAttribute("", "transliterated");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText3(v);
+						continue outer;
+					}
+					break;
+				case 41:
+					if (("noun" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 3:
+					attIdx = context.getAttribute("", "id");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText4(v);
+						continue outer;
+					}
+					break;
+				case 30:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+							31, ___uri, ___local, ___qname));
+					return;
+				case 54:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "person");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+							55, ___uri, ___local, ___qname));
+					return;
+				case 58:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59,
+							___uri, ___local, ___qname));
+					return;
+				case 22:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+							23, ___uri, ___local, ___qname));
+					return;
+				case 69:
+					if (("pronoun" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 20:
+					if (("comment" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 21;
+						return;
+					}
+					break;
+				case 6:
+					attIdx = context.getAttribute("", "register");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText5(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 25:
+					attIdx = context.getAttribute("", "definition");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "id");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					break;
+				case 42:
+					attIdx = context.getAttribute("", "binyan");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectBeinoni");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context
+							.getAttribute("", "inflectBeinoniConstruct");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("",
+							"inflectBeinoniPossessive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectFuture");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectImperative");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("",
+							"inflectInfinitiveIndependent");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitiveb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitivel");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectOrigin");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPast");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					break;
+				case 51:
+					if (("multiWordFrozen" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 31:
+					if (("quantifier" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 27:
+					revertToParentFromLeaveElement(___uri, ___local, ___qname);
+					return;
+				case 60:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "interrogative");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesAdjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesAdverb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesVerb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "position");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+							61, ___uri, ___local, ___qname));
+					return;
+				case 46:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "interrogativeType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+							47, ___uri, ___local, ___qname));
+					return;
+				case 48:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pgn");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+							49, ___uri, ___local, ___qname));
+					return;
+				case 9:
+					attIdx = context.getAttribute("", "spelling");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText6(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 57:
+					if (("properName" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 59:
+					if (("title" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 26:
+					if (("sense" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 27;
+						return;
+					}
+					break;
+				case 49:
+					if (("existential" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 70:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+							71, ___uri, ___local, ___qname));
+					return;
+				case 23:
+					if (("interjection" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 56:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "direction");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+							57, ___uri, ___local, ___qname));
+					return;
+				case 40:
+					attIdx = context.getAttribute("", "acronym");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "deverbal");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "direction");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "dottedPlural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "dual");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "lexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41,
+							___uri, ___local, ___qname));
+					return;
+				case 74:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+							75, ___uri, ___local, ___qname));
+					return;
+				case 38:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39,
+							___uri, ___local, ___qname));
+					return;
+				case 64:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveElement(___uri,
+								___local, ___qname);
+						return;
+					}
+					_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromLeaveElement(
+							(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+							65, ___uri, ___local, ___qname));
+					return;
+				case 29:
+					if (("multiWordNounAdjective" == ___local)
+							&& ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				case 43:
+					if (("verb" == ___local) && ("" == ___uri)) {
+						context.popAttributes();
+						state = 24;
+						return;
+					}
+					break;
+				}
+				super.leaveElement(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void enterAttribute(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 68:
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PronounLexiconTypeImpl.class),
+								69, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PronounLexiconTypeImpl.class),
+								69, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PronounLexiconTypeImpl.class),
+								69, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("person" == ___local) && ("" == ___uri)) {
+						_Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PronounLexiconTypeImpl.class),
+								69, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("pgn" == ___local) && ("" == ___uri)) {
+						_Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PronounLexiconTypeImpl.class),
+								69, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_Pronoun = ((lexicon.jaxb.impl.PronounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PronounLexiconTypeImpl.class),
+								69, ___uri, ___local, ___qname));
+						return;
+					}
+					break;
+				case 24:
+					state = 27;
+					continue outer;
+				case 32:
+					if (("case" == ___local) && ("" == ___uri)) {
+						_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+								33, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+								33, ___uri, ___local, ___qname));
+						return;
+					}
+					_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+							33, ___uri, ___local, ___qname));
+					return;
+				case 0:
+					if (("dotted" == ___local) && ("" == ___uri)) {
+						state = 1;
+						return;
+					}
+					state = 3;
+					continue outer;
+				case 50:
+					if (("base2" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("consecutive" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("construct1" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("mwPos" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("possessive2" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("prefix" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, ___uri, ___local, ___qname));
+						return;
+					}
+					_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+							51, ___uri, ___local, ___qname));
+					return;
+				case 18:
+					state = 21;
+					continue outer;
+				case 15:
+					if (("undotted" == ___local) && ("" == ___uri)) {
+						state = 16;
+						return;
+					}
+					break;
+				case 34:
+					if (("type" == ___local) && ("" == ___uri)) {
+						_Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class),
+								35, ___uri, ___local, ___qname));
+						return;
+					}
+					_Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class),
+							35, ___uri, ___local, ___qname));
+					return;
+				case 66:
+					if (("adjectiveLexicalLink" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("conjunctionType" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("generateAdjective" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectConstructP" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectConstructS" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("istLexicalLink" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("meaning" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("niqLexicalLink" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("noInvertedCommas" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("pos" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("properNameType" == ___local) && ("" == ___uri)) {
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, ___uri, ___local, ___qname));
+						return;
+					}
+					_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+							67, ___uri, ___local, ___qname));
+					return;
+				case 36:
+					_Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.NegationLexiconTypeImpl.class),
+							37, ___uri, ___local, ___qname));
+					return;
+				case 72:
+					if (("acronym" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("dottedPlural" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("foreign" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectConstructP" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectConstructS" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionPattern" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("ipSource" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("pattern" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("root" == ___local) && ("" == ___uri)) {
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, ___uri, ___local, ___qname));
+						return;
+					}
+					_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+							73, ___uri, ___local, ___qname));
+					return;
+				case 28:
+					if (("consecutive" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine_adjective" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine_noun" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveP" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveS" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("mwPos" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural_female_adjective" == ___local)
+							&& ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural_female_noun" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural_male_adjective" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural_male_noun" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, ___uri, ___local, ___qname));
+						return;
+					}
+					_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+							29, ___uri, ___local, ___qname));
+					return;
+				case 52:
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflect" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("value" == ___local) && ("" == ___uri)) {
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, ___uri, ___local, ___qname));
+						return;
+					}
+					_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+							53, ___uri, ___local, ___qname));
+					return;
+				case 44:
+					_Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class),
+							45, ___uri, ___local, ___qname));
+					return;
+				case 62:
+					if (("base1" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("base2" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("consecutive" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("construct1" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("mwPos" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("possessive2" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, ___uri, ___local, ___qname));
+						return;
+					}
+					_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+							63, ___uri, ___local, ___qname));
+					return;
+				case 12:
+					if (("transliterated" == ___local) && ("" == ___uri)) {
+						state = 13;
+						return;
+					}
+					break;
+				case 3:
+					if (("id" == ___local) && ("" == ___uri)) {
+						state = 4;
+						return;
+					}
+					break;
+				case 30:
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflect" == ___local) && ("" == ___uri)) {
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, ___uri, ___local, ___qname));
+						return;
+					}
+					_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+							31, ___uri, ___local, ___qname));
+					return;
+				case 54:
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("person" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("polarity" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("tense" == ___local) && ("" == ___uri)) {
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, ___uri, ___local, ___qname));
+						return;
+					}
+					_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+							55, ___uri, ___local, ___qname));
+					return;
+				case 58:
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.TitleLexiconTypeImpl.class),
+								59, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.TitleLexiconTypeImpl.class),
+								59, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.TitleLexiconTypeImpl.class),
+								59, ___uri, ___local, ___qname));
+						return;
+					}
+					_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59,
+							___uri, ___local, ___qname));
+					return;
+				case 22:
+					if (("inflect" == ___local) && ("" == ___uri)) {
+						_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+								23, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+								23, ___uri, ___local, ___qname));
+						return;
+					}
+					_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+							23, ___uri, ___local, ___qname));
+					return;
+				case 6:
+					if (("register" == ___local) && ("" == ___uri)) {
+						state = 7;
+						return;
+					}
+					state = 9;
+					continue outer;
+				case 25:
+					if (("definition" == ___local) && ("" == ___uri)) {
+						_getSense()
+								.add(((lexicon.jaxb.impl.SenseTypeImpl) spawnChildFromEnterAttribute(
+										(lexicon.jaxb.impl.SenseTypeImpl.class),
+										26, ___uri, ___local, ___qname)));
+						return;
+					}
+					if (("id" == ___local) && ("" == ___uri)) {
+						_getSense()
+								.add(((lexicon.jaxb.impl.SenseTypeImpl) spawnChildFromEnterAttribute(
+										(lexicon.jaxb.impl.SenseTypeImpl.class),
+										26, ___uri, ___local, ___qname)));
+						return;
+					}
+					break;
+				case 42:
+					if (("binyan" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("foreign" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectBeinoni" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectBeinoniConstruct" == ___local)
+							&& ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectBeinoniPossessive" == ___local)
+							&& ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectFuture" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectImperative" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectInfinitive" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectInfinitiveIndependent" == ___local)
+							&& ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectInfinitiveb" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectInfinitivel" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectOrigin" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPast" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionPattern" == ___local) && ("" == ___uri)) {
+						_Verb = ((lexicon.jaxb.impl.VerbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.VerbLexiconTypeImpl.class),
+								43, ___uri, ___local, ___qname));
+						return;
+					}
+					break;
+				case 27:
+					revertToParentFromEnterAttribute(___uri, ___local, ___qname);
+					return;
+				case 60:
+					if (("inflect" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("interrogative" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("modifiesAdjective" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("modifiesAdverb" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("modifiesVerb" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("position" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, ___uri, ___local, ___qname));
+						return;
+					}
+					_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+							61, ___uri, ___local, ___qname));
+					return;
+				case 46:
+					if (("inflect" == ___local) && ("" == ___uri)) {
+						_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+								47, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+								47, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("interrogativeType" == ___local) && ("" == ___uri)) {
+						_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+								47, ___uri, ___local, ___qname));
+						return;
+					}
+					_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+							47, ___uri, ___local, ___qname));
+					return;
+				case 48:
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("pgn" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("polarity" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("root" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("tense" == ___local) && ("" == ___uri)) {
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, ___uri, ___local, ___qname));
+						return;
+					}
+					_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+							49, ___uri, ___local, ___qname));
+					return;
+				case 9:
+					if (("spelling" == ___local) && ("" == ___uri)) {
+						state = 10;
+						return;
+					}
+					state = 12;
+					continue outer;
+				case 70:
+					if (("consecutive" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveP" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveS" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("mwPos" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, ___uri, ___local, ___qname));
+						return;
+					}
+					_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+							71, ___uri, ___local, ___qname));
+					return;
+				case 56:
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("direction" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, ___uri, ___local, ___qname));
+						return;
+					}
+					_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+							57, ___uri, ___local, ___qname));
+					return;
+				case 40:
+					if (("acronym" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("deverbal" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("direction" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("dottedPlural" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("dual" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("foreign" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectConstructP" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectConstructS" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveP" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveS" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionPattern" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("ipSource" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("lexicalLink" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("pattern" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("root" == ___local) && ("" == ___uri)) {
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, ___uri, ___local, ___qname));
+						return;
+					}
+					_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41,
+							___uri, ___local, ___qname));
+					return;
+				case 74:
+					if (("consecutive" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("definiteness" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("feminine" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveP" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectPossessiveS" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("mwPos" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("plural" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("type" == ___local) && ("" == ___uri)) {
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, ___uri, ___local, ___qname));
+						return;
+					}
+					_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+							75, ___uri, ___local, ___qname));
+					return;
+				case 38:
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("inflectionType" == ___local) && ("" == ___uri)) {
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("tense" == ___local) && ("" == ___uri)) {
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, ___uri, ___local, ___qname));
+						return;
+					}
+					_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39,
+							___uri, ___local, ___qname));
+					return;
+				case 64:
+					if (("gender" == ___local) && ("" == ___uri)) {
+						_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+								65, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("number" == ___local) && ("" == ___uri)) {
+						_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+								65, ___uri, ___local, ___qname));
+						return;
+					}
+					if (("polarity" == ___local) && ("" == ___uri)) {
+						_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute(
+								(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+								65, ___uri, ___local, ___qname));
+						return;
+					}
+					_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromEnterAttribute(
+							(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+							65, ___uri, ___local, ___qname));
+					return;
+				}
+				super.enterAttribute(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void leaveAttribute(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 68:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "person");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pgn");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					break;
+				case 24:
+					state = 27;
+					continue outer;
+				case 32:
+					attIdx = context.getAttribute("", "case");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+							33, ___uri, ___local, ___qname));
+					return;
+				case 8:
+					if (("register" == ___local) && ("" == ___uri)) {
+						state = 9;
+						return;
+					}
+					break;
+				case 0:
+					attIdx = context.getAttribute("", "dotted");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText1(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 50:
+					attIdx = context.getAttribute("", "base2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "construct1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "possessive2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "prefix");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+							51, ___uri, ___local, ___qname));
+					return;
+				case 18:
+					state = 21;
+					continue outer;
+				case 17:
+					if (("undotted" == ___local) && ("" == ___uri)) {
+						state = 18;
+						return;
+					}
+					break;
+				case 15:
+					attIdx = context.getAttribute("", "undotted");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText2(v);
+						continue outer;
+					}
+					break;
+				case 34:
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class),
+							35, ___uri, ___local, ___qname));
+					return;
+				case 66:
+					attIdx = context.getAttribute("", "adjectiveLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "conjunctionType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "generateAdjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "istLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "meaning");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "niqLexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "noInvertedCommas");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "properNameType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+							67, ___uri, ___local, ___qname));
+					return;
+				case 5:
+					if (("id" == ___local) && ("" == ___uri)) {
+						state = 6;
+						return;
+					}
+					break;
+				case 11:
+					if (("spelling" == ___local) && ("" == ___uri)) {
+						state = 12;
+						return;
+					}
+					break;
+				case 36:
+					_Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.NegationLexiconTypeImpl.class),
+							37, ___uri, ___local, ___qname));
+					return;
+				case 72:
+					attIdx = context.getAttribute("", "acronym");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "dottedPlural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+							73, ___uri, ___local, ___qname));
+					return;
+				case 28:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context
+							.getAttribute("", "plural_female_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_female_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_male_adjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural_male_noun");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+							29, ___uri, ___local, ___qname));
+					return;
+				case 52:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "value");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+							53, ___uri, ___local, ___qname));
+					return;
+				case 44:
+					_Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class),
+							45, ___uri, ___local, ___qname));
+					return;
+				case 62:
+					attIdx = context.getAttribute("", "base1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "base2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "construct1");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "possessive2");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+							63, ___uri, ___local, ___qname));
+					return;
+				case 12:
+					attIdx = context.getAttribute("", "transliterated");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText3(v);
+						continue outer;
+					}
+					break;
+				case 3:
+					attIdx = context.getAttribute("", "id");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText4(v);
+						continue outer;
+					}
+					break;
+				case 30:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+							31, ___uri, ___local, ___qname));
+					return;
+				case 54:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "person");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+							55, ___uri, ___local, ___qname));
+					return;
+				case 58:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.TitleLexiconTypeImpl.class), 59,
+							___uri, ___local, ___qname));
+					return;
+				case 22:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+							23, ___uri, ___local, ___qname));
+					return;
+				case 6:
+					attIdx = context.getAttribute("", "register");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText5(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 25:
+					attIdx = context.getAttribute("", "definition");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "id");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					break;
+				case 42:
+					attIdx = context.getAttribute("", "binyan");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectBeinoni");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context
+							.getAttribute("", "inflectBeinoniConstruct");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("",
+							"inflectBeinoniPossessive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectFuture");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectImperative");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("",
+							"inflectInfinitiveIndependent");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitiveb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectInfinitivel");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectOrigin");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPast");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					break;
+				case 27:
+					revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
+					return;
+				case 60:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "interrogative");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesAdjective");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesAdverb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "modifiesVerb");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "position");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+							61, ___uri, ___local, ___qname));
+					return;
+				case 46:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "interrogativeType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+							47, ___uri, ___local, ___qname));
+					return;
+				case 48:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pgn");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+							49, ___uri, ___local, ___qname));
+					return;
+				case 9:
+					attIdx = context.getAttribute("", "spelling");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText6(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 70:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+							71, ___uri, ___local, ___qname));
+					return;
+				case 2:
+					if (("dotted" == ___local) && ("" == ___uri)) {
+						state = 3;
+						return;
+					}
+					break;
+				case 56:
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "direction");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+							57, ___uri, ___local, ___qname));
+					return;
+				case 40:
+					attIdx = context.getAttribute("", "acronym");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "deverbal");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "direction");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "dottedPlural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "dual");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "foreign");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectConstructS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionPattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "ipSource");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "lexicalLink");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "pattern");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "root");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.NounLexiconTypeImpl.class), 41,
+							___uri, ___local, ___qname));
+					return;
+				case 74:
+					attIdx = context.getAttribute("", "consecutive");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "definiteness");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "feminine");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveP");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectPossessiveS");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "mwPos");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "plural");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+							75, ___uri, ___local, ___qname));
+					return;
+				case 14:
+					if (("transliterated" == ___local) && ("" == ___uri)) {
+						state = 15;
+						return;
+					}
+					break;
+				case 38:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "inflectionType");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "tense");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.ModalLexiconTypeImpl.class), 39,
+							___uri, ___local, ___qname));
+					return;
+				case 64:
+					attIdx = context.getAttribute("", "gender");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "number");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					attIdx = context.getAttribute("", "polarity");
+					if (attIdx >= 0) {
+						context.consumeAttribute(attIdx);
+						context.getCurrentHandler().leaveAttribute(___uri,
+								___local, ___qname);
+						return;
+					}
+					_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromLeaveAttribute(
+							(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+							65, ___uri, ___local, ___qname));
+					return;
+				}
+				super.leaveAttribute(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void handleText(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				try {
+					switch (state) {
+					case 68:
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						break;
+					case 24:
+						state = 27;
+						continue outer;
+					case 32:
+						attIdx = context.getAttribute("", "case");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Preposition = ((lexicon.jaxb.impl.PrepositionLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.PrepositionLexiconTypeImpl.class),
+								33, value));
+						return;
+					case 0:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 3;
+							eatText1(v);
+							continue outer;
+						}
+						state = 3;
+						continue outer;
+					case 50:
+						attIdx = context.getAttribute("", "base2");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "consecutive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "construct1");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "mwPos");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessive2");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "prefix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_MultiWordFrozen = ((lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.MultiWordFrozenLexiconTypeImpl.class),
+								51, value));
+						return;
+					case 18:
+						state = 21;
+						continue outer;
+					case 4:
+						state = 5;
+						eatText4(value);
+						return;
+					case 15:
+						attIdx = context.getAttribute("", "undotted");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 18;
+							eatText2(v);
+							continue outer;
+						}
+						break;
+					case 34:
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Conjunction = ((lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.ConjunctionLexiconTypeImpl.class),
+								35, value));
+						return;
+					case 66:
+						attIdx = context.getAttribute("",
+								"adjectiveLexicalLink");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "conjunctionType");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "generateAdjective");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectConstructP");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectConstructS");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "istLexicalLink");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "meaning");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "niqLexicalLink");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "noInvertedCommas");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "plural");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "pos");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "properNameType");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Acronym = ((lexicon.jaxb.impl.AcronymLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.AcronymLexiconTypeImpl.class),
+								67, value));
+						return;
+					case 36:
+						_Negation = ((lexicon.jaxb.impl.NegationLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.NegationLexiconTypeImpl.class),
+								37, value));
+						return;
+					case 72:
+						attIdx = context.getAttribute("", "acronym");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "dottedPlural");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "foreign");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectConstructP");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectConstructS");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionPattern");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "ipSource");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "pattern");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "plural");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "root");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Adjective = ((lexicon.jaxb.impl.AdjectiveLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.AdjectiveLexiconTypeImpl.class),
+								73, value));
+						return;
+					case 28:
+						attIdx = context.getAttribute("", "consecutive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine_adjective");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine_noun");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveP");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveS");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "mwPos");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"plural_female_adjective");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "plural_female_noun");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"plural_male_adjective");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "plural_male_noun");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_MultiWordNounAdjective = ((lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl.class),
+								29, value));
+						return;
+					case 52:
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflect");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "value");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Numeral = ((lexicon.jaxb.impl.NumeralLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.NumeralLexiconTypeImpl.class),
+								53, value));
+						return;
+					case 16:
+						state = 17;
+						eatText2(value);
+						return;
+					case 44:
+						_Impersonal = ((lexicon.jaxb.impl.ImpersonalLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.ImpersonalLexiconTypeImpl.class),
+								45, value));
+						return;
+					case 62:
+						attIdx = context.getAttribute("", "base1");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "base2");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "consecutive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "construct1");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "mwPos");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessive2");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_MultiWordPreposition = ((lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.MultiWordPrepositionLexiconTypeImpl.class),
+								63, value));
+						return;
+					case 12:
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 15;
+							eatText3(v);
+							continue outer;
+						}
+						break;
+					case 3:
+						attIdx = context.getAttribute("", "id");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 6;
+							eatText4(v);
+							continue outer;
+						}
+						break;
+					case 30:
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflect");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Quantifier = ((lexicon.jaxb.impl.QuantifierLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.QuantifierLexiconTypeImpl.class),
+								31, value));
+						return;
+					case 54:
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "person");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "polarity");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "tense");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Copula = ((lexicon.jaxb.impl.CopulaLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.CopulaLexiconTypeImpl.class),
+								55, value));
+						return;
+					case 58:
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Title = ((lexicon.jaxb.impl.TitleLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.TitleLexiconTypeImpl.class),
+								59, value));
+						return;
+					case 10:
+						state = 11;
+						eatText6(value);
+						return;
+					case 22:
+						attIdx = context.getAttribute("", "inflect");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Interjection = ((lexicon.jaxb.impl.InterjectionLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.InterjectionLexiconTypeImpl.class),
+								23, value));
+						return;
+					case 6:
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 9;
+							eatText5(v);
+							continue outer;
+						}
+						state = 9;
+						continue outer;
+					case 25:
+						attIdx = context.getAttribute("", "definition");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "id");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						break;
+					case 42:
+						attIdx = context.getAttribute("", "binyan");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "foreign");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectBeinoni");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniConstruct");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectBeinoniPossessive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectFuture");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectImperative");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectInfinitive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("",
+								"inflectInfinitiveIndependent");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectInfinitiveb");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectInfinitivel");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectOrigin");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPast");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionPattern");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						break;
+					case 13:
+						state = 14;
+						eatText3(value);
+						return;
+					case 19:
+						state = 20;
+						eatText7(value);
+						return;
+					case 27:
+						revertToParentFromText(value);
+						return;
+					case 60:
+						attIdx = context.getAttribute("", "inflect");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "interrogative");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "modifiesAdjective");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "modifiesAdverb");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "modifiesVerb");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "position");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Adverb = ((lexicon.jaxb.impl.AdverbLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.AdverbLexiconTypeImpl.class),
+								61, value));
+						return;
+					case 46:
+						attIdx = context.getAttribute("", "inflect");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "interrogativeType");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Interrogative = ((lexicon.jaxb.impl.InterrogativeLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.InterrogativeLexiconTypeImpl.class),
+								47, value));
+						return;
+					case 48:
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "pgn");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "polarity");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "root");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "tense");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Existential = ((lexicon.jaxb.impl.ExistentialLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.ExistentialLexiconTypeImpl.class),
+								49, value));
+						return;
+					case 7:
+						state = 8;
+						eatText5(value);
+						return;
+					case 9:
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 12;
+							eatText6(v);
+							continue outer;
+						}
+						state = 12;
+						continue outer;
+					case 70:
+						attIdx = context.getAttribute("", "consecutive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveP");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveS");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "mwPos");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "plural");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_MultiWordVerbPhrase = ((lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.MultiWordVerbPhraseLexiconTypeImpl.class),
+								71, value));
+						return;
+					case 56:
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "direction");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_ProperName = ((lexicon.jaxb.impl.ProperNameLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.ProperNameLexiconTypeImpl.class),
+								57, value));
+						return;
+					case 40:
+						attIdx = context.getAttribute("", "acronym");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "deverbal");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "direction");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "dottedPlural");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "dual");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "foreign");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectConstructP");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectConstructS");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveP");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveS");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionPattern");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "ipSource");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "lexicalLink");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "pattern");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "plural");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "root");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Noun = ((lexicon.jaxb.impl.NounLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.NounLexiconTypeImpl.class),
+								41, value));
+						return;
+					case 74:
+						attIdx = context.getAttribute("", "consecutive");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "definiteness");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "feminine");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveP");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectPossessiveS");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "mwPos");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "plural");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_MultiWordNoun = ((lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.MultiWordNounLexiconTypeImpl.class),
+								75, value));
+						return;
+					case 38:
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "inflectionType");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "tense");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_Modal = ((lexicon.jaxb.impl.ModalLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.ModalLexiconTypeImpl.class),
+								39, value));
+						return;
+					case 64:
+						attIdx = context.getAttribute("", "gender");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "number");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						attIdx = context.getAttribute("", "polarity");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().text(value);
+							return;
+						}
+						_WPrefix = ((lexicon.jaxb.impl.WprefixLexiconTypeImpl) spawnChildFromText(
+								(lexicon.jaxb.impl.WprefixLexiconTypeImpl.class),
+								65, value));
+						return;
+					case 1:
+						state = 2;
+						eatText1(value);
+						return;
+					}
+				} catch (java.lang.RuntimeException e) {
+					handleUnexpectedTextException(value, e);
+				}
+				break;
+			}
+		}
+
+		private void eatText7(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Comment = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+	}
 
 }

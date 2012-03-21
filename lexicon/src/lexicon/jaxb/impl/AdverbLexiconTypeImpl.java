@@ -5,2164 +5,2328 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb.impl;
 
-public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-{
-
-    protected java.lang.String _Type;
-    protected java.lang.String _ModifiesAdverb;
-    protected java.lang.String _ModifiesVerb;
-    protected java.lang.String _Position;
-    protected boolean has_Interrogative;
-    protected boolean _Interrogative;
-    protected boolean has_Inflect;
-    protected boolean _Inflect;
-    protected java.lang.String _InflectionBase;
-    protected com.sun.xml.bind.util.ListImpl _AddOrReplaceOrRemove;
-    protected java.lang.String _ModifiesAdjective;
-    public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-    private static com.sun.msv.grammar.Grammar schemaFragment;
-
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.AdverbLexiconType.class);
-    }
-
-    public java.lang.String getType() {
-        if (_Type == null) {
-            return "unspecified";
-        } else {
-            return _Type;
-        }
-    }
-
-    public void setType(java.lang.String value) {
-        _Type = value;
-    }
-
-    public java.lang.String getModifiesAdverb() {
-        if (_ModifiesAdverb == null) {
-            return "unspecified";
-        } else {
-            return _ModifiesAdverb;
-        }
-    }
-
-    public void setModifiesAdverb(java.lang.String value) {
-        _ModifiesAdverb = value;
-    }
-
-    public java.lang.String getModifiesVerb() {
-        if (_ModifiesVerb == null) {
-            return "unspecified";
-        } else {
-            return _ModifiesVerb;
-        }
-    }
-
-    public void setModifiesVerb(java.lang.String value) {
-        _ModifiesVerb = value;
-    }
-
-    public java.lang.String getPosition() {
-        if (_Position == null) {
-            return "unspecified";
-        } else {
-            return _Position;
-        }
-    }
-
-    public void setPosition(java.lang.String value) {
-        _Position = value;
-    }
-
-    public boolean isInterrogative() {
-        if (!has_Interrogative) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("false"));
-        } else {
-            return _Interrogative;
-        }
-    }
-
-    public void setInterrogative(boolean value) {
-        _Interrogative = value;
-        has_Interrogative = true;
-    }
-
-    public boolean isInflect() {
-        if (!has_Inflect) {
-            return javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl.installHook("false"));
-        } else {
-            return _Inflect;
-        }
-    }
-
-    public void setInflect(boolean value) {
-        _Inflect = value;
-        has_Inflect = true;
-    }
-
-    public java.lang.String getInflectionBase() {
-        if (_InflectionBase == null) {
-            return "";
-        } else {
-            return _InflectionBase;
-        }
-    }
-
-    public void setInflectionBase(java.lang.String value) {
-        _InflectionBase = value;
-    }
-
-    protected com.sun.xml.bind.util.ListImpl _getAddOrReplaceOrRemove() {
-        if (_AddOrReplaceOrRemove == null) {
-            _AddOrReplaceOrRemove = new com.sun.xml.bind.util.ListImpl(new java.util.ArrayList());
-        }
-        return _AddOrReplaceOrRemove;
-    }
-
-    public java.util.List getAddOrReplaceOrRemove() {
-        return _getAddOrReplaceOrRemove();
-    }
-
-    public java.lang.String getModifiesAdjective() {
-        if (_ModifiesAdjective == null) {
-            return "unspecified";
-        } else {
-            return _ModifiesAdjective;
-        }
-    }
-
-    public void setModifiesAdjective(java.lang.String value) {
-        _ModifiesAdjective = value;
-    }
-
-    public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-        return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.Unmarshaller(context);
-    }
-
-    public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx8 = 0;
-        final int len8 = ((_AddOrReplaceOrRemove == null)? 0 :_AddOrReplaceOrRemove.size());
-        while (idx8 != len8) {
-            while (idx8 != len8) {
-                context.childAsBody(((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove.get(idx8 ++)), "AddOrReplaceOrRemove");
-            }
-        }
-    }
-
-    public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx8 = 0;
-        final int len8 = ((_AddOrReplaceOrRemove == null)? 0 :_AddOrReplaceOrRemove.size());
-        if (has_Inflect) {
-            context.startAttribute("", "inflect");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _Inflect)), "Inflect");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_InflectionBase!= null) {
-            context.startAttribute("", "inflectionBase");
-            try {
-                context.text(((java.lang.String) _InflectionBase), "InflectionBase");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (has_Interrogative) {
-            context.startAttribute("", "interrogative");
-            try {
-                context.text(javax.xml.bind.DatatypeConverter.printBoolean(((boolean) _Interrogative)), "Interrogative");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_ModifiesAdjective!= null) {
-            context.startAttribute("", "modifiesAdjective");
-            try {
-                context.text(((java.lang.String) _ModifiesAdjective), "ModifiesAdjective");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_ModifiesAdverb!= null) {
-            context.startAttribute("", "modifiesAdverb");
-            try {
-                context.text(((java.lang.String) _ModifiesAdverb), "ModifiesAdverb");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_ModifiesVerb!= null) {
-            context.startAttribute("", "modifiesVerb");
-            try {
-                context.text(((java.lang.String) _ModifiesVerb), "ModifiesVerb");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_Position!= null) {
-            context.startAttribute("", "position");
-            try {
-                context.text(((java.lang.String) _Position), "Position");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        if (_Type!= null) {
-            context.startAttribute("", "type");
-            try {
-                context.text(((java.lang.String) _Type), "Type");
-            } catch (java.lang.Exception e) {
-                lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(this, e, context);
-            }
-            context.endAttribute();
-        }
-        while (idx8 != len8) {
-            while (idx8 != len8) {
-                context.childAsAttributes(((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove.get(idx8 ++)), "AddOrReplaceOrRemove");
-            }
-        }
-    }
-
-    public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-        throws org.xml.sax.SAXException
-    {
-        int idx8 = 0;
-        final int len8 = ((_AddOrReplaceOrRemove == null)? 0 :_AddOrReplaceOrRemove.size());
-        while (idx8 != len8) {
-            while (idx8 != len8) {
-                context.childAsURIs(((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove.get(idx8 ++)), "AddOrReplaceOrRemove");
-            }
-        }
-    }
-
-    public java.lang.Class getPrimaryInterface() {
-        return (lexicon.jaxb.AdverbLexiconType.class);
-    }
-
-    public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-        if (schemaFragment == null) {
-            schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\u001fcom.sun.msv.grammar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.su"
-+"n.msv.grammar.BinaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1t\u0000 Lcom/sun/msv/gra"
-+"mmar/Expression;L\u0000\u0004exp2q\u0000~\u0000\u0002xr\u0000\u001ecom.sun.msv.grammar.Expressi"
-+"on\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Ljava/lang/Boolean;L\u0000\u000b"
-+"expandedExpq\u0000~\u0000\u0002xpppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000pp"
-+"sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsr\u0000 com.sun.msv.grammar.OneOrMoreExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
-+"\u0002\u0000\u0000xr\u0000\u001ccom.sun.msv.grammar.UnaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0003expq\u0000~\u0000\u0002xq\u0000"
-+"~\u0000\u0003ppsr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0001ppsq\u0000"
-+"~\u0000\u0010ppsq\u0000~\u0000\u0010ppsq\u0000~\u0000\rsr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuex"
-+"p\u0000psr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\t"
-+"nameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv.g"
-+"rammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000\f"
-+"contentModelq\u0000~\u0000\u0002xq\u0000~\u0000\u0003q\u0000~\u0000\u0016p\u0000sq\u0000~\u0000\u0010ppsq\u0000~\u0000\rq\u0000~\u0000\u0016psr\u0000 com.su"
-+"n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0002L\u0000\tnameClass"
-+"q\u0000~\u0000\u0018xq\u0000~\u0000\u0003q\u0000~\u0000\u0016psr\u00002com.sun.msv.grammar.Expression$AnyStrin"
-+"gExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003sq\u0000~\u0000\u0015\u0001q\u0000~\u0000 sr\u0000 com.sun.msv.gram"
-+"mar.AnyNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.NameClass"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpsr\u00000com.sun.msv.grammar.Expression$EpsilonExpre"
-+"ssion\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003q\u0000~\u0000!q\u0000~\u0000&sr\u0000#com.sun.msv.grammar.Simp"
-+"leNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNamet\u0000\u0012Ljava/lang/String;L\u0000\fna"
-+"mespaceURIq\u0000~\u0000(xq\u0000~\u0000#t\u0000\"lexicon.jaxb.AdverbLexiconType.Addt\u0000"
-+"+http://java.sun.com/jaxb/xjc/dummy-elementsq\u0000~\u0000&sq\u0000~\u0000\rppsq\u0000"
-+"~\u0000\u0017pp\u0000sq\u0000~\u0000\u0010ppsq\u0000~\u0000\rq\u0000~\u0000\u0016psq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000 q\u0000~\u0000$q\u0000~\u0000&sq\u0000~\u0000\'t"
-+"\u0000&lexicon.jaxb.AdverbLexiconType.Replaceq\u0000~\u0000+sq\u0000~\u0000\rppsq\u0000~\u0000\u0017p"
-+"p\u0000sq\u0000~\u0000\u0010ppsq\u0000~\u0000\rq\u0000~\u0000\u0016psq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000 q\u0000~\u0000$q\u0000~\u0000&sq\u0000~\u0000\'t\u0000%le"
-+"xicon.jaxb.AdverbLexiconType.Removeq\u0000~\u0000+sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016p"
-+"sr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relax"
-+"ng/datatype/Datatype;L\u0000\u0006exceptq\u0000~\u0000\u0002L\u0000\u0004namet\u0000\u001dLcom/sun/msv/ut"
-+"il/StringPair;xq\u0000~\u0000\u0003ppsr\u0000$com.sun.msv.datatype.xsd.BooleanTy"
-+"pe\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.BuiltinAtomicType\u0000"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002"
-+"\u0000\u0000xr\u0000\'com.sun.msv.datatype.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fn"
-+"amespaceUriq\u0000~\u0000(L\u0000\btypeNameq\u0000~\u0000(L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv"
-+"/datatype/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/200"
-+"1/XMLSchemat\u0000\u0007booleansr\u00005com.sun.msv.datatype.xsd.WhiteSpace"
-+"Processor$Collapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.Wh"
-+"iteSpaceProcessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpsr\u00000com.sun.msv.grammar.Expres"
-+"sion$NullSetExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003ppsr\u0000\u001bcom.sun.msv.uti"
-+"l.StringPair\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000(L\u0000\fnamespaceURIq\u0000~\u0000("
-+"xpq\u0000~\u0000Gq\u0000~\u0000Fsq\u0000~\u0000\'t\u0000\u0007inflectt\u0000\u0000q\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~"
-+"\u0000<ppsr\u0000\"com.sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com"
-+".sun.msv.datatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidx"
-+"q\u0000~\u0000Aq\u0000~\u0000Ft\u0000\u0005tokenq\u0000~\u0000J\u0001q\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000Xq\u0000~\u0000Fsq\u0000~\u0000\'t\u0000\u000einflec"
-+"tionBaseq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000?sq\u0000~\u0000\'t\u0000\rinterrog"
-+"ativeq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~\u0000<ppsr\u0000)com.sun.msv.d"
-+"atatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/uti"
-+"l/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWithValueConstrai"
-+"ntFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.DataTypeWithF"
-+"acet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTy"
-+"pet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl;L\u0000\fconcreteTyp"
-+"et\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000("
-+"xq\u0000~\u0000Cq\u0000~\u0000Qt\u0000\u000eThreeStateTypeq\u0000~\u0000J\u0000\u0000q\u0000~\u0000Wq\u0000~\u0000Wt\u0000\u000benumerations"
-+"r\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u000bunspecifie"
-+"dt\u0000\u0004truet\u0000\u0005falsexq\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000jq\u0000~\u0000Qsq\u0000~\u0000\'t\u0000\u0011modifiesAdjec"
-+"tiveq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000bsq\u0000~\u0000\'t\u0000\u000emodifiesAdve"
-+"rbq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000bsq\u0000~\u0000\'t\u0000\fmodifiesVerbq\u0000"
-+"~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~\u0000<ppsq\u0000~\u0000cq\u0000~\u0000Qt\u0000\fPositionTy"
-+"peq\u0000~\u0000J\u0000\u0000q\u0000~\u0000Wq\u0000~\u0000Wq\u0000~\u0000ksq\u0000~\u0000lw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000\u000bunspecifiedt\u0000"
-+"\fpre and postt\u0000\u0004postt\u0000\u0003prexq\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000\u0080q\u0000~\u0000Qsq\u0000~\u0000\'t\u0000\bpos"
-+"itionq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~\u0000<ppsq\u0000~\u0000cq\u0000~\u0000Qt\u0000\nAdv"
-+"erbTypeq\u0000~\u0000J\u0000\u0000q\u0000~\u0000Wq\u0000~\u0000Wq\u0000~\u0000ksq\u0000~\u0000lw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\u000bunspecif"
-+"iedt\u0000\u0005focusxq\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000\u008dq\u0000~\u0000Qsq\u0000~\u0000\'t\u0000\u0004typeq\u0000~\u0000Qq\u0000~\u0000&sr\u0000\""
-+"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/L"
-+"com/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.sun."
-+"msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\rs"
-+"treamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPool;"
-+"xp\u0000\u0000\u0000\u001d\u0001pq\u0000~\u0000\u0006q\u0000~\u0000`q\u0000~\u0000\u0013q\u0000~\u0000|q\u0000~\u0000\u0089q\u0000~\u0000\u0012q\u0000~\u0000:q\u0000~\u0000xq\u0000~\u0000\bq\u0000~\u0000\u001bq\u0000"
-+"~\u0000.q\u0000~\u00005q\u0000~\u0000\fq\u0000~\u0000\u000fq\u0000~\u0000\u0005q\u0000~\u0000\\q\u0000~\u0000\u0014q\u0000~\u0000,q\u0000~\u00003q\u0000~\u0000tq\u0000~\u0000\nq\u0000~\u0000\tq\u0000"
-+"~\u0000\u0011q\u0000~\u0000\u000bq\u0000~\u0000\u0007q\u0000~\u0000\u001cq\u0000~\u0000/q\u0000~\u00006q\u0000~\u0000Rx"));
-        }
-        return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-    }
-
-    public static class AddImpl
-        extends lexicon.jaxb.impl.AdverbExceptionTypeImpl
-        implements lexicon.jaxb.AdverbLexiconType.Add, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-    {
-
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-        private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AdverbLexiconType.Add.class);
-        }
-
-        public java.lang.String ____jaxb_ri____getNamespaceURI() {
-            return "";
-        }
-
-        public java.lang.String ____jaxb_ri____getLocalName() {
-            return "add";
-        }
-
-        public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.Unmarshaller(context);
-        }
-
-        public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-            context.startElement("", "add");
-            super.serializeURIs(context);
-            context.endNamespaceDecls();
-            super.serializeAttributes(context);
-            context.endAttributes();
-            super.serializeBody(context);
-            context.endElement();
-        }
-
-        public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public java.lang.Class getPrimaryInterface() {
-            return (lexicon.jaxb.AdverbLexiconType.Add.class);
-        }
-
-        public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-            if (schemaFragment == null) {
-                schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
-+"\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
-+"grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
-+"\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
-+"msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
-+"ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
-+"mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
-+"q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataE"
-+"xp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006excep"
-+"tq\u0000~\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com"
-+".sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.da"
-+"tatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun."
-+"msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv"
-+".datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatyp"
-+"e.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/"
-+"String;L\u0000\btypeNameq\u0000~\u0000\u0019L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
-+"/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSche"
-+"mat\u0000\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$C"
-+"ollapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpacePro"
-+"cessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullS"
-+"etExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPa"
-+"ir\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xpq\u0000~\u0000\u001dq\u0000~"
-+"\u0000\u001csr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 co"
-+"m.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameC"
-+"lassq\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000pq"
-+"\u0000~\u0000\u0013sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tloc"
-+"alNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xr\u0000\u001dcom.sun.msv.grammar.NameC"
-+"lass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0006dottedt\u0000\u0000sr\u00000com.sun.msv.grammar.Express"
-+"ion$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u0000)\u0001q\u0000~\u00001sq\u0000~\u0000%ppsq"
-+"\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010ppsr\u0000)com.sun.msv.datatype.xsd.EnumerationFa"
-+"cet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.dat"
-+"atype.xsd.DataTypeWithValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com"
-+".sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacet"
-+"FixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatyp"
-+"e/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype"
-+"/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u0019xq\u0000~\u0000\u0018q\u0000~\u0000/t\u0000\u0007PGNTypeq\u0000~\u0000"
-+" \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bt\u0000\u000benumerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000x"
-+"pw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/Sgt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000"
-+"\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/"
-+"Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecifiedt\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000"
-+"\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000=q\u0000"
-+"~\u0000/sq\u0000~\u0000+t\u0000\u0010possessiveSuffixq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq"
-+"\u0000~\u0000\u0010ppsq\u0000~\u00006q\u0000~\u0000/t\u0000\fRegisterTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?"
-+"w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000[q"
-+"\u0000~\u0000/sq\u0000~\u0000+t\u0000\bregisterq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010pps"
-+"q\u0000~\u00006q\u0000~\u0000/t\u0000\fSpellingTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?w\f\u0000\u0000\u0000\u0010?"
-+"@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000gq\u0000~\u0000/sq\u0000~\u0000+t\u0000"
-+"\bspellingq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\u000etransliteratedq\u0000~\u0000/"
-+"sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\bundottedq\u0000~\u0000/sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000"
-+"\u0010ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0016q\u0000"
-+"~\u0000\u001ct\u0000\u0005QNameq\u0000~\u0000 q\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000yq\u0000~\u0000\u001csq\u0000~\u0000+t\u0000\u0004typet\u0000)http://"
-+"www.w3.org/2001/XMLSchema-instanceq\u0000~\u00001sq\u0000~\u0000+t\u0000\u0003addq\u0000~\u0000/sr\u0000\""
-+"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/L"
-+"com/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.sun."
-+"msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\rs"
-+"treamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPool;"
-+"xp\u0000\u0000\u0000\f\u0001pq\u0000~\u0000\fq\u0000~\u00003q\u0000~\u0000\nq\u0000~\u0000tq\u0000~\u0000\u000eq\u0000~\u0000\u000bq\u0000~\u0000\tq\u0000~\u0000Wq\u0000~\u0000\rq\u0000~\u0000&q\u0000"
-+"~\u0000cq\u0000~\u0000\u000fx"));
-            }
-            return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-        }
-
-        public class Unmarshaller
-            extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-        {
-
-
-            public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-                super(context, "----");
-            }
-
-            protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-                this(context);
-                state = startState;
-            }
-
-            public java.lang.Object owner() {
-                return lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this;
-            }
-
-            public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  0 :
-                            if (("add" == ___local)&&("" == ___uri)) {
-                                context.pushAttributes(__atts, true);
-                                state = 1;
-                                return ;
-                            }
-                            break;
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                    }
-                    super.enterElement(___uri, ___local, ___qname, __atts);
-                    break;
-                }
-            }
-
-            public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  2 :
-                            if (("add" == ___local)&&("" == ___uri)) {
-                                context.popAttributes();
-                                state = 3;
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.leaveElement(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            if (("dotted" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("possessiveSuffix" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("register" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("spelling" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("transliterated" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.enterAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.leaveAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void handleText(final java.lang.String value)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    try {
-                        switch (state) {
-                            case  1 :
-                                attIdx = context.getAttribute("", "dotted");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "possessiveSuffix");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "register");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "spelling");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "transliterated");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                break;
-                            case  3 :
-                                revertToParentFromText(value);
-                                return ;
-                        }
-                    } catch (java.lang.RuntimeException e) {
-                        handleUnexpectedTextException(value, e);
-                    }
-                    break;
-                }
-            }
-
-        }
-
-    }
-
-    public static class RemoveImpl
-        extends lexicon.jaxb.impl.AdverbExceptionTypeImpl
-        implements lexicon.jaxb.AdverbLexiconType.Remove, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-    {
-
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-        private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AdverbLexiconType.Remove.class);
-        }
-
-        public java.lang.String ____jaxb_ri____getNamespaceURI() {
-            return "";
-        }
-
-        public java.lang.String ____jaxb_ri____getLocalName() {
-            return "remove";
-        }
-
-        public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.Unmarshaller(context);
-        }
-
-        public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-            context.startElement("", "remove");
-            super.serializeURIs(context);
-            context.endNamespaceDecls();
-            super.serializeAttributes(context);
-            context.endAttributes();
-            super.serializeBody(context);
-            context.endElement();
-        }
-
-        public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public java.lang.Class getPrimaryInterface() {
-            return (lexicon.jaxb.AdverbLexiconType.Remove.class);
-        }
-
-        public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-            if (schemaFragment == null) {
-                schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
-+"\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
-+"grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
-+"\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
-+"msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
-+"ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
-+"mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
-+"q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataE"
-+"xp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006excep"
-+"tq\u0000~\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com"
-+".sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.da"
-+"tatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun."
-+"msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv"
-+".datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatyp"
-+"e.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/"
-+"String;L\u0000\btypeNameq\u0000~\u0000\u0019L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
-+"/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSche"
-+"mat\u0000\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$C"
-+"ollapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpacePro"
-+"cessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullS"
-+"etExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPa"
-+"ir\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xpq\u0000~\u0000\u001dq\u0000~"
-+"\u0000\u001csr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 co"
-+"m.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameC"
-+"lassq\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000pq"
-+"\u0000~\u0000\u0013sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tloc"
-+"alNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xr\u0000\u001dcom.sun.msv.grammar.NameC"
-+"lass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0006dottedt\u0000\u0000sr\u00000com.sun.msv.grammar.Express"
-+"ion$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u0000)\u0001q\u0000~\u00001sq\u0000~\u0000%ppsq"
-+"\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010ppsr\u0000)com.sun.msv.datatype.xsd.EnumerationFa"
-+"cet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.dat"
-+"atype.xsd.DataTypeWithValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com"
-+".sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacet"
-+"FixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatyp"
-+"e/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype"
-+"/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u0019xq\u0000~\u0000\u0018q\u0000~\u0000/t\u0000\u0007PGNTypeq\u0000~\u0000"
-+" \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bt\u0000\u000benumerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000x"
-+"pw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/Sgt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000"
-+"\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/"
-+"Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecifiedt\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000"
-+"\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000=q\u0000"
-+"~\u0000/sq\u0000~\u0000+t\u0000\u0010possessiveSuffixq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq"
-+"\u0000~\u0000\u0010ppsq\u0000~\u00006q\u0000~\u0000/t\u0000\fRegisterTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?"
-+"w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000[q"
-+"\u0000~\u0000/sq\u0000~\u0000+t\u0000\bregisterq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010pps"
-+"q\u0000~\u00006q\u0000~\u0000/t\u0000\fSpellingTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?w\f\u0000\u0000\u0000\u0010?"
-+"@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000gq\u0000~\u0000/sq\u0000~\u0000+t\u0000"
-+"\bspellingq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\u000etransliteratedq\u0000~\u0000/"
-+"sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\bundottedq\u0000~\u0000/sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000"
-+"\u0010ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0016q\u0000"
-+"~\u0000\u001ct\u0000\u0005QNameq\u0000~\u0000 q\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000yq\u0000~\u0000\u001csq\u0000~\u0000+t\u0000\u0004typet\u0000)http://"
-+"www.w3.org/2001/XMLSchema-instanceq\u0000~\u00001sq\u0000~\u0000+t\u0000\u0006removeq\u0000~\u0000/s"
-+"r\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet"
-+"\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.s"
-+"un.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB"
-+"\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPo"
-+"ol;xp\u0000\u0000\u0000\f\u0001pq\u0000~\u0000\fq\u0000~\u00003q\u0000~\u0000\nq\u0000~\u0000tq\u0000~\u0000\u000eq\u0000~\u0000\u000bq\u0000~\u0000\tq\u0000~\u0000Wq\u0000~\u0000\rq\u0000~\u0000"
-+"&q\u0000~\u0000cq\u0000~\u0000\u000fx"));
-            }
-            return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-        }
-
-        public class Unmarshaller
-            extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-        {
-
-
-            public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-                super(context, "----");
-            }
-
-            protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-                this(context);
-                state = startState;
-            }
-
-            public java.lang.Object owner() {
-                return lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this;
-            }
-
-            public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  0 :
-                            if (("remove" == ___local)&&("" == ___uri)) {
-                                context.pushAttributes(__atts, true);
-                                state = 1;
-                                return ;
-                            }
-                            break;
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                    }
-                    super.enterElement(___uri, ___local, ___qname, __atts);
-                    break;
-                }
-            }
-
-            public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                            return ;
-                        case  2 :
-                            if (("remove" == ___local)&&("" == ___uri)) {
-                                context.popAttributes();
-                                state = 3;
-                                return ;
-                            }
-                            break;
-                    }
-                    super.leaveElement(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            if (("dotted" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("possessiveSuffix" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("register" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("spelling" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("transliterated" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.enterAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.leaveAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void handleText(final java.lang.String value)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    try {
-                        switch (state) {
-                            case  1 :
-                                attIdx = context.getAttribute("", "dotted");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "possessiveSuffix");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "register");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "spelling");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "transliterated");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                break;
-                            case  3 :
-                                revertToParentFromText(value);
-                                return ;
-                        }
-                    } catch (java.lang.RuntimeException e) {
-                        handleUnexpectedTextException(value, e);
-                    }
-                    break;
-                }
-            }
-
-        }
-
-    }
-
-    public static class ReplaceImpl
-        extends lexicon.jaxb.impl.AdverbExceptionTypeImpl
-        implements lexicon.jaxb.AdverbLexiconType.Replace, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
-    {
-
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
-        private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AdverbLexiconType.Replace.class);
-        }
-
-        public java.lang.String ____jaxb_ri____getNamespaceURI() {
-            return "";
-        }
-
-        public java.lang.String ____jaxb_ri____getLocalName() {
-            return "replace";
-        }
-
-        public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.Unmarshaller(context);
-        }
-
-        public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-            context.startElement("", "replace");
-            super.serializeURIs(context);
-            context.endNamespaceDecls();
-            super.serializeAttributes(context);
-            context.endAttributes();
-            super.serializeBody(context);
-            context.endElement();
-        }
-
-        public void serializeAttributes(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
-            throws org.xml.sax.SAXException
-        {
-        }
-
-        public java.lang.Class getPrimaryInterface() {
-            return (lexicon.jaxb.AdverbLexiconType.Replace.class);
-        }
-
-        public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
-            if (schemaFragment == null) {
-                schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer.deserialize((
- "\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
-+"\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
-+"grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
-+"\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
-+"msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
-+"ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
-+"mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
-+"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
-+"q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataE"
-+"xp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006excep"
-+"tq\u0000~\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com"
-+".sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.da"
-+"tatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun."
-+"msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv"
-+".datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatyp"
-+"e.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/"
-+"String;L\u0000\btypeNameq\u0000~\u0000\u0019L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
-+"/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSche"
-+"mat\u0000\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$C"
-+"ollapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpacePro"
-+"cessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullS"
-+"etExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPa"
-+"ir\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xpq\u0000~\u0000\u001dq\u0000~"
-+"\u0000\u001csr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 co"
-+"m.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameC"
-+"lassq\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000pq"
-+"\u0000~\u0000\u0013sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tloc"
-+"alNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xr\u0000\u001dcom.sun.msv.grammar.NameC"
-+"lass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0006dottedt\u0000\u0000sr\u00000com.sun.msv.grammar.Express"
-+"ion$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u0000)\u0001q\u0000~\u00001sq\u0000~\u0000%ppsq"
-+"\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010ppsr\u0000)com.sun.msv.datatype.xsd.EnumerationFa"
-+"cet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.dat"
-+"atype.xsd.DataTypeWithValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com"
-+".sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacet"
-+"FixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatyp"
-+"e/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype"
-+"/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u0019xq\u0000~\u0000\u0018q\u0000~\u0000/t\u0000\u0007PGNTypeq\u0000~\u0000"
-+" \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bt\u0000\u000benumerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000x"
-+"pw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/Sgt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000"
-+"\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/"
-+"Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecifiedt\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000"
-+"\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000=q\u0000"
-+"~\u0000/sq\u0000~\u0000+t\u0000\u0010possessiveSuffixq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq"
-+"\u0000~\u0000\u0010ppsq\u0000~\u00006q\u0000~\u0000/t\u0000\fRegisterTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?"
-+"w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000[q"
-+"\u0000~\u0000/sq\u0000~\u0000+t\u0000\bregisterq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010pps"
-+"q\u0000~\u00006q\u0000~\u0000/t\u0000\fSpellingTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?w\f\u0000\u0000\u0000\u0010?"
-+"@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000gq\u0000~\u0000/sq\u0000~\u0000+t\u0000"
-+"\bspellingq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\u000etransliteratedq\u0000~\u0000/"
-+"sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\bundottedq\u0000~\u0000/sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000"
-+"\u0010ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0016q\u0000"
-+"~\u0000\u001ct\u0000\u0005QNameq\u0000~\u0000 q\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000yq\u0000~\u0000\u001csq\u0000~\u0000+t\u0000\u0004typet\u0000)http://"
-+"www.w3.org/2001/XMLSchema-instanceq\u0000~\u00001sq\u0000~\u0000+t\u0000\u0007replaceq\u0000~\u0000/"
-+"sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTable"
-+"t\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com."
-+"sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005count"
-+"B\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionP"
-+"ool;xp\u0000\u0000\u0000\f\u0001pq\u0000~\u0000\fq\u0000~\u00003q\u0000~\u0000\nq\u0000~\u0000tq\u0000~\u0000\u000eq\u0000~\u0000\u000bq\u0000~\u0000\tq\u0000~\u0000Wq\u0000~\u0000\rq\u0000~"
-+"\u0000&q\u0000~\u0000cq\u0000~\u0000\u000fx"));
-            }
-            return new com.sun.msv.verifier.regexp.REDocumentDeclaration(schemaFragment);
-        }
-
-        public class Unmarshaller
-            extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-        {
-
-
-            public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-                super(context, "----");
-            }
-
-            protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-                this(context);
-                state = startState;
-            }
-
-            public java.lang.Object owner() {
-                return lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this;
-            }
-
-            public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  0 :
-                            if (("replace" == ___local)&&("" == ___uri)) {
-                                context.pushAttributes(__atts, true);
-                                state = 1;
-                                return ;
-                            }
-                            break;
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().enterElement(___uri, ___local, ___qname, __atts);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                            return ;
-                    }
-                    super.enterElement(___uri, ___local, ___qname, __atts);
-                    break;
-                }
-            }
-
-            public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveElement(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  2 :
-                            if (("replace" == ___local)&&("" == ___uri)) {
-                                context.popAttributes();
-                                state = 3;
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.leaveElement(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            if (("dotted" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("possessiveSuffix" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("register" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("spelling" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            if (("transliterated" == ___local)&&("" == ___uri)) {
-                                spawnHandlerFromEnterAttribute((((lexicon.jaxb.impl.AdverbExceptionTypeImpl)lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(context)), 2, ___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.enterAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    switch (state) {
-                        case  1 :
-                            attIdx = context.getAttribute("", "dotted");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "possessiveSuffix");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "register");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "spelling");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            attIdx = context.getAttribute("", "transliterated");
-                            if (attIdx >= 0) {
-                                context.consumeAttribute(attIdx);
-                                context.getCurrentHandler().leaveAttribute(___uri, ___local, ___qname);
-                                return ;
-                            }
-                            break;
-                        case  3 :
-                            revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                            return ;
-                    }
-                    super.leaveAttribute(___uri, ___local, ___qname);
-                    break;
-                }
-            }
-
-            public void handleText(final java.lang.String value)
-                throws org.xml.sax.SAXException
-            {
-                int attIdx;
-                outer:
-                while (true) {
-                    try {
-                        switch (state) {
-                            case  1 :
-                                attIdx = context.getAttribute("", "dotted");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "possessiveSuffix");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "register");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "spelling");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                attIdx = context.getAttribute("", "transliterated");
-                                if (attIdx >= 0) {
-                                    context.consumeAttribute(attIdx);
-                                    context.getCurrentHandler().text(value);
-                                    return ;
-                                }
-                                break;
-                            case  3 :
-                                revertToParentFromText(value);
-                                return ;
-                        }
-                    } catch (java.lang.RuntimeException e) {
-                        handleUnexpectedTextException(value, e);
-                    }
-                    break;
-                }
-            }
-
-        }
-
-    }
-
-    public class Unmarshaller
-        extends lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl
-    {
-
-
-        public Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
-            super(context, "--------------------------");
-        }
-
-        protected Unmarshaller(lexicon.jaxb.impl.runtime.UnmarshallingContext context, int startState) {
-            this(context);
-            state = startState;
-        }
-
-        public java.lang.Object owner() {
-            return lexicon.jaxb.impl.AdverbLexiconTypeImpl.this;
-        }
-
-        public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  24 :
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.class), 25, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.class), 25, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.class), 25, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        state = 25;
-                        continue outer;
-                    case  18 :
-                        attIdx = context.getAttribute("", "position");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 21;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  3 :
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  0 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  9 :
-                        attIdx = context.getAttribute("", "modifiesAdjective");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  25 :
-                        if (("add" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.class), 25, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("replace" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.class), 25, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        if (("remove" == ___local)&&("" == ___uri)) {
-                            _getAddOrReplaceOrRemove().add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement((lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.class), 25, ___uri, ___local, ___qname, __atts)));
-                            return ;
-                        }
-                        revertToParentFromEnterElement(___uri, ___local, ___qname, __atts);
-                        return ;
-                    case  15 :
-                        attIdx = context.getAttribute("", "modifiesVerb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  21 :
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 24;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  6 :
-                        attIdx = context.getAttribute("", "interrogative");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText7(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  12 :
-                        attIdx = context.getAttribute("", "modifiesAdverb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText8(v);
-                            continue outer;
-                        }
-                        state = 15;
-                        continue outer;
-                }
-                super.enterElement(___uri, ___local, ___qname, __atts);
-                break;
-            }
-        }
-
-        private void eatText1(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Position = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText2(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _InflectionBase = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText3(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Inflect = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_Inflect = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText4(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _ModifiesAdjective = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText5(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _ModifiesVerb = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText6(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Type = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText7(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _Interrogative = javax.xml.bind.DatatypeConverter.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor.collapse(value));
-                has_Interrogative = true;
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        private void eatText8(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            try {
-                _ModifiesAdverb = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
-            } catch (java.lang.Exception e) {
-                handleParseConversionException(e);
-            }
-        }
-
-        public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  24 :
-                        state = 25;
-                        continue outer;
-                    case  18 :
-                        attIdx = context.getAttribute("", "position");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 21;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  3 :
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  0 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  9 :
-                        attIdx = context.getAttribute("", "modifiesAdjective");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  25 :
-                        revertToParentFromLeaveElement(___uri, ___local, ___qname);
-                        return ;
-                    case  15 :
-                        attIdx = context.getAttribute("", "modifiesVerb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  21 :
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 24;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  6 :
-                        attIdx = context.getAttribute("", "interrogative");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText7(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  12 :
-                        attIdx = context.getAttribute("", "modifiesAdverb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText8(v);
-                            continue outer;
-                        }
-                        state = 15;
-                        continue outer;
-                }
-                super.leaveElement(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  24 :
-                        state = 25;
-                        continue outer;
-                    case  18 :
-                        if (("position" == ___local)&&("" == ___uri)) {
-                            state = 19;
-                            return ;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  3 :
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            state = 4;
-                            return ;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  0 :
-                        if (("inflect" == ___local)&&("" == ___uri)) {
-                            state = 1;
-                            return ;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  9 :
-                        if (("modifiesAdjective" == ___local)&&("" == ___uri)) {
-                            state = 10;
-                            return ;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  25 :
-                        revertToParentFromEnterAttribute(___uri, ___local, ___qname);
-                        return ;
-                    case  15 :
-                        if (("modifiesVerb" == ___local)&&("" == ___uri)) {
-                            state = 16;
-                            return ;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  21 :
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            state = 22;
-                            return ;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  6 :
-                        if (("interrogative" == ___local)&&("" == ___uri)) {
-                            state = 7;
-                            return ;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  12 :
-                        if (("modifiesAdverb" == ___local)&&("" == ___uri)) {
-                            state = 13;
-                            return ;
-                        }
-                        state = 15;
-                        continue outer;
-                }
-                super.enterAttribute(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                switch (state) {
-                    case  2 :
-                        if (("inflect" == ___local)&&("" == ___uri)) {
-                            state = 3;
-                            return ;
-                        }
-                        break;
-                    case  24 :
-                        state = 25;
-                        continue outer;
-                    case  18 :
-                        attIdx = context.getAttribute("", "position");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 21;
-                            eatText1(v);
-                            continue outer;
-                        }
-                        state = 21;
-                        continue outer;
-                    case  3 :
-                        attIdx = context.getAttribute("", "inflectionBase");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 6;
-                            eatText2(v);
-                            continue outer;
-                        }
-                        state = 6;
-                        continue outer;
-                    case  0 :
-                        attIdx = context.getAttribute("", "inflect");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 3;
-                            eatText3(v);
-                            continue outer;
-                        }
-                        state = 3;
-                        continue outer;
-                    case  23 :
-                        if (("type" == ___local)&&("" == ___uri)) {
-                            state = 24;
-                            return ;
-                        }
-                        break;
-                    case  9 :
-                        attIdx = context.getAttribute("", "modifiesAdjective");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 12;
-                            eatText4(v);
-                            continue outer;
-                        }
-                        state = 12;
-                        continue outer;
-                    case  5 :
-                        if (("inflectionBase" == ___local)&&("" == ___uri)) {
-                            state = 6;
-                            return ;
-                        }
-                        break;
-                    case  14 :
-                        if (("modifiesAdverb" == ___local)&&("" == ___uri)) {
-                            state = 15;
-                            return ;
-                        }
-                        break;
-                    case  20 :
-                        if (("position" == ___local)&&("" == ___uri)) {
-                            state = 21;
-                            return ;
-                        }
-                        break;
-                    case  8 :
-                        if (("interrogative" == ___local)&&("" == ___uri)) {
-                            state = 9;
-                            return ;
-                        }
-                        break;
-                    case  25 :
-                        revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
-                        return ;
-                    case  15 :
-                        attIdx = context.getAttribute("", "modifiesVerb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 18;
-                            eatText5(v);
-                            continue outer;
-                        }
-                        state = 18;
-                        continue outer;
-                    case  17 :
-                        if (("modifiesVerb" == ___local)&&("" == ___uri)) {
-                            state = 18;
-                            return ;
-                        }
-                        break;
-                    case  21 :
-                        attIdx = context.getAttribute("", "type");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 24;
-                            eatText6(v);
-                            continue outer;
-                        }
-                        state = 24;
-                        continue outer;
-                    case  6 :
-                        attIdx = context.getAttribute("", "interrogative");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 9;
-                            eatText7(v);
-                            continue outer;
-                        }
-                        state = 9;
-                        continue outer;
-                    case  12 :
-                        attIdx = context.getAttribute("", "modifiesAdverb");
-                        if (attIdx >= 0) {
-                            final java.lang.String v = context.eatAttribute(attIdx);
-                            state = 15;
-                            eatText8(v);
-                            continue outer;
-                        }
-                        state = 15;
-                        continue outer;
-                    case  11 :
-                        if (("modifiesAdjective" == ___local)&&("" == ___uri)) {
-                            state = 12;
-                            return ;
-                        }
-                        break;
-                }
-                super.leaveAttribute(___uri, ___local, ___qname);
-                break;
-            }
-        }
-
-        public void handleText(final java.lang.String value)
-            throws org.xml.sax.SAXException
-        {
-            int attIdx;
-            outer:
-            while (true) {
-                try {
-                    switch (state) {
-                        case  13 :
-                            state = 14;
-                            eatText8(value);
-                            return ;
-                        case  24 :
-                            state = 25;
-                            continue outer;
-                        case  18 :
-                            attIdx = context.getAttribute("", "position");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 21;
-                                eatText1(v);
-                                continue outer;
-                            }
-                            state = 21;
-                            continue outer;
-                        case  19 :
-                            state = 20;
-                            eatText1(value);
-                            return ;
-                        case  10 :
-                            state = 11;
-                            eatText4(value);
-                            return ;
-                        case  3 :
-                            attIdx = context.getAttribute("", "inflectionBase");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 6;
-                                eatText2(v);
-                                continue outer;
-                            }
-                            state = 6;
-                            continue outer;
-                        case  0 :
-                            attIdx = context.getAttribute("", "inflect");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 3;
-                                eatText3(v);
-                                continue outer;
-                            }
-                            state = 3;
-                            continue outer;
-                        case  16 :
-                            state = 17;
-                            eatText5(value);
-                            return ;
-                        case  1 :
-                            state = 2;
-                            eatText3(value);
-                            return ;
-                        case  9 :
-                            attIdx = context.getAttribute("", "modifiesAdjective");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 12;
-                                eatText4(v);
-                                continue outer;
-                            }
-                            state = 12;
-                            continue outer;
-                        case  7 :
-                            state = 8;
-                            eatText7(value);
-                            return ;
-                        case  4 :
-                            state = 5;
-                            eatText2(value);
-                            return ;
-                        case  25 :
-                            revertToParentFromText(value);
-                            return ;
-                        case  15 :
-                            attIdx = context.getAttribute("", "modifiesVerb");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 18;
-                                eatText5(v);
-                                continue outer;
-                            }
-                            state = 18;
-                            continue outer;
-                        case  21 :
-                            attIdx = context.getAttribute("", "type");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 24;
-                                eatText6(v);
-                                continue outer;
-                            }
-                            state = 24;
-                            continue outer;
-                        case  6 :
-                            attIdx = context.getAttribute("", "interrogative");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 9;
-                                eatText7(v);
-                                continue outer;
-                            }
-                            state = 9;
-                            continue outer;
-                        case  12 :
-                            attIdx = context.getAttribute("", "modifiesAdverb");
-                            if (attIdx >= 0) {
-                                final java.lang.String v = context.eatAttribute(attIdx);
-                                state = 15;
-                                eatText8(v);
-                                continue outer;
-                            }
-                            state = 15;
-                            continue outer;
-                        case  22 :
-                            state = 23;
-                            eatText6(value);
-                            return ;
-                    }
-                } catch (java.lang.RuntimeException e) {
-                    handleUnexpectedTextException(value, e);
-                }
-                break;
-            }
-        }
-
-    }
+public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType,
+		com.sun.xml.bind.JAXBObject,
+		lexicon.jaxb.impl.runtime.UnmarshallableObject,
+		lexicon.jaxb.impl.runtime.XMLSerializable,
+		lexicon.jaxb.impl.runtime.ValidatableObject {
+
+	protected java.lang.String _Type;
+	protected java.lang.String _ModifiesAdverb;
+	protected java.lang.String _ModifiesVerb;
+	protected java.lang.String _Position;
+	protected boolean has_Interrogative;
+	protected boolean _Interrogative;
+	protected boolean has_Inflect;
+	protected boolean _Inflect;
+	protected java.lang.String _InflectionBase;
+	protected com.sun.xml.bind.util.ListImpl _AddOrReplaceOrRemove;
+	protected java.lang.String _ModifiesAdjective;
+	public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+	private static com.sun.msv.grammar.Grammar schemaFragment;
+
+	private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+		return (lexicon.jaxb.AdverbLexiconType.class);
+	}
+
+	public java.lang.String getType() {
+		if (_Type == null) {
+			return "unspecified";
+		} else {
+			return _Type;
+		}
+	}
+
+	public void setType(java.lang.String value) {
+		_Type = value;
+	}
+
+	public java.lang.String getModifiesAdverb() {
+		if (_ModifiesAdverb == null) {
+			return "unspecified";
+		} else {
+			return _ModifiesAdverb;
+		}
+	}
+
+	public void setModifiesAdverb(java.lang.String value) {
+		_ModifiesAdverb = value;
+	}
+
+	public java.lang.String getModifiesVerb() {
+		if (_ModifiesVerb == null) {
+			return "unspecified";
+		} else {
+			return _ModifiesVerb;
+		}
+	}
+
+	public void setModifiesVerb(java.lang.String value) {
+		_ModifiesVerb = value;
+	}
+
+	public java.lang.String getPosition() {
+		if (_Position == null) {
+			return "unspecified";
+		} else {
+			return _Position;
+		}
+	}
+
+	public void setPosition(java.lang.String value) {
+		_Position = value;
+	}
+
+	public boolean isInterrogative() {
+		if (!has_Interrogative) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("false"));
+		} else {
+			return _Interrogative;
+		}
+	}
+
+	public void setInterrogative(boolean value) {
+		_Interrogative = value;
+		has_Interrogative = true;
+	}
+
+	public boolean isInflect() {
+		if (!has_Inflect) {
+			return javax.xml.bind.DatatypeConverter
+					.parseBoolean(com.sun.xml.bind.DatatypeConverterImpl
+							.installHook("false"));
+		} else {
+			return _Inflect;
+		}
+	}
+
+	public void setInflect(boolean value) {
+		_Inflect = value;
+		has_Inflect = true;
+	}
+
+	public java.lang.String getInflectionBase() {
+		if (_InflectionBase == null) {
+			return "";
+		} else {
+			return _InflectionBase;
+		}
+	}
+
+	public void setInflectionBase(java.lang.String value) {
+		_InflectionBase = value;
+	}
+
+	protected com.sun.xml.bind.util.ListImpl _getAddOrReplaceOrRemove() {
+		if (_AddOrReplaceOrRemove == null) {
+			_AddOrReplaceOrRemove = new com.sun.xml.bind.util.ListImpl(
+					new java.util.ArrayList());
+		}
+		return _AddOrReplaceOrRemove;
+	}
+
+	public java.util.List getAddOrReplaceOrRemove() {
+		return _getAddOrReplaceOrRemove();
+	}
+
+	public java.lang.String getModifiesAdjective() {
+		if (_ModifiesAdjective == null) {
+			return "unspecified";
+		} else {
+			return _ModifiesAdjective;
+		}
+	}
+
+	public void setModifiesAdjective(java.lang.String value) {
+		_ModifiesAdjective = value;
+	}
+
+	public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+			lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+		return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.Unmarshaller(context);
+	}
+
+	public void serializeBody(lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx8 = 0;
+		final int len8 = ((_AddOrReplaceOrRemove == null) ? 0
+				: _AddOrReplaceOrRemove.size());
+		while (idx8 != len8) {
+			while (idx8 != len8) {
+				context.childAsBody(
+						((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove
+								.get(idx8++)), "AddOrReplaceOrRemove");
+			}
+		}
+	}
+
+	public void serializeAttributes(
+			lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx8 = 0;
+		final int len8 = ((_AddOrReplaceOrRemove == null) ? 0
+				: _AddOrReplaceOrRemove.size());
+		if (has_Inflect) {
+			context.startAttribute("", "inflect");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _Inflect)), "Inflect");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_InflectionBase != null) {
+			context.startAttribute("", "inflectionBase");
+			try {
+				context.text(((java.lang.String) _InflectionBase),
+						"InflectionBase");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (has_Interrogative) {
+			context.startAttribute("", "interrogative");
+			try {
+				context.text(javax.xml.bind.DatatypeConverter
+						.printBoolean(((boolean) _Interrogative)),
+						"Interrogative");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_ModifiesAdjective != null) {
+			context.startAttribute("", "modifiesAdjective");
+			try {
+				context.text(((java.lang.String) _ModifiesAdjective),
+						"ModifiesAdjective");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_ModifiesAdverb != null) {
+			context.startAttribute("", "modifiesAdverb");
+			try {
+				context.text(((java.lang.String) _ModifiesAdverb),
+						"ModifiesAdverb");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_ModifiesVerb != null) {
+			context.startAttribute("", "modifiesVerb");
+			try {
+				context.text(((java.lang.String) _ModifiesVerb), "ModifiesVerb");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_Position != null) {
+			context.startAttribute("", "position");
+			try {
+				context.text(((java.lang.String) _Position), "Position");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		if (_Type != null) {
+			context.startAttribute("", "type");
+			try {
+				context.text(((java.lang.String) _Type), "Type");
+			} catch (java.lang.Exception e) {
+				lexicon.jaxb.impl.runtime.Util.handlePrintConversionException(
+						this, e, context);
+			}
+			context.endAttribute();
+		}
+		while (idx8 != len8) {
+			while (idx8 != len8) {
+				context.childAsAttributes(
+						((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove
+								.get(idx8++)), "AddOrReplaceOrRemove");
+			}
+		}
+	}
+
+	public void serializeURIs(lexicon.jaxb.impl.runtime.XMLSerializer context)
+			throws org.xml.sax.SAXException {
+		int idx8 = 0;
+		final int len8 = ((_AddOrReplaceOrRemove == null) ? 0
+				: _AddOrReplaceOrRemove.size());
+		while (idx8 != len8) {
+			while (idx8 != len8) {
+				context.childAsURIs(
+						((com.sun.xml.bind.JAXBObject) _AddOrReplaceOrRemove
+								.get(idx8++)), "AddOrReplaceOrRemove");
+			}
+		}
+	}
+
+	public java.lang.Class getPrimaryInterface() {
+		return (lexicon.jaxb.AdverbLexiconType.class);
+	}
+
+	public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+		if (schemaFragment == null) {
+			schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+					.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\u001fcom.sun.msv.grammar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.su"
+							+ "n.msv.grammar.BinaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1t\u0000 Lcom/sun/msv/gra"
+							+ "mmar/Expression;L\u0000\u0004exp2q\u0000~\u0000\u0002xr\u0000\u001ecom.sun.msv.grammar.Expressi"
+							+ "on\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Ljava/lang/Boolean;L\u0000\u000b"
+							+ "expandedExpq\u0000~\u0000\u0002xpppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000pp"
+							+ "sq\u0000~\u0000\u0000ppsq\u0000~\u0000\u0000ppsr\u0000 com.sun.msv.grammar.OneOrMoreExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
+							+ "\u0002\u0000\u0000xr\u0000\u001ccom.sun.msv.grammar.UnaryExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0003expq\u0000~\u0000\u0002xq\u0000"
+							+ "~\u0000\u0003ppsr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0001ppsq\u0000"
+							+ "~\u0000\u0010ppsq\u0000~\u0000\u0010ppsq\u0000~\u0000\rsr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuex"
+							+ "p\u0000psr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\t"
+							+ "nameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv.g"
+							+ "rammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000\f"
+							+ "contentModelq\u0000~\u0000\u0002xq\u0000~\u0000\u0003q\u0000~\u0000\u0016p\u0000sq\u0000~\u0000\u0010ppsq\u0000~\u0000\rq\u0000~\u0000\u0016psr\u0000 com.su"
+							+ "n.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0002L\u0000\tnameClass"
+							+ "q\u0000~\u0000\u0018xq\u0000~\u0000\u0003q\u0000~\u0000\u0016psr\u00002com.sun.msv.grammar.Expression$AnyStrin"
+							+ "gExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003sq\u0000~\u0000\u0015\u0001q\u0000~\u0000 sr\u0000 com.sun.msv.gram"
+							+ "mar.AnyNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.NameClass"
+							+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpsr\u00000com.sun.msv.grammar.Expression$EpsilonExpre"
+							+ "ssion\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003q\u0000~\u0000!q\u0000~\u0000&sr\u0000#com.sun.msv.grammar.Simp"
+							+ "leNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tlocalNamet\u0000\u0012Ljava/lang/String;L\u0000\fna"
+							+ "mespaceURIq\u0000~\u0000(xq\u0000~\u0000#t\u0000\"lexicon.jaxb.AdverbLexiconType.Addt\u0000"
+							+ "+http://java.sun.com/jaxb/xjc/dummy-elementsq\u0000~\u0000&sq\u0000~\u0000\rppsq\u0000"
+							+ "~\u0000\u0017pp\u0000sq\u0000~\u0000\u0010ppsq\u0000~\u0000\rq\u0000~\u0000\u0016psq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000 q\u0000~\u0000$q\u0000~\u0000&sq\u0000~\u0000\'t"
+							+ "\u0000&lexicon.jaxb.AdverbLexiconType.Replaceq\u0000~\u0000+sq\u0000~\u0000\rppsq\u0000~\u0000\u0017p"
+							+ "p\u0000sq\u0000~\u0000\u0010ppsq\u0000~\u0000\rq\u0000~\u0000\u0016psq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000 q\u0000~\u0000$q\u0000~\u0000&sq\u0000~\u0000\'t\u0000%le"
+							+ "xicon.jaxb.AdverbLexiconType.Removeq\u0000~\u0000+sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016p"
+							+ "sr\u0000\u001bcom.sun.msv.grammar.DataExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relax"
+							+ "ng/datatype/Datatype;L\u0000\u0006exceptq\u0000~\u0000\u0002L\u0000\u0004namet\u0000\u001dLcom/sun/msv/ut"
+							+ "il/StringPair;xq\u0000~\u0000\u0003ppsr\u0000$com.sun.msv.datatype.xsd.BooleanTy"
+							+ "pe\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.BuiltinAtomicType\u0000"
+							+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv.datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002"
+							+ "\u0000\u0000xr\u0000\'com.sun.msv.datatype.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fn"
+							+ "amespaceUriq\u0000~\u0000(L\u0000\btypeNameq\u0000~\u0000(L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv"
+							+ "/datatype/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/200"
+							+ "1/XMLSchemat\u0000\u0007booleansr\u00005com.sun.msv.datatype.xsd.WhiteSpace"
+							+ "Processor$Collapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.Wh"
+							+ "iteSpaceProcessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpsr\u00000com.sun.msv.grammar.Expres"
+							+ "sion$NullSetExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0003ppsr\u0000\u001bcom.sun.msv.uti"
+							+ "l.StringPair\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000(L\u0000\fnamespaceURIq\u0000~\u0000("
+							+ "xpq\u0000~\u0000Gq\u0000~\u0000Fsq\u0000~\u0000\'t\u0000\u0007inflectt\u0000\u0000q\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~"
+							+ "\u0000<ppsr\u0000\"com.sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com"
+							+ ".sun.msv.datatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidx"
+							+ "q\u0000~\u0000Aq\u0000~\u0000Ft\u0000\u0005tokenq\u0000~\u0000J\u0001q\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000Xq\u0000~\u0000Fsq\u0000~\u0000\'t\u0000\u000einflec"
+							+ "tionBaseq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000?sq\u0000~\u0000\'t\u0000\rinterrog"
+							+ "ativeq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~\u0000<ppsr\u0000)com.sun.msv.d"
+							+ "atatype.xsd.EnumerationFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/uti"
+							+ "l/Set;xr\u00009com.sun.msv.datatype.xsd.DataTypeWithValueConstrai"
+							+ "ntFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com.sun.msv.datatype.xsd.DataTypeWithF"
+							+ "acet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacetFixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTy"
+							+ "pet\u0000)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl;L\u0000\fconcreteTyp"
+							+ "et\u0000\'Lcom/sun/msv/datatype/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000("
+							+ "xq\u0000~\u0000Cq\u0000~\u0000Qt\u0000\u000eThreeStateTypeq\u0000~\u0000J\u0000\u0000q\u0000~\u0000Wq\u0000~\u0000Wt\u0000\u000benumerations"
+							+ "r\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000xpw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u000bunspecifie"
+							+ "dt\u0000\u0004truet\u0000\u0005falsexq\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000jq\u0000~\u0000Qsq\u0000~\u0000\'t\u0000\u0011modifiesAdjec"
+							+ "tiveq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000bsq\u0000~\u0000\'t\u0000\u000emodifiesAdve"
+							+ "rbq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016pq\u0000~\u0000bsq\u0000~\u0000\'t\u0000\fmodifiesVerbq\u0000"
+							+ "~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~\u0000<ppsq\u0000~\u0000cq\u0000~\u0000Qt\u0000\fPositionTy"
+							+ "peq\u0000~\u0000J\u0000\u0000q\u0000~\u0000Wq\u0000~\u0000Wq\u0000~\u0000ksq\u0000~\u0000lw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0004t\u0000\u000bunspecifiedt\u0000"
+							+ "\fpre and postt\u0000\u0004postt\u0000\u0003prexq\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000\u0080q\u0000~\u0000Qsq\u0000~\u0000\'t\u0000\bpos"
+							+ "itionq\u0000~\u0000Qq\u0000~\u0000&sq\u0000~\u0000\u0010ppsq\u0000~\u0000\u001dq\u0000~\u0000\u0016psq\u0000~\u0000<ppsq\u0000~\u0000cq\u0000~\u0000Qt\u0000\nAdv"
+							+ "erbTypeq\u0000~\u0000J\u0000\u0000q\u0000~\u0000Wq\u0000~\u0000Wq\u0000~\u0000ksq\u0000~\u0000lw\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\u000bunspecif"
+							+ "iedt\u0000\u0005focusxq\u0000~\u0000Lsq\u0000~\u0000Mq\u0000~\u0000\u008dq\u0000~\u0000Qsq\u0000~\u0000\'t\u0000\u0004typeq\u0000~\u0000Qq\u0000~\u0000&sr\u0000\""
+							+ "com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/L"
+							+ "com/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.sun."
+							+ "msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\rs"
+							+ "treamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPool;"
+							+ "xp\u0000\u0000\u0000\u001d\u0001pq\u0000~\u0000\u0006q\u0000~\u0000`q\u0000~\u0000\u0013q\u0000~\u0000|q\u0000~\u0000\u0089q\u0000~\u0000\u0012q\u0000~\u0000:q\u0000~\u0000xq\u0000~\u0000\bq\u0000~\u0000\u001bq\u0000"
+							+ "~\u0000.q\u0000~\u00005q\u0000~\u0000\fq\u0000~\u0000\u000fq\u0000~\u0000\u0005q\u0000~\u0000\\q\u0000~\u0000\u0014q\u0000~\u0000,q\u0000~\u00003q\u0000~\u0000tq\u0000~\u0000\nq\u0000~\u0000\tq\u0000"
+							+ "~\u0000\u0011q\u0000~\u0000\u000bq\u0000~\u0000\u0007q\u0000~\u0000\u001cq\u0000~\u0000/q\u0000~\u00006q\u0000~\u0000Rx"));
+		}
+		return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+				schemaFragment);
+	}
+
+	public static class AddImpl extends
+			lexicon.jaxb.impl.AdverbExceptionTypeImpl implements
+			lexicon.jaxb.AdverbLexiconType.Add, com.sun.xml.bind.RIElement,
+			com.sun.xml.bind.JAXBObject,
+			lexicon.jaxb.impl.runtime.UnmarshallableObject,
+			lexicon.jaxb.impl.runtime.XMLSerializable,
+			lexicon.jaxb.impl.runtime.ValidatableObject {
+
+		public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+		private static com.sun.msv.grammar.Grammar schemaFragment;
+
+		private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+			return (lexicon.jaxb.AdverbLexiconType.Add.class);
+		}
+
+		public java.lang.String ____jaxb_ri____getNamespaceURI() {
+			return "";
+		}
+
+		public java.lang.String ____jaxb_ri____getLocalName() {
+			return "add";
+		}
+
+		public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.Unmarshaller(
+					context);
+		}
+
+		public void serializeBody(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+			context.startElement("", "add");
+			super.serializeURIs(context);
+			context.endNamespaceDecls();
+			super.serializeAttributes(context);
+			context.endAttributes();
+			super.serializeBody(context);
+			context.endElement();
+		}
+
+		public void serializeAttributes(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public void serializeURIs(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public java.lang.Class getPrimaryInterface() {
+			return (lexicon.jaxb.AdverbLexiconType.Add.class);
+		}
+
+		public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+			if (schemaFragment == null) {
+				schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+						.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
+								+ "\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
+								+ "grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
+								+ "\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
+								+ "msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
+								+ "ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
+								+ "mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
+								+ "q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataE"
+								+ "xp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006excep"
+								+ "tq\u0000~\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com"
+								+ ".sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.da"
+								+ "tatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun."
+								+ "msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv"
+								+ ".datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatyp"
+								+ "e.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/"
+								+ "String;L\u0000\btypeNameq\u0000~\u0000\u0019L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
+								+ "/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSche"
+								+ "mat\u0000\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$C"
+								+ "ollapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpacePro"
+								+ "cessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullS"
+								+ "etExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPa"
+								+ "ir\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xpq\u0000~\u0000\u001dq\u0000~"
+								+ "\u0000\u001csr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 co"
+								+ "m.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameC"
+								+ "lassq\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000pq"
+								+ "\u0000~\u0000\u0013sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tloc"
+								+ "alNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xr\u0000\u001dcom.sun.msv.grammar.NameC"
+								+ "lass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0006dottedt\u0000\u0000sr\u00000com.sun.msv.grammar.Express"
+								+ "ion$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u0000)\u0001q\u0000~\u00001sq\u0000~\u0000%ppsq"
+								+ "\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010ppsr\u0000)com.sun.msv.datatype.xsd.EnumerationFa"
+								+ "cet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.dat"
+								+ "atype.xsd.DataTypeWithValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com"
+								+ ".sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacet"
+								+ "FixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatyp"
+								+ "e/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype"
+								+ "/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u0019xq\u0000~\u0000\u0018q\u0000~\u0000/t\u0000\u0007PGNTypeq\u0000~\u0000"
+								+ " \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bt\u0000\u000benumerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000x"
+								+ "pw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/Sgt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000"
+								+ "\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/"
+								+ "Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecifiedt\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000"
+								+ "\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000=q\u0000"
+								+ "~\u0000/sq\u0000~\u0000+t\u0000\u0010possessiveSuffixq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq"
+								+ "\u0000~\u0000\u0010ppsq\u0000~\u00006q\u0000~\u0000/t\u0000\fRegisterTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?"
+								+ "w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000[q"
+								+ "\u0000~\u0000/sq\u0000~\u0000+t\u0000\bregisterq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010pps"
+								+ "q\u0000~\u00006q\u0000~\u0000/t\u0000\fSpellingTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?w\f\u0000\u0000\u0000\u0010?"
+								+ "@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000gq\u0000~\u0000/sq\u0000~\u0000+t\u0000"
+								+ "\bspellingq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\u000etransliteratedq\u0000~\u0000/"
+								+ "sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\bundottedq\u0000~\u0000/sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000"
+								+ "\u0010ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0016q\u0000"
+								+ "~\u0000\u001ct\u0000\u0005QNameq\u0000~\u0000 q\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000yq\u0000~\u0000\u001csq\u0000~\u0000+t\u0000\u0004typet\u0000)http://"
+								+ "www.w3.org/2001/XMLSchema-instanceq\u0000~\u00001sq\u0000~\u0000+t\u0000\u0003addq\u0000~\u0000/sr\u0000\""
+								+ "com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet\u0000/L"
+								+ "com/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.sun."
+								+ "msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB\u0000\rs"
+								+ "treamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPool;"
+								+ "xp\u0000\u0000\u0000\f\u0001pq\u0000~\u0000\fq\u0000~\u00003q\u0000~\u0000\nq\u0000~\u0000tq\u0000~\u0000\u000eq\u0000~\u0000\u000bq\u0000~\u0000\tq\u0000~\u0000Wq\u0000~\u0000\rq\u0000~\u0000&q\u0000"
+								+ "~\u0000cq\u0000~\u0000\u000fx"));
+			}
+			return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+					schemaFragment);
+		}
+
+		public class Unmarshaller extends
+				lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+			public Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+				super(context, "----");
+			}
+
+			protected Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+					int startState) {
+				this(context);
+				state = startState;
+			}
+
+			public java.lang.Object owner() {
+				return lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this;
+			}
+
+			public void enterElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname,
+					org.xml.sax.Attributes __atts)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 0:
+						if (("add" == ___local) && ("" == ___uri)) {
+							context.pushAttributes(__atts, true);
+							state = 1;
+							return;
+						}
+						break;
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterElement(___uri, ___local,
+								___qname, __atts);
+						return;
+					}
+					super.enterElement(___uri, ___local, ___qname, __atts);
+					break;
+				}
+			}
+
+			public void leaveElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 2:
+						if (("add" == ___local) && ("" == ___uri)) {
+							context.popAttributes();
+							state = 3;
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveElement(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.leaveElement(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void enterAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						if (("dotted" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("possessiveSuffix" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("register" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("spelling" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("transliterated" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.enterAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void leaveAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.leaveAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void handleText(final java.lang.String value)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					try {
+						switch (state) {
+						case 1:
+							attIdx = context.getAttribute("", "dotted");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"possessiveSuffix");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "register");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "spelling");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "transliterated");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							break;
+						case 3:
+							revertToParentFromText(value);
+							return;
+						}
+					} catch (java.lang.RuntimeException e) {
+						handleUnexpectedTextException(value, e);
+					}
+					break;
+				}
+			}
+
+		}
+
+	}
+
+	public static class RemoveImpl extends
+			lexicon.jaxb.impl.AdverbExceptionTypeImpl implements
+			lexicon.jaxb.AdverbLexiconType.Remove, com.sun.xml.bind.RIElement,
+			com.sun.xml.bind.JAXBObject,
+			lexicon.jaxb.impl.runtime.UnmarshallableObject,
+			lexicon.jaxb.impl.runtime.XMLSerializable,
+			lexicon.jaxb.impl.runtime.ValidatableObject {
+
+		public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+		private static com.sun.msv.grammar.Grammar schemaFragment;
+
+		private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+			return (lexicon.jaxb.AdverbLexiconType.Remove.class);
+		}
+
+		public java.lang.String ____jaxb_ri____getNamespaceURI() {
+			return "";
+		}
+
+		public java.lang.String ____jaxb_ri____getLocalName() {
+			return "remove";
+		}
+
+		public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.Unmarshaller(
+					context);
+		}
+
+		public void serializeBody(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+			context.startElement("", "remove");
+			super.serializeURIs(context);
+			context.endNamespaceDecls();
+			super.serializeAttributes(context);
+			context.endAttributes();
+			super.serializeBody(context);
+			context.endElement();
+		}
+
+		public void serializeAttributes(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public void serializeURIs(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public java.lang.Class getPrimaryInterface() {
+			return (lexicon.jaxb.AdverbLexiconType.Remove.class);
+		}
+
+		public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+			if (schemaFragment == null) {
+				schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+						.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
+								+ "\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
+								+ "grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
+								+ "\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
+								+ "msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
+								+ "ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
+								+ "mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
+								+ "q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataE"
+								+ "xp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006excep"
+								+ "tq\u0000~\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com"
+								+ ".sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.da"
+								+ "tatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun."
+								+ "msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv"
+								+ ".datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatyp"
+								+ "e.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/"
+								+ "String;L\u0000\btypeNameq\u0000~\u0000\u0019L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
+								+ "/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSche"
+								+ "mat\u0000\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$C"
+								+ "ollapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpacePro"
+								+ "cessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullS"
+								+ "etExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPa"
+								+ "ir\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xpq\u0000~\u0000\u001dq\u0000~"
+								+ "\u0000\u001csr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 co"
+								+ "m.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameC"
+								+ "lassq\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000pq"
+								+ "\u0000~\u0000\u0013sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tloc"
+								+ "alNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xr\u0000\u001dcom.sun.msv.grammar.NameC"
+								+ "lass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0006dottedt\u0000\u0000sr\u00000com.sun.msv.grammar.Express"
+								+ "ion$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u0000)\u0001q\u0000~\u00001sq\u0000~\u0000%ppsq"
+								+ "\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010ppsr\u0000)com.sun.msv.datatype.xsd.EnumerationFa"
+								+ "cet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.dat"
+								+ "atype.xsd.DataTypeWithValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com"
+								+ ".sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacet"
+								+ "FixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatyp"
+								+ "e/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype"
+								+ "/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u0019xq\u0000~\u0000\u0018q\u0000~\u0000/t\u0000\u0007PGNTypeq\u0000~\u0000"
+								+ " \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bt\u0000\u000benumerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000x"
+								+ "pw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/Sgt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000"
+								+ "\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/"
+								+ "Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecifiedt\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000"
+								+ "\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000=q\u0000"
+								+ "~\u0000/sq\u0000~\u0000+t\u0000\u0010possessiveSuffixq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq"
+								+ "\u0000~\u0000\u0010ppsq\u0000~\u00006q\u0000~\u0000/t\u0000\fRegisterTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?"
+								+ "w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000[q"
+								+ "\u0000~\u0000/sq\u0000~\u0000+t\u0000\bregisterq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010pps"
+								+ "q\u0000~\u00006q\u0000~\u0000/t\u0000\fSpellingTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?w\f\u0000\u0000\u0000\u0010?"
+								+ "@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000gq\u0000~\u0000/sq\u0000~\u0000+t\u0000"
+								+ "\bspellingq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\u000etransliteratedq\u0000~\u0000/"
+								+ "sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\bundottedq\u0000~\u0000/sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000"
+								+ "\u0010ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0016q\u0000"
+								+ "~\u0000\u001ct\u0000\u0005QNameq\u0000~\u0000 q\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000yq\u0000~\u0000\u001csq\u0000~\u0000+t\u0000\u0004typet\u0000)http://"
+								+ "www.w3.org/2001/XMLSchema-instanceq\u0000~\u00001sq\u0000~\u0000+t\u0000\u0006removeq\u0000~\u0000/s"
+								+ "r\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTablet"
+								+ "\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com.s"
+								+ "un.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005countB"
+								+ "\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionPo"
+								+ "ol;xp\u0000\u0000\u0000\f\u0001pq\u0000~\u0000\fq\u0000~\u00003q\u0000~\u0000\nq\u0000~\u0000tq\u0000~\u0000\u000eq\u0000~\u0000\u000bq\u0000~\u0000\tq\u0000~\u0000Wq\u0000~\u0000\rq\u0000~\u0000"
+								+ "&q\u0000~\u0000cq\u0000~\u0000\u000fx"));
+			}
+			return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+					schemaFragment);
+		}
+
+		public class Unmarshaller extends
+				lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+			public Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+				super(context, "----");
+			}
+
+			protected Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+					int startState) {
+				this(context);
+				state = startState;
+			}
+
+			public java.lang.Object owner() {
+				return lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this;
+			}
+
+			public void enterElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname,
+					org.xml.sax.Attributes __atts)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 0:
+						if (("remove" == ___local) && ("" == ___uri)) {
+							context.pushAttributes(__atts, true);
+							state = 1;
+							return;
+						}
+						break;
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterElement(___uri, ___local,
+								___qname, __atts);
+						return;
+					}
+					super.enterElement(___uri, ___local, ___qname, __atts);
+					break;
+				}
+			}
+
+			public void leaveElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveElement(___uri, ___local,
+								___qname);
+						return;
+					case 2:
+						if (("remove" == ___local) && ("" == ___uri)) {
+							context.popAttributes();
+							state = 3;
+							return;
+						}
+						break;
+					}
+					super.leaveElement(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void enterAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						if (("dotted" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("possessiveSuffix" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("register" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("spelling" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("transliterated" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.enterAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void leaveAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.leaveAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void handleText(final java.lang.String value)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					try {
+						switch (state) {
+						case 1:
+							attIdx = context.getAttribute("", "dotted");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"possessiveSuffix");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "register");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "spelling");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "transliterated");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							break;
+						case 3:
+							revertToParentFromText(value);
+							return;
+						}
+					} catch (java.lang.RuntimeException e) {
+						handleUnexpectedTextException(value, e);
+					}
+					break;
+				}
+			}
+
+		}
+
+	}
+
+	public static class ReplaceImpl extends
+			lexicon.jaxb.impl.AdverbExceptionTypeImpl implements
+			lexicon.jaxb.AdverbLexiconType.Replace, com.sun.xml.bind.RIElement,
+			com.sun.xml.bind.JAXBObject,
+			lexicon.jaxb.impl.runtime.UnmarshallableObject,
+			lexicon.jaxb.impl.runtime.XMLSerializable,
+			lexicon.jaxb.impl.runtime.ValidatableObject {
+
+		public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+		private static com.sun.msv.grammar.Grammar schemaFragment;
+
+		private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
+			return (lexicon.jaxb.AdverbLexiconType.Replace.class);
+		}
+
+		public java.lang.String ____jaxb_ri____getNamespaceURI() {
+			return "";
+		}
+
+		public java.lang.String ____jaxb_ri____getLocalName() {
+			return "replace";
+		}
+
+		public lexicon.jaxb.impl.runtime.UnmarshallingEventHandler createUnmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			return new lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.Unmarshaller(
+					context);
+		}
+
+		public void serializeBody(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+			context.startElement("", "replace");
+			super.serializeURIs(context);
+			context.endNamespaceDecls();
+			super.serializeAttributes(context);
+			context.endAttributes();
+			super.serializeBody(context);
+			context.endElement();
+		}
+
+		public void serializeAttributes(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public void serializeURIs(
+				lexicon.jaxb.impl.runtime.XMLSerializer context)
+				throws org.xml.sax.SAXException {
+		}
+
+		public java.lang.Class getPrimaryInterface() {
+			return (lexicon.jaxb.AdverbLexiconType.Replace.class);
+		}
+
+		public com.sun.msv.verifier.DocumentDeclaration createRawValidator() {
+			if (schemaFragment == null) {
+				schemaFragment = com.sun.xml.bind.validator.SchemaDeserializer
+						.deserialize(("\u00ac\u00ed\u0000\u0005sr\u0000\'com.sun.msv.grammar.trex.ElementPattern\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000"
+								+ "\tnameClasst\u0000\u001fLcom/sun/msv/grammar/NameClass;xr\u0000\u001ecom.sun.msv."
+								+ "grammar.ElementExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002Z\u0000\u001aignoreUndeclaredAttributesL\u0000"
+								+ "\fcontentModelt\u0000 Lcom/sun/msv/grammar/Expression;xr\u0000\u001ecom.sun."
+								+ "msv.grammar.Expression\u00f8\u0018\u0082\u00e8N5~O\u0002\u0000\u0002L\u0000\u0013epsilonReducibilityt\u0000\u0013Lj"
+								+ "ava/lang/Boolean;L\u0000\u000bexpandedExpq\u0000~\u0000\u0003xppp\u0000sr\u0000\u001fcom.sun.msv.gra"
+								+ "mmar.SequenceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\u001dcom.sun.msv.grammar.BinaryExp"
+								+ "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0004exp1q\u0000~\u0000\u0003L\u0000\u0004exp2q\u0000~\u0000\u0003xq\u0000~\u0000\u0004ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007pps"
+								+ "q\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsq\u0000~\u0000\u0007ppsr\u0000\u001bcom.sun.msv.grammar.DataE"
+								+ "xp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\u0002dtt\u0000\u001fLorg/relaxng/datatype/Datatype;L\u0000\u0006excep"
+								+ "tq\u0000~\u0000\u0003L\u0000\u0004namet\u0000\u001dLcom/sun/msv/util/StringPair;xq\u0000~\u0000\u0004ppsr\u0000\"com"
+								+ ".sun.msv.datatype.xsd.TokenType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000#com.sun.msv.da"
+								+ "tatype.xsd.StringType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001Z\u0000\risAlwaysValidxr\u0000*com.sun."
+								+ "msv.datatype.xsd.BuiltinAtomicType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000%com.sun.msv"
+								+ ".datatype.xsd.ConcreteType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000\'com.sun.msv.datatyp"
+								+ "e.xsd.XSDatatypeImpl\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0003L\u0000\fnamespaceUrit\u0000\u0012Ljava/lang/"
+								+ "String;L\u0000\btypeNameq\u0000~\u0000\u0019L\u0000\nwhiteSpacet\u0000.Lcom/sun/msv/datatype"
+								+ "/xsd/WhiteSpaceProcessor;xpt\u0000 http://www.w3.org/2001/XMLSche"
+								+ "mat\u0000\u0005tokensr\u00005com.sun.msv.datatype.xsd.WhiteSpaceProcessor$C"
+								+ "ollapse\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xr\u0000,com.sun.msv.datatype.xsd.WhiteSpacePro"
+								+ "cessor\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xp\u0001sr\u00000com.sun.msv.grammar.Expression$NullS"
+								+ "etExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004ppsr\u0000\u001bcom.sun.msv.util.StringPa"
+								+ "ir\u00d0t\u001ejB\u008f\u008d\u00a0\u0002\u0000\u0002L\u0000\tlocalNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xpq\u0000~\u0000\u001dq\u0000~"
+								+ "\u0000\u001csr\u0000\u001dcom.sun.msv.grammar.ChoiceExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\bppsr\u0000 co"
+								+ "m.sun.msv.grammar.AttributeExp\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\u0003expq\u0000~\u0000\u0003L\u0000\tnameC"
+								+ "lassq\u0000~\u0000\u0001xq\u0000~\u0000\u0004sr\u0000\u0011java.lang.Boolean\u00cd r\u0080\u00d5\u009c\u00fa\u00ee\u0002\u0000\u0001Z\u0000\u0005valuexp\u0000pq"
+								+ "\u0000~\u0000\u0013sr\u0000#com.sun.msv.grammar.SimpleNameClass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0002L\u0000\tloc"
+								+ "alNameq\u0000~\u0000\u0019L\u0000\fnamespaceURIq\u0000~\u0000\u0019xr\u0000\u001dcom.sun.msv.grammar.NameC"
+								+ "lass\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xpt\u0000\u0006dottedt\u0000\u0000sr\u00000com.sun.msv.grammar.Express"
+								+ "ion$EpsilonExpression\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0004sq\u0000~\u0000)\u0001q\u0000~\u00001sq\u0000~\u0000%ppsq"
+								+ "\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010ppsr\u0000)com.sun.msv.datatype.xsd.EnumerationFa"
+								+ "cet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\u0006valuest\u0000\u000fLjava/util/Set;xr\u00009com.sun.msv.dat"
+								+ "atype.xsd.DataTypeWithValueConstraintFacet\"\u00a7Ro\u00ca\u00c7\u008aT\u0002\u0000\u0000xr\u0000*com"
+								+ ".sun.msv.datatype.xsd.DataTypeWithFacet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0005Z\u0000\fisFacet"
+								+ "FixedZ\u0000\u0012needValueCheckFlagL\u0000\bbaseTypet\u0000)Lcom/sun/msv/datatyp"
+								+ "e/xsd/XSDatatypeImpl;L\u0000\fconcreteTypet\u0000\'Lcom/sun/msv/datatype"
+								+ "/xsd/ConcreteType;L\u0000\tfacetNameq\u0000~\u0000\u0019xq\u0000~\u0000\u0018q\u0000~\u0000/t\u0000\u0007PGNTypeq\u0000~\u0000"
+								+ " \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bt\u0000\u000benumerationsr\u0000\u0011java.util.HashSet\u00baD\u0085\u0095\u0096\u00b8\u00b74\u0003\u0000\u0000x"
+								+ "pw\f\u0000\u0000\u0000 ?@\u0000\u0000\u0000\u0000\u0000\u0013t\u0000\t123p/M/Sgt\u0000\u00072p/M/Plt\u0000\u00073p/M/Sgt\u0000\b1p/MF/Sgt\u0000"
+								+ "\t123p/M/Plt\u0000\b2p/MF/Plt\u0000\u00072p/M/Sgt\u0000\u00071p/F/Sgt\u0000\b3p/MF/Plt\u0000\u00073p/F/"
+								+ "Plt\u0000\u00071p/M/Sgt\u0000\u000bunspecifiedt\u0000\u00072p/F/Plt\u0000\t123p/F/Plt\u0000\u00073p/M/Plt\u0000"
+								+ "\u00073p/F/Sgt\u0000\t123p/F/Sgt\u0000\b1p/MF/Plt\u0000\u00072p/F/Sgxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000=q\u0000"
+								+ "~\u0000/sq\u0000~\u0000+t\u0000\u0010possessiveSuffixq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq"
+								+ "\u0000~\u0000\u0010ppsq\u0000~\u00006q\u0000~\u0000/t\u0000\fRegisterTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?"
+								+ "w\f\u0000\u0000\u0000\u0010?@\u0000\u0000\u0000\u0000\u0000\u0003t\u0000\u0006formalt\u0000\u0006spokent\u0000\u0007archaicxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000[q"
+								+ "\u0000~\u0000/sq\u0000~\u0000+t\u0000\bregisterq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000\u0010pps"
+								+ "q\u0000~\u00006q\u0000~\u0000/t\u0000\fSpellingTypeq\u0000~\u0000 \u0000\u0000q\u0000~\u0000\u001bq\u0000~\u0000\u001bq\u0000~\u0000>sq\u0000~\u0000?w\f\u0000\u0000\u0000\u0010?"
+								+ "@\u0000\u0000\u0000\u0000\u0000\u0002t\u0000\tirregulart\u0000\bstandardxq\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000gq\u0000~\u0000/sq\u0000~\u0000+t\u0000"
+								+ "\bspellingq\u0000~\u0000/q\u0000~\u00001sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\u000etransliteratedq\u0000~\u0000/"
+								+ "sq\u0000~\u0000\'ppq\u0000~\u0000\u0013sq\u0000~\u0000+t\u0000\bundottedq\u0000~\u0000/sq\u0000~\u0000%ppsq\u0000~\u0000\'q\u0000~\u0000*psq\u0000~\u0000"
+								+ "\u0010ppsr\u0000\"com.sun.msv.datatype.xsd.QnameType\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0000xq\u0000~\u0000\u0016q\u0000"
+								+ "~\u0000\u001ct\u0000\u0005QNameq\u0000~\u0000 q\u0000~\u0000\"sq\u0000~\u0000#q\u0000~\u0000yq\u0000~\u0000\u001csq\u0000~\u0000+t\u0000\u0004typet\u0000)http://"
+								+ "www.w3.org/2001/XMLSchema-instanceq\u0000~\u00001sq\u0000~\u0000+t\u0000\u0007replaceq\u0000~\u0000/"
+								+ "sr\u0000\"com.sun.msv.grammar.ExpressionPool\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0000\u0001L\u0000\bexpTable"
+								+ "t\u0000/Lcom/sun/msv/grammar/ExpressionPool$ClosedHash;xpsr\u0000-com."
+								+ "sun.msv.grammar.ExpressionPool$ClosedHash\u00d7j\u00d0N\u00ef\u00e8\u00ed\u001c\u0003\u0000\u0003I\u0000\u0005count"
+								+ "B\u0000\rstreamVersionL\u0000\u0006parentt\u0000$Lcom/sun/msv/grammar/ExpressionP"
+								+ "ool;xp\u0000\u0000\u0000\f\u0001pq\u0000~\u0000\fq\u0000~\u00003q\u0000~\u0000\nq\u0000~\u0000tq\u0000~\u0000\u000eq\u0000~\u0000\u000bq\u0000~\u0000\tq\u0000~\u0000Wq\u0000~\u0000\rq\u0000~"
+								+ "\u0000&q\u0000~\u0000cq\u0000~\u0000\u000fx"));
+			}
+			return new com.sun.msv.verifier.regexp.REDocumentDeclaration(
+					schemaFragment);
+		}
+
+		public class Unmarshaller extends
+				lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+			public Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+				super(context, "----");
+			}
+
+			protected Unmarshaller(
+					lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+					int startState) {
+				this(context);
+				state = startState;
+			}
+
+			public java.lang.Object owner() {
+				return lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this;
+			}
+
+			public void enterElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname,
+					org.xml.sax.Attributes __atts)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 0:
+						if (("replace" == ___local) && ("" == ___uri)) {
+							context.pushAttributes(__atts, true);
+							state = 1;
+							return;
+						}
+						break;
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().enterElement(___uri,
+									___local, ___qname, __atts);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterElement(___uri, ___local,
+								___qname, __atts);
+						return;
+					}
+					super.enterElement(___uri, ___local, ___qname, __atts);
+					break;
+				}
+			}
+
+			public void leaveElement(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveElement(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 2:
+						if (("replace" == ___local) && ("" == ___uri)) {
+							context.popAttributes();
+							state = 3;
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveElement(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.leaveElement(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void enterAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						if (("dotted" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("possessiveSuffix" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("register" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("spelling" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						if (("transliterated" == ___local) && ("" == ___uri)) {
+							spawnHandlerFromEnterAttribute(
+									(((lexicon.jaxb.impl.AdverbExceptionTypeImpl) lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.this).new Unmarshaller(
+											context)), 2, ___uri, ___local,
+									___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromEnterAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.enterAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void leaveAttribute(java.lang.String ___uri,
+					java.lang.String ___local, java.lang.String ___qname)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					switch (state) {
+					case 1:
+						attIdx = context.getAttribute("", "dotted");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "possessiveSuffix");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "register");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "spelling");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						attIdx = context.getAttribute("", "transliterated");
+						if (attIdx >= 0) {
+							context.consumeAttribute(attIdx);
+							context.getCurrentHandler().leaveAttribute(___uri,
+									___local, ___qname);
+							return;
+						}
+						break;
+					case 3:
+						revertToParentFromLeaveAttribute(___uri, ___local,
+								___qname);
+						return;
+					}
+					super.leaveAttribute(___uri, ___local, ___qname);
+					break;
+				}
+			}
+
+			public void handleText(final java.lang.String value)
+					throws org.xml.sax.SAXException {
+				int attIdx;
+				outer: while (true) {
+					try {
+						switch (state) {
+						case 1:
+							attIdx = context.getAttribute("", "dotted");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("",
+									"possessiveSuffix");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "register");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "spelling");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							attIdx = context.getAttribute("", "transliterated");
+							if (attIdx >= 0) {
+								context.consumeAttribute(attIdx);
+								context.getCurrentHandler().text(value);
+								return;
+							}
+							break;
+						case 3:
+							revertToParentFromText(value);
+							return;
+						}
+					} catch (java.lang.RuntimeException e) {
+						handleUnexpectedTextException(value, e);
+					}
+					break;
+				}
+			}
+
+		}
+
+	}
+
+	public class Unmarshaller extends
+			lexicon.jaxb.impl.runtime.AbstractUnmarshallingEventHandlerImpl {
+
+		public Unmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context) {
+			super(context, "--------------------------");
+		}
+
+		protected Unmarshaller(
+				lexicon.jaxb.impl.runtime.UnmarshallingContext context,
+				int startState) {
+			this(context);
+			state = startState;
+		}
+
+		public java.lang.Object owner() {
+			return lexicon.jaxb.impl.AdverbLexiconTypeImpl.this;
+		}
+
+		public void enterElement(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname,
+				org.xml.sax.Attributes __atts) throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 24:
+					if (("add" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.class),
+										25, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.class),
+										25, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.class),
+										25, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					state = 25;
+					continue outer;
+				case 18:
+					attIdx = context.getAttribute("", "position");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 21;
+						eatText1(v);
+						continue outer;
+					}
+					state = 21;
+					continue outer;
+				case 3:
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText2(v);
+						continue outer;
+					}
+					state = 6;
+					continue outer;
+				case 0:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText3(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 9:
+					attIdx = context.getAttribute("", "modifiesAdjective");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText4(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 25:
+					if (("add" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.AdverbLexiconTypeImpl.AddImpl.class),
+										25, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("replace" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.AdverbLexiconTypeImpl.ReplaceImpl.class),
+										25, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					if (("remove" == ___local) && ("" == ___uri)) {
+						_getAddOrReplaceOrRemove()
+								.add(((lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl) spawnChildFromEnterElement(
+										(lexicon.jaxb.impl.AdverbLexiconTypeImpl.RemoveImpl.class),
+										25, ___uri, ___local, ___qname, __atts)));
+						return;
+					}
+					revertToParentFromEnterElement(___uri, ___local, ___qname,
+							__atts);
+					return;
+				case 15:
+					attIdx = context.getAttribute("", "modifiesVerb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText5(v);
+						continue outer;
+					}
+					state = 18;
+					continue outer;
+				case 21:
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 24;
+						eatText6(v);
+						continue outer;
+					}
+					state = 24;
+					continue outer;
+				case 6:
+					attIdx = context.getAttribute("", "interrogative");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText7(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 12:
+					attIdx = context.getAttribute("", "modifiesAdverb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText8(v);
+						continue outer;
+					}
+					state = 15;
+					continue outer;
+				}
+				super.enterElement(___uri, ___local, ___qname, __atts);
+				break;
+			}
+		}
+
+		private void eatText1(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Position = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText2(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_InflectionBase = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText3(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Inflect = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_Inflect = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText4(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_ModifiesAdjective = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText5(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_ModifiesVerb = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText6(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Type = com.sun.xml.bind.WhiteSpaceProcessor.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText7(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_Interrogative = javax.xml.bind.DatatypeConverter
+						.parseBoolean(com.sun.xml.bind.WhiteSpaceProcessor
+								.collapse(value));
+				has_Interrogative = true;
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		private void eatText8(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			try {
+				_ModifiesAdverb = com.sun.xml.bind.WhiteSpaceProcessor
+						.collapse(value);
+			} catch (java.lang.Exception e) {
+				handleParseConversionException(e);
+			}
+		}
+
+		public void leaveElement(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 24:
+					state = 25;
+					continue outer;
+				case 18:
+					attIdx = context.getAttribute("", "position");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 21;
+						eatText1(v);
+						continue outer;
+					}
+					state = 21;
+					continue outer;
+				case 3:
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText2(v);
+						continue outer;
+					}
+					state = 6;
+					continue outer;
+				case 0:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText3(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 9:
+					attIdx = context.getAttribute("", "modifiesAdjective");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText4(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 25:
+					revertToParentFromLeaveElement(___uri, ___local, ___qname);
+					return;
+				case 15:
+					attIdx = context.getAttribute("", "modifiesVerb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText5(v);
+						continue outer;
+					}
+					state = 18;
+					continue outer;
+				case 21:
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 24;
+						eatText6(v);
+						continue outer;
+					}
+					state = 24;
+					continue outer;
+				case 6:
+					attIdx = context.getAttribute("", "interrogative");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText7(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 12:
+					attIdx = context.getAttribute("", "modifiesAdverb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText8(v);
+						continue outer;
+					}
+					state = 15;
+					continue outer;
+				}
+				super.leaveElement(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void enterAttribute(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 24:
+					state = 25;
+					continue outer;
+				case 18:
+					if (("position" == ___local) && ("" == ___uri)) {
+						state = 19;
+						return;
+					}
+					state = 21;
+					continue outer;
+				case 3:
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						state = 4;
+						return;
+					}
+					state = 6;
+					continue outer;
+				case 0:
+					if (("inflect" == ___local) && ("" == ___uri)) {
+						state = 1;
+						return;
+					}
+					state = 3;
+					continue outer;
+				case 9:
+					if (("modifiesAdjective" == ___local) && ("" == ___uri)) {
+						state = 10;
+						return;
+					}
+					state = 12;
+					continue outer;
+				case 25:
+					revertToParentFromEnterAttribute(___uri, ___local, ___qname);
+					return;
+				case 15:
+					if (("modifiesVerb" == ___local) && ("" == ___uri)) {
+						state = 16;
+						return;
+					}
+					state = 18;
+					continue outer;
+				case 21:
+					if (("type" == ___local) && ("" == ___uri)) {
+						state = 22;
+						return;
+					}
+					state = 24;
+					continue outer;
+				case 6:
+					if (("interrogative" == ___local) && ("" == ___uri)) {
+						state = 7;
+						return;
+					}
+					state = 9;
+					continue outer;
+				case 12:
+					if (("modifiesAdverb" == ___local) && ("" == ___uri)) {
+						state = 13;
+						return;
+					}
+					state = 15;
+					continue outer;
+				}
+				super.enterAttribute(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void leaveAttribute(java.lang.String ___uri,
+				java.lang.String ___local, java.lang.String ___qname)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				switch (state) {
+				case 2:
+					if (("inflect" == ___local) && ("" == ___uri)) {
+						state = 3;
+						return;
+					}
+					break;
+				case 24:
+					state = 25;
+					continue outer;
+				case 18:
+					attIdx = context.getAttribute("", "position");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 21;
+						eatText1(v);
+						continue outer;
+					}
+					state = 21;
+					continue outer;
+				case 3:
+					attIdx = context.getAttribute("", "inflectionBase");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 6;
+						eatText2(v);
+						continue outer;
+					}
+					state = 6;
+					continue outer;
+				case 0:
+					attIdx = context.getAttribute("", "inflect");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 3;
+						eatText3(v);
+						continue outer;
+					}
+					state = 3;
+					continue outer;
+				case 23:
+					if (("type" == ___local) && ("" == ___uri)) {
+						state = 24;
+						return;
+					}
+					break;
+				case 9:
+					attIdx = context.getAttribute("", "modifiesAdjective");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 12;
+						eatText4(v);
+						continue outer;
+					}
+					state = 12;
+					continue outer;
+				case 5:
+					if (("inflectionBase" == ___local) && ("" == ___uri)) {
+						state = 6;
+						return;
+					}
+					break;
+				case 14:
+					if (("modifiesAdverb" == ___local) && ("" == ___uri)) {
+						state = 15;
+						return;
+					}
+					break;
+				case 20:
+					if (("position" == ___local) && ("" == ___uri)) {
+						state = 21;
+						return;
+					}
+					break;
+				case 8:
+					if (("interrogative" == ___local) && ("" == ___uri)) {
+						state = 9;
+						return;
+					}
+					break;
+				case 25:
+					revertToParentFromLeaveAttribute(___uri, ___local, ___qname);
+					return;
+				case 15:
+					attIdx = context.getAttribute("", "modifiesVerb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 18;
+						eatText5(v);
+						continue outer;
+					}
+					state = 18;
+					continue outer;
+				case 17:
+					if (("modifiesVerb" == ___local) && ("" == ___uri)) {
+						state = 18;
+						return;
+					}
+					break;
+				case 21:
+					attIdx = context.getAttribute("", "type");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 24;
+						eatText6(v);
+						continue outer;
+					}
+					state = 24;
+					continue outer;
+				case 6:
+					attIdx = context.getAttribute("", "interrogative");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 9;
+						eatText7(v);
+						continue outer;
+					}
+					state = 9;
+					continue outer;
+				case 12:
+					attIdx = context.getAttribute("", "modifiesAdverb");
+					if (attIdx >= 0) {
+						final java.lang.String v = context.eatAttribute(attIdx);
+						state = 15;
+						eatText8(v);
+						continue outer;
+					}
+					state = 15;
+					continue outer;
+				case 11:
+					if (("modifiesAdjective" == ___local) && ("" == ___uri)) {
+						state = 12;
+						return;
+					}
+					break;
+				}
+				super.leaveAttribute(___uri, ___local, ___qname);
+				break;
+			}
+		}
+
+		public void handleText(final java.lang.String value)
+				throws org.xml.sax.SAXException {
+			int attIdx;
+			outer: while (true) {
+				try {
+					switch (state) {
+					case 13:
+						state = 14;
+						eatText8(value);
+						return;
+					case 24:
+						state = 25;
+						continue outer;
+					case 18:
+						attIdx = context.getAttribute("", "position");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 21;
+							eatText1(v);
+							continue outer;
+						}
+						state = 21;
+						continue outer;
+					case 19:
+						state = 20;
+						eatText1(value);
+						return;
+					case 10:
+						state = 11;
+						eatText4(value);
+						return;
+					case 3:
+						attIdx = context.getAttribute("", "inflectionBase");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 6;
+							eatText2(v);
+							continue outer;
+						}
+						state = 6;
+						continue outer;
+					case 0:
+						attIdx = context.getAttribute("", "inflect");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 3;
+							eatText3(v);
+							continue outer;
+						}
+						state = 3;
+						continue outer;
+					case 16:
+						state = 17;
+						eatText5(value);
+						return;
+					case 1:
+						state = 2;
+						eatText3(value);
+						return;
+					case 9:
+						attIdx = context.getAttribute("", "modifiesAdjective");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 12;
+							eatText4(v);
+							continue outer;
+						}
+						state = 12;
+						continue outer;
+					case 7:
+						state = 8;
+						eatText7(value);
+						return;
+					case 4:
+						state = 5;
+						eatText2(value);
+						return;
+					case 25:
+						revertToParentFromText(value);
+						return;
+					case 15:
+						attIdx = context.getAttribute("", "modifiesVerb");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 18;
+							eatText5(v);
+							continue outer;
+						}
+						state = 18;
+						continue outer;
+					case 21:
+						attIdx = context.getAttribute("", "type");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 24;
+							eatText6(v);
+							continue outer;
+						}
+						state = 24;
+						continue outer;
+					case 6:
+						attIdx = context.getAttribute("", "interrogative");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 9;
+							eatText7(v);
+							continue outer;
+						}
+						state = 9;
+						continue outer;
+					case 12:
+						attIdx = context.getAttribute("", "modifiesAdverb");
+						if (attIdx >= 0) {
+							final java.lang.String v = context
+									.eatAttribute(attIdx);
+							state = 15;
+							eatText8(v);
+							continue outer;
+						}
+						state = 15;
+						continue outer;
+					case 22:
+						state = 23;
+						eatText6(value);
+						return;
+					}
+				} catch (java.lang.RuntimeException e) {
+					handleUnexpectedTextException(value, e);
+				}
+				break;
+			}
+		}
+
+	}
 
 }

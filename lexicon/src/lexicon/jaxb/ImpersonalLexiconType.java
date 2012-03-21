@@ -5,14 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for ImpersonalLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1626)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1626)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="ImpersonalLexiconType">
  *   &lt;complexContent>
@@ -24,6 +27,5 @@ package lexicon.jaxb;
  * 
  */
 public interface ImpersonalLexiconType {
-
 
 }

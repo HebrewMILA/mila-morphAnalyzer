@@ -7,17 +7,15 @@
 
 package lexicon.jaxb.impl.runtime;
 
-
 /**
- * Generated classes have to implement this interface for it
- * to be unmarshallable.
+ * Generated classes have to implement this interface for it to be
+ * unmarshallable.
  * 
- * @author      Kohsuke KAWAGUCHI
+ * @author Kohsuke KAWAGUCHI
  */
-public interface UnmarshallableObject
-{
-    /**
-     * Creates an unmarshaller that will unmarshall this object.
-     */
-    UnmarshallingEventHandler createUnmarshaller( UnmarshallingContext context );
+public interface UnmarshallableObject {
+	/**
+	 * Creates an unmarshaller that will unmarshall this object.
+	 */
+	UnmarshallingEventHandler createUnmarshaller(UnmarshallingContext context);
 }

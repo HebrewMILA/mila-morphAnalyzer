@@ -5,14 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for TitleLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1661)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1661)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="TitleLexiconType">
  *   &lt;complexContent>
@@ -28,53 +31,46 @@ package lexicon.jaxb;
  */
 public interface TitleLexiconType {
 
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getGender();
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getGender();
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setGender(java.lang.String value);
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setGender(java.lang.String value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the definiteness property.
+	 * 
+	 */
+	boolean isDefiniteness();
 
-    /**
-     * Gets the value of the definiteness property.
-     * 
-     */
-    boolean isDefiniteness();
-
-    /**
-     * Sets the value of the definiteness property.
-     * 
-     */
-    void setDefiniteness(boolean value);
+	/**
+	 * Sets the value of the definiteness property.
+	 * 
+	 */
+	void setDefiniteness(boolean value);
 
 }

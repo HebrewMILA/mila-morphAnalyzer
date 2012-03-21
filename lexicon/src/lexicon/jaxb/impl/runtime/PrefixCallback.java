@@ -7,7 +7,7 @@
 
 package lexicon.jaxb.impl.runtime;
 
-public interface PrefixCallback
-{
-    void onPrefixMapping( String prefix, String uri ) throws org.xml.sax.SAXException;
+public interface PrefixCallback {
+	void onPrefixMapping(String prefix, String uri)
+			throws org.xml.sax.SAXException;
 }

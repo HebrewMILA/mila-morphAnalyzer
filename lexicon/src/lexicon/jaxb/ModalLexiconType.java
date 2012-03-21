@@ -5,14 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for ModalLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1081)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1081)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="ModalLexiconType">
  *   &lt;complexContent>
@@ -36,153 +39,147 @@ package lexicon.jaxb;
  */
 public interface ModalLexiconType {
 
+	/**
+	 * Gets the value of the tense property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getTense();
 
-    /**
-     * Gets the value of the tense property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getTense();
+	/**
+	 * Sets the value of the tense property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setTense(java.lang.String value);
 
-    /**
-     * Sets the value of the tense property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setTense(java.lang.String value);
+	/**
+	 * Gets the value of the inflectionType property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionType();
 
-    /**
-     * Gets the value of the inflectionType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionType();
+	/**
+	 * Sets the value of the inflectionType property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionType(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionType(java.lang.String value);
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getGender();
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getGender();
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setGender(java.lang.String value);
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setGender(java.lang.String value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.ModalLexiconType.Add}
+	 * {@link lexicon.jaxb.ModalLexiconType.Remove}
+	 * {@link lexicon.jaxb.ModalLexiconType.Replace}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.ModalLexiconType.Add}
-     * {@link lexicon.jaxb.ModalLexiconType.Remove}
-     * {@link lexicon.jaxb.ModalLexiconType.Replace}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1084)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}ModalExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.ModalExceptionType {
 
+	}
 
-    /**
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1084)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}ModalExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.ModalExceptionType
-    {
+	/**
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1086)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}ModalExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.ModalExceptionType {
 
+	}
 
-    }
+	/**
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1085)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}ModalExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.ModalExceptionType {
 
-
-    /**
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1086)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}ModalExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.ModalExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1085)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}ModalExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.ModalExceptionType
-    {
-
-
-    }
+	}
 
 }

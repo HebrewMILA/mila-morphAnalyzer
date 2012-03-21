@@ -5,14 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for ProperNameLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1031)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1031)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="ProperNameLexiconType">
  *   &lt;complexContent>
@@ -37,171 +40,162 @@ package lexicon.jaxb;
  */
 public interface ProperNameLexiconType {
 
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getType();
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getType();
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setType(java.lang.String value);
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setType(java.lang.String value);
+	/**
+	 * Gets the value of the direction property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDirection();
 
-    /**
-     * Gets the value of the direction property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDirection();
+	/**
+	 * Sets the value of the direction property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDirection(java.lang.String value);
 
-    /**
-     * Sets the value of the direction property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDirection(java.lang.String value);
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getGender();
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getGender();
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setGender(java.lang.String value);
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setGender(java.lang.String value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.ProperNameLexiconType.Remove}
+	 * {@link lexicon.jaxb.ProperNameLexiconType.Add}
+	 * {@link lexicon.jaxb.ProperNameLexiconType.Replace}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.ProperNameLexiconType.Remove}
-     * {@link lexicon.jaxb.ProperNameLexiconType.Add}
-     * {@link lexicon.jaxb.ProperNameLexiconType.Replace}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the definiteness property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDefiniteness();
 
-    /**
-     * Gets the value of the definiteness property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDefiniteness();
+	/**
+	 * Sets the value of the definiteness property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDefiniteness(java.lang.String value);
 
-    /**
-     * Sets the value of the definiteness property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDefiniteness(java.lang.String value);
+	/**
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1034)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}ProperNameExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.ProperNameExceptionType {
 
+	}
 
-    /**
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1034)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}ProperNameExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.ProperNameExceptionType
-    {
+	/**
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1036)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}ProperNameExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.ProperNameExceptionType {
 
+	}
 
-    }
+	/**
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1035)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}ProperNameExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.ProperNameExceptionType {
 
-
-    /**
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1036)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}ProperNameExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.ProperNameExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1035)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}ProperNameExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.ProperNameExceptionType
-    {
-
-
-    }
+	}
 
 }

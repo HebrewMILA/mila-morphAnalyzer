@@ -5,11 +5,10 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb.impl;
 
 public class JAXBVersion {
 
-    public final static java.lang.String version = "1.0.5";
+	public final static java.lang.String version = "1.0.5";
 
 }

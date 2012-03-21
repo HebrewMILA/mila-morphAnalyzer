@@ -10,45 +10,41 @@ package lexicon.contents.pos;
 import java.net.URLEncoder;
 import java.util.List;
 import java.util.ArrayList;
-import lexicon.contents.Content; 
+import lexicon.contents.Content;
 import lexicon.contents.exception_types.NounExceptionType;
+
 /**
- * ���� �� ����� ���� ���.
- * ���� ������ �� ���� ���� ��� ���� ����� (��� �� ����) ������� �������� (���� ����� +��) �� ���� ���� ������ ������ ����� ����.
- * ���� ��� ���� ��� ���� ���� ����� ���� ������ �� ����� ���� ������ �� ���� ���� �"� add, ����, ����� ������, �� ������ �� ���� ��� ����� ���� �� ���� ��� ����� ���� ������.
- * �����:
- * ======
- * �� ���� (gender) ��� ���� (feminine), ��� ��� ������ ������ �- feminine (���� ����) ���� �� ����� ����� �- feminine (���� ����) ���� ��� ������ ��� (gender) ��� ���� (feminine). �����, ���� irrelevant �� ����� feminine ����� ��� ����� ������.
- * �����:
- * ======
- * �� ������ (number) ��� ���� (plural), ��� ��� ������ ������ �- plural (���� �����) ���� �� ����� ����� �-  plural (���� �����) ���� ��� ������ ����� (number) ��� ���� (plural). �����, ���� irrelevant �� ����� plural ����� ��� ����� ������.
- * �����:
- * ======
- * �� dual="true" ��� �� ���� ����� �- number="singular". �"� ����� �� ���� ����� ����� ��� ����� ��� ������ ���.
- * �����:
- * ======
- * �� deverbal="true" ��� dual="false".
- * �����:
- * ======
- * �� direction="true" ��� ������� ����� ������� ���� �'.
- * �����:
- * ======
- * root ������ ��"� �- 3 ������. ���� ������ ��� 2 ������ ��� ���� ��� 4 �- 5. ������ ������� ���� ���� ����� ����� ������ ����/���� ����� -- ���� �� "����� ������ �����" ����� �� ���� ����� "����� �������" ��� 6.
- * �����:
- * ======
- * �� ������ ����� ���� (root) ��� ����� �� ����� ���� (pattern). �"� ������� root �- pattern ������ ������ ��� �� �� ������ ���. ��� ��� ��� ����� �� ������ �� ���� ����� ��� ��� ������ ����� �� ����� ����� ���� ���� ��� ���� ���� ���� ��� ��� ����. ����� ����, ����� ��� ���� ����� ���� ���� ������ ���� ����� ���� ���� ������. ���� ���� �� �� ����� �� ���� ����� "����� �������" ��� 2 ���� 2.3 �"� 28-32.
- * �����:
- * ======
- * �� number="dual" �� number="dual and plural", ��� dual="false".
- * �� ����� ������ ���� ����� ���� ���� ��� dual="true".
- * �� ����� ������ �� ���� ����� ���� ���� ��� dual="false", ��� �� ���� ������ ����.
- * �����:
- * ======
- * inflectionBase ����� �� �� ��� ���� ������ ����. inflectionBase �� ����� ���.
+ * ���� �� ����� ���� ���. ���� ������ �� ���� ���� ��� ���� ����� (��� �� ����)
+ * ������� �������� (���� ����� +��) �� ���� ���� ������ ������ ����� ����. ����
+ * ��� ���� ��� ���� ���� ����� ���� ������ �� ����� ���� ������ �� ���� ����
+ * �"� add, ����, ����� ������, �� ������ �� ���� ��� ����� ���� �� ���� ���
+ * ����� ���� ������. �����: ====== �� ���� (gender) ��� ���� (feminine), ���
+ * ��� ������ ������ �- feminine (���� ����) ���� �� ����� ����� �- feminine
+ * (���� ����) ���� ��� ������ ��� (gender) ��� ���� (feminine). �����, ����
+ * irrelevant �� ����� feminine ����� ��� ����� ������. �����: ====== �� ������
+ * (number) ��� ���� (plural), ��� ��� ������ ������ �- plural (���� �����) ����
+ * �� ����� ����� �- plural (���� �����) ���� ��� ������ ����� (number) ��� ����
+ * (plural). �����, ���� irrelevant �� ����� plural ����� ��� ����� ������.
+ * �����: ====== �� dual="true" ��� �� ���� ����� �- number="singular". �"�
+ * ����� �� ���� ����� ����� ��� ����� ��� ������ ���. �����: ====== ��
+ * deverbal="true" ��� dual="false". �����: ====== �� direction="true" ���
+ * ������� ����� ������� ���� �'. �����: ====== root ������ ��
+ * "� �- 3 ������. ���� ������ ��� 2 ������ ��� ���� ��� 4 �- 5. ������ ������� ���� ���� ����� ����� ������ ����/���� ����� -- ���� �� "
+ * ����� ������ �����" ����� �� ���� ����� "����� �������" ��� 6. �����: ======
+ * �� ������ ����� ���� (root) ��� ����� �� ����� ���� (pattern). �
+ * "� ������� root �- pattern ������ ������ ��� �� �� ������ ���. ��� ��� ��� ����� �� ������ �� ���� ����� ��� ��� ������ ����� �� ����� ����� ���� ���� ��� ���� ���� ���� ��� ��� ����. ����� ����, ����� ��� ���� ����� ���� ���� ������ ���� ����� ���� ���� ������. ���� ���� �� �� ����� �� ���� ����� "
+ * ����� �������" ��� 2 ���� 2.3 �"� 28-32. �����: ====== �� number="dual" ��
+ * number="dual and plural", ��� dual="false". �� ����� ������ ���� ����� ����
+ * ���� ��� dual="true". �� ����� ������ �� ���� ����� ���� ���� ���
+ * dual="false", ��� �� ���� ������ ����. �����: ====== inflectionBase ����� ��
+ * �� ��� ���� ������ ����. inflectionBase �� ����� ���.
  * 
  * Java content class for NounLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 134)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 134)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="NounLexiconType">
  *   &lt;complexContent>
@@ -80,214 +76,253 @@ import lexicon.contents.exception_types.NounExceptionType;
  * </pre>
  * 
  */
-public class NounLexiconType extends Content implements lexicon.jaxb.NounLexiconType{
+public class NounLexiconType extends Content implements
+		lexicon.jaxb.NounLexiconType {
 	lexicon.jaxb.NounLexiconType content;
-	
+
 	public NounLexiconType(lexicon.jaxb.NounLexiconType content) {
 		this.content = content;
 		TABLE = "noun";
-		IDNAME = "id"; 
+		IDNAME = "id";
 	}
+
 	public NounLexiconType() {
 		content = new lexicon.jaxb.impl.NounLexiconTypeImpl();
 		TABLE = "noun";
-		IDNAME = "id"; 
-	}	
-	public lexicon.jaxb.impl.NounLexiconTypeImpl getImpl() {
-		return (lexicon.jaxb.impl.NounLexiconTypeImpl)content;
+		IDNAME = "id";
 	}
+
+	public lexicon.jaxb.impl.NounLexiconTypeImpl getImpl() {
+		return (lexicon.jaxb.impl.NounLexiconTypeImpl) content;
+	}
+
 	public int add() {
 		return 0;
 	}
+
 	/**
-	 *An empty implementation to the method add() methods in the different subclasses of Content.
-	 *Connects to the DB, commits the different SQL statements and return feedback.
-	 *@param		sql - The SQL statement to be executed.
-	 *@return	Number of rows affected (0, if nothing happened, 1 if one row added).
+	 * An empty implementation to the method add() methods in the different
+	 * subclasses of Content. Connects to the DB, commits the different SQL
+	 * statements and return feedback.
+	 * 
+	 * @param sql
+	 *            - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row
+	 *         added).
 	 */
 	public int add(int id) {
-		String sql = "INSERT INTO "+ getTableName() + " VALUES (";
+		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += id;
-		sql += ", '"+getGender()+"'";
-		sql += ", '"+ getNumber() +"'";
-		sql += ", '"+ getFeminine() +"'";
-		sql += ", '"+ getPlural() +"'";
-		sql += ", "+ (isDual()?1:0);
-		sql += ", '"+getDeverbal()+"'";
-		sql += ", "+ (isForeign()?1:0);
-		sql += ", '"+ getAcronym() +"'";
-		sql += ", "+ (isDefiniteness()?1:0);
-		sql += ", '"+ getDirection() +"'";
-		sql += ", '"+ getLexicalLink() +"'";
+		sql += ", '" + getGender() + "'";
+		sql += ", '" + getNumber() + "'";
+		sql += ", '" + getFeminine() + "'";
+		sql += ", '" + getPlural() + "'";
+		sql += ", " + (isDual() ? 1 : 0);
+		sql += ", '" + getDeverbal() + "'";
+		sql += ", " + (isForeign() ? 1 : 0);
+		sql += ", '" + getAcronym() + "'";
+		sql += ", " + (isDefiniteness() ? 1 : 0);
+		sql += ", '" + getDirection() + "'";
+		sql += ", '" + getLexicalLink() + "'";
 		String root = getRoot();
 		if (root == null) {
 			root = "";
-		} 
+		}
 		try {
-			root = URLEncoder.encode(root, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+ root +"'";
+			root = URLEncoder.encode(root, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + root + "'";
 		String pattern = getPattern();
 		if (pattern == null) {
 			pattern = "";
-		} 
+		}
 		try {
-			pattern = URLEncoder.encode(pattern, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+pattern+"'";
-		sql += ", '"+ getInflectionPattern() +"'";
+			pattern = URLEncoder.encode(pattern, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + pattern + "'";
+		sql += ", '" + getInflectionPattern() + "'";
 		String ipSource = getIpSource();
 		ipSource = ipSource.replaceAll("'", "\\\\'");
-		sql += ", '"+ ipSource +"'";
-		String inflectionBase = getInflectionBase();
-		if (inflectionBase == null) {
-			inflectionBase = "";
-		} 
-		try {
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+ inflectionBase +"'";
-		sql += ", "+(isInflectConstructS()?1:0);
-		sql += ", "+(isInflectPossessiveS()?1:0);
-		sql += ", "+(isInflectConstructP()?1:0);
-		sql += ", "+(isInflectPossessiveP()?1:0);
-		String dottedPlural = getDottedPlural();
-		if (dottedPlural == null) {
-			dottedPlural = "";
-		} 
-		try {
-			dottedPlural = URLEncoder.encode(dottedPlural, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+dottedPlural+"'";
-		sql += ")";
-		int feedback = execute(sql);
-		//System.out.println("sql=" + sql);
-		id = getCurrentID(getTableName(), getIDName()); 
-		addActions(id);
-		return feedback;
-	}
-	/**
-	 *Updates the current record in the DB, so it would resemble the current object state.
-	 *The method uses ResultSet.updateRow method in order to implement the generic update process.
-	 *The method finds the record of the current object, generates the meta data (the names and types of the columns)
-	 *, Runs on the columns and updateing each one, according with the column type. After these stages, the
-	 *method calls <code>ResultSet.updateRow</code> in order to execute the update in the DB.
-	 *@see   #info
-	 *@see   ResultSet#updateRow
-	 *@see   #openRS
-	 *@return	The number of rows that were affected from the action. If 0, then nothing happened
-	 */
-	public int update() {
-		String sql = "UPDATE "+ getTableName() + " SET"; 
-		sql += " gender='"+getGender()+"'";
-		sql += ", number='"+ getNumber() +"'";
-		sql += ", feminine='"+ getFeminine() +"'";
-		sql += ", plural='"+ getPlural() +"'";
-		sql += ", is_dual="+ (isDual()?1:0);
-		sql += ", deverbal='"+getDeverbal()+"'";
-		sql += ", hebForeign="+(isForeign()?1:0);
-		sql += ", acronym='"+ getAcronym() +"'";
-		sql += ", definiteness="+ (isDefiniteness()?1:0);
-		sql += ", direction='"+ getDirection() +"'";
-		sql += ", lexicalLink='"+ getLexicalLink() +"'";
-		String dottedPlural = getDottedPlural();
-		if (dottedPlural == null) {
-			dottedPlural = "";
-		} 
-		try {
-			dottedPlural = URLEncoder.encode(dottedPlural, Content.UPDATE_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", dottedPlural='"+ dottedPlural +"'";
-		String root = getRoot();
-		if (root == null) {
-			root = "";
-		} 
-		try {
-			root = URLEncoder.encode(root, Content.UPDATE_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", root='"+ root +"'";
-		String pattern = getPattern();
-		if (pattern == null) {
-			pattern = "";
-		} 
-		try {
-			pattern = URLEncoder.encode(pattern, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", pattern='"+pattern+"'";
-		sql += ", inflectionPattern='"+ getInflectionPattern() +"'";
-		String ipSource = getIpSource();
-		ipSource = ipSource.replaceAll("'", "\\\\'");
-		sql += ", ipSource='"+ ipSource +"'";
-		sql += ", inflectConstructS="+(isInflectConstructS()?1:0);
-		sql += ", inflectPossessiveS="+(isInflectPossessiveS()?1:0);
-		sql += ", inflectConstructP="+(isInflectConstructP()?1:0);
-		sql += ", inflectPossessiveP="+(isInflectPossessiveP()?1:0);
+		sql += ", '" + ipSource + "'";
 		String inflectionBase = getInflectionBase();
 		if (inflectionBase == null) {
 			inflectionBase = "";
 		}
 		try {
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.UPDATE_ENCODING);			
-		}catch (Exception e) {} 
-		sql += ", inflectionBase='"+ inflectionBase +"' WHERE id="+getID();
-		int feedback = execute(sql); 
-		//System.out.println("sql="+sql);
-		//updateActions();
+			inflectionBase = URLEncoder.encode(inflectionBase,
+					Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + inflectionBase + "'";
+		sql += ", " + (isInflectConstructS() ? 1 : 0);
+		sql += ", " + (isInflectPossessiveS() ? 1 : 0);
+		sql += ", " + (isInflectConstructP() ? 1 : 0);
+		sql += ", " + (isInflectPossessiveP() ? 1 : 0);
+		String dottedPlural = getDottedPlural();
+		if (dottedPlural == null) {
+			dottedPlural = "";
+		}
+		try {
+			dottedPlural = URLEncoder
+					.encode(dottedPlural, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + dottedPlural + "'";
+		sql += ")";
+		int feedback = execute(sql);
+		// System.out.println("sql=" + sql);
+		id = getCurrentID(getTableName(), getIDName());
+		addActions(id);
 		return feedback;
 	}
+
+	/**
+	 * Updates the current record in the DB, so it would resemble the current
+	 * object state. The method uses ResultSet.updateRow method in order to
+	 * implement the generic update process. The method finds the record of the
+	 * current object, generates the meta data (the names and types of the
+	 * columns) , Runs on the columns and updateing each one, according with the
+	 * column type. After these stages, the method calls
+	 * <code>ResultSet.updateRow</code> in order to execute the update in the
+	 * DB.
+	 * 
+	 * @see #info
+	 * @see ResultSet#updateRow
+	 * @see #openRS
+	 * @return The number of rows that were affected from the action. If 0, then
+	 *         nothing happened
+	 */
+	public int update() {
+		String sql = "UPDATE " + getTableName() + " SET";
+		sql += " gender='" + getGender() + "'";
+		sql += ", number='" + getNumber() + "'";
+		sql += ", feminine='" + getFeminine() + "'";
+		sql += ", plural='" + getPlural() + "'";
+		sql += ", is_dual=" + (isDual() ? 1 : 0);
+		sql += ", deverbal='" + getDeverbal() + "'";
+		sql += ", hebForeign=" + (isForeign() ? 1 : 0);
+		sql += ", acronym='" + getAcronym() + "'";
+		sql += ", definiteness=" + (isDefiniteness() ? 1 : 0);
+		sql += ", direction='" + getDirection() + "'";
+		sql += ", lexicalLink='" + getLexicalLink() + "'";
+		String dottedPlural = getDottedPlural();
+		if (dottedPlural == null) {
+			dottedPlural = "";
+		}
+		try {
+			dottedPlural = URLEncoder.encode(dottedPlural,
+					Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", dottedPlural='" + dottedPlural + "'";
+		String root = getRoot();
+		if (root == null) {
+			root = "";
+		}
+		try {
+			root = URLEncoder.encode(root, Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", root='" + root + "'";
+		String pattern = getPattern();
+		if (pattern == null) {
+			pattern = "";
+		}
+		try {
+			pattern = URLEncoder.encode(pattern, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", pattern='" + pattern + "'";
+		sql += ", inflectionPattern='" + getInflectionPattern() + "'";
+		String ipSource = getIpSource();
+		ipSource = ipSource.replaceAll("'", "\\\\'");
+		sql += ", ipSource='" + ipSource + "'";
+		sql += ", inflectConstructS=" + (isInflectConstructS() ? 1 : 0);
+		sql += ", inflectPossessiveS=" + (isInflectPossessiveS() ? 1 : 0);
+		sql += ", inflectConstructP=" + (isInflectConstructP() ? 1 : 0);
+		sql += ", inflectPossessiveP=" + (isInflectPossessiveP() ? 1 : 0);
+		String inflectionBase = getInflectionBase();
+		if (inflectionBase == null) {
+			inflectionBase = "";
+		}
+		try {
+			inflectionBase = URLEncoder.encode(inflectionBase,
+					Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", inflectionBase='" + inflectionBase + "' WHERE id=" + getID();
+		int feedback = execute(sql);
+		// System.out.println("sql="+sql);
+		// updateActions();
+		return feedback;
+	}
+
 	protected int addActions(int id) {
 		int result = 0;
-		for (int i=0; i< getAddOrReplaceOrRemove().size(); i++) {
-			NounExceptionType exceptionType = new NounExceptionType((lexicon.jaxb.NounExceptionType)getAddOrReplaceOrRemove().get(i));
-			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
+		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
+			NounExceptionType exceptionType = new NounExceptionType(
+					(lexicon.jaxb.NounExceptionType) getAddOrReplaceOrRemove()
+							.get(i));
+			exceptionType
+					.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
 		return result;
 	}
+
 	protected int updateActions() {
 		int result = 0;
-		for (int i=0; i< getAddOrReplaceOrRemove().size(); i++) {
-			NounExceptionType exceptionType = new NounExceptionType((lexicon.jaxb.NounExceptionType)getAddOrReplaceOrRemove().get(i));
-			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
+		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
+			NounExceptionType exceptionType = new NounExceptionType(
+					(lexicon.jaxb.NounExceptionType) getAddOrReplaceOrRemove()
+							.get(i));
+			exceptionType
+					.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
 		return result;
-	} 
-	protected int removeActions(int id) {
-		return removeContents("noun_exception_type", "id", "aid", id); 
 	}
+
+	protected int removeActions(int id) {
+		return removeContents("noun_exception_type", "id", "aid", id);
+	}
+
 	public int remove() {
 		removeActions(id);
 		int result = super.remove();
 		return result;
 	}
+
 	protected String getAction(Object obj) {
 		String name = obj.getClass().getName();
-		if (name.indexOf("Add") >=0) {
+		if (name.indexOf("Add") >= 0) {
 			return "add";
 		}
-		if (name.indexOf("Replace") >=0) {
+		if (name.indexOf("Replace") >= 0) {
 			return "replace";
 		}
-		if (name.indexOf("Remove") >=0) {
+		if (name.indexOf("Remove") >= 0) {
 			return "remove";
 		}
 		return "";
 	}
+
 	public void load() {
 		List actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
-		
+
 		setGender(getString("gender"));
 		setFeminine(getString("feminine"));
 		setPlural(getString("plural"));
 		setNumber(getString("number"));
 		setDual(getInt("is_dual") == 1);
 		setDeverbal(getString("deverbal"));
-		setForeign(getInt("hebForeign")==1);
+		setForeign(getInt("hebForeign") == 1);
 		setAcronym(getString("acronym"));
-		setDefiniteness(getInt("definiteness")==1);
+		setDefiniteness(getInt("definiteness") == 1);
 		setDirection(getString("direction"));
 		setRoot(getString("root"));
 		setPattern(getString("pattern"));
@@ -296,16 +331,17 @@ public class NounLexiconType extends Content implements lexicon.jaxb.NounLexicon
 		setIpSource(getString("ipSource"));
 		setInflectionBase(getString("inflectionBase"));
 		setLexicalLink(getString("lexicalLink"));
-		setInflectConstructS(getInt("inflectConstructS")==1);
-		setInflectPossessiveS(getInt("inflectPossessiveS")==1);
-		setInflectConstructP(getInt("inflectConstructP")==1);
-		setInflectPossessiveP(getInt("inflectPossessiveP")==1);
+		setInflectConstructS(getInt("inflectConstructS") == 1);
+		setInflectPossessiveS(getInt("inflectPossessiveS") == 1);
+		setInflectConstructP(getInt("inflectConstructP") == 1);
+		setInflectPossessiveP(getInt("inflectPossessiveP") == 1);
 	}
+
 	public java.util.List getActions() {
 		List actions = getContents("noun_exception_type", "id", id);
 		ArrayList result = new ArrayList();
-		for (int i=0; i< actions.size(); i++) {
-			Content content = (Content)actions.get(i);
+		for (int i = 0; i < actions.size(); i++) {
+			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
 				Add action = new Add();
 				action.open(content.getInt("aid"));
@@ -323,323 +359,344 @@ public class NounLexiconType extends Content implements lexicon.jaxb.NounLexicon
 			}
 		}
 		return result;
-	}	
-	
+	}
+
 	/**
 	 * Gets the value of the direction property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getDirection() { return content.getDirection(); }
-	
+	public java.lang.String getDirection() {
+		return content.getDirection();
+	}
+
 	/**
 	 * Sets the value of the direction property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setDirection(java.lang.String value) { content.setDirection(value); }
-	
+	public void setDirection(java.lang.String value) {
+		content.setDirection(value);
+	}
+
 	/**
 	 * Gets the value of the feminine property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getFeminine() { return content.getFeminine(); }
-	
+	public java.lang.String getFeminine() {
+		return content.getFeminine();
+	}
+
 	/**
 	 * Sets the value of the feminine property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setFeminine(java.lang.String value) { content.setFeminine(value); }
-	
+	public void setFeminine(java.lang.String value) {
+		content.setFeminine(value);
+	}
+
 	/**
 	 * Gets the value of the gender property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getGender() { return content.getGender(); }
-	
+	public java.lang.String getGender() {
+		return content.getGender();
+	}
+
 	/**
 	 * Sets the value of the gender property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setGender(java.lang.String value) { content.setGender(value); }
-	
+	public void setGender(java.lang.String value) {
+		content.setGender(value);
+	}
+
 	/**
 	 * Gets the value of the deverbal property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getDeverbal() { return content.getDeverbal(); }
-	
+	public java.lang.String getDeverbal() {
+		return content.getDeverbal();
+	}
+
 	/**
 	 * Sets the value of the deverbal property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setDeverbal(java.lang.String value) { content.setDeverbal(value); }
-	
+	public void setDeverbal(java.lang.String value) {
+		content.setDeverbal(value);
+	}
+
 	/**
 	 * Gets the value of the plural property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getPlural() { return content.getPlural(); }
-	
+	public java.lang.String getPlural() {
+		return content.getPlural();
+	}
+
 	/**
 	 * Sets the value of the plural property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setPlural(java.lang.String value) { content.setPlural(value); }
-	
+	public void setPlural(java.lang.String value) {
+		content.setPlural(value);
+	}
+
 	/**
 	 * Gets the value of the definiteness property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public boolean isDefiniteness() { return content.isDefiniteness(); }
-	
+	public boolean isDefiniteness() {
+		return content.isDefiniteness();
+	}
+
 	/**
 	 * Sets the value of the definiteness property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setDefiniteness(boolean value) { content.setDefiniteness(value);}
-	
+	public void setDefiniteness(boolean value) {
+		content.setDefiniteness(value);
+	}
+
 	/**
 	 * Gets the value of the ipSource property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getIpSource() { return content.getIpSource(); }
-	
+	public java.lang.String getIpSource() {
+		return content.getIpSource();
+	}
+
 	/**
 	 * Sets the value of the ipSource property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setIpSource(java.lang.String value) { content.setIpSource(value); }
-	
+	public void setIpSource(java.lang.String value) {
+		content.setIpSource(value);
+	}
+
 	/**
 	 * Gets the value of the inflectionPattern property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getInflectionPattern() { return content.getInflectionPattern(); }
-	
+	public java.lang.String getInflectionPattern() {
+		return content.getInflectionPattern();
+	}
+
 	/**
 	 * Sets the value of the inflectionPattern property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setInflectionPattern(java.lang.String value) { content.setInflectionPattern(value); }
-	
+	public void setInflectionPattern(java.lang.String value) {
+		content.setInflectionPattern(value);
+	}
+
 	/**
 	 * Gets the value of the dual property.
 	 * 
 	 */
-	public boolean isDual() { return content.isDual(); }
-	
+	public boolean isDual() {
+		return content.isDual();
+	}
+
 	/**
 	 * Sets the value of the dual property.
 	 * 
 	 */
-	public void setDual(boolean value) { content.setDual(value); }
-	
+	public void setDual(boolean value) {
+		content.setDual(value);
+	}
+
 	/**
 	 * Gets the value of the number property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getNumber() { return content.getNumber(); }
-	
+	public java.lang.String getNumber() {
+		return content.getNumber();
+	}
+
 	/**
 	 * Sets the value of the number property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setNumber(java.lang.String value) { content.setNumber(value); }
-	
+	public void setNumber(java.lang.String value) {
+		content.setNumber(value);
+	}
+
 	/**
 	 * Gets the value of the root property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getRoot() { return content.getRoot(); }
-	
+	public java.lang.String getRoot() {
+		return content.getRoot();
+	}
+
 	/**
 	 * Sets the value of the root property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setRoot(java.lang.String value) { content.setRoot(value); }
-	
+	public void setRoot(java.lang.String value) {
+		content.setRoot(value);
+	}
+
 	/**
 	 * Gets the value of the acronym property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getAcronym() { return content.getAcronym(); }
-	
+	public java.lang.String getAcronym() {
+		return content.getAcronym();
+	}
+
 	/**
 	 * Sets the value of the acronym property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setAcronym(java.lang.String value) { content.setAcronym(value); }
-	
+	public void setAcronym(java.lang.String value) {
+		content.setAcronym(value);
+	}
+
 	/**
 	 * Gets the value of the inflectionBase property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getInflectionBase() { return content.getInflectionBase(); }
-	
-	
+	public java.lang.String getInflectionBase() {
+		return content.getInflectionBase();
+	}
+
 	/**
 	 * Sets the value of the acronym property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setForeign(boolean value) { content.setForeign(value); }
-	
+	public void setForeign(boolean value) {
+		content.setForeign(value);
+	}
+
 	/**
 	 * Gets the value of the inflectionBase property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
-	public boolean isForeign() { return content.isForeign(); }
-	
+	public boolean isForeign() {
+		return content.isForeign();
+	}
+
 	/**
 	 * Sets the value of the inflectionBase property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	
-	public void setInflectionBase(String value) { content.setInflectionBase(value); }
 
-	
-	 /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectConstructS() { return content.isInflectConstructS(); }
+	public void setInflectionBase(String value) {
+		content.setInflectionBase(value);
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectConstructS(boolean value) { content.setInflectConstructS(value); }
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-    
-    
-    public boolean isInflectPossessiveS() { return content.isInflectPossessiveS(); }
+	public boolean isInflectConstructS() {
+		return content.isInflectConstructS();
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectPossessiveS(boolean value) { content.setInflectPossessiveS(value); }
-    
-    
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectConstructP() { return content.isInflectConstructP(); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectConstructS(boolean value) {
+		content.setInflectConstructS(value);
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectConstructP(boolean value) { content.setInflectConstructP(value); }
+	public boolean isInflectPossessiveS() {
+		return content.isInflectPossessiveS();
+	}
 
-    
-    
-    public boolean isInflectPossessiveP() { return content.isInflectPossessiveP(); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectPossessiveS(boolean value) {
+		content.setInflectPossessiveS(value);
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectPossessiveP(boolean value) { content.setInflectPossessiveP(value); }
-    
-    
-    
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
+
+	public boolean isInflectConstructP() {
+		return content.isInflectConstructP();
+	}
+
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectConstructP(boolean value) {
+		content.setInflectConstructP(value);
+	}
+
+	public boolean isInflectPossessiveP() {
+		return content.isInflectPossessiveP();
+	}
+
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectPossessiveP(boolean value) {
+		content.setInflectPossessiveP(value);
+	}
+
 	/**
 	 * Gets the value of the AddOrReplaceOrRemove property.
 	 * 
 	 * <p>
-	 * This accessor method returns a reference to the live list,
-	 * not a snapshot. Therefore any modification you make to the
-	 * returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
 	 * 
 	 * <p>
 	 * For example, to add a new item, do as follows:
+	 * 
 	 * <pre>
-	 *    getAddOrReplaceOrRemove().add(newItem);
+	 * getAddOrReplaceOrRemove().add(newItem);
 	 * </pre>
 	 * 
 	 * 
@@ -650,142 +707,171 @@ public class NounLexiconType extends Content implements lexicon.jaxb.NounLexicon
 	 * {@link lexicon.jaxb.NounLexiconType.Replace}
 	 * 
 	 */
-	public java.util.List getAddOrReplaceOrRemove() { return content.getAddOrReplaceOrRemove(); }
-	
+	public java.util.List getAddOrReplaceOrRemove() {
+		return content.getAddOrReplaceOrRemove();
+	}
+
 	/**
 	 * Gets the value of the pattern property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link public java.lang.String}
+	 * @return possible object is {@link public java.lang.String}
 	 */
-	public java.lang.String getPattern() { return content.getPattern(); }
-	
+	public java.lang.String getPattern() {
+		return content.getPattern();
+	}
+
 	/**
 	 * Sets the value of the pattern property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setPattern(java.lang.String value) { content.setPattern(value); }
-	
+	public void setPattern(java.lang.String value) {
+		content.setPattern(value);
+	}
+
 	/**
 	 * Gets the value of the pattern property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link public java.lang.String}
+	 * @return possible object is {@link public java.lang.String}
 	 */
-	public java.lang.String getDottedPlural() { return content.getDottedPlural(); }
-	
+	public java.lang.String getDottedPlural() {
+		return content.getDottedPlural();
+	}
+
 	/**
 	 * Sets the value of the pattern property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setDottedPlural(java.lang.String value) { content.setDottedPlural(value); }
-	
-	
+	public void setDottedPlural(java.lang.String value) {
+		content.setDottedPlural(value);
+	}
+
 	/**
 	 * Gets the value of the lexical link property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link public java.lang.String}
+	 * @return possible object is {@link public java.lang.String}
 	 */
-	public java.lang.String getLexicalLink() { return content.getLexicalLink(); }
-	
+	public java.lang.String getLexicalLink() {
+		return content.getLexicalLink();
+	}
+
 	/**
 	 * Sets the value of the lexical link.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setLexicalLink(java.lang.String value) { content.setLexicalLink(value); }
+	public void setLexicalLink(java.lang.String value) {
+		content.setLexicalLink(value);
+	}
+
 	/**
-	 * ���� �� ���� ������ ����� ������.
-	 * ���� -- ���� ����, ����� ����, �������� ������ ������ �������.
-	 * ������ ����, �� ����� ���� ��� ��� �������� ����� ���� ������ (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����), ��� ����� �� ����� ������. ��� ���� ������ ��� �� ������ ������� inflectPossessive="false" �-inflectConstruct="false".
+	 * ���� �� ���� ������ ����� ������. ���� -- ���� ����, ����� ����, ��������
+	 * ������ ������ �������. ������ ����, �� ����� ���� ��� ��� �������� �����
+	 * ���� ������ (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����),
+	 * ��� ����� �� ����� ������. ��� ���� ������ ��� �� ������ �������
+	 * inflectPossessive="false" �-inflectConstruct="false".
 	 * 
 	 * Java content class for add element declaration.
-	 * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 231)
 	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/C:/files/hebrew_lexicon_new.xsd line 231)
+	 * <p>
+	 * 
 	 * <pre>
 	 * &lt;element name="add" type="{}NounExceptionType"/>
 	 * </pre>
 	 * 
 	 */
-	public class Add extends NounExceptionType implements lexicon.jaxb.NounLexiconType.Add{
+	public class Add extends NounExceptionType implements
+			lexicon.jaxb.NounLexiconType.Add {
 		public Add() {
-			super ();
+			super();
 			content = new lexicon.jaxb.impl.NounLexiconTypeImpl.AddImpl();
 		}
+
 		public Add(lexicon.jaxb.NounExceptionType content) {
-			super (content);
+			super(content);
 		}
-    	public lexicon.jaxb.impl.NounLexiconTypeImpl.AddImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.NounLexiconTypeImpl.AddImpl)content;
-    	}
+
+		public lexicon.jaxb.impl.NounLexiconTypeImpl.AddImpl getActionImpl() {
+			return (lexicon.jaxb.impl.NounLexiconTypeImpl.AddImpl) content;
+		}
 	}
-	
-	
+
 	/**
-	 * ���� �� ���� ����� ����� ������ ����� �������, ���� ���� ����� ����� ����� ����� ��������, ��� ����� (���� ������ �� ������ ����, �� ��� ����� ���).
-	 * ������ ��� ����� ��� ����� ��� ���� ��� ����� ���� ������, �� ����� �� �� ����� ����� �� ������ ��� �� ���, ����� �����, �� ����� �� ������.
-	 * ����� ����, �� ������ ����� ��� �- add ��- replace ��� ������ �- remove, ��� ���� �� ������ ���� ����� ������ ���� ����� ��������.
+	 * ���� �� ���� ����� ����� ������ ����� �������, ���� ���� ����� �����
+	 * ����� ����� ��������, ��� ����� (���� ������ �� ������ ����, �� ��� �����
+	 * ���). ������ ��� ����� ��� ����� ��� ���� ��� ����� ���� ������, �� �����
+	 * �� �� ����� ����� �� ������ ��� �� ���, ����� �����, �� ����� �� ������.
+	 * ����� ����, �� ������ ����� ��� �- add ��- replace ��� ������ �- remove,
+	 * ��� ���� �� ������ ���� ����� ������ ���� ����� ��������.
 	 * 
 	 * Java content class for remove element declaration.
-	 * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 249)
 	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/C:/files/hebrew_lexicon_new.xsd line 249)
+	 * <p>
+	 * 
 	 * <pre>
 	 * &lt;element name="remove" type="{}NounExceptionType"/>
 	 * </pre>
 	 * 
 	 */
-	public class Remove extends NounExceptionType implements lexicon.jaxb.NounLexiconType.Remove {
+	public class Remove extends NounExceptionType implements
+			lexicon.jaxb.NounLexiconType.Remove {
 		public Remove(lexicon.jaxb.NounExceptionType content) {
-			super (content);
+			super(content);
 		}
+
 		public Remove() {
-			super ();
+			super();
 			content = new lexicon.jaxb.impl.NounLexiconTypeImpl.RemoveImpl();
 		}
-    	public lexicon.jaxb.impl.NounLexiconTypeImpl.RemoveImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.NounLexiconTypeImpl.RemoveImpl)content;
-    	}
+
+		public lexicon.jaxb.impl.NounLexiconTypeImpl.RemoveImpl getActionImpl() {
+			return (lexicon.jaxb.impl.NounLexiconTypeImpl.RemoveImpl) content;
+		}
 	}
-	
-	
+
 	/**
-	 * ���� �� ���� ������ ����� ������ ������.
-	 * ���� -- ����� ���� ����, ������ ��'.
-	 * ������ ����, �� ������ ���� ��� ��� �������� ����� ���� ������ (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����), ��� ����� �� ����� ������, ��� ������ �� ������ ������� ������. ��� ���� ������ ��� �� ������ ������� inflectPossessive="false" �-inflectConstruct="false".
+	 * ���� �� ���� ������ ����� ������ ������. ���� -- ����� ���� ����, ������
+	 * ��'. ������ ����, �� ������ ���� ��� ��� �������� ����� ���� ������
+	 * (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����), ��� ����� ��
+	 * ����� ������, ��� ������ �� ������ ������� ������. ��� ���� ������ ��� ��
+	 * ������ ������� inflectPossessive="false" �-inflectConstruct="false".
 	 * 
 	 * Java content class for replace element declaration.
-	 * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 240)
 	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/C:/files/hebrew_lexicon_new.xsd line 240)
+	 * <p>
+	 * 
 	 * <pre>
 	 * &lt;element name="replace" type="{}NounExceptionType"/>
 	 * </pre>
 	 * 
 	 */
-	public class Replace extends NounExceptionType implements lexicon.jaxb.NounLexiconType.Replace{
+	public class Replace extends NounExceptionType implements
+			lexicon.jaxb.NounLexiconType.Replace {
 		public Replace(lexicon.jaxb.NounExceptionType content) {
-			super (content);
+			super(content);
 		}
+
 		public Replace() {
-			super ();
+			super();
 			content = new lexicon.jaxb.impl.NounLexiconTypeImpl.ReplaceImpl();
 		}
-    	public lexicon.jaxb.impl.NounLexiconTypeImpl.ReplaceImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.NounLexiconTypeImpl.ReplaceImpl)content;
-    	}
+
+		public lexicon.jaxb.impl.NounLexiconTypeImpl.ReplaceImpl getActionImpl() {
+			return (lexicon.jaxb.impl.NounLexiconTypeImpl.ReplaceImpl) content;
+		}
 	}
 
-
-	
 }

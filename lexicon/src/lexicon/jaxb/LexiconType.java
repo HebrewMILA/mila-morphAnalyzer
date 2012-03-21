@@ -5,14 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for LexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 45)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 45)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="LexiconType">
  *   &lt;complexContent>
@@ -29,46 +32,43 @@ package lexicon.jaxb;
  */
 public interface LexiconType {
 
+	/**
+	 * Gets the value of the Item property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the Item property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getItem().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.ItemType}
+	 * 
+	 */
+	java.util.List getItem();
 
-    /**
-     * Gets the value of the Item property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the Item property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getItem().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.ItemType}
-     * 
-     */
-    java.util.List getItem();
+	/**
+	 * Gets the value of the metadata property.
+	 * 
+	 * @return possible object is {@link lexicon.jaxb.MetadataType}
+	 */
+	lexicon.jaxb.MetadataType getMetadata();
 
-    /**
-     * Gets the value of the metadata property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link lexicon.jaxb.MetadataType}
-     */
-    lexicon.jaxb.MetadataType getMetadata();
-
-    /**
-     * Sets the value of the metadata property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link lexicon.jaxb.MetadataType}
-     */
-    void setMetadata(lexicon.jaxb.MetadataType value);
+	/**
+	 * Sets the value of the metadata property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link lexicon.jaxb.MetadataType}
+	 */
+	void setMetadata(lexicon.jaxb.MetadataType value);
 
 }

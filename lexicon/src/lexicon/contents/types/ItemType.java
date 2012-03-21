@@ -17,144 +17,112 @@ import lexicon.tools.LexiconUtils;
 /**
  * ������
  */
-public class ItemType extends Content implements lexicon.jaxb.ItemType 
-{
+public class ItemType extends Content implements lexicon.jaxb.ItemType {
 	protected lexicon.jaxb.ItemType item;
 
 	protected List senses = null;
 
-	public ItemType() 
-	{
+	public ItemType() {
 		item = new lexicon.jaxb.impl.ItemTypeImpl();
 		TABLE = "item";
 		IDNAME = "id";
 	}
 
-	public ItemType(lexicon.jaxb.ItemType item) 
-	{
+	public ItemType(lexicon.jaxb.ItemType item) {
 		this.item = item;
 		id = Integer.parseInt(item.getId());
 		TABLE = "item";
 		IDNAME = "id";
 	}
 
-	public String getPos() 
-	{
-		if (getAdjective() != null) 
-		{
+	public String getPos() {
+		if (getAdjective() != null) {
 			return "adjective";
 		}
-		if (getAdverb() != null) 
-		{
+		if (getAdverb() != null) {
 			return "adverb";
 		}
-		if (getConjunction() != null) 
-		{
+		if (getConjunction() != null) {
 			return "conjunction";
 		}
-		if (getInterjection() != null) 
-		{
+		if (getInterjection() != null) {
 			return "interjection";
 		}
-		if (getInterrogative() != null) 
-		{
+		if (getInterrogative() != null) {
 			return "interrogative";
 		}
-		if (getNegation() != null) 
-		{
+		if (getNegation() != null) {
 			return "negation";
 		}
-		if (getNoun() != null) 
-		{
+		if (getNoun() != null) {
 			return "noun";
 		}
-		if (getPreposition() != null) 
-		{
+		if (getPreposition() != null) {
 			return "preposition";
 		}
-		if (getPronoun() != null) 
-		{
+		if (getPronoun() != null) {
 			return "pronoun";
 		}
-		if (getProperName() != null) 
-		{
+		if (getProperName() != null) {
 			return "properName";
 		}
-		if (getModal() != null) 
-		{
+		if (getModal() != null) {
 			return "modal";
 		}
-		if (getQuantifier() != null) 
-		{
+		if (getQuantifier() != null) {
 			return "quantifier";
 		}
-		if (getVerb() != null) 
-		{
+		if (getVerb() != null) {
 			return "verb";
 		}
-		if (getExistential() != null) 
-		{
+		if (getExistential() != null) {
 			return "existential";
 		}
-		if (getImpersonal() != null) 
-		{
+		if (getImpersonal() != null) {
 			return "impersonal";
 		}
-		if (getCopula() != null) 
-		{
+		if (getCopula() != null) {
 			return "copula";
 		}
-		if (getWPrefix() != null) 
-		{
+		if (getWPrefix() != null) {
 			return "wPrefix";
 		}
-		if (getNumeral() != null) 
-		{
+		if (getNumeral() != null) {
 			return "numeral";
 		}
-		if (getAcronym() != null) 
-		{
+		if (getAcronym() != null) {
 			return "acronym";
 		}
-		if (getTitle() != null) 
-		{
+		if (getTitle() != null) {
 			return "title";
 		}
-		if (getMultiWordFrozen() != null) 
-		{
+		if (getMultiWordFrozen() != null) {
 			return "multiWordFrozen";
 		}
 
-		if (getMultiWordPreposition() != null) 
-		{
+		if (getMultiWordPreposition() != null) {
 			return "multiWordPreposition";
 		}
-		if (getMultiWordNoun() != null) 
-		{
+		if (getMultiWordNoun() != null) {
 			return "multiWordNoun";
 		}
-		if (getMultiWordNounAdjective() != null) 
-		{
+		if (getMultiWordNounAdjective() != null) {
 			return "multiWordNounAdjective";
 		}
-		if (getMultiWordVerbPhrase() != null) 
-		{
+		if (getMultiWordVerbPhrase() != null) {
 			return "multiWordVerbPhrase";
 		}
 		return getString("pos");
 	}
 
-	public lexicon.jaxb.impl.ItemTypeImpl getImpl() 
-	{
+	public lexicon.jaxb.impl.ItemTypeImpl getImpl() {
 		return (lexicon.jaxb.impl.ItemTypeImpl) item;
 	}
 
-	public void load() 
-	{
+	public void load() {
 		setId(Integer.toString(getInt("id")));
 		String comment = getString("comment");
-		if (comment.equals("")) 
-		{
+		if (comment.equals("")) {
 			comment = null;
 		}
 		setComment(comment);
@@ -164,151 +132,126 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 		setSpelling(getString("spelling"));
 		setDotted(getString("dotted"));
 		String pos = getString("pos");
-		if (pos.equals("adjective")) 
-		{
+		if (pos.equals("adjective")) {
 			AdjectiveLexiconType adjective = new AdjectiveLexiconType();
 			adjective.open(id);
 			setAdjective(adjective.getImpl());
 		}
-		if (pos.equals("adverb")) 
-		{
+		if (pos.equals("adverb")) {
 			AdverbLexiconType adverb = new AdverbLexiconType();
 			adverb.open(id);
 			setAdverb(adverb.getImpl());
 		}
-		if (pos.equals("conjunction")) 
-		{
+		if (pos.equals("conjunction")) {
 			ConjunctionLexiconType conjunction = new ConjunctionLexiconType();
 			conjunction.open(id);
 			setConjunction(conjunction.getImpl());
 		}
-		if (pos.equals("interjection")) 
-		{
+		if (pos.equals("interjection")) {
 			InterjectionLexiconType interjection = new InterjectionLexiconType();
 			interjection.open(id);
 			setInterjection(interjection.getImpl());
 		}
-		if (pos.equals("interrogative")) 
-		{
+		if (pos.equals("interrogative")) {
 			InterrogativeLexiconType interrogative = new InterrogativeLexiconType();
 			interrogative.open(id);
 			setInterrogative(interrogative.getImpl());
 		}
-		if (pos.equals("negation")) 
-		{
+		if (pos.equals("negation")) {
 			setNegation(new lexicon.jaxb.impl.NegationLexiconTypeImpl());
 		}
-		if (pos.equals("title")) 
-		{
+		if (pos.equals("title")) {
 			TitleLexiconType title = new TitleLexiconType();
 			title.open(id);
 			setTitle(title.getImpl());
 		}
-		if (pos.equals("noun")) 
-		{
+		if (pos.equals("noun")) {
 			NounLexiconType noun = new NounLexiconType();
 			noun.open(id);
 			setNoun(noun.getImpl());
 		}
-		if (pos.equals("copula")) 
-		{
+		if (pos.equals("copula")) {
 			CopulaLexiconType copula = new CopulaLexiconType();
 			copula.open(id);
 			setCopula(copula.getImpl());
 		}
-		if (pos.equals("acronym")) 
-		{
+		if (pos.equals("acronym")) {
 			AcronymLexiconType acronym = new AcronymLexiconType();
 			acronym.open(id);
 			setAcronym(acronym.getImpl());
 		}
-		if (pos.equals("preposition")) 
-		{
+		if (pos.equals("preposition")) {
 			PrepositionLexiconType preposition = new PrepositionLexiconType();
 			preposition.open(id);
 			setPreposition(preposition.getImpl());
 		}
-		if (pos.equals("pronoun")) 
-		{
+		if (pos.equals("pronoun")) {
 			PronounLexiconType pronoun = new PronounLexiconType();
 			pronoun.open(id);
 			setPronoun(pronoun.getImpl());
 		}
-		if (pos.equals("properName")) 
-		{
+		if (pos.equals("properName")) {
 			ProperNameLexiconType properName = new ProperNameLexiconType();
 			properName.open(id);
 			setProperName(properName.getImpl());
 		}
-		if (pos.equals("modal")) 
-		{
+		if (pos.equals("modal")) {
 			ModalLexiconType modal = new ModalLexiconType();
 			modal.open(id);
 			setModal(modal.getImpl());
 		}
-		if (pos.equals("quantifier")) 
-		{
+		if (pos.equals("quantifier")) {
 			QuantifierLexiconType quantifier = new QuantifierLexiconType();
 			quantifier.open(id);
 			setQuantifier(quantifier.getImpl());
 		}
-		if (pos.equals("numeral")) 
-		{
+		if (pos.equals("numeral")) {
 			NumeralLexiconType numeral = new NumeralLexiconType();
 			numeral.open(id);
 			setNumeral(numeral.getImpl());
 		}
-		if (pos.equals("verb")) 
-		{
+		if (pos.equals("verb")) {
 			VerbLexiconType verb = new VerbLexiconType();
 			verb.open(id);
 			setVerb(verb.getImpl());
 		}
-		if (pos.equals("existential")) 
-		{
+		if (pos.equals("existential")) {
 			ExistentialLexiconType existential = new ExistentialLexiconType();
 			existential.open(id);
 			setExistential(existential.getImpl());
 		}
-		if (pos.equals("imperasonal")) 
-		{
+		if (pos.equals("imperasonal")) {
 			setImpersonal(new lexicon.jaxb.impl.ImpersonalLexiconTypeImpl());
 		}
 
-		if (pos.equals("wPrefix")) 
-		{
+		if (pos.equals("wPrefix")) {
 			WprefixLexiconType wPrefix = new WprefixLexiconType();
 			wPrefix.open(id);
 			setWPrefix(wPrefix.getImpl());
 		}
-		if (pos.equals("multiWordFrozen")) 
-		{
+		if (pos.equals("multiWordFrozen")) {
 			MultiWordFrozenLexiconType multiWordFrozen = new MultiWordFrozenLexiconType();
 			multiWordFrozen.open(id);
 			setMultiWordFrozen(multiWordFrozen.getImpl());
 		}
-		if (pos.equals("multiWordPreposition")) 
-		{
+		if (pos.equals("multiWordPreposition")) {
 			MultiWordPrepositionLexiconType multiWordPreposition = new MultiWordPrepositionLexiconType();
 			multiWordPreposition.open(id);
 			setMultiWordPreposition(multiWordPreposition.getImpl());
 		}
-		if (pos.equals("multiWordNoun")) 
-		{
+		if (pos.equals("multiWordNoun")) {
 			MultiWordNounLexiconType multiWordNoun = new MultiWordNounLexiconType();
 			multiWordNoun.open(id);
 			setMultiWordNoun(multiWordNoun.getImpl());
 		}
-		
-		if (pos.equals("multiWordNounAdjective")) 
-		{
+
+		if (pos.equals("multiWordNounAdjective")) {
 			MultiWordNounAdjectiveLexiconType multiWordNounAdjective = new MultiWordNounAdjectiveLexiconType();
 			multiWordNounAdjective.open(id);
 			setMultiWordNounAdjective(multiWordNounAdjective.getImpl());
 		}
-		
-		if (pos.equals("multiWordVerbPhrase")) 
-		{
+
+		if (pos.equals("multiWordVerbPhrase")) {
 			MultiWordVerbPhraseLexiconType multiWordVerbPhrase = new MultiWordVerbPhraseLexiconType();
 			multiWordVerbPhrase.open(id);
 			setMultiWordVerbPhrase(multiWordVerbPhrase.getImpl());
@@ -320,67 +263,60 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 		getSense().addAll(senses);
 	}
 
-	public int add(int i) 
-	{
+	public int add(int i) {
 		return 0;
 	}
 
-	//---------------------------------------------------------------------------------------
-	public int add() 
-	{
+	// ---------------------------------------------------------------------------------------
+	public int add() {
 		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += getId();
 		sql += ", '" + getPos() + "'";
 		String comment = getComment();
-		if (comment == null) 
-		{
+		if (comment == null) {
 			comment = "";
 		}
-		try 
-		{
+		try {
 			comment = URLEncoder.encode(comment, Content.ADD_ENCODING);
-		} 
-		catch (Exception e) {}
+		} catch (Exception e) {
+		}
 		sql += ", '" + comment + "'";
 		String undotted = getUndotted();
-		try 
-		{
+		try {
 			undotted = URLEncoder.encode(undotted, Content.ADD_ENCODING);
-		} 
-		catch (Exception e) {}
+		} catch (Exception e) {
+		}
 		sql += ", '" + undotted + "'";
 		String transliterated = LexiconUtils.getTransliteration(undotted);
-		try 
-		{
-			transliterated = URLEncoder.encode(transliterated,Content.ADD_ENCODING);
-		} 
-		catch (Exception e) {}
+		try {
+			transliterated = URLEncoder.encode(transliterated,
+					Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
 		sql += ", '" + transliterated + "'";
 		sql += ", '" + getRegister() + "'";
 		sql += ", '" + getSpelling() + "'";
 		String dotted = getDotted();
-		try 
-		{
+		try {
 			dotted = URLEncoder.encode(dotted, Content.ADD_ENCODING);
-		} 
-		catch (Exception e) {}
+		} catch (Exception e) {
+		}
 		sql += ", '" + dotted + "', 0)";
 		System.out.println("sql=" + sql);
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		System.out.println("id======" + id);
-		addPos();   //adds to specific table   
+		addPos(); // adds to specific table
 		addSense();
 		return id;
 	}
 
-	//---------------------------------------------------------------------------------------
-	public int addSense() 
-	{
+	// ---------------------------------------------------------------------------------------
+	public int addSense() {
 		int result = 0;
-		for (int i = 0; i < getSense().size(); i++) 
-		{
-			SenseType source = new SenseType((lexicon.jaxb.SenseType) getSense().get(i));
+		for (int i = 0; i < getSense().size(); i++) {
+			SenseType source = new SenseType(
+					(lexicon.jaxb.SenseType) getSense().get(i));
 			result += source.add(id);
 		}
 		return result;
@@ -402,71 +338,60 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @return The number of rows that were affected from the action. If 0, then
 	 *         nothing happened
 	 */
-	public int update() 
-	{
+	public int update() {
 		String sql = "UPDATE " + getTableName() + " SET";
 		sql += " pos='" + getPos() + "'";
 		String comment = getComment();
-		try 
-		{
+		try {
 			comment = URLEncoder.encode(comment, Content.UPDATE_ENCODING);
-		} 
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 		}
 		sql += ", comment='" + comment + "'";
 		String undotted = getUndotted();
-		try 
-		{
+		try {
 			undotted = URLEncoder.encode(undotted, Content.UPDATE_ENCODING);
-		} 
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 		}
 		sql += ", undotted='" + undotted + "'";
 		String transliterated = LexiconUtils.getTransliteration(undotted);
-		try 
-		{
-			transliterated = URLEncoder.encode(transliterated,Content.UPDATE_ENCODING);
-		} 
-		catch (Exception e) {}
+		try {
+			transliterated = URLEncoder.encode(transliterated,
+					Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
 		sql += ", transliterated='" + transliterated + "'";
 		sql += ", register='" + getRegister() + "'";
 		sql += ", spelling='" + getSpelling() + "'";
 		String dotted = getDotted();
-		try 
-		{
+		try {
 			dotted = URLEncoder.encode(dotted, Content.UPDATE_ENCODING);
-		} 
-		catch (Exception e) {}
+		} catch (Exception e) {
+		}
 		sql += ", dotted='" + dotted + "' WHERE id=" + id;
 		int feedback = execute(sql);
-		feedback += updatePos();		// update the specific table if problem in specific update will be large negativ
+		feedback += updatePos(); // update the specific table if problem in
+									// specific update will be large negativ
 		return feedback;
 	}
 
-	public int remove() 
-	{
+	public int remove() {
 		removePos();
 		removeSense();
 		int result = super.remove();
 		return result;
 	}
 
-	protected int removeSense() 
-	{
+	protected int removeSense() {
 		return removeContents("sense", "id", "sid", id);
 	}
 
-	protected java.util.List getSenses() 
-	{
+	protected java.util.List getSenses() {
 		if (senses == null) {
 			senses = new ArrayList();
 			String sql = "SELECT sid from sense WHERE id=" + id;
 			List sources = getContents(sql, "sid");
 			ArrayList result = new ArrayList();
-			for (int i = 0; i < sources.size(); i++) 
-			{
+			for (int i = 0; i < sources.size(); i++) {
 				SenseType source = new SenseType();
 				source.open(((Integer) sources.get(i)).intValue());
 				senses.add(source.getImpl());
@@ -475,152 +400,126 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 		return senses;
 	}
 
-	protected int removePos() 
-	{
+	protected int removePos() {
 		int result = 0;
-		if (getAdjective() != null) 
-		{
+		if (getAdjective() != null) {
 			AdjectiveLexiconType adjective = new AdjectiveLexiconType();
 			adjective.open(id);
 			result += adjective.remove();
 		}
-		if (getAdverb() != null) 
-		{
+		if (getAdverb() != null) {
 			AdverbLexiconType adverb = new AdverbLexiconType();
 			adverb.open(id);
 			result += adverb.remove();
 		}
-		if (getConjunction() != null) 
-		{
+		if (getConjunction() != null) {
 			ConjunctionLexiconType conjunction = new ConjunctionLexiconType();
 			conjunction.open(id);
 			result += conjunction.remove();
 		}
-		if (getInterjection() != null) 
-		{
+		if (getInterjection() != null) {
 			InterjectionLexiconType interjection = new InterjectionLexiconType();
 			interjection.open(id);
 			result += interjection.remove();
 		}
-		if (getInterrogative() != null) 
-		{
+		if (getInterrogative() != null) {
 			InterrogativeLexiconType interrogative = new InterrogativeLexiconType();
 			interrogative.open(id);
 			result += interrogative.remove();
 		}
-		if (getNegation() != null) 
-		{
-			//NegationLexiconType negation = new NegationLexiconType();
-			//negation.open(id);
-			//setNegation(negation);
+		if (getNegation() != null) {
+			// NegationLexiconType negation = new NegationLexiconType();
+			// negation.open(id);
+			// setNegation(negation);
 		}
-		if (getTitle() != null) 
-		{
+		if (getTitle() != null) {
 			TitleLexiconType title = new TitleLexiconType();
 			title.open(id);
 			result += title.remove();
 		}
-		if (getNoun() != null) 
-		{
+		if (getNoun() != null) {
 			NounLexiconType noun = new NounLexiconType();
 			noun.open(id);
 			result += noun.remove();
 		}
-		if (getCopula() != null) 
-		{
+		if (getCopula() != null) {
 			CopulaLexiconType copula = new CopulaLexiconType();
 			copula.open(id);
 			result += copula.remove();
 		}
-		if (getPreposition() != null) 
-		{
+		if (getPreposition() != null) {
 			PrepositionLexiconType preposition = new PrepositionLexiconType();
 			preposition.open(id);
 			result += preposition.remove();
 		}
-		if (getPronoun() != null) 
-		{
+		if (getPronoun() != null) {
 			PronounLexiconType pronoun = new PronounLexiconType();
 			pronoun.open(id);
 			result += pronoun.remove();
 		}
-		if (getProperName() != null) 
-		{
+		if (getProperName() != null) {
 			ProperNameLexiconType properName = new ProperNameLexiconType();
 			properName.open(id);
 			result += properName.remove();
 		}
-		if (getModal() != null) 
-		{
+		if (getModal() != null) {
 			ModalLexiconType modal = new ModalLexiconType();
 			modal.open(id);
 			result += modal.remove();
 		}
-		if (getQuantifier() != null) 
-		{
+		if (getQuantifier() != null) {
 			QuantifierLexiconType quantifier = new QuantifierLexiconType();
 			quantifier.open(id);
 			result += quantifier.remove();
 		}
-		if (getNumeral() != null) 
-		{
+		if (getNumeral() != null) {
 			NumeralLexiconType numeral = new NumeralLexiconType();
 			numeral.open(id);
 			result += numeral.remove();
 		}
-		if (getVerb() != null) 
-		{
+		if (getVerb() != null) {
 			VerbLexiconType verb = new VerbLexiconType();
 			verb.open(id);
 			result += verb.remove();
 		}
-		if (getExistential() != null) 
-		{
+		if (getExistential() != null) {
 			ExistentialLexiconType existential = new ExistentialLexiconType();
 			existential.open(id);
 			result += existential.remove();
 		}
-		if (getAcronym() != null) 
-		{
+		if (getAcronym() != null) {
 			AcronymLexiconType acronym = new AcronymLexiconType();
 			acronym.open(id);
 			result += acronym.remove();
 		}
-		if (getImpersonal() != null) 
-		{
+		if (getImpersonal() != null) {
 		}
-		if (getMultiWordFrozen() != null) 
-		{
+		if (getMultiWordFrozen() != null) {
 			MultiWordFrozenLexiconType multiWordFrozen = new MultiWordFrozenLexiconType();
 			multiWordFrozen.open(id);
 			result += result += multiWordFrozen.remove();
 		}
-		if (getMultiWordPreposition() != null) 
-		{
+		if (getMultiWordPreposition() != null) {
 			MultiWordPrepositionLexiconType multiWordPreposition = new MultiWordPrepositionLexiconType();
 			multiWordPreposition.open(id);
 			result += result += multiWordPreposition.remove();
 		}
-		if (getMultiWordNoun() != null) 
-		{
+		if (getMultiWordNoun() != null) {
 			MultiWordNounLexiconType multiWordNoun = new MultiWordNounLexiconType();
 			multiWordNoun.open(id);
 			result += result += multiWordNoun.remove();
 		}
-		if (getMultiWordNounAdjective() != null) 
-		{
+		if (getMultiWordNounAdjective() != null) {
 			MultiWordNounAdjectiveLexiconType multiWordNounAdjective = new MultiWordNounAdjectiveLexiconType();
 			multiWordNounAdjective.open(id);
 			result += result += multiWordNounAdjective.remove();
 		}
-		if (getMultiWordVerbPhrase() != null) 
-		{
+		if (getMultiWordVerbPhrase() != null) {
 			MultiWordVerbPhraseLexiconType multiWordVerbPhrase = new MultiWordVerbPhraseLexiconType();
 			multiWordVerbPhrase.open(id);
 			result += result += multiWordVerbPhrase.remove();
 		}
-		if (getWPrefix() != null) 
-		{
+		if (getWPrefix() != null) {
 			WprefixLexiconType wPrefix = new WprefixLexiconType();
 			wPrefix.open(id);
 			result += wPrefix.remove();
@@ -629,276 +528,244 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 		return result;
 	}
 
-	protected int addPos() 
-	{
+	protected int addPos() {
 		System.out.println("===========in addPos================");
 		int result = 0;
-		if (getAdjective() != null) 
-		{
+		if (getAdjective() != null) {
 			System.out.println("===========in addPos=============Adjective");
-			AdjectiveLexiconType adjective = new AdjectiveLexiconType(getAdjective());
+			AdjectiveLexiconType adjective = new AdjectiveLexiconType(
+					getAdjective());
 			result += adjective.add(id);
 		}
-		if (getAdverb() != null) 
-		{
+		if (getAdverb() != null) {
 			AdverbLexiconType adverb = new AdverbLexiconType(getAdverb());
 			result += adverb.add(id);
 		}
-		if (getConjunction() != null) 
-		{
-			ConjunctionLexiconType conjunction = new ConjunctionLexiconType(getConjunction());
+		if (getConjunction() != null) {
+			ConjunctionLexiconType conjunction = new ConjunctionLexiconType(
+					getConjunction());
 			result += conjunction.add(id);
 		}
-		if (getInterjection() != null) 
-		{
+		if (getInterjection() != null) {
 			InterjectionLexiconType interjection = new InterjectionLexiconType(
 					getInterjection());
 			result += interjection.add(id);
 		}
-		if (getInterrogative() != null) 
-		{
-			InterrogativeLexiconType interrogative = new InterrogativeLexiconType(getInterrogative());
+		if (getInterrogative() != null) {
+			InterrogativeLexiconType interrogative = new InterrogativeLexiconType(
+					getInterrogative());
 			result += interrogative.add(id);
 		}
-		if (getNegation() != null) 
-		{
-			//NegationLexiconType negation = new NegationLexiconType();
-			//negation.open(id);
-			//setNegation(negation);
+		if (getNegation() != null) {
+			// NegationLexiconType negation = new NegationLexiconType();
+			// negation.open(id);
+			// setNegation(negation);
 		}
-		if (getTitle() != null) 
-		{
+		if (getTitle() != null) {
 			TitleLexiconType title = new TitleLexiconType(getTitle());
 			result += title.add(id);
 		}
-		if (getNoun() != null) 
-		{
+		if (getNoun() != null) {
 			NounLexiconType noun = new NounLexiconType(getNoun());
 			result += noun.add(id);
 		}
-		if (getCopula() != null) 
-		{
+		if (getCopula() != null) {
 			CopulaLexiconType copula = new CopulaLexiconType(getCopula());
 			result += copula.add(id);
 		}
-		if (getPreposition() != null) 
-		{
+		if (getPreposition() != null) {
 			PrepositionLexiconType preposition = new PrepositionLexiconType(
 					getPreposition());
 			result += preposition.add(id);
 		}
-		if (getPronoun() != null) 
-		{
+		if (getPronoun() != null) {
 			PronounLexiconType pronoun = new PronounLexiconType(getPronoun());
 			result += pronoun.add(id);
 		}
-		if (getProperName() != null) 
-		{
-			ProperNameLexiconType properName = new ProperNameLexiconType(getProperName());
+		if (getProperName() != null) {
+			ProperNameLexiconType properName = new ProperNameLexiconType(
+					getProperName());
 			result += properName.add(id);
 		}
-		if (getModal() != null) 
-		{
+		if (getModal() != null) {
 			ModalLexiconType modal = new ModalLexiconType(getModal());
 			result += modal.add(id);
 		}
-		if (getQuantifier() != null) 
-		{
-			QuantifierLexiconType quantifier = new QuantifierLexiconType(getQuantifier());
+		if (getQuantifier() != null) {
+			QuantifierLexiconType quantifier = new QuantifierLexiconType(
+					getQuantifier());
 			result += result += quantifier.add(id);
 		}
-		if (getNumeral() != null) 
-		{
+		if (getNumeral() != null) {
 			NumeralLexiconType numeral = new NumeralLexiconType(getNumeral());
 			result += numeral.add(id);
 		}
-		if (getVerb() != null) 
-		{
+		if (getVerb() != null) {
 			VerbLexiconType verb = new VerbLexiconType(getVerb());
 			result += verb.add(id);
 		}
 
-		if (getExistential() != null) 
-		{
+		if (getExistential() != null) {
 			ExistentialLexiconType existential = new ExistentialLexiconType(
 					getExistential());
 			result += existential.add(id);
 		}
-		if (getAcronym() != null) 
-		{
+		if (getAcronym() != null) {
 			AcronymLexiconType acronym = new AcronymLexiconType(getAcronym());
 			result += acronym.add(id);
 		}
-		if (getImpersonal() != null) 
-		{
+		if (getImpersonal() != null) {
 		}
-		if (getMultiWordFrozen() != null) 
-		{
+		if (getMultiWordFrozen() != null) {
 			MultiWordFrozenLexiconType multiWordFrozen = new MultiWordFrozenLexiconType(
 					getMultiWordFrozen());
 			result += multiWordFrozen.add(id);
 		}
-		if (getMultiWordPreposition() != null) 
-		{
+		if (getMultiWordPreposition() != null) {
 			MultiWordPrepositionLexiconType multiWordPreposition = new MultiWordPrepositionLexiconType(
 					getMultiWordPreposition());
 			result += multiWordPreposition.add(id);
 		}
-		if (getMultiWordNoun() != null) 
-		{
+		if (getMultiWordNoun() != null) {
 			MultiWordNounLexiconType multiWordNoun = new MultiWordNounLexiconType(
 					getMultiWordNoun());
 			result += multiWordNoun.add(id);
 		}
-		if (getMultiWordNounAdjective() != null) 
-		{
-			MultiWordNounAdjectiveLexiconType multiWordNounAdjective = new MultiWordNounAdjectiveLexiconType(getMultiWordNounAdjective());
+		if (getMultiWordNounAdjective() != null) {
+			MultiWordNounAdjectiveLexiconType multiWordNounAdjective = new MultiWordNounAdjectiveLexiconType(
+					getMultiWordNounAdjective());
 			result += multiWordNounAdjective.add(id);
 		}
-		if (getMultiWordVerbPhrase() != null) 
-		{
-			MultiWordVerbPhraseLexiconType multiWordVerbPhrase = new MultiWordVerbPhraseLexiconType(getMultiWordVerbPhrase());
+		if (getMultiWordVerbPhrase() != null) {
+			MultiWordVerbPhraseLexiconType multiWordVerbPhrase = new MultiWordVerbPhraseLexiconType(
+					getMultiWordVerbPhrase());
 			result += multiWordVerbPhrase.add(id);
 		}
-		if (getWPrefix() != null) 
-		{
+		if (getWPrefix() != null) {
 			WprefixLexiconType wPrefix = new WprefixLexiconType(getWPrefix());
 			result += wPrefix.add(id);
 		}
 		return result;
 	}
 
-	protected int updatePos() 
-	{
+	protected int updatePos() {
 		int result = 0;
-		if (getAdjective() != null) 
-		{
-			AdjectiveLexiconType adjective = new AdjectiveLexiconType(getAdjective());
+		if (getAdjective() != null) {
+			AdjectiveLexiconType adjective = new AdjectiveLexiconType(
+					getAdjective());
 			result += adjective.update();
 		}
-		if (getAdverb() != null) 
-		{
+		if (getAdverb() != null) {
 			AdverbLexiconType adverb = new AdverbLexiconType(getAdverb());
 			result += adverb.update();
 		}
-		if (getConjunction() != null) 
-		{
-			ConjunctionLexiconType conjunction = new ConjunctionLexiconType(getConjunction());
+		if (getConjunction() != null) {
+			ConjunctionLexiconType conjunction = new ConjunctionLexiconType(
+					getConjunction());
 			result += conjunction.update();
 		}
-		if (getInterjection() != null) 
-		{
-			InterjectionLexiconType interjection = new InterjectionLexiconType(getInterjection());
+		if (getInterjection() != null) {
+			InterjectionLexiconType interjection = new InterjectionLexiconType(
+					getInterjection());
 			result += interjection.update();
 		}
-		if (getInterrogative() != null) 
-		{
-			InterrogativeLexiconType interrogative = new InterrogativeLexiconType(getInterrogative());
+		if (getInterrogative() != null) {
+			InterrogativeLexiconType interrogative = new InterrogativeLexiconType(
+					getInterrogative());
 			result += interrogative.update();
 		}
-		if (getNegation() != null) 
-		{
-			//NegationLexiconType negation = new NegationLexiconType();
-			//negation.open(id);
-			//setNegation(negation);
+		if (getNegation() != null) {
+			// NegationLexiconType negation = new NegationLexiconType();
+			// negation.open(id);
+			// setNegation(negation);
 		}
-		if (getTitle() != null) 
-		{
+		if (getTitle() != null) {
 			TitleLexiconType title = new TitleLexiconType(getTitle());
 			result += title.update();
 		}
 
-		if (getNoun() != null) 
-		{
+		if (getNoun() != null) {
 			NounLexiconType noun = new NounLexiconType(getNoun());
 			result += noun.update();
 		}
-		if (getCopula() != null) 
-		{
+		if (getCopula() != null) {
 			CopulaLexiconType copula = new CopulaLexiconType(getCopula());
 			result += copula.update();
 		}
-		if (getPreposition() != null) 
-		{
-			PrepositionLexiconType preposition = new PrepositionLexiconType(getPreposition());
+		if (getPreposition() != null) {
+			PrepositionLexiconType preposition = new PrepositionLexiconType(
+					getPreposition());
 			result += preposition.update();
 		}
-		if (getPronoun() != null) 
-		{
+		if (getPronoun() != null) {
 			PronounLexiconType pronoun = new PronounLexiconType(getPronoun());
 			result += pronoun.update();
 		}
-		if (getProperName() != null) 
-		{
-			ProperNameLexiconType properName = new ProperNameLexiconType(getProperName());
+		if (getProperName() != null) {
+			ProperNameLexiconType properName = new ProperNameLexiconType(
+					getProperName());
 			result += properName.update();
 		}
-		if (getModal() != null) 
-		{
+		if (getModal() != null) {
 			ModalLexiconType modal = new ModalLexiconType(getModal());
 			result += modal.update();
 		}
-		if (getQuantifier() != null) 
-		{
-			QuantifierLexiconType quantifier = new QuantifierLexiconType(getQuantifier());
+		if (getQuantifier() != null) {
+			QuantifierLexiconType quantifier = new QuantifierLexiconType(
+					getQuantifier());
 			result += quantifier.update();
 		}
-		if (getNumeral() != null) 
-		{
+		if (getNumeral() != null) {
 			NumeralLexiconType numeral = new NumeralLexiconType(getNumeral());
 			result += numeral.update();
 		}
-		if (getVerb() != null) 
-		{
+		if (getVerb() != null) {
 			VerbLexiconType verb = new VerbLexiconType(getVerb());
 			result += verb.update();
 		}
-		if (getExistential() != null) 
-		{
-			ExistentialLexiconType existential = new ExistentialLexiconType(getExistential());
+		if (getExistential() != null) {
+			ExistentialLexiconType existential = new ExistentialLexiconType(
+					getExistential());
 			result += existential.update();
 		}
-		if (getAcronym() != null) 
-		{
+		if (getAcronym() != null) {
 			AcronymLexiconType acronym = new AcronymLexiconType(getAcronym());
 			result += acronym.update();
 		}
-		if (getImpersonal() != null) 
-		{
+		if (getImpersonal() != null) {
 		}
-		if (getWPrefix() != null) 
-		{
+		if (getWPrefix() != null) {
 			WprefixLexiconType wPrefix = new WprefixLexiconType(getWPrefix());
 			result += wPrefix.update();
 		}
-		if (getMultiWordFrozen() != null) 
-		{
-			MultiWordFrozenLexiconType multiWordFrozen = new MultiWordFrozenLexiconType(getMultiWordFrozen());
+		if (getMultiWordFrozen() != null) {
+			MultiWordFrozenLexiconType multiWordFrozen = new MultiWordFrozenLexiconType(
+					getMultiWordFrozen());
 			result += multiWordFrozen.update();
 		}
-		if (getMultiWordPreposition() != null) 
-		{
-			MultiWordPrepositionLexiconType multiWordPreposition = new MultiWordPrepositionLexiconType(getMultiWordPreposition());
+		if (getMultiWordPreposition() != null) {
+			MultiWordPrepositionLexiconType multiWordPreposition = new MultiWordPrepositionLexiconType(
+					getMultiWordPreposition());
 			result += multiWordPreposition.update();
 		}
-		if (getMultiWordNoun() != null) 
-		{
-			MultiWordNounLexiconType multiWordNoun = new MultiWordNounLexiconType(getMultiWordNoun());
+		if (getMultiWordNoun() != null) {
+			MultiWordNounLexiconType multiWordNoun = new MultiWordNounLexiconType(
+					getMultiWordNoun());
 			result += multiWordNoun.update();
 		}
-		
-		if (getMultiWordNounAdjective() != null) 
-		{
-			MultiWordNounAdjectiveLexiconType multiWordNounAdjective = new MultiWordNounAdjectiveLexiconType(getMultiWordNounAdjective());
+
+		if (getMultiWordNounAdjective() != null) {
+			MultiWordNounAdjectiveLexiconType multiWordNounAdjective = new MultiWordNounAdjectiveLexiconType(
+					getMultiWordNounAdjective());
 			result += multiWordNounAdjective.update();
 		}
-		
-		if (getMultiWordVerbPhrase() != null) 
-		{
-			MultiWordVerbPhraseLexiconType multiWordVerbPhrase = new MultiWordVerbPhraseLexiconType(getMultiWordVerbPhrase());
+
+		if (getMultiWordVerbPhrase() != null) {
+			MultiWordVerbPhraseLexiconType multiWordVerbPhrase = new MultiWordVerbPhraseLexiconType(
+					getMultiWordVerbPhrase());
 			result += multiWordVerbPhrase.update();
 		}
-		
+
 		return result;
 	}
 
@@ -907,8 +774,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.AdjectiveLexiconType}
 	 */
-	public lexicon.jaxb.AdjectiveLexiconType getAdjective() 
-	{
+	public lexicon.jaxb.AdjectiveLexiconType getAdjective() {
 		return item.getAdjective();
 	}
 
@@ -918,8 +784,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @param value allowed object is {@link lexicon.jaxb.AdjectiveLexiconType}
 	 */
-	public void setAdjective(lexicon.jaxb.AdjectiveLexiconType value) 
-	{
+	public void setAdjective(lexicon.jaxb.AdjectiveLexiconType value) {
 		item.setAdjective(value);
 	}
 
@@ -928,10 +793,8 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getComment() 
-	{
-		if (item.getComment() == null) 
-		{
+	public java.lang.String getComment() {
+		if (item.getComment() == null) {
 			return "";
 		}
 		return item.getComment();
@@ -943,8 +806,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setComment(java.lang.String value) 
-	{
+	public void setComment(java.lang.String value) {
 		item.setComment(value);
 	}
 
@@ -953,8 +815,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.InterjectionLexiconType}
 	 */
-	public lexicon.jaxb.InterjectionLexiconType getInterjection() 
-	{
+	public lexicon.jaxb.InterjectionLexiconType getInterjection() {
 		return item.getInterjection();
 	}
 
@@ -964,8 +825,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.InterjectionLexiconType}
 	 */
-	public void setInterjection(lexicon.jaxb.InterjectionLexiconType value) 
-	{
+	public void setInterjection(lexicon.jaxb.InterjectionLexiconType value) {
 		item.setInterjection(value);
 	}
 
@@ -974,8 +834,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.AdverbLexiconType}
 	 */
-	public lexicon.jaxb.AdverbLexiconType getAdverb() 
-	{
+	public lexicon.jaxb.AdverbLexiconType getAdverb() {
 		return item.getAdverb();
 	}
 
@@ -985,8 +844,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.AdverbLexiconType}
 	 */
-	public void setAdverb(lexicon.jaxb.AdverbLexiconType value) 
-	{
+	public void setAdverb(lexicon.jaxb.AdverbLexiconType value) {
 		item.setAdverb(value);
 	}
 
@@ -995,8 +853,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getRegister() 
-	{
+	public java.lang.String getRegister() {
 		return item.getRegister();
 	}
 
@@ -1006,8 +863,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setRegister(java.lang.String value) 
-	{
+	public void setRegister(java.lang.String value) {
 		item.setRegister(value);
 	}
 
@@ -1016,8 +872,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getSpelling() 
-	{
+	public java.lang.String getSpelling() {
 		return item.getSpelling();
 	}
 
@@ -1027,8 +882,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setSpelling(java.lang.String value) 
-	{
+	public void setSpelling(java.lang.String value) {
 		item.setSpelling(value);
 	}
 
@@ -1037,10 +891,8 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getTransliterated() 
-	{
-		if (item.getTransliterated() == null) 
-		{
+	public java.lang.String getTransliterated() {
+		if (item.getTransliterated() == null) {
 			return "";
 		}
 		return item.getTransliterated();
@@ -1052,8 +904,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setTransliterated(java.lang.String value) 
-	{
+	public void setTransliterated(java.lang.String value) {
 		item.setTransliterated(value);
 	}
 
@@ -1062,8 +913,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.QuantifierLexiconType}
 	 */
-	public lexicon.jaxb.QuantifierLexiconType getQuantifier() 
-	{
+	public lexicon.jaxb.QuantifierLexiconType getQuantifier() {
 		return item.getQuantifier();
 	}
 
@@ -1073,8 +923,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.QuantifierLexiconType}
 	 */
-	public void setQuantifier(lexicon.jaxb.QuantifierLexiconType value) 
-	{
+	public void setQuantifier(lexicon.jaxb.QuantifierLexiconType value) {
 		item.setQuantifier(value);
 	}
 
@@ -1083,8 +932,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.PrepositionLexiconType}
 	 */
-	public lexicon.jaxb.PrepositionLexiconType getPreposition() 
-	{
+	public lexicon.jaxb.PrepositionLexiconType getPreposition() {
 		return item.getPreposition();
 	}
 
@@ -1094,8 +942,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.PrepositionLexiconType}
 	 */
-	public void setPreposition(lexicon.jaxb.PrepositionLexiconType value) 
-	{
+	public void setPreposition(lexicon.jaxb.PrepositionLexiconType value) {
 		item.setPreposition(value);
 	}
 
@@ -1104,8 +951,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.VerbLexiconType}
 	 */
-	public lexicon.jaxb.VerbLexiconType getVerb() 
-	{
+	public lexicon.jaxb.VerbLexiconType getVerb() {
 		return item.getVerb();
 	}
 
@@ -1115,8 +961,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.VerbLexiconType}
 	 */
-	public void setVerb(lexicon.jaxb.VerbLexiconType value) 
-	{
+	public void setVerb(lexicon.jaxb.VerbLexiconType value) {
 		item.setVerb(value);
 	}
 
@@ -1125,8 +970,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.PronounLexiconType}
 	 */
-	public lexicon.jaxb.PronounLexiconType getPronoun() 
-	{
+	public lexicon.jaxb.PronounLexiconType getPronoun() {
 		return item.getPronoun();
 	}
 
@@ -1136,8 +980,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.PronounLexiconType}
 	 */
-	public void setPronoun(lexicon.jaxb.PronounLexiconType value) 
-	{
+	public void setPronoun(lexicon.jaxb.PronounLexiconType value) {
 		item.setPronoun(value);
 	}
 
@@ -1146,8 +989,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.NounLexiconType}
 	 */
-	public lexicon.jaxb.NounLexiconType getNoun() 
-	{
+	public lexicon.jaxb.NounLexiconType getNoun() {
 		return item.getNoun();
 	}
 
@@ -1157,18 +999,15 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.NounLexiconType}
 	 */
-	public void setNoun(lexicon.jaxb.NounLexiconType value) 
-	{
+	public void setNoun(lexicon.jaxb.NounLexiconType value) {
 		item.setNoun(value);
 	}
 
-	public void setCopula(lexicon.jaxb.CopulaLexiconType value) 
-	{
+	public void setCopula(lexicon.jaxb.CopulaLexiconType value) {
 		item.setCopula(value);
 	}
 
-	public lexicon.jaxb.CopulaLexiconType getCopula() 
-	{
+	public lexicon.jaxb.CopulaLexiconType getCopula() {
 		return item.getCopula();
 	}
 
@@ -1177,8 +1016,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.NegationLexiconType}
 	 */
-	public lexicon.jaxb.NegationLexiconType getNegation() 
-	{
+	public lexicon.jaxb.NegationLexiconType getNegation() {
 		return item.getNegation();
 	}
 
@@ -1188,8 +1026,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.NegationLexiconType}
 	 */
-	public void setNegation(lexicon.jaxb.NegationLexiconType value) 
-	{
+	public void setNegation(lexicon.jaxb.NegationLexiconType value) {
 		item.setNegation(value);
 	}
 
@@ -1198,10 +1035,8 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getDotted() 
-	{
-		if (item.getDotted() == null) 
-		{
+	public java.lang.String getDotted() {
+		if (item.getDotted() == null) {
 			return "";
 		}
 		return item.getDotted();
@@ -1213,8 +1048,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setDotted(java.lang.String value) 
-	{
+	public void setDotted(java.lang.String value) {
 		item.setDotted(value);
 	}
 
@@ -1223,10 +1057,8 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getUndotted() 
-	{
-		if (item.getUndotted() == null) 
-		{
+	public java.lang.String getUndotted() {
+		if (item.getUndotted() == null) {
 			return "";
 		}
 		return item.getUndotted();
@@ -1238,8 +1070,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setUndotted(java.lang.String value) 
-	{
+	public void setUndotted(java.lang.String value) {
 		item.setUndotted(value);
 	}
 
@@ -1248,8 +1079,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.InterrogativeLexiconType}
 	 */
-	public lexicon.jaxb.InterrogativeLexiconType getInterrogative() 
-	{
+	public lexicon.jaxb.InterrogativeLexiconType getInterrogative() {
 		return item.getInterrogative();
 	}
 
@@ -1260,18 +1090,15 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 *            allowed object is
 	 *            {@link lexicon.jaxb.InterrogativeLexiconType}
 	 */
-	public void setInterrogative(lexicon.jaxb.InterrogativeLexiconType value) 
-	{
+	public void setInterrogative(lexicon.jaxb.InterrogativeLexiconType value) {
 		item.setInterrogative(value);
 	}
 
-	public lexicon.jaxb.ModalLexiconType getModal() 
-	{
+	public lexicon.jaxb.ModalLexiconType getModal() {
 		return item.getModal();
 	}
 
-	public void setModal(lexicon.jaxb.ModalLexiconType value) 
-	{
+	public void setModal(lexicon.jaxb.ModalLexiconType value) {
 		item.setModal(value);
 	}
 
@@ -1280,8 +1107,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.ProperNameLexiconType}
 	 */
-	public lexicon.jaxb.ProperNameLexiconType getProperName() 
-	{
+	public lexicon.jaxb.ProperNameLexiconType getProperName() {
 		return item.getProperName();
 	}
 
@@ -1291,8 +1117,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.ProperNameLexiconType}
 	 */
-	public void setProperName(lexicon.jaxb.ProperNameLexiconType value) 
-	{
+	public void setProperName(lexicon.jaxb.ProperNameLexiconType value) {
 		item.setProperName(value);
 	}
 
@@ -1301,8 +1126,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link java.lang.String}
 	 */
-	public java.lang.String getId() 
-	{
+	public java.lang.String getId() {
 		return item.getId();
 	}
 
@@ -1312,8 +1136,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link java.lang.String}
 	 */
-	public void setId(java.lang.String value) 
-	{
+	public void setId(java.lang.String value) {
 		item.setId(value);
 	}
 
@@ -1322,8 +1145,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.ConjunctionLexiconType}
 	 */
-	public lexicon.jaxb.ConjunctionLexiconType getConjunction() 
-	{
+	public lexicon.jaxb.ConjunctionLexiconType getConjunction() {
 		return item.getConjunction();
 	}
 
@@ -1333,8 +1155,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.ConjunctionLexiconType}
 	 */
-	public void setConjunction(lexicon.jaxb.ConjunctionLexiconType value) 
-	{
+	public void setConjunction(lexicon.jaxb.ConjunctionLexiconType value) {
 		item.setConjunction(value);
 	}
 
@@ -1347,8 +1168,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.ExistentialLexiconType}
 	 */
-	public lexicon.jaxb.ExistentialLexiconType getExistential() 
-	{
+	public lexicon.jaxb.ExistentialLexiconType getExistential() {
 		return item.getExistential();
 	}
 
@@ -1358,8 +1178,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.ExistentialLexiconType}
 	 */
-	public void setExistential(lexicon.jaxb.ExistentialLexiconType value) 
-	{
+	public void setExistential(lexicon.jaxb.ExistentialLexiconType value) {
 		item.setExistential(value);
 	}
 
@@ -1368,8 +1187,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.ImpersonalLexiconType}
 	 */
-	public lexicon.jaxb.ImpersonalLexiconType getImpersonal() 
-	{
+	public lexicon.jaxb.ImpersonalLexiconType getImpersonal() {
 		return item.getImpersonal();
 	}
 
@@ -1379,8 +1197,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.ImpersonalLexiconType}
 	 */
-	public void setImpersonal(lexicon.jaxb.ImpersonalLexiconType value) 
-	{
+	public void setImpersonal(lexicon.jaxb.ImpersonalLexiconType value) {
 		item.setImpersonal(value);
 	}
 
@@ -1389,8 +1206,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.PrefixesLexiconType}
 	 */
-	public lexicon.jaxb.WprefixLexiconType getWPrefix() 
-	{
+	public lexicon.jaxb.WprefixLexiconType getWPrefix() {
 		return item.getWPrefix();
 	}
 
@@ -1400,8 +1216,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.PrefixesLexiconType}
 	 */
-	public void setWPrefix(lexicon.jaxb.WprefixLexiconType value) 
-	{
+	public void setWPrefix(lexicon.jaxb.WprefixLexiconType value) {
 		item.setWPrefix(value);
 	}
 
@@ -1410,8 +1225,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @return possible object is {@link lexicon.jaxb.NumeralLexiconType}
 	 */
-	public lexicon.jaxb.NumeralLexiconType getNumeral() 
-	{
+	public lexicon.jaxb.NumeralLexiconType getNumeral() {
 		return item.getNumeral();
 	}
 
@@ -1421,18 +1235,15 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * @param value
 	 *            allowed object is {@link lexicon.jaxb.NumeralLexiconType}
 	 */
-	public void setNumeral(lexicon.jaxb.NumeralLexiconType value) 
-	{
+	public void setNumeral(lexicon.jaxb.NumeralLexiconType value) {
 		item.setNumeral(value);
 	}
 
-	public lexicon.jaxb.TitleLexiconType getTitle() 
-	{
+	public lexicon.jaxb.TitleLexiconType getTitle() {
 		return item.getTitle();
 	}
 
-	public void setTitle(lexicon.jaxb.TitleLexiconType value) 
-	{
+	public void setTitle(lexicon.jaxb.TitleLexiconType value) {
 		item.setTitle(value);
 
 	}
@@ -1442,8 +1253,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @see lexicon.jaxb.ItemType#getAcronym()
 	 */
-	public lexicon.jaxb.AcronymLexiconType getAcronym() 
-	{
+	public lexicon.jaxb.AcronymLexiconType getAcronym() {
 		return item.getAcronym();
 	}
 
@@ -1452,62 +1262,53 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	 * 
 	 * @see lexicon.jaxb.ItemType#setAcronym(lexicon.jaxb.AcronymLexiconType)
 	 */
-	public void setAcronym(lexicon.jaxb.AcronymLexiconType value) 
-	{
+	public void setAcronym(lexicon.jaxb.AcronymLexiconType value) {
 		item.setAcronym(value);
 
 	}
 
-	public lexicon.jaxb.MultiWordFrozenLexiconType getMultiWordFrozen() 
-	{
+	public lexicon.jaxb.MultiWordFrozenLexiconType getMultiWordFrozen() {
 		return item.getMultiWordFrozen();
 	}
 
-	public void setMultiWordFrozen(lexicon.jaxb.MultiWordFrozenLexiconType value) 
-	{
+	public void setMultiWordFrozen(lexicon.jaxb.MultiWordFrozenLexiconType value) {
 		item.setMultiWordFrozen(value);
 
 	}
 
-	public lexicon.jaxb.MultiWordPrepositionLexiconType getMultiWordPreposition() 
-	{
+	public lexicon.jaxb.MultiWordPrepositionLexiconType getMultiWordPreposition() {
 		return item.getMultiWordPreposition();
 	}
 
 	public void setMultiWordPreposition(
-			lexicon.jaxb.MultiWordPrepositionLexiconType value) 
-	{
+			lexicon.jaxb.MultiWordPrepositionLexiconType value) {
 		item.setMultiWordPreposition(value);
 
 	}
 
-	public lexicon.jaxb.MultiWordNounLexiconType getMultiWordNoun() 
-	{
+	public lexicon.jaxb.MultiWordNounLexiconType getMultiWordNoun() {
 		return item.getMultiWordNoun();
 	}
 
-	public void setMultiWordNoun(lexicon.jaxb.MultiWordNounLexiconType value) 
-	{
+	public void setMultiWordNoun(lexicon.jaxb.MultiWordNounLexiconType value) {
 		item.setMultiWordNoun(value);
 	}
-	
-	public lexicon.jaxb.MultiWordNounAdjectiveLexiconType getMultiWordNounAdjective() 
-	{
+
+	public lexicon.jaxb.MultiWordNounAdjectiveLexiconType getMultiWordNounAdjective() {
 		return item.getMultiWordNounAdjective();
 	}
 
-	public void setMultiWordNounAdjective(lexicon.jaxb.MultiWordNounAdjectiveLexiconType value) 
-	{
+	public void setMultiWordNounAdjective(
+			lexicon.jaxb.MultiWordNounAdjectiveLexiconType value) {
 		item.setMultiWordNounAdjective(value);
 	}
-	
-	public lexicon.jaxb.MultiWordVerbPhraseLexiconType getMultiWordVerbPhrase() 
-	{
+
+	public lexicon.jaxb.MultiWordVerbPhraseLexiconType getMultiWordVerbPhrase() {
 		return item.getMultiWordVerbPhrase();
 	}
 
-	public void setMultiWordVerbPhrase(lexicon.jaxb.MultiWordVerbPhraseLexiconType value) 
-	{
+	public void setMultiWordVerbPhrase(
+			lexicon.jaxb.MultiWordVerbPhraseLexiconType value) {
 		item.setMultiWordVerbPhrase(value);
 	}
 }

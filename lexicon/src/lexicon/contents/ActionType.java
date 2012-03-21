@@ -9,35 +9,44 @@ public class ActionType {
 	protected String undotted;
 	protected String transliterated;
 	protected String action;
-	
+
 	public ActionType(int id) {
 		this.id = id;
 	}
-	public void setDotted(String dotted) {
-		this.dotted = dotted;
+
+	public String getAction() {
+		return this.action;
 	}
-	public void setUndotted(String undotted) {
-		this.undotted = undotted;
+
+	public String getDotted() {
+		return this.dotted;
 	}
-	public void setTransliterated(String transliterated) {
-		this.transliterated = transliterated;
+
+	public int getID() {
+		return this.id;
 	}
+
 	public String getTransliterated() {
-		return transliterated;
+		return this.transliterated;
 	}
+
+	public String getUndotted() {
+		return this.undotted;
+	}
+
 	public void setAction(String action) {
 		this.action = action;
 	}
-	public String getAction() {
-		return action;
+
+	public void setDotted(String dotted) {
+		this.dotted = dotted;
 	}
-	public String getDotted() {
-		return dotted;
+
+	public void setTransliterated(String transliterated) {
+		this.transliterated = transliterated;
 	}
-	public String getUndotted() {
-		return undotted;
-	}
-	public int getID() {
-		return id;
+
+	public void setUndotted(String undotted) {
+		this.undotted = undotted;
 	}
 }

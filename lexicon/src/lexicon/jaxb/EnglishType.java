@@ -5,16 +5,18 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * English translation equivalents, each with an associated
- * weight reflecting its frequency.
- * Java content class for EnglishType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 197)
+ * English translation equivalents, each with an associated weight reflecting
+ * its frequency. Java content class for EnglishType complex type.
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 197)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="EnglishType">
  *   &lt;complexContent>
@@ -30,59 +32,49 @@ package lexicon.jaxb;
  */
 public interface EnglishType {
 
+	/**
+	 * Gets the value of the weight property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getWeight();
 
-    /**
-     * Gets the value of the weight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getWeight();
+	/**
+	 * Sets the value of the weight property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setWeight(java.lang.String value);
 
-    /**
-     * Sets the value of the weight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setWeight(java.lang.String value);
+	/**
+	 * Gets the value of the te property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getTe();
 
-    /**
-     * Gets the value of the te property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getTe();
+	/**
+	 * Sets the value of the te property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setTe(java.lang.String value);
 
-    /**
-     * Sets the value of the te property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setTe(java.lang.String value);
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getId();
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getId();
-
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setId(java.lang.String value);
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setId(java.lang.String value);
 
 }

@@ -5,47 +5,42 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд жд овгйш щоеъ тцн.
- * цешд бсйсйъ щм щоеъ дтцн дйа цешъ дйзйг (жлш ае рчбд) ебочшйн осеййойн (бтмй ълеръ +зй) йщ цешъ рчбд дрйъръ мвжйшд оцешъ джлш.
- * шцей дйд мавг ъзъ ождд йзйг етйем йзйг боймеп аъ цешеъ джлш едрчбд щм аеъе дтцн т"й add, аемн, лъмеъ бййщен, вн десфън щм щоеъ тцн брчбд щмдп вн цешъ жлш лтйем рфшг йъчбме.
- * аймех:
- * ======
- * ан дойп (gender) деа рчбд (feminine), ажй айп ощотеъ мълеръ д- feminine (цешп рчбд) емлп ма ъефйт ълеръ д- feminine (цешп рчбд) лащш тшк дълерд ойп (gender) деа рчбд (feminine). мотщд, дтшк irrelevant щм ълеръ feminine лоеде лай двгшъ дълерд.
- * аймех:
- * ======
- * ан дшйбей (number) деа шбйн (plural), ажй айп ощотеъ мълеръ д- plural (цешп шйбей) емлп ма ъефйт ълеръ д-  plural (цешп шйбей) лащш тшк дълерд шйбей (number) деа шбйн (plural). мотщд, дтшк irrelevant щм ълеръ plural лоеде лай двгшъ дълерд.
- * аймех:
- * ======
- * ан dual="true" ажй ма йлем мдйеъ щ- number="singular". ж"а щоймд ма йлем мдйеъ бйзйг евн бжевй бтъ ебтерд азъ.
- * аймех:
- * ======
- * ан deverbal="true" ажй dual="false".
- * аймех:
- * ======
- * ан direction="true" ажй дозшежъ зййбъ мдсъййн баеъ д'.
- * аймех:
- * ======
- * root йоешлб бг"л о- 3 аеъйеъ. йщрн щешщйн брй 2 аеъйеъ евн ламд брй 4 е- 5. бочшйн ойезгйн рйъп мамх оймйн мдлрс мъбрйъ щешщ/ощчм лщешщ -- ешае тм "йцйшъ щешщйн згщйн" бсфше щм тежй аешрп "доймд дазшерд" фшч 6.
- * аймех:
- * ======
- * ан оефйтд ълеръ щешщ (root) ажй ъефйт вн ълеръ ощчм (pattern). ж"а дълереъ root е- pattern зййбеъ мдефйт йзг ае ма мдефйт лмм. дтн млк деа бдрзд лй дщймеб щм щешщ еощчм деа бтм ощотеъ еолйм аъ дойгт дгшещ бщтд щазг одн бмбг олйм ойгт зсш ема осфч. йъйшд ожаъ, ддрзд дйа щайп дщешщ зщеб йеъш одощчм еайп дощчм зщеб йеъш одщешщ. ешае гйеп тм лк бсфше щм тежй аешрп "доймд дазшерд" фшч 2 стйу 2.3 т"о 28-32.
- * аймех:
- * ======
- * ан number="dual" ае number="dual and plural", ажй dual="false".
- * ан одтшк доъеаш рйъп мвжеш цешъ жевй ажй dual="true".
- * ан одтшк доъеаш ма рйъп мвжеш цешъ жевй ажй dual="false", ежд вн дтшк лбшйшъ озгм.
- * аймех:
- * ======
- * inflectionBase йефйт шч ан деа щерд одоймд тцод. inflectionBase ма йефйт шйч.
+ * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ)
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ +пїЅпїЅ) пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * пїЅ"пїЅ add, пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ пїЅпїЅпїЅпїЅ (gender) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (feminine), пїЅпїЅпїЅ
+ * пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- feminine (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ- feminine
+ * (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ (gender) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (feminine). пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ
+ * irrelevant пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ feminine пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+ * (number) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (plural), пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- plural (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ
+ * пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ- plural (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (number) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * (plural). пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ irrelevant пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ plural пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
+ * пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ dual="true" пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ- number="singular". пїЅ"пїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ
+ * deverbal="true" пїЅпїЅпїЅ dual="false". пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ direction="true" пїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ'. пїЅпїЅпїЅпїЅпїЅ: ====== root пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+ * "пїЅ пїЅ- 3 пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ 4 пїЅ- 5. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅ пїЅпїЅ "
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅ 6. пїЅпїЅпїЅпїЅпїЅ: ======
+ * пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (root) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (pattern). пїЅ
+ * "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ root пїЅ- pattern пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ. пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ "
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅ 2.3 пїЅ"пїЅ 28-32. пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ number="dual" пїЅпїЅ
+ * number="dual and plural", пїЅпїЅпїЅ dual="false". пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ dual="true". пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+ * dual="false", пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ: ====== inflectionBase пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+ * пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. inflectionBase пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ.
  * 
  * Java content class for NounLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 259)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 259)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="NounLexiconType">
  *   &lt;complexContent>
@@ -86,429 +81,400 @@ package lexicon.jaxb;
  */
 public interface NounLexiconType {
 
+	/**
+	 * Gets the value of the direction property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDirection();
 
-    /**
-     * Gets the value of the direction property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDirection();
+	/**
+	 * Sets the value of the direction property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDirection(java.lang.String value);
 
-    /**
-     * Sets the value of the direction property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDirection(java.lang.String value);
+	/**
+	 * Gets the value of the feminine property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getFeminine();
 
-    /**
-     * Gets the value of the feminine property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getFeminine();
+	/**
+	 * Sets the value of the feminine property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setFeminine(java.lang.String value);
 
-    /**
-     * Sets the value of the feminine property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setFeminine(java.lang.String value);
+	/**
+	 * Gets the value of the inflectPossessiveS property.
+	 * 
+	 */
+	boolean isInflectPossessiveS();
 
-    /**
-     * Gets the value of the inflectPossessiveS property.
-     * 
-     */
-    boolean isInflectPossessiveS();
+	/**
+	 * Sets the value of the inflectPossessiveS property.
+	 * 
+	 */
+	void setInflectPossessiveS(boolean value);
 
-    /**
-     * Sets the value of the inflectPossessiveS property.
-     * 
-     */
-    void setInflectPossessiveS(boolean value);
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getGender();
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getGender();
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setGender(java.lang.String value);
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setGender(java.lang.String value);
+	/**
+	 * Gets the value of the deverbal property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDeverbal();
 
-    /**
-     * Gets the value of the deverbal property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDeverbal();
+	/**
+	 * Sets the value of the deverbal property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDeverbal(java.lang.String value);
 
-    /**
-     * Sets the value of the deverbal property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDeverbal(java.lang.String value);
+	/**
+	 * Gets the value of the plural property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPlural();
 
-    /**
-     * Gets the value of the plural property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPlural();
+	/**
+	 * Sets the value of the plural property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPlural(java.lang.String value);
 
-    /**
-     * Sets the value of the plural property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPlural(java.lang.String value);
+	/**
+	 * Gets the value of the dottedPlural property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDottedPlural();
 
-    /**
-     * Gets the value of the dottedPlural property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDottedPlural();
+	/**
+	 * Sets the value of the dottedPlural property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDottedPlural(java.lang.String value);
 
-    /**
-     * Sets the value of the dottedPlural property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDottedPlural(java.lang.String value);
+	/**
+	 * Gets the value of the lexicalLink property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getLexicalLink();
 
-    /**
-     * Gets the value of the lexicalLink property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getLexicalLink();
+	/**
+	 * Sets the value of the lexicalLink property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setLexicalLink(java.lang.String value);
 
-    /**
-     * Sets the value of the lexicalLink property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setLexicalLink(java.lang.String value);
+	/**
+	 * Gets the value of the definiteness property.
+	 * 
+	 */
+	boolean isDefiniteness();
 
-    /**
-     * Gets the value of the definiteness property.
-     * 
-     */
-    boolean isDefiniteness();
+	/**
+	 * Sets the value of the definiteness property.
+	 * 
+	 */
+	void setDefiniteness(boolean value);
 
-    /**
-     * Sets the value of the definiteness property.
-     * 
-     */
-    void setDefiniteness(boolean value);
+	/**
+	 * Gets the value of the ipSource property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getIpSource();
 
-    /**
-     * Gets the value of the ipSource property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getIpSource();
+	/**
+	 * Sets the value of the ipSource property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setIpSource(java.lang.String value);
 
-    /**
-     * Sets the value of the ipSource property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setIpSource(java.lang.String value);
+	/**
+	 * Gets the value of the foreign property.
+	 * 
+	 */
+	boolean isForeign();
 
-    /**
-     * Gets the value of the foreign property.
-     * 
-     */
-    boolean isForeign();
+	/**
+	 * Sets the value of the foreign property.
+	 * 
+	 */
+	void setForeign(boolean value);
 
-    /**
-     * Sets the value of the foreign property.
-     * 
-     */
-    void setForeign(boolean value);
+	/**
+	 * Gets the value of the inflectionPattern property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionPattern();
 
-    /**
-     * Gets the value of the inflectionPattern property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionPattern();
+	/**
+	 * Sets the value of the inflectionPattern property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionPattern(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionPattern property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionPattern(java.lang.String value);
+	/**
+	 * Gets the value of the inflectConstructS property.
+	 * 
+	 */
+	boolean isInflectConstructS();
 
-    /**
-     * Gets the value of the inflectConstructS property.
-     * 
-     */
-    boolean isInflectConstructS();
+	/**
+	 * Sets the value of the inflectConstructS property.
+	 * 
+	 */
+	void setInflectConstructS(boolean value);
 
-    /**
-     * Sets the value of the inflectConstructS property.
-     * 
-     */
-    void setInflectConstructS(boolean value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the dual property.
+	 * 
+	 */
+	boolean isDual();
 
-    /**
-     * Gets the value of the dual property.
-     * 
-     */
-    boolean isDual();
+	/**
+	 * Sets the value of the dual property.
+	 * 
+	 */
+	void setDual(boolean value);
 
-    /**
-     * Sets the value of the dual property.
-     * 
-     */
-    void setDual(boolean value);
+	/**
+	 * Gets the value of the root property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getRoot();
 
-    /**
-     * Gets the value of the root property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getRoot();
+	/**
+	 * Sets the value of the root property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setRoot(java.lang.String value);
 
-    /**
-     * Sets the value of the root property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setRoot(java.lang.String value);
+	/**
+	 * Gets the value of the inflectionBase property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionBase();
 
-    /**
-     * Gets the value of the inflectionBase property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionBase();
+	/**
+	 * Sets the value of the inflectionBase property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionBase(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionBase property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionBase(java.lang.String value);
+	/**
+	 * Gets the value of the acronym property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getAcronym();
 
-    /**
-     * Gets the value of the acronym property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getAcronym();
+	/**
+	 * Sets the value of the acronym property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setAcronym(java.lang.String value);
 
-    /**
-     * Sets the value of the acronym property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setAcronym(java.lang.String value);
+	/**
+	 * Gets the value of the inflectPossessiveP property.
+	 * 
+	 */
+	boolean isInflectPossessiveP();
 
-    /**
-     * Gets the value of the inflectPossessiveP property.
-     * 
-     */
-    boolean isInflectPossessiveP();
+	/**
+	 * Sets the value of the inflectPossessiveP property.
+	 * 
+	 */
+	void setInflectPossessiveP(boolean value);
 
-    /**
-     * Sets the value of the inflectPossessiveP property.
-     * 
-     */
-    void setInflectPossessiveP(boolean value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.NounLexiconType.Add}
+	 * {@link lexicon.jaxb.NounLexiconType.Remove}
+	 * {@link lexicon.jaxb.NounLexiconType.Replace}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.NounLexiconType.Add}
-     * {@link lexicon.jaxb.NounLexiconType.Remove}
-     * {@link lexicon.jaxb.NounLexiconType.Replace}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the pattern property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPattern();
 
-    /**
-     * Gets the value of the pattern property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPattern();
+	/**
+	 * Sets the value of the pattern property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPattern(java.lang.String value);
 
-    /**
-     * Sets the value of the pattern property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPattern(java.lang.String value);
+	/**
+	 * Gets the value of the inflectConstructP property.
+	 * 
+	 */
+	boolean isInflectConstructP();
 
-    /**
-     * Gets the value of the inflectConstructP property.
-     * 
-     */
-    boolean isInflectConstructP();
+	/**
+	 * Sets the value of the inflectConstructP property.
+	 * 
+	 */
+	void setInflectConstructP(boolean value);
 
-    /**
-     * Sets the value of the inflectConstructP property.
-     * 
-     */
-    void setInflectConstructP(boolean value);
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ),
+	 * пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	 * inflectPossessive="false" пїЅ-inflectConstruct="false".
+	 * 
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 308)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}NounExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.NounExceptionType {
 
+	}
 
-    /**
-     * обрд жд ощощ мдесфъ цешеъ ресфеъ.
-     * бфши -- лъйб щерд, цешеъ жевй, афщшейеъ ресфеъ мриййд осеййоъ.
-     * ббшйшъ озгм, ан ресфъ оймд ащш тчб ълереъйд одеед бсйс мриййд (мощм, цешъ жлч йзйг брфшг, ае цешъ дрсок, ае цешъ дшбйн), ажй йефче вн рийеъ ресфеъ. лгй мгла афщшеъ жаъ йщ мдщъощ бълереъ inflectPossessive="false" е-inflectConstruct="false".
-     * 
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 308)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}NounExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.NounExceptionType
-    {
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅ). пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ- add пїЅпїЅ- replace пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- remove,
+	 * пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 326)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}NounExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.NounExceptionType {
 
+	}
 
-    }
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅ'. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	 * (пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ), пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ inflectPossessive="false" пїЅ-inflectConstruct="false".
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 317)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}NounExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.NounExceptionType {
 
-
-    /**
-     * обрд жд ощощ мдсшъ цешеъ щрецше баефп аеиеоий, еблк мсоп моръз цешрй щтещд щйоещ бмчсйчеп, щма мййцш (бтцн щйозеч аъ дцешеъ дамд, ае щма ййцшп лмм).
-     * бочшйн бдн дцешд щйщ мозеч дйа цешд ащш одеед бсйс мрийеъ, йщ мцййп ан тм дцешд мдозч тм дрийеъ щмд ае щоа, мдозч бтцод, ак мафщш аъ дрийеъ.
-     * баефп лммй, йщ мдтгйу щйоещ шзб б- add еб- replace ъзъ дщйоещ б- remove, лгй мфщи аъ дойоещ елгй мйцеш орвреп азйг мдбръ дмчсйчеп.
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 326)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}NounExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.NounExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * обрд жд ощощ мдзмфъ цешеъ чййоеъ базшеъ.
-     * бфши -- шйбей йеца гефп, сойлеъ ел'.
-     * ббшйшъ озгм, ан оезмфъ оймд ащш тчб ълереъйд одеед бсйс мриййд (мощм, цешъ жлч йзйг брфшг, ае цешъ дрсок, ае цешъ дшбйн), ажй йефче вн рийеъ ресфеъ, ащш йзмйфе аъ дрийеъ дчййоеъ щдефче. лгй мгла афщшеъ жаъ йщ мдщъощ бълереъ inflectPossessive="false" е-inflectConstruct="false".
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 317)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}NounExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.NounExceptionType
-    {
-
-
-    }
+	}
 
 }

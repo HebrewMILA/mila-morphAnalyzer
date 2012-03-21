@@ -5,17 +5,20 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд жд ощощ мййцев оймъ щамд.
- * оймеъ щамд мшеб айрп реиеъ, аемн йщрп лод ащш реиеъ бриййъ веу/ойп/осфш.
+ * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ/пїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ.
  * 
  * Java content class for InterjectionLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1828)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1828)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="InterjectionLexiconType">
  *   &lt;complexContent>
@@ -37,122 +40,126 @@ package lexicon.jaxb;
  */
 public interface InterjectionLexiconType {
 
+	/**
+	 * Gets the value of the inflect property.
+	 * 
+	 */
+	boolean isInflect();
 
-    /**
-     * Gets the value of the inflect property.
-     * 
-     */
-    boolean isInflect();
+	/**
+	 * Sets the value of the inflect property.
+	 * 
+	 */
+	void setInflect(boolean value);
 
-    /**
-     * Sets the value of the inflect property.
-     * 
-     */
-    void setInflect(boolean value);
+	/**
+	 * Gets the value of the inflectionBase property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionBase();
 
-    /**
-     * Gets the value of the inflectionBase property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionBase();
+	/**
+	 * Sets the value of the inflectionBase property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionBase(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionBase property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionBase(java.lang.String value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.InterjectionLexiconType.Replace}
+	 * {@link lexicon.jaxb.InterjectionLexiconType.Remove}
+	 * {@link lexicon.jaxb.InterjectionLexiconType.Add}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.InterjectionLexiconType.Replace}
-     * {@link lexicon.jaxb.InterjectionLexiconType.Remove}
-     * {@link lexicon.jaxb.InterjectionLexiconType.Add}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1837)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}InterjectionExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.InterjectionExceptionType {
 
+	}
 
-    /**
-     * обрд жд ощощ мдесфъ цешеъ ресфеъ.
-     * бфши -- лъйб щерд, рийеъ йецаеъ гефп елйеца бамд.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1837)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}InterjectionExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.InterjectionExceptionType
-    {
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅ). пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ- add пїЅпїЅ- replace пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- remove, пїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1854)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}InterjectionExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.InterjectionExceptionType {
 
+	}
 
-    }
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1846)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}InterjectionExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.InterjectionExceptionType {
 
-
-    /**
-     * обрд жд ощощ мдсшъ цешеъ щрецше баефп аеиеоий, еблк мсоп моръз цешрй щтещд щйоещ бмчсйчеп, щма мййцш (бтцн щйозеч аъ дцешеъ дамд, ае щма ййцшп лмм).
-     * лбшйшъ озгм *ма* ййозче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * баефп лммй, йщ мдтгйу щйоещ шзб б- add еб- replace ъзъ дщйоещ б- remove, лгй мфщи аъ дойоещ елгй мйцеш орвреп азйг мдбръ дмчсйчеп.
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1854)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}InterjectionExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.InterjectionExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * обрд жд ощощ мдзмфъ цешеъ чййоеъ базшеъ.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1846)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}InterjectionExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.InterjectionExceptionType
-    {
-
-
-    }
+	}
 
 }

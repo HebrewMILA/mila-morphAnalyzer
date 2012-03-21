@@ -5,17 +5,20 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд доъаш очеш ооре дъчбме тшлйн моймеп.
- * щн дочеш, вшсд щм дочеш, дфрййд (мощм чйщеш).
+ * пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ
+ * (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ).
  * 
  * Java content class for SourceType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 71)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 71)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="SourceType">
  *   &lt;complexContent>
@@ -31,59 +34,49 @@ package lexicon.jaxb;
  */
 public interface SourceType {
 
+	/**
+	 * Gets the value of the version property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getVersion();
 
-    /**
-     * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getVersion();
+	/**
+	 * Sets the value of the version property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setVersion(java.lang.String value);
 
-    /**
-     * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setVersion(java.lang.String value);
+	/**
+	 * Gets the value of the url property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getUrl();
 
-    /**
-     * Gets the value of the url property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getUrl();
+	/**
+	 * Sets the value of the url property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setUrl(java.lang.String value);
 
-    /**
-     * Sets the value of the url property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setUrl(java.lang.String value);
+	/**
+	 * Gets the value of the name property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getName();
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getName();
-
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setName(java.lang.String value);
+	/**
+	 * Sets the value of the name property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setName(java.lang.String value);
 
 }

@@ -5,20 +5,21 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд жд ощощ мййцев оймъ щамд.
- * аймех:
- * ======
- * inflectionBase ма йефйт ан inflect="false".
- * бочшйн ейщ цешк бцйеп цешеъ йецаеъ гефп, ййтщд щйоещ бфтемеъ add/replace/remove.
+ * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ: ====== inflectionBase пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+ * inflect="false". пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+ * add/replace/remove.
  * 
  * Java content class for InterrogativeLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1568)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1568)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="InterrogativeLexiconType">
  *   &lt;complexContent>
@@ -41,140 +42,141 @@ package lexicon.jaxb;
  */
 public interface InterrogativeLexiconType {
 
+	/**
+	 * Gets the value of the interrogativeType property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInterrogativeType();
 
-    /**
-     * Gets the value of the interrogativeType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInterrogativeType();
+	/**
+	 * Sets the value of the interrogativeType property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInterrogativeType(java.lang.String value);
 
-    /**
-     * Sets the value of the interrogativeType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInterrogativeType(java.lang.String value);
+	/**
+	 * Gets the value of the inflect property.
+	 * 
+	 */
+	boolean isInflect();
 
-    /**
-     * Gets the value of the inflect property.
-     * 
-     */
-    boolean isInflect();
+	/**
+	 * Sets the value of the inflect property.
+	 * 
+	 */
+	void setInflect(boolean value);
 
-    /**
-     * Sets the value of the inflect property.
-     * 
-     */
-    void setInflect(boolean value);
+	/**
+	 * Gets the value of the inflectionBase property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionBase();
 
-    /**
-     * Gets the value of the inflectionBase property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionBase();
+	/**
+	 * Sets the value of the inflectionBase property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionBase(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionBase property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionBase(java.lang.String value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.InterrogativeLexiconType.Add}
+	 * {@link lexicon.jaxb.InterrogativeLexiconType.Replace}
+	 * {@link lexicon.jaxb.InterrogativeLexiconType.Remove}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.InterrogativeLexiconType.Add}
-     * {@link lexicon.jaxb.InterrogativeLexiconType.Replace}
-     * {@link lexicon.jaxb.InterrogativeLexiconType.Remove}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1582)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}InterrogativeExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.InterrogativeExceptionType {
 
+	}
 
-    /**
-     * обрд жд ощощ мдесфъ цешеъ ресфеъ.
-     * бфши -- лъйб щерд, рийеъ йецаеъ гефп елйеца бамд.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1582)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}InterrogativeExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.InterrogativeExceptionType
-    {
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅ). пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ- add пїЅпїЅ- replace пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- remove, пїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1599)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}InterrogativeExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.InterrogativeExceptionType {
 
+	}
 
-    }
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1591)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}InterrogativeExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.InterrogativeExceptionType {
 
-
-    /**
-     * обрд жд ощощ мдсшъ цешеъ щрецше баефп аеиеоий, еблк мсоп моръз цешрй щтещд щйоещ бмчсйчеп, щма мййцш (бтцн щйозеч аъ дцешеъ дамд, ае щма ййцшп лмм).
-     * лбшйшъ озгм *ма* ййозче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * баефп лммй, йщ мдтгйу щйоещ шзб б- add еб- replace ъзъ дщйоещ б- remove, лгй мфщи аъ дойоещ елгй мйцеш орвреп азйг мдбръ дмчсйчеп.
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1599)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}InterrogativeExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.InterrogativeExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * обрд жд ощощ мдзмфъ цешеъ чййоеъ базшеъ.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1591)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}InterrogativeExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.InterrogativeExceptionType
-    {
-
-
-    }
+	}
 
 }

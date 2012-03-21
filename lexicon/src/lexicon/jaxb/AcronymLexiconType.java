@@ -5,16 +5,19 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * îáðä æä îúàø øàùé úéáåú
+ * ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * Java content class for AcronymLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 901)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 901)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="AcronymLexiconType">
  *   &lt;complexContent>
@@ -50,351 +53,318 @@ package lexicon.jaxb;
  */
 public interface AcronymLexiconType {
 
+	/**
+	 * Gets the value of the feminine property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getFeminine();
 
-    /**
-     * Gets the value of the feminine property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getFeminine();
+	/**
+	 * Sets the value of the feminine property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setFeminine(java.lang.String value);
 
-    /**
-     * Sets the value of the feminine property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setFeminine(java.lang.String value);
+	/**
+	 * Gets the value of the properNameType property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getProperNameType();
 
-    /**
-     * Gets the value of the properNameType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getProperNameType();
+	/**
+	 * Sets the value of the properNameType property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setProperNameType(java.lang.String value);
 
-    /**
-     * Sets the value of the properNameType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setProperNameType(java.lang.String value);
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getGender();
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getGender();
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setGender(java.lang.String value);
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setGender(java.lang.String value);
+	/**
+	 * Gets the value of the pos property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPos();
 
-    /**
-     * Gets the value of the pos property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPos();
+	/**
+	 * Sets the value of the pos property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPos(java.lang.String value);
 
-    /**
-     * Sets the value of the pos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPos(java.lang.String value);
+	/**
+	 * Gets the value of the plural property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPlural();
 
-    /**
-     * Gets the value of the plural property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPlural();
+	/**
+	 * Sets the value of the plural property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPlural(java.lang.String value);
 
-    /**
-     * Sets the value of the plural property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPlural(java.lang.String value);
+	/**
+	 * Gets the value of the noInvertedCommas property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNoInvertedCommas();
 
-    /**
-     * Gets the value of the noInvertedCommas property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNoInvertedCommas();
+	/**
+	 * Sets the value of the noInvertedCommas property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNoInvertedCommas(java.lang.String value);
 
-    /**
-     * Sets the value of the noInvertedCommas property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNoInvertedCommas(java.lang.String value);
+	/**
+	 * Gets the value of the definiteness property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDefiniteness();
 
-    /**
-     * Gets the value of the definiteness property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDefiniteness();
+	/**
+	 * Sets the value of the definiteness property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDefiniteness(java.lang.String value);
 
-    /**
-     * Sets the value of the definiteness property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDefiniteness(java.lang.String value);
+	/**
+	 * Gets the value of the istLexicalLink property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getIstLexicalLink();
 
-    /**
-     * Gets the value of the istLexicalLink property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getIstLexicalLink();
+	/**
+	 * Sets the value of the istLexicalLink property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setIstLexicalLink(java.lang.String value);
 
-    /**
-     * Sets the value of the istLexicalLink property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setIstLexicalLink(java.lang.String value);
+	/**
+	 * Gets the value of the generateAdjective property.
+	 * 
+	 */
+	boolean isGenerateAdjective();
 
-    /**
-     * Gets the value of the generateAdjective property.
-     * 
-     */
-    boolean isGenerateAdjective();
+	/**
+	 * Sets the value of the generateAdjective property.
+	 * 
+	 */
+	void setGenerateAdjective(boolean value);
 
-    /**
-     * Sets the value of the generateAdjective property.
-     * 
-     */
-    void setGenerateAdjective(boolean value);
+	/**
+	 * Gets the value of the niqLexicalLink property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNiqLexicalLink();
 
-    /**
-     * Gets the value of the niqLexicalLink property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNiqLexicalLink();
+	/**
+	 * Sets the value of the niqLexicalLink property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNiqLexicalLink(java.lang.String value);
 
-    /**
-     * Sets the value of the niqLexicalLink property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNiqLexicalLink(java.lang.String value);
+	/**
+	 * Gets the value of the inflectConstructS property.
+	 * 
+	 */
+	boolean isInflectConstructS();
 
-    /**
-     * Gets the value of the inflectConstructS property.
-     * 
-     */
-    boolean isInflectConstructS();
+	/**
+	 * Sets the value of the inflectConstructS property.
+	 * 
+	 */
+	void setInflectConstructS(boolean value);
 
-    /**
-     * Sets the value of the inflectConstructS property.
-     * 
-     */
-    void setInflectConstructS(boolean value);
+	/**
+	 * Gets the value of the meaning property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getMeaning();
 
-    /**
-     * Gets the value of the meaning property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getMeaning();
+	/**
+	 * Sets the value of the meaning property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setMeaning(java.lang.String value);
 
-    /**
-     * Sets the value of the meaning property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setMeaning(java.lang.String value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the conjunctionType property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getConjunctionType();
 
-    /**
-     * Gets the value of the conjunctionType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getConjunctionType();
+	/**
+	 * Sets the value of the conjunctionType property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setConjunctionType(java.lang.String value);
 
-    /**
-     * Sets the value of the conjunctionType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setConjunctionType(java.lang.String value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.AcronymLexiconType.Remove}
+	 * {@link lexicon.jaxb.AcronymLexiconType.Add}
+	 * {@link lexicon.jaxb.AcronymLexiconType.Replace}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.AcronymLexiconType.Remove}
-     * {@link lexicon.jaxb.AcronymLexiconType.Add}
-     * {@link lexicon.jaxb.AcronymLexiconType.Replace}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the inflectConstructP property.
+	 * 
+	 */
+	boolean isInflectConstructP();
 
-    /**
-     * Gets the value of the inflectConstructP property.
-     * 
-     */
-    boolean isInflectConstructP();
+	/**
+	 * Sets the value of the inflectConstructP property.
+	 * 
+	 */
+	void setInflectConstructP(boolean value);
 
-    /**
-     * Sets the value of the inflectConstructP property.
-     * 
-     */
-    void setInflectConstructP(boolean value);
+	/**
+	 * Gets the value of the adjectiveLexicalLink property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getAdjectiveLexicalLink();
 
-    /**
-     * Gets the value of the adjectiveLexicalLink property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getAdjectiveLexicalLink();
+	/**
+	 * Sets the value of the adjectiveLexicalLink property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setAdjectiveLexicalLink(java.lang.String value);
 
-    /**
-     * Sets the value of the adjectiveLexicalLink property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setAdjectiveLexicalLink(java.lang.String value);
+	/**
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 909)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}AcronymExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.AcronymExceptionType {
 
+	}
 
-    /**
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 909)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}AcronymExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.AcronymExceptionType
-    {
+	/**
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 911)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}AcronymExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.AcronymExceptionType {
 
+	}
 
-    }
+	/**
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 910)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}AcronymExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.AcronymExceptionType {
 
-
-    /**
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 911)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}AcronymExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.AcronymExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 910)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}AcronymExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.AcronymExceptionType
-    {
-
-
-    }
+	}
 
 }

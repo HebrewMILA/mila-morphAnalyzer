@@ -5,25 +5,26 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд жд овгйш лоъйн осфшййн ещоеъ осфш. дълереъ дп т"ф Glinert "The grammar of Modern Hebrew".
- * дцешд дбсйсйъ бщоеъ осфш дйа гееча цешъ рчбд. аемн, оитой резеъ рфши аъ щоеъ досфш.
- * щоеъ осфш оъзмчйн м:
- * * осфшйн сегшйн
- * * осфшйн оерйн
- * * осфшйн змчййн (щбшйн)
- * елп йщрн осфшйн дойецвйн бсфшеъ ебвйоишйа.
- * баефп лммй лм лоъ ршад аеъе дгбш брфшг ебрсок, аемн йщрн осфш йецай гефп.
- * айп дъййзсеъ мйзйг оем шбйн щлп шч азг/азъ бйзйг елм дщаш оййцвйн шйбей лжд ае азш ае щмълеръ дшйбей айп ощотеъ.
- * йщ мщйн мб лй ан дсев деа вйоишйа ажй ълеръ acronym ъдйд true.
+ * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅ"пїЅ Glinert "The grammar
+ * of Modern Hebrew". пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ: * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ/пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * acronym пїЅпїЅпїЅпїЅ true.
  * 
  * Java content class for QuantifierLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1738)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1738)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="QuantifierLexiconType">
  *   &lt;complexContent>
@@ -47,147 +48,144 @@ package lexicon.jaxb;
  */
 public interface QuantifierLexiconType {
 
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getType();
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getType();
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setType(java.lang.String value);
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setType(java.lang.String value);
+	/**
+	 * Gets the value of the inflect property.
+	 * 
+	 */
+	boolean isInflect();
 
-    /**
-     * Gets the value of the inflect property.
-     * 
-     */
-    boolean isInflect();
+	/**
+	 * Sets the value of the inflect property.
+	 * 
+	 */
+	void setInflect(boolean value);
 
-    /**
-     * Sets the value of the inflect property.
-     * 
-     */
-    void setInflect(boolean value);
+	/**
+	 * Gets the value of the inflectionBase property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionBase();
 
-    /**
-     * Gets the value of the inflectionBase property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionBase();
+	/**
+	 * Sets the value of the inflectionBase property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionBase(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionBase property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionBase(java.lang.String value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.QuantifierLexiconType.Remove}
+	 * {@link lexicon.jaxb.QuantifierLexiconType.Replace}
+	 * {@link lexicon.jaxb.QuantifierLexiconType.Add}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.QuantifierLexiconType.Remove}
-     * {@link lexicon.jaxb.QuantifierLexiconType.Replace}
-     * {@link lexicon.jaxb.QuantifierLexiconType.Add}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the definiteness property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDefiniteness();
 
-    /**
-     * Gets the value of the definiteness property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDefiniteness();
+	/**
+	 * Sets the value of the definiteness property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDefiniteness(java.lang.String value);
 
-    /**
-     * Sets the value of the definiteness property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDefiniteness(java.lang.String value);
+	/**
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1758)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}QuantifierExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.QuantifierExceptionType {
 
+	}
 
-    /**
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1758)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}QuantifierExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.QuantifierExceptionType
-    {
+	/**
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1760)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}QuantifierExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.QuantifierExceptionType {
 
+	}
 
-    }
+	/**
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1759)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}QuantifierExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.QuantifierExceptionType {
 
-
-    /**
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1760)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}QuantifierExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.QuantifierExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1759)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}QuantifierExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.QuantifierExceptionType
-    {
-
-
-    }
+	}
 
 }

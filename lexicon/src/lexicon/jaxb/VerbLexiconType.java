@@ -5,95 +5,66 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд жд оъаш фтмйн.
- * undotted, transliterated е- dotted оййцвйн бочшд жд аъ цешъ тбш рсъш йзйг жлш.
+ * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. undotted, transliterated пїЅ- dotted пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
+ * пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ.
  * 
- * аймех:
- * ======
- * root йоешлб бг"л о- 3 аеъйеъ. йщрн щешщйн брй 2 аеъйеъ евн ламд брй 4 е- 5. бочшйн ойезгйн рйъп мамх оймйн мдлрс мъбрйъ щешщ/ощчм лщешщ -- ешае тм "йцйшъ щешщйн згщйн" бсфше щм тежй аешрп "доймд дазшерд" фшч 6.
- * аймех:
- * ======
- * ан оефйтд ълеръ щешщ (root) ажй ъефйт вн ълеръ брййп (binyan). ж"а дълереъ root е- binyan зййбеъ мдефйт йзг ае ма мдефйт лмм. дтн млк деа бдрзд лй дщймеб щм щешщ ебрййп деа бтм ощотеъ еолйм аъ дойгт дгшещ бщтд щазг одн бмбг олйм ойгт зсш ема осфч. йъйшд ожаъ, ддрзд дйа щайп дщешщ зщеб йеъш одбрййп еайп дбрййп зщеб йеъш одщешщ. ешае гйеп тм лк бсфше щм тежй аешрп "доймд дазшерд" фшч 2 стйу 2.3 т"о 28-32.
- * аймех:
- * =======
- * лм тшк оймерй осев фетм зййб мдлйм inflectionPattern е- ipSource, еайме щаш ълереъ двжшд айрп бтмеъ ощотеъ мтъ тъд бойоещ.
- * длеерд бвшсаеъ дбаеъ дйа  мдойш аъ дщйоещ мцйеп вжшеъ ъзъ дщйоещ бъбрйеъ риййд.
- * ойфей ъбрйеъ риййд:
- * ===================
- * ъбрйеъ дриййд дръолеъ оъайоеъ мойоещ осеййн щм оръз оешфемевй.
- * мдмп ойфей ъбрйеъ дриййд мъбрйеъ дриййд доцеййреъ б-"мез дфтмйн дщмн" щм дг"ш щаем бшчмй:
- * inflectionPattern1	Pa'al: 1,2,3,6,7,8,
- * inflectionPattern2	Pa'al: 4,13,15,16,17,26,27,29,
- * inflectionPattern3	Pa'al: 5,10,11,14,18,28,
- * inflectionPattern4	Pa'al: 9,
- * inflectionPattern5	Pa'al: 12,
- * inflectionPattern6	Pa'al: 19,20,
- * inflectionPattern7	Pa'al: 21,
- * inflectionPattern8	Pa'al: 22,
- * inflectionPattern9	Pa'al: 23,24,
- * inflectionPattern10	Pa'al: 25,30,
- * inflectionPattern11	Pa'al: 31,32,33,34,35,36,
- * inflectionPattern12	Pa'al: 37,
- * inflectionPattern13	Pa'al: 38,40,41,
- * inflectionPattern14	Pa'al: 39,
- * inflectionPattern15	Pa'al: 42,
- * inflectionPattern16	Pa'al: 43,45,
- * inflectionPattern17	Pa'al: 44,
- * inflectionPattern18	Pa'al: 46,
- * inflectionPattern19	Pa'al: 47,
- * inflectionPattern20	Pa'al: 48,
- * inflectionPattern21	Pa'al: 49,50,51,
- * inflectionPattern22	Pa'al: 52,
- * inflectionPattern23	Pi'el: 1,2,3,4,5,6,7,8,9,10,11,12,24,25,26,
- * inflectionPattern24	Pi'el: (all these entries are represented as inflectionPattern23 -- this should be fixed)
- * inflectionPattern25	Pi'el: 13,
- * inflectionPattern26	Pi'el: 14,
- * inflectionPattern27	Pi'el: 15,
- * inflectionPattern28	Pi'el: 16,
- * inflectionPattern29	Pi'el: 17,
- * inflectionPattern30	Pi'el: 18,
- * inflectionPattern31	Pi'el: 19,20,23,
- * inflectionPattern32	Pi'el: 21,
- * inflectionPattern33	Pi'el: 22,
- * inflectionPattern34	Pi'el: 27,
- * inflectionPattern35	Pi'el: 28,
- * inflectionPattern36	Pu'al: 1-21,23,25,26,
- * inflectionPattern37	Pu'al: 22,
- * inflectionPattern38	Pu'al: 24,
- * inflectionPattern39	Pu'al: 27,29,
- * inflectionPattern40	Pu'al: 28,
- * inflectionPattern41	Pu'al: 30,
- * inflectionPattern42	Hitpa'el: 1-8,10-23,26,27,33-43
- * inflectionPattern43	Hitpa'el: 9,
- * inflectionPattern44	Hitpa'el: 24,25,
- * inflectionPattern45	Hitpa'el: 28,29,32,
- * inflectionPattern46	Hitpa'el: 30,
- * inflectionPattern47	Hitpa'el: 31,
- * inflectionPattern48	Hif'il: 1-8,11,15-17,23-26,40,
- * inflectionPattern49	Hif'il: 9,10,
- * inflectionPattern50	Hif'il: 12-14,
- * inflectionPattern51	Hif'il: 18-22,
- * inflectionPattern52	Hif'il: 27-34,
- * inflectionPattern53	Hif'il: 35-39
- * inflectionPattern54	Huf'al: 1-12,14,15,19,20,28
- * inflectionPattern55	Huf'al: 13,
- * inflectionPattern56	Huf'al: 16-18,
- * inflectionPattern57	Huf'al: 21-27
- * inflectionPattern58	Nif'al: 1-14,17-19,
- * inflectionPattern59	Nif'al: 15,16,25,
- * inflectionPattern60	Nif'al: 20-24,
- * inflectionPattern61	Nif'al:  30-31
- * inflectionPattern62	Nif'al:  32-33
- * inflectionPattern62	Nif'al: Nitpa'el
+ * пїЅпїЅпїЅпїЅпїЅ: ====== root пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+ * "пїЅ пїЅ- 3 пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ 4 пїЅ- 5. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅ пїЅпїЅ "
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅ 6. пїЅпїЅпїЅпїЅпїЅ: ======
+ * пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (root) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (binyan). пїЅ
+ * "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ root пїЅ- binyan пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ. пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ "
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅ 2 пїЅпїЅпїЅпїЅ 2.3 пїЅ"пїЅ 28-32. пїЅпїЅпїЅпїЅпїЅ: ======= пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ inflectionPattern пїЅ- ipSource, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ===================
+ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ-"пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ" пїЅпїЅ пїЅпїЅ"пїЅ пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ: inflectionPattern1 Pa'al: 1,2,3,6,7,8, inflectionPattern2 Pa'al:
+ * 4,13,15,16,17,26,27,29, inflectionPattern3 Pa'al: 5,10,11,14,18,28,
+ * inflectionPattern4 Pa'al: 9, inflectionPattern5 Pa'al: 12, inflectionPattern6
+ * Pa'al: 19,20, inflectionPattern7 Pa'al: 21, inflectionPattern8 Pa'al: 22,
+ * inflectionPattern9 Pa'al: 23,24, inflectionPattern10 Pa'al: 25,30,
+ * inflectionPattern11 Pa'al: 31,32,33,34,35,36, inflectionPattern12 Pa'al: 37,
+ * inflectionPattern13 Pa'al: 38,40,41, inflectionPattern14 Pa'al: 39,
+ * inflectionPattern15 Pa'al: 42, inflectionPattern16 Pa'al: 43,45,
+ * inflectionPattern17 Pa'al: 44, inflectionPattern18 Pa'al: 46,
+ * inflectionPattern19 Pa'al: 47, inflectionPattern20 Pa'al: 48,
+ * inflectionPattern21 Pa'al: 49,50,51, inflectionPattern22 Pa'al: 52,
+ * inflectionPattern23 Pi'el: 1,2,3,4,5,6,7,8,9,10,11,12,24,25,26,
+ * inflectionPattern24 Pi'el: (all these entries are represented as
+ * inflectionPattern23 -- this should be fixed) inflectionPattern25 Pi'el: 13,
+ * inflectionPattern26 Pi'el: 14, inflectionPattern27 Pi'el: 15,
+ * inflectionPattern28 Pi'el: 16, inflectionPattern29 Pi'el: 17,
+ * inflectionPattern30 Pi'el: 18, inflectionPattern31 Pi'el: 19,20,23,
+ * inflectionPattern32 Pi'el: 21, inflectionPattern33 Pi'el: 22,
+ * inflectionPattern34 Pi'el: 27, inflectionPattern35 Pi'el: 28,
+ * inflectionPattern36 Pu'al: 1-21,23,25,26, inflectionPattern37 Pu'al: 22,
+ * inflectionPattern38 Pu'al: 24, inflectionPattern39 Pu'al: 27,29,
+ * inflectionPattern40 Pu'al: 28, inflectionPattern41 Pu'al: 30,
+ * inflectionPattern42 Hitpa'el: 1-8,10-23,26,27,33-43 inflectionPattern43
+ * Hitpa'el: 9, inflectionPattern44 Hitpa'el: 24,25, inflectionPattern45
+ * Hitpa'el: 28,29,32, inflectionPattern46 Hitpa'el: 30, inflectionPattern47
+ * Hitpa'el: 31, inflectionPattern48 Hif'il: 1-8,11,15-17,23-26,40,
+ * inflectionPattern49 Hif'il: 9,10, inflectionPattern50 Hif'il: 12-14,
+ * inflectionPattern51 Hif'il: 18-22, inflectionPattern52 Hif'il: 27-34,
+ * inflectionPattern53 Hif'il: 35-39 inflectionPattern54 Huf'al:
+ * 1-12,14,15,19,20,28 inflectionPattern55 Huf'al: 13, inflectionPattern56
+ * Huf'al: 16-18, inflectionPattern57 Huf'al: 21-27 inflectionPattern58 Nif'al:
+ * 1-14,17-19, inflectionPattern59 Nif'al: 15,16,25, inflectionPattern60 Nif'al:
+ * 20-24, inflectionPattern61 Nif'al: 30-31 inflectionPattern62 Nif'al: 32-33
+ * inflectionPattern62 Nif'al: Nitpa'el
  * 
  * Java content class for VerbLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 704)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 704)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="VerbLexiconType">
  *   &lt;complexContent>
@@ -131,344 +102,333 @@ package lexicon.jaxb;
  */
 public interface VerbLexiconType {
 
+	/**
+	 * Gets the value of the feminine property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getFeminine();
 
-    /**
-     * Gets the value of the feminine property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getFeminine();
+	/**
+	 * Sets the value of the feminine property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setFeminine(java.lang.String value);
 
-    /**
-     * Sets the value of the feminine property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setFeminine(java.lang.String value);
+	/**
+	 * Gets the value of the inflectInfinitiveIndependent property.
+	 * 
+	 */
+	boolean isInflectInfinitiveIndependent();
 
-    /**
-     * Gets the value of the inflectInfinitiveIndependent property.
-     * 
-     */
-    boolean isInflectInfinitiveIndependent();
+	/**
+	 * Sets the value of the inflectInfinitiveIndependent property.
+	 * 
+	 */
+	void setInflectInfinitiveIndependent(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitiveIndependent property.
-     * 
-     */
-    void setInflectInfinitiveIndependent(boolean value);
+	/**
+	 * Gets the value of the inflectInfinitive property.
+	 * 
+	 */
+	boolean isInflectInfinitive();
 
-    /**
-     * Gets the value of the inflectInfinitive property.
-     * 
-     */
-    boolean isInflectInfinitive();
+	/**
+	 * Sets the value of the inflectInfinitive property.
+	 * 
+	 */
+	void setInflectInfinitive(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitive property.
-     * 
-     */
-    void setInflectInfinitive(boolean value);
+	/**
+	 * Gets the value of the inflectFuture property.
+	 * 
+	 */
+	boolean isInflectFuture();
 
-    /**
-     * Gets the value of the inflectFuture property.
-     * 
-     */
-    boolean isInflectFuture();
+	/**
+	 * Sets the value of the inflectFuture property.
+	 * 
+	 */
+	void setInflectFuture(boolean value);
 
-    /**
-     * Sets the value of the inflectFuture property.
-     * 
-     */
-    void setInflectFuture(boolean value);
+	/**
+	 * Gets the value of the inflectBeinoniConstruct property.
+	 * 
+	 */
+	boolean isInflectBeinoniConstruct();
 
-    /**
-     * Gets the value of the inflectBeinoniConstruct property.
-     * 
-     */
-    boolean isInflectBeinoniConstruct();
+	/**
+	 * Sets the value of the inflectBeinoniConstruct property.
+	 * 
+	 */
+	void setInflectBeinoniConstruct(boolean value);
 
-    /**
-     * Sets the value of the inflectBeinoniConstruct property.
-     * 
-     */
-    void setInflectBeinoniConstruct(boolean value);
+	/**
+	 * Gets the value of the inflectBeinoniPossessive property.
+	 * 
+	 */
+	boolean isInflectBeinoniPossessive();
 
-    /**
-     * Gets the value of the inflectBeinoniPossessive property.
-     * 
-     */
-    boolean isInflectBeinoniPossessive();
+	/**
+	 * Sets the value of the inflectBeinoniPossessive property.
+	 * 
+	 */
+	void setInflectBeinoniPossessive(boolean value);
 
-    /**
-     * Sets the value of the inflectBeinoniPossessive property.
-     * 
-     */
-    void setInflectBeinoniPossessive(boolean value);
+	/**
+	 * Gets the value of the ipSource property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getIpSource();
 
-    /**
-     * Gets the value of the ipSource property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getIpSource();
+	/**
+	 * Sets the value of the ipSource property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setIpSource(java.lang.String value);
 
-    /**
-     * Sets the value of the ipSource property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setIpSource(java.lang.String value);
+	/**
+	 * Gets the value of the foreign property.
+	 * 
+	 */
+	boolean isForeign();
 
-    /**
-     * Gets the value of the foreign property.
-     * 
-     */
-    boolean isForeign();
+	/**
+	 * Sets the value of the foreign property.
+	 * 
+	 */
+	void setForeign(boolean value);
 
-    /**
-     * Sets the value of the foreign property.
-     * 
-     */
-    void setForeign(boolean value);
+	/**
+	 * Gets the value of the inflectionPattern property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionPattern();
 
-    /**
-     * Gets the value of the inflectionPattern property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionPattern();
+	/**
+	 * Sets the value of the inflectionPattern property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionPattern(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionPattern property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionPattern(java.lang.String value);
+	/**
+	 * Gets the value of the inflectBeinoni property.
+	 * 
+	 */
+	boolean isInflectBeinoni();
 
-    /**
-     * Gets the value of the inflectBeinoni property.
-     * 
-     */
-    boolean isInflectBeinoni();
+	/**
+	 * Sets the value of the inflectBeinoni property.
+	 * 
+	 */
+	void setInflectBeinoni(boolean value);
 
-    /**
-     * Sets the value of the inflectBeinoni property.
-     * 
-     */
-    void setInflectBeinoni(boolean value);
+	/**
+	 * Gets the value of the inflectInfinitivel property.
+	 * 
+	 */
+	boolean isInflectInfinitivel();
 
-    /**
-     * Gets the value of the inflectInfinitivel property.
-     * 
-     */
-    boolean isInflectInfinitivel();
+	/**
+	 * Sets the value of the inflectInfinitivel property.
+	 * 
+	 */
+	void setInflectInfinitivel(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitivel property.
-     * 
-     */
-    void setInflectInfinitivel(boolean value);
+	/**
+	 * Gets the value of the valence property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getValence();
 
-    /**
-     * Gets the value of the valence property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getValence();
+	/**
+	 * Sets the value of the valence property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setValence(java.lang.String value);
 
-    /**
-     * Sets the value of the valence property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setValence(java.lang.String value);
+	/**
+	 * Gets the value of the inflectOrigin property.
+	 * 
+	 */
+	boolean isInflectOrigin();
 
-    /**
-     * Gets the value of the inflectOrigin property.
-     * 
-     */
-    boolean isInflectOrigin();
+	/**
+	 * Sets the value of the inflectOrigin property.
+	 * 
+	 */
+	void setInflectOrigin(boolean value);
 
-    /**
-     * Sets the value of the inflectOrigin property.
-     * 
-     */
-    void setInflectOrigin(boolean value);
+	/**
+	 * Gets the value of the root property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getRoot();
 
-    /**
-     * Gets the value of the root property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getRoot();
+	/**
+	 * Sets the value of the root property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setRoot(java.lang.String value);
 
-    /**
-     * Sets the value of the root property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setRoot(java.lang.String value);
+	/**
+	 * Gets the value of the inflectPast property.
+	 * 
+	 */
+	boolean isInflectPast();
 
-    /**
-     * Gets the value of the inflectPast property.
-     * 
-     */
-    boolean isInflectPast();
+	/**
+	 * Sets the value of the inflectPast property.
+	 * 
+	 */
+	void setInflectPast(boolean value);
 
-    /**
-     * Sets the value of the inflectPast property.
-     * 
-     */
-    void setInflectPast(boolean value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.VerbLexiconType.Replace}
+	 * {@link lexicon.jaxb.VerbLexiconType.Add}
+	 * {@link lexicon.jaxb.VerbLexiconType.Remove}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.VerbLexiconType.Replace}
-     * {@link lexicon.jaxb.VerbLexiconType.Add}
-     * {@link lexicon.jaxb.VerbLexiconType.Remove}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the binyan property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getBinyan();
 
-    /**
-     * Gets the value of the binyan property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getBinyan();
+	/**
+	 * Sets the value of the binyan property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setBinyan(java.lang.String value);
 
-    /**
-     * Sets the value of the binyan property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setBinyan(java.lang.String value);
+	/**
+	 * Gets the value of the inflectImperative property.
+	 * 
+	 */
+	boolean isInflectImperative();
 
-    /**
-     * Gets the value of the inflectImperative property.
-     * 
-     */
-    boolean isInflectImperative();
+	/**
+	 * Sets the value of the inflectImperative property.
+	 * 
+	 */
+	void setInflectImperative(boolean value);
 
-    /**
-     * Sets the value of the inflectImperative property.
-     * 
-     */
-    void setInflectImperative(boolean value);
+	/**
+	 * Gets the value of the inflectInfinitiveb property.
+	 * 
+	 */
+	boolean isInflectInfinitiveb();
 
-    /**
-     * Gets the value of the inflectInfinitiveb property.
-     * 
-     */
-    boolean isInflectInfinitiveb();
+	/**
+	 * Sets the value of the inflectInfinitiveb property.
+	 * 
+	 */
+	void setInflectInfinitiveb(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitiveb property.
-     * 
-     */
-    void setInflectInfinitiveb(boolean value);
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 796)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}VerbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.VerbExceptionType {
 
+	}
 
-    /**
-     * обрд жд ощощ мдесфъ цешеъ ресфеъ.
-     * бфши -- лъйб щерд, рийеъ йецаеъ гефп елйеца бамд.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 796)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}VerbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.VerbExceptionType
-    {
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅ). пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ- add пїЅпїЅ- replace пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- remove, пїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 813)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}VerbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.VerbExceptionType {
 
+	}
 
-    }
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 805)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}VerbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.VerbExceptionType {
 
-
-    /**
-     * обрд жд ощощ мдсшъ цешеъ щрецше баефп аеиеоий, еблк мсоп моръз цешрй щтещд щйоещ бмчсйчеп, щма мййцш (бтцн щйозеч аъ дцешеъ дамд, ае щма ййцшп лмм).
-     * лбшйшъ озгм *ма* ййозче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * баефп лммй, йщ мдтгйу щйоещ шзб б- add еб- replace ъзъ дщйоещ б- remove, лгй мфщи аъ дойоещ елгй мйцеш орвреп азйг мдбръ дмчсйчеп.
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 813)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}VerbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.VerbExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * обрд жд ощощ мдзмфъ цешеъ чййоеъ базшеъ.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 805)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}VerbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.VerbExceptionType
-    {
-
-
-    }
+	}
 
 }

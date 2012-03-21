@@ -9,35 +9,44 @@ public class SearchItem {
 	protected String undotted;
 	protected String transliterated;
 	protected String pos;
-	
+
 	public SearchItem(int id) {
 		this.id = id;
 	}
+
+	public String getDotted() {
+		return this.dotted;
+	}
+
+	public int getID() {
+		return this.id;
+	}
+
+	public String getPos() {
+		return this.pos;
+	}
+
+	public String getTransliterated() {
+		return this.transliterated;
+	}
+
+	public String getUndotted() {
+		return this.undotted;
+	}
+
 	public void setDotted(String dotted) {
 		this.dotted = dotted;
 	}
-	public void setUndotted(String undotted) {
-		this.undotted = undotted;
-	}
-	public void setTransliterated(String transliterated) {
-		this.transliterated = transliterated;
-	}
-	public String getTransliterated() {
-		return transliterated;
-	}
+
 	public void setPos(String pos) {
 		this.pos = pos;
 	}
-	public String getPos() {
-		return pos;
+
+	public void setTransliterated(String transliterated) {
+		this.transliterated = transliterated;
 	}
-	public String getDotted() {
-		return dotted;
-	}
-	public String getUndotted() {
-		return undotted;
-	}
-	public int getID() {
-		return id;
+
+	public void setUndotted(String undotted) {
+		this.undotted = undotted;
 	}
 }

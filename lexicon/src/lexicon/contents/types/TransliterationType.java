@@ -5,19 +5,23 @@
 // Generated on: 2005.02.17 at 12:10:17 GMT+02:00 
 //
 
-
 package lexicon.contents.types;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import lexicon.contents.Content;
+
 /**
- * ���� ����� ����� ��� ������� ������ �������� ������ �����. ����, ����� ����� ������.
+ * ���� ����� ����� ��� ������� ������ �������� ������ �����. ����, ����� �����
+ * ������.
  * 
  * Java content class for TransliterationType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 76)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 76)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="TransliterationType">
  *   &lt;complexContent>
@@ -42,69 +46,88 @@ import lexicon.contents.Content;
  * </pre>
  * 
  */
-public class TransliterationType extends Content implements lexicon.jaxb.TransliterationType{
+public class TransliterationType extends Content implements
+		lexicon.jaxb.TransliterationType {
 	lexicon.jaxb.TransliterationType content;
-	
+
 	public TransliterationType(lexicon.jaxb.TransliterationType content) {
 		this.content = content;
 		TABLE = "transliteration";
-		IDNAME = "transliteration_id"; 
+		IDNAME = "transliteration_id";
 	}
+
 	public TransliterationType() {
 		content = new lexicon.jaxb.impl.TransliterationTypeImpl();
 		TABLE = "transliteration";
-		IDNAME = "transliteration_id"; 
+		IDNAME = "transliteration_id";
 	}
+
 	public lexicon.jaxb.impl.TransliterationTypeImpl getImpl() {
-		return (lexicon.jaxb.impl.TransliterationTypeImpl)content;
+		return (lexicon.jaxb.impl.TransliterationTypeImpl) content;
 	}
+
 	public int add() {
 		return 0;
 	}
+
 	/**
-	*An empty implementation to the method add() methods in the different subclasses of Content.
-	*Connects to the DB, commits the different SQL statements and return feedback.
-	*@param		sql - The SQL statement to be executed.
-	*@return	Number of rows affected (0, if nothing happened, 1 if one row added).
-	*/
+	 * An empty implementation to the method add() methods in the different
+	 * subclasses of Content. Connects to the DB, commits the different SQL
+	 * statements and return feedback.
+	 * 
+	 * @param sql
+	 *            - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row
+	 *         added).
+	 */
 	public int add(int mid) {
-		String sql = "INSERT INTO "+ getTableName() + " VALUES (";
+		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += "0";
-		sql += ", "+mid;
-		sql += ", '"+getFrom()+"'";
-		sql += ", '"+ getTo() +"')";
+		sql += ", " + mid;
+		sql += ", '" + getFrom() + "'";
+		sql += ", '" + getTo() + "')";
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		addStrings();
 		return feedback;
 	}
+
 	/**
-	*Updates the current record in the DB, so it would resemble the current object state.
-	*The method uses ResultSet.updateRow method in order to implement the generic update process.
-	*The method finds the record of the current object, generates the meta data (the names and types of the columns)
-	*, Runs on the columns and updateing each one, according with the column type. After these stages, the
-	*method calls <code>ResultSet.updateRow</code> in order to execute the update in the DB.
-	*@see   #info
-	*@see   ResultSet#updateRow
-	*@see   #openRS
-	*@return	The number of rows that were affected from the action. If 0, then nothing happened
-	*/
+	 * Updates the current record in the DB, so it would resemble the current
+	 * object state. The method uses ResultSet.updateRow method in order to
+	 * implement the generic update process. The method finds the record of the
+	 * current object, generates the meta data (the names and types of the
+	 * columns) , Runs on the columns and updateing each one, according with the
+	 * column type. After these stages, the method calls
+	 * <code>ResultSet.updateRow</code> in order to execute the update in the
+	 * DB.
+	 * 
+	 * @see #info
+	 * @see ResultSet#updateRow
+	 * @see #openRS
+	 * @return The number of rows that were affected from the action. If 0, then
+	 *         nothing happened
+	 */
 	public int update() {
-		String sql = "UPDATE "+ getTableName() + " SET";
-//		sql += ", metadata_id="+getInt("metadata_id");
-		sql += ", from='"+getFrom()+"'";
-		sql += ", to='"+ getTo() +"'";
-		int feedback = execute(sql); 
+		String sql = "UPDATE " + getTableName() + " SET";
+		// sql += ", metadata_id="+getInt("metadata_id");
+		sql += ", from='" + getFrom() + "'";
+		sql += ", to='" + getTo() + "'";
+		int feedback = execute(sql);
 		return feedback;
 	}
+
 	public int addStrings() {
 		int result = 0;
-		for (int i=0; i< getString().size(); i++) {
-			lexicon.contents.types.StringType source = new lexicon.contents.types.StringType((lexicon.jaxb.TransliterationType.StringType)getString().get(i));
-			result += source.add(id); 
+		for (int i = 0; i < getString().size(); i++) {
+			lexicon.contents.types.StringType source = new lexicon.contents.types.StringType(
+					(lexicon.jaxb.TransliterationType.StringType) getString()
+							.get(i));
+			result += source.add(id);
 		}
 		return result;
 	}
+
 	public void load() {
 		setFrom(getString("from"));
 		setTo(getString("to"));
@@ -113,87 +136,82 @@ public class TransliterationType extends Content implements lexicon.jaxb.Transli
 		getString().addAll(strings);
 		// TODO
 	}
+
 	protected java.util.List getStrings(int id) {
-		String sql = "SELECT string_id from transliteration_string WHERE transliteration_id="+id;
+		String sql = "SELECT string_id from transliteration_string WHERE transliteration_id="
+				+ id;
 		List strings = getContents(sql, "string_id");
 		ArrayList result = new ArrayList();
-		for (int i=0; i< strings.size(); i++) {
+		for (int i = 0; i < strings.size(); i++) {
 			lexicon.contents.types.StringType source = new lexicon.contents.types.StringType();
-			source.open(((Integer)strings.get(i)).intValue());
+			source.open(((Integer) strings.get(i)).intValue());
 			result.add(source.getImpl());
 		}
 		return result;
 	}
-    /**
-     * Gets the value of the String property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the String property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getString().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.TransliterationType.StringType}
-     * 
-     */
+
+	/**
+	 * Gets the value of the String property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the String property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getString().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.TransliterationType.StringType}
+	 * 
+	 */
 	public java.util.List getString() {
 		return content.getString();
 	}
 
-    /**
-     * Gets the value of the from property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Gets the value of the from property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
 	public java.lang.String getFrom() {
 		return content.getFrom();
 	}
 
-    /**
-     * Sets the value of the from property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Sets the value of the from property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
 	public void setFrom(java.lang.String value) {
 		content.setFrom(value);
 	}
 
-    /**
-     * Gets the value of the to property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Gets the value of the to property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
 	public java.lang.String getTo() {
 		return content.getTo();
 	}
 
-    /**
-     * Sets the value of the to property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Sets the value of the to property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
 	public void setTo(java.lang.String value) {
 		content.setTo(value);
 	}
-
-
-
 
 }

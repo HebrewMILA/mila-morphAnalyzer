@@ -5,19 +5,21 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * A word sense as determined by the Rav Millim dictionary.
- * Different senses of the same item have identical morphological
- * attributes, including the same part of speech. They differ in their
- * semantics, which is reflected in possibly different translation
- * equivalents, definitions and usage examples.
+ * A word sense as determined by the Rav Millim dictionary. Different senses of
+ * the same item have identical morphological attributes, including the same
+ * part of speech. They differ in their semantics, which is reflected in
+ * possibly different translation equivalents, definitions and usage examples.
  * Java content class for SenseType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 180)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 180)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="SenseType">
  *   &lt;complexContent>
@@ -38,128 +40,121 @@ package lexicon.jaxb;
  */
 public interface SenseType {
 
+	/**
+	 * Gets the value of the definition property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDefinition();
 
-    /**
-     * Gets the value of the definition property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDefinition();
+	/**
+	 * Sets the value of the definition property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDefinition(java.lang.String value);
 
-    /**
-     * Sets the value of the definition property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDefinition(java.lang.String value);
+	/**
+	 * Gets the value of the weight property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getWeight();
 
-    /**
-     * Gets the value of the weight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getWeight();
+	/**
+	 * Sets the value of the weight property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setWeight(java.lang.String value);
 
-    /**
-     * Sets the value of the weight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setWeight(java.lang.String value);
+	/**
+	 * Gets the value of the English property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the English property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getEnglish().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.EnglishType}
+	 * 
+	 */
+	java.util.List getEnglish();
 
-    /**
-     * Gets the value of the English property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the English property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getEnglish().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.EnglishType}
-     * 
-     */
-    java.util.List getEnglish();
+	/**
+	 * Gets the value of the Synset property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the Synset property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getSynset().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.SynsetType}
+	 * 
+	 */
+	java.util.List getSynset();
 
-    /**
-     * Gets the value of the Synset property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the Synset property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getSynset().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.SynsetType}
-     * 
-     */
-    java.util.List getSynset();
+	/**
+	 * Gets the value of the Example property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the Example property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getExample().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.ExampleType}
+	 * 
+	 */
+	java.util.List getExample();
 
-    /**
-     * Gets the value of the Example property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the Example property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getExample().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.ExampleType}
-     * 
-     */
-    java.util.List getExample();
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getId();
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getId();
-
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setId(java.lang.String value);
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setId(java.lang.String value);
 
 }

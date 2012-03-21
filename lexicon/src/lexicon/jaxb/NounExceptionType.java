@@ -5,26 +5,27 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд жд ощощ мийфем бочшйн йецай гефп щайрн оърдвйн мфй лммй дриййд, ащш ооощ доръз доешфемевй.
- * бфши, обрд жд оъаш аъ ълереъ доймд (аемй вн дрийеъ щмд) йецаъ дгефп.
- * аймех:
- * ======
- * ан дойп (gender) деа рчбд (feminine), ажй айп ощотеъ мълеръ д- feminine (цешп рчбд) емлп ма ъефйт ълеръ д- feminine (цешп рчбд) лащш тшк дълерд ойп (gender) деа рчбд (feminine).
- * аймех:
- * ======
- * ан дшйбей (number) деа шбйн (plural), ажй айп ощотеъ мълеръ д- plural (цешп шйбей) емлп ма ъефйт ълеръ д-  plural (цешп шйбей) лащш тшк дълерд шйбей (number) деа шбйн (plural).
- * аймех:
- * ======
- * ан dual="true" ажй ма йлем мдйеъ щ- number="singular". ж"а щоймд ма йлем мдйеъ бйзйг евн бжевй бтъ ебтерд азъ.
+ * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ)
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ пїЅпїЅпїЅпїЅ (gender) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (feminine), пїЅпїЅпїЅ пїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- feminine (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ- feminine (пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ (gender) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (feminine). пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅ (number) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (plural), пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- plural (пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ- plural (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * (number) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (plural). пїЅпїЅпїЅпїЅпїЅ: ====== пїЅпїЅ dual="true" пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ-
+ * number="singular". пїЅ"пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ.
  * 
  * Java content class for NounExceptionType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 478)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 478)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="NounExceptionType">
  *   &lt;simpleContent>
@@ -53,287 +54,247 @@ package lexicon.jaxb;
  */
 public interface NounExceptionType {
 
+	/**
+	 * Gets the value of the feminine property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getFeminine();
 
-    /**
-     * Gets the value of the feminine property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getFeminine();
+	/**
+	 * Sets the value of the feminine property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setFeminine(java.lang.String value);
 
-    /**
-     * Sets the value of the feminine property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setFeminine(java.lang.String value);
+	/**
+	 * Gets the value of the inflectPossessiveS property.
+	 * 
+	 */
+	boolean isInflectPossessiveS();
 
-    /**
-     * Gets the value of the inflectPossessiveS property.
-     * 
-     */
-    boolean isInflectPossessiveS();
+	/**
+	 * Sets the value of the inflectPossessiveS property.
+	 * 
+	 */
+	void setInflectPossessiveS(boolean value);
 
-    /**
-     * Sets the value of the inflectPossessiveS property.
-     * 
-     */
-    void setInflectPossessiveS(boolean value);
+	/**
+	 * Gets the value of the possessive property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPossessive();
 
-    /**
-     * Gets the value of the possessive property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPossessive();
+	/**
+	 * Sets the value of the possessive property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPossessive(java.lang.String value);
 
-    /**
-     * Sets the value of the possessive property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPossessive(java.lang.String value);
+	/**
+	 * Gets the value of the register property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getRegister();
 
-    /**
-     * Gets the value of the register property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getRegister();
+	/**
+	 * Sets the value of the register property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setRegister(java.lang.String value);
 
-    /**
-     * Sets the value of the register property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setRegister(java.lang.String value);
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getGender();
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getGender();
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setGender(java.lang.String value);
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setGender(java.lang.String value);
+	/**
+	 * Gets the value of the plural property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPlural();
 
-    /**
-     * Gets the value of the plural property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPlural();
+	/**
+	 * Sets the value of the plural property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPlural(java.lang.String value);
 
-    /**
-     * Sets the value of the plural property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPlural(java.lang.String value);
+	/**
+	 * Gets the value of the spelling property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getSpelling();
 
-    /**
-     * Gets the value of the spelling property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getSpelling();
+	/**
+	 * Sets the value of the spelling property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setSpelling(java.lang.String value);
 
-    /**
-     * Sets the value of the spelling property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setSpelling(java.lang.String value);
+	/**
+	 * Gets the value of the transliterated property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getTransliterated();
 
-    /**
-     * Gets the value of the transliterated property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getTransliterated();
+	/**
+	 * Sets the value of the transliterated property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setTransliterated(java.lang.String value);
 
-    /**
-     * Sets the value of the transliterated property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setTransliterated(java.lang.String value);
+	/**
+	 * Gets the value of the value property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getValue();
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getValue();
+	/**
+	 * Sets the value of the value property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setValue(java.lang.String value);
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setValue(java.lang.String value);
+	/**
+	 * Gets the value of the construct property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getConstruct();
 
-    /**
-     * Gets the value of the construct property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getConstruct();
+	/**
+	 * Sets the value of the construct property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setConstruct(java.lang.String value);
 
-    /**
-     * Sets the value of the construct property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setConstruct(java.lang.String value);
+	/**
+	 * Gets the value of the inflectConstructS property.
+	 * 
+	 */
+	boolean isInflectConstructS();
 
-    /**
-     * Gets the value of the inflectConstructS property.
-     * 
-     */
-    boolean isInflectConstructS();
+	/**
+	 * Sets the value of the inflectConstructS property.
+	 * 
+	 */
+	void setInflectConstructS(boolean value);
 
-    /**
-     * Sets the value of the inflectConstructS property.
-     * 
-     */
-    void setInflectConstructS(boolean value);
+	/**
+	 * Gets the value of the dual property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDual();
 
-    /**
-     * Gets the value of the dual property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDual();
+	/**
+	 * Sets the value of the dual property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDual(java.lang.String value);
 
-    /**
-     * Sets the value of the dual property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDual(java.lang.String value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the undotted property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getUndotted();
 
-    /**
-     * Gets the value of the undotted property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getUndotted();
+	/**
+	 * Sets the value of the undotted property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setUndotted(java.lang.String value);
 
-    /**
-     * Sets the value of the undotted property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setUndotted(java.lang.String value);
+	/**
+	 * Gets the value of the dotted property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDotted();
 
-    /**
-     * Gets the value of the dotted property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDotted();
+	/**
+	 * Sets the value of the dotted property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDotted(java.lang.String value);
 
-    /**
-     * Sets the value of the dotted property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDotted(java.lang.String value);
+	/**
+	 * Gets the value of the inflectPossessiveP property.
+	 * 
+	 */
+	boolean isInflectPossessiveP();
 
-    /**
-     * Gets the value of the inflectPossessiveP property.
-     * 
-     */
-    boolean isInflectPossessiveP();
+	/**
+	 * Sets the value of the inflectPossessiveP property.
+	 * 
+	 */
+	void setInflectPossessiveP(boolean value);
 
-    /**
-     * Sets the value of the inflectPossessiveP property.
-     * 
-     */
-    void setInflectPossessiveP(boolean value);
+	/**
+	 * Gets the value of the inflectConstructP property.
+	 * 
+	 */
+	boolean isInflectConstructP();
 
-    /**
-     * Gets the value of the inflectConstructP property.
-     * 
-     */
-    boolean isInflectConstructP();
-
-    /**
-     * Sets the value of the inflectConstructP property.
-     * 
-     */
-    void setInflectConstructP(boolean value);
+	/**
+	 * Sets the value of the inflectConstructP property.
+	 * 
+	 */
+	void setInflectConstructP(boolean value);
 
 }

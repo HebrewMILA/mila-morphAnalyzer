@@ -5,44 +5,36 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * обрд жд оъаш ъашй фетм.
- * мъашй фетм дълереъ дбаеъ:
- * - змчн ощъощйн лоймеъ щамд (interrogative).
- * - змчн ощрйн (modifies) фтмйн.
- * - змчн ощрйн (modifies) щоеъ ъеаш.
- * - змчн ощрйн (modifies) ъашй фетм.
- * дойчен щм ъеаш дфетм бощфи йлем мдйеъ босфш очеоеъ бйзс моймд аеъд деа "ощрд":
- * - мфрй (pre)
- * - азшй (post)
- * - вн мфрй евн азшй (pre and post)
- * йщрн ъашй фетм ащш реийн бриййъ веу/ойп/осфш (осбйб: осбйбй, осбйбк, осбйбйре, осбйбе...), емлп йщ афщшеъ мцййп аъ дбсйс мриййъ веу/ойп/осфш.
- * ан ъеаш дфетм доъеаш реид, йщ мцййп жаъ т"й inflect="true". ае-аж, ан оевгш inflectionBase ажй йщ мтщеъ бтшле щйоещ лбсйс дриййд, азшъ, йщ мтщеъ щйоещ бтшк доймерй лбсйс.
- * дриййд оесйфд аъ дцешрйн дбайн лсефйеъ:
- * веу шащеп / жлш евн рчбд / йзйг --	й
- * веу щрй   / жлш          / йзйг --	к
- * веу щрй   / рчбд         / йзйг --	к
- * веу щмйщй / жлш          / йзйг --	е
- * веу щмйщй / рчбд         / йзйг --	д
- * веу шащеп / жлш евн рчбд / шбйн --	ре
- * веу щрй   / жлш          / шбйн --	лн
- * веу щрй   / рчбд         / шбйн --	лп
- * веу щмйщй / жлш          / шбйн --	н
- * веу щмйщй / рчбд         / шбйн --	п
- * лащш сйеоеъ веу щмйщй шбйн днфлйн мдйеъ 'дн' е-'дп' ан дбсйс осъййн баеъ й'.
- * ан йщрд зшйвд одриййд, ййтщд щйоещ бфтемеъ add/remove/replace.
- * бойгд ейщрп цешеъ йецаеъ гефп, рйъп мдщъощ борвреп add/replace/remove, лфй щйфеши бдощк.
- * аймех:
- * ======
- * inflectionBase ма йефйт ан inflect="false". inflectionBase ан оефйт, ма йефйт шйч.
+ * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * (interrogative). - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (modifies) пїЅпїЅпїЅпїЅпїЅ. - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (modifies) пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅ. - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (modifies) пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ "пїЅпїЅпїЅпїЅ": - пїЅпїЅпїЅпїЅ (pre) - пїЅпїЅпїЅпїЅ (post) -
+ * пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (pre and post) пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ/пїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ
+ * (пїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ...), пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ/пїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+ * пїЅ"пїЅ inflect="true". пїЅпїЅ-пїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ inflectionBase пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ / пїЅпїЅпїЅ /
+ * пїЅпїЅпїЅпїЅ -- пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ /
+ * пїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ / пїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ
+ * -- пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ /
+ * пїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅ -- пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 'пїЅпїЅ' пїЅ-'пїЅпїЅ' пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ'. пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+ * add/remove/replace. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+ * add/replace/remove, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ: ====== inflectionBase пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+ * пїЅпїЅ inflect="false". inflectionBase пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ.
  * 
  * Java content class for AdverbLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1248)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1248)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="AdverbLexiconType">
  *   &lt;complexContent>
@@ -70,224 +62,213 @@ package lexicon.jaxb;
  */
 public interface AdverbLexiconType {
 
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getType();
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getType();
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setType(java.lang.String value);
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setType(java.lang.String value);
+	/**
+	 * Gets the value of the modifiesAdverb property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getModifiesAdverb();
 
-    /**
-     * Gets the value of the modifiesAdverb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getModifiesAdverb();
+	/**
+	 * Sets the value of the modifiesAdverb property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setModifiesAdverb(java.lang.String value);
 
-    /**
-     * Sets the value of the modifiesAdverb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setModifiesAdverb(java.lang.String value);
+	/**
+	 * Gets the value of the modifiesVerb property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getModifiesVerb();
 
-    /**
-     * Gets the value of the modifiesVerb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getModifiesVerb();
+	/**
+	 * Sets the value of the modifiesVerb property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setModifiesVerb(java.lang.String value);
 
-    /**
-     * Sets the value of the modifiesVerb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setModifiesVerb(java.lang.String value);
+	/**
+	 * Gets the value of the position property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPosition();
 
-    /**
-     * Gets the value of the position property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPosition();
+	/**
+	 * Sets the value of the position property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPosition(java.lang.String value);
 
-    /**
-     * Sets the value of the position property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPosition(java.lang.String value);
+	/**
+	 * Gets the value of the interrogative property.
+	 * 
+	 */
+	boolean isInterrogative();
 
-    /**
-     * Gets the value of the interrogative property.
-     * 
-     */
-    boolean isInterrogative();
+	/**
+	 * Sets the value of the interrogative property.
+	 * 
+	 */
+	void setInterrogative(boolean value);
 
-    /**
-     * Sets the value of the interrogative property.
-     * 
-     */
-    void setInterrogative(boolean value);
+	/**
+	 * Gets the value of the inflect property.
+	 * 
+	 */
+	boolean isInflect();
 
-    /**
-     * Gets the value of the inflect property.
-     * 
-     */
-    boolean isInflect();
+	/**
+	 * Sets the value of the inflect property.
+	 * 
+	 */
+	void setInflect(boolean value);
 
-    /**
-     * Sets the value of the inflect property.
-     * 
-     */
-    void setInflect(boolean value);
+	/**
+	 * Gets the value of the inflectionBase property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionBase();
 
-    /**
-     * Gets the value of the inflectionBase property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionBase();
+	/**
+	 * Sets the value of the inflectionBase property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionBase(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionBase property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionBase(java.lang.String value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.AdverbLexiconType.Add}
+	 * {@link lexicon.jaxb.AdverbLexiconType.Remove}
+	 * {@link lexicon.jaxb.AdverbLexiconType.Replace}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.AdverbLexiconType.Add}
-     * {@link lexicon.jaxb.AdverbLexiconType.Remove}
-     * {@link lexicon.jaxb.AdverbLexiconType.Replace}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the modifiesAdjective property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getModifiesAdjective();
 
-    /**
-     * Gets the value of the modifiesAdjective property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getModifiesAdjective();
+	/**
+	 * Sets the value of the modifiesAdjective property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setModifiesAdjective(java.lang.String value);
 
-    /**
-     * Sets the value of the modifiesAdjective property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setModifiesAdjective(java.lang.String value);
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1285)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}AdverbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.AdverbExceptionType {
 
+	}
 
-    /**
-     * обрд жд ощощ мдесфъ цешеъ ресфеъ.
-     * бфши -- лъйб щерд, рийеъ йецаеъ гефп елйеца бамд.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1285)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}AdverbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.AdverbExceptionType
-    {
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅ). пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ- add пїЅпїЅ- replace пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ- remove, пїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1302)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}AdverbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.AdverbExceptionType {
 
+	}
 
-    }
+	/**
+	 * пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ *пїЅпїЅ* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 1294)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}AdverbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.AdverbExceptionType {
 
-
-    /**
-     * обрд жд ощощ мдсшъ цешеъ щрецше баефп аеиеоий, еблк мсоп моръз цешрй щтещд щйоещ бмчсйчеп, щма мййцш (бтцн щйозеч аъ дцешеъ дамд, ае щма ййцшп лмм).
-     * лбшйшъ озгм *ма* ййозче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * баефп лммй, йщ мдтгйу щйоещ шзб б- add еб- replace ъзъ дщйоещ б- remove, лгй мфщи аъ дойоещ елгй мйцеш орвреп азйг мдбръ дмчсйчеп.
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1302)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}AdverbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.AdverbExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * обрд жд ощощ мдзмфъ цешеъ чййоеъ базшеъ.
-     * лбшйшъ озгм *ма* йефче рийеъ ресфеъ одцешд йецаъ дгефп!
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1294)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}AdverbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.AdverbExceptionType
-    {
-
-
-    }
+	}
 
 }

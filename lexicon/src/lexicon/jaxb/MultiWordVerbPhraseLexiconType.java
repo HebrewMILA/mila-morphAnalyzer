@@ -5,15 +5,18 @@
 // Generated on: 2011.01.23 at 03:48:10 PM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * 
  * Java content class for MultiWordVerbPhraseLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 2010)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 2010)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="MultiWordVerbPhraseLexiconType">
  *   &lt;complexContent>
@@ -52,354 +55,339 @@ package lexicon.jaxb;
  */
 public interface MultiWordVerbPhraseLexiconType {
 
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getType();
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getType();
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setType(java.lang.String value);
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setType(java.lang.String value);
+	/**
+	 * Gets the value of the feminine property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getFeminine();
 
-    /**
-     * Gets the value of the feminine property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getFeminine();
+	/**
+	 * Sets the value of the feminine property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setFeminine(java.lang.String value);
 
-    /**
-     * Sets the value of the feminine property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setFeminine(java.lang.String value);
+	/**
+	 * Gets the value of the inflectInfinitiveIndependent property.
+	 * 
+	 */
+	boolean isInflectInfinitiveIndependent();
 
-    /**
-     * Gets the value of the inflectInfinitiveIndependent property.
-     * 
-     */
-    boolean isInflectInfinitiveIndependent();
+	/**
+	 * Sets the value of the inflectInfinitiveIndependent property.
+	 * 
+	 */
+	void setInflectInfinitiveIndependent(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitiveIndependent property.
-     * 
-     */
-    void setInflectInfinitiveIndependent(boolean value);
+	/**
+	 * Gets the value of the inflectInfinitive property.
+	 * 
+	 */
+	boolean isInflectInfinitive();
 
-    /**
-     * Gets the value of the inflectInfinitive property.
-     * 
-     */
-    boolean isInflectInfinitive();
+	/**
+	 * Sets the value of the inflectInfinitive property.
+	 * 
+	 */
+	void setInflectInfinitive(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitive property.
-     * 
-     */
-    void setInflectInfinitive(boolean value);
+	/**
+	 * Gets the value of the inflectFuture property.
+	 * 
+	 */
+	boolean isInflectFuture();
 
-    /**
-     * Gets the value of the inflectFuture property.
-     * 
-     */
-    boolean isInflectFuture();
+	/**
+	 * Sets the value of the inflectFuture property.
+	 * 
+	 */
+	void setInflectFuture(boolean value);
 
-    /**
-     * Sets the value of the inflectFuture property.
-     * 
-     */
-    void setInflectFuture(boolean value);
+	/**
+	 * Gets the value of the inflectBeinoniConstruct property.
+	 * 
+	 */
+	boolean isInflectBeinoniConstruct();
 
-    /**
-     * Gets the value of the inflectBeinoniConstruct property.
-     * 
-     */
-    boolean isInflectBeinoniConstruct();
+	/**
+	 * Sets the value of the inflectBeinoniConstruct property.
+	 * 
+	 */
+	void setInflectBeinoniConstruct(boolean value);
 
-    /**
-     * Sets the value of the inflectBeinoniConstruct property.
-     * 
-     */
-    void setInflectBeinoniConstruct(boolean value);
+	/**
+	 * Gets the value of the inflectBeinoniPossessive property.
+	 * 
+	 */
+	boolean isInflectBeinoniPossessive();
 
-    /**
-     * Gets the value of the inflectBeinoniPossessive property.
-     * 
-     */
-    boolean isInflectBeinoniPossessive();
+	/**
+	 * Sets the value of the inflectBeinoniPossessive property.
+	 * 
+	 */
+	void setInflectBeinoniPossessive(boolean value);
 
-    /**
-     * Sets the value of the inflectBeinoniPossessive property.
-     * 
-     */
-    void setInflectBeinoniPossessive(boolean value);
+	/**
+	 * Gets the value of the ipSource property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getIpSource();
 
-    /**
-     * Gets the value of the ipSource property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getIpSource();
+	/**
+	 * Sets the value of the ipSource property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setIpSource(java.lang.String value);
 
-    /**
-     * Sets the value of the ipSource property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setIpSource(java.lang.String value);
+	/**
+	 * Gets the value of the foreign property.
+	 * 
+	 */
+	boolean isForeign();
 
-    /**
-     * Gets the value of the foreign property.
-     * 
-     */
-    boolean isForeign();
+	/**
+	 * Sets the value of the foreign property.
+	 * 
+	 */
+	void setForeign(boolean value);
 
-    /**
-     * Sets the value of the foreign property.
-     * 
-     */
-    void setForeign(boolean value);
+	/**
+	 * Gets the value of the inflectionPattern property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getInflectionPattern();
 
-    /**
-     * Gets the value of the inflectionPattern property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getInflectionPattern();
+	/**
+	 * Sets the value of the inflectionPattern property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setInflectionPattern(java.lang.String value);
 
-    /**
-     * Sets the value of the inflectionPattern property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setInflectionPattern(java.lang.String value);
+	/**
+	 * Gets the value of the inflectBeinoni property.
+	 * 
+	 */
+	boolean isInflectBeinoni();
 
-    /**
-     * Gets the value of the inflectBeinoni property.
-     * 
-     */
-    boolean isInflectBeinoni();
+	/**
+	 * Sets the value of the inflectBeinoni property.
+	 * 
+	 */
+	void setInflectBeinoni(boolean value);
 
-    /**
-     * Sets the value of the inflectBeinoni property.
-     * 
-     */
-    void setInflectBeinoni(boolean value);
+	/**
+	 * Gets the value of the inflectInfinitivel property.
+	 * 
+	 */
+	boolean isInflectInfinitivel();
 
-    /**
-     * Gets the value of the inflectInfinitivel property.
-     * 
-     */
-    boolean isInflectInfinitivel();
+	/**
+	 * Sets the value of the inflectInfinitivel property.
+	 * 
+	 */
+	void setInflectInfinitivel(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitivel property.
-     * 
-     */
-    void setInflectInfinitivel(boolean value);
+	/**
+	 * Gets the value of the valence property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getValence();
 
-    /**
-     * Gets the value of the valence property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getValence();
+	/**
+	 * Sets the value of the valence property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setValence(java.lang.String value);
 
-    /**
-     * Sets the value of the valence property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setValence(java.lang.String value);
+	/**
+	 * Gets the value of the inflectOrigin property.
+	 * 
+	 */
+	boolean isInflectOrigin();
 
-    /**
-     * Gets the value of the inflectOrigin property.
-     * 
-     */
-    boolean isInflectOrigin();
+	/**
+	 * Sets the value of the inflectOrigin property.
+	 * 
+	 */
+	void setInflectOrigin(boolean value);
 
-    /**
-     * Sets the value of the inflectOrigin property.
-     * 
-     */
-    void setInflectOrigin(boolean value);
+	/**
+	 * Gets the value of the root property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getRoot();
 
-    /**
-     * Gets the value of the root property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getRoot();
+	/**
+	 * Sets the value of the root property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setRoot(java.lang.String value);
 
-    /**
-     * Sets the value of the root property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setRoot(java.lang.String value);
+	/**
+	 * Gets the value of the inflectPast property.
+	 * 
+	 */
+	boolean isInflectPast();
 
-    /**
-     * Gets the value of the inflectPast property.
-     * 
-     */
-    boolean isInflectPast();
+	/**
+	 * Sets the value of the inflectPast property.
+	 * 
+	 */
+	void setInflectPast(boolean value);
 
-    /**
-     * Sets the value of the inflectPast property.
-     * 
-     */
-    void setInflectPast(boolean value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.MultiWordVerbPhraseLexiconType.Replace}
+	 * {@link lexicon.jaxb.MultiWordVerbPhraseLexiconType.Remove}
+	 * {@link lexicon.jaxb.MultiWordVerbPhraseLexiconType.Add}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.MultiWordVerbPhraseLexiconType.Replace}
-     * {@link lexicon.jaxb.MultiWordVerbPhraseLexiconType.Remove}
-     * {@link lexicon.jaxb.MultiWordVerbPhraseLexiconType.Add}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the binyan property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getBinyan();
 
-    /**
-     * Gets the value of the binyan property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getBinyan();
+	/**
+	 * Sets the value of the binyan property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setBinyan(java.lang.String value);
 
-    /**
-     * Sets the value of the binyan property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setBinyan(java.lang.String value);
+	/**
+	 * Gets the value of the inflectImperative property.
+	 * 
+	 */
+	boolean isInflectImperative();
 
-    /**
-     * Gets the value of the inflectImperative property.
-     * 
-     */
-    boolean isInflectImperative();
+	/**
+	 * Sets the value of the inflectImperative property.
+	 * 
+	 */
+	void setInflectImperative(boolean value);
 
-    /**
-     * Sets the value of the inflectImperative property.
-     * 
-     */
-    void setInflectImperative(boolean value);
+	/**
+	 * Gets the value of the inflectInfinitiveb property.
+	 * 
+	 */
+	boolean isInflectInfinitiveb();
 
-    /**
-     * Gets the value of the inflectInfinitiveb property.
-     * 
-     */
-    boolean isInflectInfinitiveb();
+	/**
+	 * Sets the value of the inflectInfinitiveb property.
+	 * 
+	 */
+	void setInflectInfinitiveb(boolean value);
 
-    /**
-     * Sets the value of the inflectInfinitiveb property.
-     * 
-     */
-    void setInflectInfinitiveb(boolean value);
+	/**
+	 * 
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 2017)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}MultiWordVerbPhraseExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.MultiWordVerbPhraseExceptionType {
 
+	}
 
-    /**
-     * 
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 2017)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}MultiWordVerbPhraseExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.MultiWordVerbPhraseExceptionType
-    {
+	/**
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 2029)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}MultiWordVerbPhraseExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.MultiWordVerbPhraseExceptionType {
 
+	}
 
-    }
+	/**
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd
+	 * line 2023)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}MultiWordVerbPhraseExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.MultiWordVerbPhraseExceptionType {
 
-
-    /**
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 2029)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}MultiWordVerbPhraseExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.MultiWordVerbPhraseExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 2023)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}MultiWordVerbPhraseExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.MultiWordVerbPhraseExceptionType
-    {
-
-
-    }
+	}
 
 }

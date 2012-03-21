@@ -12,38 +12,34 @@ import java.util.List;
 import lexicon.contents.Content;
 import lexicon.contents.exception_types.MultiWordNounAdjectiveExceptionType;
 
-
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
-public class MultiWordNounAdjectiveLexiconType extends Content implements lexicon.jaxb.MultiWordNounAdjectiveLexiconType 
-{
+public class MultiWordNounAdjectiveLexiconType extends Content implements
+		lexicon.jaxb.MultiWordNounAdjectiveLexiconType {
 	lexicon.jaxb.MultiWordNounAdjectiveLexiconType content;
 
-	public MultiWordNounAdjectiveLexiconType(lexicon.jaxb.MultiWordNounAdjectiveLexiconType content) 
-	{
+	public MultiWordNounAdjectiveLexiconType(
+			lexicon.jaxb.MultiWordNounAdjectiveLexiconType content) {
 		this.content = content;
 		TABLE = "multiWordNounAdjective";
 		IDNAME = "id";
 	}
 
-	public MultiWordNounAdjectiveLexiconType() 
-	{
+	public MultiWordNounAdjectiveLexiconType() {
 		content = new lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl();
 		TABLE = "multiWordNounAdjective";
 		IDNAME = "id";
 	}
 
-	public lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl getImpl() 
-	{
+	public lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl getImpl() {
 		return (lexicon.jaxb.impl.MultiWordNounAdjectiveLexiconTypeImpl) content;
 	}
 
-	public int add() 
-	{
+	public int add() {
 		return 0;
 	}
 
@@ -52,13 +48,12 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 	 * subclasses of Content. Connects to the DB, commits the different SQL
 	 * statements and return feedback.
 	 * 
-	 * @param sql -
-	 *            The SQL statement to be executed.
+	 * @param sql
+	 *            - The SQL statement to be executed.
 	 * @return Number of rows affected (0, if nothing happened, 1 if one row
 	 *         added).
 	 */
-	public int add(int id) 
-	{
+	public int add(int id) {
 		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += id;
 		sql += ", '" + getMwPos() + "'";
@@ -71,17 +66,16 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 		sql += ", " + (isInflectPossessiveS() ? 1 : 0);
 		sql += ", " + (isInflectPossessiveP() ? 1 : 0);
 		String inflectionBase = getInflectionBase();
-		if (inflectionBase == null) 
-		{
+		if (inflectionBase == null) {
 			inflectionBase = "";
-		} 
-		try 
-		{
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.ADD_ENCODING); 
 		}
-		catch (Exception e) {}
-		sql += ", '"+ inflectionBase +"'";
-		sql += ", '"+ getType() +"'";
+		try {
+			inflectionBase = URLEncoder.encode(inflectionBase,
+					Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + inflectionBase + "'";
+		sql += ", '" + getType() + "'";
 		sql += ", '" + getPluralFemaleNoun() + "'";
 		sql += ", '" + getPluralFemaleAdjective() + "'";
 		sql += ", '" + getPluralMaleNoun() + "'";
@@ -110,8 +104,7 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 	 * @return The number of rows that were affected from the action. If 0, then
 	 *         nothing happened
 	 */
-	public int update() 
-	{
+	public int update() {
 		String sql = "UPDATE " + getTableName() + " SET";
 		sql += " gender='" + getGender() + "'";
 		sql += ", number='" + getNumber() + "'";
@@ -119,32 +112,32 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 		sql += ", feminine_adjective='" + getFeminineAdjective() + "'";
 		sql += ", type='" + getType() + "'";
 		sql += ", plural_feminine_noun='" + getPluralFemaleNoun() + "'";
-		sql += ", plural_feminine_adjective='" + getPluralFemaleAdjective() + "'";
+		sql += ", plural_feminine_adjective='" + getPluralFemaleAdjective()
+				+ "'";
 		sql += ", plural_masculine_noun='" + getPluralMaleNoun() + "'";
-		sql += ", plural_masculine_adjective='" + getPluralMaleAdjective() + "'";
+		sql += ", plural_masculine_adjective='" + getPluralMaleAdjective()
+				+ "'";
 		sql += ", definiteness='" + getDefiniteness() + "'";
 		sql += ", pos='" + getMwPos() + "'";
 		sql += ", consecutive=" + (isConsecutive() ? 1 : 0);
 		sql += ", inflectPossessiveS=" + (isInflectPossessiveS() ? 1 : 0);
 		sql += ", inflectPossessiveP=" + (isInflectPossessiveP() ? 1 : 0);
 		String inflectionBase = getInflectionBase();
-		if (inflectionBase == null) 
-		{
+		if (inflectionBase == null) {
 			inflectionBase = "";
 		}
-		try 
-		{
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.UPDATE_ENCODING);			
+		try {
+			inflectionBase = URLEncoder.encode(inflectionBase,
+					Content.UPDATE_ENCODING);
+		} catch (Exception e) {
 		}
-		catch (Exception e) {} 
-		sql += ", inflectionBase='"+ inflectionBase +"'";
+		sql += ", inflectionBase='" + inflectionBase + "'";
 		sql += " WHERE id=" + getID();
 		int feedback = execute(sql);
 		return feedback;
 	}
 
-	public void load() 
-	{
+	public void load() {
 		List actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
@@ -193,24 +186,27 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 	}
 
 	protected int removeActions(int id) {
-		return removeContents("multiWordNounAdjective_exception_type", "id", "aid", id);
+		return removeContents("multiWordNounAdjective_exception_type", "id",
+				"aid", id);
 	}
 
 	protected String getAction(Object obj) {
 		String name = obj.getClass().getName();
-		if (name.indexOf("Add") >=0) {
+		if (name.indexOf("Add") >= 0) {
 			return "add";
 		}
-		if (name.indexOf("Replace") >=0) {
+		if (name.indexOf("Replace") >= 0) {
 			return "replace";
 		}
-		if (name.indexOf("Remove") >=0) {
+		if (name.indexOf("Remove") >= 0) {
 			return "remove";
 		}
 		return "";
 	}
+
 	public java.util.List getActions() {
-		List actions = getContents("multiWordNounAdjective_exception_type", "id", id);
+		List actions = getContents("multiWordNounAdjective_exception_type",
+				"id", id);
 		ArrayList result = new ArrayList();
 		for (int i = 0; i < actions.size(); i++) {
 			Content content = (Content) actions.get(i);
@@ -252,8 +248,6 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 		content.setInflectPossessiveS(value);
 	}
 
-	
-	
 	public boolean isInflectPossessiveP() {
 		return content.isInflectPossessiveP();
 	}
@@ -293,7 +287,7 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 	public void setPluralMaleNoun(java.lang.String value) {
 		content.setPluralMaleNoun(value);
 	}
-	
+
 	public java.lang.String getPluralMaleAdjective() {
 		return content.getPluralMaleAdjective();
 	}
@@ -302,15 +296,14 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 		content.setPluralMaleAdjective(value);
 	}
 
-	public java.lang.String getPluralFemaleNoun() 
-	{
+	public java.lang.String getPluralFemaleNoun() {
 		return content.getPluralFemaleNoun();
 	}
 
 	public void setPluralFemaleNoun(java.lang.String value) {
 		content.setPluralFemaleNoun(value);
 	}
-	
+
 	public java.lang.String getPluralFemaleAdjective() {
 		return content.getPluralFemaleAdjective();
 	}
@@ -319,7 +312,6 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 		content.setPluralFemaleAdjective(value);
 	}
 
-	
 	public java.lang.String getFeminineNoun() {
 		return content.getFeminineNoun();
 	}
@@ -327,7 +319,7 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 	public void setFeminineNoun(java.lang.String value) {
 		content.setFeminineNoun(value);
 	}
-	
+
 	public java.lang.String getFeminineAdjective() {
 		return content.getFeminineAdjective();
 	}
@@ -352,10 +344,14 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 		content.setType(value);
 	}
 
-	
-	public void setInflectionBase(String value) { content.setInflectionBase(value); }
-	
-	public java.lang.String getInflectionBase() { return content.getInflectionBase(); }
+	public void setInflectionBase(String value) {
+		content.setInflectionBase(value);
+	}
+
+	public java.lang.String getInflectionBase() {
+		return content.getInflectionBase();
+	}
+
 	public java.util.List getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}

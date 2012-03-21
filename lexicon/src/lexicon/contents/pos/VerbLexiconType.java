@@ -13,88 +13,62 @@ import java.util.List;
 
 import lexicon.contents.exception_types.VerbExceptionType;
 import lexicon.contents.Content;
+
 /**
- * ���� �� ���� �����.
- * undotted, transliterated �- dotted ������� ����� �� �� ���� ��� ���� ���� ���.
+ * ���� �� ���� �����. undotted, transliterated �- dotted ������� ����� �� ��
+ * ���� ��� ���� ���� ���.
  * 
- * �����:
- * ======
- * root ������ ��"� �- 3 ������. ���� ������ ��� 2 ������ ��� ���� ��� 4 �- 5. ������ ������� ���� ���� ����� ����� ������ ����/���� ����� -- ���� �� "����� ������ �����" ����� �� ���� ����� "����� �������" ��� 6.
- * �����:
- * ======
- * �� ������ ����� ���� (root) ��� ����� �� ����� ����� (binyan). �"� ������� root �- binyan ������ ������ ��� �� �� ������ ���. ��� ��� ��� ����� �� ������ �� ���� ������ ��� ��� ������ ����� �� ����� ����� ���� ���� ��� ���� ���� ���� ��� ��� ����. ����� ����, ����� ��� ���� ����� ���� ���� ������� ���� ������ ���� ���� ������. ���� ���� �� �� ����� �� ���� ����� "����� �������" ��� 2 ���� 2.3 �"� 28-32.
- * �����:
- * =======
- * �� ��� ������ ���� ���� ���� ����� inflectionPattern �- ipSource, ����� ��� ������ ����� ���� ����� ������ ��� ��� ������.
- * ������ ������� ����� ���  ����� �� ������ ����� ����� ��� ������ ������� �����.
- * ����� ������ �����:
- * ===================
- * ������ ������ ������� ������� ������ ������ �� ���� ���������.
- * ���� ����� ������ ������ ������� ������ ��������� �-"��� ������ ����" �� ��"� ���� �����:
- * inflectionPattern1	Pa'al: 1,2,3,6,7,8,
- * inflectionPattern2	Pa'al: 4,13,15,16,17,26,27,29,
- * inflectionPattern3	Pa'al: 5,10,11,14,18,28,
- * inflectionPattern4	Pa'al: 9,
- * inflectionPattern5	Pa'al: 12,
- * inflectionPattern6	Pa'al: 19,20,
- * inflectionPattern7	Pa'al: 21,
- * inflectionPattern8	Pa'al: 22,
- * inflectionPattern9	Pa'al: 23,24,
- * inflectionPattern10	Pa'al: 25,30,
- * inflectionPattern11	Pa'al: 31,32,33,34,35,36,
- * inflectionPattern12	Pa'al: 37,
- * inflectionPattern13	Pa'al: 38,40,41,
- * inflectionPattern14	Pa'al: 39,
- * inflectionPattern15	Pa'al: 42,
- * inflectionPattern16	Pa'al: 43,45,
- * inflectionPattern17	Pa'al: 44,
- * inflectionPattern18	Pa'al: 46,
- * inflectionPattern19	Pa'al: 47,
- * inflectionPattern20	Pa'al: 48,
- * inflectionPattern21	Pa'al: 49,50,51,
- * inflectionPattern22	Pa'al: 52,
- * inflectionPattern23	Pi'el: 1,2,3,4,5,6,7,8,9,10,11,12,24,25,26,
- * inflectionPattern24	Pi'el: (all these entries are represented as inflectionPattern23 -- this should be fixed)
- * inflectionPattern25	Pi'el: 13,
- * inflectionPattern26	Pi'el: 14,
- * inflectionPattern27	Pi'el: 15,
- * inflectionPattern28	Pi'el: 16,
- * inflectionPattern29	Pi'el: 17,
- * inflectionPattern30	Pi'el: 18,
- * inflectionPattern31	Pi'el: 19,20,23,
- * inflectionPattern32	Pi'el: 21,
- * inflectionPattern33	Pi'el: 22,
- * inflectionPattern34	Pi'el: 27,
- * inflectionPattern35	Pi'el: 28,
- * inflectionPattern36	Pu'al: 1-21,23,25,26,
- * inflectionPattern37	Pu'al: 22,
- * inflectionPattern38	Pu'al: 24,
- * inflectionPattern39	Pu'al: 27,29,
- * inflectionPattern40	Pu'al: 28,
- * inflectionPattern41	Pu'al: 30,
- * inflectionPattern42	Hitpa'el: 1-8,10-23,26,27,33-43
- * inflectionPattern43	Hitpa'el: 9,
- * inflectionPattern44	Hitpa'el: 24,25,
- * inflectionPattern45	Hitpa'el: 28,29,32,
- * inflectionPattern46	Hitpa'el: 30,
- * inflectionPattern47	Hitpa'el: 31,
- * inflectionPattern48	Hif'il: 1-8,11,15-17,23-26,40,
- * inflectionPattern49	Hif'il: 9,10,
- * inflectionPattern50	Hif'il: 12-14,
- * inflectionPattern51	Hif'il: 18-22,
- * inflectionPattern52	Hif'il: 27-34,
- * inflectionPattern53	Hif'il: 35-39
- * inflectionPattern54	Huf'al: 1-12,14,15,19,20,28
- * inflectionPattern55	Huf'al: 13,
- * inflectionPattern56	Huf'al: 16-18,
- * inflectionPattern57	Huf'al: 21-27
- * inflectionPattern58	Nif'al: 1-14,17-19,
- * inflectionPattern59	Nif'al: 15,16,25,
- * inflectionPattern60	Nif'al: 20-24,
+ * �����: ====== root ������ ��
+ * "� �- 3 ������. ���� ������ ��� 2 ������ ��� ���� ��� 4 �- 5. ������ ������� ���� ���� ����� ����� ������ ����/���� ����� -- ���� �� "
+ * ����� ������ �����" ����� �� ���� ����� "����� �������" ��� 6. �����: ======
+ * �� ������ ����� ���� (root) ��� ����� �� ����� ����� (binyan). �
+ * "� ������� root �- binyan ������ ������ ��� �� �� ������ ���. ��� ��� ��� ����� �� ������ �� ���� ������ ��� ��� ������ ����� �� ����� ����� ���� ���� ��� ���� ���� ���� ��� ��� ����. ����� ����, ����� ��� ���� ����� ���� ���� ������� ���� ������ ���� ���� ������. ���� ���� �� �� ����� �� ���� ����� "
+ * ����� �������" ��� 2 ���� 2.3 �"� 28-32. �����: ======= �� ��� ������ ����
+ * ���� ���� ����� inflectionPattern �- ipSource, ����� ��� ������ ����� ����
+ * ����� ������ ��� ��� ������. ������ ������� ����� ��� ����� �� ������ �����
+ * ����� ��� ������ ������� �����. ����� ������ �����: ===================
+ * ������ ������ ������� ������� ������ ������ �� ���� ���������. ���� �����
+ * ������ ������ ������� ������ ��������� �-"��� ������ ����" �� ��"� ����
+ * �����: inflectionPattern1 Pa'al: 1,2,3,6,7,8, inflectionPattern2 Pa'al:
+ * 4,13,15,16,17,26,27,29, inflectionPattern3 Pa'al: 5,10,11,14,18,28,
+ * inflectionPattern4 Pa'al: 9, inflectionPattern5 Pa'al: 12, inflectionPattern6
+ * Pa'al: 19,20, inflectionPattern7 Pa'al: 21, inflectionPattern8 Pa'al: 22,
+ * inflectionPattern9 Pa'al: 23,24, inflectionPattern10 Pa'al: 25,30,
+ * inflectionPattern11 Pa'al: 31,32,33,34,35,36, inflectionPattern12 Pa'al: 37,
+ * inflectionPattern13 Pa'al: 38,40,41, inflectionPattern14 Pa'al: 39,
+ * inflectionPattern15 Pa'al: 42, inflectionPattern16 Pa'al: 43,45,
+ * inflectionPattern17 Pa'al: 44, inflectionPattern18 Pa'al: 46,
+ * inflectionPattern19 Pa'al: 47, inflectionPattern20 Pa'al: 48,
+ * inflectionPattern21 Pa'al: 49,50,51, inflectionPattern22 Pa'al: 52,
+ * inflectionPattern23 Pi'el: 1,2,3,4,5,6,7,8,9,10,11,12,24,25,26,
+ * inflectionPattern24 Pi'el: (all these entries are represented as
+ * inflectionPattern23 -- this should be fixed) inflectionPattern25 Pi'el: 13,
+ * inflectionPattern26 Pi'el: 14, inflectionPattern27 Pi'el: 15,
+ * inflectionPattern28 Pi'el: 16, inflectionPattern29 Pi'el: 17,
+ * inflectionPattern30 Pi'el: 18, inflectionPattern31 Pi'el: 19,20,23,
+ * inflectionPattern32 Pi'el: 21, inflectionPattern33 Pi'el: 22,
+ * inflectionPattern34 Pi'el: 27, inflectionPattern35 Pi'el: 28,
+ * inflectionPattern36 Pu'al: 1-21,23,25,26, inflectionPattern37 Pu'al: 22,
+ * inflectionPattern38 Pu'al: 24, inflectionPattern39 Pu'al: 27,29,
+ * inflectionPattern40 Pu'al: 28, inflectionPattern41 Pu'al: 30,
+ * inflectionPattern42 Hitpa'el: 1-8,10-23,26,27,33-43 inflectionPattern43
+ * Hitpa'el: 9, inflectionPattern44 Hitpa'el: 24,25, inflectionPattern45
+ * Hitpa'el: 28,29,32, inflectionPattern46 Hitpa'el: 30, inflectionPattern47
+ * Hitpa'el: 31, inflectionPattern48 Hif'il: 1-8,11,15-17,23-26,40,
+ * inflectionPattern49 Hif'il: 9,10, inflectionPattern50 Hif'il: 12-14,
+ * inflectionPattern51 Hif'il: 18-22, inflectionPattern52 Hif'il: 27-34,
+ * inflectionPattern53 Hif'il: 35-39 inflectionPattern54 Huf'al:
+ * 1-12,14,15,19,20,28 inflectionPattern55 Huf'al: 13, inflectionPattern56
+ * Huf'al: 16-18, inflectionPattern57 Huf'al: 21-27 inflectionPattern58 Nif'al:
+ * 1-14,17-19, inflectionPattern59 Nif'al: 15,16,25, inflectionPattern60 Nif'al:
+ * 20-24,
  * 
  * Java content class for VerbLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 488)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 488)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="VerbLexiconType">
  *   &lt;complexContent>
@@ -124,193 +98,224 @@ import lexicon.contents.Content;
  * </pre>
  * 
  */
-public class VerbLexiconType extends Content implements lexicon.jaxb.VerbLexiconType{
+public class VerbLexiconType extends Content implements
+		lexicon.jaxb.VerbLexiconType {
 	lexicon.jaxb.VerbLexiconType content;
-	
+
 	public VerbLexiconType(lexicon.jaxb.VerbLexiconType content) {
 		this.content = content;
 		TABLE = "verb";
-		IDNAME = "id"; 
+		IDNAME = "id";
 	}
+
 	public VerbLexiconType() {
 		content = new lexicon.jaxb.impl.VerbLexiconTypeImpl();
 		TABLE = "verb";
-		IDNAME = "id"; 
+		IDNAME = "id";
 	}
+
 	public lexicon.jaxb.impl.VerbLexiconTypeImpl getImpl() {
-		return (lexicon.jaxb.impl.VerbLexiconTypeImpl)content;
+		return (lexicon.jaxb.impl.VerbLexiconTypeImpl) content;
 	}
+
 	public int add() {
 		return 0;
 	}
+
 	/**
-	*An empty implementation to the method add() methods in the different subclasses of Content.
-	*Connects to the DB, commits the different SQL statements and return feedback.
-	*@param		sql - The SQL statement to be executed.
-	*@return	Number of rows affected (0, if nothing happened, 1 if one row added).
-	*/
-	
-	
+	 * An empty implementation to the method add() methods in the different
+	 * subclasses of Content. Connects to the DB, commits the different SQL
+	 * statements and return feedback.
+	 * 
+	 * @param sql
+	 *            - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row
+	 *         added).
+	 */
 
 	public int add(int id) {
-		String sql = "INSERT INTO "+ getTableName() + " VALUES (";
+		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += id;
 
-		sql += ", "+(isInflectOrigin()?1:0);
-		sql += ", "+(isInflectInfinitive()?1:0);
-		sql += ", "+(isInflectInfinitivel()?1:0);
-		sql += ", "+(isInflectInfinitiveb()?1:0);
-		sql += ", "+(isInflectPast()?1:0);
-		sql += ", "+(isInflectBeinoni()?1:0);
-		sql += ", "+(isInflectFuture()?1:0);
-		sql += ", "+(isInflectImperative()?1:0);
-		
-		sql += ", '"+ getFeminine() +"'";
-		sql += ", '"+ getValence() +"'";
+		sql += ", " + (isInflectOrigin() ? 1 : 0);
+		sql += ", " + (isInflectInfinitive() ? 1 : 0);
+		sql += ", " + (isInflectInfinitivel() ? 1 : 0);
+		sql += ", " + (isInflectInfinitiveb() ? 1 : 0);
+		sql += ", " + (isInflectPast() ? 1 : 0);
+		sql += ", " + (isInflectBeinoni() ? 1 : 0);
+		sql += ", " + (isInflectFuture() ? 1 : 0);
+		sql += ", " + (isInflectImperative() ? 1 : 0);
+
+		sql += ", '" + getFeminine() + "'";
+		sql += ", '" + getValence() + "'";
 		String root = getRoot();
 		if (root == null) {
 			root = "";
-		} 
+		}
 		try {
-			root = URLEncoder.encode(root, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+ root +"'";
+			root = URLEncoder.encode(root, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + root + "'";
 		String binyan = getBinyan();
 		String temp = binyan;
 		binyan = binyan.replaceAll("'", "\\\\'");
-		sql += ", '"+binyan+"'";
-		sql += ", "+(isForeign()?1:0);
-		sql += ", '"+ getInflectionPattern() +"'";
+		sql += ", '" + binyan + "'";
+		sql += ", " + (isForeign() ? 1 : 0);
+		sql += ", '" + getInflectionPattern() + "'";
 		String ipSource = getIpSource();
 		ipSource = ipSource.replaceAll("'", "\\\\'");
-		sql += ", '"+ ipSource ;
-		sql += "', "+(isInflectBeinoniConstruct()?1:0);
-		sql += ", "+(isInflectBeinoniPossessive()?1:0);
-		sql += ", "+(isInflectInfinitiveIndependent()?1:0);
+		sql += ", '" + ipSource;
+		sql += "', " + (isInflectBeinoniConstruct() ? 1 : 0);
+		sql += ", " + (isInflectBeinoniPossessive() ? 1 : 0);
+		sql += ", " + (isInflectInfinitiveIndependent() ? 1 : 0);
 		sql += ")";
 		System.out.println(sql);
-		int feedback =execute(sql);
-		id = getCurrentID(getTableName(), getIDName()); 
+		int feedback = execute(sql);
+		id = getCurrentID(getTableName(), getIDName());
 		addActions(id);
 		return feedback;
 	}
+
 	/**
-	*Updates the current record in the DB, so it would resemble the current object state.
-	*The method uses ResultSet.updateRow method in order to implement the generic update process.
-	*The method finds the record of the current object, generates the meta data (the names and types of the columns)
-	*, Runs on the columns and updateing each one, according with the column type. After these stages, the
-	*method calls <code>ResultSet.updateRow</code> in order to execute the update in the DB.
-	*@see   #info
-	*@see   ResultSet#updateRow
-	*@see   #openRS
-	*@return	The number of rows that were affected from the action. If 0, then nothing happened
-	*/
+	 * Updates the current record in the DB, so it would resemble the current
+	 * object state. The method uses ResultSet.updateRow method in order to
+	 * implement the generic update process. The method finds the record of the
+	 * current object, generates the meta data (the names and types of the
+	 * columns) , Runs on the columns and updateing each one, according with the
+	 * column type. After these stages, the method calls
+	 * <code>ResultSet.updateRow</code> in order to execute the update in the
+	 * DB.
+	 * 
+	 * @see #info
+	 * @see ResultSet#updateRow
+	 * @see #openRS
+	 * @return The number of rows that were affected from the action. If 0, then
+	 *         nothing happened
+	 */
 	public int update() {
-		String sql = "UPDATE "+ getTableName() + " SET   ";
-		
-		sql += "hebForeign="+(isForeign()?1:0);
-		sql += ", inflectInfinitive="+(isInflectInfinitive()?1:0);
-		sql += ", inflectOrigin="+(isInflectOrigin()?1:0);
-		sql += ", inflectInfinitivel="+(isInflectInfinitivel()?1:0);
-		sql += ", inflectInfinitiveb="+(isInflectInfinitiveb()?1:0);
-		sql += ", inflectPast="+(isInflectPast()?1:0);
-		sql += ", inflectBeinoni="+(isInflectBeinoni()?1:0);
-		sql += ", inflectFuture="+(isInflectFuture()?1:0);
-		sql += ", inflectImperative="+(isInflectImperative()?1:0);
-		sql += ", inflectBeinoniConstruct="+(isInflectBeinoniConstruct()?1:0);
-		sql += ", inflectBeinoniPossessive="+(isInflectBeinoniPossessive()?1:0);
-		sql += ", inflectInfinitiveIndependent="+(isInflectInfinitiveIndependent()?1:0);
-		
-		sql += ", feminine='"+ getFeminine() +"'";
-		sql += ", valence='"+ getValence() +"'";
+		String sql = "UPDATE " + getTableName() + " SET   ";
+
+		sql += "hebForeign=" + (isForeign() ? 1 : 0);
+		sql += ", inflectInfinitive=" + (isInflectInfinitive() ? 1 : 0);
+		sql += ", inflectOrigin=" + (isInflectOrigin() ? 1 : 0);
+		sql += ", inflectInfinitivel=" + (isInflectInfinitivel() ? 1 : 0);
+		sql += ", inflectInfinitiveb=" + (isInflectInfinitiveb() ? 1 : 0);
+		sql += ", inflectPast=" + (isInflectPast() ? 1 : 0);
+		sql += ", inflectBeinoni=" + (isInflectBeinoni() ? 1 : 0);
+		sql += ", inflectFuture=" + (isInflectFuture() ? 1 : 0);
+		sql += ", inflectImperative=" + (isInflectImperative() ? 1 : 0);
+		sql += ", inflectBeinoniConstruct="
+				+ (isInflectBeinoniConstruct() ? 1 : 0);
+		sql += ", inflectBeinoniPossessive="
+				+ (isInflectBeinoniPossessive() ? 1 : 0);
+		sql += ", inflectInfinitiveIndependent="
+				+ (isInflectInfinitiveIndependent() ? 1 : 0);
+
+		sql += ", feminine='" + getFeminine() + "'";
+		sql += ", valence='" + getValence() + "'";
 		String root = getRoot();
 		if (root == null) {
 			root = "";
-		} 
+		}
 		try {
-			root = URLEncoder.encode(root, Content.UPDATE_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", root='"+ root +"'";
+			root = URLEncoder.encode(root, Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", root='" + root + "'";
 		String binyan = getBinyan();
 		String temp = binyan;
 		binyan = binyan.replaceAll("'", "\\\\'");
-		sql += ", binyan='"+binyan+"'";
-		sql += ", inflectionPattern='"+ getInflectionPattern() +"'";
+		sql += ", binyan='" + binyan + "'";
+		sql += ", inflectionPattern='" + getInflectionPattern() + "'";
 		String ipSource = getIpSource();
 		ipSource = ipSource.replaceAll("'", "\\\\'");
-		sql += ", ipSource='"+ ipSource +"' WHERE id="+getID();
-		int feedback =execute(sql); 
-		//updateActions();
+		sql += ", ipSource='" + ipSource + "' WHERE id=" + getID();
+		int feedback = execute(sql);
+		// updateActions();
 		return feedback;
 	}
+
 	protected int addActions(int id) {
 		int result = 0;
-		for (int i=0; i< getAddOrReplaceOrRemove().size(); i++) {
-			VerbExceptionType exceptionType = new VerbExceptionType((lexicon.jaxb.VerbExceptionType)getAddOrReplaceOrRemove().get(i));
-			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
+		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
+			VerbExceptionType exceptionType = new VerbExceptionType(
+					(lexicon.jaxb.VerbExceptionType) getAddOrReplaceOrRemove()
+							.get(i));
+			exceptionType
+					.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
 		return result;
 	}
+
 	protected int updateActions() {
 		int result = 0;
-		for (int i=0; i< getAddOrReplaceOrRemove().size(); i++) {
-			VerbExceptionType exceptionType = new VerbExceptionType((lexicon.jaxb.VerbExceptionType)getAddOrReplaceOrRemove().get(i));
-			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
+		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
+			VerbExceptionType exceptionType = new VerbExceptionType(
+					(lexicon.jaxb.VerbExceptionType) getAddOrReplaceOrRemove()
+							.get(i));
+			exceptionType
+					.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
 		return result;
-	} 
-	protected int removeActions(int id) {
-		return removeContents("verb_exception_type", "id", "aid", id); 
 	}
+
+	protected int removeActions(int id) {
+		return removeContents("verb_exception_type", "id", "aid", id);
+	}
+
 	public int remove() {
 		removeActions(id);
 		int result = super.remove();
 		return result;
 	}
+
 	protected String getAction(Object obj) {
 		String name = obj.getClass().getName();
-		if (name.indexOf("Add") >=0) {
+		if (name.indexOf("Add") >= 0) {
 			return "add";
 		}
-		if (name.indexOf("Replace") >=0) {
+		if (name.indexOf("Replace") >= 0) {
 			return "replace";
 		}
-		if (name.indexOf("Remove") >=0) {
+		if (name.indexOf("Remove") >= 0) {
 			return "remove";
 		}
 		return "";
 	}
+
 	public void load() {
 		List actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
-		
+
 		setBinyan(getString("binyan"));
-		setForeign(getInt("hebForeign")==1);
+		setForeign(getInt("hebForeign") == 1);
 		setFeminine(getString("feminine"));
 		setValence(getString("valence"));
 		setRoot(getString("root"));
 		setInflectionPattern(getString("inflectionPattern"));
 		setIpSource(getString("ipSource"));
-		setInflectOrigin(getInt("inflectOrigin")==1);
-		setInflectInfinitive(getInt("inflectInfinitive")==1);
-		setInflectInfinitivel(getInt("inflectInfinitivel")==1);
-		setInflectInfinitiveb(getInt("inflectInfinitiveb")==1);
-		setInflectPast(getInt("inflectPast")==1);
-		setInflectBeinoni(getInt("inflectBeinoni")==1);
-		setInflectFuture(getInt("inflectFuture")==1);
-		setInflectImperative(getInt("inflectImperative")==1);
-		setInflectBeinoniConstruct(getInt("inflectBeinoniConstruct")==1);
-		setInflectBeinoniPossessive(getInt("inflectBeinoniPossessive")==1);
-		setInflectInfinitiveIndependent(getInt("inflectInfinitiveIndependent")==1);
+		setInflectOrigin(getInt("inflectOrigin") == 1);
+		setInflectInfinitive(getInt("inflectInfinitive") == 1);
+		setInflectInfinitivel(getInt("inflectInfinitivel") == 1);
+		setInflectInfinitiveb(getInt("inflectInfinitiveb") == 1);
+		setInflectPast(getInt("inflectPast") == 1);
+		setInflectBeinoni(getInt("inflectBeinoni") == 1);
+		setInflectFuture(getInt("inflectFuture") == 1);
+		setInflectImperative(getInt("inflectImperative") == 1);
+		setInflectBeinoniConstruct(getInt("inflectBeinoniConstruct") == 1);
+		setInflectBeinoniPossessive(getInt("inflectBeinoniPossessive") == 1);
+		setInflectInfinitiveIndependent(getInt("inflectInfinitiveIndependent") == 1);
 	}
+
 	public java.util.List getActions() {
 		List actions = getContents("verb_exception_type", "id", id);
 		ArrayList result = new ArrayList();
-		for (int i=0; i< actions.size(); i++) {
-			Content content = (Content)actions.get(i);
+		for (int i = 0; i < actions.size(); i++) {
+			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
 				Add action = new Add();
 				action.open(content.getInt("aid"));
@@ -328,410 +333,445 @@ public class VerbLexiconType extends Content implements lexicon.jaxb.VerbLexicon
 			}
 		}
 		return result;
-	}	
-    /**
-     * Gets the value of the feminine property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-	public java.lang.String getFeminine() { return content.getFeminine();}
+	}
 
-    /**
-     * Sets the value of the feminine property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setFeminine(java.lang.String value) { content.setFeminine(value); }
+	/**
+	 * Gets the value of the feminine property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getFeminine() {
+		return content.getFeminine();
+	}
 
-   
+	/**
+	 * Sets the value of the feminine property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	public void setFeminine(java.lang.String value) {
+		content.setFeminine(value);
+	}
 
-    /**
-     * Gets the value of the ipSource property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getIpSource() { return content.getIpSource(); }
+	/**
+	 * Gets the value of the ipSource property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getIpSource() {
+		return content.getIpSource();
+	}
 
-    /**
-     * Sets the value of the ipSource property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setIpSource(java.lang.String value) { content.setIpSource(value); }
+	/**
+	 * Sets the value of the ipSource property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	public void setIpSource(java.lang.String value) {
+		content.setIpSource(value);
+	}
 
-    /**
-     * Gets the value of the inflectionPattern property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getInflectionPattern() { 
-    	if (content.getInflectionPattern() == null) {
+	/**
+	 * Gets the value of the inflectionPattern property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getInflectionPattern() {
+		if (content.getInflectionPattern() == null) {
 			return "";
 		}
-    	return content.getInflectionPattern(); }
+		return content.getInflectionPattern();
+	}
 
-    /**
-     * Sets the value of the inflectionPattern property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setInflectionPattern(java.lang.String value) { content.setInflectionPattern(value); }
+	/**
+	 * Sets the value of the inflectionPattern property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	public void setInflectionPattern(java.lang.String value) {
+		content.setInflectionPattern(value);
+	}
 
-   
-    /**
-     * Gets the value of the valence property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getValence() { return content.getValence(); }
+	/**
+	 * Gets the value of the valence property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getValence() {
+		return content.getValence();
+	}
 
-    /**
-     * Sets the value of the valence property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setValence(java.lang.String value) { content.setValence(value); }
+	/**
+	 * Sets the value of the valence property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	public void setValence(java.lang.String value) {
+		content.setValence(value);
+	}
 
-   
-    /**
-     * Gets the value of the root property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getRoot() { 
-    	if (content.getRoot() == null) {
+	/**
+	 * Gets the value of the root property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getRoot() {
+		if (content.getRoot() == null) {
 			return "";
 		}
-    	return content.getRoot(); }
+		return content.getRoot();
+	}
 
-    /**
-     * Sets the value of the root property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setRoot(java.lang.String value) { content.setRoot(value); }
+	/**
+	 * Sets the value of the root property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	public void setRoot(java.lang.String value) {
+		content.setRoot(value);
+	}
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.VerbLexiconType.Remove}
-     * {@link lexicon.jaxb.VerbLexiconType.Add}
-     * {@link lexicon.jaxb.VerbLexiconType.Replace}
-     * 
-     */
-    public java.util.List getAddOrReplaceOrRemove() { return content.getAddOrReplaceOrRemove(); }
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.VerbLexiconType.Remove}
+	 * {@link lexicon.jaxb.VerbLexiconType.Add}
+	 * {@link lexicon.jaxb.VerbLexiconType.Replace}
+	 * 
+	 */
+	public java.util.List getAddOrReplaceOrRemove() {
+		return content.getAddOrReplaceOrRemove();
+	}
 
-    
+	/**
+	 * Gets the value of the binyan property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getBinyan() {
+		return content.getBinyan();
+	}
 
-    /**
-     * Gets the value of the binyan property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getBinyan() { return content.getBinyan(); }
+	/**
+	 * Sets the value of the binyan property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	public void setBinyan(java.lang.String value) {
+		content.setBinyan(value);
+	}
 
-    /**
-     * Sets the value of the binyan property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setBinyan(java.lang.String value) { content.setBinyan(value); }
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectOrigin() { return content.isInflectOrigin(); }
+	public boolean isInflectOrigin() {
+		return content.isInflectOrigin();
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectOrigin(boolean value) { content.setInflectOrigin(value); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectOrigin(boolean value) {
+		content.setInflectOrigin(value);
+	}
 
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-    public boolean isInflectInfinitive() { return content.isInflectInfinitive(); }
+	public boolean isInflectInfinitive() {
+		return content.isInflectInfinitive();
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectInfinitive(boolean value) { content.setInflectInfinitive(value); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectInfinitive(boolean value) {
+		content.setInflectInfinitive(value);
+	}
 
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-    public boolean isInflectInfinitivel() { return content.isInflectInfinitivel(); }
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectInfinitivel(boolean value) { content.setInflectInfinitivel(value); }
+	public boolean isInflectInfinitivel() {
+		return content.isInflectInfinitivel();
+	}
 
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-    
-    public boolean isInflectInfinitiveb() { return content.isInflectInfinitiveb(); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectInfinitivel(boolean value) {
+		content.setInflectInfinitivel(value);
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectInfinitiveb(boolean value) { content.setInflectInfinitiveb(value); }
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectPast() { return content.isInflectPast(); }
+	public boolean isInflectInfinitiveb() {
+		return content.isInflectInfinitiveb();
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectPast(boolean value) { content.setInflectPast(value); }
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectBeinoni() { return content.isInflectBeinoni(); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectInfinitiveb(boolean value) {
+		content.setInflectInfinitiveb(value);
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectBeinoni(boolean value) { content.setInflectBeinoni(value); }
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectFuture() { return content.isInflectFuture(); }
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectFuture(boolean value) { content.setInflectFuture(value); }
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectImperative() { return content.isInflectImperative(); }
+	public boolean isInflectPast() {
+		return content.isInflectPast();
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectImperative(boolean value) { content.setInflectImperative(value); }
-    
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectBeinoniConstruct() { return content.isInflectBeinoniConstruct(); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectPast(boolean value) {
+		content.setInflectPast(value);
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectBeinoniConstruct(boolean value) { content.setInflectBeinoniConstruct(value); }
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-    
-    public boolean isForeign() { return content.isForeign(); }
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setForeign(boolean value) { content.setForeign(value); }
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectInfinitiveIndependent() {
-    	return content.isInflectInfinitiveIndependent(); }
+	public boolean isInflectBeinoni() {
+		return content.isInflectBeinoni();
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectInfinitiveIndependent(boolean value) { content.setInflectInfinitiveIndependent(value); }
-    
-    
-    /**
-     * Gets the value of the inflectConstruct property.
-     * 
-     */
-	
-	
-    public boolean isInflectBeinoniPossessive() { return content.isInflectBeinoniPossessive(); }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectBeinoni(boolean value) {
+		content.setInflectBeinoni(value);
+	}
 
-    /**
-     * Sets the value of the inflectConstruct property.
-     * 
-     */
-    public void setInflectBeinoniPossessive(boolean value) { content.setInflectBeinoniPossessive(value); }
-    
-    
-    
-    public class Add extends VerbExceptionType implements lexicon.jaxb.VerbLexiconType.Add{
-    	public Add() {
-    		super ();
-    		content = new lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl();
-    	}
-    	public Add(lexicon.jaxb.VerbExceptionType content) {
-    		super (content);
-    	}
-    	public lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl)content;
-    	}
-    }
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
+	public boolean isInflectFuture() {
+		return content.isInflectFuture();
+	}
 
-    /**
-     * ���� �� ���� ����� ����� ������ ����� �������, ���� ���� ����� ����� ����� ����� ��������, ��� ����� (���� ������ �� ������ ����, �� ��� ����� ���).
-     * ������ ��� ����� ��� ����� ��� ���� ��� ����� ���� ������, �� ����� �� �� ����� ����� �� ������ ��� �� ���, ����� �����, �� ����� �� ������.
-     * ����� ����, �� ������ ����� ��� �- add ��- replace ��� ������ �- remove, ��� ���� �� ������ ���� ����� ������ ���� ����� ��������.
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 249)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}VerbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public class Remove extends VerbExceptionType implements lexicon.jaxb.VerbLexiconType.Remove {
-    	public Remove(lexicon.jaxb.VerbExceptionType content) {
-    		super (content);
-    	}
-    	public Remove() {
-    		super ();
-    		content = new lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl();
-    	}
-    	public lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl)content;
-    	}
-    }
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectFuture(boolean value) {
+		content.setInflectFuture(value);
+	}
 
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
 
-    /**
-     * ���� �� ���� ������ ����� ������ ������.
-     * ���� -- ����� ���� ����, ������ ��'.
-     * ������ ����, �� ������ ���� ��� ��� �������� ����� ���� ������ (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����), ��� ����� �� ����� ������, ��� ������ �� ������ ������� ������. ��� ���� ������ ��� �� ������ ������� inflectPossessive="false" �-inflectConstruct="false".
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 240)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}VerbExceptionType"/>
-     * </pre>
-     * 
-     */
-    public class Replace extends VerbExceptionType implements lexicon.jaxb.VerbLexiconType.Replace {
-    	public Replace(lexicon.jaxb.VerbExceptionType content) {
-    		super (content);
-    	}
-    	public Replace() {
-    		super ();
-    		content = new lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl();
-    	}
-    	public lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl)content;
-    	}
-    }
+	public boolean isInflectImperative() {
+		return content.isInflectImperative();
+	}
+
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectImperative(boolean value) {
+		content.setInflectImperative(value);
+	}
+
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
+
+	public boolean isInflectBeinoniConstruct() {
+		return content.isInflectBeinoniConstruct();
+	}
+
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectBeinoniConstruct(boolean value) {
+		content.setInflectBeinoniConstruct(value);
+	}
+
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
+
+	public boolean isForeign() {
+		return content.isForeign();
+	}
+
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setForeign(boolean value) {
+		content.setForeign(value);
+	}
+
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
+
+	public boolean isInflectInfinitiveIndependent() {
+		return content.isInflectInfinitiveIndependent();
+	}
+
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectInfinitiveIndependent(boolean value) {
+		content.setInflectInfinitiveIndependent(value);
+	}
+
+	/**
+	 * Gets the value of the inflectConstruct property.
+	 * 
+	 */
+
+	public boolean isInflectBeinoniPossessive() {
+		return content.isInflectBeinoniPossessive();
+	}
+
+	/**
+	 * Sets the value of the inflectConstruct property.
+	 * 
+	 */
+	public void setInflectBeinoniPossessive(boolean value) {
+		content.setInflectBeinoniPossessive(value);
+	}
+
+	public class Add extends VerbExceptionType implements
+			lexicon.jaxb.VerbLexiconType.Add {
+		public Add() {
+			super();
+			content = new lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl();
+		}
+
+		public Add(lexicon.jaxb.VerbExceptionType content) {
+			super(content);
+		}
+
+		public lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl getActionImpl() {
+			return (lexicon.jaxb.impl.VerbLexiconTypeImpl.AddImpl) content;
+		}
+	}
+
+	/**
+	 * ���� �� ���� ����� ����� ������ ����� �������, ���� ���� ����� �����
+	 * ����� ����� ��������, ��� ����� (���� ������ �� ������ ����, �� ��� �����
+	 * ���). ������ ��� ����� ��� ����� ��� ���� ��� ����� ���� ������, �� �����
+	 * �� �� ����� ����� �� ������ ��� �� ���, ����� �����, �� ����� �� ������.
+	 * ����� ����, �� ������ ����� ��� �- add ��- replace ��� ������ �- remove,
+	 * ��� ���� �� ������ ���� ����� ������ ���� ����� ��������.
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/C:/files/hebrew_lexicon_new.xsd line 249)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}VerbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public class Remove extends VerbExceptionType implements
+			lexicon.jaxb.VerbLexiconType.Remove {
+		public Remove(lexicon.jaxb.VerbExceptionType content) {
+			super(content);
+		}
+
+		public Remove() {
+			super();
+			content = new lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl();
+		}
+
+		public lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl getActionImpl() {
+			return (lexicon.jaxb.impl.VerbLexiconTypeImpl.RemoveImpl) content;
+		}
+	}
+
+	/**
+	 * ���� �� ���� ������ ����� ������ ������. ���� -- ����� ���� ����, ������
+	 * ��'. ������ ����, �� ������ ���� ��� ��� �������� ����� ���� ������
+	 * (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����), ��� ����� ��
+	 * ����� ������, ��� ������ �� ������ ������� ������. ��� ���� ������ ��� ��
+	 * ������ ������� inflectPossessive="false" �-inflectConstruct="false".
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/C:/files/hebrew_lexicon_new.xsd line 240)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}VerbExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public class Replace extends VerbExceptionType implements
+			lexicon.jaxb.VerbLexiconType.Replace {
+		public Replace(lexicon.jaxb.VerbExceptionType content) {
+			super(content);
+		}
+
+		public Replace() {
+			super();
+			content = new lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl();
+		}
+
+		public lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl getActionImpl() {
+			return (lexicon.jaxb.impl.VerbLexiconTypeImpl.ReplaceImpl) content;
+		}
+	}
 
 }

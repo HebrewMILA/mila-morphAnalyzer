@@ -5,14 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for PronounExceptionType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 1418)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 1418)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="PronounExceptionType">
  *   &lt;simpleContent>
@@ -34,185 +37,154 @@ package lexicon.jaxb;
  */
 public interface PronounExceptionType {
 
+	/**
+	 * Gets the value of the value property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getValue();
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getValue();
+	/**
+	 * Sets the value of the value property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setValue(java.lang.String value);
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setValue(java.lang.String value);
+	/**
+	 * Gets the value of the register property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getRegister();
 
-    /**
-     * Gets the value of the register property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getRegister();
+	/**
+	 * Sets the value of the register property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setRegister(java.lang.String value);
 
-    /**
-     * Sets the value of the register property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setRegister(java.lang.String value);
+	/**
+	 * Gets the value of the pgn property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPgn();
 
-    /**
-     * Gets the value of the pgn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPgn();
+	/**
+	 * Sets the value of the pgn property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPgn(java.lang.String value);
 
-    /**
-     * Sets the value of the pgn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPgn(java.lang.String value);
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getGender();
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getGender();
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setGender(java.lang.String value);
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setGender(java.lang.String value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the undotted property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getUndotted();
 
-    /**
-     * Gets the value of the undotted property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getUndotted();
+	/**
+	 * Sets the value of the undotted property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setUndotted(java.lang.String value);
 
-    /**
-     * Sets the value of the undotted property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setUndotted(java.lang.String value);
+	/**
+	 * Gets the value of the dotted property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDotted();
 
-    /**
-     * Gets the value of the dotted property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDotted();
+	/**
+	 * Sets the value of the dotted property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDotted(java.lang.String value);
 
-    /**
-     * Sets the value of the dotted property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDotted(java.lang.String value);
+	/**
+	 * Gets the value of the spelling property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getSpelling();
 
-    /**
-     * Gets the value of the spelling property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getSpelling();
+	/**
+	 * Sets the value of the spelling property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setSpelling(java.lang.String value);
 
-    /**
-     * Sets the value of the spelling property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setSpelling(java.lang.String value);
+	/**
+	 * Gets the value of the person property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getPerson();
 
-    /**
-     * Gets the value of the person property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getPerson();
+	/**
+	 * Sets the value of the person property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setPerson(java.lang.String value);
 
-    /**
-     * Sets the value of the person property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setPerson(java.lang.String value);
+	/**
+	 * Gets the value of the transliterated property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getTransliterated();
 
-    /**
-     * Gets the value of the transliterated property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getTransliterated();
-
-    /**
-     * Sets the value of the transliterated property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setTransliterated(java.lang.String value);
+	/**
+	 * Sets the value of the transliterated property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setTransliterated(java.lang.String value);
 
 }

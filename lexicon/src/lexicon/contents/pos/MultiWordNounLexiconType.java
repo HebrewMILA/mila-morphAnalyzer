@@ -12,12 +12,11 @@ import java.util.List;
 import lexicon.contents.Content;
 import lexicon.contents.exception_types.MultiWordNounExceptionType;
 
-
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class MultiWordNounLexiconType extends Content implements
 		lexicon.jaxb.MultiWordNounLexiconType {
@@ -49,8 +48,8 @@ public class MultiWordNounLexiconType extends Content implements
 	 * subclasses of Content. Connects to the DB, commits the different SQL
 	 * statements and return feedback.
 	 * 
-	 * @param sql -
-	 *            The SQL statement to be executed.
+	 * @param sql
+	 *            - The SQL statement to be executed.
 	 * @return Number of rows affected (0, if nothing happened, 1 if one row
 	 *         added).
 	 */
@@ -69,12 +68,14 @@ public class MultiWordNounLexiconType extends Content implements
 		String inflectionBase = getInflectionBase();
 		if (inflectionBase == null) {
 			inflectionBase = "";
-		} 
+		}
 		try {
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+ inflectionBase +"'";
-		sql += ", '"+ getType() +"'";
+			inflectionBase = URLEncoder.encode(inflectionBase,
+					Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + inflectionBase + "'";
+		sql += ", '" + getType() + "'";
 		sql += ")";
 		System.out.println("this is the sql" + sql);
 		int feedback = execute(sql);
@@ -116,9 +117,11 @@ public class MultiWordNounLexiconType extends Content implements
 			inflectionBase = "";
 		}
 		try {
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.UPDATE_ENCODING);			
-		}catch (Exception e) {} 
-		sql += ", inflectionBase='"+ inflectionBase +"'";
+			inflectionBase = URLEncoder.encode(inflectionBase,
+					Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", inflectionBase='" + inflectionBase + "'";
 		sql += " WHERE id=" + getID();
 		int feedback = execute(sql);
 		return feedback;
@@ -174,17 +177,18 @@ public class MultiWordNounLexiconType extends Content implements
 
 	protected String getAction(Object obj) {
 		String name = obj.getClass().getName();
-		if (name.indexOf("Add") >=0) {
+		if (name.indexOf("Add") >= 0) {
 			return "add";
 		}
-		if (name.indexOf("Replace") >=0) {
+		if (name.indexOf("Replace") >= 0) {
 			return "replace";
 		}
-		if (name.indexOf("Remove") >=0) {
+		if (name.indexOf("Remove") >= 0) {
 			return "remove";
 		}
 		return "";
 	}
+
 	public java.util.List getActions() {
 		List actions = getContents("multiWordNoun_exception_type", "id", id);
 		ArrayList result = new ArrayList();
@@ -228,8 +232,6 @@ public class MultiWordNounLexiconType extends Content implements
 		content.setInflectPossessiveS(value);
 	}
 
-	
-	
 	public boolean isInflectPossessiveP() {
 		return content.isInflectPossessiveP();
 	}
@@ -294,10 +296,14 @@ public class MultiWordNounLexiconType extends Content implements
 		content.setType(value);
 	}
 
-	
-	public void setInflectionBase(String value) { content.setInflectionBase(value); }
-	
-	public java.lang.String getInflectionBase() { return content.getInflectionBase(); }
+	public void setInflectionBase(String value) {
+		content.setInflectionBase(value);
+	}
+
+	public java.lang.String getInflectionBase() {
+		return content.getInflectionBase();
+	}
+
 	public java.util.List getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}

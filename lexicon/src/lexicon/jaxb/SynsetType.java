@@ -5,15 +5,17 @@
 // Generated on: 2010.12.23 at 10:34:08 AM IST 
 //
 
-
 package lexicon.jaxb;
 
-
 /**
- * WordNet for Hebrew Project
- * Java content class for SynsetType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line 206)
+ * WordNet for Hebrew Project Java content class for SynsetType complex type.
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/syjacob/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_MWlexicon.xsd line
+ * 206)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="SynsetType">
  *   &lt;complexContent>
@@ -27,23 +29,19 @@ package lexicon.jaxb;
  */
 public interface SynsetType {
 
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getId();
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getId();
-
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setId(java.lang.String value);
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setId(java.lang.String value);
 
 }

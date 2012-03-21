@@ -43,8 +43,8 @@ public class MultiWordFrozenExceptionType extends Content implements
 	 * subclasses of Content. Connects to the DB, commits the different SQL
 	 * statements and return feedback.
 	 * 
-	 * @param sql -
-	 *            The SQL statement to be executed.
+	 * @param sql
+	 *            - The SQL statement to be executed.
 	 * @return Number of rows affected (0, if nothing happened, 1 if one row
 	 *         added).
 	 */
@@ -74,8 +74,8 @@ public class MultiWordFrozenExceptionType extends Content implements
 		sql += ", '" + dotted + "'";
 		sql += ", '" + getRegister() + "'";
 		sql += ", '" + getSpelling() + "'";
-		sql += ", "+(isDefiniteness()?1:0);
-		sql += ", "+(isAcceptDefiniteness()?1:0);		
+		sql += ", " + (isDefiniteness() ? 1 : 0);
+		sql += ", " + (isAcceptDefiniteness() ? 1 : 0);
 		sql += ", '" + getAction() + "')";
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
@@ -121,8 +121,8 @@ public class MultiWordFrozenExceptionType extends Content implements
 		sql += ", dotted='" + dotted + "'";
 		sql += ", register='" + getRegister() + "'";
 		sql += ", spelling='" + getSpelling() + "'";
-		sql += ", definiteness="+ (isDefiniteness()?1:0);
-		sql += ", acceptDefiniteness="+ (isAcceptDefiniteness()?1:0);
+		sql += ", definiteness=" + (isDefiniteness() ? 1 : 0);
+		sql += ", acceptDefiniteness=" + (isAcceptDefiniteness() ? 1 : 0);
 		sql += ", action='" + getAction() + "' WHERE aid=" + getID();
 		int feedback = execute(sql);
 		return feedback;
@@ -148,7 +148,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 		setTransliterated(getString("transliterated"));
 		setDefiniteness(getInt("definiteness") == 1);
 		setAcceptDefiniteness(getInt("acceptDefiniteness") == 1);
-		//setValue(getString("value"));
+		// setValue(getString("value"));
 	}
 
 	public java.lang.String getUndotted() {
@@ -240,7 +240,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 		}
 		return content.getTransliterated();
 	}
-	
+
 	/**
 	 * Sets the value of the transliterated property.
 	 * 
@@ -251,8 +251,6 @@ public class MultiWordFrozenExceptionType extends Content implements
 		content.setTransliterated(value);
 	}
 
-	
-
 	public java.lang.String getValue() {
 		return content.getValue();
 	}
@@ -260,96 +258,132 @@ public class MultiWordFrozenExceptionType extends Content implements
 	public void setValue(java.lang.String value) {
 		content.setValue(value);
 	}
-	
+
 	public boolean isDefiniteness() {
 		return content.isDefiniteness();
 	}
 
-   
 	public void setDefiniteness(boolean value) {
 		content.setDefiniteness(value);
-	}	
-	
+	}
+
 	public boolean isAcceptDefiniteness() {
 		return content.isAcceptDefiniteness();
 	}
 
-   
 	public void setAcceptDefiniteness(boolean value) {
 		content.setAcceptDefiniteness(value);
-	}	
-///-----------------------------------------------------------------------------------------------------------------------------------
-	public String GetExceptionHtml()
-	{	// not the best solution but in order to take some of the load from the jsp file doitem.jsp whcih has reached his 64k limit
-		// i am using java to output the the html , using a servelt would have been better but i am trying to avoid the change of the
-		// the entire GUI (yossi 31.10.10)
+	}
+
+	// /-----------------------------------------------------------------------------------------------------------------------------------
+	public String GetExceptionHtml() { // not the best solution but in order to
+										// take some of the load from the jsp
+										// file doitem.jsp whcih has reached his
+										// 64k limit
+										// i am using java to output the the
+										// html , using a servelt would have
+										// been better but i am trying to avoid
+										// the change of the
+										// the entire GUI (yossi 31.10.10)
 		String html = null;
-		String add_sel=null,replace_sel =null ,remove_sel=null;
-		String formal_sel = null, archaic_sel = null , informal_sel = null;
+		String add_sel = null, replace_sel = null, remove_sel = null;
+		String formal_sel = null, archaic_sel = null, informal_sel = null;
 		String standard_sel = null, irregular_sel = null; // spelling
-		String definiteness_sel = null , no_definiteness_sel = null;
-		String accept_definiteness_sel =null, no_accept_definiteness_sel = null;
-		
-		if (getAction().equals("add"))  // get the right action to be selected
+		String definiteness_sel = null, no_definiteness_sel = null;
+		String accept_definiteness_sel = null, no_accept_definiteness_sel = null;
+
+		if (getAction().equals("add")) // get the right action to be selected
 			add_sel = "SELECTED";
 		else if (getAction().equals("replace"))
 			replace_sel = "SELECTED";
-		else remove_sel = "SELECTED";
-		
+		else
+			remove_sel = "SELECTED";
+
 		if (getRegister().equals("formal"))
 			formal_sel = "SELECTED";
 		else if (getRegister().equals("archaic"))
 			archaic_sel = "SELECTED";
-		else informal_sel = "SELECTED";
+		else
+			informal_sel = "SELECTED";
 
 		if (getSpelling().equals("irregular"))
 			irregular_sel = "SELECTED";
-		else 
+		else
 			standard_sel = "SELECTED";
-		
+
 		if (!isDefiniteness())
 			no_definiteness_sel = "SELECTED";
-		else 
+		else
 			definiteness_sel = "SELECTED";
-		
+
 		if (!isAcceptDefiniteness())
 			no_accept_definiteness_sel = "SELECTED";
-		else 
+		else
 			accept_definiteness_sel = "SELECTED";
-		
+
 		html = "<tr><td>פעולה:</td>"
-		+ "<td><select name=\'multiWordFrozen_exception_action\'>"
-		+ "<option value='add' "+ add_sel +" >הוספה</option>"
-		+ "<option value='replace' "+replace_sel +" >החלפה</option>"
-		+ "<option value='remove' " +remove_sel +">הסרה</option>"
-		+ "</select></td></tr>"		
-		+ "<tr><td>צורה לא מנוקדת:</td>"
-		+ "<td><input type='text' name='multiWordFrozen_exception_undotted' size=20 value='"+getUndotted().trim()+"'></td></tr>"
-		+ "<tr><td>צורת תעתיק:</td>"
-		+ "<td>"+getTransliterated() + "</td></tr>"
-		+ "<tr><td>צורה מנוקדת:</td>"
-		+ "<td><input type='text' name='multiWordFrozen_exception_dotted' size=20 value='"+getDotted().trim()+"'></td></tr>"
-		+ "<tr><td>משלב:</td><td>"
-		+ "<select name='multiWordFrozen_exception_register'>"
-		+ "<option value='formal' "+ formal_sel +">תקני</option>"
-		+ "<option value='archaic' " + archaic_sel + ">ארכאי</option>"
-		+ "<option value='informal' " + informal_sel + " >תת-תקני</option>"
-		+ "</select></td></tr>"
-		+ "<tr><td>כתיב:</td>"
-		+ "<td><select name='multiWordFrozen_exception_spelling'>"
-        + "<option value='standard' "+ standard_sel +">תקני</option>"
-        + "<option value='irregular' " + irregular_sel +">תת-תקני</option>"
-        + "</select></td></tr>"
-        + "<tr><td>מיודע:</td>"
-        + "<td><select name='multiWordFrozen_exception_definiteness'>"
-        + "<option value='0' "+ no_definiteness_sel +">לא</option>"
-        + "<option value='1' "+ definiteness_sel +">כן</option>"                     
-        + "</select></td></tr>"
-        + "<tr><td>האם מקבל יידוע:</td>"
-        + "<td><select name='multiWordFrozen_exception_acceptDefiniteness'>"
-        + "<option value='0' "+ no_accept_definiteness_sel +">לא</option>"
-        + "<option value='1' "+accept_definiteness_sel+">כן</option>"                       
-        + "</select></td></tr>";
+				+ "<td><select name=\'multiWordFrozen_exception_action\'>"
+				+ "<option value='add' "
+				+ add_sel
+				+ " >הוספה</option>"
+				+ "<option value='replace' "
+				+ replace_sel
+				+ " >החלפה</option>"
+				+ "<option value='remove' "
+				+ remove_sel
+				+ ">הסרה</option>"
+				+ "</select></td></tr>"
+				+ "<tr><td>צורה לא מנוקדת:</td>"
+				+ "<td><input type='text' name='multiWordFrozen_exception_undotted' size=20 value='"
+				+ getUndotted().trim()
+				+ "'></td></tr>"
+				+ "<tr><td>צורת תעתיק:</td>"
+				+ "<td>"
+				+ getTransliterated()
+				+ "</td></tr>"
+				+ "<tr><td>צורה מנוקדת:</td>"
+				+ "<td><input type='text' name='multiWordFrozen_exception_dotted' size=20 value='"
+				+ getDotted().trim()
+				+ "'></td></tr>"
+				+ "<tr><td>משלב:</td><td>"
+				+ "<select name='multiWordFrozen_exception_register'>"
+				+ "<option value='formal' "
+				+ formal_sel
+				+ ">תקני</option>"
+				+ "<option value='archaic' "
+				+ archaic_sel
+				+ ">ארכאי</option>"
+				+ "<option value='informal' "
+				+ informal_sel
+				+ " >תת-תקני</option>"
+				+ "</select></td></tr>"
+				+ "<tr><td>כתיב:</td>"
+				+ "<td><select name='multiWordFrozen_exception_spelling'>"
+				+ "<option value='standard' "
+				+ standard_sel
+				+ ">תקני</option>"
+				+ "<option value='irregular' "
+				+ irregular_sel
+				+ ">תת-תקני</option>"
+				+ "</select></td></tr>"
+				+ "<tr><td>מיודע:</td>"
+				+ "<td><select name='multiWordFrozen_exception_definiteness'>"
+				+ "<option value='0' "
+				+ no_definiteness_sel
+				+ ">לא</option>"
+				+ "<option value='1' "
+				+ definiteness_sel
+				+ ">כן</option>"
+				+ "</select></td></tr>"
+				+ "<tr><td>האם מקבל יידוע:</td>"
+				+ "<td><select name='multiWordFrozen_exception_acceptDefiniteness'>"
+				+ "<option value='0' "
+				+ no_accept_definiteness_sel
+				+ ">לא</option>"
+				+ "<option value='1' "
+				+ accept_definiteness_sel
+				+ ">כן</option>"
+				+ "</select></td></tr>";
 		return html;
 	}
 

@@ -5,14 +5,17 @@
 // Generated on: 2010.06.21 at 03:05:37 PM IDT 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for MultiWordFrozenExceptionType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/gtabajah/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1919)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/gtabajah/automaticCode/jwsdp-
+ * 1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1919)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="MultiWordFrozenExceptionType">
  *   &lt;simpleContent>
@@ -32,137 +35,118 @@ package lexicon.jaxb;
  */
 public interface MultiWordFrozenExceptionType {
 
+	/**
+	 * Gets the value of the value property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getValue();
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getValue();
+	/**
+	 * Sets the value of the value property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setValue(java.lang.String value);
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setValue(java.lang.String value);
+	/**
+	 * Gets the value of the register property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getRegister();
 
-    /**
-     * Gets the value of the register property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getRegister();
+	/**
+	 * Sets the value of the register property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setRegister(java.lang.String value);
 
-    /**
-     * Sets the value of the register property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setRegister(java.lang.String value);
+	/**
+	 * Gets the value of the undotted property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getUndotted();
 
-    /**
-     * Gets the value of the undotted property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getUndotted();
+	/**
+	 * Sets the value of the undotted property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setUndotted(java.lang.String value);
 
-    /**
-     * Sets the value of the undotted property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setUndotted(java.lang.String value);
+	/**
+	 * Gets the value of the dotted property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getDotted();
 
-    /**
-     * Gets the value of the dotted property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getDotted();
+	/**
+	 * Sets the value of the dotted property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setDotted(java.lang.String value);
 
-    /**
-     * Sets the value of the dotted property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setDotted(java.lang.String value);
+	/**
+	 * Gets the value of the spelling property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getSpelling();
 
-    /**
-     * Gets the value of the spelling property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getSpelling();
+	/**
+	 * Sets the value of the spelling property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setSpelling(java.lang.String value);
 
-    /**
-     * Sets the value of the spelling property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setSpelling(java.lang.String value);
+	/**
+	 * Gets the value of the acceptDefiniteness property.
+	 * 
+	 */
+	boolean isAcceptDefiniteness();
 
-    /**
-     * Gets the value of the acceptDefiniteness property.
-     * 
-     */
-    boolean isAcceptDefiniteness();
+	/**
+	 * Sets the value of the acceptDefiniteness property.
+	 * 
+	 */
+	void setAcceptDefiniteness(boolean value);
 
-    /**
-     * Sets the value of the acceptDefiniteness property.
-     * 
-     */
-    void setAcceptDefiniteness(boolean value);
+	/**
+	 * Gets the value of the transliterated property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getTransliterated();
 
-    /**
-     * Gets the value of the transliterated property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getTransliterated();
+	/**
+	 * Sets the value of the transliterated property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setTransliterated(java.lang.String value);
 
-    /**
-     * Sets the value of the transliterated property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setTransliterated(java.lang.String value);
+	/**
+	 * Gets the value of the definiteness property.
+	 * 
+	 */
+	boolean isDefiniteness();
 
-    /**
-     * Gets the value of the definiteness property.
-     * 
-     */
-    boolean isDefiniteness();
-
-    /**
-     * Sets the value of the definiteness property.
-     * 
-     */
-    void setDefiniteness(boolean value);
+	/**
+	 * Sets the value of the definiteness property.
+	 * 
+	 */
+	void setDefiniteness(boolean value);
 
 }

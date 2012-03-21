@@ -5,14 +5,17 @@
 // Generated on: 2010.06.21 at 03:05:37 PM IDT 
 //
 
-
 package lexicon.jaxb;
-
 
 /**
  * Java content class for MultiWordFrozenLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/gtabajah/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1900)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at
+ * file:/home/gtabajah/automaticCode/jwsdp-
+ * 1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1900)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="MultiWordFrozenLexiconType">
  *   &lt;complexContent>
@@ -42,219 +45,216 @@ package lexicon.jaxb;
  */
 public interface MultiWordFrozenLexiconType {
 
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getType();
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getType();
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setType(java.lang.String value);
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setType(java.lang.String value);
+	/**
+	 * Gets the value of the construct1 property.
+	 * 
+	 */
+	boolean isConstruct1();
 
-    /**
-     * Gets the value of the construct1 property.
-     * 
-     */
-    boolean isConstruct1();
+	/**
+	 * Sets the value of the construct1 property.
+	 * 
+	 */
+	void setConstruct1(boolean value);
 
-    /**
-     * Sets the value of the construct1 property.
-     * 
-     */
-    void setConstruct1(boolean value);
+	/**
+	 * Gets the value of the prefix property.
+	 * 
+	 */
+	boolean isPrefix();
 
-    /**
-     * Gets the value of the prefix property.
-     * 
-     */
-    boolean isPrefix();
+	/**
+	 * Sets the value of the prefix property.
+	 * 
+	 */
+	void setPrefix(boolean value);
 
-    /**
-     * Sets the value of the prefix property.
-     * 
-     */
-    void setPrefix(boolean value);
+	/**
+	 * Gets the value of the number property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getNumber();
 
-    /**
-     * Gets the value of the number property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getNumber();
+	/**
+	 * Sets the value of the number property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setNumber(java.lang.String value);
 
-    /**
-     * Sets the value of the number property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setNumber(java.lang.String value);
+	/**
+	 * Gets the value of the consecutive property.
+	 * 
+	 */
+	boolean isConsecutive();
 
-    /**
-     * Gets the value of the consecutive property.
-     * 
-     */
-    boolean isConsecutive();
+	/**
+	 * Sets the value of the consecutive property.
+	 * 
+	 */
+	void setConsecutive(boolean value);
 
-    /**
-     * Sets the value of the consecutive property.
-     * 
-     */
-    void setConsecutive(boolean value);
+	/**
+	 * Gets the value of the base2 property.
+	 * 
+	 */
+	boolean isBase2();
 
-    /**
-     * Gets the value of the base2 property.
-     * 
-     */
-    boolean isBase2();
+	/**
+	 * Sets the value of the base2 property.
+	 * 
+	 */
+	void setBase2(boolean value);
 
-    /**
-     * Sets the value of the base2 property.
-     * 
-     */
-    void setBase2(boolean value);
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.MultiWordFrozenLexiconType.Remove}
+	 * {@link lexicon.jaxb.MultiWordFrozenLexiconType.Add}
+	 * {@link lexicon.jaxb.MultiWordFrozenLexiconType.Replace}
+	 * 
+	 */
+	java.util.List getAddOrReplaceOrRemove();
 
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.MultiWordFrozenLexiconType.Remove}
-     * {@link lexicon.jaxb.MultiWordFrozenLexiconType.Add}
-     * {@link lexicon.jaxb.MultiWordFrozenLexiconType.Replace}
-     * 
-     */
-    java.util.List getAddOrReplaceOrRemove();
+	/**
+	 * Gets the value of the mwPos property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	java.lang.String getMwPos();
 
-    /**
-     * Gets the value of the mwPos property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    java.lang.String getMwPos();
+	/**
+	 * Sets the value of the mwPos property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link java.lang.String}
+	 */
+	void setMwPos(java.lang.String value);
 
-    /**
-     * Sets the value of the mwPos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    void setMwPos(java.lang.String value);
+	/**
+	 * Gets the value of the possessive2 property.
+	 * 
+	 */
+	boolean isPossessive2();
 
-    /**
-     * Gets the value of the possessive2 property.
-     * 
-     */
-    boolean isPossessive2();
+	/**
+	 * Sets the value of the possessive2 property.
+	 * 
+	 */
+	void setPossessive2(boolean value);
 
-    /**
-     * Sets the value of the possessive2 property.
-     * 
-     */
-    void setPossessive2(boolean value);
+	/**
+	 * Gets the value of the acceptDefiniteness property.
+	 * 
+	 */
+	boolean isAcceptDefiniteness();
 
-    /**
-     * Gets the value of the acceptDefiniteness property.
-     * 
-     */
-    boolean isAcceptDefiniteness();
+	/**
+	 * Sets the value of the acceptDefiniteness property.
+	 * 
+	 */
+	void setAcceptDefiniteness(boolean value);
 
-    /**
-     * Sets the value of the acceptDefiniteness property.
-     * 
-     */
-    void setAcceptDefiniteness(boolean value);
+	/**
+	 * Gets the value of the definiteness property.
+	 * 
+	 */
+	boolean isDefiniteness();
 
-    /**
-     * Gets the value of the definiteness property.
-     * 
-     */
-    boolean isDefiniteness();
+	/**
+	 * Sets the value of the definiteness property.
+	 * 
+	 */
+	void setDefiniteness(boolean value);
 
-    /**
-     * Sets the value of the definiteness property.
-     * 
-     */
-    void setDefiniteness(boolean value);
+	/**
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/gtabajah/automaticCode
+	 * /jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1903)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}MultiWordFrozenExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Add extends javax.xml.bind.Element,
+			lexicon.jaxb.MultiWordFrozenExceptionType {
 
+	}
 
-    /**
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/gtabajah/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1903)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}MultiWordFrozenExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Add
-        extends javax.xml.bind.Element, lexicon.jaxb.MultiWordFrozenExceptionType
-    {
+	/**
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/gtabajah/automaticCode
+	 * /jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1905)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}MultiWordFrozenExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Remove extends javax.xml.bind.Element,
+			lexicon.jaxb.MultiWordFrozenExceptionType {
 
+	}
 
-    }
+	/**
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained
+	 * within this java content object. (defined at
+	 * file:/home/gtabajah/automaticCode
+	 * /jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1904)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}MultiWordFrozenExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public interface Replace extends javax.xml.bind.Element,
+			lexicon.jaxb.MultiWordFrozenExceptionType {
 
-
-    /**
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/gtabajah/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1905)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}MultiWordFrozenExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Remove
-        extends javax.xml.bind.Element, lexicon.jaxb.MultiWordFrozenExceptionType
-    {
-
-
-    }
-
-
-    /**
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/home/gtabajah/automaticCode/jwsdp-1.6/jaxb/lib/hebrew_lexicon_21_06_2010.xsd line 1904)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}MultiWordFrozenExceptionType"/>
-     * </pre>
-     * 
-     */
-    public interface Replace
-        extends javax.xml.bind.Element, lexicon.jaxb.MultiWordFrozenExceptionType
-    {
-
-
-    }
+	}
 
 }
