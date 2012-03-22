@@ -1,3 +1,0 @@
-#Mon Apr 11 13:39:43 GMT+02:00 2005
-javax.xml.bind.context.factory=com.sun.xml.bind.ContextFactory_1_0_1
-com.sun.xml.bind.jaxbContextImpl=lexicon.jaxb.impl.runtime.DefaultJAXBContextImpl
