@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="/home/smip/jars/jaxb-xjc.jar"/>
 	<classpathentry kind="lib" path="/home/smip/jars/jax-qname.jar"/>
 	<classpathentry kind="lib" path="/home/smip/jars/mysql-connector-java-3.1.11-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

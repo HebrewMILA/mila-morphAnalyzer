@@ -1,14 +1,14 @@
 #Fat Jar Configuration File
-#Tue Dec 28 10:36:59 IST 2010
+#Thu Mar 22 13:24:55 IST 2012
 onejar.license.required=true
 manifest.classpath=
 manifest.removesigners=true
 onejar.checkbox=false
-jarname=lexicon.jar
+jarname=/home/smip/lexicon.jar
 manifest.mergeall=true
-manifest.mainclass=
+manifest.mainclass=lexicon.tools.LexiconUtils
 manifest.file=<createnew>
-jarname.isextern=false
+jarname.isextern=true
 onejar.expand=
-excludes=<po|lexicon>~lexicon/~contents/~.svn/;<po|lexicon>~lexicon/~contents/~vssver2.scc;<po|lexicon>~lexicon/~exceptions/~.svn/;<po|lexicon>~lexicon/~exceptions/~vssver2.scc;<po|lexicon>~lexicon/~gui/~vssver2.scc;<po|lexicon>~lexicon/~jaxb/~.svn/;<po|lexicon>~lexicon/~tools/~.svn/;<po|lexicon>~lexicon/~tools/~vssver2.scc;<po|lexicon>~lexicon/~vssver2.scc
+excludes=<po|lexicon>~lexicon/~jaxb/~.svn/;<po|lexicon>~lexicon/~contents/~.svn/;<po|lexicon>~lexicon/~exceptions/~.svn/;<po|lexicon>~lexicon/~tools/~.svn/;<jar|namespace.jar>;<jar|javaee-api-6.0.jar>
 includes=
