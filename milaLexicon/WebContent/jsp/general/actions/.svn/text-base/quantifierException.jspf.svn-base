@@ -1,0 +1,137 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.QuantifierExceptionType"
+%>
+<div id='quantifier_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='quantifier_exception_action'>
+				<option value='add' <%if (quantifierExcption.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (quantifierExcption.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (quantifierExcption.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='quantifier_exception_undotted' size=20 value='<%=quantifierExcption.getUndotted()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=quantifierExcption.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='quantifier_exception_dotted' size=20 value='<%=quantifierExcption.getDotted()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			כתיב:
+		</td>
+		<td>
+			<select name='quantifier_exception_script'>
+				<option value='formal' <%if (quantifierExcption.getScript().equals("formal")) out.print("SELECTED");%>>כתיב מלא חסר ניקוד ע"פ כללי האקדמיה</option>
+				<option value='typo' <%if (quantifierExcption.getScript().equals("typo")) out.print("SELECTED");%>>שגיאת כתיב</option>
+				<option value='colloquial' <%if (quantifierExcption.getScript().equals("colloquial")) out.print("SELECTED");%>>כתיב לא תקין</option>
+				<option value='slang' <%if (quantifierExcption.getScript().equals("slang")) out.print("SELECTED");%>>סלנג (הכתיבה אולי תקנית, אולם המילה אינה בהכרח תקנית)</option>
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='quantifier_exception_gender'>
+				<option value='unspecified' <%if (quantifierExcption.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+				<option value='masculine' <%if (quantifierExcption.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (quantifierExcption.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (quantifierExcption.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (quantifierExcption.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>				
+			</select>				
+		</td> 
+	</tr>
+	<tr>
+		<td>
+			נטיית שייכות חבורה:
+		</td>
+		<td>
+			<select name='quantifier_exception_pgn'>
+				<option value='unspecified' <%if (quantifierExcption.getPgn().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1p/MF/Sg' <%if (quantifierExcption.getPgn().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+				<option value='2p/M/Sg' <%if (quantifierExcption.getPgn().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+				<option value='2p/F/Sg' <%if (quantifierExcption.getPgn().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+				<option value='3p/M/Sg' <%if (quantifierExcption.getPgn().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+				<option value='3p/F/Sg' <%if (quantifierExcption.getPgn().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+				<option value='1p/MF/Pl' <%if (quantifierExcption.getPgn().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+				<option value='2p/M/Pl' <%if (quantifierExcption.getPgn().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+				<option value='2p/F/Pl' <%if (quantifierExcption.getPgn().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+				<option value='3p/M/Pl' <%if (quantifierExcption.getPgn().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+				<option value='3p/F/Pl' <%if (quantifierExcption.getPgn().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+				<option value='123p/M/Sg' <%if (quantifierExcption.getPgn().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Sg' <%if (quantifierExcption.getPgn().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+				<option value='123p/M/Pl' <%if (quantifierExcption.getPgn().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Pl' <%if (quantifierExcption.getPgn().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>				
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			האם ראשי תיבות?  
+		</td>
+		<td>
+			<select name='quantifier_exception_acronym'>
+				<option value='unspecified' <%if (quantifierExcption.getAcronym().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (quantifierExcption.getAcronym().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (quantifierExcption.getAcronym().equals("false")) out.print("SELECTED");%>>לא</option> 			
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם צורת נסמך?
+		</td>
+		<td>
+			<select name='quantifier_exception_construct'>
+				<option value='unspecified' <%if (quantifierExcption.getConstruct().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (quantifierExcption.getConstruct().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (quantifierExcption.getConstruct().equals("false")) out.print("SELECTED");%>>לא</option>		
+			</select>				
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			האם ניתן לבצע נטיית סמיכות?
+		</td>
+		<td>
+			<select name='quantifier_exception_inflectConstruct'>
+				<option value='1' <%if (quantifierExcption.isInflectConstruct()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!quantifierExcption.isInflectConstruct()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>		
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>	
+</table>
+</div>

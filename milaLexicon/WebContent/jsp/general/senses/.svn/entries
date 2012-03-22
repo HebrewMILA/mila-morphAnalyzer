@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="6"
+   name=""
+   committed-date="2005-12-07T09:45:48.400693Z"
+   url="http://cl.haifa.ac.il/svn/repos/LEXICON/lexicon/jsp/general/senses"
+   last-author="dshach01"
+   kind="dir"
+   uuid="adf17a31-c606-0410-b649-cde64c528b1b"
+   repos="http://cl.haifa.ac.il/svn/repos"
+   revision="44"/>
+<entry
+   committed-rev="6"
+   name="DoExample.jspf"
+   text-time="2006-02-21T14:58:06.089500Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="eb47ff8ec6ce4a14bcadc44fc5ce84c1"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:06.009385Z"/>
+<entry
+   committed-rev="6"
+   name="DoSynset.jspf"
+   text-time="2006-02-21T14:58:06.119544Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="e0159598e3011866391bad99608cfd37"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:06.029414Z"/>
+<entry
+   committed-rev="6"
+   name="DoEnglish.jspf"
+   text-time="2006-02-21T14:58:06.149587Z"
+   committed-date="2005-12-07T09:45:48.400693Z"
+   checksum="043a10f8b8c5d290e086e956747761af"
+   last-author="dshach01"
+   kind="file"
+   prop-time="2006-02-21T14:58:06.059457Z"/>
+</wc-entries>

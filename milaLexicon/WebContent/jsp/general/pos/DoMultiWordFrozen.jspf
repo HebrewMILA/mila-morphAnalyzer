@@ -1,0 +1,172 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.MultiWordFrozenLexiconType"
+	import="lexicon.contents.types.ItemType"
+        import="java.util.List"
+        import="java.sql.*"
+	import="java.util.StringTokenizer"
+%>
+
+<jsp:useBean id="db" scope="request" class="autoFeed.AutoFeedBean" /> 
+
+<jsp:setProperty name="db" property="*" /> 
+
+
+
+<%
+/*
+MultiWordFrozenLexiconType multiWordFrozen = new MultiWordFrozenLexiconType();
+if (!newItem && item.getMultiWordFrozen() != null && id != 0) {
+	multiWordFrozen.open(id);
+} 
+*/ 
+
+MultiWordFrozenLexiconType multiWordFrozen = new MultiWordFrozenLexiconType();
+
+item = (ItemType)session.getAttribute("item");
+id = Integer.parseInt((String)session.getAttribute("id"));
+newItem = Boolean.valueOf((String)session.getAttribute("newItem")).booleanValue();;
+changeGroup = null;
+
+if (!newItem && item.getMultiWordFrozen() != null && id != 0) {
+	multiWordFrozen.open(id);
+	changeGroup = multiWordFrozen.getContents("multiWordFrozen_exception_type", "id", id);
+        session.setAttribute("changeGroup", changeGroup);
+
+}  
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("multiWordFrozen")) {
+		if (request.getParameter("multiWordFrozen_pos")!= null) {
+                        multiWordFrozen.setMwPos(request.getParameter("multiWordFrozen_pos"));
+                }
+		 
+		if (request.getParameter("multiWordFrozen_type")!= null) {
+                        multiWordFrozen.setType(request.getParameter("multiWordFrozen_type"));
+                }
+
+		if (request.getParameter("multiWordFrozen_consecutive")!= null) {
+			multiWordFrozen.setConsecutive(request.getParameter("multiWordFrozen_consecutive").equals("1"));
+		}
+
+		 if (request.getParameter("multiWordFrozen_prefix")!= null) {
+                        multiWordFrozen.setPrefix(request.getParameter("multiWordFrozen_prefix").equals("1"));
+                }
+	
+	
+		if (request.getParameter("multiWordFrozen_definiteness")!= null) {
+                        multiWordFrozen.setDefiniteness(request.getParameter("multiWordFrozen_definiteness").equals("1"));			
+                }
+		
+		if (request.getParameter("multiWordFrozen_acceptDefiniteness")!= null) {
+                        multiWordFrozen.setAcceptDefiniteness(request.getParameter("multiWordFrozen_acceptDefiniteness").equals("1"));			
+                }
+		
+		
+		if (newItem) {
+			multiWordFrozen.add(item.getID());
+		} else {
+			multiWordFrozen.update();
+		}
+		item.open(item.getID());
+		multiWordFrozen.open(item.getID());
+	}
+}
+%>
+<div id='multiWordFrozen_div' style="display:none;">
+<table>
+
+    	<tr>
+                <td>
+                       חלק דיבר:
+                </td>
+                <td>
+			<input type=text name='multiWordFrozen_pos' size=15 value='<%=multiWordFrozen.getMwPos()%>'>																 							        														        
+                </td>
+        </tr>
+
+
+	 <tr>
+                <td>
+                        סוג:(שם פרטי)
+                </td>
+                <td>
+                        <select name='multiWordFrozen_type'>
+			<option value='person' <%if (multiWordFrozen.getType().equals("person")) out.print("SELECTED");%>>שם של אדם</option>
+                                <option value='location' <%if (multiWordFrozen.getType().equals("location")) out.print("SELECTED");%>>שם של מקום</option>
+                                <option value='town' <%if (multiWordFrozen.getType().equals("town")) out.print("SELECTED");%>>שם של יישוב</option>
+
+                                <option value='country' <%if (multiWordFrozen.getType().equals("country")) out.print("SELECTED");%>>שם של ארץ</option>
+                                <option value='organization' <%if (multiWordFrozen.getType().equals("organization")) out.print("SELECTED");%>>שם של ארגון</option>
+                                <option value='product' <%if (multiWordFrozen.getType().equals("product")) out.print("SELECTED");%>>שם של מוצר</option>
+                                 <option value='language' <%if (multiWordFrozen.getType().equals("language")) out.print("SELECTED");%>>שם של שפה</option>
+                                <option value='symbol' <%if (multiWordFrozen.getType().equals("symbol")) out.print("SELECTED");%>>שם של אות או תו</option>
+                                <option value='dateTime' <%if (multiWordFrozen.getType().equals("dateTime")) out.print("SELECTED");%>>תאריך</option>
+                                <option value='other' <%if (multiWordFrozen.getType().equals("other")) out.print("SELECTED");%>>אף אחד מהאפשרויות שלעיל</option>
+				 <option value='art' <%if (multiWordFrozen.getType().equals("art")) out.print("SELECTED");%>>יצירה (ספר,הצגה,סרט,תוכנית טלוויזיה,רדיו)</option>
+
+                                <option value='unspecified' <%if (multiWordFrozen.getType().equals("unspecified")) out.print("SELECTED");%>>הקטגוריה אינה ידועה</option>
+
+                        </select>
+                </td>
+        </tr>
+
+        <tr>
+        <td>
+                      מיודע:  
+                </td>
+        <td>
+         <select name='multiWordFrozen_definiteness'>
+                        <option value='0' <%if (!multiWordFrozen.isDefiniteness()) out.print("SELECTED");%>>לא</option>
+                        <option value='1' <%if (multiWordFrozen.isDefiniteness()) out.print("SELECTED");%>>כן</option>                       
+                </select>
+
+
+        </td>
+</tr>
+
+        <tr>
+        <td>
+                      האם מקבל יידוע:  
+                </td>
+        <td>
+         <select name='multiWordFrozen_acceptDefiniteness'>
+                        <option value='0' <%if (!multiWordFrozen.isAcceptDefiniteness()) out.print("SELECTED");%>>לא</option>
+                        <option value='1' <%if (multiWordFrozen.isAcceptDefiniteness()) out.print("SELECTED");%>>כן</option>                       
+                </select>
+
+
+        </td>
+</tr>
+
+
+	
+	<tr>
+	<td>
+			האם חלקי הביטוי חייבים להופיע באופן רציף?
+		</td>
+	<td>
+	 <select name='multiWordFrozen_consecutive'>
+                        <option value='0' <%if (!multiWordFrozen.isConsecutive()) out.print("SELECTED");%>>לא</option>
+                        <option value='1' <%if (multiWordFrozen.isConsecutive()) out.print("SELECTED");%>>כן</option>                       
+     </select>
+	</td> 
+</tr>
+
+	 </tr>
+
+        <tr>
+        <td>
+                        האם צירוף המסתיים בתחילית?
+                </td>
+        <td>
+                <select name='multiWordFrozen_prefix'>
+                        <option value='0' <%if (!multiWordFrozen.isPrefix()) out.print("SELECTED");%>>לא</option>
+                        <option value='1' <%if (multiWordFrozen.isPrefix()) out.print("SELECTED");%>>כן</option>                       
+                </select>
+        </td>
+</tr>
+	
+</table>
+</div>

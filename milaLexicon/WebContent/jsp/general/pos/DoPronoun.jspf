@@ -1,0 +1,176 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.PronounLexiconType"
+	 import="lexicon.contents.types.ItemType"
+	 import="java.util.List"
+%>
+<%
+PronounLexiconType pronoun = new PronounLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = (List)session.getAttribute("changeGroup");
+if (!newItem && item.getPronoun() != null && id != 0) {
+	pronoun.open(id);
+	changeGroup = pronoun.getContents("pronoun_exception_type", "id", id);
+	session.setAttribute("changeGroup", changeGroup);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("pronoun")) {
+		if (request.getParameter("pronoun_gender")!= null) {
+			pronoun.setGender(request.getParameter("pronoun_gender"));
+		}
+		if (request.getParameter("pronoun_number")!= null) {
+			pronoun.setNumber(request.getParameter("pronoun_number"));
+		}
+		
+		 if (request.getParameter("pronoun_person")!= null) {
+                        pronoun.setPerson(request.getParameter("pronoun_person"));
+                }
+
+
+		if (request.getParameter("pronoun_pgn")!= null) {
+			pronoun.setPgn(request.getParameter("pronoun_pgn"));
+		}
+		if (request.getParameter("pronoun_type")!= null) {
+			pronoun.setType(request.getParameter("pronoun_type"));
+		}
+		if (request.getParameter("pronoun_definiteness")!= null) {
+                        pronoun.setDefiniteness(request.getParameter("pronoun_definiteness"));
+                }
+
+
+		if (newItem) {
+			pronoun.add(item.getID());
+		} else {
+			pronoun.update();
+		}
+		item.open(item.getID());
+		pronoun.open(item.getID());
+	}
+}
+%>
+<div id='pronoun_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='pronoun_gender'>
+				<option value='masculine' <%if (pronoun.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (pronoun.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (pronoun.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (pronoun.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (pronoun.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='pronoun_number'>
+				<option value='singular' <%if (pronoun.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (pronoun.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (pronoun.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (pronoun.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (pronoun.getNumber().equals("singular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (pronoun.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>
+ <tr>
+
+		  <tr>
+                <td>
+                        גוף:
+                </td>
+                <td>
+                        <select name='pronoun_person'>                                <option value='unspecified' <%if (pronoun.getPerson().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</
+option>
+                                <option value='1' <%if (pronoun.getPerson().equals("1")) out.print("SELECTED");%>>גוף ראשון</option>
+                                <option value='2' <%if (pronoun.getPerson().equals("2")) out.print("SELECTED");%>>גוף שני</option>
+                                <option value='3' <%if (pronoun.getPerson().equals("3")) out.print("SELECTED");%>>גוף שלישי</option>
+                                <option value='any' <%if (pronoun.getPerson().equals("any")) out.print("SELECTED");%>>גוף כלשהו</option>
+
+                        </select>
+                </td>
+        </tr>
+
+
+                <td>
+                        נטיית שייכות חבורה:                </td>
+                <td>                        <select name='pronoun_pgn'>                                <option value='unspecified' <%if (pronoun.getPgn().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>                                <option value='1p/MF/Sg' <%if (pronoun.getPgn().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>                                <option value='2p/M/Sg' <%if (pronoun.getPgn().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+<option value='2p/F/Sg' <%if (pronoun.getPgn().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+<option value='3p/M/Sg' <%if (pronoun.getPgn().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+<option value='3p/F/Sg' <%if (pronoun.getPgn().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+
+
+
+                             <option value='1p/MF/Pl' <%if (pronoun.getPgn().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>                                <option value='2p/M/Pl' <%if (pronoun.getPgn().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>                                <option value='2p/F/Pl' <%if (pronoun.getPgn().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>                                <option value='3p/M/Pl' <%if (pronoun.getPgn().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>                                <option value='3p/F/Pl' <%if (pronoun.getPgn().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+  <option value='3p/MF/Pl' <%if (pronoun.getPgn().equals("3p/MF/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר וגם נקבה / רבים</option>
+
+<option value='123p/M/Sg' <%if (pronoun.getPgn().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>                                <option value='123p/F/Sg' <%if (pronoun.getPgn().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>                                <option value='123p/M/Pl' <%if (pronoun.getPgn().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / רבים</option>                                <option value='123p/F/Pl' <%if (pronoun.getPgn().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / רבים</option>
+                        </select>
+                </td>
+        </tr>
+
+
+	
+	<tr>
+		<td>
+			סוג:
+		</td>
+		<td>
+			<select name='pronoun_type'>
+				<option value='personal with bklm with definiteness' <%if (pronoun.getType().equals("personal with bklm with definiteness")) out.print("SELECTED");%>>כינוי נושא שמקבל בכל"ם (הטיות בכל"מ גם מיודעות)</option>
+				  <option value='personal with bklm without definiteness' <%if (pronoun.getType().equals("personal with bklm without definiteness")) out.print("SELECTED");%>>כינוי נושא שמקבל בכל"ם (הטיות בכל"מ לא מיודעות)</option>
+
+				 <option value='personal no bklm' <%if (pronoun.getType().equals("personal no bklm")) out.print("SELECTED");%>>כינוי נושא שלא מקבל בכל"ם</option>
+				<option value='demonstrative with bklm with definiteness' <%if (pronoun.getType().equals("demonstrative with bklm with definiteness")) out.print("SELECTED");%>>כינוי רומז שמקבל בכל"ם (הטיות בכל"מ גם מיודעות)</option>
+				  <option value='demonstrative with bklm without definiteness' <%if (pronoun.getType().equals("demonstrative with bklm without definiteness")) out.print("SELECTED");%>>כינוי רומז שמקבל בכל"ם (הטיות בכל"מ לא מיודעות)</option>
+
+				 <option value='demonstrative no bklm' <%if (pronoun.getType().equals("demonstrative no bklm")) out.print("SELECTED");%>>כינוי רומז שלא מקבל בכל"ם</option>
+
+
+				<option value='relativizer with bklm with definiteness' <%if (pronoun.getType().equals("relativizer with bklm with definiteness")) out.print("SELECTED");%>>כינוי זיקה שמקבל בכל"ם (הטיות בכל"מ גם מיודעות)</option>
+				 <option value='relativizer with bklm without definiteness' <%if (pronoun.getType().equals("relativizer with bklm without definiteness")) out.print("SELECTED");%>>כינוי זיקה שמקבל בכל"ם (הטיות בכל"מ לא מיודעות)</option>
+				 <option value='relativizer no bklm' <%if (pronoun.getType().equals("relativizer no bklm")) out.print("SELECTED");%>>כינוי זיקה שלא מקבל בכל"ם</option>
+
+				<option value='impersonal with bklm with definiteness' <%if (pronoun.getType().equals("impersonal with bklm with definiteness")) out.print("SELECTED");%>>כינוי סתמי שמקבל בכל"ם (הטיות בכל"מ גם מיודעות)</option> 
+				  <option value='impersonal with bklm without definiteness' <%if (pronoun.getType().equals("impersonal with bklm without definiteness")) out.print("SELECTED");%>>כינוי סתמי שמקבל בכל"ם (הטיות בכל"מ לא מיודעות)</option>
+					
+				  <option value='impersonal no bklm' <%if (pronoun.getType().equals("impersonal no bklm")) out.print("SELECTED");%>>כינוי סתמי שלא מקבל בכל"ם</option>                               	
+				 <option value='reflexive with bklm' <%if (pronoun.getType().equals("reflexive with bklm")) out.print("SELECTED");%>>כינוי חוזר שמקבל בכל"מ</option>
+
+</option>
+
+	
+			</select>				
+		</td>
+	</tr>		
+
+
+
+	 <tr>
+                <td>
+                        האם מקבל ה' הידיעה?
+                </td>
+                <td>
+                        <select name='pronoun_definiteness'>
+                                <option value='optional' <%if (pronoun.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>
+                                <option value='prohibited' <%if (pronoun.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>
+                                <option value='required' <%if (pronoun.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option>
+				 <option value='definited' <%if (pronoun.getDefiniteness().equals("definited")) out.print("SELECTED");%>>העיול מיודע</option>
+
+                        </select>
+                </td>
+        </tr>
+
+	
+</table>
+</div>

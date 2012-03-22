@@ -1,0 +1,96 @@
+<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.PronounLexiconType"
+%>
+<%
+PronounLexiconType pronoun = new PronounLexiconType();
+if (!newItem && item.getPronoun() != null && id != 0) {
+	pronoun.open(id);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("pronoun")) {
+		if (request.getParameter("pronoun_gender")!= null) {
+			pronoun.setGender(request.getParameter("pronoun_gender"));
+		}
+		if (request.getParameter("pronoun_number")!= null) {
+			pronoun.setNumber(request.getParameter("pronoun_number"));
+		}
+		if (request.getParameter("pronoun_person")!= null) {
+			pronoun.setPerson(request.getParameter("pronoun_person"));
+		}
+		if (request.getParameter("pronoun_type")!= null) {
+			pronoun.setType(request.getParameter("pronoun_type"));
+		}
+		if (newItem) {
+			pronoun.add(item.getID());
+		} else {
+			pronoun.update();
+		}
+		item.open(item.getID());
+		pronoun.open(item.getID());
+	}
+}
+%>
+<div id='pronoun_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='pronoun_gender'>
+				<option value='masculine' <%if (pronoun.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (pronoun.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (pronoun.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (pronoun.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (pronoun.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='pronoun_number'>
+				<option value='singular' <%if (pronoun.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (pronoun.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (pronoun.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (pronoun.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (pronoun.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (pronoun.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			גוף:
+		</td>
+		<td>
+			<select name='pronoun_person'>
+				<option value='unspecified' <%if (pronoun.getPerson().equals("singular")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1' <%if (pronoun.getPerson().equals("1")) out.print("SELECTED");%>>גוף ראשון</option>
+				<option value='2' <%if (pronoun.getPerson().equals("2")) out.print("SELECTED");%>>גוף שני</option>
+				<option value='3' <%if (pronoun.getPerson().equals("3")) out.print("SELECTED");%>>גוף שלישי</option>
+				<option value='any' <%if (pronoun.getPerson().equals("any")) out.print("SELECTED");%>>גוף כלשהו</option>
+													
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			סוג:
+		</td>
+		<td>
+			<select name='pronoun_type'>
+				<option value='personal' <%if (pronoun.getType().equals("personal")) out.print("SELECTED");%>>כינוי נושא</option>
+				<option value='demonstrative' <%if (pronoun.getType().equals("demonstrative")) out.print("SELECTED");%>>כינוי רומז</option>
+				<option value='interrogative' <%if (pronoun.getType().equals("interrogative")) out.print("SELECTED");%>>כינוי שאלה</option>
+				<option value='relativizer' <%if (pronoun.getType().equals("relativizer")) out.print("SELECTED");%>>כינוי זיקה</option>
+				<option value='impersonal' <%if (pronoun.getType().equals("impersonal")) out.print("SELECTED");%>>כינוי סתמי</option> 							
+			</select>				
+		</td>
+	</tr>			
+</table>
+</div>

@@ -1,0 +1,82 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.MultiWordPrepositionLexiconType"
+%>
+<%
+MultiWordPrepositionLexiconType multiWordPreposition = new MultiWordPrepositionLexiconType();
+if (!newItem && item.getMultiWordPreposition() != null && id != 0) {
+	multiWordPreposition.open(id);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("multiWordPreposition")) {
+		if (request.getParameter("multiWordPreposition_pos")!= null) {
+                        multiWordPreposition.setMwPos(request.getParameter("multiWordPreposition_pos"));
+                }
+		 if (request.getParameter("multiWordPreposition_type")!= null) {
+                        multiWordPreposition.setType(request.getParameter("multiWordPreposition_type"));
+                }
+		 if (request.getParameter("multiWordPreposition_number")!= null) {
+                        multiWordPreposition.setNumber(request.getParameter("multiWordPreposition_number"));
+                }
+
+		if (request.getParameter("multiWordPreposition_consecutive")!= null) {
+			multiWordPreposition.setConsecutive(request.getParameter("multiWordPreposition_consecutive").equals("1"));
+		}
+
+
+
+
+	
+		
+		if (newItem) {
+			multiWordPreposition.add(item.getID());
+		} else {
+			multiWordPreposition.update();
+		}
+		item.open(item.getID());
+		multiWordPreposition.open(item.getID());
+	}
+}
+%>
+<div id='multiWordPreposition_div' style="display:none;">
+<table>
+
+  <tr>
+                <td>
+                       חלק דיבר:
+                </td>
+                <td>
+
+			<input type=text name='multiWordPreposition_pos' size=15 value='<%=multiWordPreposition.getMwPos()%>'>
+                </td>
+        </tr>
+
+
+	 <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='multiWordPreposition_number'>
+                                <option value='singular' <%if (multiWordPreposition.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (multiWordPreposition.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                                <option value='unspecified' <%if (multiWordPreposition.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+
+	
+	<tr>
+	<td>
+			האם חלקי הביטוי חייבים להופיע באופן רציף?
+		</td>
+	<td>
+		<select name='multiWordPreposition_consecutive'>
+			<option value='0' <%if (!multiWordPreposition.isConsecutive()) out.print("SELECTED");%>>לא</option>
+			<option value='1' <%if (multiWordPreposition.isConsecutive()) out.print("SELECTED");%>>כן</option>						
+		</select>				
+	</td> 
+</tr>
+</table>
+</div>

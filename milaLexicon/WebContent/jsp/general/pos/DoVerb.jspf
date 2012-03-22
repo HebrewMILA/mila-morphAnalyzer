@@ -1,0 +1,415 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.VerbLexiconType"
+	import="lexicon.contents.types.ItemType"
+    import="java.util.List"
+%>
+<%
+VerbLexiconType verb = new VerbLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = null;
+
+if (!newItem && item.getVerb() != null && id != 0) 
+{
+	verb.open(id);
+	changeGroup = verb.getContents("verb_exception_type", "id", id);
+	session.setAttribute("changeGroup", changeGroup);
+}
+
+if (request.getParameter("pos")!= null) 
+{
+	if (request.getParameter("pos").equals("verb")) 
+	{
+		if (request.getParameter("verb_inflectOrigin")!= null) 
+		{
+			verb.setInflectOrigin(request.getParameter("verb_inflectOrigin").equals("1"));
+		}
+		if (request.getParameter("verb_inflectInfinitive")!= null) 
+		{
+            verb.setInflectInfinitive(request.getParameter("verb_inflectInfinitive").equals("1"));
+        }
+		if (request.getParameter("verb_inflectInfinitivel")!= null) 
+		{
+			verb.setInflectInfinitivel(request.getParameter("verb_inflectInfinitivel").equals("1"));
+		}
+		if (request.getParameter("verb_inflectInfinitiveb")!= null) 
+		{
+            verb.setInflectInfinitiveb(request.getParameter("verb_inflectInfinitiveb").equals("1"));
+        }
+		if (request.getParameter("verb_inflectPast")!= null) 
+		{
+			verb.setInflectPast(request.getParameter("verb_inflectPast").equals("1"));
+		}
+		if (request.getParameter("verb_inflectBeinoni")!= null) 
+		{
+			verb.setInflectBeinoni(request.getParameter("verb_inflectBeinoni").equals("1"));
+		}
+		if (request.getParameter("verb_inflectFuture")!= null) 
+		{
+			verb.setInflectFuture(request.getParameter("verb_inflectFuture").equals("1"));
+		}
+		if (request.getParameter("verb_inflectImperative")!= null) 
+		{
+			verb.setInflectImperative(request.getParameter("verb_inflectImperative").equals("1"));
+		}
+		if (request.getParameter("verb_inflectBeinoniConstruct")!= null) 
+		{
+			verb.setInflectBeinoniConstruct(request.getParameter("verb_inflectBeinoniConstruct").equals("1"));
+		}
+		if (request.getParameter("verb_inflectBeinoniPossessive")!= null) 
+		{
+			verb.setInflectBeinoniPossessive(request.getParameter("verb_inflectBeinoniPossessive").equals("1"));
+		}
+		if (request.getParameter("verb_inflectInfinitiveIndependent")!= null) 
+		{
+            verb.setInflectInfinitiveIndependent(request.getParameter("verb_inflectInfinitiveIndependent").equals("1"));
+        }
+		if (request.getParameter("verb_foreign")!= null) 
+		{
+            verb.setForeign(request.getParameter("verb_foreign").equals("1"));
+        }
+		if (request.getParameter("verb_feminine")!= null) 
+		{
+			verb.setFeminine(request.getParameter("verb_feminine"));
+		}
+		if (request.getParameter("verb_valence")!= null) 
+		{
+			verb.setValence(request.getParameter("verb_valence"));
+		}	
+		if (request.getParameter("verb_root")!= null) 
+		{
+			verb.setRoot(request.getParameter("verb_root").trim());
+		}
+		if (request.getParameter("verb_binyan")!= null) 
+		{
+			verb.setBinyan(request.getParameter("verb_binyan"));
+		}
+		if (request.getParameter("verb_inflectionPattern")!= null) 
+		{
+			System.out.println(request.getParameter("verb_inflectionPattern"));
+			verb.setInflectionPattern(request.getParameter("verb_inflectionPattern"));
+		}
+		//if (request.getParameter("verb_ipSource")!= null) {
+		//	verb.setIpSource(request.getParameter("verb_ipSource"));
+		//} 
+		//verb.setIpSource("");
+		if (newItem) {
+			verb.add(item.getID());
+		} else {
+			verb.update();
+		}
+		item.open(item.getID());
+		verb.open(item.getID());
+	}
+}
+%>
+<div id='verb_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			צורן נקבה:
+		</td>
+		<td>
+			<select name='verb_feminine'>
+				<option value='h' <%if (verb.getFeminine().equals("h")) out.print("SELECTED");%>>ה</option>
+				<option value='t' <%if (verb.getFeminine().equals("t")) out.print("SELECTED");%>>ת</option>
+				<option value='it' <%if (verb.getFeminine().equals("it")) out.print("SELECTED");%>>ית</option>
+				<option value='irrelevant' <%if (verb.getFeminine().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (verb.getFeminine().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>								
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			ערכיות:  
+		</td>
+		<td>
+			<select name='verb_valence'>
+				<option value='unspecified' <%if (verb.getValence().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='intransitiveWithPaul' <%if (verb.getValence().equals("intransitiveWithPaul")) out.print("SELECTED");%>>פועל עומד שנוצר ממנו פעול</option>
+				<option value='intransitiveWithoutPaul' <%if (verb.getValence().equals("intransitiveWithoutPaul")) out.print("SELECTED");%>>פועל עומד שלא נוצר ממנו פעול</option>
+				<option value='transitiveWithPaul' <%if (verb.getValence().equals("transitiveWithPaul")) out.print("SELECTED");%>>פועל יוצא שנוצר ממנו פעול</option> 	
+				<option value='transitiveWithoutPaul' <%if (verb.getValence().equals("transitiveWithoutPaul")) out.print("SELECTED");%>>פועל יוצא שלא נוצר ממנו פעול</option> 
+				<option value='intransitive' <%if (verb.getValence().equals("intransitive")) out.print("SELECTED");%>>פועל עומד</option>
+				<option value='transitive' <%if (verb.getValence().equals("transitive")) out.print("SELECTED");%>>פועל יוצא</option> 
+				<option value='ditransitive' <%if (verb.getValence().equals("ditransitive")) out.print("SELECTED");%>>דיטרנזיטיבי</option> 	
+				
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			שורש:
+		</td>
+		<td>
+			<input type=text name='verb_root' size=15 value='<%=verb.getRoot().trim()%>'>			
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			בניין:  
+		</td>
+		<%
+		String unspecified = (verb.getBinyan().equals("unspecified")) ? "selected" : "";
+		String paal = (verb.getBinyan().equals("Pa&#39;al")) ? "selected" : "";
+		String nifal = (verb.getBinyan().equals("Nif&#39;al")) ? "selected" : "";
+		String piel = (verb.getBinyan().equals("Pi&#39;el")) ? "selected" : "";
+		String pual = (verb.getBinyan().equals("Pu&#39;al")) ? "selected" : "";
+		String hifil = (verb.getBinyan().equals("Hif&#39;il")) ? "selected" : "";
+		String hufal = (verb.getBinyan().equals("Huf&#39;al")) ? "selected" : "";
+		String hitpael = (verb.getBinyan().equals("Hitpa&#39;el")) ? "selected" : "";
+		%>
+		<td>
+			<select name='verb_binyan'>
+				<option <%=unspecified%> value='unspecified'>לא מוגדר</option>
+				<option <%=paal%> value="Pa'al">בניין פעל</option>
+				<option <%=nifal%> value="Nif'al">בניין נפעל</option> 	
+				<option <%=piel%>  value="Pi'el">בניין פיעל</option> 
+				<option <%=pual%> value="Pu'al">בניין פועל</option>
+				<option <%=hifil%> value="Hif'il">בניין הפעיל</option>
+				<option <%=hufal%> value="Huf'al">בניין הופעל</option> 	
+				<option <%=hitpael%> value="Hitpa'el">בניין התפעל</option> 				
+			</select>				
+		</td>
+	</tr>
+	 <tr>
+                <td>
+                        האם מילה לועזית?
+                </td>
+                <td>
+                        <select name='verb_foreign'>
+                                <option value='1' <%if (verb.isForeign()) out.print("SELECTED");%>>כן</option>                        
+                                <option value='0' <%if (!verb.isForeign()) out.print("SELECTED");%>>לא</option>                       
+                        </select>
+                </td>
+        </tr>
+								
+	 <tr>
+                <td>
+                        תבנית נטייה:
+                </td>
+                <td>
+                <select name='verb_inflectionPattern'>
+                                <OPTION VALUE="1" <%if (verb.getInflectionPattern().equals("1")) out.print("SELECTED");%>>(1) פעל - 1,2,3,6,7,8</OPTION>
+                                <OPTION VALUE="2" <%if (verb.getInflectionPattern().equals("2")) out.print("SELECTED");%>>(2) פעל - 4,13,15,16,17,26,27,29 </OPTION>
+                                <OPTION VALUE="3"  <%if (verb.getInflectionPattern().equals("3")) out.print("SELECTED");%>>(3) 5,10,11,14,18,28 - פעל</OPTION>
+                                <OPTION value="4"  <%if (verb.getInflectionPattern().equals("4")) out.print("SELECTED");%>>(4) 9 - פעל</OPTION>
+                                <OPTION value="5"  <%if (verb.getInflectionPattern().equals("5")) out.print("SELECTED");%>>(5) 12 - פעל</OPTION>
+                                <OPTION value="6"  <%if (verb.getInflectionPattern().equals("6")) out.print("SELECTED");%>>(6) 19,20 - פעל</OPTION>
+                                <OPTION value="7"  <%if (verb.getInflectionPattern().equals("7")) out.print("SELECTED");%>>(7) 21 - פעל</OPTION>
+                                <OPTION value="8"  <%if (verb.getInflectionPattern().equals("8")) out.print("SELECTED");%>>(8) פעל - 22 </OPTION>
+                                <OPTION value="9"  <%if (verb.getInflectionPattern().equals("9")) out.print("SELECTED");%>>(9) 23,24 - פעל</OPTION>
+                                <OPTION value="10"  <%if (verb.getInflectionPattern().equals("10")) out.print("SELECTED");%>>(10) 25,30 - פעל</OPTION>
+                                <OPTION value="11"  <%if (verb.getInflectionPattern().equals("11")) out.print("SELECTED");%>>(11) 31,32,33,34,35,36 - פעל</OPTION>
+                                <OPTION value="12"  <%if (verb.getInflectionPattern().equals("12")) out.print("SELECTED");%>>(12) 37 - פעל</OPTION>
+                                <OPTION value="13"  <%if (verb.getInflectionPattern().equals("13")) out.print("SELECTED");%>>(13) 38,40,41 - פעל</OPTION>
+                                <OPTION value="14"  <%if (verb.getInflectionPattern().equals("14")) out.print("SELECTED");%>>(14) פעל - 39 </OPTION>
+                                <OPTION value="15"  <%if (verb.getInflectionPattern().equals("15")) out.print("SELECTED");%>>(15) 42 - פעל</OPTION>
+                                <OPTION value="16"  <%if (verb.getInflectionPattern().equals("16")) out.print("SELECTED");%>>(16) 43,45 - פעל</OPTION>
+                                <OPTION value="17"  <%if (verb.getInflectionPattern().equals("17")) out.print("SELECTED");%>>(17) 44 - פעל</OPTION>
+                                <OPTION value="18"  <%if (verb.getInflectionPattern().equals("18")) out.print("SELECTED");%>>(18) 46 - פעל</OPTION>
+                                <OPTION value="19"  <%if (verb.getInflectionPattern().equals("19")) out.print("SELECTED");%>>(19) 47 - פעל</OPTION>
+                                <OPTION value="20"  <%if (verb.getInflectionPattern().equals("20")) out.print("SELECTED");%>>(20) פעל - 48 </OPTION>
+                                <OPTION value="21"  <%if (verb.getInflectionPattern().equals("21")) out.print("SELECTED");%>>(21) 49,50,51 - פעל</OPTION>
+                                <OPTION value="22"  <%if (verb.getInflectionPattern().equals("22")) out.print("SELECTED");%>>(22) 52 - פעל</OPTION>
+                                <OPTION value="23"  <%if (verb.getInflectionPattern().equals("23")) out.print("SELECTED");%>>(23) 1,2,3,4,5,6,7,8,9,10,11,12,24,25,26 - פיעל</OPTION>
+                                <OPTION value="25"  <%if (verb.getInflectionPattern().equals("25")) out.print("SELECTED");%>>(25) 13 - פיעל</OPTION>
+                                <OPTION value="26"  <%if (verb.getInflectionPattern().equals("26")) out.print("SELECTED");%>>(26) 14 - פיעל</OPTION>
+                                <OPTION value="27"  <%if (verb.getInflectionPattern().equals("27")) out.print("SELECTED");%>>(27) 15- פיעל</OPTION>
+                                <OPTION value="28"  <%if (verb.getInflectionPattern().equals("28")) out.print("SELECTED");%>>(28) 16 - פיעל</OPTION>
+                                <OPTION value="29"  <%if (verb.getInflectionPattern().equals("29")) out.print("SELECTED");%>>(29) 17 - פיעל</OPTION>
+                                <OPTION value="30"  <%if (verb.getInflectionPattern().equals("30")) out.print("SELECTED");%>>(30) 18 - פיעל</OPTION>
+                                <OPTION value="31"  <%if (verb.getInflectionPattern().equals("31")) out.print("SELECTED");%>>(31) 19,20,23 - פיעל</OPTION>
+                                <OPTION value="32"  <%if (verb.getInflectionPattern().equals("32")) out.print("SELECTED");%>>(32) 21 - פיעל</OPTION>
+                                <OPTION value="33"  <%if (verb.getInflectionPattern().equals("33")) out.print("SELECTED");%>>(33) 22- פיעל</OPTION>
+                                <OPTION value="34"  <%if (verb.getInflectionPattern().equals("34")) out.print("SELECTED");%>>(34) 27 - פיעל</OPTION>
+                                <OPTION value="35"  <%if (verb.getInflectionPattern().equals("35")) out.print("SELECTED");%>>(35) 28 - פיעל</OPTION>
+
+                                <OPTION value="36"  <%if (verb.getInflectionPattern().equals("36")) out.print("SELECTED");%>>(36) 1-21,23,25,26 - פועל</OPTION>
+                                <OPTION value="37"  <%if (verb.getInflectionPattern().equals("37")) out.print("SELECTED");%>>(37) 22 -פועל</OPTION>
+                                <OPTION value="38"  <%if (verb.getInflectionPattern().equals("38")) out.print("SELECTED");%>>(38) 24 - פועל</OPTION>
+                                <OPTION value="39"  <%if (verb.getInflectionPattern().equals("39")) out.print("SELECTED");%>>(39) 27,29- פועל</OPTION>
+                                <OPTION value="40"  <%if (verb.getInflectionPattern().equals("40")) out.print("SELECTED");%>>(40) 28- פועל</OPTION>
+                                <OPTION value="41"  <%if (verb.getInflectionPattern().equals("41")) out.print("SELECTED");%>>(41) 30 - פועל</OPTION>
+
+                                <OPTION value="42"  <%if (verb.getInflectionPattern().equals("42")) out.print("SELECTED");%>>(42) 1-8,10-23,26,27,33-43 - התפעל</OPTION>
+                                <OPTION value="43"  <%if (verb.getInflectionPattern().equals("43")) out.print("SELECTED");%>>(43) 9 -התפעל</OPTION>
+                                <OPTION value="44"  <%if (verb.getInflectionPattern().equals("44")) out.print("SELECTED");%>>(44) 24,25 - התפעל</OPTION>
+                                <OPTION value="45"  <%if (verb.getInflectionPattern().equals("45")) out.print("SELECTED");%>>(45) 28,29,32- התפעל</OPTION>
+                                <OPTION value="46"  <%if (verb.getInflectionPattern().equals("46")) out.print("SELECTED");%>>(46)30- התפעל</OPTION>
+                                <OPTION value="47"  <%if (verb.getInflectionPattern().equals("47")) out.print("SELECTED");%>>(47) 31 - התפעל</OPTION>
+
+                                <OPTION value="48"  <%if (verb.getInflectionPattern().equals("48")) out.print("SELECTED");%>>(48) 1-8,11,15-17,23-26,40 - הפעיל</OPTION>
+                                <OPTION value="49"  <%if (verb.getInflectionPattern().equals("49")) out.print("SELECTED");%>>(49) 9,10 -הפעיל</OPTION>
+                                <OPTION value="50"  <%if (verb.getInflectionPattern().equals("50")) out.print("SELECTED");%>>(50) 12-14 - הפעיל</OPTION>
+                                <OPTION value="51"  <%if (verb.getInflectionPattern().equals("51")) out.print("SELECTED");%>>(51) 18-22- הפעיל</OPTION>
+                                <OPTION value="52"  <%if (verb.getInflectionPattern().equals("52")) out.print("SELECTED");%>>(52)27-34- הפעיל</OPTION>
+                                <OPTION value="53"  <%if (verb.getInflectionPattern().equals("53")) out.print("SELECTED");%>>(53) 35-39 - הפעיל</OPTION>
+
+                                <OPTION value="54"  <%if (verb.getInflectionPattern().equals("54")) out.print("SELECTED");%>>(54)1-12,14,15,19,20,28- הופעל</OPTION>
+                                <OPTION value="55"  <%if (verb.getInflectionPattern().equals("55")) out.print("SELECTED");%>>(55) 13 - הופעל</OPTION>
+                                <OPTION value="56"  <%if (verb.getInflectionPattern().equals("56")) out.print("SELECTED");%>>(56)1-16-18- הופעל</OPTION>
+                                <OPTION value="57"  <%if (verb.getInflectionPattern().equals("57")) out.print("SELECTED");%>>(57) 21-27 - הופעל</OPTION>
+
+                                <OPTION value="58"  <%if (verb.getInflectionPattern().equals("58")) out.print("SELECTED");%>>(58)1-14,17-19- נפעל</OPTION>
+                                <OPTION value="59"  <%if (verb.getInflectionPattern().equals("59")) out.print("SELECTED");%>>(59) 15,16,25 -נפעל</OPTION>
+                                <OPTION value="60"  <%if (verb.getInflectionPattern().equals("60")) out.print("SELECTED");%>>(60)20-24- נפעל</OPTION>
+                                <OPTION value="61"  <%if (verb.getInflectionPattern().equals("61")) out.print("SELECTED");%>>(61) 30-31 - נפעל - נסוג</OPTION>     
+				 <OPTION value="62"  <%if (verb.getInflectionPattern().equals("62")) out.print("SELECTED");%>>(62)32-33 - נצוד </OPTION>                      
+				<OPTION value='63'  <%if (verb.getInflectionPattern().equals("63")) out.print("SELECTED");%>>(63) משקל נתפעל עבור התפעל - צורת עבר בלבד</OPTION>   
+				 <OPTION value='64'  <%if (verb.getInflectionPattern().equals("63")) out.print("SELECTED");%>>(64) משקל הדXX לפעלים בבניין התפעל עם שורש שמתחיל בד'</OPTION>                               
+                        </select>
+	</td>
+
+        </tr>
+
+
+
+
+	
+	<tr>	
+		<td>
+			<input type=hidden name='verb_ipSource' size=30 value='<%=verb.getIpSource()%>'>
+		</td>
+	</tr>
+	<!--
+	<tr>
+		<td>
+			מקור בו מוצדקות ומוסברות תבניות הנטייה:  
+		</td>
+		<td>
+			<input type=text name='verb_ipSource' size=30 value='<%=verb.getIpSource()%>'>				
+		</td>
+	</tr>	
+	-->
+	<tr>
+		<td>
+			האם לייצר הטיית מקור?  
+		</td>
+		<td>
+			<select name='verb_inflectOrigin'>
+				 <option value='0' <%if (!verb.isInflectOrigin()) out.print("SELECTED");%>>לא</option>
+				<option value='1' <%if (verb.isInflectOrigin()) out.print("SELECTED");%>>כן</option>												
+			</select>				
+		</td>
+	</tr>
+	 <tr>
+                <td>
+                        האם לייצר הטיית שם פועל לא מוטה עם בכלם (לשמור,בשמור,כשמור,משמור)?
+                </td>
+                <td>
+                        <select name='verb_inflectInfinitive'>
+                                 <option value='0' <%if (!verb.isInflectInfinitive()) out.print("SELECTED");%>>לא</option>
+                                <option value='1' <%if (verb.isInflectInfinitive()) out.print("SELECTED");%>>כן</option>                        
+                        </select>
+                </td>
+        </tr>
+
+	<tr>
+		<td>
+			האם לייצר הטיות   ל + שם פועל + קניין?  
+		</td>
+		<td>
+			<select name='verb_inflectInfinitivel'>
+				<option value='1' <%if (verb.isInflectInfinitivel()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!verb.isInflectInfinitivel()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>
+	 <tr>
+                <td>
+                        האם לייצר הטיות   ב + שם פועל + קניין?
+                </td>
+                <td>
+                        <select name='verb_inflectInfinitiveb'>
+                                <option value='1' <%if (verb.isInflectInfinitiveb()) out.print("SELECTED");%>>כן</option>                   
+                                <option value='0' <%if (!verb.isInflectInfinitiveb()) out.print("SELECTED");%>>לא</option>                  
+                        </select>
+                </td>
+        </tr>
+
+	 <tr>
+                <td>
+                        האם יכול להתקיים שם פועל מוטה ללא בכלם (שומרו) ?
+                </td>
+                <td>
+                        <select name='verb_inflectInfinitiveIndependent'>
+                                 <option value='0' <%if (!verb.isInflectInfinitiveIndependent()) out.print("SELECTED");%>>לא</option>
+                               <option value='1' <%if (verb.isInflectInfinitiveIndependent()) out.print("SELECTED");%>>כן</option>
+                        </select>
+                </td>
+        </tr>
+
+	<tr>
+		<td>
+			האם לייצר הטיות עבר?  
+		</td>
+		<td>
+			<select name='verb_inflectPast'>
+				<option value='1' <%if (verb.isInflectPast()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!verb.isInflectPast()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם לייצר הטיות בינוני?  
+		</td>
+		<td>
+			<select name='verb_inflectBeinoni'>
+				<option value='1' <%if (verb.isInflectBeinoni()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!verb.isInflectBeinoni()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם לייצר הטיות עתיד?  
+		</td>
+		<td>
+			<select name='verb_inflectFuture'>
+				<option value='1' <%if (verb.isInflectFuture()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!verb.isInflectFuture()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם לייצר הטיות ציווי?  
+		</td>
+		<td>
+			<select name='verb_inflectImperative'>
+				<option value='1' <%if (verb.isInflectImperative()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!verb.isInflectImperative()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם לייצר לבינוני נטיות נסמך?  
+		</td>
+		<td>
+			<select name='verb_inflectBeinoniConstruct'>
+				<option value='1' <%if (verb.isInflectBeinoniConstruct()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!verb.isInflectBeinoniConstruct()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם לייצר לבינוני נטיות קניין?  
+		</td>
+		<td>
+			<select name='verb_inflectBeinoniPossessive'>
+				<option value='1' <%if (verb.isInflectBeinoniPossessive()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!verb.isInflectBeinoniPossessive()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>								
+		
+</table>  
+</div>		

@@ -1,0 +1,131 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.NumeralLexiconType"
+	 import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+%>
+<%
+NumeralLexiconType numeral = new NumeralLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = null;
+
+if (!newItem && item.getNumeral() != null && id != 0) {
+	numeral.open(id);
+	changeGroup = numeral.getContents("numeral_exception_type", "id", id);
+	  session.setAttribute("changeGroup", changeGroup);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("numeral")) {
+		if (request.getParameter("numeral_gender")!= null) {
+			numeral.setGender(request.getParameter("numeral_gender"));
+		}
+		if (request.getParameter("numeral_number")!= null) {
+			numeral.setNumber(request.getParameter("numeral_number"));
+		}
+		if (request.getParameter("numeral_type")!= null) {
+			numeral.setType(request.getParameter("numeral_type"));
+		}
+		if (request.getParameter("numeral_definiteness")!= null) {
+			numeral.setDefiniteness(request.getParameter("numeral_definiteness"));
+		}
+		 if (request.getParameter("numeral_value")!= null) {
+                        numeral.setValue(request.getParameter("numeral_value").trim());
+                }
+
+		if (request.getParameter("numeral_inflect")!= null) {
+			numeral.setInflect(request.getParameter("numeral_inflect").equals("1"));
+		}
+		if (newItem) {
+			numeral.add(item.getID());
+		} else {
+			numeral.update();
+		}
+		item.open(item.getID());
+		numeral.open(item.getID());
+	}
+}
+%>
+<div id='numeral_div' style="display:none;">
+<table>
+
+	 <tr>
+                <td>
+                        ערך:
+                </td>
+                <td>
+                        <input type=text name='numeral_value' size=15 value='<%=numeral.getValue().trim()%>'>
+                </td>
+        </tr>
+
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='numeral_gender'>
+				<option value='masculine' <%if (numeral.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (numeral.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (numeral.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (numeral.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (numeral.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='numeral_number'>
+				<option value='singular' <%if (numeral.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (numeral.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (numeral.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (numeral.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (numeral.getNumber().equals("singular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (numeral.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			סוג שם המספר:
+		</td>
+		<td>
+			<select name='numeral_type'>
+				<option value='unspecified' <%if (numeral.getType().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='numeral ordinal' <%if (numeral.getType().equals("numeral ordinal")) out.print("SELECTED");%>>מספר סודר</option>
+				<option value='numeral cardinal' <%if (numeral.getType().equals("numeral cardinal")) out.print("SELECTED");%>>מספר מונה</option>
+				<option value='numeral fractional' <%if (numeral.getType().equals("numeral fractional")) out.print("SELECTED");%>>מספר חלקי</option>
+				<!--option value='literal number' <%if (numeral.getType().equals("literal number")) out.print("SELECTED");%>>מספר</option-->
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם מקבל ה' הידיעה?  
+		</td>
+		<td>
+			<select name='numeral_definiteness'>
+				<option value='optional' <%if (numeral.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>
+				<option value='prohibited' <%if (numeral.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>
+				<option value='required' <%if (numeral.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option> 			
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם נוטה בנטיית גוף/מין/מספר?
+		</td>
+		<td>
+			<select name='numeral_inflect'>
+				<option value='0' <%if (!numeral.isInflect()) out.print("SELECTED");%>>לא</option>
+				<option value='1' <%if (numeral.isInflect()) out.print("SELECTED");%>>כן</option>						
+			</select>				
+		</td> 
+	</tr>	
+</table>
+</div>

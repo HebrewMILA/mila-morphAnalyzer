@@ -1,0 +1,88 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.InterrogativeExceptionType"
+%>
+<div id='interrogative_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='interrogative_exception_action'>
+				<option value='add' <%if (interrogativeExcption.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (interrogativeExcption.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (interrogativeExcption.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='interrogative_exception_undotted' size=20 value='<%=interrogativeExcption.getUndotted()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=interrogativeExcption.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='interrogative_exception_dotted' size=20 value='<%=interrogativeExcption.getDotted()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			כתיב:
+		</td>
+		<td>
+			<select name='interrogative_exception_script'>
+				<option value='formal' <%if (interrogativeExcption.getScript().equals("formal")) out.print("SELECTED");%>>כתיב מלא חסר ניקוד ע"פ כללי האקדמיה</option>
+				<option value='typo' <%if (interrogativeExcption.getScript().equals("typo")) out.print("SELECTED");%>>שגיאת כתיב</option>
+				<option value='colloquial' <%if (interrogativeExcption.getScript().equals("colloquial")) out.print("SELECTED");%>>כתיב לא תקין</option>
+				<option value='slang' <%if (interrogativeExcption.getScript().equals("slang")) out.print("SELECTED");%>>סלנג (הכתיבה אולי תקנית, אולם המילה אינה בהכרח תקנית)</option>
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			נטיית שייכות חבורה:
+		</td>
+		<td>
+			<select name='interrogative_exception_personGenderNumber'>
+				<option value='unspecified' <%if (interrogativeExcption.getPersonGenderNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1p/MF/Sg' <%if (interrogativeExcption.getPersonGenderNumber().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+				<option value='2p/M/Sg' <%if (interrogativeExcption.getPersonGenderNumber().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+				<option value='2p/F/Sg' <%if (interrogativeExcption.getPersonGenderNumber().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+				<option value='3p/M/Sg' <%if (interrogativeExcption.getPersonGenderNumber().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+				<option value='3p/F/Sg' <%if (interrogativeExcption.getPersonGenderNumber().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+				<option value='1p/MF/Pl' <%if (interrogativeExcption.getPersonGenderNumber().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+				<option value='2p/M/Pl' <%if (interrogativeExcption.getPersonGenderNumber().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+				<option value='2p/F/Pl' <%if (interrogativeExcption.getPersonGenderNumber().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+				<option value='3p/M/Pl' <%if (interrogativeExcption.getPersonGenderNumber().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+				<option value='3p/F/Pl' <%if (interrogativeExcption.getPersonGenderNumber().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+				<option value='123p/M/Sg' <%if (interrogativeExcption.getPersonGenderNumber().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Sg' <%if (interrogativeExcption.getPersonGenderNumber().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+				<option value='123p/M/Pl' <%if (interrogativeExcption.getPersonGenderNumber().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Pl' <%if (interrogativeExcption.getPersonGenderNumber().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>				
+			</select>				
+		</td>
+	</tr>	 	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>			
+</table>
+</div>

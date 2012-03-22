@@ -1,0 +1,137 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.CopulaLexiconType"
+	  import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+%>
+<%
+CopulaLexiconType copula = new CopulaLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = (List)session.getAttribute("changeGroup");
+
+if (!newItem && item.getCopula() != null && id != 0) {
+	copula.open(id);
+   	changeGroup = copula.getContents("copula_exception_type", "id", id);
+        session.setAttribute("changeGroup", changeGroup);
+
+}
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("copula")) {
+		if (request.getParameter("copula_gender")!= null) {
+			copula.setGender(request.getParameter("copula_gender"));
+		}
+		if (request.getParameter("copula_number")!= null) {
+			copula.setNumber(request.getParameter("copula_number"));
+		}
+		 if (request.getParameter("copula_person")!= null) {
+                        copula.setPerson(request.getParameter("copula_person"));
+                }
+		 if (request.getParameter("copula_polarity")!= null) {
+                        copula.setPolarity(request.getParameter("copula_polarity"));
+                }
+		  if (request.getParameter("copula_tense")!= null) {
+                        copula.setTense(request.getParameter("copula_tense"));
+                }
+
+
+
+		
+		if (newItem) {
+			copula.add(item.getID());
+		} else {
+			copula.update();
+		}
+		item.open(item.getID());
+		copula.open(item.getID());
+	}
+}
+%>
+<div id='copula_div' style="display:none;">
+<table>
+                                  
+ <tr>
+                <td>
+                        מין:
+                </td>
+                <td>
+                        <select name='copula_gender'>
+                                <option value='masculine' <%if (copula.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (copula.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+                                <option value='masculine and feminine' <%if (copula.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+                                <option value='irrelevant' <%if (copula.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+                                <option value='unspecified' <%if (copula.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='copula_number'>
+                                <option value='singular' <%if (copula.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (copula.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                                <option value='dual' <%if (copula.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+                                <option value='dual and plural' <%if (copula.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+                                <option value='singular and plural' <%if (copula.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+                                <option value='unspecified' <%if (copula.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+
+	<tr>
+                <td>
+                        גוף:
+                </td>
+                <td>
+                        <select name='copula_person'>
+                                <option value='unspecified' <%if (copula.getPerson().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</
+option>
+                                <option value='1' <%if (copula.getPerson().equals("1")) out.print("SELECTED");%>>גוף ראשון</option>
+                                <option value='2' <%if (copula.getPerson().equals("2")) out.print("SELECTED");%>>גוף שני</option>
+                                <option value='3' <%if (copula.getPerson().equals("3")) out.print("SELECTED");%>>גוף שלישי</option>
+                                <option value='any' <%if (copula.getPerson().equals("any")) out.print("SELECTED");%>>גוף כלשהו</option>
+
+                        </select>
+                </td>
+        </tr>
+	 <tr>
+                <td>
+                        זמן
+                </td>
+                <td>
+                        <select name='copula_tense'>
+                                <option value='unspecified' <%if (copula.getTense().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+                                <option value='past' <%if (copula.getTense().equals("past")) out.print("SELECTED");%>>עבר</option>
+				<option value='beinoni' <%if (copula.getTense().equals("beinoni")) out.print("SELECTED");%>>הווה</option>
+                                <option value='future' <%if (copula.getTense().equals("future")) out.print("SELECTED");%>>עתיד</option>
+				<option value='imperative' <%if (copula.getTense().equals("imperative")) out.print("SELECTED");%>>ציווי</option>
+                                <option value='infinitive' <%if (copula.getTense().equals("infinitive")) out.print("SELECTED");%>>שם פועל</option>
+                                <option value='bareInfinitive' <%if (copula.getTense().equals("bareInfinitive")) out.print("SELECTED");%>>מקור</option>
+                        </select>
+                </td>
+        </tr>
+
+	 <tr>
+                <td>
+                        קוטביות:
+                </td>
+                <td>
+                        <select name='copula_polarity'>
+                                <option value='unspecified' <%if (copula.getPolarity().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</
+option>
+                                <option value='positive' <%if (copula.getPolarity().equals("positive")) out.print("SELECTED");%>>חיובית</option>
+                                <option value='negative' <%if (copula.getPolarity().equals("negative")) out.print("SELECTED");%>>שלילית</option>
+
+                        </select>
+                </td>
+        </tr>
+		
+</table> 
+</div>		

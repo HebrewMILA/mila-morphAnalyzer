@@ -1,0 +1,65 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.InterjectionLexiconType"
+	 import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+%>
+<%
+InterjectionLexiconType interjection = new InterjectionLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+
+List changeGroup = null;
+
+if (!newItem && item.getInterjection() != null && id != 0) {
+	interjection.open(id);
+	changeGroup = interjection.getContents("interjection_exception_type", "id", id);
+	session.setAttribute("changeGroup", changeGroup);
+
+} 
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("interjection")) {
+		if (request.getParameter("interjection_inflect")!= null) {
+			interjection.setInflect(request.getParameter("interjection_inflect").equals("1"));
+		}
+		if (request.getParameter("interjection_inflectionBase")!= null) {
+			interjection.setInflectionBase(request.getParameter("interjection_inflectionBase").trim());
+		}
+		if (newItem) {
+			interjection.add(item.getID());
+		} else {
+			interjection.update();
+		}
+		item.open(item.getID());
+		interjection.open(item.getID());
+	}
+}
+%>
+<div id='interjection_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			 האם לייצר הטיות שייכות חבורה ?
+		</td>
+		<td>
+			<select name='interjection_inflect'>
+				<option value='0' <%if (!interjection.isInflect()) out.print("SELECTED");%>>לא</option>
+				<option value='1' <%if (interjection.isInflect()) out.print("SELECTED");%>>כן</option>						
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			בסיס לנטיית גוף/מין/מספר אם שונה מהמילה:  
+		</td>
+		<td>
+			<input type=text name='interjection_inflectionBase' size=15 value='<%=interjection.getInflectionBase().trim()%>'>				
+		</td>
+	</tr>				
+</table> 
+</div>		

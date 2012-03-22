@@ -1,0 +1,82 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.MultiWordFrozenExceptionType"
+%>
+<%
+MultiWordFrozenExceptionType multiWordFrozenException = new MultiWordFrozenExceptionType();  
+if (aid != 0 && pos.equals("multiWordFrozen")) {
+	multiWordFrozenException.open(aid); 
+}
+if (request.getParameter("delete_action") !=null)	{
+	if (request.getParameter("delete_action").equals("multiWordFrozen")) {
+		//Showing confirmation message
+		if (request.getParameter("confirm") != null)	{
+			int feedback = multiWordFrozenException.remove();
+			if (feedback > 0)	{
+				actionDone = "remove";
+				multiWordFrozenException = new MultiWordFrozenExceptionType();
+				removeMsg = "<font color=blue><b>הפעולה נמחקה בהצלחה</b>";
+			}
+			else	{
+				notRemoveMsg = "<font class=errorfont>הפעולה לא נמחקה</font><br>";
+			}
+			
+		}	//End of doing DELETE
+	}
+}
+// doing th addition or updating (uncommented yossi-06.10.10)
+if (request.getParameter("action_pos")!= null) {
+	if (request.getParameter("action_pos").equals("multiWordFrozen") && !request.getParameter("multiWordFrozen_exception_undotted").equals("")) {
+		multiWordFrozenException.setUndotted(request.getParameter("multiWordFrozen_exception_undotted").trim());
+		if (request.getParameter("multiWordFrozen_exception_dotted")!= null) {
+			multiWordFrozenException.setDotted(request.getParameter("multiWordFrozen_exception_dotted").trim());
+		}
+		if (request.getParameter("multiWordFrozen_exception_register")!= null) {
+			multiWordFrozenException.setRegister(request.getParameter("multiWordFrozen_exception_register"));
+		}
+		if (request.getParameter("multiWordFrozen_exception_spelling")!= null) {
+                        multiWordFrozenException.setSpelling(request.getParameter("multiWordFrozen_exception_spelling"));
+                }
+		
+		
+		if (request.getParameter("multiWordFrozen_exception_definiteness")!= null) {
+                        multiWordFrozenException.setDefiniteness(request.getParameter("multiWordFrozen_exception_definiteness").equals("1"));			
+                }
+		
+		if (request.getParameter("multiWordFrozen_exception_acceptDefiniteness")!= null) {
+                        multiWordFrozenException.setAcceptDefiniteness(request.getParameter("multiWordFrozen_exception_acceptDefiniteness").equals("1"));			
+                }
+		
+		if (request.getParameter("multiWordFrozen_exception_action")!= null) {
+			multiWordFrozenException.set("action", request.getParameter("multiWordFrozen_exception_action"));
+		}	
+		if (id != 0) {	
+			if (aid == 0) 
+			{
+				aid = multiWordFrozenException.add(item.getID()); 
+				if (aid >0) 
+					{
+					addingMsg = "<font color=blue><b>התוספה פעולה חדשה</b>";
+					}
+				else
+					{
+					addingMsg = "<font color=red><b>פעולת הוספה נכשלה</b>";
+					}
+				actionDone = "add";
+			} else {	
+				if (aid != 0) {
+					int feedback = multiWordFrozenException.update(); 
+					if (feedback >0) {
+						addingMsg = "<font color=blue><b>הפעולה התעדכנה בהצלחה</b>";
+					}					
+					actionDone = "update";
+				}
+			}	
+			multiWordFrozenException.open(aid);
+			item.open(id);	
+		}			
+	}
+}
+%>

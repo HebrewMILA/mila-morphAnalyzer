@@ -1,0 +1,168 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.ExistentialLexiconType"
+	 import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+
+%>
+<%
+ExistentialLexiconType existential = new ExistentialLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = null;
+
+
+if (!newItem && item.getExistential() != null && id != 0) {
+	existential.open(id);
+	 changeGroup = existential.getContents("existential_exception_type", "id", id);
+         session.setAttribute("changeGroup", changeGroup);
+
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("existential")) {
+		if (request.getParameter("existential_gender")!= null) {
+			existential.setGender(request.getParameter("existential_gender"));
+		}
+		if (request.getParameter("existential_number")!= null) {
+			existential.setNumber(request.getParameter("existential_number"));
+		}
+		if (request.getParameter("existential_definiteness")!= null) {
+			existential.setDefiniteness(request.getParameter("existential_definiteness"));
+		}
+		if (request.getParameter("existential_tense")!= null) {
+			existential.setTense(request.getParameter("existential_tense"));
+		}
+		if (request.getParameter("existential_root")!= null) {
+			existential.setRoot(request.getParameter("existential_root").trim());
+		}
+		if (request.getParameter("existential_pgn")!= null) {
+			existential.setPgn(request.getParameter("existential_pgn"));
+		}
+		if (request.getParameter("existential_polarity")!= null) {
+                        existential.setPolarity(request.getParameter("existential_polarity"));
+                }
+
+		if (newItem) {
+			existential.add(item.getID());
+		} else {
+			existential.update();
+		}
+		item.open(item.getID());
+		existential.open(item.getID());
+	}
+}
+%>
+
+
+<div id='existential_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='existential_gender'>
+				<option value='masculine' <%if (existential.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (existential.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (existential.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (existential.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (existential.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='existential_number'>
+				<option value='singular' <%if (existential.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (existential.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (existential.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (existential.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (existential.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (existential.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			האם מקבל ה' השאלה?  
+		</td>
+		<td>
+			<select name='existential_definiteness'>
+				<option value='optional' <%if (existential.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>
+				<option value='prohibited' <%if (existential.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>
+				<option value='required' <%if (existential.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option> 			
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			שורש:
+		</td>
+		<td>
+			<input type=text name='existential_root' size=15 value='<%=existential.getRoot().trim()%>'>			
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			זמן 
+		</td>
+		<td>
+			<select name='existential_tense'>
+				<option value='unspecified' <%if (existential.getTense().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='past' <%if (existential.getTense().equals("past")) out.print("SELECTED");%>>עבר</option>
+				<option value='present'<%if (existential.getTense().equals("present")) out.print("SELECTED");%>>הווה</option>
+				<option value='future' <%if (existential.getTense().equals("future")) out.print("SELECTED");%>>עתיד</option> 				   
+	
+			</select>				
+		</td>
+	</tr>
+	 <tr>
+                <td>
+                        נטיית שייכות חבורה:                </td>
+                <td>                        <select name='existential_pgn'>                                <option value='unspecified' <%if (existential.getPgn().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>                                <option value='1p/MF/Sg' <%if (existential.getPgn().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>                                <option value='2p/M/Sg' <%if (existential.getPgn().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>                                
+
+<option value='2p/F/Sg' <%if (existential.getPgn().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>             
+
+<option value='3p/M/Sg' <%if (existential.getPgn().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option> 
+
+<option value='3p/F/Sg' <%if (existential.getPgn().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>   
+
+
+
+
+                             <option value='1p/MF/Pl' <%if (existential.getPgn().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>                                <option value='2p/M/Pl' <%if (existential.getPgn().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>                                <option value='2p/F/Pl' <%if (existential.getPgn().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>                                <option value='3p/M/Pl' <%if (existential.getPgn().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>                                <option value='3p/F/Pl' <%if (existential.getPgn().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>                                
+   
+  <option value='3p/MF/Pl' <%if (existential.getPgn().equals("3p/MF/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר וגם נקבה / רבים</option>                     
+
+
+<option value='123p/M/Sg' <%if (existential.getPgn().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>                                <option value='123p/F/Sg' <%if (existential.getPgn().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>                                <option value='123p/M/Pl' <%if (existential.getPgn().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / רבים</option>                                <option value='123p/F/Pl' <%if (existential.getPgn().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / רבים</option>
+                        </select>
+                </td>
+        </tr>
+
+
+ <tr>
+                <td>                        קוטביות:
+                </td>
+                <td>
+                        <select name='existential_polarity'>   
+                          <option value='unspecified' <%if (existential.getPolarity().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>                
+                         <option value='positive' <%if (existential.getPolarity().equals("positive")) out.print("SELECTED");%>>חיובית</option>                                
+
+			<option value='negative' <%if (existential.getPolarity().equals("negative")) out.print("SELECTED");%>>שלילית</option>
+
+                        </select>
+                </td>
+        </tr>
+
+
+	
+</table>
+</div>		

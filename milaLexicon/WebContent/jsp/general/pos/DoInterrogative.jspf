@@ -1,0 +1,84 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.InterrogativeLexiconType"
+	  import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+%>
+<%
+InterrogativeLexiconType interrogative = new InterrogativeLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+
+List changeGroup = null;
+
+if (!newItem && item.getInterrogative() != null && id != 0) {
+	interrogative.open(id);
+	changeGroup = interrogative.getContents("interrogative_exception_type", "id", id);
+	 session.setAttribute("changeGroup", changeGroup);
+} 
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("interrogative")) {
+		if (request.getParameter("interrogative_inflect")!= null) {
+			interrogative.setInflect(request.getParameter("interrogative_inflect").equals("1"));
+		}
+		if (request.getParameter("interrogative_inflectionBase")!= null) {
+			interrogative.setInflectionBase(request.getParameter("interrogative_inflectionBase").trim());
+		}
+		 if (request.getParameter("interrogative_type")!= null) {
+                        interrogative.setInterrogativeType(request.getParameter("interrogative_type"));
+                }
+
+		if (newItem) {
+			interrogative.add(item.getID());
+		} else {
+			interrogative.update();
+		}
+		item.open(item.getID());
+		interrogative.open(item.getID());
+	}
+}
+%>
+<div id='interrogative_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			האם נוטה בנטיית גוף/מין/מספר?
+		</td>
+		<td>
+			<select name='interrogative_inflect'>
+				<option value='0' <%if (!interrogative.isInflect()) out.print("SELECTED");%>>לא</option>
+				<option value='1' <%if (interrogative.isInflect()) out.print("SELECTED");%>>כן</option>						
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			בסיס לנטיית גוף/מין/מספר אם שונה מהמילה:  
+		</td>
+		<td>
+			<input type=text name='interrogative_inflectionBase' size=15 value='<%=interrogative.getInflectionBase().trim()%>'>			
+		</td>
+	</tr>
+
+	 <tr>
+                <td>
+                        סוג:
+                </td>
+                <td>
+                        <select name='interrogative_type'>
+                                <option value='pronoun' <%if (interrogative.getInterrogativeType().equals("pronoun")) out.print("SELECTED");%>>כינוי מילת</option>
+                                <option value='proadverb' <%if (interrogative.getInterrogativeType().equals("proadverb")) out.print("SELECTED");%>>תואר הפועל</option>
+                                <option value='prodet' <%if (interrogative.getInterrogativeType().equals("prodet")) out.print("SELECTED");%>>מצביע</option>
+                                <option value='yesno' <%if (interrogative.getInterrogativeType().equals("yesno")) out.print("SELECTED");%>>שאלת כן לא</option>
+                 
+                        </select>
+                </td>
+        </tr>
+				
+</table> 
+</div>		

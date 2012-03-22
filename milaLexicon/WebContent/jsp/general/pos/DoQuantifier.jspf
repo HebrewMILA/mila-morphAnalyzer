@@ -1,0 +1,96 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.QuantifierLexiconType"
+	  import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+%>
+<%
+QuantifierLexiconType quantifier = new QuantifierLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = null;
+
+if (!newItem && item.getQuantifier() != null && id != 0) {
+	quantifier.open(id);
+	changeGroup = quantifier.getContents("quantifier_exception_type", "id", id);
+	  session.setAttribute("changeGroup", changeGroup);
+
+}  
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("quantifier")) {
+		if (request.getParameter("quantifier_type")!= null) {
+			quantifier.setType(request.getParameter("quantifier_type"));
+		}
+		if (request.getParameter("quantifier_inflect")!= null) {
+			quantifier.setInflect(request.getParameter("quantifier_inflect").equals("1"));
+		}
+		if (request.getParameter("quantifier_inflectionBase")!= null) {
+			quantifier.setInflectionBase(request.getParameter("quantifier_inflectionBase").trim());
+		}
+		 if (request.getParameter("quantifier_definiteness")!= null) {
+                       	 quantifier.setDefiniteness(request.getParameter("quantifier_definiteness"));
+                		}
+
+		if (newItem) {
+			quantifier.add(item.getID());
+		} else {
+			quantifier.update();
+		}
+		item.open(item.getID());
+		quantifier.open(item.getID());
+	}
+}
+%>
+<div id='quantifier_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			סוג:
+		</td>
+		<td>
+			<select name='quantifier_type'>
+				<option value='amount' <%if (quantifier.getType().equals("amount")) out.print("SELECTED");%>>כמותיים</option>
+				<option value='partitive' <%if (quantifier.getType().equals("partitive")) out.print("SELECTED");%>>פרטיטיביים</option>
+				<option value='determiner' <%if (quantifier.getType().equals("determiner")) out.print("SELECTED");%>>מיידעים</option>
+				<option value='unspecified' <%if (quantifier.getType().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 															
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			 האם לייצר הטיות שייכות חבורה ?
+		</td>
+		<td>
+			<select name='quantifier_inflect'>
+				<option value='0' <%if (!quantifier.isInflect()) out.print("SELECTED");%>>לא</option>
+				<option value='1' <%if (quantifier.isInflect()) out.print("SELECTED");%>>כן</option>						
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			בסיס לנטיית גוף/מין/מספר אם שונה מהמילה:  
+		</td>
+		<td>
+			<input type=text name='quantifier_inflectionBase' size=15 value='<%=quantifier.getInflectionBase().trim()%>'>			
+		</td>
+	</tr>
+ <tr>
+                <td>
+                        האם מקבל ה' הידיעה?
+                </td>
+                <td>
+                        <select name='quantifier_definiteness'>
+                                <option value='optional' <%if (quantifier.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>
+                                <option value='prohibited' <%if (quantifier.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>
+                                <option value='required' <%if (quantifier.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option>
+                        </select>
+                </td>
+        </tr>						
+</table> 
+</div>

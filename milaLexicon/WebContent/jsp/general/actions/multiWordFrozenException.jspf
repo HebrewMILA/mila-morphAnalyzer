@@ -1,0 +1,105 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.MultiWordFrozenExceptionType"
+%>
+<div id='multiWordFrozen_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='multiWordFrozen_exception_action'>
+				<option value='add' <%if (multiWordFrozenException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (multiWordFrozenException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (multiWordFrozenException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='multiWordFrozen_exception_undotted' size=20 value='<%=multiWordFrozenException.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=multiWordFrozenException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='multiWordFrozen_exception_dotted' size=20 value='<%=multiWordFrozenException.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='multiWordFrozen_exception_register'>
+				<option value='formal' <%if (multiWordFrozenException.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (multiWordFrozenException.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (multiWordFrozenException.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+			</select>				
+		</td>
+	</tr>	
+	 <tr>
+                <td>
+                        כתיב:
+                </td>   
+                <td>
+                        <select name='multiWordFrozen_exception_spelling'>
+                                <option value='standard' <%if (multiWordFrozenException.getSpelling().equals("standard")) out.print("SELECTED");%>>תקני</option>
+                                <option value='irregular' <%if (multiWordFrozenException.getSpelling().equals("irregular")) out.print("SELECTED");%>>תת-תקני</option>
+                        </select>
+                </td>           
+        </tr>
+
+	        <tr>
+        <td>
+                      מיודע:  
+                </td>
+        <td>
+         <select name='multiWordFrozen_exception_definiteness'>
+                        <option value='0' <%if (!multiWordFrozenException.isDefiniteness()) out.print("SELECTED");%>>לא</option>
+                        <option value='1' <%if (multiWordFrozenException.isDefiniteness()) out.print("SELECTED");%>>כן</option>                       
+                </select>
+
+
+        </td>
+</tr>
+
+        <tr>
+        <td>
+                      האם מקבל יידוע:  
+                </td>
+        <td>
+         <select name='multiWordFrozen_exception_acceptDefiniteness'>
+                        <option value='0' <%if (!multiWordFrozenException.isAcceptDefiniteness()) out.print("SELECTED");%>>לא</option>
+                        <option value='1' <%if (multiWordFrozenException.isAcceptDefiniteness()) out.print("SELECTED");%>>כן</option>                       
+                </select>
+
+
+        </td>
+</tr>
+
+	
+	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>							
+</table>
+</div>

@@ -1,0 +1,232 @@
+<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.NounLexiconType"
+%>
+<%
+NounLexiconType noun = new NounLexiconType();
+noun.setDefiniteness("true");
+if (!newItem && item.getNoun() != null && id != 0) {
+	noun.open(id);
+	changeGroup = noun.getContents("noun_exception_type", "id", id);   
+}
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("noun")) {
+		if (request.getParameter("noun_gender")!= null) {
+			noun.setGender(request.getParameter("noun_gender"));
+		}
+		if (request.getParameter("noun_number")!= null) {
+			noun.setNumber(request.getParameter("noun_number"));
+		}
+		if (request.getParameter("noun_feminine")!= null) {
+			noun.setFeminine(request.getParameter("noun_feminine"));
+		}
+		if (request.getParameter("noun_plural")!= null) {
+			noun.setPlural(request.getParameter("noun_plural"));
+		}
+		if (request.getParameter("noun_dual")!= null) {
+			noun.setDual(request.getParameter("noun_dual").equals("1"));
+		}
+		if (request.getParameter("noun_deverbal")!= null) {
+			noun.setDeverbal(request.getParameter("noun_deverbal"));
+		}
+		if (request.getParameter("noun_acronym")!= null) {
+			noun.setAcronym(request.getParameter("noun_acronym"));
+		}
+		if (request.getParameter("noun_definiteness")!= null) {
+			noun.setDefiniteness(request.getParameter("noun_definiteness"));
+		}
+		if (request.getParameter("noun_direction")!= null) {
+			noun.setDirection(request.getParameter("noun_direction"));
+		}		
+		if (request.getParameter("noun_root")!= null) {
+			noun.setRoot(request.getParameter("noun_root"));
+		}
+		if (request.getParameter("noun_pattern")!= null) {
+			noun.setPattern(request.getParameter("noun_pattern"));
+		}
+		//if (request.getParameter("noun_inflectionPattern")!= null) {
+		//	noun.setInflectionPattern(request.getParameter("noun_inflectionPattern"));
+		//}
+		//if (request.getParameter("noun_ipSource")!= null) {
+		//	noun.setIpSource(request.getParameter("noun_ipSource"));
+		//}
+		noun.setPattern("");
+		noun.setIpSource("");
+		if (request.getParameter("noun_inflectionBase")!= null) {
+			noun.setInflectionBase(request.getParameter("noun_inflectionBase"));
+		}
+		if (newItem) {
+			noun.add(item.getID());
+		} else {
+			noun.update();
+		}
+		item.open(item.getID());
+		noun.open(item.getID());
+	}
+}
+%>
+<div id='noun_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='noun_gender'>
+				<option value='masculine' <%if (noun.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (noun.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (noun.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (noun.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (noun.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='noun_number'>
+				<option value='singular' <%if (noun.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (noun.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (noun.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (noun.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (noun.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (noun.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורן נקבה:
+		</td>
+		<td>
+			<select name='noun_feminine'>
+				<option value='h' <%if (noun.getFeminine().equals("h")) out.print("SELECTED");%>>ה</option>
+				<option value='t' <%if (noun.getFeminine().equals("t")) out.print("SELECTED");%>>ת</option>
+				<option value='it' <%if (noun.getFeminine().equals("it")) out.print("SELECTED");%>>ית</option>
+				<option value='irrelevant' <%if (noun.getFeminine().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (noun.getFeminine().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>								
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורן ריבוי:
+		</td>
+		<td>
+			<select name='noun_plural'>
+				<option value='im' <%if (noun.getPlural().equals("im")) out.print("SELECTED");%>>ים</option>
+				<option value='iim' <%if (noun.getPlural().equals("iim")) out.print("SELECTED");%>>יים</option>
+				<option value='wt' <%if (noun.getPlural().equals("wt")) out.print("SELECTED");%>>ות</option>
+				<option value='awt' <%if (noun.getPlural().equals("awt")) out.print("SELECTED");%>>אות</option>
+				<option value='iwt' <%if (noun.getPlural().equals("iwt")) out.print("SELECTED");%>>יות</option>
+				<option value='im and wt' <%if (noun.getPlural().equals("im and wt")) out.print("SELECTED");%>>ים וגם ות</option>
+				<option value='irrelevant' <%if (noun.getPlural().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (noun.getPlural().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>												
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			האם ניתן לגזור צורת זוגי?
+		</td>
+		<td>
+			<select name='noun_dual'>
+				<option value='0' <%if (!noun.isDual()) out.print("SELECTED");%>>לא</option>
+				<option value='1' <%if (noun.isDual()) out.print("SELECTED");%>>כן</option>												
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם שם פעולה?  
+		</td>
+		<td>
+			<select name='noun_deverbal'>
+				<option value='unspecified' <%if (noun.getDeverbal().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (noun.getDeverbal().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (noun.getDeverbal().equals("false")) out.print("SELECTED");%>>לא</option>		
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			האם ראשי תיבות?  
+		</td>
+		<td>
+			<select name='noun_acronym'>
+				<option value='unspecified' <%if (noun.getAcronym().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (noun.getAcronym().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (noun.getAcronym().equals("false")) out.print("SELECTED");%>>לא</option> 			
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם מקבל ה' הידיעה?  
+		</td>
+		<td>
+			<select name='noun_definiteness'>
+				<option value='unspecified' <%if (noun.getDefiniteness().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (noun.getDefiniteness().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (noun.getDefiniteness().equals("false")) out.print("SELECTED");%>>לא</option> 			
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם מכיל ה' המגמה?  
+		</td>
+		<td>
+			<select name='noun_direction'>
+				<option value='unspecified' <%if (noun.getDirection().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (noun.getDirection().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (noun.getDirection().equals("false")) out.print("SELECTED");%>>לא</option> 			
+			</select>				
+		</td>
+	</tr>								
+	<tr>
+		<td>
+			שורש:
+		</td>
+		<td>
+			<input type=text name='noun_root' size=15 value='<%=noun.getRoot()%>'>			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			תבנית:
+		</td>
+		<td>
+			<input type=text name='noun_pattern' size=15 value='<%=noun.getPattern()%>'>			
+		</td>
+	</tr>	
+	<!--<tr>
+		<td>
+			תבנית נטייה: מזהה לתבנית נטייה:
+		</td>
+		<td>
+			<input type=text name='noun_inflectionPattern' size=15 value='<%=noun.getInflectionPattern()%>'>			
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			מקור בו מוצדקות ומוסברות תבניות הנטייה:  
+		</td>
+		<td>
+			<input type=text name='noun_ipSource' size=30 value='<%=noun.getIpSource()%>'>				
+		</td>
+	</tr>	-->	
+	<tr>
+		<td>
+			בסיס לנטיית גוף/מין/מספר אם שונה מהמילה:  
+		</td>
+		<td>
+			<input type=text name='noun_inflectionBase' size=15 value='<%=noun.getInflectionBase()%>'>			
+		</td>
+	</tr>						
+</table> 
+</div>		

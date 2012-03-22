@@ -1,0 +1,101 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.InterjectionExceptionType"
+%>
+<div id='interjection_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='interjection_exception_action'>
+				<option value='add' <%if (interjectionExcption.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (interjectionExcption.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (interjectionExcption.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='interjection_exception_undotted' size=20 value='<%=interjectionExcption.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=interjectionExcption.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='interjection_exception_dotted' size=20 value='<%=interjectionExcption.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='interjection_exception_register'>
+				<option value='formal' <%if (interjectionExcption.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (interjectionExcption.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי </option>
+				<option value='spoken' <%if (interjectionExcption.getRegister().equals("spoken")) out.print("SELECTED");%>> תת-תקני</option>
+				
+			</select>				
+		</td>
+	</tr>	
+
+	 <tr>
+                <td>
+                        כתיב:
+                </td>
+                <td>
+                        <select name='interjection_exception_spelling'>
+                                <option value='standard' <%if (interjectionExcption.getSpelling().equals("standard")) out.print("SELECTED");%>>תקני</option>
+                                <option value='irregular' <%if (interjectionExcption.getSpelling().equals("irregular")) out.print("SELECTED");%>>תת-תקני</option>
+                        </select>
+                </td>
+        </tr>
+
+	<tr>
+		<td>
+			נטיית שייכות חבורה:
+		</td>
+		<td>
+			<select name='interjection_exception_personGenderNumber'>
+				<option value='unspecified' <%if (interjectionExcption.getPersonGenderNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1p/MF/Sg' <%if (interjectionExcption.getPersonGenderNumber().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+				<option value='2p/M/Sg' <%if (interjectionExcption.getPersonGenderNumber().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+				<option value='2p/F/Sg' <%if (interjectionExcption.getPersonGenderNumber().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+				<option value='3p/M/Sg' <%if (interjectionExcption.getPersonGenderNumber().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+				<option value='3p/F/Sg' <%if (interjectionExcption.getPersonGenderNumber().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+				<option value='1p/MF/Pl' <%if (interjectionExcption.getPersonGenderNumber().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+				<option value='2p/M/Pl' <%if (interjectionExcption.getPersonGenderNumber().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+				<option value='2p/F/Pl' <%if (interjectionExcption.getPersonGenderNumber().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+				<option value='3p/M/Pl' <%if (interjectionExcption.getPersonGenderNumber().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+				<option value='3p/F/Pl' <%if (interjectionExcption.getPersonGenderNumber().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+				<option value='123p/M/Sg' <%if (interjectionExcption.getPersonGenderNumber().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Sg' <%if (interjectionExcption.getPersonGenderNumber().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+				<option value='123p/M/Pl' <%if (interjectionExcption.getPersonGenderNumber().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Pl' <%if (interjectionExcption.getPersonGenderNumber().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>				
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>	 			
+</table>
+</div>

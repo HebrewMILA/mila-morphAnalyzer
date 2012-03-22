@@ -1,0 +1,196 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.NounExceptionType"
+%>
+<div id='adjective_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='adjective_exception_action'>
+				<option value='add' <%if (adjectiveException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (adjectiveException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (adjectiveException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='adjective_exception_undotted' size=20 value='<%=adjectiveException.getUndotted()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=adjectiveException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='adjective_exception_dotted' size=20 value='<%=adjectiveException.getDotted()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			כתיב:
+		</td>
+		<td>
+			<select name='adjective_exception_script'>
+				<option value='formal' <%if (adjectiveException.getScript().equals("formal")) out.print("SELECTED");%>>כתיב מלא חסר ניקוד ע"פ כללי האקדמיה</option>
+				<option value='typo' <%if (adjectiveException.getScript().equals("typo")) out.print("SELECTED");%>>שגיאת כתיב</option>
+				<option value='colloquial' <%if (adjectiveException.getScript().equals("colloquial")) out.print("SELECTED");%>>כתיב לא תקין</option>
+				<option value='slang' <%if (adjectiveException.getScript().equals("slang")) out.print("SELECTED");%>>סלנג (הכתיבה אולי תקנית, אולם המילה אינה בהכרח תקנית)</option>
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='adjective_exception_gender'>
+				<option value='unspecified' <%if (adjectiveException.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+				<option value='masculine' <%if (adjectiveException.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (adjectiveException.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (adjectiveException.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (adjectiveException.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>				
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='adjective_exception_number'>
+				<option value='unspecified' <%if (adjectiveException.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+				<option value='singular' <%if (adjectiveException.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (adjectiveException.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (adjectiveException.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (adjectiveException.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (adjectiveException.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>				
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורן נקבה:
+		</td>
+		<td>
+			<select name='adjective_exception_feminine'>
+				<option value='irrelevant' <%if (adjectiveException.getFeminine().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='h' <%if (adjectiveException.getFeminine().equals("h")) out.print("SELECTED");%>>ה</option>
+				<option value='t' <%if (adjectiveException.getFeminine().equals("t")) out.print("SELECTED");%>>ת</option>
+				<option value='it' <%if (adjectiveException.getFeminine().equals("it")) out.print("SELECTED");%>>ית</option>				
+				<option value='unspecified' <%if (adjectiveException.getFeminine().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>								
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורן ריבוי:
+		</td>
+		<td>
+			<select name='adjective_exception_plural'>
+				<option value='irrelevant' <%if (adjectiveException.getPlural().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='im' <%if (adjectiveException.getPlural().equals("im")) out.print("SELECTED");%>>ים</option>
+				<option value='iim' <%if (adjectiveException.getPlural().equals("iim")) out.print("SELECTED");%>>יים</option>
+				<option value='wt' <%if (adjectiveException.getPlural().equals("wt")) out.print("SELECTED");%>>ות</option>
+				<option value='awt' <%if (adjectiveException.getPlural().equals("awt")) out.print("SELECTED");%>>אות</option>
+				<option value='iwt' <%if (adjectiveException.getPlural().equals("iwt")) out.print("SELECTED");%>>יות</option>
+				<option value='im and wt' <%if (adjectiveException.getPlural().equals("im and wt")) out.print("SELECTED");%>>ים וגם ות</option>				
+				<option value='unspecified' <%if (adjectiveException.getPlural().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>												
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+				<tr>
+		<td>
+			כינוי קניין חבור?
+		</td>
+		<td>
+			<select name='adjective_exception_possessive'>
+				<option value='unspecified' <%if (adjectiveException.getPossessive().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1p/MF/Sg' <%if (adjectiveException.getPossessive().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+				<option value='2p/M/Sg' <%if (adjectiveException.getPossessive().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+				<option value='2p/F/Sg' <%if (adjectiveException.getPossessive().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+				<option value='3p/M/Sg' <%if (adjectiveException.getPossessive().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+				<option value='3p/F/Sg' <%if (adjectiveException.getPossessive().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+				<option value='1p/MF/Pl' <%if (adjectiveException.getPossessive().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+				<option value='2p/M/Pl' <%if (adjectiveException.getPossessive().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+				<option value='2p/F/Pl' <%if (adjectiveException.getPossessive().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+				<option value='3p/M/Pl' <%if (adjectiveException.getPossessive().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+				<option value='3p/F/Pl' <%if (adjectiveException.getPossessive().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+				<option value='123p/M/Sg' <%if (adjectiveException.getPossessive().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Sg' <%if (adjectiveException.getPossessive().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+				<option value='123p/M/Pl' <%if (adjectiveException.getPossessive().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Pl' <%if (adjectiveException.getPossessive().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>				
+			</select>				
+		</td>
+	</tr> 	
+	<tr>
+		<td>
+			האם צורת נסמך?
+		</td>
+		<td>
+			<select name='adjective_exception_construct'>
+				<option value='unspecified' <%if (adjectiveException.getConstruct().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (adjectiveException.getConstruct().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (adjectiveException.getConstruct().equals("false")) out.print("SELECTED");%>>לא</option>		
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם צורת זוגי?
+		</td>
+		<td>
+			<select name='adjective_exception_dual'>
+				<option value='unspecified' <%if (adjectiveException.getDual().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (adjectiveException.getDual().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (adjectiveException.getDual().equals("false")) out.print("SELECTED");%>>לא</option>		
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			האם ניתן לבצע נטיית סמיכות?
+		</td>
+		<td>
+			<select name='adjective_exception_inflectConstruct'>
+				<option value='1' <%if (adjectiveException.isInflectConstruct()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!adjectiveException.isInflectConstruct()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם ניתן לבצע נטיית הקניין?
+		</td>
+		<td>
+			<select name='adjective_exception_inflectPossessive'>
+				<option value='1' <%if (adjectiveException.isInflectPossessive()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!adjectiveException.isInflectPossessive()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>					
+</table>
+</div>

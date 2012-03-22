@@ -1,0 +1,221 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.MultiWordNounExceptionType"
+%>
+<div id='multiWordNoun_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='multiWordNoun_exception_action'>
+				<option value='add' <%if (multiWordNounException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (multiWordNounException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (multiWordNounException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='multiWordNoun_exception_undotted' size=20 value='<%=multiWordNounException.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=multiWordNounException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='multiWordNoun_exception_dotted' size=20 value='<%=multiWordNounException.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='multiWordNoun_exception_register'>
+				<option value='formal' <%if (multiWordNounException.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (multiWordNounException.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (multiWordNounException.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+			</select>				
+		</td>
+	</tr>	
+	 <tr>
+                <td>
+                        כתיב:
+                </td>   
+                <td>
+                        <select name='multiWordNoun_exception_spelling'>
+                                <option value='standard' <%if (multiWordNounException.getSpelling().equals("standard")) out.print("SELECTED");%>>תקני</option>
+                                <option value='irregular' <%if (multiWordNounException.getSpelling().equals("irregular")) out.print("SELECTED");%>>תת-תקני</option>
+                        </select>
+                </td>           
+        </tr>
+
+	<tr>
+                <td>
+                      מין:
+                </td>
+                <td>
+                        <select name='multiWordNoun_exception_gender'>
+                                <option value='masculine' <%if (multiWordNounException.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (multiWordNounException.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+                                <option value='unspecified' <%if (multiWordNounException.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+
+
+
+
+         <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='multiWordNoun_exception_number'>
+                                <option value='singular' <%if (multiWordNounException.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (multiWordNounException.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                                <option value='unspecified' <%if (multiWordNounException.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+
+
+
+
+
+<tr>
+                <td>
+                        צורן נקבה:
+                </td>
+                <td>
+                        <select name='multiWordNoun_exception_feminine'>
+                                <option value='t' <%if (multiWordNounException.getFeminine().equals("t")) out.print("SELECTED");%>>ת</option>
+                                <option value='unspecified' <%if (multiWordNounException.getFeminine().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+                        </select>
+                </td>
+        </tr>
+
+
+
+ <tr>
+                <td>
+                        צורן ריבוי:
+                </td>
+                <td>
+                        <select name='multiWordNoun_exception_plural'>
+                                <option value='m' <%if (multiWordNounException.getPlural().equals("m")) out.print("SELECTED");%>>ם</option>
+                                <option value='im' <%if (multiWordNounException.getPlural().equals("im")) out.print("SELECTED");%>>ים</option>
+                                <option value='iim' <%if (multiWordNounException.getPlural().equals("iim")) out.print("SELECTED");%>>יים</option>
+                                <option value='wt' <%if (multiWordNounException.getPlural().equals("wt")) out.print("SELECTED");%>>ות</option>
+                                <option value='awt' <%if (multiWordNounException.getPlural().equals("awt")) out.print("SELECTED");%>>אות</option>
+                                <option value='iwt' <%if (multiWordNounException.getPlural().equals("iwt")) out.print("SELECTED");%>>יות</option>
+                                <option value='im and wt' <%if (multiWordNounException.getPlural().equals("im and wt")) out.print("SELECTED");%>>ים 
+וגם ות</option>                                
+                         <option value='unspecified' <%if (multiWordNounException.getPlural().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+                        </select>
+
+                </td>
+</tr>
+
+
+
+
+ <tr>
+                <td>
+                        יידוע:
+                </td>
+                <td>
+                        <select name='multiWordNoun_exception_definiteness'>
+                         <option value='external' <%if (multiWordNounException.getDefiniteness().equals("external")) out.print("SELECTED");%>>ייצר יידוע חיצוני</option>
+                        <option value='internal' <%if (multiWordNounException.getDefiniteness().equals("internal")) out.print("SELECTED");%>>ייצר יידוע פנימי</option>
+                        <option value='internal and external' <%if (multiWordNounException.getDefiniteness().equals("internal and external")) out.print("SELECTED");%>>ייצר יידוע פנימי וגם חיצוני</option>
+                        <option value='none' <%if (multiWordNounException.getDefiniteness().equals("none")) out.print("SELECTED");%>>אל תייצר שום יידוע</option>
+                        <option value='externallyDefinited' <%if (multiWordNounException.getDefiniteness().equals("externallyDefinited")) out.print("SELECTED");%>>קיימת הצורה החיצונית מיודעת בלבד</option>
+
+
+                        </select>
+                </td>
+        </tr>
+
+
+ <tr>
+                <td>
+                        כינוי קניין חבור?
+                </td>
+                <td>
+                        <select name='multiWordNoun_exception_possessive'>
+                                <option value='unspecified' <%if (multiWordNounException.getPossessive().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                                <option value='1p/MF/Sg' <%if (multiWordNounException.getPossessive().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+                                <option value='2p/M/Sg' <%if (multiWordNounException.getPossessive().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+                                <option value='2p/F/Sg' <%if (multiWordNounException.getPossessive().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+                                <option value='3p/M/Sg' <%if (multiWordNounException.getPossessive().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+                                <option value='3p/F/Sg' <%if (multiWordNounException.getPossessive().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+                                <option value='1p/MF/Pl' <%if (multiWordNounException.getPossessive().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+                                <option value='2p/M/Pl' <%if (multiWordNounException.getPossessive().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+                                <option value='2p/F/Pl' <%if (multiWordNounException.getPossessive().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+                                <option value='3p/M/Pl' <%if (multiWordNounException.getPossessive().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+                                <option value='3p/F/Pl' <%if (multiWordNounException.getPossessive().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+                                <option value='123p/M/Sg' <%if (multiWordNounException.getPossessive().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+                                <option value='123p/F/Sg' <%if (multiWordNounException.getPossessive().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+                                <option value='123p/M/Pl' <%if (multiWordNounException.getPossessive().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+                                <option value='123p/F/Pl' <%if (multiWordNounException.getPossessive().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+                        </select>
+                </td>
+        </tr>
+
+
+         <tr>
+        <td>
+                        האם לייצר קניין לצורת היחיד?
+                </td>
+
+         <td>
+               <select name='multiWordNoun_exception_inflectPossessiveS'>         
+	               <option value='0' <%if (!multiWordNounException.isInflectPossessiveS()) out.print("SELECTED");%>>לא</option>
+                       <option value='1' <%if (multiWordNounException.isInflectPossessiveS()) out.print("SELECTED");%>>כן</option> 
+               </select>
+        </td>
+
+
+
+</tr>
+
+
+ <tr>
+        <td>
+                        האם לייצר קניין לצורת הרבים?
+                </td>
+        <td>
+                <select name='multiWordNoun_exception_inflectPossessiveP'>   
+		 <option value='0' <%if (!multiWordNounException.isInflectPossessiveP()) out.print("SELECTED");%>>לא</option>
+                 <option value='1' <%if (multiWordNounException.isInflectPossessiveP()) out.print("SELECTED");%>>כן</option> 
+                </select>
+        </td>
+</tr>
+
+
+
+	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>							
+</table>
+</div>

@@ -1,0 +1,53 @@
+<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.InterjectionLexiconType"
+%>
+<%
+InterjectionLexiconType interjection = new InterjectionLexiconType();
+if (!newItem && item.getInterjection() != null && id != 0) {
+	interjection.open(id);
+	changeGroup = interjection.getContents("interjection_exception_type", "id", id);
+} 
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("interjection")) {
+		if (request.getParameter("interjection_inflect")!= null) {
+			interjection.setInflect(request.getParameter("interjection_inflect").equals("1"));
+		}
+		if (request.getParameter("interjection_inflectionBase")!= null) {
+			interjection.setInflectionBase(request.getParameter("interjection_inflectionBase"));
+		}
+		if (newItem) {
+			interjection.add(item.getID());
+		} else {
+			interjection.update();
+		}
+		item.open(item.getID());
+		interjection.open(item.getID());
+	}
+}
+%>
+<div id='interjection_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			האם נוטה בנטיית גוף/מין/מספר?
+		</td>
+		<td>
+			<select name='interjection_inflect'>
+				<option value='0' <%if (!interjection.isInflect()) out.print("SELECTED");%>>לא</option>
+				<option value='1' <%if (interjection.isInflect()) out.print("SELECTED");%>>כן</option>						
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			בסיס לנטיית גוף/מין/מספר אם שונה מהמילה:  
+		</td>
+		<td>
+			<input type=text name='interjection_inflectionBase' size=15 value='<%=interjection.getInflectionBase()%>'>				
+		</td>
+	</tr>				
+</table> 
+</div>		

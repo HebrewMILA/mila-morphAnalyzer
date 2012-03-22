@@ -1,0 +1,77 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.QuantifierExceptionType"
+%>
+<%
+QuantifierExceptionType quantifierExcption = new QuantifierExceptionType(); 
+if (aid != 0 && pos.equals("quantifier")) {
+	quantifierExcption.open(aid); 
+}
+if (request.getParameter("delete_action") !=null)	{
+	if (request.getParameter("delete_action").equals("quantifier")) {
+		//Showing confirmation message
+		if (request.getParameter("confirm") != null)	{
+			int feedback = quantifierExcption.remove();
+			if (feedback > 0)	{
+				actionDone = "remove";
+				quantifierExcption = new QuantifierExceptionType();
+				removeMsg = "<font color=blue><b>הפעולה נמחקה בהצלחה</b>";
+			}
+			else	{
+				notRemoveMsg = "<font class=errorfont>הפעולה לא נמחקה</font><br>";
+			}
+			
+		}	//End of doing DELETE
+	}
+}
+if (request.getParameter("action_pos")!= null) {
+	if (request.getParameter("action_pos").equals("quantifier") && !request.getParameter("quantifier_exception_undotted").equals("")) {
+		quantifierExcption.setUndotted(request.getParameter("quantifier_exception_undotted"));
+		if (request.getParameter("quantifier_exception_dotted")!= null) {
+			quantifierExcption.setDotted(request.getParameter("quantifier_exception_dotted"));
+		}
+		if (request.getParameter("quantifier_exception_script")!= null) {
+			quantifierExcption.setScript(request.getParameter("quantifier_exception_script"));
+		}
+		if (request.getParameter("quantifier_exception_gender")!= null) {
+			quantifierExcption.setGender(request.getParameter("quantifier_exception_gender"));
+		}
+		if (request.getParameter("quantifier_exception_pgn")!= null) {
+			quantifierExcption.setPgn(request.getParameter("quantifier_exception_pgn"));
+		}
+		if (request.getParameter("quantifier_exception_acronym")!= null) {
+			quantifierExcption.setAcronym(request.getParameter("quantifier_exception_acronym"));
+		}
+		if (request.getParameter("quantifier_exception_construct")!= null) {
+			quantifierExcption.setConstruct(request.getParameter("quantifier_exception_construct"));
+		}
+		if (request.getParameter("quantifier_exception_inflectConstruct")!= null) {
+			quantifierExcption.setInflectConstruct(request.getParameter("quantifier_exception_inflectConstruct").equals("1"));
+		}	
+		if (request.getParameter("quantifier_exception_action")!= null) {
+			quantifierExcption.set("action", request.getParameter("quantifier_exception_action"));
+		}					
+		if (id != 0) {	
+			if (aid == 0) {
+				aid = quantifierExcption.add(item.getID()); 
+				if (aid >0) {
+					addingMsg = "<font color=blue><b>התוספה פעולה חדשה</b>";
+				}				
+				actionDone = "add";  
+			} else {	
+				if (aid != 0) {
+					int feedback = quantifierExcption.update(); 
+					if (feedback >0) {
+						addingMsg = "<font color=blue><b>הפעולה התעדכנה בהצלחה</b>";
+					}					
+					actionDone = "update";
+				}
+			}	
+			quantifierExcption.open(aid);	
+			item.open(id);
+		}	
+	}
+}
+%>

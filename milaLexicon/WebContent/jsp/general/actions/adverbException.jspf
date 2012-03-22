@@ -1,0 +1,100 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.AdverbExceptionType"
+%>
+<div id='adverb_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='adverb_exception_action'>
+				<option value='add' <%if (adverbExcption.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (adverbExcption.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (adverbExcption.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='adverb_exception_undotted' size=20 value='<%=adverbExcption.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=adverbExcption.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='adverb_exception_dotted' size=20 value='<%=adverbExcption.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='adverb_exception_register'>
+				<option value='formal' <%if (adverbExcption.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (adverbExcption.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (adverbExcption.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+				
+			</select>				
+		</td>
+	</tr>
+	 <tr>
+                <td>
+                        כתיב:
+                </td>
+                <td>
+                        <select name='adverb_exception_spelling'>
+                                <option value='standard' <%if (adverbExcption.getSpelling().equals("standard")) out.print("SELECTED");%>>תקני</option>
+                                <option value='irregular' <%if (adverbExcption.getSpelling().equals("irregular")) out.print("SELECTED");%>>תת-תקני</option>
+                        </select>
+                </td>
+        </tr>
+	
+	<tr>
+		<td>
+			נטיית שייכות חבורה:
+		</td>
+		<td>
+			<select name='adverb_exception_possessiveSuffix'>
+				<option value='unspecified' <%if (adverbExcption.getPossessiveSuffix().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1p/MF/Sg' <%if (adverbExcption.getPossessiveSuffix().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+				<option value='2p/M/Sg' <%if (adverbExcption.getPossessiveSuffix().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+				<option value='2p/F/Sg' <%if (adverbExcption.getPossessiveSuffix().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+				<option value='3p/M/Sg' <%if (adverbExcption.getPossessiveSuffix().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+				<option value='3p/F/Sg' <%if (adverbExcption.getPossessiveSuffix().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+				<option value='1p/MF/Pl' <%if (adverbExcption.getPossessiveSuffix().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+				<option value='2p/M/Pl' <%if (adverbExcption.getPossessiveSuffix().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+				<option value='2p/F/Pl' <%if (adverbExcption.getPossessiveSuffix().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+				<option value='3p/M/Pl' <%if (adverbExcption.getPossessiveSuffix().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+				<option value='3p/F/Pl' <%if (adverbExcption.getPossessiveSuffix().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים<option>
+				<option value='123p/M/Sg' <%if (adverbExcption.getPossessiveSuffix().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Sg' <%if (adverbExcption.getPossessiveSuffix().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+				<option value='123p/M/Pl' <%if (adverbExcption.getPossessiveSuffix().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Pl' <%if (adverbExcption.getPossessiveSuffix().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>				
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>		 			
+</table>
+</div>

@@ -1,0 +1,91 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.TitleLexiconType"
+	  import="lexicon.contents.types.ItemType"
+        import="java.util.List"
+
+%>
+<%
+TitleLexiconType title = new TitleLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = null;
+
+
+if (!newItem && item.getTitle() != null && id != 0) {
+	title.open(id);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("title")) {
+		if (request.getParameter("title_gender")!= null) {
+			title.setGender(request.getParameter("title_gender"));
+		}
+		if (request.getParameter("title_number")!= null) {
+			title.setNumber(request.getParameter("title_number"));
+		}
+		 if (request.getParameter("title_definiteness")!= null) {
+                        title.setDefiniteness(request.getParameter("title_definiteness").equals("1"));
+                }
+
+		if (newItem) {
+			title.add(item.getID());
+		} else {
+			title.update();
+		}
+		item.open(item.getID());
+		title.open(item.getID());
+	}
+}
+%>
+
+
+<div id='title_div' style="display:none;">
+<table>
+
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='title_gender'>
+				<option value='masculine' <%if (title.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (title.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (title.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (title.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (title.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='title_number'>
+				<option value='singular' <%if (title.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (title.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (title.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (title.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (title.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (title.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>	
+	 <tr>
+                <td>
+                      האם מיודע?
+                </td>
+                <td>
+                        <select name='title_definiteness'>
+                        <option value='1' <%if (title.isDefiniteness()) out.print("SELECTED");%>>כן</option>                                 
+                        <option value='0' <%if (!title.isDefiniteness()) out.print("SELECTED");%>>לא</option>
+                        </select>
+                </td>
+        </tr>
+
+
+</table>
+</div>		

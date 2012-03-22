@@ -1,0 +1,47 @@
+<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.types.*"
+%>
+<%
+SynsetType synset = new SynsetType();
+int synsetID = 0;
+String synsetButton = "הוספת סינסט";
+if (request.getParameter("synset_id") != null && sid != 0) {
+	synsetID = Integer.parseInt(request.getParameter("synset_id"));
+	synset.open(synsetID);
+	synsetButton = "עידכון הסינסט";
+}
+if (request.getParameter("synset_id_value") != null && sid != 0) {
+	if (visitor == null)	{
+		throw new LSecurityException("No user object was found", request);
+	}
+	synset.setId(request.getParameter("synset_id_value"));
+	if (synsetID == 0) {
+		synsetID = synset.add(sid);
+	} else {
+		synset.update();
+	}
+	response.sendRedirect("DoSense.jsp?id="+id+"&sid="+sid);
+} 
+%>
+<form id='edit_synset' action="DoSense.jsp" method="post">
+	<input type='hidden' name='id' value='<%=id%>'>
+	<input type='hidden' name='sid' value='<%=sid%>'>
+	<input type='hidden' name='synset_id' value='<%=synsetID%>'>
+<table>
+	<tr>
+		<td>
+			מספר הסינסט:
+		</td>
+		<td>
+			<input type='text' size=10 name='synset_id_value' value='<%=synset.getId()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2'>
+			<input type='Submit' value='<%=synsetButton%>'> 
+		</td>
+	</tr>
+</table>
+</form>

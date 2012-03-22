@@ -1,0 +1,109 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.WprefixLexiconType"
+	  import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+%>
+<%
+WprefixLexiconType wPrefix = new WprefixLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = null;
+
+if (!newItem && item.getWPrefix() != null && id != 0) {
+	wPrefix.open(id);
+	changeGroup = wPrefix.getContents("wprefix_exception_type", "id", id);
+	session.setAttribute("changeGroup", changeGroup);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("wPrefix")) {
+		if (request.getParameter("wPrefix_polarity")!= null) {
+			wPrefix.setPolarity(request.getParameter("wPrefix_polarity"));
+		}
+
+		  if (request.getParameter("wPrefix_gender")!= null) {
+                        wPrefix.setGender(request.getParameter("wPrefix_gender"));
+                }
+
+
+		  if (request.getParameter("wPrefix_number")!= null) {
+                        wPrefix.setNumber(request.getParameter("wPrefix_number"));
+                }
+
+
+		if (newItem) {
+			wPrefix.add(item.getID());
+		} else {
+			wPrefix.update();
+		}
+		item.open(item.getID());
+		wPrefix.open(item.getID());
+	}
+}
+%>
+
+
+<div id='WPrefix_div' style="display:none;">
+<table>
+
+  <tr>
+                <td>
+                        מין:
+                </td>
+                <td>
+			 <select name='wPrefix_gender'>
+				  <option value='unspecified' <%if (wPrefix.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+
+                                <option value='masculine' <%if (wPrefix.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (wPrefix.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+                                <option value='masculine and feminine' <%if (wPrefix.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+                                <!--option value='irrelevant' <%if (wPrefix.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option-->
+                        </select>
+		
+
+	
+                </td>
+        </tr>
+
+
+ <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='wPrefix_number'>
+				 <option value='unspecified' <%if (wPrefix.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+
+                                <option value='singular' <%if (wPrefix.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (wPrefix.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                                <option value='singular and plural' <%if (wPrefix.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+                        </select>
+                </td>
+        </tr>
+		
+
+
+
+ <tr>
+                <td>
+                        קוטביות:
+                </td>
+                <td>
+                        <select name='wPrefix_polarity'>
+                                <option value='unspecified' <%if (wPrefix.getPolarity().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</
+option>
+                                <option value='positive' <%if (wPrefix.getPolarity().equals("positive")) out.print("SELECTED");%>>חיובית</option>
+                                <option value='negative' <%if (wPrefix.getPolarity().equals("negative")) out.print("SELECTED");%>>שלילית</option>
+
+                        </select>
+                </td>
+        </tr>
+
+
+
+</table>
+</div>		

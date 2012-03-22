@@ -1,0 +1,128 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.ProperNameLexiconType"
+	  import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+%>
+<%
+ProperNameLexiconType properName = new ProperNameLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+
+List changeGroup = null;
+
+if (!newItem && item.getProperName() != null && id != 0) {
+	properName.open(id);
+	changeGroup = properName.getContents("propername_exception_type", "id", id);
+	  session.setAttribute("changeGroup", changeGroup);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("properName")) {
+		if (request.getParameter("properName_gender")!= null) {
+			properName.setGender(request.getParameter("properName_gender"));
+		}
+		if (request.getParameter("properName_number")!= null) {
+			properName.setNumber(request.getParameter("properName_number"));
+		}
+		if (request.getParameter("properName_type")!= null) {
+			properName.setType(request.getParameter("properName_type"));
+		}
+		if (request.getParameter("properName_definiteness")!= null) {
+			properName.setDefiniteness(request.getParameter("properName_definiteness"));
+		}
+		if (request.getParameter("properName_direction")!= null) {
+			properName.setDirection(request.getParameter("properName_direction"));
+		}
+		if (newItem) {
+			properName.add(item.getID());
+		} else {
+			properName.update();
+		}
+		item.open(item.getID());
+		properName.open(item.getID());
+	}
+}
+%>
+<div id='properName_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='properName_gender'>
+				<option value='masculine' <%if (properName.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (properName.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (properName.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='unspecified' <%if (properName.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='properName_number'>
+				<option value='singular' <%if (properName.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (properName.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (properName.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (properName.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (properName.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (properName.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			סוג:
+		</td>
+		<td>
+			<select name='properName_type'>
+				<option value='person' <%if (properName.getType().equals("person")) out.print("SELECTED");%>>שם של אדם</option>
+				<option value='location' <%if (properName.getType().equals("location")) out.print("SELECTED");%>>שם של מקום</option>
+				<option value='town' <%if (properName.getType().equals("town")) out.print("SELECTED");%>>שם של יישוב</option>
+
+				<option value='country' <%if (properName.getType().equals("country")) out.print("SELECTED");%>>שם של ארץ</option>
+				<option value='organization' <%if (properName.getType().equals("organization")) out.print("SELECTED");%>>שם של ארגון</option>
+				<option value='product' <%if (properName.getType().equals("product")) out.print("SELECTED");%>>שם של מוצר</option>
+				 <option value='language' <%if (properName.getType().equals("language")) out.print("SELECTED");%>>שם של שפה</option>
+				<option value='symbol' <%if (properName.getType().equals("symbol")) out.print("SELECTED");%>>שם של אות או תו</option>				
+				<option value='dateTime' <%if (properName.getType().equals("dateTime")) out.print("SELECTED");%>>תאריך</option>
+				<option value='other' <%if (properName.getType().equals("other")) out.print("SELECTED");%>>אף אחד מהאפשרויות שלעיל</option>			
+				 <option value='art' <%if (properName.getType().equals("art")) out.print("SELECTED");%>>יצירה (ספר,הצגה,סרט,תוכנית טלוויזיה,רדיו)</option>
+	
+				<option value='unspecified' <%if (properName.getType().equals("unspecified")) out.print("SELECTED");%>>הקטגוריה אינה ידועה</option>
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			האם מקבל ה' הידיעה?  
+		</td>
+		<td>
+			<select name='properName_definiteness'>
+				<option value='optional' <%if (properName.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>
+				<option value='prohibited' <%if (properName.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>
+				<option value='required' <%if (properName.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option> 			
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם מכיל ה' המגמה?  
+		</td>
+		<td>
+			<select name='properName_direction'>
+				<option value='unspecified' <%if (properName.getDirection().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (properName.getDirection().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (properName.getDirection().equals("false")) out.print("SELECTED");%>>לא</option> 			
+			</select>				
+		</td>
+	</tr>				
+</table>
+</div>

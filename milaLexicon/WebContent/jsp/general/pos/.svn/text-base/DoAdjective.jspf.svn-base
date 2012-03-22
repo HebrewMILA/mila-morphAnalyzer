@@ -1,0 +1,172 @@
+<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.AdjectiveLexiconType"
+%>
+<% 
+AdjectiveLexiconType adjective = new AdjectiveLexiconType();
+if (!newItem && item.getAdjective() != null && id != 0) {
+	adjective.open(id);
+	changeGroup = adjective.getContents("noun_exception_type", "id", id);
+}
+
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("adjective")) {
+		if (request.getParameter("adjective_gender")!= null) {
+			adjective.setGender(request.getParameter("adjective_gender"));
+		}
+		if (request.getParameter("adjective_number")!= null) {
+			adjective.setNumber(request.getParameter("adjective_number"));
+		}
+		if (request.getParameter("adjective_feminine")!= null) {
+			adjective.setFeminine(request.getParameter("adjective_feminine"));
+		}
+		if (request.getParameter("adjective_plural")!= null) {
+			adjective.setPlural(request.getParameter("adjective_plural"));
+		}
+		if (request.getParameter("adjective_root")!= null) {
+			adjective.setRoot(request.getParameter("adjective_root"));
+		}
+		if (request.getParameter("adjective_pattern")!= null) {
+			adjective.setPattern(request.getParameter("adjective_pattern"));
+		}
+		//if (request.getParameter("adjective_inflectionPattern")!= null) {
+		//	adjective.setInflectionPattern(request.getParameter("adjective_inflectionPattern"));
+		//}
+		//if (request.getParameter("adjective_ipSource")!= null) {
+		//	adjective.setIpSource(request.getParameter("adjective_ipSource"));
+		//}
+		adjective.setPattern("");
+		adjective.setIpSource("");
+		if (request.getParameter("adjective_acronym")!= null) {
+			adjective.setAcronym(request.getParameter("adjective_acronym"));
+		}
+		if (request.getParameter("adjective_inflectionBase")!= null) {
+			adjective.setInflectionBase(request.getParameter("adjective_inflectionBase"));
+		}
+		if (newItem) {
+			adjective.add(item.getID());
+		} else {
+			adjective.update();
+		}
+		item.open(item.getID());
+		adjective.open(item.getID());
+	}
+}
+%>
+<div id='adjective_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='adjective_gender'>
+				<option value='masculine' <%if (adjective.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (adjective.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (adjective.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (adjective.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (adjective.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='adjective_number'>
+				<option value='singular' <%if (adjective.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (adjective.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (adjective.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (adjective.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (adjective.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (adjective.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורן נקבה:
+		</td>
+		<td>
+			<select name='adjective_feminine'>
+				<option value='h' <%if (adjective.getFeminine().equals("h")) out.print("SELECTED");%>>ה</option>
+				<option value='t' <%if (adjective.getFeminine().equals("t")) out.print("SELECTED");%>>ת</option>
+				<option value='it' <%if (adjective.getFeminine().equals("it")) out.print("SELECTED");%>>ית</option>
+				<option value='irrelevant' <%if (adjective.getFeminine().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (adjective.getFeminine().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>								
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורן ריבוי:
+		</td>
+		<td>
+			<select name='adjective_plural'>
+				<option value='im' <%if (adjective.getPlural().equals("im")) out.print("SELECTED");%>>ים</option>
+				<option value='iim' <%if (adjective.getPlural().equals("iim")) out.print("SELECTED");%>>יים</option>
+				<option value='wt' <%if (adjective.getPlural().equals("wt")) out.print("SELECTED");%>>ות</option>
+				<option value='awt' <%if (adjective.getPlural().equals("awt")) out.print("SELECTED");%>>אות</option>
+				<option value='iwt' <%if (adjective.getPlural().equals("iwt")) out.print("SELECTED");%>>יות</option>
+				<option value='im and wt' <%if (adjective.getPlural().equals("im and wt")) out.print("SELECTED");%>>ים וגם ות</option>
+				<option value='irrelevant' <%if (adjective.getPlural().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (adjective.getPlural().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>												
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			שורש:
+		</td>
+		<td>
+			<input type=text name='adjective_root' size=15 value='<%=adjective.getRoot()%>'>			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			תבנית:
+		</td>
+		<td>
+			<input type=text name='adjective_pattern' size=15 value='<%=adjective.getPattern()%>'>			
+		</td>
+	</tr>	
+	<!--<tr>
+		<td>
+			תבנית נטייה: מזהה לתבנית נטייה:
+		</td>
+		<td>
+			<input type=text name='adjective_inflectionPattern' size=15 value='<%=adjective.getInflectionPattern()%>'>			
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			מקור בו מוצדקות ומוסברות תבניות הנטייה:  
+		</td>
+		<td>
+			<input type=text name='adjective_ipSource' size=30 value='<%=adjective.getIpSource()%>'>				
+		</td>
+	</tr>	-->	
+	<tr>
+		<td>
+			האם ראשי תיבות?  
+		</td>
+		<td>
+			<select name='adjective_acronym'>
+				<option value='unspecified' <%if (adjective.getAcronym().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (adjective.getAcronym().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (adjective.getAcronym().equals("false")) out.print("SELECTED");%>>לא</option> 			
+			</select>				
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			בסיס לנטיית גוף/מין/מספר אם שונה מהמילה:  
+		</td>
+		<td>
+			<input type=text name='adjective_inflectionBase' size=15 value='<%=adjective.getInflectionBase()%>'>				
+		</td>
+	</tr>						
+</table> 
+</div>		

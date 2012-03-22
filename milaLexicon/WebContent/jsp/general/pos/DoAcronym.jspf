@@ -1,0 +1,325 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.AcronymLexiconType"
+	import="lexicon.contents.types.ItemType"
+        import="java.util.List"
+
+
+%>
+<%
+
+AcronymLexiconType acronym = new AcronymLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+List changeGroup = null;
+
+
+if (!newItem && item.getAcronym() != null && id != 0) {
+	acronym.open(id);
+	changeGroup = acronym.getContents("acronym_exception_type", "id", id);
+        session.setAttribute("changeGroup", changeGroup);
+
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("acronym")) {
+		if (request.getParameter("acronym_gender")!= null) {
+			acronym.setGender(request.getParameter("acronym_gender"));
+		}
+		if (request.getParameter("acronym_number")!= null) {
+			acronym.setNumber(request.getParameter("acronym_number"));
+		}
+		if (request.getParameter("acronym_definiteness")!= null) {
+			acronym.setDefiniteness(request.getParameter("acronym_definiteness"));
+		}
+		if (request.getParameter("acronym_feminine")!= null) {
+                        acronym.setFeminine(request.getParameter("acronym_feminine"));
+                }
+                if (request.getParameter("acronym_plural")!= null) {
+                        acronym.setPlural(request.getParameter("acronym_plural"));
+                }
+		 if (request.getParameter("acronym_properNameType")!= null) {
+                        acronym.setProperNameType(request.getParameter("acronym_properNameType"));
+                }
+
+		  if (request.getParameter("acronym_conjunctionType")!= null) {
+                        acronym.setConjunctionType(request.getParameter("acronym_conjunctionType"));
+                }
+
+
+	        if (request.getParameter("acronym_meaning")!= null) {
+                        acronym.setMeaning(request.getParameter("acronym_meaning"));
+                }
+		if (request.getParameter("acronym_pos")!= null) {
+                        acronym.setPos(request.getParameter("acronym_pos"));
+                }
+
+		 if (request.getParameter("acronym_inflectConstructP")!= null) {
+                        acronym.setInflectConstructP(request.getParameter("acronym_inflectConstructP").equals("1"));
+                }
+                if (request.getParameter("acronym_inflectConstructS")!= null) {
+                        acronym.setInflectConstructS(request.getParameter("acronym_inflectConstructS").equals("1"));
+                }
+		 if (request.getParameter("acronym_niqLexicalLink")!= null) {
+                        acronym.setNiqLexicalLink(request.getParameter("acronym_niqLexicalLink"));
+                }
+
+		  if (request.getParameter("acronym_istLexicalLink")!= null) {
+                        acronym.setIstLexicalLink(request.getParameter("acronym_istLexicalLink"));
+                }
+
+		  if (request.getParameter("acronym_adjectiveLexicalLink")!= null) {
+                        acronym.setAdjectiveLexicalLink(request.getParameter("acronym_adjectiveLexicalLink"));
+                }
+
+	
+		 if (request.getParameter("acronym_noInvertedCommas")!= null) {
+                        acronym.setNoInvertedCommas(request.getParameter("acronym_noInvertedCommas"));
+                }
+
+
+		if (newItem) {
+			System.out.println("add in acronym");
+			acronym.add(item.getID());
+		} else {
+			acronym.update();
+		}
+		item.open(item.getID());
+		acronym.open(item.getID());
+	}
+}
+%>
+
+
+<div id='acronym_div' style="display:none;">
+<table>
+	 <tr>
+                <td>
+                        פירוש:
+                </td>
+                <td>
+                        <input type=text name='acronym_meaning' size=15 value='<%=acronym.getMeaning().trim()%>'>
+                </td>
+        </tr>
+
+	<tr>
+                <td>
+                       חלק דיבר:
+                </td>
+                <td>
+                        <select name='acronym_pos'>
+                                <option value='noun' <%if (acronym.getPos().equals("noun")) out.print("SELECTED");%>>שם עצם</option>
+                                <option value='adjective' <%if (acronym.getPos().equals("adjective")) out.print("SELECTED");%>>שם תואר</option>
+                                <option value='propername' <%if (acronym.getPos().equals("propername")) out.print("SELECTED");%>>שם פרטי</option>
+                                <option value='verb' <%if (acronym.getPos().equals("verb")) out.print("SELECTED");%>>פועל</option>
+				 <option value='participle' <%if (acronym.getPos().equals("participle")) out.print("SELECTED");%>>בינוני</option>
+
+                                <option value='adverb' <%if (acronym.getPos().equals("adverb")) out.print("SELECTED");%>>תואר הפועל</option>
+				 <option value='interjection' <%if (acronym.getPos().equals("interjection")) out.print("SELECTED");%>>מילת קריאה</option>
+				 <option value='preposition' <%if (acronym.getPos().equals("preposition")) out.print("SELECTED");%>>מילת יחס</option>			
+				 <option value='conjunction' <%if (acronym.getPos().equals("conjunction")) out.print("SELECTED");%>>מילת חיבור</option>
+				 <option value='title' <%if (acronym.getPos().equals("title")) out.print("SELECTED");%>>תואר</option>
+
+	
+				  <!--option value='unspecified' <%if (acronym.getPos().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option-->
+
+
+
+                        </select>
+                </td>
+        </tr>
+
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='acronym_gender'>
+				<option value='masculine' <%if (acronym.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (acronym.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (acronym.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='unspecified' <%if (acronym.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='acronym_number'>
+				<option value='singular' <%if (acronym.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (acronym.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (acronym.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='singular and plural' <%if (acronym.getNumber().equals("singular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (acronym.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>	
+	 <tr>
+                <td>
+                        צורן נקבה:
+                </td>
+                <td>
+                        <select name='acronym_feminine'>
+				<option value='unspecified' <%if (acronym.getFeminine().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+
+                                <option value='h' <%if (acronym.getFeminine().equals("h")) out.print("SELECTED");%>>ה</option>
+                                <option value='t' <%if (acronym.getFeminine().equals("t")) out.print("SELECTED");%>>ת</option>
+                                <option value='it' <%if (acronym.getFeminine().equals("it")) out.print("SELECTED");%>>ית</option>
+                                <option value='unspecified' <%if (acronym.getFeminine().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+                        </select>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        צורן ריבוי:
+                </td>
+                <td>
+                        <select name='acronym_plural'>
+				 <option value='unspecified' <%if (acronym.getPlural().equals("unspecified")) out.print("SELECTED");%>>לא מו
+גדר</option>
+                                <option value='m' <%if (acronym.getPlural().equals("m")) out.print("SELECTED");%>>ם</option>
+                                <option value='im' <%if (acronym.getPlural().equals("im")) out.print("SELECTED");%>>ים</option>
+                                <option value='iim' <%if (acronym.getPlural().equals("iim")) out.print("SELECTED");%>>יים</option>
+                                <option value='wt' <%if (acronym.getPlural().equals("wt")) out.print("SELECTED");%>>ות</option>
+                                <option value='awt' <%if (acronym.getPlural().equals("awt")) out.print("SELECTED");%>>אות</option>
+                                <option value='iwt' <%if (acronym.getPlural().equals("iwt")) out.print("SELECTED");%>>יות</option>
+                                <option value='im and wt' <%if (acronym.getPlural().equals("im and wt")) out.print("SELECTED");%>>ים וגם ות</option>                      
+                        </select>
+                </td>
+        </tr>
+
+  <tr>
+                <td>
+                       סוג של שם פרטי( אם חלק הדיבר הוא שם פרטי):
+                </td>
+                <td>
+                        <select name='acronym_properNameType'>
+				  <option value='unspecified' <%if (acronym.getProperNameType().equals("unspecified")) out.print("SELECTED");%>>הקטגוריה אינה ידועה</option>
+
+                                <option value='person' <%if (acronym.getProperNameType().equals("person")) out.print("SELECTED");%>>שם של אדם</option>
+                                <option value='location' <%if (acronym.getProperNameType().equals("location")) out.print("SELECTED");%>>שם של מקום</option>
+				 <option value='town' <%if (acronym.getProperNameType().equals("town")) out.print("SELECTED");%>>שם יישוב</option>
+                                <option value='country' <%if (acronym.getProperNameType().equals("country")) out.print("SELECTED");%>>שם של ארץ</option>
+                                <option value='organization' <%if (acronym.getProperNameType().equals("organization")) out.print("SELECTED");%>>שם של ארגון</option>
+                                <option value='product' <%if (acronym.getProperNameType().equals("product")) out.print("SELECTED");%>>שם של מוצר</option>
+                                 <option value='language' <%if (acronym.getProperNameType().equals("language")) out.print("SELECTED");%>>שם של שפה</option>
+                                <option value='symbol' <%if (acronym.getProperNameType().equals("symbol")) out.print("SELECTED");%>>שם של אות או תו</option>                                <option value='dateTime' <%if (acronym.getProperNameType().equals("dateTime")) out.print("SELECTED");%>>תאריך</option>                                <option value='other' <%if (acronym.getProperNameType().equals("other")) out.print("SELECTED");%>>אף אחד מהאפשרויות שלעיל</option>                               
+                        </select>                </td>
+        </tr>
+
+		
+	 <tr>
+                <td>
+                        סוג של מילת חיבור (אם חלק הדיבר הוא מילת חיבור):
+                </td>
+                <td>
+                        <select name='acronym_conjunctionType'>
+				  <option value='unspecified' <%if (acronym.getConjunctionType().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                                <option value='coordinating' <%if (acronym.getConjunctionType().equals("coordinating")) out.print("SELECTED");%>>מילת קישור</option>
+                                <option value='subordinating' <%if (acronym.getConjunctionType().equals("subordinating")) out.print("SELECTED");%>>מילת שיעבוד</option>
+                                <option value='relativizing' <%if (acronym.getConjunctionType().equals("relativizing")) out.print("SELECTED");%>>מילת זיקה</option>
+                        </select>
+                </td>
+        </tr>
+
+
+
+
+
+	<tr>
+		<td>
+			יידוע:  
+		</td>
+		<td>
+			<select name='acronym_definiteness'>
+				<option value='external' <%if (acronym.getDefiniteness().equals("external")) out.print("SELECTED");%>>ייצר יידוע חיצוני</option>
+				<option value='internal' <%if (acronym.getDefiniteness().equals("internal")) out.print("SELECTED");%>>ייצר יידוע פנימי</option>
+				<option value='internal and external' <%if (acronym.getDefiniteness().equals("internal and external")) out.print("SELECTED");%>>ייצר יידוע פנימי וגם חיצוני</option> 		
+				<option value='none' <%if (acronym.getDefiniteness().equals("none")) out.print("SELECTED");%>>אל תייצר שום יידוע</option>
+				<option value='externallyDefinited' <%if (acronym.getDefiniteness().equals("externallyDefinited")) out.print("SELECTED");%>>קיימת הצורה החיצונית מיודעת בלבד</option>
+
+	
+			</select>				
+		</td>
+	</tr>
+	 <tr>
+                <td>
+                        האם לייצר הטיית נסמך ליחיד?
+                </td>
+                <td>
+                        <select name='acronym_inflectConstructS'>                                <option value='1' <%if (acronym.isInflectConstructS()) out.print("SELECTED");%>>כן</option>                                                    <option value='0' <%if (!acronym.isInflectConstructS()) out.print("SELECTED");%>>לא</option>
+                        </select>
+                </td>
+        </tr>
+	
+	<tr>
+                <td>
+                        האם לייצר הטיית נסמך לרבים?
+                </td>
+                <td>
+                        <select name='acronym_inflectConstructP'>                                <option value='1' <%if (acronym.isInflectConstructP()) out.print("SELECTED");%>>כן</option>                                                    <option value='0' <%if (!acronym.isInflectConstructP()) out.print("SELECTED");%>>לא</option>                   
+                        </select>
+                </td>
+        </tr>
+	 <tr>
+                <td>
+                        האם לייצר צורה ללא גרשיים  ?
+                </td>
+                <td>
+                        <select name='acronym_noInvertedCommas'>     
+
+			 <option value='none' <%if (acronym.getNoInvertedCommas().equals("none")) out.print("SELECTED");%>>אל תייצר לאף צורה</option>
+			 <option value='masculine singular' <%if (acronym.getNoInvertedCommas().equals("masculine singular")) out.print("SELECTED");%>>ייצר רק לזכר יחיד</option>
+			<option value='masculine plural' <%if (acronym.getNoInvertedCommas().equals("masculine plural")) out.print("SELECTED");%>>ייצר רק לזכר רבים</option>      
+			 <option value='all singular' <%if (acronym.getNoInvertedCommas().equals("all singular")) out.print("SELECTED");%>>ייצר רק לצורות היחיד</option>
+	  <option value='feminine singular' <%if (acronym.getNoInvertedCommas().equals("feminine singular")) out.print("SELECTED");%>>ייצר רק לנקבה יחיד</option>
+			 <option value='feminine plural' <%if (acronym.getNoInvertedCommas().equals("feminine plural")) out.print("SELECTED");%>>ייצר רק לנקבה רבים</option>
+			 <option value='all plural' <%if (acronym.getNoInvertedCommas().equals("all plural")) out.print("SELECTED");%>>ייצר רק לצורות הרבים</option>
+			  <option value='all' <%if (acronym.getNoInvertedCommas().equals("all")) out.print("SELECTED");%>>ייצר לכולם</option>
+			
+
+                        </select>
+                </td>
+        </tr>
+
+	
+
+
+
+
+	 <tr>
+                <td>
+                        קישור לקסיקלי לצורה עם סיומת ניק (גזירה):
+                </td>
+                <td>
+                        <input type=text name='acronym_niqLexicalLink' size=15 value='<%=acronym.getNiqLexicalLink().trim()%>'>
+                </td>
+        </tr>
+	
+	
+	 <tr>
+                <td>
+                        קישור לקסיקלי לצורה עם סיומת יסט (גזירה):
+                </td>
+                <td>
+                        <input type=text name='acronym_istLexicalLink' size=15 value='<%=acronym.getIstLexicalLink().trim()%>'>
+                </td>
+        </tr>
+
+	 <tr>
+                <td>
+                        קישור לקסיקלי לשם תואר:
+                </td>
+                <td>
+                        <input type=text name='acronym_adjectiveLexicalLink' size=15 value='<%=acronym.getAdjectiveLexicalLink().trim()%>'>
+                </td>
+        </tr>
+
+
+
+</table>
+</div>		

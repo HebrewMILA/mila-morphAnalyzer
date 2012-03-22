@@ -1,0 +1,114 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.ModalLexiconType"
+	 import="lexicon.contents.types.ItemType"
+         import="java.util.List"
+
+
+%>
+<%
+ModalLexiconType modal = new ModalLexiconType();
+ItemType item = (ItemType)session.getAttribute("item");
+int id = Integer.parseInt((String)session.getAttribute("id"));
+boolean newItem = Boolean.valueOf((String)session.getAttribute("newItem"));
+
+
+List changeGroup = null;
+
+if (!newItem && item.getModal() != null && id != 0) {
+	modal.open(id);
+	changeGroup = modal.getContents("modal_exception_type", "id", id);
+	  session.setAttribute("changeGroup", changeGroup);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("modal")) {
+		if (request.getParameter("modal_gender")!= null) {
+			modal.setGender(request.getParameter("modal_gender"));
+		}
+		if (request.getParameter("modal_number")!= null) {
+			modal.setNumber(request.getParameter("modal_number"));
+		}
+		if (request.getParameter("modal_tense")!= null) {
+			modal.setTense(request.getParameter("modal_tense"));
+		}
+		if (request.getParameter("modal_inflectionType")!= null) {
+			modal.setInflectionType(request.getParameter("modal_inflectionType"));
+		}
+		if (newItem) {
+			modal.add(item.getID());
+		} else {
+			modal.update();
+		}
+		item.open(item.getID());
+		modal.open(item.getID());
+	}
+}
+%>
+<div id='modal_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='modal_gender'>
+				<option value='masculine' <%if (modal.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (modal.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (modal.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='unspecified' <%if (modal.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='modal_number'>
+				<option value='singular' <%if (modal.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (modal.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (modal.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (modal.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (modal.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (modal.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>
+
+	 <tr>
+                <td>
+                        זמן:
+                </td>
+                <td>
+                        <select name='modal_tense'>                               
+				 <option value='past' <%if (modal.getTense().equals("past")) out.print("SELECTED");%>>עבר</option>     
+                           	 <option value='beinoni' <%if (modal.getTense().equals("beinoni")) out.print("SELECTED");%>>בינוני</option>  
+                                 <option value='future' <%if (modal.getTense().equals("future")) out.print("SELECTED");%>>עתיד</option>     
+	                         <option value='imperative' <%if (modal.getTense().equals("imperative")) out.print("SELECTED");%>>ציווי</option>    
+                                 <option value='infinitive' <%if (modal.getTense().equals("infinitive")) out.print("SELECTED");%>>שם פועל</option>        
+                                 <option value='bareInfinitive' <%if (modal.getTense().equals("bareInfinitive")) out.print("SELECTED");%>>מקור</option>
+				  <option value='unspecified' <%if (modal.getTense().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+
+                        </select>
+                </td>
+        </tr>
+
+
+	
+	 <tr>
+                <td>
+                        סוג הטייה:
+                </td>
+                <td>
+                        <select name='modal_inflectionType'>
+                                <option value='unspecified'  <%if (modal.getInflectionType().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+                                <option value="genderNumber"  <%if (modal.getInflectionType().equals("genderNumber")) out.print("SELECTED");%>>מין + כמות</option>
+                                <option value="genderNumberTime"  <%if (modal.getInflectionType().equals("genderNumberTime")) out.print("SELECTED");%>> מין + כמות + זמן</option>
+                        </select>
+                </td>
+        </tr>
+	
+
+</table>
+</div>

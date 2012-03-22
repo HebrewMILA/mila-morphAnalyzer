@@ -1,0 +1,89 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.NounExceptionType"
+%>
+<%
+NounExceptionType nounException = new NounExceptionType();  
+if (aid != 0 && pos.equals("noun")) {
+	nounException.open(aid); 
+}
+if (request.getParameter("delete_action") !=null)	{
+	if (request.getParameter("delete_action").equals("noun")) {
+		//Showing confirmation message
+		if (request.getParameter("confirm") != null)	{
+			int feedback = nounException.remove();
+			if (feedback > 0)	{
+				actionDone = "remove";
+				nounException = new NounExceptionType();
+				removeMsg = "<font color=blue><b>הפעולה נמחקה בהצלחה</b>";
+			}
+			else	{
+				notRemoveMsg = "<font class=errorfont>הפעולה לא נמחקה</font><br>";
+			}
+			
+		}	//End of doing DELETE
+	}
+}
+if (request.getParameter("action_pos")!= null) {
+	if (request.getParameter("action_pos").equals("noun") && !request.getParameter("noun_exception_undotted").equals("")) {
+		nounException.setUndotted(request.getParameter("noun_exception_undotted"));
+		if (request.getParameter("noun_exception_dotted")!= null) {
+			nounException.setDotted(request.getParameter("noun_exception_dotted"));
+		}
+		if (request.getParameter("noun_exception_script")!= null) {
+			nounException.setScript(request.getParameter("noun_exception_script"));
+		}
+		if (request.getParameter("noun_exception_gender")!= null) {
+			nounException.setGender(request.getParameter("noun_exception_gender"));
+		}
+		if (request.getParameter("noun_exception_number")!= null) {
+			nounException.setNumber(request.getParameter("noun_exception_number"));
+		}
+		if (request.getParameter("noun_exception_feminine")!= null) {
+			nounException.setFeminine(request.getParameter("noun_exception_feminine"));
+		}
+		if (request.getParameter("noun_exception_plural")!= null) {
+			nounException.setPlural(request.getParameter("noun_exception_plural"));
+		}
+		if (request.getParameter("noun_exception_possessive")!= null) {
+			nounException.setPossessive(request.getParameter("noun_exception_possessive"));
+		}
+		if (request.getParameter("noun_exception_construct")!= null) {
+			nounException.setConstruct(request.getParameter("noun_exception_construct"));
+		}	
+		if (request.getParameter("noun_exception_dual")!= null) {
+			nounException.setDual(request.getParameter("noun_exception_dual"));
+		}	
+		if (request.getParameter("noun_exception_inflectConstruct")!= null) {
+			nounException.setInflectConstruct(request.getParameter("noun_exception_inflectConstruct").equals("1"));
+		}
+		if (request.getParameter("noun_exception_inflectPossessive")!= null) {
+			nounException.setInflectPossessive(request.getParameter("noun_exception_inflectPossessive").equals("1"));
+		}	
+		if (request.getParameter("noun_exception_action")!= null) {
+			nounException.set("action", request.getParameter("noun_exception_action"));
+		}	
+		if (id != 0) {	
+			if (aid == 0) {
+				aid = nounException.add(item.getID()); 
+				if (aid >0) {
+					addingMsg = "<font color=blue><b>התוספה פעולה חדשה</b>";
+				}				 
+				actionDone = "add";
+			} else {	
+				if (aid != 0) {
+					int feedback = nounException.update(); 
+					if (feedback >0) {
+						addingMsg = "<font color=blue><b>הפעולה התעדכנה בהצלחה</b>";
+					}					
+					actionDone = "update";
+				}
+			}	
+			nounException.open(aid);
+			item.open(id);	
+		}			
+	}
+}
+%>
