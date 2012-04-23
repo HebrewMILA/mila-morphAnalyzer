@@ -1,14 +1,14 @@
 #Fat Jar Configuration File
-#Sun Mar 18 20:29:48 IST 2012
+#Mon Apr 23 15:25:28 IDT 2012
 onejar.license.required=false
 manifest.classpath=
 manifest.removesigners=true
 onejar.checkbox=false
-jarname=/home/smip/morphologicalAnalizer.jar
+jarname=/home/smip/morphAnalyzer.jar
 manifest.mergeall=true
 manifest.mainclass=mila.mw.MWXMLMorphAnalyzer
 manifest.file=<createnew>
 jarname.isextern=true
 onejar.expand=
-excludes=<jar|jaxb-api.jar>;<jar|namespace.jar>;<jar|javaee-api-6.0.jar>;<jar|xercesImpl.jar>
+excludes=<jar|jax-qname.jar>;<jar|jaxb-api.jar>;<jar|jaxb-xjc.jar>;<jar|namespace.jar>;<jar|javaee-api-6.0.jar>;<jar|xercesImpl.jar>
 includes=

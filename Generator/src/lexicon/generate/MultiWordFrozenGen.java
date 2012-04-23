@@ -113,6 +113,8 @@ public class MultiWordFrozenGen extends ItemGen
 					{   // and now create the array objects
 						multi_word_frozen_exception[i] = new MultiWordFrozenExceptionType();
 					}
+					rs.close();
+					Connected.releaseConnection();
 					String sql2 = "SELECT aid FROM lexiconP.multiWordFrozen_exception_type where id=" + item.id; // i want to get the aid for exceptions this item have
 					rs = conn.getData(sql2); // do sql query
 					if (rs != null)
@@ -145,6 +147,7 @@ public class MultiWordFrozenGen extends ItemGen
 							//popualteMWE.popualteMWETables( _transliterated, _undotted, '1' , mwPos , _dotted, id, type, _spelling, _register, prefix, definitnessVal);		
 							index++;
 						}
+						rs.close();
 					}
 					else // rs == null
 					{

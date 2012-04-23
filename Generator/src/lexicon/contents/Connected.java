@@ -64,7 +64,7 @@ public class Connected {
 //			pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000, "jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconP",
 //			"tommy", "tammy2010!)");
 			// 11.1.2012 i am changing to user = 'lexiconUser'
-			pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000, "jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconP",
+			pool = new ConnectionPool("mysqlLexiocn", 20, 50, 150000, "jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconP",
 		          "lexiconUser", "!adgj?");
 			
 //		} catch (FileNotFoundException e) {
@@ -147,7 +147,7 @@ public class Connected {
 		return rs;
 	}
 	
-	protected static ResultSet staticGetData(String sql) {
+	public static ResultSet staticGetData(String sql) {
 		ResultSet rs = null;
 		try {
 			prepareConnection();
@@ -190,9 +190,10 @@ public class Connected {
 		 } 
 		 }
 		 conn = getCPDS().getConnection();*/
-		Connection con = null;
-		long timeout = 2000;  // 2 second timeout
+		long timeout = 180000;  // longer timeout
 		conn = pool.getConnection(timeout);
+		if (conn == null)
+		    throw new RuntimeException("conn is null!");
 	}
 	public static void setCPDS(DataSource cpds) {
 		Connected.cpds = cpds;
@@ -247,6 +248,7 @@ public class Connected {
 			if (conn != null &&!conn.isClosed()) {
 				conn.close();
 				conn = null;
+				
 			}
 		} catch (SQLException E) {
 			E.printStackTrace();

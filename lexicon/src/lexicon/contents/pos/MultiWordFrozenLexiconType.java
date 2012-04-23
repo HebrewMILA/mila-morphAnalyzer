@@ -6,13 +6,11 @@
  */
 package lexicon.contents.pos;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
 import lexicon.contents.Content;
-//import lexicon.contents.exception_types.MultiWordNounExceptionType;
-import lexicon.contents.pos.MultiWordFrozenLexiconType.Add;
-import lexicon.contents.pos.MultiWordFrozenLexiconType.Remove;
-import lexicon.contents.pos.MultiWordFrozenLexiconType.Replace;
 import lexicon.contents.exception_types.MultiWordFrozenExceptionType;
 
 /**
