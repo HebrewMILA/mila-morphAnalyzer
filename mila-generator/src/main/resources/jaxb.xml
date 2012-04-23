@@ -1,0 +1,165 @@
+<jxb:bindings version="2.1"
+	      xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	      xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	      xmlns:hj="http://hyperjaxb3.jvnet.org/ejb/schemas/customizations"
+	      xmlns:orm="http://java.sun.com/xml/ns/persistence/orm"
+	      xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+	      xmlns:simplify="http://jaxb2-commons.dev.java.net/basic/simplify"
+	      jxb:extensionBindingPrefixes="xjc hj orm inheritance simplify">
+  <jxb:bindings schemaLocation="hebrew_MWcorpus.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="org.mila.corpus.entities" />
+    </jxb:schemaBindings>
+    <!-- These don't belong in the database. -->
+    <jxb:bindings node="//xsd:complexType" multiple="true">
+      <hj:ignored />
+    </jxb:bindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="hebrew_MWlexicon.xsd">
+    <jxb:globalBindings generateValueClass="true"
+			localScoping="toplevel" choiceContentProperty="true"
+			generateElementProperty="false" generateIsSetMethod="true">
+      <jxb:serializable uid="2" />
+      <xjc:simple />
+    </jxb:globalBindings>
+    <jxb:schemaBindings>
+      <jxb:package name="org.mila.lexicon.entities" />
+    </jxb:schemaBindings>
+    <!-- Rename "foreign", which is an SQL keyword. -->
+    <jxb:bindings node="//xsd:attribute[@name='foreign']" multiple="true">
+      
+      <jxb:property name="foreign_source" />
+    </jxb:bindings>
+
+    <!-- 
+         Don't generate JPA annotations for parts of the schema that don't
+         belong in the database. 
+    -->
+    <jxb:bindings node="//xsd:complexType[@name='LexiconType']">
+      <hj:ignored />
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MetadataType']">
+      <hj:ignored />
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='SourceType']">
+      <hj:ignored />
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='TransliterationType']">
+
+      <hj:ignored />
+    </jxb:bindings>
+
+    <!--
+        Shorten table names for really long types, to avoid name collisions
+        on truncation.
+    -->
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordFrozenLexiconType']">
+
+      <hj:entity>
+        <orm:table name="MWFrozenLexiconType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounAdjectiveExceptionAddType']">
+
+      <hj:entity>
+        <orm:table name="MWNounAdjectiveExcpAddType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounAdjectiveExceptionRemoveType']">
+
+      <hj:entity>
+        <orm:table name="MWNounAdjectiveExcpRemoveType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounAdjectiveExceptionReplaceType']">
+
+      <hj:entity>
+        <orm:table name="MWNounAdjectiveExcpReplaceType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounAdjectiveExceptionType']">
+
+      <hj:entity>
+        <orm:table name="MWNounAdjectiveExcpType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounAdjectiveLexiconType']">
+
+      <hj:entity>
+        <orm:table name="MWNounAdjectiveLexiconType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounExceptionAddType']">
+
+      <hj:entity>
+        <orm:table name="MWNounExcpAddType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounExceptionRemoveType']">
+
+      <hj:entity>
+        <orm:table name="MWNounExcpRemoveType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounExceptionReplaceType']">
+
+      <hj:entity>
+        <orm:table name="MWNounExcpReplaceType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounExceptionType']">
+
+      <hj:entity>
+        <orm:table name="MWNounExcpType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordNounLexiconType']">
+
+      <hj:entity>
+        <orm:table name="MWNounLexiconType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordPrepositionLexiconType']">
+
+      <hj:entity>
+        <orm:table name="MWPrepositionLexiconType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordVerbPhraseExceptionAddType']">
+
+      <hj:entity>
+        <orm:table name="MWVerbPhraseExcpAddType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordVerbPhraseExceptionRemoveType']">
+
+      <hj:entity>
+        <orm:table name="MWVerbPhraseExcpRemoveType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordVerbPhraseExceptionReplaceType']">
+
+      <hj:entity>
+        <orm:table name="MWVerbPhraseExcpReplaceType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordVerbPhraseExceptionType']">
+
+      <hj:entity>
+        <orm:table name="MWVerbPhraseExcpType" />
+      </hj:entity>
+    </jxb:bindings>
+    <jxb:bindings node="//xsd:complexType[@name='MultiWordVerbPhraseLexiconType']">
+
+      <hj:entity>
+        <orm:table name="MWVerbPhraseLexiconType" />
+      </hj:entity>
+    </jxb:bindings>
+
+    <jxb:bindings node="//xsd:complexType[contains(@name, 'LexiconType') and string-length(@name) > 11]"
+		  multiple="true">
+      <inheritance:implements>org.mila.lexicon.helpers.SubItemType</inheritance:implements>
+    </jxb:bindings>
+  </jxb:bindings>
+</jxb:bindings>
