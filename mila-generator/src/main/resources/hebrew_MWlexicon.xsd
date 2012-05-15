@@ -682,8 +682,8 @@
       <xsd:enumeration value="awt" />
       <xsd:enumeration value="iwt" />
       <xsd:enumeration value="im and wt" />
+      <xsd:enumeration value="irrelevant" />
       <xsd:enumeration value="unspecified" />
-      <!--xsd:enumeration value="irrelevant"/-->
       <!-- ם          -->
       <!-- ים         -->
       <!-- יים        -->
@@ -704,8 +704,8 @@
       <xsd:enumeration value="h" />
       <xsd:enumeration value="t" />
       <xsd:enumeration value="it" />
-      <xsd:enumeration value="unspecified" />
-      <!--xsd:enumeration value="irrelevant"/-->
+      <xsd:enumeration value="irrelevant" />
+      <xsd:enumeration value="unspecified"/>
       <!-- ה  -->
       <!-- ת  -->
       <!-- ית -->
@@ -742,8 +742,8 @@
       <xsd:enumeration value="masculine" />
       <xsd:enumeration value="feminine" />
       <xsd:enumeration value="masculine and feminine" />
+      <xsd:enumeration value="irrelevant" />
       <xsd:enumeration value="unspecified" />
-      <!--xsd:enumeration value="irrelevant"/-->
       <!-- זכר             -->
       <!-- נקבה            -->
       <!-- גם זכר וגם נקבה -->
@@ -1148,6 +1148,8 @@
       <xsd:enumeration value="interjection" />
       <xsd:enumeration value="preposition" />
       <xsd:enumeration value="title" />
+      <xsd:enumeration value="conjunction" />
+      <xsd:enumeration value="participle" />
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
@@ -1323,7 +1325,7 @@
       <xsd:enumeration value="prohibited" />
       <xsd:enumeration value="internal" />
       <xsd:enumeration value="external" />
-      <xsd:enumeration value="definitedl" />
+      <xsd:enumeration value="definited" />
       <!-- חובה               -->
       <!-- מותר              -->
       <!-- אסור            -->
@@ -1344,6 +1346,7 @@
       <xsd:enumeration value="symbol" />
       <xsd:enumeration value="dateTime" />
       <xsd:enumeration value="other" />
+      <xsd:enumeration value="art" />
       <xsd:enumeration value="unspecified" />
       <!-- שם של אדם               -->
       <!-- שם של ארץ            -->
@@ -2433,6 +2436,19 @@
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="MultiWordFrozenLexiconType">
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="add"
+		     type="MultiWordFrozenExceptionAddType" minOccurs="0"
+		     maxOccurs="unbounded" />
+        <xsd:element name="replace"
+		     type="MultiWordFrozenExceptionReplaceType" minOccurs="0"
+		     maxOccurs="unbounded" />
+        <xsd:element name="remove"
+		     type="MultiWordFrozenExceptionRemoveType" minOccurs="0"
+		     maxOccurs="unbounded" />
+      </xsd:choice>
+    </xsd:sequence>
     <xsd:attribute name="mwPos" type="PosType" use="optional" />
     <xsd:attribute name="consecutive" type="xsd:boolean"
 		   use="optional" default="true" />
@@ -2453,6 +2469,19 @@
 		   default="external" />
   </xsd:complexType>
   <xsd:complexType name="MultiWordPrepositionLexiconType">
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="add"
+		     type="MultiWordPrepositionalExceptionAddType" minOccurs="0"
+		     maxOccurs="unbounded" />
+        <xsd:element name="replace"
+		     type="MultiWordPrepositionalExceptionReplaceType" minOccurs="0"
+		     maxOccurs="unbounded" />
+        <xsd:element name="remove"
+		     type="MultiWordPrepositionalExceptionRemoveType" minOccurs="0"
+		     maxOccurs="unbounded" />
+      </xsd:choice>
+    </xsd:sequence>
     <xsd:attribute name="mwPos" type="PosType" use="optional" />
     <xsd:attribute name="consecutive" type="xsd:boolean"
 		   use="optional" default="true" />
@@ -2559,6 +2588,110 @@
   <xsd:complexType name="MultiWordNounExceptionReplaceType">
     <xsd:simpleContent>
       <xsd:extension base="MultiWordNounExceptionType">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordPrepositionalExceptionType"
+		   abstract="true">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:token">
+        <xsd:attribute name="undotted" type="xsd:token"
+		       use="required" />
+        <xsd:attribute name="transliterated" type="xsd:token"
+		       use="required" />
+        <xsd:attribute name="dotted" type="xsd:token"
+		       use="optional" default="" />
+        <xsd:attribute name="register" type="RegisterType"
+		       use="optional" default="formal" />
+        <xsd:attribute name="spelling" type="SpellingType"
+		       use="optional" default="standard" />
+        <xsd:attribute name="number" type="NumberType"
+		       default="unspecified" />
+        <xsd:attribute name="gender" type="GenderType"
+		       default="unspecified" />
+        <xsd:attribute name="feminine" type="FeminineType"
+		       use="optional" default="unspecified" />
+        <xsd:attribute name="plural" type="PluralType"
+		       use="optional" default="im" />
+        <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
+		       use="optional" default="false" />
+        <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
+		       use="optional" default="false" />
+        <xsd:attribute name="definiteness"
+		       type="AcronymDefinitenessType" use="optional"
+		       default="external" />
+        <xsd:attribute name="possessive" type="PGNType"
+		       use="optional" default="unspecified" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordPrepositionalExceptionAddType">
+    <xsd:simpleContent>
+      <xsd:extension base="MultiWordPrepositionalExceptionType">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordPrepositionalExceptionRemoveType">
+    <xsd:simpleContent>
+      <xsd:extension base="MultiWordPrepositionalExceptionType">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordPrepositionalExceptionReplaceType">
+    <xsd:simpleContent>
+      <xsd:extension base="MultiWordPrepositionalExceptionType">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordFrozenExceptionType"
+		   abstract="true">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:token">
+        <xsd:attribute name="undotted" type="xsd:token"
+		       use="required" />
+        <xsd:attribute name="transliterated" type="xsd:token"
+		       use="required" />
+        <xsd:attribute name="dotted" type="xsd:token"
+		       use="optional" default="" />
+        <xsd:attribute name="register" type="RegisterType"
+		       use="optional" default="formal" />
+        <xsd:attribute name="spelling" type="SpellingType"
+		       use="optional" default="standard" />
+        <xsd:attribute name="number" type="NumberType"
+		       default="unspecified" />
+        <xsd:attribute name="gender" type="GenderType"
+		       default="unspecified" />
+        <xsd:attribute name="feminine" type="FeminineType"
+		       use="optional" default="unspecified" />
+        <xsd:attribute name="plural" type="PluralType"
+		       use="optional" default="im" />
+        <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
+		       use="optional" default="false" />
+        <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
+		       use="optional" default="false" />
+        <xsd:attribute name="definiteness"
+		       type="AcronymDefinitenessType" use="optional"
+		       default="external" />
+        <xsd:attribute name="possessive" type="PGNType"
+		       use="optional" default="unspecified" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordFrozenExceptionAddType">
+    <xsd:simpleContent>
+      <xsd:extension base="MultiWordFrozenExceptionType">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordFrozenExceptionRemoveType">
+    <xsd:simpleContent>
+      <xsd:extension base="MultiWordFrozenExceptionType">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiWordFrozenExceptionReplaceType">
+    <xsd:simpleContent>
+      <xsd:extension base="MultiWordFrozenExceptionType">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>

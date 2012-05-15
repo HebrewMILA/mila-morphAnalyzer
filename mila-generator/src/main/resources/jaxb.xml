@@ -9,7 +9,7 @@
 	      jxb:extensionBindingPrefixes="xjc hj orm inheritance simplify">
   <jxb:bindings schemaLocation="hebrew_MWcorpus.xsd">
     <jxb:schemaBindings>
-      <jxb:package name="org.mila.corpus.entities" />
+      <jxb:package name="org.mila.entities.corpus" />
     </jxb:schemaBindings>
     <!-- These don't belong in the database. -->
     <jxb:bindings node="//xsd:complexType" multiple="true">
@@ -24,7 +24,7 @@
       <xjc:simple />
     </jxb:globalBindings>
     <jxb:schemaBindings>
-      <jxb:package name="org.mila.lexicon.entities" />
+      <jxb:package name="org.mila.entities.lexicon" />
     </jxb:schemaBindings>
     <!-- Rename "foreign", which is an SQL keyword. -->
     <jxb:bindings node="//xsd:attribute[@name='foreign']" multiple="true">
@@ -159,7 +159,7 @@
 
     <jxb:bindings node="//xsd:complexType[contains(@name, 'LexiconType') and string-length(@name) > 11]"
 		  multiple="true">
-      <inheritance:implements>org.mila.lexicon.helpers.SubItemType</inheritance:implements>
+      <inheritance:implements>org.mila.lexicon.SubItemType</inheritance:implements>
     </jxb:bindings>
   </jxb:bindings>
 </jxb:bindings>
