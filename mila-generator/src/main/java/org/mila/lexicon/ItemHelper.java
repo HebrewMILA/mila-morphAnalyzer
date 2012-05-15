@@ -1,9 +1,9 @@
-package org.mila.lexicon.helpers;
+package org.mila.lexicon;
 
-import org.mila.lexicon.entities.ItemType;
+import org.mila.entities.lexicon.Item;
 
 public class ItemHelper {
-    public static SubItemType getSubItem(ItemType item) {
+    public static SubItem getSubItem(Item item) {
 	switch (ItemHelper.getSubItemEnum(item)) {
 	case ACRONYM:
 	    return item.getAcronym();
@@ -28,7 +28,7 @@ public class ItemHelper {
 	case MULTI_WORD_FROZEN:
 	    return item.getMultiWordFrozen();
 	case MULTI_WORD_NOUN:
-	    return item.getNoun();
+	    return item.getMultiWordNoun();
 	case MULTI_WORD_NOUN_ADJECTIVE:
 	    return item.getMultiWordNounAdjective();
 	case MULTI_WORD_PREPOSITION:
@@ -61,7 +61,7 @@ public class ItemHelper {
 
     }
 
-    public static SubItemEnum getSubItemEnum(ItemType item) {
+    public static SubItemEnum getSubItemEnum(Item item) {
 	/* Assumption - Only one of these can be true at any given time. */
 	if (item.isSetAcronym())
 	    return SubItemEnum.ACRONYM;

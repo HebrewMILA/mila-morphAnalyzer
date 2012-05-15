@@ -1,4 +1,4 @@
-package org.mila.lexicon.helpers;
+package org.mila.lexicon;
 
 public enum SubItemEnum {
     ACRONYM,

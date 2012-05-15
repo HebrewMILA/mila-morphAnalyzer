@@ -1,5 +1,7 @@
 package org.mila;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,19 +11,20 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.spi.PersistenceUnitTransactionType;
+import javax.xml.bind.JAXBException;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 import org.eclipse.persistence.config.TargetServer;
 import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.jpa.JpaEntityManager;
 import org.eclipse.persistence.queries.ReadAllQuery;
 import org.eclipse.persistence.queries.ReportQuery;
-import org.mila.lexicon.entities.GenderType;
-import org.mila.lexicon.entities.ItemType;
-import org.mila.lexicon.entities.NounLexiconType;
-import org.mila.lexicon.entities.ObjectFactory;
-import org.mila.lexicon.entities.TwoStateType;
-import org.mila.lexicon.helpers.ItemHelper;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.lexicon.Item;
+import org.mila.lexicon.ItemHelper;
+import org.mila.lexicon.XMLReader;
 
 /**
  * Hello world!
@@ -29,7 +32,8 @@ import org.mila.lexicon.helpers.ItemHelper;
  */
 public class App {
     public static void main(String[] args) {
-
+	BasicConfigurator.configure();
+	Logger log = Logger.getRootLogger();
 	Map<String, String> props = new HashMap<String, String>();
 
 	props.put(PersistenceUnitProperties.TRANSACTION_TYPE,
@@ -44,7 +48,7 @@ public class App {
 	props.put(PersistenceUnitProperties.JDBC_PASSWORD, "!m#w@e$");
 	props.put(PersistenceUnitProperties.JDBC_READ_CONNECTIONS_MIN, "1");
 	props.put(PersistenceUnitProperties.JDBC_WRITE_CONNECTIONS_MIN, "1");
-	//props.put(PersistenceUnitProperties.DDL_GENERATION, "create-tables");
+	props.put(PersistenceUnitProperties.DDL_GENERATION, "create-tables");
 
 	// Configure logging. FINE ensures all SQL is shown
 	props.put(PersistenceUnitProperties.LOGGING_LEVEL, "INFO");
@@ -55,40 +59,39 @@ public class App {
 	props.put("provider", "org.eclipse.persistence.jpa.PersistenceProvider");
 
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory(
-		"org.mila.corpus.entities:org.mila.lexicon.entities", props);
+		"org.mila.entities.corpus:org.mila.entities.lexicon", props);
 	EntityManager em = emf.createEntityManager();
 
-	ObjectFactory of = new ObjectFactory();
-	ItemType item = of.createItemType();
-	item.setUndotted("שלום");
-	item.setTransliterated("slom");
-	NounLexiconType noun = of.createNounLexiconType();
-	noun.setDirection(TwoStateType.TRUE);
-	noun.setGender(GenderType.MASCULINE_AND_FEMININE);
-	noun.setDual(false);
-	noun.isDual();
-	item.setNoun(noun);
-
-	
-	em.getTransaction().begin();
-	em.persist(item);
-	em.getTransaction().commit();
+	log.info("Loading XML from: " + args[0]);
+	try {
+	    XMLReader rdr = new XMLReader(new FileInputStream(args[0]));
+	    em.getTransaction().begin();
+	    for (Item item : rdr.getItems()) {
+		em.persist(item);
+	    }
+	    em.getTransaction().commit();
+	} catch (FileNotFoundException e) {
+	    log.error("Couldn't open XML file", e);
+	} catch (JAXBException e) {
+	    log.error("Couldn't parse XML file", e);
+	}
+	log.info("Done loading XML");
 	
 	ExpressionBuilder eb = new ExpressionBuilder();
-	ReadAllQuery dbq = new ReadAllQuery(ItemType.class, eb);
+	ReadAllQuery dbq = new ReadAllQuery(Item.class, eb);
 	dbq.setSelectionCriteria(eb.get("noun").get("gender").equal(GenderType.MASCULINE_AND_FEMININE));
 	Query q = ((JpaEntityManager)em.getDelegate()).createQuery(dbq);
 	
-	List<ItemType> res = q.getResultList();
+	@SuppressWarnings("unchecked")
+	List<Item> res = q.getResultList();
 	
-	for (ItemType i : res) {
-	    System.out.println(ItemHelper.getSubItemEnum(i).toString());
+	log.debug("Printing search results");
+	for (Item i : res) {
+	    log.debug(ItemHelper.getSubItemEnum(i));
 	}
+	log.debug("End search results");
 	
-	ReportQuery rq = new ReportQuery(ItemType.class, eb);
-	
-	
-	// server.save(item);
-	// System.out.println(server.find(ItemType.class).getTotalHits());
+	@SuppressWarnings("unused")
+	ReportQuery rq = new ReportQuery(Item.class, eb);
     }
 }

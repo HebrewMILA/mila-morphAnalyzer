@@ -33,16 +33,16 @@
     אשר תעשה שימוש בהגדרות אלה, תצטרך בעצם לבצע ולידציה מול שני
     סוגי הסכימות.</xsd:documentation>
   </xsd:annotation>
-  <xsd:element name="lexicon" type="LexiconType" />
-  <xsd:complexType name="LexiconType">
+  <xsd:element name="lexicon" type="Lexicon" />
+  <xsd:complexType name="Lexicon">
     <xsd:sequence>
-      <xsd:element name="metadata" type="MetadataType"
+      <xsd:element name="metadata" type="Metadata"
 		   minOccurs="0" />
-      <xsd:element name="item" type="ItemType" minOccurs="0"
+      <xsd:element name="item" type="Item" minOccurs="0"
 		   maxOccurs="unbounded" />
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="MetadataType">
+  <xsd:complexType name="Metadata">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">שם הלקסיקון, גרסה, גרסה
       פנימית, תאריך עדכון אחרון, שם מתחזק המסמך, דוא"ל של מתחזק
@@ -56,16 +56,16 @@
       <xsd:element name="date" type="xsd:token" />
       <xsd:element name="maintainer" type="xsd:token" />
       <xsd:element name="email" type="xsd:token" />
-      <xsd:element name="source" type="SourceType"
+      <xsd:element name="source" type="Source"
 		   maxOccurs="unbounded" />
       <xsd:element name="license" type="xsd:string" />
       <xsd:element name="transliteration"
-		   type="TransliterationType" />
+		   type="Transliteration" />
       <xsd:element name="comment" type="xsd:token" minOccurs="0" />
       <!-- טקסט חפשי המשמש לצרכי הערות -->
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="SourceType">
+  <xsd:complexType name="Source">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה המתאר מקור ממנו התקבלו
       ערכים למילון. שם המקור, גרסה של המקור, הפנייה (למשל
@@ -77,7 +77,7 @@
     <xsd:attribute name="url" type="xsd:token" use="optional"
 		   default="" />
   </xsd:complexType>
-  <xsd:complexType name="TransliterationType">
+  <xsd:complexType name="Transliteration">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה המתאר מיפוי בין מחרוזות
       בעברית למחרוזות בתעתיק לטיני. בפרט, מתואר מיפוי
@@ -97,7 +97,7 @@
 		   use="required" />
     <xsd:attribute name="to" type="xsd:language" use="required" />
   </xsd:complexType>
-  <xsd:complexType name="ItemType">
+  <xsd:complexType name="Item">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">המילון מכיל רישמה של ערכים
       מילוניים. כל ערך מילוני מזוהה באופן יחיד ע"י מזהה יחודי, id.
@@ -117,92 +117,92 @@
     </xsd:annotation>
     <xsd:sequence>
       <!-- טקסט חפשי המשמש לצרכי הערות -->
-      <xsd:element name="comment" type="xsd:token" minOccurs="0" />
+      <xsd:element name="comment" type="xsd:string" minOccurs="0" />
       <xsd:choice>
         <xsd:element name="adjective"
-		     type="AdjectiveLexiconType" />
+		     type="AdjectiveLexicon" />
         <!-- שם תואר    -->
-        <xsd:element name="adverb" type="AdverbLexiconType" />
+        <xsd:element name="adverb" type="AdverbLexicon" />
         <!-- תואר הפועל -->
         <xsd:element name="conjunction"
-		     type="ConjunctionLexiconType" />
+		     type="ConjunctionLexicon" />
         <!-- מילת חיבור -->
         <xsd:element name="interjection"
-		     type="InterjectionLexiconType" />
+		     type="InterjectionLexicon" />
         <!-- מילת קריאה -->
         <xsd:element name="interrogative"
-		     type="InterrogativeLexiconType" />
+		     type="InterrogativeLexicon" />
         <!-- מילת שאלה  -->
-        <xsd:element name="negation" type="NegationLexiconType" />
+        <xsd:element name="negation" type="NegationLexicon" />
         <!-- מילת שלילה -->
-        <xsd:element name="title" type="TitleLexiconType" />
+        <xsd:element name="title" type="TitleLexicon" />
         <!-- תואר -->
-        <xsd:element name="noun" type="NounLexiconType" />
+        <xsd:element name="noun" type="NounLexicon" />
         <!-- שם עצם     -->
         <xsd:element name="preposition"
-		     type="PrepositionLexiconType" />
+		     type="PrepositionLexicon" />
         <!-- מילת יחס   -->
-        <xsd:element name="pronoun" type="PronounLexiconType" />
+        <xsd:element name="pronoun" type="PronounLexicon" />
         <!-- כינוי גוף  -->
         <xsd:element name="properName"
-		     type="ProperNameLexiconType" />
+		     type="ProperNameLexicon" />
         <!-- שם פרטי    -->
-        <xsd:element name="modal" type="ModalLexiconType" />
+        <xsd:element name="modal" type="ModalLexicon" />
         <!-- שם פרטי    -->
         <xsd:element name="quantifier"
-		     type="QuantifierLexiconType" />
+		     type="QuantifierLexicon" />
         <!-- כמת        -->
-        <xsd:element name="verb" type="VerbLexiconType" />
+        <xsd:element name="verb" type="VerbLexicon" />
         <!-- פועל       -->
         <xsd:element name="existential"
-		     type="ExistentialLexiconType" />
+		     type="ExistentialLexicon" />
         <!-- כמת יישי     -->
         <xsd:element name="impersonal"
-		     type="ImpersonalLexiconType" />
+		     type="ImpersonalLexicon" />
         <!-- חסרי גוף ומשקל      -->
-        <xsd:element name="wPrefix" type="WprefixLexiconType" />
+        <xsd:element name="wPrefix" type="WprefixLexicon" />
         <!-- קבוצה סגורה של תחיליות      -->
-        <xsd:element name="copula" type="CopulaLexiconType" />
+        <xsd:element name="copula" type="CopulaLexicon" />
         <!-- קופולה - אוגד    -->
-        <xsd:element name="numeral" type="NumeralLexiconType" />
+        <xsd:element name="numeral" type="NumeralLexicon" />
         <!-- שם מספר     -->
-        <xsd:element name="acronym" type="AcronymLexiconType" />
+        <xsd:element name="acronym" type="AcronymLexicon" />
         <!-- ראשי תיבות   -->
         <xsd:element name="multiWordFrozen"
-		     type="MultiWordFrozenLexiconType" />
+		     type="MultiWordFrozenLexicon" />
         <!-- ביטוי קפוא   -->
         <xsd:element name="multiWordPreposition"
-		     type="MultiWordPrepositionLexiconType" />
+		     type="MultiWordPrepositionLexicon" />
         <!-- ביטוי מילת יחס   -->
         <xsd:element name="multiWordNoun"
-		     type="MultiWordNounLexiconType" />
+		     type="MultiWordNounLexicon" />
         <!-- ביטוי נסמך סומך NN   -->
         <xsd:element name="multiWordNounAdjective"
-		     type="MultiWordNounAdjectiveLexiconType" />
+		     type="MultiWordNounAdjectiveLexicon" />
         <!-- ביטוי שם עצם שם תואר NA   -->
         <xsd:element name="multiWordVerbPhrase"
-		     type="MultiWordVerbPhraseLexiconType" />
+		     type="MultiWordVerbPhraseLexicon" />
         <!-- ביטוי פועלי NA   -->
       </xsd:choice>
-      <xsd:element name="sense" type="SenseType" minOccurs="0"
+      <xsd:element name="sense" type="Sense" minOccurs="0"
 		   maxOccurs="unbounded" />
     </xsd:sequence>
     <xsd:attribute name="undotted" type="xsd:token"
 		   use="required" />
     <xsd:attribute name="transliterated" type="xsd:token"
 		   use="required" />
-    <xsd:attribute name="register" type="RegisterType"
+    <xsd:attribute name="register" type="Register"
 		   use="optional" default="formal" />
-    <xsd:attribute name="spelling" type="SpellingType"
+    <xsd:attribute name="spelling" type="Spelling"
 		   use="optional" default="standard" />
-    <xsd:attribute name="id" type="xsd:token" use="required" />
+    <xsd:attribute name="id" type="xsd:long" use="required" />
     <xsd:attribute name="dotted" type="xsd:token" use="optional"
 		   default="" />
     <!-- המילה כתובה באותיות עבריות -->
     <!-- המילה כתובה בתעתיק לטיני   -->
     <!-- המילה כתיבה באותיות עבריות מנוקדות -->
   </xsd:complexType>
-  <xsd:complexType name="SenseType">
+  <xsd:complexType name="Sense">
     <xsd:annotation>
       <xsd:documentation>A word sense as determined by the Rav
       Millim dictionary. Different senses of the same item have
@@ -212,70 +212,70 @@
       and usage examples.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="english" type="EnglishType" minOccurs="0"
+      <xsd:element name="english" type="English" minOccurs="0"
 		   maxOccurs="unbounded" />
-      <xsd:element name="synset" type="SynsetType" minOccurs="0"
+      <xsd:element name="synset" type="Synset" minOccurs="0"
 		   maxOccurs="unbounded" />
-      <xsd:element name="example" type="ExampleType" minOccurs="0"
+      <xsd:element name="example" type="Example" minOccurs="0"
 		   maxOccurs="unbounded" />
     </xsd:sequence>
-    <xsd:attribute name="id" type="xsd:token" use="required" />
+    <xsd:attribute name="id" type="xsd:long" use="required" />
     <xsd:attribute name="definition" type="xsd:token"
 		   use="optional" />
     <xsd:attribute name="weight" type="xsd:token" use="optional" />
   </xsd:complexType>
-  <xsd:complexType name="EnglishType">
+  <xsd:complexType name="English">
     <xsd:annotation>
       <xsd:documentation>English translation equivalents, each with
       an associated weight reflecting its
       frequency.</xsd:documentation>
     </xsd:annotation>
-    <xsd:attribute name="id" type="xsd:token" use="required" />
+    <xsd:attribute name="id" type="xsd:long" use="required" />
     <xsd:attribute name="te" type="xsd:token" use="required" />
     <xsd:attribute name="weight" type="xsd:token" use="optional" />
   </xsd:complexType>
-  <xsd:complexType name="SynsetType">
+  <xsd:complexType name="Synset">
     <xsd:annotation>
       <xsd:documentation>WordNet for Hebrew
       Project</xsd:documentation>
     </xsd:annotation>
-    <xsd:attribute name="id" type="xsd:token" use="required" />
+    <xsd:attribute name="id" type="xsd:long" use="required" />
   </xsd:complexType>
-  <xsd:complexType name="ExampleType">
+  <xsd:complexType name="Example">
     <xsd:annotation>
       <xsd:documentation>Hebrew examples regarding the Sense of the
       Item.</xsd:documentation>
     </xsd:annotation>
-    <xsd:attribute name="id" type="xsd:token" use="required" />
+    <xsd:attribute name="id" type="xsd:long" use="required" />
     <xsd:attribute name="phrase" type="xsd:token" use="required" />
   </xsd:complexType>
-  <xsd:complexType name="CopulaLexiconType">
+  <xsd:complexType name="CopulaLexicon">
     <xsd:annotation>
       <xsd:documentation>אוגד</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="CopulaExceptionAddType"
+        <xsd:element name="add" type="CopulaExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="CopulaExceptionReplaceType" minOccurs="0"
+		     type="CopulaExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
-        <xsd:element name="remove" type="CopulaExceptionRemoveType"
+        <xsd:element name="remove" type="CopulaExceptionRemove"
 		     minOccurs="0" maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="person" type="PersonType" use="optional"
+    <xsd:attribute name="person" type="Person" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="tense" type="TenseType" use="optional"
+    <xsd:attribute name="tense" type="Tense" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="polarity" type="PolarityType"
+    <xsd:attribute name="polarity" type="Polarity"
 		   use="optional" default="unspecified" />
   </xsd:complexType>
-  <xsd:complexType name="CopulaExceptionType" abstract="true">
+  <xsd:complexType name="CopulaException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -284,17 +284,17 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="person" type="PersonType"
+        <xsd:attribute name="person" type="Person"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="tense" type="TenseType" use="optional"
+        <xsd:attribute name="tense" type="Tense" use="optional"
 		       default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -307,22 +307,22 @@
       <!-- זמן -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="CopulaExceptionAddType">
+  <xsd:complexType name="CopulaExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="CopulaExceptionType"></xsd:extension>
+      <xsd:extension base="CopulaException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="CopulaExceptionRemoveType">
+  <xsd:complexType name="CopulaExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="CopulaExceptionType"></xsd:extension>
+      <xsd:extension base="CopulaException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="CopulaExceptionReplaceType">
+  <xsd:complexType name="CopulaExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="CopulaExceptionType"></xsd:extension>
+      <xsd:extension base="CopulaException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="NounLexiconType">
+  <xsd:complexType name="NounLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מגדיר שמות עצם. צורה
       בסיסית של שמות העצם היא צורת היחיד (זכר או נקבה) ובמקרים
@@ -363,7 +363,7 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="NounExceptionAddType"
+        <xsd:element name="add" type="NounExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להוספת
@@ -376,7 +376,7 @@
             ו-inflectConstruct="false".</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="replace" type="NounExceptionReplaceType"
+        <xsd:element name="replace" type="NounExceptionReplace"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להחלפת
@@ -389,7 +389,7 @@
             ו-inflectConstruct="false".</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="remove" type="NounExceptionRemoveType"
+        <xsd:element name="remove" type="NounExceptionRemove"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להסרת
@@ -405,25 +405,25 @@
         </xsd:element>
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="masculine" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="singular" />
-    <xsd:attribute name="feminine" type="FeminineType"
+    <xsd:attribute name="feminine" type="Feminine"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="plural" type="PluralType" use="optional"
+    <xsd:attribute name="plural" type="Plural" use="optional"
 		   default="im" />
     <xsd:attribute name="dual" type="xsd:boolean" use="optional"
 		   default="false" />
-    <xsd:attribute name="deverbal" type="ThreeStateType"
+    <xsd:attribute name="deverbal" type="ThreeState"
 		   use="optional" default="false" />
-    <xsd:attribute name="acronym" type="ThreeStateType"
+    <xsd:attribute name="acronym" type="ThreeState"
 		   use="optional" default="false" />
     <xsd:attribute name="definiteness" type="xsd:boolean"
 		   use="optional" default="true" />
     <xsd:attribute name="foreign" type="xsd:boolean" use="optional"
 		   default="false" />
-    <xsd:attribute name="direction" type="TwoStateType"
+    <xsd:attribute name="direction" type="TwoState"
 		   use="optional" default="false" />
     <xsd:attribute name="root" type="xsd:token" use="optional"
 		   default="" />
@@ -467,7 +467,7 @@
     <!--האם לייצר הטיות נסמך לרבים -->
     <!-- האם לייצר הטיות קניין לרבים  -->
   </xsd:complexType>
-  <xsd:complexType name="AdjectiveLexiconType">
+  <xsd:complexType name="AdjectiveLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מגדיר ערך מילוני
       מסוג "שם תואר". שמות תואר נוטים יפה ובאופן סדיר. צורת הבסיס
@@ -502,7 +502,7 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="NounExceptionAddType"
+        <xsd:element name="add" type="NounExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להוספת
@@ -515,7 +515,7 @@
             ו-inflectConstruct="false".</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="replace" type="NounExceptionReplaceType"
+        <xsd:element name="replace" type="NounExceptionReplace"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להחלפת
@@ -528,7 +528,7 @@
             ו-inflectConstruct="false".</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="remove" type="NounExceptionRemoveType"
+        <xsd:element name="remove" type="NounExceptionRemove"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להסרת
@@ -544,13 +544,13 @@
         </xsd:element>
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="masculine" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="singular" />
-    <xsd:attribute name="feminine" type="FeminineType"
+    <xsd:attribute name="feminine" type="Feminine"
 		   use="optional" default="h" />
-    <xsd:attribute name="plural" type="PluralType" use="optional"
+    <xsd:attribute name="plural" type="Plural" use="optional"
 		   default="im" />
     <xsd:attribute name="root" type="xsd:token" use="optional"
 		   default="" />
@@ -560,7 +560,7 @@
 		   use="optional" default="" />
     <xsd:attribute name="ipSource" type="xsd:token" use="optional"
 		   default="" />
-    <xsd:attribute name="acronym" type="ThreeStateType"
+    <xsd:attribute name="acronym" type="ThreeState"
 		   use="optional" default="false" />
     <xsd:attribute name="foreign" type="xsd:boolean" use="optional"
 		   default="false" />
@@ -586,7 +586,7 @@
     <!--האם לייצר הטיית נסמך ליחיד  -->
     <!-- האם לייצר הטיית נסמך לרבים -->
   </xsd:complexType>
-  <xsd:complexType name="NounExceptionType" abstract="true">
+  <xsd:complexType name="NounException" abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לטיפול במקרים
       יוצאי דופן שאינם מתנהגים לפי כללי הנטייה, אשר מממש המנתח
@@ -610,23 +610,23 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="feminine" type="FeminineType"
+        <xsd:attribute name="feminine" type="Feminine"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="plural" type="PluralType"
+        <xsd:attribute name="plural" type="Plural"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="possessive" type="PGNType"
+        <xsd:attribute name="possessive" type="PGN"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="construct" type="ThreeStateType"
+        <xsd:attribute name="construct" type="ThreeState"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="dual" type="ThreeStateType"
+        <xsd:attribute name="dual" type="ThreeState"
 		       use="optional" default="unspecified" />
         <xsd:attribute name="inflectConstructS" type="xsd:boolean"
 		       use="optional" default="true" />
@@ -654,22 +654,22 @@
       <!-- האם לייצר הטיות קניין לרבים  -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="NounExceptionAddType">
+  <xsd:complexType name="NounExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="NounExceptionType"></xsd:extension>
+      <xsd:extension base="NounException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="NounExceptionRemoveType">
+  <xsd:complexType name="NounExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="NounExceptionType"></xsd:extension>
+      <xsd:extension base="NounException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="NounExceptionReplaceType">
+  <xsd:complexType name="NounExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="NounExceptionType"></xsd:extension>
+      <xsd:extension base="NounException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:simpleType name="PluralType">
+  <xsd:simpleType name="Plural">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר את הערכים
       האפשריים לצורן הריבוי.</xsd:documentation>
@@ -695,7 +695,7 @@
       <!-- לא מוגדר   -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="FeminineType">
+  <xsd:simpleType name="Feminine">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר את הערכים
       האפשריים לצורן הנקבה ביחיד נפרד.</xsd:documentation>
@@ -713,7 +713,7 @@
       <!-- לא מוגדר   -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="NumberType">
+  <xsd:simpleType name="Number">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר את הערכים
       האפשריים לתכונת המספר.</xsd:documentation>
@@ -733,7 +733,7 @@
       <!-- לא ידוע          -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="GenderType">
+  <xsd:simpleType name="Gender">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר את הערכים
       האפשריים לתכונת המין.</xsd:documentation>
@@ -751,7 +751,7 @@
       <!-- לא ידוע         -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="RegisterType">
+  <xsd:simpleType name="Register">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="formal" />
       <xsd:enumeration value="archaic" />
@@ -761,7 +761,7 @@
       <!-- מדוברת    -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="SpellingType">
+  <xsd:simpleType name="Spelling">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="standard" />
       <xsd:enumeration value="irregular" />
@@ -769,27 +769,27 @@
       <!-- כתיב לא תקין                                          -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="PolarityType">
+  <xsd:simpleType name="Polarity">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="positive" />
       <xsd:enumeration value="negative" />
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="TwoStateType">
+  <xsd:simpleType name="TwoState">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="true" />
       <xsd:enumeration value="false" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="ThreeStateType">
+  <xsd:simpleType name="ThreeState">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="true" />
       <xsd:enumeration value="false" />
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="PGNType">
+  <xsd:simpleType name="PGN">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה נועד להוות פתרון נח
       לסימון נטיית גוף/מין/מספר.</xsd:documentation>
@@ -835,7 +835,7 @@
       <!-- לא ידוע         -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="VerbLexiconType">
+  <xsd:complexType name="VerbLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר פעלים.
       undotted, transliterated ו- dotted מייצגים במקרה זה את צורת
@@ -902,7 +902,7 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="VerbExceptionAddType"
+        <xsd:element name="add" type="VerbExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להוספת
@@ -911,7 +911,7 @@
             יוצאת הדופן!</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="replace" type="VerbExceptionReplaceType"
+        <xsd:element name="replace" type="VerbExceptionReplace"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להחלפת
@@ -919,7 +919,7 @@
             נוספות מהצורה יוצאת הדופן!</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="remove" type="VerbExceptionRemoveType"
+        <xsd:element name="remove" type="VerbExceptionRemove"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להסרת
@@ -934,12 +934,12 @@
         </xsd:element>
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="feminine" type="FeminineType"
+    <xsd:attribute name="feminine" type="Feminine"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="valence" type="ValenceType" use="optional"
+    <xsd:attribute name="valence" type="Valence" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="root" type="xsd:token" use="required" />
-    <xsd:attribute name="binyan" type="BinyanType" use="optional"
+    <xsd:attribute name="binyan" type="Binyan" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="foreign" type="xsd:boolean" use="optional"
 		   default="false" />
@@ -986,7 +986,7 @@
     <!-- האם לייצר הטיית בינוני קניין-->
     <!-- האם שם פועל יכול להופיע בטקסט ללא תחילית לפניו-->
   </xsd:complexType>
-  <xsd:simpleType name="BinyanType">
+  <xsd:simpleType name="Binyan">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="Pa'al" />
       <xsd:enumeration value="Nif'al" />
@@ -1006,7 +1006,7 @@
       <!-- לא ידוע -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="ValenceType">
+  <xsd:simpleType name="Valence">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="intransitiveWithPaul" />
       <xsd:enumeration value="intransitiveWithoutPaul" />
@@ -1026,48 +1026,48 @@
       <!-- לא מוגדר -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="AcronymLexiconType">
+  <xsd:complexType name="AcronymLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר ראשי
       תיבות</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="AcronymExceptionAddType"
+        <xsd:element name="add" type="AcronymExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="AcronymExceptionReplaceType" minOccurs="0"
+		     type="AcronymExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="AcronymExceptionRemoveType" minOccurs="0"
+		     type="AcronymExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="masculine" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="singular" />
-    <xsd:attribute name="feminine" type="FeminineType"
+    <xsd:attribute name="feminine" type="Feminine"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="plural" type="PluralType" use="optional"
+    <xsd:attribute name="plural" type="Plural" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="meaning" type="xsd:token" use="optional"
 		   default="" />
-    <xsd:attribute name="pos" type="PosType" use="optional"
+    <xsd:attribute name="pos" type="Pos" use="optional"
 		   default="noun" />
-    <xsd:attribute name="properNameType" type="NamedEntityType"
+    <xsd:attribute name="properName" type="NamedEntity"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="conjunctionType" type="ConjunctionType"
+    <xsd:attribute name="conjunctionType" type="Conjunction"
 		   use="optional" default="unspecified" />
     <xsd:attribute name="definiteness"
-		   type="AcronymDefinitenessType" use="optional"
+		   type="AcronymDefiniteness" use="optional"
 		   default="external" />
     <xsd:attribute name="inflectConstructP" type="xsd:boolean"
 		   use="optional" default="true" />
     <xsd:attribute name="inflectConstructS" type="xsd:boolean"
 		   use="optional" default="true" />
     <xsd:attribute name="noInvertedCommas"
-		   type="noInvertedCommasType" use="optional" default="none" />
+		   type="noInvertedCommas" use="optional" default="none" />
     <xsd:attribute name="generateAdjective" type="xsd:boolean"
 		   use="optional" default="false" />
     <xsd:attribute name="niqLexicalLink" type="xsd:token"
@@ -1077,7 +1077,7 @@
     <xsd:attribute name="adjectiveLexicalLink" type="xsd:token"
 		   use="optional" default="" />
   </xsd:complexType>
-  <xsd:complexType name="AcronymExceptionType" abstract="true">
+  <xsd:complexType name="AcronymException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -1086,38 +1086,38 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="properNameType" type="NamedEntityType"
+        <xsd:attribute name="properName" type="NamedEntity"
 		       use="optional" default="unspecified" />
         <xsd:attribute name="conjunctionType"
-		       type="ConjunctionType" use="optional"
+		       type="Conjunction" use="optional"
 		       default="unspecified" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="AcronymExceptionAddType">
+  <xsd:complexType name="AcronymExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="AcronymExceptionType"></xsd:extension>
+      <xsd:extension base="AcronymException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="AcronymExceptionReplaceType">
+  <xsd:complexType name="AcronymExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="AcronymExceptionType"></xsd:extension>
+      <xsd:extension base="AcronymException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="AcronymExceptionRemoveType">
+  <xsd:complexType name="AcronymExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="AcronymExceptionType"></xsd:extension>
+      <xsd:extension base="AcronymException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:simpleType name="AcronymDefinitenessType">
+  <xsd:simpleType name="AcronymDefiniteness">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="internal" />
       <xsd:enumeration value="external" />
@@ -1126,7 +1126,7 @@
       <xsd:enumeration value="none" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="noInvertedCommasType">
+  <xsd:simpleType name="noInvertedCommas">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="masculine singular" />
       <xsd:enumeration value="feminine singular" />
@@ -1138,7 +1138,7 @@
       <xsd:enumeration value="none" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="PosType">
+  <xsd:simpleType name="Pos">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="noun" />
       <xsd:enumeration value="adjective" />
@@ -1161,7 +1161,7 @@
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="ExistentialLexiconType">
+  <xsd:complexType name="ExistentialLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר את המילים יש
       אין וכן נטיות הפועל "היה" בגוף שלישי עבר
@@ -1169,32 +1169,32 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="ExistentialExceptionAddType"
+        <xsd:element name="add" type="ExistentialExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="ExistentialExceptionReplaceType" minOccurs="0"
+		     type="ExistentialExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="ExistentialExceptionRemoveType" minOccurs="0"
+		     type="ExistentialExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="root" type="xsd:token" use="optional"
 		   default="" />
-    <xsd:attribute name="pgn" type="PGNType" use="optional"
+    <xsd:attribute name="pgn" type="PGN" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="tense" type="ExistentialTense"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="definiteness" type="DefinitnessType"
+    <xsd:attribute name="definiteness" type="Definitness"
 		   use="optional" default="optional" />
-    <xsd:attribute name="polarity" type="PolarityType"
+    <xsd:attribute name="polarity" type="Polarity"
 		   use="optional" default="unspecified" />
   </xsd:complexType>
-  <xsd:complexType name="ExistentialExceptionType" abstract="true">
+  <xsd:complexType name="ExistentialException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -1203,17 +1203,17 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
         <xsd:attribute name="tense" type="ExistentialTense"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="pgn" type="PGNType" use="optional"
+        <xsd:attribute name="pgn" type="PGN" use="optional"
 		       default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -1225,46 +1225,46 @@
       <!-- נטיית שייכות החבורה  -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ExistentialExceptionAddType">
+  <xsd:complexType name="ExistentialExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="ExistentialExceptionType">
+      <xsd:extension base="ExistentialException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ExistentialExceptionRemoveType">
+  <xsd:complexType name="ExistentialExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="ExistentialExceptionType">
+      <xsd:extension base="ExistentialException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ExistentialExceptionReplaceType">
+  <xsd:complexType name="ExistentialExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="ExistentialExceptionType">
+      <xsd:extension base="ExistentialException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ProperNameLexiconType">
+  <xsd:complexType name="ProperNameLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="ProperNameExceptionAddType"
+        <xsd:element name="add" type="ProperNameExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="ProperNameExceptionReplaceType" minOccurs="0"
+		     type="ProperNameExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="ProperNameExceptionRemoveType" minOccurs="0"
+		     type="ProperNameExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="masculine" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="singular" />
-    <xsd:attribute name="type" type="NamedEntityType"
+    <xsd:attribute name="type" type="NamedEntity"
 		   use="optional" default="person" />
-    <xsd:attribute name="definiteness" type="DefinitnessType"
+    <xsd:attribute name="definiteness" type="Definitness"
 		   use="optional" default="prohibited" />
-    <xsd:attribute name="direction" type="ThreeStateType"
+    <xsd:attribute name="direction" type="ThreeState"
 		   use="optional" default="unspecified">
       <xsd:annotation>
         <xsd:documentation xml:lang="en">Some proper names allow
@@ -1290,35 +1290,35 @@
     <!-- סוג                -->
     <!-- האם מקבל ה' הידיעה?-->
   </xsd:complexType>
-  <xsd:complexType name="ModalLexiconType">
+  <xsd:complexType name="ModalLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="ModalExceptionAddType"
+        <xsd:element name="add" type="ModalExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="ModalExceptionReplaceType" minOccurs="0"
+		     type="ModalExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
-        <xsd:element name="remove" type="ModalExceptionRemoveType"
+        <xsd:element name="remove" type="ModalExceptionRemove"
 		     minOccurs="0" maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="inflectionType" type="ModalInflectionType"
+    <xsd:attribute name="inflectionType" type="ModalInflection"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="tense" type="TenseType" use="optional"
+    <xsd:attribute name="tense" type="Tense" use="optional"
 		   default="unspecified" />
   </xsd:complexType>
-  <xsd:simpleType name="ModalInflectionType">
+  <xsd:simpleType name="ModalInflection">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="genderNumber" />
       <xsd:enumeration value="genderNumberTime" />
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="DefinitnessType">
+  <xsd:simpleType name="Definitness">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="required" />
       <xsd:enumeration value="optional" />
@@ -1334,7 +1334,7 @@
       <!-- העיול עצמו מיודע           -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="NamedEntityType">
+  <xsd:simpleType name="NamedEntity">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="person" />
       <xsd:enumeration value="country" />
@@ -1361,7 +1361,7 @@
       <!-- הקטגוריה אינה ידועה     -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="ProperNameExceptionType" abstract="true">
+  <xsd:complexType name="ProperNameException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -1370,19 +1370,19 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="type" type="NamedEntityType"
+        <xsd:attribute name="type" type="NamedEntity"
 		       use="optional" default="person" />
-        <xsd:attribute name="definiteness" type="DefinitnessType"
+        <xsd:attribute name="definiteness" type="Definitness"
 		       use="optional" default="prohibited" />
-        <xsd:attribute name="direction" type="ThreeStateType"
+        <xsd:attribute name="direction" type="ThreeState"
 		       use="optional" default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -1396,25 +1396,25 @@
       <!-- ה המגמה-->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ProperNameExceptionAddType">
+  <xsd:complexType name="ProperNameExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="ProperNameExceptionType">
+      <xsd:extension base="ProperNameException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ProperNameExceptionRemoveType">
+  <xsd:complexType name="ProperNameExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="ProperNameExceptionType">
+      <xsd:extension base="ProperNameException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ProperNameExceptionReplaceType">
+  <xsd:complexType name="ProperNameExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="ProperNameExceptionType">
+      <xsd:extension base="ProperNameException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ModalExceptionType" abstract="true">
+  <xsd:complexType name="ModalException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -1423,17 +1423,17 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="person" type="PersonType"
+        <xsd:attribute name="person" type="Person"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="tense" type="TenseType" use="optional"
+        <xsd:attribute name="tense" type="Tense" use="optional"
 		       default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -1446,22 +1446,22 @@
       <!--זמן  -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ModalExceptionAddType">
+  <xsd:complexType name="ModalExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="ModalExceptionType"></xsd:extension>
+      <xsd:extension base="ModalException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ModalExceptionRemoveType">
+  <xsd:complexType name="ModalExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="ModalExceptionType"></xsd:extension>
+      <xsd:extension base="ModalException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="ModalExceptionReplaceType">
+  <xsd:complexType name="ModalExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="ModalExceptionType"></xsd:extension>
+      <xsd:extension base="ModalException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="VerbExceptionType">
+  <xsd:complexType name="VerbException">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לטיפול במקרים
       יוצאי דופן שאינם מתנהגים לפי כללי הנטייה, אשר מממש המנתח
@@ -1476,19 +1476,19 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="tense" type="TenseType"
+        <xsd:attribute name="tense" type="Tense"
 		       use="required" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="person" type="PersonType"
+        <xsd:attribute name="person" type="Person"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="pgn" type="PGNType" use="required" />
+        <xsd:attribute name="pgn" type="PGN" use="required" />
         <xsd:attribute name="beinoniConstruct" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="beinoniDefiniteness"
@@ -1510,22 +1510,22 @@
       <!-- האם להטות את צורת הבינוני-->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="VerbExceptionAddType">
+  <xsd:complexType name="VerbExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="VerbExceptionType"></xsd:extension>
+      <xsd:extension base="VerbException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="VerbExceptionRemoveType">
+  <xsd:complexType name="VerbExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="VerbExceptionType"></xsd:extension>
+      <xsd:extension base="VerbException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="VerbExceptionReplaceType">
+  <xsd:complexType name="VerbExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="VerbExceptionType"></xsd:extension>
+      <xsd:extension base="VerbException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:simpleType name="TenseType">
+  <xsd:simpleType name="Tense">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="past" />
       <xsd:enumeration value="beinoni" />
@@ -1545,7 +1545,7 @@
       <!-- לא מוגדר    -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="AdverbLexiconType">
+  <xsd:complexType name="AdverbLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר תארי פועל.
       לתארי פועל התכונות הבאות: - חלקם משתמשים כמילות שאלה
@@ -1574,7 +1574,7 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="AdverbExceptionAddType"
+        <xsd:element name="add" type="AdverbExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להוספת
@@ -1584,7 +1584,7 @@
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="replace"
-		     type="AdverbExceptionReplaceType" minOccurs="0"
+		     type="AdverbExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להחלפת
@@ -1592,7 +1592,7 @@
             נוספות מהצורה יוצאת הדופן!</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="remove" type="AdverbExceptionRemoveType"
+        <xsd:element name="remove" type="AdverbExceptionRemove"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להסרת
@@ -1609,30 +1609,30 @@
     </xsd:sequence>
     <xsd:attribute name="interrogative" type="xsd:boolean"
 		   use="optional" default="false" />
-    <xsd:attribute name="modifiesVerb" type="ThreeStateType"
+    <xsd:attribute name="modifiesVerb" type="ThreeState"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="modifiesAdjective" type="ThreeStateType"
+    <xsd:attribute name="modifiesAdjective" type="ThreeState"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="modifiesAdverb" type="ThreeStateType"
+    <xsd:attribute name="modifiesAdverb" type="ThreeState"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="position" type="PositionType"
+    <xsd:attribute name="position" type="Position"
 		   use="optional" default="unspecified" />
     <xsd:attribute name="inflect" type="xsd:boolean" use="optional"
 		   default="false" />
     <xsd:attribute name="inflectionBase" type="xsd:token"
 		   use="optional" default="" />
-    <xsd:attribute name="type" type="AdverbType" use="optional"
+    <xsd:attribute name="type" type="Adverb" use="optional"
 		   default="unspecified" />
     <!-- האם נוטה בנטיית גוף/מין/מספר? -->
     <!-- איזה בסיס נטייה יש לשנות?   -->
   </xsd:complexType>
-  <xsd:simpleType name="AdverbType">
+  <xsd:simpleType name="Adverb">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="focus" />
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="PositionType">
+  <xsd:simpleType name="Position">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתייחס למיקום של
       תואר הפועל במשפט לעומת המילה אותה הוא
@@ -1645,7 +1645,7 @@
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="AdverbExceptionType" abstract="true">
+  <xsd:complexType name="AdverbException" abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לטיפול במקרים
       יוצאי דופן שאינם מתנהגים לפי כללי הנטייה, אשר מממש המנתח
@@ -1660,11 +1660,11 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="possessiveSuffix" type="PGNType"
+        <xsd:attribute name="possessiveSuffix" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -1674,49 +1674,49 @@
       <!-- נטיית שייכות חבורה -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="AdverbExceptionAddType">
+  <xsd:complexType name="AdverbExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="AdverbExceptionType"></xsd:extension>
+      <xsd:extension base="AdverbException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="AdverbExceptionRemoveType">
+  <xsd:complexType name="AdverbExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="AdverbExceptionType"></xsd:extension>
+      <xsd:extension base="AdverbException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="AdverbExceptionReplaceType">
+  <xsd:complexType name="AdverbExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="AdverbExceptionType"></xsd:extension>
+      <xsd:extension base="AdverbException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="PronounLexiconType">
+  <xsd:complexType name="PronounLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר כינויי גוף על
       הסוגים השונים (ראה בהמשך).</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="PronounExceptionAddType"
+        <xsd:element name="add" type="PronounExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="PronounExceptionReplaceType" minOccurs="0"
+		     type="PronounExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="PronounExceptionRemoveType" minOccurs="0"
+		     type="PronounExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="person" type="PersonType" use="optional"
+    <xsd:attribute name="person" type="Person" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="pgn" type="PGNType" use="optional"
+    <xsd:attribute name="pgn" type="PGN" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="definiteness" type="DefinitnessType"
+    <xsd:attribute name="definiteness" type="Definitness"
 		   use="optional" default="prohibited" />
-    <xsd:attribute name="type" type="PronounType" use="required" />
+    <xsd:attribute name="type" type="Pronoun" use="required" />
     <!-- מין  -->
     <!-- מספר -->
     <!-- גוף -->
@@ -1724,7 +1724,7 @@
     <!--האם מיודע  -->
     <!-- סוג  -->
   </xsd:complexType>
-  <xsd:simpleType name="PronounType">
+  <xsd:simpleType name="Pronoun">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר סוגים שונים של
       כינוי גוף (שם גוף).</xsd:documentation>
@@ -1747,7 +1747,7 @@
       <!--   כינוי גוף: כינוי חוזר עבור כל הנטיות של עצמי, עצמך, עצמן, עצמנו וכ  -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="PronounExceptionType" abstract="true">
+  <xsd:complexType name="PronounException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -1756,17 +1756,17 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="person" type="PersonType"
+        <xsd:attribute name="person" type="Person"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="pgn" type="PGNType" use="optional"
+        <xsd:attribute name="pgn" type="PGN" use="optional"
 		       default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -1779,22 +1779,22 @@
       <!-- נטיית שייכות חבורה -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="PronounExceptionAddType">
+  <xsd:complexType name="PronounExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="PronounExceptionType"></xsd:extension>
+      <xsd:extension base="PronounException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="PronounExceptionRemoveType">
+  <xsd:complexType name="PronounExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="PronounExceptionType"></xsd:extension>
+      <xsd:extension base="PronounException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="PronounExceptionReplaceType">
+  <xsd:complexType name="PronounExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="PronounExceptionType"></xsd:extension>
+      <xsd:extension base="PronounException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:simpleType name="PersonType">
+  <xsd:simpleType name="Person">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="1" />
       <xsd:enumeration value="2" />
@@ -1808,15 +1808,15 @@
       <!-- לא מוגדר   -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="ConjunctionLexiconType">
+  <xsd:complexType name="ConjunctionLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מתאר מילת
       חיבור.</xsd:documentation>
     </xsd:annotation>
-    <xsd:attribute name="type" type="ConjunctionType"
+    <xsd:attribute name="type" type="Conjunction"
 		   use="optional" default="coordinating" />
   </xsd:complexType>
-  <xsd:simpleType name="ConjunctionType">
+  <xsd:simpleType name="Conjunction">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="coordinating" />
       <xsd:enumeration value="subordinating" />
@@ -1827,7 +1827,7 @@
       <!-- מילת זיקה  -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="PrepositionLexiconType">
+  <xsd:complexType name="PrepositionLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש להגדרת מילות
       יחס. רובן ככולן של מילות היחס נוטות בנטיית גוף/מין/מספר.
@@ -1846,7 +1846,7 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="PrepositionExceptionAddType"
+        <xsd:element name="add" type="PrepositionExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להוספת
@@ -1856,7 +1856,7 @@
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="replace"
-		     type="PrepositionExceptionReplaceType" minOccurs="0"
+		     type="PrepositionExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להחלפת
@@ -1865,7 +1865,7 @@
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="remove"
-		     type="PrepositionExceptionRemoveType" minOccurs="0"
+		     type="PrepositionExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להסרת
@@ -1880,12 +1880,12 @@
         </xsd:element>
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="case" type="CaseType" use="optional"
+    <xsd:attribute name="case" type="Case" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="inflectionBase" type="xsd:token"
 		   use="optional" default="" />
   </xsd:complexType>
-  <xsd:simpleType name="CaseType">
+  <xsd:simpleType name="Case">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="accusative" />
       <xsd:enumeration value="possessive" />
@@ -1895,7 +1895,7 @@
       <!-- לא מוגדר   -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="PrepositionExceptionType" abstract="true">
+  <xsd:complexType name="PrepositionException" abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לטיפול במקרים
       יוצאי דופן שאינם מתנהגים לפי כללי הנטייה, אשר מממש המנתח
@@ -1910,11 +1910,11 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="personGenderNumber" type="PGNType"
+        <xsd:attribute name="personGenderNumber" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -1924,25 +1924,25 @@
       <!-- נטיית שייכות חבורה -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="PrepositionExceptionAddType">
+  <xsd:complexType name="PrepositionExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="PrepositionExceptionType">
+      <xsd:extension base="PrepositionException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="PrepositionExceptionRemoveType">
+  <xsd:complexType name="PrepositionExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="PrepositionExceptionType">
+      <xsd:extension base="PrepositionException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="PrepositionExceptionReplaceType">
+  <xsd:complexType name="PrepositionExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="PrepositionExceptionType">
+      <xsd:extension base="PrepositionException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterrogativeLexiconType">
+  <xsd:complexType name="InterrogativeLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לייצוג מילת
       שאלה. אילוץ: ====== inflectionBase לא יופיע אם
@@ -1952,7 +1952,7 @@
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
         <xsd:element name="add"
-		     type="InterrogativeExceptionAddType" minOccurs="0"
+		     type="InterrogativeExceptionAdd" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להוספת
@@ -1962,7 +1962,7 @@
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="replace"
-		     type="InterrogativeExceptionReplaceType" minOccurs="0"
+		     type="InterrogativeExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להחלפת
@@ -1971,7 +1971,7 @@
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="remove"
-		     type="InterrogativeExceptionRemoveType" minOccurs="0"
+		     type="InterrogativeExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להסרת
@@ -1987,7 +1987,7 @@
       </xsd:choice>
     </xsd:sequence>
     <xsd:attribute name="interrogativeType"
-		   type="InterrogativeType" use="optional"
+		   type="Interrogative" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="inflect" type="xsd:boolean" use="optional"
 		   default="false" />
@@ -2000,34 +2000,34 @@
       </xsd:annotation>
     </xsd:attribute>
   </xsd:complexType>
-  <xsd:complexType name="NegationLexiconType">
+  <xsd:complexType name="NegationLexicon">
     <!-- מילת שלילה -->
   </xsd:complexType>
-  <xsd:complexType name="ImpersonalLexiconType">
+  <xsd:complexType name="ImpersonalLexicon">
     <!--חסרי גוף ומשקל -->
   </xsd:complexType>
-  <xsd:complexType name="WprefixLexiconType">
+  <xsd:complexType name="WprefixLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="WprefixExceptionAddType"
+        <xsd:element name="add" type="WprefixExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="WprefixExceptionReplaceType" minOccurs="0"
+		     type="WprefixExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="WprefixExceptionRemoveType" minOccurs="0"
+		     type="WprefixExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="polarity" type="PolarityType"
+    <xsd:attribute name="polarity" type="Polarity"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="unspecified" />
     <!--מילת תחילית - בניגוד לתחילית של התמנית -->
   </xsd:complexType>
-  <xsd:complexType name="WprefixExceptionType" abstract="true">
+  <xsd:complexType name="WprefixException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -2036,13 +2036,13 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -2053,49 +2053,49 @@
       <!-- מספר-->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="WprefixExceptionAddType">
+  <xsd:complexType name="WprefixExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="WprefixExceptionType"></xsd:extension>
+      <xsd:extension base="WprefixException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="WprefixExceptionRemoveType">
+  <xsd:complexType name="WprefixExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="WprefixExceptionType"></xsd:extension>
+      <xsd:extension base="WprefixException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="WprefixExceptionReplaceType">
+  <xsd:complexType name="WprefixExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="WprefixExceptionType"></xsd:extension>
+      <xsd:extension base="WprefixException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="TitleLexiconType">
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+  <xsd:complexType name="TitleLexicon">
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="definiteness" type="xsd:boolean"
 		   use="optional" default="true" />
   </xsd:complexType>
-  <xsd:complexType name="NumeralLexiconType">
+  <xsd:complexType name="NumeralLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="NumeralExceptionAddType"
+        <xsd:element name="add" type="NumeralExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="NumeralExceptionReplaceType" minOccurs="0"
+		     type="NumeralExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="NumeralExceptionRemoveType" minOccurs="0"
+		     type="NumeralExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="gender" type="GenderType" use="optional"
+    <xsd:attribute name="gender" type="Gender" use="optional"
 		   default="masculine" />
-    <xsd:attribute name="number" type="NumberType" use="optional"
+    <xsd:attribute name="number" type="Number" use="optional"
 		   default="singular" />
-    <xsd:attribute name="type" type="NumeralType" use="optional"
+    <xsd:attribute name="type" type="Numeral" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="definiteness" type="DefinitnessType"
+    <xsd:attribute name="definiteness" type="Definitness"
 		   use="optional" default="optional" />
     <xsd:attribute name="value" type="xsd:token" use="optional"
 		   default="" />
@@ -2107,7 +2107,7 @@
     <!-- ה הידיעה  -->
     <!--האם נוטה בנטיית סמיכות וקניין  -->
   </xsd:complexType>
-  <xsd:simpleType name="NumeralType">
+  <xsd:simpleType name="Numeral">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="numeral ordinal" />
       <xsd:enumeration value="numeral cardinal" />
@@ -2123,7 +2123,7 @@
       <!-- לא ידוע -->
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="InterrogativeType">
+  <xsd:simpleType name="Interrogative">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="pronoun" />
       <xsd:enumeration value="proadverb" />
@@ -2132,7 +2132,7 @@
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="NumeralExceptionType" abstract="true">
+  <xsd:complexType name="NumeralException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -2141,19 +2141,19 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="definiteness" type="DefinitnessType"
+        <xsd:attribute name="definiteness" type="Definitness"
 		       use="optional" default="prohibited" />
-        <xsd:attribute name="pgn" type="PGNType" use="optional"
+        <xsd:attribute name="pgn" type="PGN" use="optional"
 		       default="unspecified" />
-        <xsd:attribute name="construct" type="ThreeStateType"
+        <xsd:attribute name="construct" type="ThreeState"
 		       use="optional" default="unspecified" />
         <xsd:attribute name="inflectConstruct" type="xsd:boolean"
 		       use="optional" default="true" />
@@ -2170,22 +2170,22 @@
       <!-- האם ניתן לבצע נטיית סמיכות? -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="NumeralExceptionAddType">
+  <xsd:complexType name="NumeralExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="NumeralExceptionType"></xsd:extension>
+      <xsd:extension base="NumeralException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="NumeralExceptionRemoveType">
+  <xsd:complexType name="NumeralExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="NumeralExceptionType"></xsd:extension>
+      <xsd:extension base="NumeralException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="NumeralExceptionReplaceType">
+  <xsd:complexType name="NumeralExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="NumeralExceptionType"></xsd:extension>
+      <xsd:extension base="NumeralException"></xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="QuantifierLexiconType">
+  <xsd:complexType name="QuantifierLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה מגדיר כמתים מספריים
       ושמות מספר. התכונות הן ע"פ Glinert "The grammar of Modern
@@ -2200,30 +2200,30 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="QuantifierExceptionAddType"
+        <xsd:element name="add" type="QuantifierExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="QuantifierExceptionReplaceType" minOccurs="0"
+		     type="QuantifierExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="QuantifierExceptionRemoveType" minOccurs="0"
+		     type="QuantifierExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="type" type="QuantifierTypeType"
+    <xsd:attribute name="type" type="QuantifierType"
 		   use="optional" default="unspecified" />
     <xsd:attribute name="inflect" type="xsd:boolean" use="optional"
 		   default="false" />
     <xsd:attribute name="inflectionBase" type="xsd:token"
 		   use="optional" default="" />
-    <xsd:attribute name="definiteness" type="DefinitnessType"
+    <xsd:attribute name="definiteness" type="Definitness"
 		   use="optional" default="prohibited" />
     <!-- מין  -->
     <!-- האם להטות-->
     <!-- בסיס להטייה-->
     <!-- ה הידיעה-->
   </xsd:complexType>
-  <xsd:simpleType name="QuantifierTypeType">
+  <xsd:simpleType name="QuantifierType">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="amount" />
       <xsd:enumeration value="partitive" />
@@ -2231,7 +2231,7 @@
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:complexType name="QuantifierExceptionType" abstract="true">
+  <xsd:complexType name="QuantifierException" abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
         <xsd:attribute name="undotted" type="xsd:token"
@@ -2240,17 +2240,17 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="pgn" type="PGNType" use="optional"
+        <xsd:attribute name="pgn" type="PGN" use="optional"
 		       default="unspecified" />
-        <xsd:attribute name="acronym" type="ThreeStateType"
+        <xsd:attribute name="acronym" type="ThreeState"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="construct" type="ThreeStateType"
+        <xsd:attribute name="construct" type="ThreeState"
 		       use="optional" default="unspecified" />
         <xsd:attribute name="inflectConstruct" type="xsd:boolean"
 		       use="optional" default="true" />
@@ -2266,25 +2266,25 @@
       <!-- האם ניתן לבצע נטיית סמיכות? -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="QuantifierExceptionAddType">
+  <xsd:complexType name="QuantifierExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="QuantifierExceptionType">
+      <xsd:extension base="QuantifierException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="QuantifierExceptionRemoveType">
+  <xsd:complexType name="QuantifierExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="QuantifierExceptionType">
+      <xsd:extension base="QuantifierException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="QuantifierExceptionReplaceType">
+  <xsd:complexType name="QuantifierExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="QuantifierExceptionType">
+      <xsd:extension base="QuantifierException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterrogativeExceptionType"
+  <xsd:complexType name="InterrogativeException"
 		   abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לטיפול במקרים
@@ -2300,11 +2300,11 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="personGenderNumber" type="PGNType"
+        <xsd:attribute name="personGenderNumber" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -2314,25 +2314,25 @@
       <!-- נטיית שייכות חבורה -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterrogativeExceptionAddType">
+  <xsd:complexType name="InterrogativeExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="InterrogativeExceptionType">
+      <xsd:extension base="InterrogativeException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterrogativeExceptionRemoveType">
+  <xsd:complexType name="InterrogativeExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="InterrogativeExceptionType">
+      <xsd:extension base="InterrogativeException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterrogativeExceptionReplaceType">
+  <xsd:complexType name="InterrogativeExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="InterrogativeExceptionType">
+      <xsd:extension base="InterrogativeException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterjectionLexiconType">
+  <xsd:complexType name="InterjectionLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לייצוג מילת
       שאלה. מילות שאלה לרוב אינן נוטות, אולם ישנן כמה אשר נוטות
@@ -2340,7 +2340,7 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
-        <xsd:element name="add" type="InterjectionExceptionAddType"
+        <xsd:element name="add" type="InterjectionExceptionAdd"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להוספת
@@ -2350,7 +2350,7 @@
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="replace"
-		     type="InterjectionExceptionReplaceType" minOccurs="0"
+		     type="InterjectionExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להחלפת
@@ -2359,7 +2359,7 @@
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="remove"
-		     type="InterjectionExceptionRemoveType" minOccurs="0"
+		     type="InterjectionExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he">מבנה זה משמש להסרת
@@ -2387,7 +2387,7 @@
     </xsd:attribute>
     <!-- האם נוטה בנטיית גוף/מין/מספר? -->
   </xsd:complexType>
-  <xsd:complexType name="InterjectionExceptionType"
+  <xsd:complexType name="InterjectionException"
 		   abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="he">מבנה זה משמש לטיפול במקרים
@@ -2403,11 +2403,11 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="personGenderNumber" type="PGNType"
+        <xsd:attribute name="personGenderNumber" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
       <!-- המילה כתובה באותיות עבריות -->
@@ -2417,44 +2417,44 @@
       <!-- נטיית שייכות חבורה -->
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterjectionExceptionAddType">
+  <xsd:complexType name="InterjectionExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="InterjectionExceptionType">
+      <xsd:extension base="InterjectionException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterjectionExceptionRemoveType">
+  <xsd:complexType name="InterjectionExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="InterjectionExceptionType">
+      <xsd:extension base="InterjectionException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="InterjectionExceptionReplaceType">
+  <xsd:complexType name="InterjectionExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="InterjectionExceptionType">
+      <xsd:extension base="InterjectionException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordFrozenLexiconType">
+  <xsd:complexType name="MultiWordFrozenLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
         <xsd:element name="add"
-		     type="MultiWordFrozenExceptionAddType" minOccurs="0"
+		     type="MultiWordFrozenExceptionAdd" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="MultiWordFrozenExceptionReplaceType" minOccurs="0"
+		     type="MultiWordFrozenExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="MultiWordFrozenExceptionRemoveType" minOccurs="0"
+		     type="MultiWordFrozenExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="mwPos" type="PosType" use="optional" />
+    <xsd:attribute name="mwPos" type="Pos" use="optional" />
     <xsd:attribute name="consecutive" type="xsd:boolean"
 		   use="optional" default="true" />
     <xsd:attribute name="type" type="xsd:token" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType"
+    <xsd:attribute name="number" type="Number"
 		   default="unspecified" />
     <xsd:attribute name="prefix" type="xsd:boolean"
 		   default="false" />
@@ -2465,29 +2465,29 @@
     <xsd:attribute name="possessive2" type="xsd:boolean"
 		   default="false" />
     <xsd:attribute name="definiteness"
-		   type="AcronymDefinitenessType" use="optional"
+		   type="AcronymDefiniteness" use="optional"
 		   default="external" />
   </xsd:complexType>
-  <xsd:complexType name="MultiWordPrepositionLexiconType">
+  <xsd:complexType name="MultiWordPrepositionLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
         <xsd:element name="add"
-		     type="MultiWordPrepositionalExceptionAddType" minOccurs="0"
+		     type="MultiWordPrepositionalExceptionAdd" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="MultiWordPrepositionalExceptionReplaceType" minOccurs="0"
+		     type="MultiWordPrepositionalExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="MultiWordPrepositionalExceptionRemoveType" minOccurs="0"
+		     type="MultiWordPrepositionalExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="mwPos" type="PosType" use="optional" />
+    <xsd:attribute name="mwPos" type="Pos" use="optional" />
     <xsd:attribute name="consecutive" type="xsd:boolean"
 		   use="optional" default="true" />
     <xsd:attribute name="type" type="xsd:token" use="optional"
 		   default="unspecified" />
-    <xsd:attribute name="number" type="NumberType"
+    <xsd:attribute name="number" type="Number"
 		   default="unspecified" />
     <xsd:attribute name="base1" type="xsd:boolean"
 		   default="false" />
@@ -2498,48 +2498,48 @@
     <xsd:attribute name="possessive2" type="xsd:boolean"
 		   default="false" />
     <xsd:attribute name="definiteness"
-		   type="AcronymDefinitenessType" use="optional"
+		   type="AcronymDefiniteness" use="optional"
 		   default="external" />
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounLexiconType">
+  <xsd:complexType name="MultiWordNounLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
         <xsd:element name="add"
-		     type="MultiWordNounExceptionAddType" minOccurs="0"
+		     type="MultiWordNounExceptionAdd" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="MultiWordNounExceptionReplaceType" minOccurs="0"
+		     type="MultiWordNounExceptionReplace" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="MultiWordNounExceptionRemoveType" minOccurs="0"
+		     type="MultiWordNounExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="mwPos" type="PosType" use="optional"
+    <xsd:attribute name="mwPos" type="Pos" use="optional"
 		   default="noun" />
     <xsd:attribute name="consecutive" type="xsd:boolean"
 		   use="optional" default="true" />
-    <xsd:attribute name="number" type="NumberType"
+    <xsd:attribute name="number" type="Number"
 		   default="unspecified" />
-    <xsd:attribute name="gender" type="GenderType"
+    <xsd:attribute name="gender" type="Gender"
 		   default="unspecified" />
-    <xsd:attribute name="feminine" type="FeminineType"
+    <xsd:attribute name="feminine" type="Feminine"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="plural" type="PluralType" use="optional"
+    <xsd:attribute name="plural" type="Plural" use="optional"
 		   default="im" />
     <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
 		   use="optional" default="false" />
     <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
 		   use="optional" default="false" />
     <xsd:attribute name="definiteness"
-		   type="AcronymDefinitenessType" use="optional"
+		   type="AcronymDefiniteness" use="optional"
 		   default="external" />
     <xsd:attribute name="inflectionBase" type="xsd:token"
 		   use="optional" default="" />
     <xsd:attribute name="type" type="xsd:token" use="optional"
 		   default="NN" />
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounExceptionType"
+  <xsd:complexType name="MultiWordNounException"
 		   abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
@@ -2549,49 +2549,49 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       default="unspecified" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       default="unspecified" />
-        <xsd:attribute name="feminine" type="FeminineType"
+        <xsd:attribute name="feminine" type="Feminine"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="plural" type="PluralType"
+        <xsd:attribute name="plural" type="Plural"
 		       use="optional" default="im" />
         <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="definiteness"
-		       type="AcronymDefinitenessType" use="optional"
+		       type="AcronymDefiniteness" use="optional"
 		       default="external" />
-        <xsd:attribute name="possessive" type="PGNType"
+        <xsd:attribute name="possessive" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounExceptionAddType">
+  <xsd:complexType name="MultiWordNounExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordNounExceptionType">
+      <xsd:extension base="MultiWordNounException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounExceptionRemoveType">
+  <xsd:complexType name="MultiWordNounExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordNounExceptionType">
+      <xsd:extension base="MultiWordNounException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounExceptionReplaceType">
+  <xsd:complexType name="MultiWordNounExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordNounExceptionType">
+      <xsd:extension base="MultiWordNounException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordPrepositionalExceptionType"
+  <xsd:complexType name="MultiWordPrepositionalException"
 		   abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
@@ -2601,49 +2601,49 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       default="unspecified" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       default="unspecified" />
-        <xsd:attribute name="feminine" type="FeminineType"
+        <xsd:attribute name="feminine" type="Feminine"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="plural" type="PluralType"
+        <xsd:attribute name="plural" type="Plural"
 		       use="optional" default="im" />
         <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="definiteness"
-		       type="AcronymDefinitenessType" use="optional"
+		       type="AcronymDefiniteness" use="optional"
 		       default="external" />
-        <xsd:attribute name="possessive" type="PGNType"
+        <xsd:attribute name="possessive" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordPrepositionalExceptionAddType">
+  <xsd:complexType name="MultiWordPrepositionalExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordPrepositionalExceptionType">
+      <xsd:extension base="MultiWordPrepositionalException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordPrepositionalExceptionRemoveType">
+  <xsd:complexType name="MultiWordPrepositionalExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordPrepositionalExceptionType">
+      <xsd:extension base="MultiWordPrepositionalException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordPrepositionalExceptionReplaceType">
+  <xsd:complexType name="MultiWordPrepositionalExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordPrepositionalExceptionType">
+      <xsd:extension base="MultiWordPrepositionalException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordFrozenExceptionType"
+  <xsd:complexType name="MultiWordFrozenException"
 		   abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
@@ -2653,95 +2653,95 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       default="unspecified" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       default="unspecified" />
-        <xsd:attribute name="feminine" type="FeminineType"
+        <xsd:attribute name="feminine" type="Feminine"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="plural" type="PluralType"
+        <xsd:attribute name="plural" type="Plural"
 		       use="optional" default="im" />
         <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="definiteness"
-		       type="AcronymDefinitenessType" use="optional"
+		       type="AcronymDefiniteness" use="optional"
 		       default="external" />
-        <xsd:attribute name="possessive" type="PGNType"
+        <xsd:attribute name="possessive" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordFrozenExceptionAddType">
+  <xsd:complexType name="MultiWordFrozenExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordFrozenExceptionType">
+      <xsd:extension base="MultiWordFrozenException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordFrozenExceptionRemoveType">
+  <xsd:complexType name="MultiWordFrozenExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordFrozenExceptionType">
+      <xsd:extension base="MultiWordFrozenException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordFrozenExceptionReplaceType">
+  <xsd:complexType name="MultiWordFrozenExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordFrozenExceptionType">
+      <xsd:extension base="MultiWordFrozenException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounAdjectiveLexiconType">
+  <xsd:complexType name="MultiWordNounAdjectiveLexicon">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
         <xsd:element name="add"
-		     type="MultiWordNounAdjectiveExceptionAddType" minOccurs="0"
+		     type="MultiWordNounAdjectiveExceptionAdd" minOccurs="0"
 		     maxOccurs="unbounded" />
         <xsd:element name="replace"
-		     type="MultiWordNounAdjectiveExceptionReplaceType"
+		     type="MultiWordNounAdjectiveExceptionReplace"
 		     minOccurs="0" maxOccurs="unbounded" />
         <xsd:element name="remove"
-		     type="MultiWordNounAdjectiveExceptionRemoveType"
+		     type="MultiWordNounAdjectiveExceptionRemove"
 		     minOccurs="0" maxOccurs="unbounded" />
       </xsd:choice>
     </xsd:sequence>
-    <xsd:attribute name="mwPos" type="PosType" use="optional"
+    <xsd:attribute name="mwPos" type="Pos" use="optional"
 		   default="noun" />
     <xsd:attribute name="consecutive" type="xsd:boolean"
 		   use="optional" default="true" />
-    <xsd:attribute name="number" type="NumberType"
+    <xsd:attribute name="number" type="Number"
 		   default="unspecified" />
-    <xsd:attribute name="gender" type="GenderType"
+    <xsd:attribute name="gender" type="Gender"
 		   default="unspecified" />
-    <xsd:attribute name="feminine_noun" type="FeminineType"
+    <xsd:attribute name="feminine_noun" type="Feminine"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="feminine_adjective" type="FeminineType"
+    <xsd:attribute name="feminine_adjective" type="Feminine"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="plural_female_noun" type="PluralType"
+    <xsd:attribute name="plural_female_noun" type="Plural"
 		   use="optional" default="wt" />
-    <xsd:attribute name="plural_female_adjective" type="PluralType"
+    <xsd:attribute name="plural_female_adjective" type="Plural"
 		   use="optional" default="wt" />
-    <xsd:attribute name="plural_male_noun" type="PluralType"
+    <xsd:attribute name="plural_male_noun" type="Plural"
 		   use="optional" default="im" />
-    <xsd:attribute name="plural_male_adjective" type="PluralType"
+    <xsd:attribute name="plural_male_adjective" type="Plural"
 		   use="optional" default="im" />
     <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
 		   use="optional" default="false" />
     <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
 		   use="optional" default="false" />
     <xsd:attribute name="definiteness"
-		   type="AcronymDefinitenessType" use="optional"
+		   type="AcronymDefiniteness" use="optional"
 		   default="external" />
     <xsd:attribute name="inflectionBase" type="xsd:token"
 		   use="optional" default="" />
     <xsd:attribute name="type" type="xsd:token" use="optional"
 		   default="NN" />
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounAdjectiveExceptionType"
+  <xsd:complexType name="MultiWordNounAdjectiveException"
 		   abstract="true">
     <xsd:simpleContent>
       <xsd:extension base="xsd:token">
@@ -2751,72 +2751,72 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       default="unspecified" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       default="unspecified" />
-        <xsd:attribute name="feminine" type="FeminineType"
+        <xsd:attribute name="feminine" type="Feminine"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="plural" type="PluralType"
+        <xsd:attribute name="plural" type="Plural"
 		       use="optional" default="im" />
         <xsd:attribute name="inflectPossessiveS" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="inflectPossessiveP" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="definiteness"
-		       type="AcronymDefinitenessType" use="optional"
+		       type="AcronymDefiniteness" use="optional"
 		       default="external" />
-        <xsd:attribute name="possessive" type="PGNType"
+        <xsd:attribute name="possessive" type="PGN"
 		       use="optional" default="unspecified" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounAdjectiveExceptionAddType">
+  <xsd:complexType name="MultiWordNounAdjectiveExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordNounAdjectiveExceptionType">
+      <xsd:extension base="MultiWordNounAdjectiveException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounAdjectiveExceptionRemoveType">
+  <xsd:complexType name="MultiWordNounAdjectiveExceptionRemove">
 
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordNounAdjectiveExceptionType">
+      <xsd:extension base="MultiWordNounAdjectiveException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordNounAdjectiveExceptionReplaceType">
+  <xsd:complexType name="MultiWordNounAdjectiveExceptionReplace">
 
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordNounAdjectiveExceptionType">
+      <xsd:extension base="MultiWordNounAdjectiveException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordVerbPhraseLexiconType">
+  <xsd:complexType name="MultiWordVerbPhraseLexicon">
     <xsd:annotation>
       <xsd:documentation xml:lang="he"></xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
         <xsd:element name="add"
-		     type="MultiWordVerbPhraseExceptionAddType" minOccurs="0"
+		     type="MultiWordVerbPhraseExceptionAdd" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he"></xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="replace"
-		     type="MultiWordVerbPhraseExceptionReplaceType"
+		     type="MultiWordVerbPhraseExceptionReplace"
 		     minOccurs="0" maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he"></xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="remove"
-		     type="MultiWordVerbPhraseExceptionRemoveType" minOccurs="0"
+		     type="MultiWordVerbPhraseExceptionRemove" minOccurs="0"
 		     maxOccurs="unbounded">
           <xsd:annotation>
             <xsd:documentation xml:lang="he"></xsd:documentation>
@@ -2826,12 +2826,12 @@
     </xsd:sequence>
     <xsd:attribute name="type" type="xsd:token" use="optional"
 		   default="halfFrozen" />
-    <xsd:attribute name="feminine" type="FeminineType"
+    <xsd:attribute name="feminine" type="Feminine"
 		   use="optional" default="unspecified" />
-    <xsd:attribute name="valence" type="ValenceType" use="optional"
+    <xsd:attribute name="valence" type="Valence" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="root" type="xsd:token" use="required" />
-    <xsd:attribute name="binyan" type="BinyanType" use="optional"
+    <xsd:attribute name="binyan" type="Binyan" use="optional"
 		   default="unspecified" />
     <xsd:attribute name="foreign" type="xsd:boolean" use="optional"
 		   default="false" />
@@ -2862,7 +2862,7 @@
     <xsd:attribute name="inflectInfinitiveIndependent"
 		   type="xsd:boolean" use="optional" default="false" />
   </xsd:complexType>
-  <xsd:complexType name="MultiWordVerbPhraseExceptionType"
+  <xsd:complexType name="MultiWordVerbPhraseException"
 		   abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="he"></xsd:documentation>
@@ -2875,19 +2875,19 @@
 		       use="required" />
         <xsd:attribute name="dotted" type="xsd:token"
 		       use="optional" default="" />
-        <xsd:attribute name="register" type="RegisterType"
+        <xsd:attribute name="register" type="Register"
 		       use="optional" default="formal" />
-        <xsd:attribute name="spelling" type="SpellingType"
+        <xsd:attribute name="spelling" type="Spelling"
 		       use="optional" default="standard" />
-        <xsd:attribute name="tense" type="TenseType"
+        <xsd:attribute name="tense" type="Tense"
 		       use="required" />
-        <xsd:attribute name="gender" type="GenderType"
+        <xsd:attribute name="gender" type="Gender"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="number" type="NumberType"
+        <xsd:attribute name="number" type="Number"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="person" type="PersonType"
+        <xsd:attribute name="person" type="Person"
 		       use="optional" default="unspecified" />
-        <xsd:attribute name="pgn" type="PGNType" use="required" />
+        <xsd:attribute name="pgn" type="PGN" use="required" />
         <xsd:attribute name="beinoniConstruct" type="xsd:boolean"
 		       use="optional" default="false" />
         <xsd:attribute name="beinoniDefiniteness"
@@ -2897,21 +2897,21 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordVerbPhraseExceptionAddType">
+  <xsd:complexType name="MultiWordVerbPhraseExceptionAdd">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordVerbPhraseExceptionType">
+      <xsd:extension base="MultiWordVerbPhraseException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordVerbPhraseExceptionRemoveType">
+  <xsd:complexType name="MultiWordVerbPhraseExceptionRemove">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordVerbPhraseExceptionType">
+      <xsd:extension base="MultiWordVerbPhraseException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-  <xsd:complexType name="MultiWordVerbPhraseExceptionReplaceType">
+  <xsd:complexType name="MultiWordVerbPhraseExceptionReplace">
     <xsd:simpleContent>
-      <xsd:extension base="MultiWordVerbPhraseExceptionType">
+      <xsd:extension base="MultiWordVerbPhraseException">
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>

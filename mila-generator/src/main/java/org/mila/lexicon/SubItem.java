@@ -1,4 +1,4 @@
-package org.mila.lexicon.helpers;
+package org.mila.lexicon;
 
 import java.io.Serializable;
 
@@ -8,5 +8,5 @@ import java.io.Serializable;
  * Dummy interface, so that we can refer to all the sub-item entity types by
  * some common means.
  */
-public interface SubItemType extends Serializable {
+public interface SubItem extends Serializable {
 }
