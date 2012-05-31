@@ -2,25 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>mila</groupId>
+  <parent>
+    <groupId>org.mila</groupId>
+    <artifactId>mila-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
   <artifactId>mila-entities</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>mila-entities</name>
-  <url>http://maven.apache.org</url>
+  <url>http://yeda.cs.technion.ac.il/</url>
   <dependencies>
-    <dependency>
-      <groupId>hsqldb</groupId>
-      <artifactId>hsqldb</artifactId>
-      <version>1.8.0.10</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.10</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
@@ -128,27 +120,6 @@
   <build>
     <plugins>
       <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-surefire-plugin</artifactId>
-	<version>2.8</version>
-	<dependencies>
-	  <!-- Force using the latest JUnit 47 provider -->
-	  <dependency>
-	    <groupId>org.apache.maven.surefire</groupId>
-	    <artifactId>surefire-junit47</artifactId>
-	    <version>2.8</version>
-	  </dependency>
-	</dependencies>
-      </plugin>
-      <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-compiler-plugin</artifactId>
-	<configuration>
-	  <source>1.6</source>
-	  <target>1.6</target>
-	</configuration>
-      </plugin>
-      <plugin>
 	<groupId>org.jvnet.hyperjaxb3</groupId>
 	<artifactId>maven-hyperjaxb3-plugin</artifactId>
 	<executions>
@@ -163,7 +134,7 @@
 	  <extension>true</extension>
 	  <args>
 	    <arg>-b</arg>
-	    <arg>src/main/resources/jaxb.xml</arg>
+	    <arg>${project.basedir}/src/main/resources/jaxb.xml</arg>
 	    <arg>-Xinheritance</arg>
 	    <arg>-Xjaxbindex</arg>
 	    <arg>-Xannotate</arg>
@@ -171,20 +142,6 @@
 	  <specVersion>2.1</specVersion>
 	  <persistanceUnitName>org.mila.lexicon.entities</persistanceUnitName>
 	  <persistenceXml>src/main/java/META-INF/persistance.xml</persistenceXml>
-	</configuration>
-      </plugin>
-      <plugin>
-	<artifactId>maven-assembly-plugin</artifactId>
-	<configuration>
-	  <descriptorRefs>
-	    <descriptorRef>jar-with-dependencies</descriptorRef>
-	  </descriptorRefs>
-	  <archive>
-	    <manifest>
-	      <mainClass>org.mila.App</mainClass>
-	      <addClasspath>true</addClasspath>
-	    </manifest>
-	  </archive>
 	</configuration>
       </plugin>
     </plugins>
