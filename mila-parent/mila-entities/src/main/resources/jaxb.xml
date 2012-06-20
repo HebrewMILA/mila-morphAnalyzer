@@ -37,16 +37,6 @@
       <jxb:property name="exceptions" />
     </jxb:bindings>
 
-    <jxb:bindings node="//xsd:complexType[@name='Item']/xsd:sequence/xsd:choice">
-      <jxb:property name="subitem" />
-    </jxb:bindings> 
-
-    <!-- Make the useless POJOs embedded/mapped-superclass,
-	 so that they don't waste space in the DB -->
-    <jxb:bindings node="//xsd:complexType[@name='BaseLexicon']">
-      <hj:mapped-superclass />
-    </jxb:bindings>
-
     <jxb:bindings node="//xsd:complexType[@name='BaseException']" multiple="true">
       <hj:mapped-superclass />
     </jxb:bindings>
@@ -82,7 +72,7 @@
     <!--
 	Make the Item's (and others?) ID the actual ID used in the DB.
     -->
-    <jxb:bindings node="//xsd:complexType/xsd:attribute[@name='id']" multiple="true">
+    <jxb:bindings node="//xsd:complexType[@name='Item']/xsd:attribute[@name='id']">
       <hj:id />
     </jxb:bindings>
 
@@ -96,6 +86,105 @@
       </hj:basic>
     </jxb:bindings>
 
+
+    <!-- I want this to be a proper enum -->
+
+    <jxb:bindings
+	node="//xsd:complexType[@name='XMWEAtom']/xsd:attribute[@name='type']/xsd:simpleType">
+      <jxb:typesafeEnumClass name="XMWEAtomTypeEnum" />
+    </jxb:bindings>
+
+    <!-- Rename these names to be more helpful (Start with XMWE) -->
+    <jxb:bindings
+	node="//xsd:complexType[@id='XMWEAtomPointer']">
+      <jxb:class name="XMWEAtomPointer" />
+    </jxb:bindings>
+
+    <jxb:bindings
+	node="//xsd:complexType[@name='XMWETemplate']//xsd:complexType[@id='XMWEAnything']">
+      <jxb:class name="XMWEAnything" />
+    </jxb:bindings>
+
+    <jxb:bindings
+	node="//xsd:complexType[@name='XMWELexicon']//xsd:element[@name='templates']/xsd:complexType">
+      <jxb:class name="XMWETemplateList" />
+    </jxb:bindings>
+
+    <!-- Basetypes for pointers, and hyperjaxb3 workarounds 
+	 note that we have a special xjc plugin that REMOVES ALL Transient
+	 annotations if it finds more than one (which is normally illegal) -->
+
+    <jxb:bindings node="//xsd:attribute[@id='AtomPointerRef']">
+      <jxb:property>
+	<jxb:baseType name="XMWEAtom" />
+      </jxb:property>
+      <hj:ignored />
+      <annox:annotate target="getter">
+	<annox:annotate annox:class="javax.persistence.OneToOne"
+			targetEntity="org.mila.entities.lexicon.XMWEAtom">
+	  <annox:annotate annox:field="cascade">
+	    <annox:annotate>ALL</annox:annotate>
+	  </annox:annotate>
+	</annox:annotate>
+	<annox:annotate annox:class="javax.persistence.JoinColumn"
+			name="ATOM_POINTER_ID" />
+	<annox:annotate annox:class="javax.persistence.Transient" />
+      </annox:annotate>    
+    </jxb:bindings>
+
+    <jxb:bindings node="//xsd:attribute[@id='AtomLexiconRef']">
+      <jxb:property>
+	<jxb:baseType name="Item" />
+      </jxb:property>
+      <hj:ignored />
+      <annox:annotate target="getter">
+	<annox:annotate annox:class="javax.persistence.OneToOne"
+			targetEntity="org.mila.entities.lexicon.Item">
+	  <annox:annotate annox:field="cascade">
+	    <annox:annotate>ALL</annox:annotate>
+	  </annox:annotate>
+	</annox:annotate>
+	<annox:annotate annox:class="javax.persistence.JoinColumn"
+			name="ITEM_POINTER_ID" />
+	<annox:annotate annox:class="javax.persistence.Transient" />
+      </annox:annotate>    
+    </jxb:bindings>
+
+    <jxb:bindings node="//xsd:attribute[@id='SuffixPointerRef']">
+      <jxb:property>
+	<jxb:baseType name="XMWEAtom" />
+      </jxb:property>
+      <hj:ignored />
+      <annox:annotate target="getter">
+	<annox:annotate annox:class="javax.persistence.OneToOne"
+			targetEntity="org.mila.entities.lexicon.XMWEAtom">
+	  <annox:annotate annox:field="cascade">
+	    <annox:annotate>ALL</annox:annotate>
+	  </annox:annotate>
+	</annox:annotate>
+	<annox:annotate annox:class="javax.persistence.JoinColumn"
+			name="SUFFIX_POINTER_ID" />
+	<annox:annotate annox:class="javax.persistence.Transient" />
+      </annox:annotate>    
+    </jxb:bindings>
+
+    <!-- work around hyperjaxb3 for subitem -->
+    <jxb:bindings node="//xsd:complexType[@name='Item']/xsd:sequence/xsd:choice">
+      <jxb:property name="subitem" />
+      <hj:ignored />
+      <annox:annotate target="getter">
+	<annox:annotate annox:class="javax.persistence.OneToOne"
+			optional="false">
+	  <annox:annotate annox:field="cascade">
+	    <annox:annotate>ALL</annox:annotate>
+	  </annox:annotate>
+	</annox:annotate>
+	<annox:annotate annox:class="javax.persistence.JoinColumn"
+			name="SUBITEM_ID" />
+	<annox:annotate annox:class="javax.persistence.Transient" />
+      </annox:annotate>    
+    </jxb:bindings> 
+
     <!--
         Shorten table names for really long types, to avoid name collisions
         on truncation. Also add a length enhancement annotation...
@@ -107,8 +196,8 @@
             length="63" />
       </annox:annotate>
     </jxb:bindings>
-    
 
+    <!-- these names are a bit too long... -->
     <jxb:bindings node="//xsd:complexType[@name='MultiWordFrozenLexicon']">
       <hj:entity>
         <orm:table name="MWFrozenLexicon" />

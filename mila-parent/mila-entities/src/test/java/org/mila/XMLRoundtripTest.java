@@ -27,7 +27,7 @@ public class XMLRoundtripTest {
     private XMLReader rdr = null;
 
     @Before
-    public void before() {
+    public void before() throws SAXException {
 	try {
 	    rdr = new XMLReader(this.getClass().getClassLoader()
 		    .getResourceAsStream(XMLFilename));

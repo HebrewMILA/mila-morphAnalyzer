@@ -1,10 +1,7 @@
 package org.mila;
 
-import static org.junit.Assert.fail;
-
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Properties;
 
@@ -15,10 +12,6 @@ import javax.persistence.Query;
 import javax.xml.bind.JAXBException;
 
 import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.custommonkey.xmlunit.DetailedDiff;
-import org.custommonkey.xmlunit.Diff;
-import org.custommonkey.xmlunit.Difference;
-import org.custommonkey.xmlunit.XMLUnit;
 import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.jpa.JpaEntityManager;
 import org.eclipse.persistence.queries.ReadAllQuery;
@@ -29,7 +22,6 @@ import org.junit.Test;
 import org.mila.entities.lexicon.Item;
 import org.mila.lexicon.XMLReader;
 import org.mila.lexicon.XMLWriter;
-import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 public class XMLDBRoundtripTest {

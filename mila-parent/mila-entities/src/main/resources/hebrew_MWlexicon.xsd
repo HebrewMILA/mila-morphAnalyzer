@@ -184,6 +184,8 @@
 	<xsd:element name="multiWordVerbPhrase"
 		     type="MultiWordVerbPhraseLexicon" />
 	<!-- ביטוי פועלי NA   -->
+	<xsd:element name="XMWE"
+		     type="XMWELexicon" />
       </xsd:choice>
       <xsd:element name="sense" type="Sense" minOccurs="0"
 		   maxOccurs="unbounded" />
@@ -196,7 +198,17 @@
 		   use="optional" default="formal" />
     <xsd:attribute name="spelling" type="Spelling"
 		   use="optional" default="standard" />
-    <xsd:attribute name="id" type="xsd:long" use="required" />
+    <xsd:attribute name="id" use="required">
+      <xsd:annotation>
+	<xsd:documentation>A unique ID that identifies this lexicon
+	item. The ID must be all digits.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleType>
+	<xsd:restriction base="xsd:ID">
+	  <xsd:pattern value="I[1-9][0-9]*" />
+	</xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
     <xsd:attribute name="dotted" type="xsd:token" use="optional"
 		   default="" />
     <!-- המילה כתובה באותיות עבריות -->
@@ -2858,4 +2870,129 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
+
+
+  <!-- 20120607: Added new XMWE complex type -->
+
+  <xsd:complexType name="XMWELexicon">
+    <xsd:annotation>
+      <xsd:documentation>The eXtended MultiWord Expression lexicon type. This
+      should solve the problems the old MultiWord types had.
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="BaseLexicon">
+	<xsd:sequence>
+	  <!--
+	      <xsd:element name="exceptions" type="XMWEExceptions" />
+	  -->
+	  <xsd:element name="atoms" type="XMWEAtomList" />
+	  <xsd:element name="templates">
+	    <xsd:complexType>
+	      <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+		<xsd:element name="template" type="XMWETemplate" />
+	      </xsd:sequence>	  
+	    </xsd:complexType>
+	  </xsd:element>
+	  <xsd:element name="anchors" type="XMWEAtomPointerList" />
+	</xsd:sequence>
+	<xsd:attribute name="pos" type="XMWEPos" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="XMWEAtomList">
+    <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="atom" type="XMWEAtom" />
+    </xsd:sequence>
+  </xsd:complexType>	  
+
+  <xsd:complexType name="XMWEAtomPointerList">
+    <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="atom" type="XMWEAtomPointer" />
+    </xsd:sequence>
+  </xsd:complexType>	  
+
+
+  <!--
+      <xsd:complexType name="XMWExceptions">
+      </xsd:complexType>
+  -->
+
+  <xsd:simpleType name="XMWEPos">
+    <xsd:simpleContent>
+      <xsd:extension base="Pos">
+	<xsd:enumeration value="verb_phrase" />
+	<xsd:enumeration value="noun_phrase" />
+	<xsd:enumeration value="noun_adjective_phrase" />
+	<xsd:enumeration value="prepositional_phrase" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:simpleType>
+
+  <xsd:complexType name="XMWEAtom">
+    <xsd:attribute name="id">
+      <xsd:simpleType>
+	<xsd:restriction base="xsd:ID">
+	  <xsd:pattern value="I[1-9][0-9]*X[1-9][0-9]*" />
+	</xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="type">
+      <xsd:simpleType>
+	<xsd:restriction base="xsd:token">
+	  <xsd:enumeration value="lexicon" />
+	  <xsd:enumeration value="suffix" />
+	  <xsd:enumeration value="prefix" />
+	</xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="pointer" use="optional" id="AtomLexiconRef">
+      <xsd:simpleType>
+	<xsd:restriction base="xsd:IDREF">
+	  <xsd:pattern value="I[1-9][0-9]" />
+	</xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:complexType name="XMWETemplate">
+    <xsd:choice minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="atom" type="XMWEAtomPointer">
+    </xsd:element>
+      <xsd:element name="any">
+	<xsd:complexType id="XMWEAnything">
+	  <xsd:complexContent>
+	    <xsd:extension base="XMWEBase" />
+	  </xsd:complexContent>
+	</xsd:complexType>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="XMWEAtomPointer" id="XMWEAtomPointer">
+    <xsd:complexContent>
+      <xsd:extension base="XMWEBase">
+	<xsd:attribute name="pointer" id="AtomPointerRef" use="required">
+	  <xsd:simpleType>
+	    <xsd:restriction base="xsd:IDREF">
+	      <xsd:pattern value="I[1-9][0-9]*X[1-9][0-9]*" />
+	    </xsd:restriction>
+	  </xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="suffix" id="SuffixPointerRef" use="optional">
+	  <xsd:simpleType>
+	    <xsd:restriction base="xsd:IDREF">
+	      <xsd:pattern value="I[1-9][0-9]*X[1-9][0-9]*" />
+	    </xsd:restriction>
+	  </xsd:simpleType>
+	</xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <xsd:complexType name="XMWEBase" abstract="true">
+  </xsd:complexType>
+  
+
 </xsd:schema>

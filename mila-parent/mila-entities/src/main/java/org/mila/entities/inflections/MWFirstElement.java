@@ -2,7 +2,6 @@ package org.mila.entities.inflections;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity(name = "MWFirstElement")
 public class MWFirstElement extends MWElement {
