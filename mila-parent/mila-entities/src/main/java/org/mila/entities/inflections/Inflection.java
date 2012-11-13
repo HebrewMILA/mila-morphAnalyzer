@@ -10,17 +10,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.eclipse.persistence.annotations.Cache;
+import org.eclipse.persistence.annotations.CacheType;
 import org.mila.entities.corpus.BinyanType;
 import org.mila.entities.corpus.DefinitenessType;
 import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.PolarityType;
 import org.mila.entities.corpus.PrefixTransliteratedType;
 import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TenseType;
 import org.mila.entities.corpus.TriStateType;
 
 @Entity(name = "Inflection")
 @Table(name = "INFLECTIONS")
+@Cache(type = CacheType.SOFT_WEAK)
 public class Inflection implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -29,8 +35,8 @@ public class Inflection implements Serializable {
     /* Maybe move all these guys to a different (embeddable?) class */
     protected DefinitenessType baseDefiniteness;
     protected GenderType baseGender;
-    protected long baseLexiconPointer;
-    protected String baseNumber;
+    protected String baseLexiconPointer;
+    protected NumberType baseNumber;
     protected String basePerson;
     protected String basePos;
     protected String baseTransliteratedLItem;
@@ -40,11 +46,11 @@ public class Inflection implements Serializable {
     protected String dottedLexiconItem;
     protected boolean hebForeign;
     protected String PGN;
-    protected boolean polarity;
+    protected PolarityType polarity;
     protected PrefixTransliteratedType prefix;
     protected RegisterType register;
     protected String root;
-    protected String spelling;
+    protected SpellingType spelling;
     protected SuffixFunctionType suffixFunction;
     protected TriStateType suffixStatus;
     protected String surface;
@@ -52,111 +58,6 @@ public class Inflection implements Serializable {
     protected String transliterated;
     protected String type;
     protected String value;
-
-    @Override
-    public boolean equals(Object obj) {
-	if (this == obj)
-	    return true;
-	if (obj == null)
-	    return false;
-	if (getClass() != obj.getClass())
-	    return false;
-	Inflection other = (Inflection) obj;
-	if (PGN == null) {
-	    if (other.PGN != null)
-		return false;
-	} else if (!PGN.equals(other.PGN))
-	    return false;
-	if (baseDefiniteness != other.baseDefiniteness)
-	    return false;
-	if (baseGender != other.baseGender)
-	    return false;
-	if (baseLexiconPointer != other.baseLexiconPointer)
-	    return false;
-	if (baseNumber == null) {
-	    if (other.baseNumber != null)
-		return false;
-	} else if (!baseNumber.equals(other.baseNumber))
-	    return false;
-	if (basePerson == null) {
-	    if (other.basePerson != null)
-		return false;
-	} else if (!basePerson.equals(other.basePerson))
-	    return false;
-	if (basePos == null) {
-	    if (other.basePos != null)
-		return false;
-	} else if (!basePos.equals(other.basePos))
-	    return false;
-	if (baseTransliteratedLItem == null) {
-	    if (other.baseTransliteratedLItem != null)
-		return false;
-	} else if (!baseTransliteratedLItem
-		.equals(other.baseTransliteratedLItem))
-	    return false;
-	if (baseUndottedLItem == null) {
-	    if (other.baseUndottedLItem != null)
-		return false;
-	} else if (!baseUndottedLItem.equals(other.baseUndottedLItem))
-	    return false;
-	if (binyan == null) {
-	    if (other.binyan != null)
-		return false;
-	} else if (!binyan.equals(other.binyan))
-	    return false;
-	if (dottedLexiconItem == null) {
-	    if (other.dottedLexiconItem != null)
-		return false;
-	} else if (!dottedLexiconItem.equals(other.dottedLexiconItem))
-	    return false;
-	if (hebForeign != other.hebForeign)
-	    return false;
-	if (id != other.id)
-	    return false;
-	if (polarity != other.polarity)
-	    return false;
-	if (prefix != other.prefix)
-	    return false;
-	if (register != other.register)
-	    return false;
-	if (root == null) {
-	    if (other.root != null)
-		return false;
-	} else if (!root.equals(other.root))
-	    return false;
-	if (spelling == null) {
-	    if (other.spelling != null)
-		return false;
-	} else if (!spelling.equals(other.spelling))
-	    return false;
-	if (suffixFunction != other.suffixFunction)
-	    return false;
-	if (suffixStatus != other.suffixStatus)
-	    return false;
-	if (surface == null) {
-	    if (other.surface != null)
-		return false;
-	} else if (!surface.equals(other.surface))
-	    return false;
-	if (tense != other.tense)
-	    return false;
-	if (transliterated == null) {
-	    if (other.transliterated != null)
-		return false;
-	} else if (!transliterated.equals(other.transliterated))
-	    return false;
-	if (type == null) {
-	    if (other.type != null)
-		return false;
-	} else if (!type.equals(other.type))
-	    return false;
-	if (value == null) {
-	    if (other.value != null)
-		return false;
-	} else if (!value.equals(other.value))
-	    return false;
-	return true;
-    }
 
     @Basic
     public DefinitenessType getBaseDefiniteness() {
@@ -169,12 +70,12 @@ public class Inflection implements Serializable {
     }
 
     @Basic
-    public long getBaseLexiconPointer() {
+    public String getBaseLexiconPointer() {
 	return baseLexiconPointer;
     }
 
     @Basic
-    public String getBaseNumber() {
+    public NumberType getBaseNumber() {
 	return baseNumber;
     }
 
@@ -219,101 +120,59 @@ public class Inflection implements Serializable {
 	return PGN;
     }
 
+    @Basic
     public PrefixTransliteratedType getPrefix() {
 	return prefix;
     }
 
+    @Basic
     public RegisterType getRegister() {
 	return register;
     }
 
+    @Basic
     public String getRoot() {
 	return root;
     }
 
-    public String getSpelling() {
+    @Basic
+    public SpellingType getSpelling() {
 	return spelling;
     }
 
+    @Basic
     public SuffixFunctionType getSuffixFunction() {
 	return suffixFunction;
     }
 
+    @Basic
     public TriStateType getSuffixStatus() {
 	return suffixStatus;
     }
 
+    @Basic
     public String getSurface() {
 	return surface;
     }
 
+    @Basic
     public TenseType getTense() {
 	return tense;
     }
 
+    @Basic
     public String getTransliterated() {
 	return transliterated;
     }
 
+    @Basic
     public String getType() {
 	return type;
     }
 
+    @Basic
     public String getValue() {
 	return value;
-    }
-
-    @Override
-    @Transient
-    public int hashCode() {
-	final int prime = 31;
-	int result = 1;
-	result = prime * result + ((PGN == null) ? 0 : PGN.hashCode());
-	result = prime
-		* result
-		+ ((baseDefiniteness == null) ? 0 : baseDefiniteness.hashCode());
-	result = prime * result
-		+ ((baseGender == null) ? 0 : baseGender.hashCode());
-	result = prime * result
-		+ (int) (baseLexiconPointer ^ (baseLexiconPointer >>> 32));
-	result = prime * result
-		+ ((baseNumber == null) ? 0 : baseNumber.hashCode());
-	result = prime * result
-		+ ((basePerson == null) ? 0 : basePerson.hashCode());
-	result = prime * result + ((basePos == null) ? 0 : basePos.hashCode());
-	result = prime
-		* result
-		+ ((baseTransliteratedLItem == null) ? 0
-			: baseTransliteratedLItem.hashCode());
-	result = prime
-		* result
-		+ ((baseUndottedLItem == null) ? 0 : baseUndottedLItem
-			.hashCode());
-	result = prime * result + ((binyan == null) ? 0 : binyan.hashCode());
-	result = prime
-		* result
-		+ ((dottedLexiconItem == null) ? 0 : dottedLexiconItem
-			.hashCode());
-	result = prime * result + (hebForeign ? 1231 : 1237);
-	result = prime * result + (int) (id ^ (id >>> 32));
-	result = prime * result + (polarity ? 1231 : 1237);
-	result = prime * result + ((prefix == null) ? 0 : prefix.hashCode());
-	result = prime * result
-		+ ((register == null) ? 0 : register.hashCode());
-	result = prime * result + ((root == null) ? 0 : root.hashCode());
-	result = prime * result
-		+ ((spelling == null) ? 0 : spelling.hashCode());
-	result = prime * result
-		+ ((suffixFunction == null) ? 0 : suffixFunction.hashCode());
-	result = prime * result
-		+ ((suffixStatus == null) ? 0 : suffixStatus.hashCode());
-	result = prime * result + ((surface == null) ? 0 : surface.hashCode());
-	result = prime * result + ((tense == null) ? 0 : tense.hashCode());
-	result = prime * result
-		+ ((transliterated == null) ? 0 : transliterated.hashCode());
-	result = prime * result + ((type == null) ? 0 : type.hashCode());
-	result = prime * result + ((value == null) ? 0 : value.hashCode());
-	return result;
     }
 
     @Basic
@@ -322,7 +181,7 @@ public class Inflection implements Serializable {
     }
 
     @Basic
-    public boolean isPolarity() {
+    public PolarityType isPolarity() {
 	return polarity;
     }
 
@@ -334,11 +193,11 @@ public class Inflection implements Serializable {
 	this.baseGender = baseGender;
     }
 
-    public void setBaseLexiconPointer(long baseLexiconPointer) {
+    public void setBaseLexiconPointer(String baseLexiconPointer) {
 	this.baseLexiconPointer = baseLexiconPointer;
     }
 
-    public void setBaseNumber(String baseNumber) {
+    public void setBaseNumber(NumberType baseNumber) {
 	this.baseNumber = baseNumber;
     }
 
@@ -378,7 +237,7 @@ public class Inflection implements Serializable {
 	PGN = pGN;
     }
 
-    public void setPolarity(boolean polarity) {
+    public void setPolarity(PolarityType polarity) {
 	this.polarity = polarity;
     }
 
@@ -394,7 +253,7 @@ public class Inflection implements Serializable {
 	this.root = root;
     }
 
-    public void setSpelling(String spelling) {
+    public void setSpelling(SpellingType spelling) {
 	this.spelling = spelling;
     }
 
@@ -424,5 +283,161 @@ public class Inflection implements Serializable {
 
     public void setValue(String value) {
 	this.value = value;
+    }
+
+    @Override
+    @Transient
+    public int hashCode() {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result + ((PGN == null) ? 0 : PGN.hashCode());
+	result = prime
+		* result
+		+ ((baseDefiniteness == null) ? 0 : baseDefiniteness.hashCode());
+	result = prime * result
+		+ ((baseGender == null) ? 0 : baseGender.hashCode());
+	result = prime
+		* result
+		+ ((baseLexiconPointer == null) ? 0 : baseLexiconPointer
+			.hashCode());
+	result = prime * result
+		+ ((baseNumber == null) ? 0 : baseNumber.hashCode());
+	result = prime * result
+		+ ((basePerson == null) ? 0 : basePerson.hashCode());
+	result = prime * result + ((basePos == null) ? 0 : basePos.hashCode());
+	result = prime
+		* result
+		+ ((baseTransliteratedLItem == null) ? 0
+			: baseTransliteratedLItem.hashCode());
+	result = prime
+		* result
+		+ ((baseUndottedLItem == null) ? 0 : baseUndottedLItem
+			.hashCode());
+	result = prime * result + ((binyan == null) ? 0 : binyan.hashCode());
+	result = prime
+		* result
+		+ ((dottedLexiconItem == null) ? 0 : dottedLexiconItem
+			.hashCode());
+	result = prime * result + (hebForeign ? 1231 : 1237);
+	result = prime * result + (int) (id ^ (id >>> 32));
+	result = prime * result
+		+ ((polarity == null) ? 0 : polarity.hashCode());
+	result = prime * result + ((prefix == null) ? 0 : prefix.hashCode());
+	result = prime * result
+		+ ((register == null) ? 0 : register.hashCode());
+	result = prime * result + ((root == null) ? 0 : root.hashCode());
+	result = prime * result
+		+ ((spelling == null) ? 0 : spelling.hashCode());
+	result = prime * result
+		+ ((suffixFunction == null) ? 0 : suffixFunction.hashCode());
+	result = prime * result
+		+ ((suffixStatus == null) ? 0 : suffixStatus.hashCode());
+	result = prime * result + ((surface == null) ? 0 : surface.hashCode());
+	result = prime * result + ((tense == null) ? 0 : tense.hashCode());
+	result = prime * result
+		+ ((transliterated == null) ? 0 : transliterated.hashCode());
+	result = prime * result + ((type == null) ? 0 : type.hashCode());
+	result = prime * result + ((value == null) ? 0 : value.hashCode());
+	return result;
+    }
+
+    @Override
+    @Transient
+    public boolean equals(Object obj) {
+	if (this == obj)
+	    return true;
+	if (obj == null)
+	    return false;
+	if (!(obj instanceof Inflection))
+	    return false;
+	Inflection other = (Inflection) obj;
+	if (PGN == null) {
+	    if (other.PGN != null)
+		return false;
+	} else if (!PGN.equals(other.PGN))
+	    return false;
+	if (baseDefiniteness != other.baseDefiniteness)
+	    return false;
+	if (baseGender != other.baseGender)
+	    return false;
+	if (baseLexiconPointer == null) {
+	    if (other.baseLexiconPointer != null)
+		return false;
+	} else if (!baseLexiconPointer.equals(other.baseLexiconPointer))
+	    return false;
+	if (baseNumber != other.baseNumber)
+	    return false;
+	if (basePerson == null) {
+	    if (other.basePerson != null)
+		return false;
+	} else if (!basePerson.equals(other.basePerson))
+	    return false;
+	if (basePos == null) {
+	    if (other.basePos != null)
+		return false;
+	} else if (!basePos.equals(other.basePos))
+	    return false;
+	if (baseTransliteratedLItem == null) {
+	    if (other.baseTransliteratedLItem != null)
+		return false;
+	} else if (!baseTransliteratedLItem
+		.equals(other.baseTransliteratedLItem))
+	    return false;
+	if (baseUndottedLItem == null) {
+	    if (other.baseUndottedLItem != null)
+		return false;
+	} else if (!baseUndottedLItem.equals(other.baseUndottedLItem))
+	    return false;
+	if (binyan != other.binyan)
+	    return false;
+	if (dottedLexiconItem == null) {
+	    if (other.dottedLexiconItem != null)
+		return false;
+	} else if (!dottedLexiconItem.equals(other.dottedLexiconItem))
+	    return false;
+	if (hebForeign != other.hebForeign)
+	    return false;
+	if (id != other.id)
+	    return false;
+	if (polarity != other.polarity)
+	    return false;
+	if (prefix != other.prefix)
+	    return false;
+	if (register != other.register)
+	    return false;
+	if (root == null) {
+	    if (other.root != null)
+		return false;
+	} else if (!root.equals(other.root))
+	    return false;
+	if (spelling != other.spelling)
+	    return false;
+	if (suffixFunction != other.suffixFunction)
+	    return false;
+	if (suffixStatus != other.suffixStatus)
+	    return false;
+	if (surface == null) {
+	    if (other.surface != null)
+		return false;
+	} else if (!surface.equals(other.surface))
+	    return false;
+	if (tense != other.tense)
+	    return false;
+	if (transliterated == null) {
+	    if (other.transliterated != null)
+		return false;
+	} else if (!transliterated.equals(other.transliterated))
+	    return false;
+	if (type == null) {
+	    if (other.type != null)
+		return false;
+	} else if (!type.equals(other.type))
+	    return false;
+	if (value == null) {
+	    if (other.value != null)
+		return false;
+	} else if (!value.equals(other.value))
+	    return false;
+	return true;
     }
 }

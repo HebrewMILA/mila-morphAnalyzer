@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -28,9 +29,9 @@ public abstract class MWElement implements Serializable {
     protected long sequence;
 
     protected Set<MWOtherElement> consecutiveElements;
-    
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "MWE_GEN")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MWE_GEN")
     public long getId() {
 	return id;
     }
@@ -54,8 +55,9 @@ public abstract class MWElement implements Serializable {
     public long getSequence() {
 	return sequence;
     }
-    
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="formerElement")
+
+    @OneToMany(mappedBy = "formerElement", cascade = CascadeType.ALL)
+    @JoinColumn(nullable = false)
     public Set<MWOtherElement> getConsecutiveElements() {
 	return consecutiveElements;
     }
@@ -83,7 +85,7 @@ public abstract class MWElement implements Serializable {
     public void setConsecutiveElements(Set<MWOtherElement> elements) {
 	consecutiveElements = elements;
     }
-    
+
     @Override
     @Transient
     public int hashCode() {

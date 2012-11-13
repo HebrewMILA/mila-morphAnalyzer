@@ -517,7 +517,8 @@
 		<xsd:restriction base="xsd:token">
 			<xsd:enumeration value="formal"/>
 			<xsd:enumeration value="archaic"/>
-			<xsd:enumeration value="informal"/>
+
+			<xsd:enumeration value="spoken"/>
 			<!-- פורמאלי                  -->
 			<!-- ארכאי     -->
 			<!-- מדוברת    -->
@@ -578,6 +579,7 @@
 			<xsd:enumeration value="imperative"/>
 			<xsd:enumeration value="infinitive"/>
 			<xsd:enumeration value="bareInfinitive"/>
+			<xsd:enumeration value="passiveParticiple" />
 			<xsd:enumeration value="unspecified"/>
 			<!-- עבר     -->
 			<!-- הווה (להבדיל מבינוני שיכול להיות גם שם-עצם) -->

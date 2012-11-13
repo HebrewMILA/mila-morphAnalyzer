@@ -16,11 +16,11 @@ public class DBCreationTest {
     @Before
     public void setUp() throws Exception {
 	inflections_props.load(this.getClass().getClassLoader()
-		.getResourceAsStream("inflections.props"));
+		.getResourceAsStream("test_inflections.props"));
 	generator_props.load(this.getClass().getClassLoader()
-		.getResourceAsStream("generator.props"));
+		.getResourceAsStream("test_generator.props"));
 	lexicon_props.load(this.getClass().getClassLoader()
-		.getResourceAsStream("lexicon.props"));
+		.getResourceAsStream("test_lexicon.props"));
     }
 
     @Test

@@ -16,7 +16,7 @@ public class MWOtherElement extends MWElement {
     private static final long serialVersionUID = 1L;
 
     MWElement formerElement;
-    long lexiconId;
+    String lexiconId;
     String transliteratedLexiconItem;
     String dottedLexiconItem;
     String undottedLexiconItem;
@@ -28,15 +28,15 @@ public class MWOtherElement extends MWElement {
     GenderType gender;
     NumberType number;
     DefinitenessType definiteness;
-
+    
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn(nullable = true)
     public MWElement getFormerElement() {
 	return formerElement;
     }
 
     @Basic
-    public long getLexiconId() {
+    public String getLexiconId() {
 	return lexiconId;
     }
 
@@ -96,8 +96,8 @@ public class MWOtherElement extends MWElement {
 	this.formerElement = formerElement;
     }
 
-    public void setLexiconId(long lexiconId) {
-	this.lexiconId = lexiconId;
+    public void setLexiconId(String string) {
+	this.lexiconId = string;
     }
 
     public void setTransliteratedLexiconItem(String transliteratedLexiconItem) {
@@ -157,7 +157,8 @@ public class MWOtherElement extends MWElement {
 	result = prime * result
 		+ ((formerElement == null) ? 0 : formerElement.hashCode());
 	result = prime * result + ((gender == null) ? 0 : gender.hashCode());
-	result = prime * result + (int) (lexiconId ^ (lexiconId >>> 32));
+	result = prime * result
+		+ ((lexiconId == null) ? 0 : lexiconId.hashCode());
 	result = prime
 		* result
 		+ ((mwTransliterated == null) ? 0 : mwTransliterated.hashCode());
@@ -204,7 +205,10 @@ public class MWOtherElement extends MWElement {
 	    return false;
 	if (gender != other.gender)
 	    return false;
-	if (lexiconId != other.lexiconId)
+	if (lexiconId == null) {
+	    if (other.lexiconId != null)
+		return false;
+	} else if (!lexiconId.equals(other.lexiconId))
 	    return false;
 	if (mwTransliterated == null) {
 	    if (other.mwTransliterated != null)

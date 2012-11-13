@@ -12,6 +12,7 @@ http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistenc
 		<class>org.mila.entities.inflections.MWFirstElement</class>
 		<class>org.mila.entities.inflections.MWOtherElement</class>
 		<class>org.mila.entities.inflections.MWElement</class>
+		<class>org.mila.entities.inflections.MWEInflection</class>
 	</persistence-unit>
 	<persistence-unit name="org.mila.entities.generator">
 		<class>org.mila.entities.generator.InflectionRule</class>

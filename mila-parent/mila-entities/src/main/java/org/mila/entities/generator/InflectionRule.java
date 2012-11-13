@@ -22,6 +22,7 @@ public class InflectionRule implements Serializable {
     String inputCondition;
     String inflectedPattern;
     String comment;
+    String action;
 
     @Id
     public long getId() {
@@ -53,6 +54,11 @@ public class InflectionRule implements Serializable {
 	return comment;
     }
 
+    @Basic
+    public String getAction() {
+	return action;
+    }
+
     public void setId(long id) {
 	this.id = id;
     }
@@ -77,11 +83,16 @@ public class InflectionRule implements Serializable {
 	this.comment = comment;
     }
 
+    public void setAction(String action) {
+	this.action = action;
+    }
+
     @Override
     @Transient
     public int hashCode() {
 	final int prime = 31;
 	int result = 1;
+	result = prime * result + ((action == null) ? 0 : action.hashCode());
 	result = prime * result + ((comment == null) ? 0 : comment.hashCode());
 	result = prime * result + (int) (id ^ (id >>> 32));
 	result = prime
@@ -103,9 +114,14 @@ public class InflectionRule implements Serializable {
 	    return true;
 	if (obj == null)
 	    return false;
-	if (getClass() != obj.getClass())
+	if (!(obj instanceof InflectionRule))
 	    return false;
 	InflectionRule other = (InflectionRule) obj;
+	if (action == null) {
+	    if (other.action != null)
+		return false;
+	} else if (!action.equals(other.action))
+	    return false;
 	if (comment == null) {
 	    if (other.comment != null)
 		return false;
@@ -132,4 +148,5 @@ public class InflectionRule implements Serializable {
 	    return false;
 	return true;
     }
+
 }

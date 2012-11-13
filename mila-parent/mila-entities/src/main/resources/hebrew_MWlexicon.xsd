@@ -2896,7 +2896,9 @@
 	  </xsd:element>
 	  <xsd:element name="anchors" type="XMWEAtomPointerList" />
 	</xsd:sequence>
+<!--
 	<xsd:attribute name="pos" type="XMWEPos" />
+-->
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -2919,6 +2921,7 @@
       </xsd:complexType>
   -->
 
+  <!--
   <xsd:simpleType name="XMWEPos">
     <xsd:simpleContent>
       <xsd:extension base="Pos">
@@ -2929,6 +2932,7 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:simpleType>
+  -->
 
   <xsd:complexType name="XMWEAtom">
     <xsd:attribute name="id">
