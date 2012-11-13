@@ -6,35 +6,34 @@
  */
 package org.mila.generator.generation;
 
-import lexicon.contents.types.ItemType;
+import java.util.List;
 
-/**
- * @author daliabo
- *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
- */
+import javax.persistence.EntityManager;
+
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Item;
+
 public class NegationGen extends ItemGen {
-	
-	public NegationGen(ItemType item) {
-		super(item);
-		
-	}
 
+	public NegationGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+	}
 
 	private void analyse() {
 		analyseItem();
 	}
 
-	public void inflect() throws Exception {
+	public List<Inflection> inflect() {
 		analyse();
-		definitnessVal = "tf";
+		definitnessVal = DefinitenessType.FALSE;
 		inflectedItem = transliterated;
 		surface = undot;
 		populateDatabase();
-		definitnessVal = "tt";
+		definitnessVal = DefinitenessType.TRUE;
 		addH();
+		return this.getGeneratedInflections();
 	}
-
 
 }

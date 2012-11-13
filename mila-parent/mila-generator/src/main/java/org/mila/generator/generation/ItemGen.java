@@ -10,29 +10,58 @@
 package org.mila.generator.generation;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-import lexicon.contents.EmptyContent;
-import lexicon.contents.types.ItemType;
-import lexicon.dbUtils.Inflections;
-import lexicon.dbUtils.rules1;
-import lexicon.stringUtils.Translate;
+
+import javax.persistence.EntityManager;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.text.StrTokenizer;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.jpa.JpaEntityManager;
+import org.eclipse.persistence.queries.ReadAllQuery;
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.PolarityType;
+import org.mila.entities.corpus.PrefixTransliteratedType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.corpus.TenseType;
+import org.mila.entities.corpus.TriStateType;
+import org.mila.entities.generator.InflectionRule;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Definitness;
+import org.mila.entities.lexicon.Feminine;
+import org.mila.entities.lexicon.Gender;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.Number;
+import org.mila.entities.lexicon.Plural;
+import org.mila.generator.utils.Transliteration;
+
+import edu.emory.mathcs.backport.java.util.Collections;
 
 public abstract class ItemGen implements ItemInterface {
-	protected ItemType item = null;
+	protected Item item = null;
+	protected EntityManager lexicon = null;
+	protected EntityManager generator = null;
+	protected EntityManager inflections = null;
+
+	/* really needed .. ? */
 	protected String transliterated = "";
-	protected String plural = "";
+	protected Plural plural = Plural.UNSPECIFIED;
 	protected String undot = "";
-	protected String register = "";
-	protected String spelling = "";
-	protected String gender = "";
-	protected String number = "";
-	protected String feminine = "";
-	protected String id = "";
+	protected RegisterType register;
+	protected SpellingType spelling;
+	protected GenderType gender;
+	protected NumberType number;
+	protected Feminine feminine = Feminine.UNSPECIFIED;
+	protected String id;
 	protected String basePos = "";
 	protected int pluralSuffixMaxLength;
-	protected List list = null;
 	protected String table = "";
 	private String inflectPossessive = "1";
 	protected String suffixes = "";
@@ -44,38 +73,37 @@ public abstract class ItemGen implements ItemInterface {
 	protected String PGN = "";
 	protected String inflectedItem = "";
 	protected String surface = "";
-	protected String suffixFunction = "unspecified";
+	protected SuffixFunctionType suffixFunction = SuffixFunctionType.UNSPECIFIED;
 
 	// these variables for properName, conjunction, interjection
 
-	protected String definitness = "";
-	protected String definitnessVal = "f";
-	protected String type = "";
+	protected Definitness definitness;
+	protected DefinitenessType definitnessVal = DefinitenessType.FALSE;
+	protected String type = "unspecified";
 	protected String direction = "";
 	protected String basePerson = "";
 	protected boolean inflect = false;
 
-	protected List replaceExceptionList = null;
-	protected List removeExceptionList = null;
-	protected List addExceptionList = null;
-	protected String construct = "";
-	protected String lexiconGender = "";
-	protected String lexiconNumber = "";
+	protected TriStateType construct = TriStateType.UNSPECIFIED;
+	protected Gender lexiconGender = Gender.UNSPECIFIED;
+	protected Number lexiconNumber = Number.UNSPECIFIED;
 	protected String root = "";
-	protected String tense = "";
+	protected TenseType tense = TenseType.UNSPECIFIED;
 	protected String baseTransliteratedItem = "";
 	protected String dottedLexiconItem = "";
-	protected String polarityVal = "u";
+	protected PolarityType polarityVal = PolarityType.UNSPECIFIED;
 	protected boolean hebForeign = false;
 	protected String value = "";
-	protected String prefix = "unspecified";
+	protected PrefixTransliteratedType prefix = PrefixTransliteratedType.UNSPECIFIED;
 
+	protected List<Inflection> generatedInflections;
+	
 	// ----------------------------------------------------------------------------------
-	public ItemType getItem() {
+	public Item getItem() {
 		return item;
 	}
 
-	public void setItem(ItemType item) {
+	public void setItem(Item item) {
 		this.item = item;
 	}
 
@@ -87,11 +115,11 @@ public abstract class ItemGen implements ItemInterface {
 		this.transliterated = transliterated;
 	}
 
-	public String getPlural() {
+	public Plural getPlural() {
 		return plural;
 	}
 
-	public void setPlural(String plural) {
+	public void setPlural(Plural plural) {
 		this.plural = plural;
 	}
 
@@ -103,43 +131,43 @@ public abstract class ItemGen implements ItemInterface {
 		this.undot = undot;
 	}
 
-	public String getRegister() {
+	public RegisterType getRegister() {
 		return register;
 	}
 
-	public void setRegister(String register) {
+	public void setRegister(RegisterType register) {
 		this.register = register;
 	}
 
-	public String getSpelling() {
+	public SpellingType getSpelling() {
 		return spelling;
 	}
 
-	public void setSpelling(String spelling) {
+	public void setSpelling(SpellingType spelling) {
 		this.spelling = spelling;
 	}
 
-	public String getGender() {
+	public GenderType getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(GenderType gender) {
 		this.gender = gender;
 	}
 
-	public String getNumber() {
+	public NumberType getNumber() {
 		return number;
 	}
 
-	public void setNumber(String number) {
+	public void setNumber(NumberType number) {
 		this.number = number;
 	}
 
-	public String getFeminine() {
+	public Feminine getFeminine() {
 		return feminine;
 	}
 
-	public void setFeminine(String feminine) {
+	public void setFeminine(Feminine feminine) {
 		this.feminine = feminine;
 	}
 
@@ -165,14 +193,6 @@ public abstract class ItemGen implements ItemInterface {
 
 	public void setPluralSuffixMaxLength(int pluralSuffixMaxLength) {
 		this.pluralSuffixMaxLength = pluralSuffixMaxLength;
-	}
-
-	public List getList() {
-		return list;
-	}
-
-	public void setList(List list) {
-		this.list = list;
 	}
 
 	public String getTable() {
@@ -247,27 +267,27 @@ public abstract class ItemGen implements ItemInterface {
 		this.surface = surface;
 	}
 
-	public String getSuffixFunction() {
+	public SuffixFunctionType getSuffixFunction() {
 		return suffixFunction;
 	}
 
-	public void setSuffixFunction(String suffixFunction) {
+	public void setSuffixFunction(SuffixFunctionType suffixFunction) {
 		this.suffixFunction = suffixFunction;
 	}
 
-	public String getDefinitness() {
+	public Definitness getDefinitness() {
 		return definitness;
 	}
 
-	public void setDefinitness(String definitness) {
+	public void setDefinitness(Definitness definitness) {
 		this.definitness = definitness;
 	}
 
-	public String getDefinitnessVal() {
+	public DefinitenessType getDefinitnessVal() {
 		return definitnessVal;
 	}
 
-	public void setDefinitnessVal(String definitnessVal) {
+	public void setDefinitnessVal(DefinitenessType definitnessVal) {
 		this.definitnessVal = definitnessVal;
 	}
 
@@ -303,51 +323,27 @@ public abstract class ItemGen implements ItemInterface {
 		this.inflect = inflect;
 	}
 
-	public List getReplaceExceptionList() {
-		return replaceExceptionList;
-	}
-
-	public void setReplaceExceptionList(List replaceExceptionList) {
-		this.replaceExceptionList = replaceExceptionList;
-	}
-
-	public List getRemoveExceptionList() {
-		return removeExceptionList;
-	}
-
-	public void setRemoveExceptionList(List removeExceptionList) {
-		this.removeExceptionList = removeExceptionList;
-	}
-
-	public List getAddExceptionList() {
-		return addExceptionList;
-	}
-
-	public void setAddExceptionList(List addExceptionList) {
-		this.addExceptionList = addExceptionList;
-	}
-
-	public String getConstruct() {
+	public TriStateType getConstruct() {
 		return construct;
 	}
 
-	public void setConstruct(String construct) {
+	public void setConstruct(TriStateType construct) {
 		this.construct = construct;
 	}
 
-	public String getLexiconGender() {
+	public Gender getLexiconGender() {
 		return lexiconGender;
 	}
 
-	public void setLexiconGender(String lexiconGender) {
+	public void setLexiconGender(Gender lexiconGender) {
 		this.lexiconGender = lexiconGender;
 	}
 
-	public String getLexiconNumber() {
+	public Number getLexiconNumber() {
 		return lexiconNumber;
 	}
 
-	public void setLexiconNumber(String lexiconNumber) {
+	public void setLexiconNumber(Number lexiconNumber) {
 		this.lexiconNumber = lexiconNumber;
 	}
 
@@ -359,11 +355,11 @@ public abstract class ItemGen implements ItemInterface {
 		this.root = root;
 	}
 
-	public String getTense() {
+	public TenseType getTense() {
 		return tense;
 	}
 
-	public void setTense(String tense) {
+	public void setTense(TenseType tense) {
 		this.tense = tense;
 	}
 
@@ -383,11 +379,11 @@ public abstract class ItemGen implements ItemInterface {
 		this.dottedLexiconItem = dottedLexiconItem;
 	}
 
-	public String getPolarityVal() {
+	public PolarityType getPolarityVal() {
 		return polarityVal;
 	}
 
-	public void setPolarityVal(String polarityVal) {
+	public void setPolarityVal(PolarityType polarityVal) {
 		this.polarityVal = polarityVal;
 	}
 
@@ -411,96 +407,111 @@ public abstract class ItemGen implements ItemInterface {
 		this.value = value;
 	}
 
-	public String getPrefix() {
+	public PrefixTransliteratedType getPrefix() {
 		return prefix;
 	}
 
-	public void setPrefix(String prefix) {
+	public void setPrefix(PrefixTransliteratedType prefix) {
 		this.prefix = prefix;
 	}
 
 	// ----------------------------------------------------------------------------------
-	public ItemGen(ItemType item) {
+	public ItemGen(Item item, EntityManager lexicon, EntityManager generator,
+			EntityManager inflections) {
 		this.item = item;
-	}
-
-	protected String buildSql(String action, String table) {
-		String sql = "select * from " + table + " where action= '" + action
-				+ "' and id = " + id;
-		return sql;
-	}
-
-	protected List handleException(String sql) {
-		EmptyContent eContent = new EmptyContent();
-		// System.out.println("sql=" + sql);
-		List list = eContent.getContents(sql, "aid");
-		return list;
-	}
-
-	protected void getException(String action) {
-		String sql = "";
-		if (basePos.equals("adjective"))
-			sql = buildSql(action, "noun_exception_type");
-		else if (basePos.equals("acronym"))
-			sql = buildSql(action, "acronym_exception_type");
-		else
-			sql = buildSql(action, basePos + "_exception_type");
-		if (action.equals("add"))
-			addExceptionList = handleException(sql);
-		else if (action.equals("remove"))
-			removeExceptionList = handleException(sql);
-		else if (action.equals("replace"))
-			replaceExceptionList = handleException(sql);
+		this.lexicon = lexicon;
+		this.generator = generator;
+		this.inflections = inflections;
+		this.generatedInflections = new ArrayList<Inflection>();
 	}
 
 	/**
-	 * This method is a service method used by nouns and preposition <br>
-	 * It is used as a basis for possessive generation, in case the basis is not
-	 * the construct form
-	 * 
-	 * @throws UnsupportedEncodingException
-	 */
-	protected void inflectionBaseHandling() throws UnsupportedEncodingException {
-		inflectionBase = URLDecoder.decode(inflectionBase, "UTF-8");
-		inflectionBase = Translate.Heb2Eng(inflectionBase);
-	}
-
-	/**
-	 * This methos is the interface to the rules handling class The relevant
+	 * This method is the interface to the rules handling class The relevant
 	 * rule is selected by 3 parameters: 1) The action - a text describing the
 	 * rule action for example pluralWTnoun <br>
 	 * It means that this rule is applicable for generating the plural with the
 	 * suffix WT <br>
 	 * For the nouns - the actions chosen according to the rules files of xfst <br>
-	 * 2) Another parameter which allows us to differntiate in case there is a
-	 * simmilar action <br>
+	 * 2) Another parameter which allows us to differentiate in case there is a
+	 * similar action <br>
 	 * 3) The inputPattern - the relevant suffix that should be found on the
 	 * transliterated <br>
 	 * 
 	 * @param transliterated
 	 *            - the word on which rules will take place
 	 * @param inputCondition
-	 *            - parameter which allows us to differntiate in case there is a
-	 *            simmilar action
+	 *            - parameter which allows us to differentiate in case there is
+	 *            a similar action
 	 * @param action
 	 *            - each rule is identified by the action and inputCondition
 	 * @param maxLen
-	 *            - the translitered suffix length to start comparing to the
+	 *            - the transliterated suffix length to start comparing to the
 	 *            inputPattern
 	 * @throws Exception
 	 */
 	protected void findRule(String transliterated, String inputCondition,
-			String action, int maxLen) throws Exception {
-		// System.out.println("(F) findRule("+transliterated+","+inputCondition+","+action+")");
-		rules1 rules = new rules1();
-		rules.setAction(action);
-		rules.setInputCondition(inputCondition);
-		rules.setTransliterated(transliterated);
-		rules.setMaxLength(maxLen);
-		rules.getRules();
+			String action, int maxLen) {
+		String inflected = transliterated;
+		ExpressionBuilder eb = new ExpressionBuilder();
+		ReadAllQuery rq = new ReadAllQuery(InflectionRule.class, eb);
+		Expression e = eb.get("inputCondition")
+				.equalsIgnoreCase(inputCondition);
+		e = e.and(eb.get("action").equalsIgnoreCase(eb.value(action)));
+		e = e.and(eb.get("inputPattern").equalsIgnoreCase("default").not());
+		rq.setSelectionCriteria(e);
+		rq.addOrdering(eb.get("inputSuffixLen").descending());
+
+		@SuppressWarnings("unchecked")
+		List<InflectionRule> rules = ((JpaEntityManager) generator
+				.getDelegate()).createQuery(rq).getResultList();
+
+		if (maxLen > transliterated.length() - 1)
+			maxLen = transliterated.length() - 1;
+		
+		for (InflectionRule rule : rules) {
+			for (int i = maxLen; i > 0; --i) {
+				String suffix = inflected.substring(inflected.length() - i);
+				if (suffix.equals(rule.getInputPattern())) {
+					inflected = StringUtils.substring(inflected, 0, -i)
+							+ rule.getInflectedPattern();
+					maxLen = i;
+					break;
+				}
+			}
+		}
+
+		/* now default rules */
+		rq = new ReadAllQuery(InflectionRule.class, eb);
+		e = eb.get("inputCondition").equalsIgnoreCase(inputCondition);
+		e = e.and(eb.get("action").equalsIgnoreCase(eb.value(action)));
+		e = e.and(eb.get("inputPattern").equalsIgnoreCase("default"));
+		rq.setSelectionCriteria(e);
+		rq.addOrdering(eb.get("inputSuffixLen").descending());
+
+		@SuppressWarnings("unchecked")
+		List<InflectionRule> default_rules = ((JpaEntityManager) generator
+				.getDelegate()).createQuery(rq).getResultList();
+
+		for (InflectionRule rule : default_rules) {
+			String base = inflected;
+			if (StringUtils.contains(rule.getInflectedPattern(), ",")) {
+				StrTokenizer stSuffix = new StrTokenizer(
+						rule.getInflectedPattern(), ",");
+				inflected = "";
+				while (stSuffix.hasNext()) {
+					String suffix = stSuffix.nextToken();
+					if (suffix.equals("-")) {
+						suffix = "";
+					}
+					inflected = inflected + base + suffix + ",";
+				}
+			} else {
+				inflected = inflected + rule.getInflectedPattern();
+			}
+		}
+
 		// inflectedItem - the transliterated after rules have been acting on it
-		inflectedItem = rules.getInflectedTransliterated();
-		// System.out.println("inflectedItem = " + inflectedItem);
+		inflectedItem = inflected;
 	}
 
 	/**
@@ -521,9 +532,10 @@ public abstract class ItemGen implements ItemInterface {
 		baseTransliteratedItem = transliterated;
 		// System.out.println("transliterated = " + transliterated);
 		id = item.getId();
-		register = item.getRegister();
-		spelling = item.getSpelling();
-		basePos = item.getPos();
+		register = RegisterType.fromValue(item.getRegister().value());
+		spelling = SpellingType.fromValue(item.getSpelling().value());
+		basePos = item.getSubitem().getClass().getSimpleName()
+				.replaceFirst("Lexicon$", "");
 		dottedLexiconItem = item.getDotted();
 		// dottedLexiconItem = dottedLexiconItem.replaceAll("&#39;", "'");
 		dottedLexiconItem = dottedLexiconItem.replaceAll("&#60;", "`");
@@ -535,38 +547,32 @@ public abstract class ItemGen implements ItemInterface {
 	 * 
 	 * @throws Exception
 	 */
-	protected void populateDatabase() throws Exception {
-
-		Inflections inf = new Inflections();
-		// ����� ������ �' ����� ���� ���"�
-		if (undot.endsWith("%D7%9D")) {
-			if (surface.endsWith("%D7%9E"))
-				surface.replaceAll("%D7%9E", "%D7%9D");
-		}
+	protected void populateDatabase() {
+		Inflection inf = new Inflection();
 		inf.setSurface(this.surface);
 		inf.setTransliterated(this.inflectedItem);
 		inf.setRegister(this.register);
 		inf.setSpelling(this.spelling);
 		inf.setBaseLexiconPointer(this.id);
 		inf.setBaseTransliteratedLItem(this.baseTransliteratedItem);
-		inf.setBaseundottedLItem(this.undot);
+		inf.setBaseUndottedLItem(this.undot);
 		inf.setBasePos(this.basePos);
 		inf.setPGN(this.PGN);
 		inf.setBaseGender(gender);
 		inf.setBaseNumber(number);
 		inf.setType(type);
 		inf.setPolarity(polarityVal);
-		inf.setBaseDefinitness(definitnessVal);
+		inf.setBaseDefiniteness(definitnessVal);
 		inf.setBasePerson(basePerson);
 		inf.setSuffixStatus(construct);
 		inf.setSuffixFunction(suffixFunction);
 		inf.setRoot(root);
 		inf.setTense(tense);
 		inf.setDottedLexiconItem(dottedLexiconItem);
-		inf.setHebForeign(String.valueOf((hebForeign) ? 1 : 0));
+		inf.setHebForeign(hebForeign);
 		inf.setValue(value);
 		inf.setPrefix(prefix);
-		inf.insertItem();
+		this.generatedInflections.add(inf);
 	}
 
 	// ----------------------------------------------------------------------------------------------
@@ -576,41 +582,26 @@ public abstract class ItemGen implements ItemInterface {
 	 * @throws UnsupportedEncodingException
 	 * @throws Exception
 	 */
-	protected void inflectPronomial(String input_suffixFunction)
-			throws UnsupportedEncodingException, Exception {
+	protected void inflectPronomial(SuffixFunctionType input_suffixFunction) {
 		suffixFunction = input_suffixFunction;
 		StringTokenizer stSuff = new StringTokenizer(suffixes, ",");
 		StringTokenizer stPGN = new StringTokenizer(PGNPRONOMIALTokens10, ",");
-		StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
-		definitnessVal = "unspecified";
+
+		definitnessVal = DefinitenessType.UNSPECIFIED;
 		while (stSuff.hasMoreTokens()) {
-			boolean removeFlag = false;
-			boolean replaceFlag = false;
 			String suffix = stSuff.nextToken();
 			if (!inflectionBase.equals(""))
 				inflectedItem = inflectionBase + suffix;
 			else
 				inflectedItem = transliterated + suffix;
-			// System.out.println();
-			// System.out.println("inflectedItem =" + inflectedItem);
-			surface = Translate.Eng2Heb(inflectedItem);
-			// System.out.println("surface =" + surface);
-			// System.out.println();
+
+			surface = Transliteration.toHebrew(inflectedItem);
 
 			PGN = stPGN.nextToken();
-			// register="formal";
-			int replaceSize = replaceExceptionList.size();
-			int removeSize = removeExceptionList.size();
-			if (replaceSize > 0) {
-				replaceFlag = replaceExceptionExist();
 
-			}
-			if (removeSize > 0) {
-				removeFlag = removeExceptionExist();
+			boolean replaceFlag = replaceExceptionExist();
+			boolean removeFlag = removeExceptionExist();
 
-			}
 			if (!replaceFlag && !removeFlag)
 				populateDatabase();
 
@@ -661,28 +652,29 @@ public abstract class ItemGen implements ItemInterface {
 	 * The action string is used for applying the rules table The method also
 	 * set pluralSuffixMaxLength needed for applying the rules table
 	 * 
-	 * @param pluralSuffix
+	 * @param plural2
 	 *            - this value is defined for each lexicon item
 	 * @return action string - used for applying the rules table
 	 */
-	protected String identifyPluralAction(String pluralSuffix) {
+	protected String identifyPluralAction(Plural plural2) {
 		StringBuffer action = new StringBuffer().append("plural")
-				.append(pluralSuffix.toUpperCase()).append(basePos);
-		if (pluralSuffix.equals("wt")) {
+				.append(plural2.value().toUpperCase()).append(basePos);
+		switch (plural2) {
+		case IWT:
+		case WT:
+		case IIM:
 			pluralSuffixMaxLength = 3;
-		} else if (pluralSuffix.equals("iwt")) {
-			pluralSuffixMaxLength = 3;
-		} else if (pluralSuffix.equals("awt")) {
+			break;
+		case AWT:
+		case M:
 			pluralSuffixMaxLength = 1;
-		} else if (pluralSuffix.equals("iim")) {
-			pluralSuffixMaxLength = 3;
-		} else if (pluralSuffix.equals("im")) {
+			break;
+		case IM:
 			pluralSuffixMaxLength = 2;
-		} else if (pluralSuffix.equals("m")) {
-			pluralSuffixMaxLength = 1;
+			break;
+		default:
+			break;
 		}
-		// System.out.println("pluralSuffix = " + pluralSuffix);
-		// System.out.println("action = " + action);
 		return action.toString();
 	}
 
@@ -694,7 +686,7 @@ public abstract class ItemGen implements ItemInterface {
 	 */
 	protected String identifyFeminineAction() {
 		StringBuffer action = new StringBuffer().append("feminine")
-				.append(feminine.toUpperCase()).append("Singular")
+				.append(feminine.value().toUpperCase()).append("Singular")
 				.append(basePos);
 		return action.toString();
 	}
@@ -705,25 +697,26 @@ public abstract class ItemGen implements ItemInterface {
 	 * 
 	 * @throws Exception
 	 */
-	protected void addH() throws Exception {
-		// System.out.println("|||||||||||||||||||||||||||||||||||||");
-		// System.out.println("||||||||||generateHForm||||||||||||");
+	protected void addH() {
 		inflectedItem = "h" + inflectedItem;
-		surface = Translate.Eng2Heb(inflectedItem);
+		surface = Transliteration.toHebrew(inflectedItem);
 		populateDatabase();
-
 	}
 
-	protected boolean replaceExceptionExist()
-			throws UnsupportedEncodingException, Exception {
+	protected boolean replaceExceptionExist() {
 		return false;
 	}
 
-	protected boolean removeExceptionExist()
-			throws UnsupportedEncodingException, Exception {
+	protected boolean removeExceptionExist() {
 		return false;
 	}
 
-	abstract void inflect() throws Exception;
+	public abstract List<Inflection> inflect();
+	
+	@SuppressWarnings("unchecked")
+	public List<Inflection> getGeneratedInflections() {
+		return Collections.unmodifiableList(generatedInflections);
+	}
+
 
 }

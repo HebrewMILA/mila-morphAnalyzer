@@ -1,0 +1,10 @@
+javax.persistence.jdbc.driver = org.postgresql.Driver
+javax.persistence.jdbc.url = jdbc:postgresql://localhost/lexicon
+javax.persistence.jdbc.user = lexiconuser
+javax.persistence.jdbc.password = 1234
+eclipselink.jdbc.read-connections.min = 1
+eclipselink.jdbc.write-connections.min = 1
+eclipselink.logging.level = INFO
+eclipselink.target-server = None
+javax.persistence.transactionType = RESOURCE_LOCAL
+provider = org.eclipse.persistence.jpa.PersistenceProvider

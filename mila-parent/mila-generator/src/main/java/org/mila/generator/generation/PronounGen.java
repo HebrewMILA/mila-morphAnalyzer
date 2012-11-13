@@ -6,124 +6,123 @@
  */
 package org.mila.generator.generation;
 
+import static ch.lambdaj.Lambda.filter;
+
 import java.util.List;
 
-import lexicon.contents.exception_types.PronounExceptionType;
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import javax.persistence.EntityManager;
 
-/**
- * @author daliabo
- * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
- */
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.PrefixTransliteratedType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Definitness;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.PronounException;
+import org.mila.entities.lexicon.PronounExceptionAdd;
+import org.mila.entities.lexicon.PronounExceptionRemove;
+import org.mila.entities.lexicon.PronounLexicon;
+import org.mila.generator.utils.Transliteration;
+
 public class PronounGen extends ItemGen {
+	private PronounLexicon pronoun;
+
+	public PronounGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		pronoun = (PronounLexicon) item.getSubitem();
+	}
+
 	boolean isDefinite = false;
 
-	public PronounGen(ItemType item) {
-		super(item);
-	}
-
-	private void analyseExceptionList(List exceptionList) throws Exception {
-		for (int i = 0; i < exceptionList.size(); i++) {
-			PronounExceptionType pronounExceptionType = new PronounExceptionType();
-			pronounExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
-			inflectedItem = pronounExceptionType.getTransliterated();
-			surface = pronounExceptionType.getUndotted();
-			spelling = pronounExceptionType.getSpelling();
-			register = pronounExceptionType.getRegister();
-			PGN = pronounExceptionType.getPgn();
-			basePerson = pronounExceptionType.getPerson();
-			gender = pronounExceptionType.getGender();
-			number = pronounExceptionType.getNumber();
-			type = item.getPronoun().getType();
+	private void analyseAddExceptionList(List<PronounException> exceptions) {
+		for (PronounException ex : exceptions) {
+			inflectedItem = ex.getTransliterated();
+			surface = ex.getUndotted();
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			register = RegisterType.fromValue(ex.getRegister().value());
+			PGN = ex.getPossessive();
+			basePerson = ex.getPerson();
+			gender = GenderType.fromValue(ex.getGender().value());
+			number = NumberType.fromValue(ex.getNumber().value());
+			type = pronoun.getType().value();
 			if (!PGN.equals("unspecified")) {
-				suffixFunction = "pronomial";
+				suffixFunction = SuffixFunctionType.PRONOMIAL;
 				basePerson = "unspecified";
-				definitnessVal = "unspecified";
+				definitnessVal = DefinitenessType.UNSPECIFIED;
 			} else
-				suffixFunction = "unspecified";
-			prefix = "unspecified";
+				suffixFunction = SuffixFunctionType.UNSPECIFIED;
+			prefix = PrefixTransliteratedType.UNSPECIFIED;
 			handlePronounType();
 			handleDefiniteness(inflectedItem);
-			generateBKLMForms(pronounExceptionType.getTransliterated());
-
+			generateBKLMForms(ex.getTransliterated());
 		}
 	}
 
-	private void replaceException() {
-		String sql = buildSql("replace", "pronoun_exception_type");
-		replaceExceptionList = handleException(sql);
+	protected void addException() {
+		analyseAddExceptionList(filter(
+				Matchers.instanceOf(PronounExceptionAdd.class),
+				pronoun.getExceptions()));
 	}
 
-	private void removeException() {
-		String sql = buildSql("remove", "pronoun_exception_type");
-		removeExceptionList = handleException(sql);
-	}
-
-	protected void addException() throws Exception {
-		String sql = buildSql("add", "pronoun_exception_type");
-		List addExceptionList = handleException(sql);
-		if (addExceptionList.size() > 0) {
-			analyseExceptionList(addExceptionList);
-		}
-	}
-
-	protected void generateBKLMForms(String transliterated) throws Exception {
-		if (item.getPronoun().getType().indexOf("with bklm") != -1) {
+	protected void generateBKLMForms(String transliterated) {
+		if (pronoun.getType().value().indexOf("with bklm") != -1) {
 
 			inflectedItem = "b" + transliterated;
-			surface = Translate.Eng2Heb(inflectedItem);
-			prefix = "b";
-			if (item.getPronoun().getType().indexOf("with definiteness") != -1) {
+			surface = Transliteration.toHebrew(inflectedItem);
+			prefix = PrefixTransliteratedType.B;
+			if (pronoun.getType().value().indexOf("with definiteness") != -1) {
 				handlePronounType();
 				handlebklmDefiniteness(inflectedItem);
 			} else {
-				definitnessVal = "f";
+				definitnessVal = DefinitenessType.FALSE;
 				handlePronounType();
 				populateDatabase();
 
 			}
 
 			inflectedItem = "k" + transliterated;
-			surface = Translate.Eng2Heb(inflectedItem);
-			prefix = "k";
+			surface = Transliteration.toHebrew(inflectedItem);
+			prefix = PrefixTransliteratedType.K;
 			handlePronounType();
-			if (item.getPronoun().getType().indexOf("with definiteness") != -1) {
+			if (pronoun.getType().value().indexOf("with definiteness") != -1) {
 				handlePronounType();
 				handlebklmDefiniteness(inflectedItem);
 			} else {
-				definitnessVal = "f";
+				definitnessVal = DefinitenessType.FALSE;
 				handlePronounType();
 				populateDatabase();
 
 			}
 
 			inflectedItem = "l" + transliterated;
-			surface = Translate.Eng2Heb(inflectedItem);
-			prefix = "l";
+			surface = Transliteration.toHebrew(inflectedItem);
+			prefix = PrefixTransliteratedType.L;
 			handlePronounType();
-			if (item.getPronoun().getType().indexOf("with definiteness") != -1) {
+			if (pronoun.getType().value().indexOf("with definiteness") != -1) {
 				handlePronounType();
 				handlebklmDefiniteness(inflectedItem);
 			} else {
-				definitnessVal = "f";
+				definitnessVal = DefinitenessType.FALSE;
 				handlePronounType();
 				populateDatabase();
 
 			}
 
 			inflectedItem = "m" + transliterated;
-			surface = Translate.Eng2Heb(inflectedItem);
-			prefix = "m";
+			surface = Transliteration.toHebrew(inflectedItem);
+			prefix = PrefixTransliteratedType.M;
 			handlePronounType();
-			if (item.getPronoun().getType().indexOf("with definiteness") != -1) {
+			if (pronoun.getType().value().indexOf("with definiteness") != -1) {
 				handlePronounType();
 				handlebklmDefiniteness(inflectedItem);
 			} else {
-				definitnessVal = "f";
+				definitnessVal = DefinitenessType.FALSE;
 				handlePronounType();
 				populateDatabase();
 
@@ -145,86 +144,71 @@ public class PronounGen extends ItemGen {
 			type = type.replaceAll("no bklm", "");
 	}
 
-	protected void handleBaseForm() throws Exception {
-		int size = removeExceptionList.size();
-		if (size == 0) {
+	protected List<PronounException> getRemoveExceptions() {
+		return filter(Matchers.instanceOf(PronounExceptionRemove.class),
+				pronoun.getExceptions());
+	}
+
+	protected boolean removeExceptionExist() {
+		for (PronounException ex : getRemoveExceptions())
+			if (ex.getPossessive().equals(PGN))
+				return true;
+
+		return false;
+	}
+
+	protected void handleBaseForm() {
+		if (!removeExceptionExist()) {
 			if (!PGN.equals("unspecified")) {
-				suffixFunction = "pronomial";
+				suffixFunction = SuffixFunctionType.PRONOMIAL;
 				basePerson = "unspecified";
-				definitnessVal = "unspecified";
+				definitnessVal = DefinitenessType.UNSPECIFIED;
 			} else
-				suffixFunction = "unspecified";
+				suffixFunction = SuffixFunctionType.UNSPECIFIED;
 			handlePronounType();
 			handleDefiniteness(inflectedItem);
 			generateBKLMForms(transliterated);
-		} else {
-			for (int i = 0; i < size; i++) {
-				PronounExceptionType pronounExceptionType = new PronounExceptionType();
-				pronounExceptionType
-						.open(((Integer) removeExceptionList.get(i)).intValue());
-				String exceptionPGN = pronounExceptionType.getPgn();
-				String action = pronounExceptionType.getAction();
-				if (exceptionPGN.equals("unspecified")
-						&& action.equals("remove"))
-					;
-
-				else {
-					if (!PGN.equals("unspecified")) {
-						suffixFunction = "pronomial";
-						basePerson = "unspecified";
-						definitnessVal = "unspecified";
-					} else
-						suffixFunction = "unspecified";
-					populateDatabase();
-					generateBKLMForms(transliterated);
-				}
-
-			}
 		}
 	}
 
 	private void analyse() {
 		analyseItem();
-		gender = item.getPronoun().getGender();
-		number = item.getPronoun().getNumber();
-		basePerson = item.getPronoun().getPerson();
-		type = item.getPronoun().getType();
+		gender = GenderType.fromValue(pronoun.getGender().value());
+		basePerson = pronoun.getPerson();
+		number = NumberType.fromValue(pronoun.getNumber().value());
+		type = pronoun.getType().value();
 		inflectedItem = transliterated;
 		surface = undot;
-		definitness = item.getPronoun().getDefiniteness();
-		suffixFunction = "unspecified";
-		PGN = item.getPronoun().getPgn();
-		prefix = "unspecified";
+		definitness = pronoun.getDefiniteness();
+		suffixFunction = SuffixFunctionType.UNSPECIFIED;
+		PGN = pronoun.getPossessive();
+		prefix = PrefixTransliteratedType.UNSPECIFIED;
 	}
 
 	private void handleDefiniteness(String item) {
 		try {
-			if (definitness.equals("required")) {
-				definitnessVal = "rt";
+			/* TODO: This should be a switch */
+			if (definitness == Definitness.REQUIRED) {
+				definitnessVal = DefinitenessType.TRUE;
 				populateDatabase();
 
-				definitnessVal = "tt";
+				definitnessVal = DefinitenessType.TRUE;
 				inflectedItem = "h" + item;
-				surface = Translate.Eng2Heb(inflectedItem);
+				surface = Transliteration.toHebrew(inflectedItem);
 				populateDatabase();
 
-			} else if (definitness.equals("optional")) {
-				definitnessVal = "tf";
+			} else if (definitness == Definitness.OPTIONAL) {
+				definitnessVal = DefinitenessType.FALSE;
 				populateDatabase();
-				definitnessVal = "tt";
+				definitnessVal = DefinitenessType.TRUE;
 				inflectedItem = "h" + item;
-				System.out.println();
-				System.out.println("inflectedItem =" + inflectedItem);
-				surface = Translate.Eng2Heb(inflectedItem);
-				System.out.println("surface =" + surface);
-				System.out.println();
+				surface = Transliteration.toHebrew(inflectedItem);
 				populateDatabase();
-				//���� ������ ����� ����� ������� ��� �������
-			} else if (definitness.equals("prohibited")) {
-				definitnessVal = "f";
+			} else if (definitness == Definitness.PROHIBITED) {
+				definitnessVal = DefinitenessType.FALSE;
 				populateDatabase();
-			} else if (definitness.equals("definited")) {
-				definitnessVal = "rt";
+			} else if (definitness == Definitness.DEFINITED) {
+				definitnessVal = DefinitenessType.TRUE;
 				populateDatabase();
 			}
 		} catch (Exception e) {
@@ -234,80 +218,60 @@ public class PronounGen extends ItemGen {
 
 	private void handlebklmDefiniteness(String item) {
 		if (item.charAt(0) != 'm') {
-			try {
-				if (definitness.equals("required")) {
-					definitnessVal = "tt";
-					populateDatabase();
+			if (definitness == Definitness.REQUIRED) {
+				definitnessVal = DefinitenessType.TRUE;
+				populateDatabase();
 
-				} else if (definitness.equals("optional")) {
-					definitnessVal = "tf";
-					populateDatabase();
-					definitnessVal = "tt";
-					populateDatabase();
-				} else if (definitness.equals("definited")) {
-					inflectedItem = item.charAt(0) + item.substring(2);
-					surface = Translate.Eng2Heb(inflectedItem);
-					definitnessVal = "tt";
-					populateDatabase();
-				} else {
-					definitnessVal = "f";
-					populateDatabase();
+			} else if (definitness == Definitness.OPTIONAL) {
+				definitnessVal = DefinitenessType.FALSE;
+				populateDatabase();
+				definitnessVal = DefinitenessType.TRUE;
+				populateDatabase();
+			} else if (definitness == Definitness.DEFINITED) {
+				inflectedItem = item.charAt(0) + item.substring(2);
+				surface = Transliteration.toHebrew(inflectedItem);
+				definitnessVal = DefinitenessType.TRUE;
+				populateDatabase();
+			} else {
+				definitnessVal = DefinitenessType.FALSE;
+				populateDatabase();
 
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
 			}
 		} else {
 			item = item.substring(1);
-			try {
-				if (definitness.equals("required")) {
-					inflectedItem = "mh" + item;
-					surface = Translate.Eng2Heb(inflectedItem);
-					definitnessVal = "tt";
-					populateDatabase();
+			if (definitness == Definitness.REQUIRED) {
+				inflectedItem = "mh" + item;
+				surface = Transliteration.toHebrew(inflectedItem);
+				definitnessVal = DefinitenessType.TRUE;
+				populateDatabase();
 
-				} else if (definitness.equals("optional")) {
-					inflectedItem = "m" + item;
-					surface = Translate.Eng2Heb(inflectedItem);
-					definitnessVal = "tf";
-					populateDatabase();
-					inflectedItem = "mh" + item;
-					surface = Translate.Eng2Heb(inflectedItem);
-					definitnessVal = "tt";
-					populateDatabase();
-				} else if (definitness.equals("definited")) {
-					inflectedItem = "m" + item;
-					surface = Translate.Eng2Heb(inflectedItem);
-					definitnessVal = "tt";
-					populateDatabase();
-				} else {
-					inflectedItem = "m" + item;
-					surface = Translate.Eng2Heb(inflectedItem);
-					definitnessVal = "f";
-					populateDatabase();
-
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
+			} else if (definitness == Definitness.OPTIONAL) {
+				inflectedItem = "m" + item;
+				surface = Transliteration.toHebrew(inflectedItem);
+				definitnessVal = DefinitenessType.FALSE;
+				populateDatabase();
+				inflectedItem = "mh" + item;
+				surface = Transliteration.toHebrew(inflectedItem);
+				definitnessVal = DefinitenessType.TRUE;
+				populateDatabase();
+			} else if (definitness == Definitness.DEFINITED) {
+				inflectedItem = "m" + item;
+				surface = Transliteration.toHebrew(inflectedItem);
+				definitnessVal = DefinitenessType.TRUE;
+				populateDatabase();
+			} else {
+				inflectedItem = "m" + item;
+				surface = Transliteration.toHebrew(inflectedItem);
+				definitnessVal = DefinitenessType.FALSE;
+				populateDatabase();
 			}
-
 		}
 	}
 
-	public void inflect() throws Exception {
+	public List<Inflection> inflect() {
 		analyse();
-		getException("replace");
-		getException("remove");
 		handleBaseForm();
 		addException();
-
-		//		definitnessVal = "tt";
-		//		inflectedItem = "h" + transliterated;
-		//		System.out.println();
-		//		System.out.println("inflectedItem =" + inflectedItem);
-		//		surface = Translate.Eng2Heb(inflectedItem);
-		//		System.out.println("surface =" + surface);
-		//		System.out.println();
-		//		populateDatabase();
+		return this.getGeneratedInflections();
 	}
 }

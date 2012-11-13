@@ -6,155 +6,155 @@
  */
 package org.mila.generator.generation;
 
+import static ch.lambdaj.Lambda.filter;
+
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lexicon.contents.exception_types.ModalExceptionType;
-import lexicon.contents.exception_types.NumeralExceptionType;
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import javax.persistence.EntityManager;
+
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.TenseType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.ModalException;
+import org.mila.entities.lexicon.ModalExceptionAdd;
+import org.mila.entities.lexicon.ModalExceptionReplace;
+import org.mila.entities.lexicon.ModalLexicon;
+import org.mila.generator.utils.Transliteration;
 
 /**
  * @author daliabo
- *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
+ * 
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class ModalGen extends ItemGen {
-	static final String suffixList="h,im,wt";
+	ModalLexicon modal;
+
+	public ModalGen(Item item, EntityManager lexicon, EntityManager generator,
+			EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		modal = (ModalLexicon) item.getSubitem();
+	}
+
+	static final String suffixList = "h,im,wt";
 	static final String genderList = "feminine,masculine,feminine";
 	static final String numberList = "singular,plural,plural";
-	String inflectionType="";
-	
-	protected void addException() throws Exception {
-		String sql = buildSql("add", "modal_exception_type");
-		List addExceptionList = handleException(sql);
-		if (addExceptionList.size() > 0) {
-			analyseExceptionList(addExceptionList);
-		}
-	}
-	
-	private void replaceException() {
-		String sql = buildSql("replace", "modal_exception_type");
-		replaceExceptionList = handleException(sql);
+	String inflectionType = "";
+
+	protected void addException() {
+		analyseAddExceptionList(filter(
+				Matchers.instanceOf(ModalExceptionAdd.class),
+				modal.getExceptions()));
 	}
 
-	
-	private void analyseExceptionList(List exceptionList) throws Exception {
-		for (int i = 0; i < exceptionList.size(); i++) {
-			ModalExceptionType modalExceptionType = new ModalExceptionType();
-			modalExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
-			inflectedItem = modalExceptionType.getTransliterated();
-			surface = modalExceptionType.getUndotted();
-			register = modalExceptionType.getRegister();
-			spelling = modalExceptionType.getSpelling();
-			gender = modalExceptionType.getGender();
-			number = modalExceptionType.getNumber();
-			tense = modalExceptionType.getTense();
-			
-			basePerson = modalExceptionType.getPerson();
+	private void analyseAddExceptionList(List<ModalException> exceptions) {
+		for (ModalException ex : exceptions) {
+			inflectedItem = ex.getTransliterated();
+			surface = ex.getUndotted();
+			register = RegisterType.fromValue(ex.getRegister().value());
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			gender = GenderType.fromValue(ex.getGender().value());
+			number = NumberType.fromValue(ex.getNumber().value());
+			tense = TenseType.fromValue(ex.getTense().value());
+
+			basePerson = ex.getPerson();
 			populateDatabase();
-			if(tense.equals("beinoni")){
+			if (tense == TenseType.BEINONI) {
+
+				inflectedItem = "h" + inflectedItem;
+				surface = Transliteration.toHebrew(inflectedItem);
+				/* XXX: It was "s" before, not unspecified */
+				definitnessVal = DefinitenessType.UNSPECIFIED;
+				populateDatabase();
+			}
+
+			definitnessVal = DefinitenessType.UNSPECIFIED;
+		}
+	}
+
+	protected List<ModalException> getReplaceExceptions() {
+		return filter(Matchers.instanceOf(ModalExceptionReplace.class),
+				modal.getExceptions());
+	}
+
+	protected boolean replaceExceptionExist() {
+		for (ModalException ex : getReplaceExceptions()) {
+			GenderType exGender = GenderType.fromValue(ex.getGender().value());
+			NumberType exNumber = NumberType.fromValue(ex.getNumber().value());
+			String exPerson = ex.getPerson();
+			/* XXX: Tense isn't used here -- is that OK? */
+			@SuppressWarnings("unused")
+			TenseType exTense = TenseType.fromValue(ex.getTense().value());
+			if (exGender.equals(gender) && exNumber.equals(number)
+					&& exPerson.equals(basePerson)) {
 				
-				inflectedItem="h" +inflectedItem;
-				surface=Translate.Eng2Heb(inflectedItem);
-				System.out.println(surface);
-				definitnessVal = "s";
+				inflectedItem = ex.getTransliterated();
+				surface = ex.getUndotted();
+				register = RegisterType.fromValue(ex.getRegister().value());
 				populateDatabase();
-			}
-			
-			definitnessVal = "unspecified";
-		}
-	}
-
-	protected boolean replaceExceptionExist() throws Exception {
-		boolean match = false;
-		for (int i = 0; i < replaceExceptionList.size(); i++) {
-			System.out.println("********************************");
-			ModalExceptionType modalExceptionType = new ModalExceptionType();
-			modalExceptionType.open(((Integer) replaceExceptionList.get(i))
-					.intValue());
-			String exceptionGender = modalExceptionType.getGender();
-			String exceptionNumber = modalExceptionType.getNumber();
-			String exceptionPerson = modalExceptionType.getPerson();
-			String exceptionTense = modalExceptionType.getTense();
-			System.out.println("exceptionNumber=" + exceptionNumber);
-			System.out.println("exceptionPerson=" + exceptionPerson);
-			System.out.println("exceptionGender=" + exceptionGender);
-			System.out.println("exceptionTense=" + exceptionTense);
-			if (exceptionGender.equals(gender)
-					&& exceptionNumber.equals(number)
-					&& exceptionPerson.equals(basePerson)) {
-				inflectedItem = modalExceptionType.getTransliterated();
-				surface = modalExceptionType.getUndotted();
-				register = modalExceptionType.getRegister();
-				populateDatabase();
-				match = true;
-				break;
+				return true;
 			}
 		}
-		return match;
+		return false;
 	}
-	
-	public ModalGen(ItemType item) {
-		super(item);
-		
-	}
-
 
 	private void analyse() {
 		analyseItem();
-		definitnessVal = "unspecified";
+		definitnessVal = DefinitenessType.UNSPECIFIED;
 	}
 
-	public void inflect() throws Exception {
+	public List<Inflection> inflect() {
+		/* XXX: I don't see remove functionality here */
 		analyse();
-		replaceException();
 		inflectedItem = transliterated;
 		surface = undot;
-		gender = item.getModal().getGender();
-		number = item.getModal().getNumber();
-		inflectionType = item.getModal().getInflectionType();
-		tense= item.getModal().getTense();
-		if(inflectionType.equals("genderNumberTime"))
+		gender = GenderType.fromValue(modal.getGender().value());
+		number = NumberType.fromValue(modal.getNumber().value());
+		inflectionType = modal.getInflectionType().value();
+		tense = TenseType.fromValue(modal.getTense().value());
+		if (inflectionType.equals("genderNumberTime"))
 			basePerson = "3";
-		else if(inflectionType.equals("genderNumber"))
-			basePerson ="any";
+		else if (inflectionType.equals("genderNumber"))
+			basePerson = "any";
 		else
-			basePerson ="unspecified";
-		
+			basePerson = "unspecified";
 		populateDatabase();
-		if(tense.equals("beinoni")){
-			inflectedItem="h" +inflectedItem;
-			surface=Translate.Eng2Heb(inflectedItem);
-			System.out.println(surface);
-			definitnessVal = "s";
+		if (tense == TenseType.BEINONI) {
+			inflectedItem = "h" + inflectedItem;
+			surface = Transliteration.toHebrew(inflectedItem);
+			/* XXX: It was "s" before, not unspecified */
+			definitnessVal = DefinitenessType.UNSPECIFIED;
 			populateDatabase();
 		}
-		
-		definitnessVal = "unspecified";
-	
-		if(inflectionType.equals("genderNumber")){
-			String suffix ="";
-			StringTokenizer genderSt= new StringTokenizer(genderList,",");
-			StringTokenizer numberSt= new StringTokenizer(numberList,",");
-			StringTokenizer suffixSt= new StringTokenizer(suffixList,","); 
-			while(suffixSt.hasMoreTokens()){
-				suffix= suffixSt.nextToken();
-				gender = genderSt.nextToken();
-				number = numberSt.nextToken();
+
+		definitnessVal = DefinitenessType.UNSPECIFIED;
+
+		if (inflectionType.equals("genderNumber")) {
+			StringTokenizer genderSt = new StringTokenizer(genderList, ",");
+			StringTokenizer numberSt = new StringTokenizer(numberList, ",");
+			StringTokenizer suffixSt = new StringTokenizer(suffixList, ",");
+			while (suffixSt.hasMoreTokens()) {
+				String suffix = suffixSt.nextToken();
+				gender = GenderType.fromValue(genderSt.nextToken());
+				number = NumberType.fromValue(numberSt.nextToken());
 				basePerson = "any";
 				inflectedItem = transliterated + suffix;
-				surface = Translate.Eng2Heb(inflectedItem);
-				if(!replaceExceptionExist())
-				populateDatabase();
+				surface = Transliteration.toHebrew(inflectedItem);
+				if (!replaceExceptionExist())
+					populateDatabase();
 			}
-			
-		}
-		
-		addException();
-	}
 
+		}
+
+		addException();
+		return this.getGeneratedInflections();
+	}
 
 }

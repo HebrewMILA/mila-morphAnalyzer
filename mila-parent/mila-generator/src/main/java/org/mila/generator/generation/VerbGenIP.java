@@ -1,49 +1,63 @@
-/*
- * Created on 05/09/2005
- *
- * TODO To change the template for this generated file go to
- * Window - Preferences - Java - Code Style - Code Templates
- */
 package org.mila.generator.generation;
 
+import static ch.lambdaj.Lambda.filter;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-import lexicon.contents.exception_types.VerbExceptionType;
-import lexicon.dbUtils.Inflections;
-import lexicon.stringUtils.StrUtils;
-import lexicon.stringUtils.Translate;
 
-/**
- * @author daliabo
- * 
- * TODO To change the template for this generated  comment go to Window -
- * Preferences - Java - Code Style - Code Templates
- */
-public class VerbGenIP implements VerbInterface 
-{
+import javax.persistence.EntityManager;
+
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.BinyanType;
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.PolarityType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.corpus.TenseType;
+import org.mila.entities.corpus.TriStateType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Valence;
+import org.mila.entities.lexicon.VerbException;
+import org.mila.entities.lexicon.VerbExceptionAdd;
+import org.mila.entities.lexicon.VerbExceptionRemove;
+import org.mila.entities.lexicon.VerbExceptionReplace;
+import org.mila.entities.lexicon.VerbLexicon;
+import org.mila.generator.utils.Transliteration;
+
+import edu.emory.mathcs.backport.java.util.Collections;
+
+public class VerbGenIP implements VerbInterface {
+	private static enum ExcpType {
+		ADD, REPLACE, REMOVE
+	}
+
 	private String root = "";
 	private String inflectedVerb = null;
 	private String surface = "";
-	private String register = "";
-	private String spelling = "";
+	private RegisterType register;
+	private SpellingType spelling;
 	private String baseTransliterated = "";
 	private String baseUndot = "";
 	private String baseLexiconPointer = "";
-	private String tense = "";
-	private String binyan = "";
-	private String PGN = "";
+	private TenseType tense;
+	private BinyanType binyan;
+	private String possessive = "";
 	private String hebRoot = "";
-	private String construct = "";
+	private TriStateType construct;
 	private String pos = "verb";
-	private String baseDefiniteness = "f";
-	private String baseNumber;
-	private String baseGender;
+	private DefinitenessType baseDefiniteness = DefinitenessType.FALSE;
+	private NumberType baseNumber;
+	private GenderType baseGender;
 	private String basePerson;
-	private String valence;
+	private Valence valence;
 	private String dottedLexiconItem;
 	private String participleType = "unspecified";
+
 	private int intInflectedPattern;
-	
 	StringTokenizer stPGN10 = null;
 	StringTokenizer stPerson10 = null;
 	StringTokenizer stGender10 = null;
@@ -52,13 +66,10 @@ public class VerbGenIP implements VerbInterface
 	StringTokenizer stNumber4 = null;
 	StringTokenizer stPerson4 = null;
 	StringTokenizer stPGNBeinoni = null;
+
 	StringTokenizer stPGNImperative = null;
 
-	public List replaceExceptionList = null;
-	public List removeExceptionList = null;
-	public String suffixFunction = "unspecified";
-	private String definitenessVal = "f";
-
+	public SuffixFunctionType suffixFunction = SuffixFunctionType.UNSPECIFIED;
 	boolean inflectInfinitivel;
 	boolean inflectInfinitiveb;
 	boolean inflectBeinoni;
@@ -72,241 +83,27 @@ public class VerbGenIP implements VerbInterface
 	boolean replaceRemoveInfinitive = false;
 	boolean inflectInfinitiveIndependent = false;
 	boolean exceptionInflectBeinoniPossessive = false;
+
 	boolean bareInfinitiveException = false;
-	
 	String table = "";
+	protected EntityManager inflections;
 
-	/**
-	 * @param intInflectedPattern
-	 *            The intInflectedPattern to set.
-	 */
-	public void setIntInflectedPattern(int intInflectedPattern) 
-	{
-		this.intInflectedPattern = intInflectedPattern;
+	protected EntityManager lexicon;
+	private VerbLexicon verb;
+	private List<Inflection> generatedInflections;
+
+	@SuppressWarnings("unchecked")
+	public List<Inflection> getGeneratedInflections() {
+		return Collections.unmodifiableList(generatedInflections);
 	}
 
-	/**
-	 * @return Returns the hebRoot.
-	 */
-	public String getHebRoot() 
-	{
-		return hebRoot;
-	}
-
-	/**
-	 * @param hebRoot
-	 *            The hebRoot to set.
-	 */
-	public void setHebRoot(String hebRoot) 
-	{
-		this.hebRoot = hebRoot;
-	}
-
-	public VerbGenIP(String root) 
-	{
+	public VerbGenIP(final String root, final VerbLexicon verb,
+			final EntityManager inflections, final EntityManager lexicon) {
 		this.root = root;
-	}
-
-	/**
-	 * This methos handles filling the inflection record with values to be
-	 * inserted to the database
-	 * 
-	 * @throws Exception
-	 */
-	private void populateDBTable() throws Exception 
-	{
-		Inflections inf = new Inflections();
-		inf.setRegister(this.register);
-		inf.setSpelling(this.spelling);
-		inf.setBasePos(pos);
-		inf.setBaseUndottedLItem(baseUndot);
-		inf.setBaseTransliteratedLItem(baseTransliterated);
-		inf.setBaseundottedLItem(baseUndot);
-		inf.setBaseLexiconPointer(baseLexiconPointer);
-		inf.setBinyan(binyan);
-		inf.setRoot(hebRoot);
-		inf.setTense(tense);
-		inf.setPGN(PGN);
-		inf.setSuffixStatus(construct);
-		inf.setBaseGender(baseGender);
-		inf.setBaseNumber(baseNumber);
-		inf.setBasePerson(basePerson);
-		inf.setBaseDefinitness(baseDefiniteness);
-		inf.setSurface(this.surface);
-		inf.setTransliterated(this.inflectedVerb);
-		inf.setSuffixFunction(suffixFunction);
-		inf.setDottedLexiconItem(dottedLexiconItem);
-		inf.setType(participleType);
-		inf.setPolarity("u"); //unspecified
-		inf.setValue("");
-		inf.setTable(this.table);
-		inf.insertItem();
-	}
-
-	/**
-	 * This method is used for handling remove and replace exceptions <br>
-	 * It checks whether there is a matching value for the current generated
-	 * form <br>
-	 * The decision is taken by testing the PGN,tense and accusation values <br>
-	 * 
-	 * @param PGN -
-	 *            person/gender/number value generated by the generation program
-	 * @param tense -
-	 *            the tense of the generated form
-	 * @param accusativeSuffix -
-	 *            currently we are not handling accusative values
-	 * @param exceptionList -
-	 *            remove/replace exception list for the current lexicon item
-	 * @param action -
-	 *            remove/replace
-	 * @return - boolean value: true - replacement/removement has been done
-	 * @throws Exception
-	 */
-	public boolean replaceRemoveException(String GeneratedPGN, String tense,
-			String baseGender, String baseNumber, String basePerson,
-			List exceptionList, boolean beinoniConstruct, int action) throws Exception 
-		{
-		boolean match = false;
-		String orifinalInflectedVerb = inflectedVerb;
-		if (exceptionList != null) 
-		{
-			int size = exceptionList.size();
-			for (int i = 0; i < size; i++) 
-			{
-				VerbExceptionType verbExceptionType = new VerbExceptionType();
-				verbExceptionType.open(((Integer) exceptionList.get(i)).intValue());
-				String exceptionTense = verbExceptionType.getTense();
-				String exceptionGender = verbExceptionType.getGender();
-				String exceptionNumber = verbExceptionType.getNumber();
-				String exceptionPerson = verbExceptionType.getPerson();
-				
-				if(exceptionPerson.equals("3") && (tense.equals("beinoni") || tense.equals("beinoniPaul")))
-					exceptionPerson="any";
-
-				boolean exceptioniBeinoniConstruct = verbExceptionType.isBeinoniConstruct();
-				exceptionInflectBeinoniPossessive = verbExceptionType.isInflectBeinoniPossessive();
-
-				String exceptionPGN = verbExceptionType.getPgn();
-				/*System.out.println("----------------------------");
-				System.out.println(action + " handling");
-				System.out.println("exceptionTense =" + exceptionTense);
-				System.out.println("exceptionGender =" + exceptionGender);
-				System.out.println("exceptionNumber =" + exceptionNumber);
-				System.out.println("exceptionPerson =" + exceptionPerson);
-
-				System.out.println("exceptionPGN =" + exceptionPGN);
-				System.out.println("exceptioniBeinoniConstruct ="
-						+ exceptioniBeinoniConstruct);
-				System.out.println("tense =" + tense);
-				System.out.println("baseGender =" + baseGender);
-				System.out.println("baseNumber =" + baseNumber);
-				System.out.println("basePerson =" + basePerson);
-				System.out.println("GeneratedPGN  =" + GeneratedPGN);
-				System.out.println("beinoniConstruct  =" + beinoniConstruct);
-				System.out.println("exceptionInflectBeinoniPossessive  ="+ exceptionInflectBeinoniPossessive);
-				*/
-				if (exceptionTense.equals(tense)
-						&& (exceptionGender.equals(baseGender)
-								&& exceptionNumber.equals(baseNumber) && exceptionPerson.equals(basePerson))
-						&& (exceptionPGN.equals(GeneratedPGN))
-						&& (beinoniConstruct == exceptioniBeinoniConstruct) ) 
-				{
-
-					if (action == 1) 
-					{
-						//System.out.println("exception action = replace ");
-						inflectedVerb = verbExceptionType.getTransliterated();
-						surface = Translate.Eng2Heb(inflectedVerb);
-						//System.out.println("exception transliterated  ="+ inflectedVerb);
-						//System.out.println("exception transliterated  ="+ surface);
-						if (tense.equals("infinitive")) 
-						{
-							//בודקים בכל"מ
-							if (inflectedVerb.charAt(0) == orifinalInflectedVerb.charAt(0)) 
-							{
-								populateDBTable();
-								match = true;
-							} 
-							else 
-							{
-								inflectedVerb = orifinalInflectedVerb;
-								surface = Translate.Eng2Heb(inflectedVerb);
-							}
-						} 
-						else if (tense.equals("beinoni")) 
-						{
-							if (exceptionPGN.equals("unspecified")
-									&& !beinoniConstruct
-									&& baseDefiniteness.equals("f")) 
-							{
-								participleType = "noun";
-								populateDBTable();
-								participleType = "adjective";
-								populateDBTable();
-								participleType = "verb";
-								populateDBTable();
-							} 
-							else if (!exceptionPGN.equals("unspecified")|| beinoniConstruct) 
-							{
-								participleType = "noun";
-								populateDBTable();
-							} else if (baseDefiniteness.equals("tt")) 
-							{
-								participleType = "noun";
-								populateDBTable();
-								participleType = "adjective";
-								populateDBTable();
-								participleType = "verb";
-								baseDefiniteness = "s";
-								populateDBTable();
-							} else if (tense.equals("passiveParticiple")) 
-							{
-								if (exceptionPGN.equals("unspecified")
-										&& !beinoniConstruct
-										&& baseDefiniteness.equals("f")) 
-								{
-									participleType = "adjective";
-									populateDBTable();
-									participleType = "verb";
-									populateDBTable();
-								} 
-								else if (beinoniConstruct) 
-								{
-									participleType = "noun";
-									populateDBTable();
-								} 
-								else if (baseDefiniteness.equals("tt")) 
-								{
-									participleType = "noun";
-									populateDBTable();
-									participleType = "adjective";
-									populateDBTable();
-									participleType = "verb";
-									baseDefiniteness = "s";
-									populateDBTable();
-								}
-							}
-						} 
-						else 
-						{
-							populateDBTable();
-							match = true;
-						}
-						//System.out.println("----------------------------");
-						return match;
-					} 
-					else if (action == 2) 
-					{
-						System.out.println("exception action = remove ");
-						match = true;
-						//System.out.println("----------------------------");
-						return match;
-					}
-				}
-			}
-		}
-		//System.out.println("----------------------------");
-		return match;
+		this.inflections = inflections;
+		this.lexicon = lexicon;
+		this.verb = verb;
+		this.generatedInflections = new ArrayList<Inflection>();
 	}
 
 	/**
@@ -314,344 +111,770 @@ public class VerbGenIP implements VerbInterface
 	 * It scans the addExceptionList and populate the database with each of the
 	 * values
 	 * 
-	 * @param exceptionList -
-	 *            addExceptionList
+	 * @param exceptionList
+	 *            - addExceptionList
 	 * @throws Exception
 	 */
-	public void AddException(List exceptionList) throws Exception 
-	{
-		//System.out.println("exceptionList.size()" + exceptionList.size());
-		StringTokenizer accusativeTokens = null;
-		StringTokenizer PGNTokens = null;
-		int size = exceptionList.size();
-		for (int i = 0; i < size; i++) 
-		{
-			VerbExceptionType verbExceptionType = new VerbExceptionType();
-			verbExceptionType.open(((Integer) exceptionList.get(i)).intValue());
-			pos = "verb";
-			baseGender = verbExceptionType.getGender();
-			baseNumber = verbExceptionType.getNumber();
-			basePerson = verbExceptionType.getPerson();
-			spelling = verbExceptionType.getSpelling();
-			register = verbExceptionType.getRegister();
-			surface = verbExceptionType.getUndotted();
-			//System.out.println(surface);
-			inflectedVerb = verbExceptionType.getTransliterated();
-			tense = verbExceptionType.getTense();
-			PGN = verbExceptionType.getPgn();
-			suffixFunction="unspecified";
-			boolean isBeinoniConstruct = verbExceptionType.isBeinoniConstruct();
-			//החלטנו לא לייצר מקור
-			if (tense.equals("bareInfinitive"))
-				continue;
-			if (tense.equals("beinoni")) 
-			{
-				pos = "participle";
-				if (isBeinoniConstruct) 
-				{
-					suffixFunction = "unspecified";
-					baseDefiniteness = "tf";
-					participleType = "noun";
-					construct = "true";
-				} 
-				else if (!PGN.equals("unspecified")) 
-				{
-					suffixFunction = "possessive";
-					baseDefiniteness = "tf";
-					participleType = "noun";
-					construct = "unspecified";
+	public void addException(final VerbException excp) {
+		this.pos = "verb";
+		this.baseGender = GenderType.fromValue(excp.getGender().value());
+		this.baseNumber = NumberType.fromValue(excp.getNumber().value());
+		this.basePerson = excp.getPerson();
+		this.spelling = SpellingType.fromValue(excp.getSpelling().value());
+		this.register = RegisterType.fromValue(excp.getRegister().value());
+		this.surface = excp.getUndotted();
+		// System.out.println(surface);
+		this.inflectedVerb = excp.getTransliterated();
+		this.tense = TenseType.fromValue(excp.getTense().value());
+		this.possessive = excp.getPossessive();
+		this.suffixFunction = SuffixFunctionType.UNSPECIFIED;
+		final boolean isBeinoniConstruct = excp.isBeinoniConstruct();
+		// החלטנו לא לייצר מקור
+		if (this.tense == TenseType.BARE_INFINITIVE)
+			return;
+		if (this.tense == TenseType.BEINONI) {
+			this.pos = "participle";
+			if (isBeinoniConstruct) {
+				this.suffixFunction = SuffixFunctionType.UNSPECIFIED;
+				this.baseDefiniteness = DefinitenessType.FALSE;
+				this.participleType = "noun";
+				this.construct = TriStateType.TRUE;
+			} else if (!this.possessive.equals("unspecified")) {
+				this.suffixFunction = SuffixFunctionType.POSSESSIVE;
+				this.baseDefiniteness = DefinitenessType.TRUE;
+				this.participleType = "noun";
+				this.construct = TriStateType.UNSPECIFIED;
 
-				} 
-				else if (PGN.equals("unspecified")) 
-				{
-					construct = "false";
-					suffixFunction = "unspecified";
-					participleType = "noun";
-					populateDBTable();
-					participleType = "adjective";
-					populateDBTable();
-					participleType = "verb";
-					populateDBTable();
-				}
-
-			} 
-			else if (tense.equals("infinitive")) 
-			{
-				construct = "unspecified";
-				participleType = "unspecified";
-				//handle inflected infinitive
-				if (!PGN.equals("unspecified")) 
-				{
-					suffixFunction = "accusative or nominative";
-					baseDefiniteness = "f";
-
-					//handle non inflected infinitive
-				} 
-				else if (PGN.equals("unspecified")) 
-				{
-					suffixFunction = "unspecified";
-					baseDefiniteness = "f";
-				}
-				populateDBTable();
-			} 
-			else if (tense.equals("passiveParticiple")) 
-			{
-				pos = "passiveParticiple";
-				tense = "beinoni";
-				basePerson = "any";
-				PGN = "unspecified";
-				participleType = "adjective";
-				if (isBeinoniConstruct) 
-				{
-					baseDefiniteness = "tf";
-					construct = "true";
-				} 
-				else
-					construct = "false";
-				populateDBTable();
+			} else if (this.possessive.equals("unspecified")) {
+				this.construct = TriStateType.FALSE;
+				this.suffixFunction = SuffixFunctionType.UNSPECIFIED;
+				this.participleType = "noun";
+				this.populateDBTable();
+				this.participleType = "adjective";
+				this.populateDBTable();
+				this.participleType = "verb";
+				this.populateDBTable();
 			}
-			else
-				populateDBTable();
 
-			boolean exceptioniBeinoniDefiniteness = verbExceptionType.isBeinoniDefiniteness();
-			if (exceptioniBeinoniDefiniteness) 
-			{
-				inflectedVerb = "h" + verbExceptionType.getTransliterated();
-				surface = Translate.Eng2Heb(inflectedVerb);
-				//System.out.println("exception transliterated  ="+ inflectedVerb);
-				baseDefiniteness = "tt";
-				participleType = "noun";
-				populateDBTable();
-				participleType = "adjective";
-				populateDBTable();
-				participleType = "verb";
-				baseDefiniteness = "s";
-				populateDBTable();
+		} else if (this.tense == TenseType.INFINITIVE) {
+			this.construct = TriStateType.UNSPECIFIED;
+			this.participleType = "unspecified";
+			// handle inflected infinitive
+			if (!this.possessive.equals("unspecified")) {
+				this.suffixFunction = SuffixFunctionType.ACCUSATIVE_OR_NOMINATIVE;
+				this.baseDefiniteness = DefinitenessType.FALSE;
+
+				// handle non inflected infinitive
+			} else if (this.possessive.equals("unspecified")) {
+				this.suffixFunction = SuffixFunctionType.UNSPECIFIED;
+				this.baseDefiniteness = DefinitenessType.FALSE;
+			}
+			this.populateDBTable();
+		} else if (this.tense == TenseType.PASSIVE_PARTICIPLE) {
+			this.pos = "passiveParticiple";
+			this.tense = TenseType.BEINONI;
+			this.basePerson = "any";
+			this.possessive = "unspecified";
+			this.participleType = "adjective";
+			if (isBeinoniConstruct) {
+				this.baseDefiniteness = DefinitenessType.FALSE;
+				this.construct = TriStateType.TRUE;
+			} else {
+				this.construct = TriStateType.FALSE;
+			}
+			this.populateDBTable();
+		} else {
+			this.populateDBTable();
+		}
+
+		final boolean exceptioniBeinoniDefiniteness = excp
+				.isBeinoniDefiniteness();
+		if (exceptioniBeinoniDefiniteness) {
+			this.inflectedVerb = "h" + excp.getTransliterated();
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			// System.out.println("exception transliterated  ="+
+			// inflectedVerb);
+			this.baseDefiniteness = DefinitenessType.TRUE;
+			this.participleType = "noun";
+			this.populateDBTable();
+			this.participleType = "adjective";
+			this.populateDBTable();
+			this.participleType = "verb";
+			this.baseDefiniteness = DefinitenessType.UNSPECIFIED;
+			this.populateDBTable();
+		}
+	}
+
+	public void addExceptions(final List<VerbException> addExceptions) {
+		for (final VerbException excp : addExceptions) {
+			this.addException(excp);
+		}
+
+	}
+
+	/**
+	 * This method generate the possessive form out of the 123/M/Sg form
+	 * 
+	 * @param base
+	 *            - the base form from which the possessive form will be created
+	 * @throws Exception
+	 */
+	public void generateAccusativeNominative(final String base) {
+
+		StringTokenizer stSuff = null;
+		String suff;
+
+		this.setAttributes(this.tense, this.pos, "unspecified",
+				this.basePerson, this.baseGender, this.baseNumber,
+				TriStateType.FALSE, "unspecified",
+				SuffixFunctionType.ACCUSATIVE_OR_NOMINATIVE, "unspecified",
+				"unspecified", "unspecified", DefinitenessType.FALSE);
+		this.stPGN10 = new StringTokenizer(PGNTokens10, ",");
+
+		if (this.baseGender == GenderType.FEMININE
+				&& this.baseNumber == NumberType.PLURAL) {
+			suff = suffixFPlural;
+		} else if (this.baseGender == GenderType.MASCULINE
+				&& this.baseNumber == NumberType.PLURAL) {
+			suff = suffixMPlural;
+		} else {
+			suff = suffixSingular;
+		}
+		// System.out.println("suff=" + suff);
+		stSuff = new StringTokenizer(suff, ",");
+		String suffPossessive;
+		while (this.stPGN10.hasMoreTokens()) {
+			this.possessive = this.stPGN10.nextToken();
+			suffPossessive = stSuff.nextToken();
+			if (suffPossessive.equals("-")) {
+				suffPossessive = "";
+			}
+			this.inflectedVerb = base + suffPossessive;
+
+			if (this.inflectInfinitiveb) {
+				if (this.inflectInfinitiveIndependent) {
+					this.pos = "indInf";
+					// System.out.println(inflectedVerb);
+					this.surface = Transliteration.toHebrew(this.inflectedVerb);
+					// System.out.print("surface =" + surface);
+					// System.out.println();
+					this.populateDBTable();
+					this.pos = "verb";
+				}
+			}
+
+			// generate l + inflectedInfinitive just for יוצא or עומד with
+			// inflectInfinitive = true
+			if (this.inflectInfinitivel) {
+				this.inflectedVerb = "l" + this.inflectedVerb;
+				// System.out.println(inflectedVerb);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				this.populateDBTable();
+			}
+
+			// generate b+ inflectedInfinitive for all verbs
+			if (this.inflectInfinitiveb) {
+				if (this.inflectInfinitivel) {
+					this.inflectedVerb = "b" + this.inflectedVerb.substring(1);
+				} else {
+					this.inflectedVerb = "b" + this.inflectedVerb;
+				}
+				// System.out.println(inflectedVerb);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				this.populateDBTable();
 			}
 		}
 	}
 
-	private void setAttributes(String tense, String pos, String PGN,
-			String basePerson, String baseGender, String baseNumber,
-			String construct, String accusativeSuffix, String suffixFunction,
-			String suffixNumber, String suffixGender, String suffixPerson,
-			String baseDefiniteness) {
-		this.tense = tense;
-		this.PGN = PGN;
-		this.pos = pos;
-		this.construct = construct;
-		this.basePerson = basePerson;
-		this.baseGender = baseGender;
-		this.baseNumber = baseNumber;
-		this.suffixFunction = suffixFunction;
-		this.baseDefiniteness = baseDefiniteness;
-		participleType = "unspecified";
-	}
-
-	public void generateBareInfinitive(String prefix, String inside,int index1, int index2, int index3, int index4, String suffix) throws Exception 
-	{
-	    //System.out.println("(F) VerbGenIP: generateBareInfinitive()");
-		if (inflectBareInfinitive) 
-		{
-			//Bare infinitive is like 'to infinitive' with out the 'to':
+	public void generateBareInfinitive(final String prefix,
+			final String inside, final int index1, final int index2,
+			final int index3, final int index4, final String suffix) {
+		// System.out.println("(F) VerbGenIP: generateBareInfinitive()");
+		if (this.inflectBareInfinitive) {
+			// Bare infinitive is like 'to infinitive' with out the 'to':
 			// - by shuly definition לשמור -- שמור
-			setAttributes("bareInfinitive", "verb", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"unspecified", "f");
-			//System.out.println();
-			//System.out.println("generate bare infinitive");
+			this.setAttributes(TenseType.BARE_INFINITIVE, "verb",
+					"unspecified", "unspecified", GenderType.UNSPECIFIED,
+					NumberType.UNSPECIFIED, TriStateType.UNSPECIFIED,
+					"unspecified", SuffixFunctionType.UNSPECIFIED,
+					"unspecified", "unspecified", "unspecified",
+					DefinitenessType.FALSE);
+			// System.out.println();
+			// System.out.println("generate bare infinitive");
 			StringBuffer inflected = null;
 
-			inflected = new StringBuffer().append(prefix).append(root.substring(index1, index2)).append(inside).append(root.substring(index3, index4)).append(suffix);
+			inflected = new StringBuffer().append(prefix)
+					.append(this.root.substring(index1, index2)).append(inside)
+					.append(this.root.substring(index3, index4)).append(suffix);
 
-			inflectedVerb = inflected.toString();
-			surface = Translate.Eng2Heb(inflectedVerb);
-			if (!replaceRemoveException("unspecified", tense, "unspecified","unspecified", "unspecified", replaceExceptionList, false,REPLACE)
-				&& !replaceRemoveException("unspecified", tense,"unspecified", "unspecified", "unspecified",removeExceptionList, false, REMOVE))
-				populateDBTable();
-			//used for inflectPattern58() for נמס - if we enter exception type
+			this.inflectedVerb = inflected.toString();
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			if (!this.replaceRemoveException(this.getReplaceRemoveExceptions())) {
+				this.populateDBTable();
+			}
+			// used for inflectPattern58() for נמס - if we enter exception type
 			// of tense bareInfinitive we will create duplicates
-			else
-				bareInfinitiveException = true;
+			else {
+				this.bareInfinitiveException = true;
+			}
 
-			//System.out.println("(F) VerbGenIP: generateBareInfinitive() generate infinitive without prefix l - for bkm prefixes");
-		} 
-		else 
-		{
-			StringBuffer inflected = new StringBuffer().append(prefix).append(
-			        root.substring(index1, index2)).append(inside).append(root.substring(index3, index4)).append(suffix);
-			
-			inflectedVerb = inflected.toString();
-			//System.out.println("(F) VerbGenIP: generateBareInfinitive() -- "+inflectedVerb);
-			surface = Translate.Eng2Heb(inflectedVerb);
+		} else {
+			final StringBuffer inflected = new StringBuffer().append(prefix)
+					.append(this.root.substring(index1, index2)).append(inside)
+					.append(this.root.substring(index3, index4)).append(suffix);
+
+			this.inflectedVerb = inflected.toString();
+			// System.out.println("(F) VerbGenIP: generateBareInfinitive() -- "+inflectedVerb);
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
 		}
-		//השתנו הגדרות - לא נכון!!
-//		if (inflectInfinitiveIndependent) {
-//			setAttributes("infinitive", "verb", "unspecified", "unspecified",
-//					"unspecified", "unspecified", "unspecified", "unspecified",
-//					"unspecified", "unspecified", "unspecified", "unspecified",
-//					"f");
-//
-//			if (!replaceRemoveException("unspecified", tense, "unspecified",
-//					"unspecified", "unspecified", replaceExceptionList, false,
-//					REPLACE)
-//					&& !replaceRemoveException("unspecified", tense,
-//							"unspecified", "unspecified", "unspecified",
-//							removeExceptionList, false, REMOVE)) {
-//				replaceRemoveInfinitive = false;
-//				populateDBTable();
-//			} else
-//				replaceRemoveInfinitive = true;
-//		}
+	};
 
+	/**
+	 * This method generate the beinoni paul (only for binyan Paal)
+	 * 
+	 * @param passiveBase
+	 *            - the base form on which the generation works
+	 * @throws Exception
+	 */
+	@Override
+	public void generateBeinoniPassive(final String passiveBase) {
+		if (this.valence != Valence.INTRANSITIVE_WITHOUT_PAUL
+				&& this.valence != Valence.TRANSITIVE_WITHOUT_PAUL) {
+
+			StringTokenizer stSuff = null;
+			StringTokenizer stNumber4 = null;
+			StringTokenizer stGender4 = null;
+
+			final String passivSuff = "-,h,im,wt";
+			stSuff = new StringTokenizer(passivSuff, ",");
+			stNumber4 = new StringTokenizer(numberTokens4, ",");
+			stGender4 = new StringTokenizer(genderTokens4, ",");
+			boolean constructFlag = false;
+
+			while (stSuff.hasMoreTokens()) {
+				this.setAttributes(TenseType.BEINONI, "passiveParticiple",
+						"unspecified", "any", GenderType.UNSPECIFIED,
+						NumberType.UNSPECIFIED, TriStateType.FALSE,
+						"unspecified", SuffixFunctionType.UNSPECIFIED,
+						"unspecified", "unspecified", "unspecified",
+						DefinitenessType.FALSE);
+				this.baseNumber = NumberType.fromValue(stNumber4.nextToken());
+				this.baseGender = GenderType.fromValue(stGender4.nextToken());
+				String suffix = stSuff.nextToken();
+				if (suffix.equals("-")) {
+					suffix = "";
+				}
+				final StringBuffer inflect = new StringBuffer().append(
+						passiveBase).append(suffix);
+				this.inflectedVerb = inflect.toString();
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+
+				this.participleType = "adjective";
+
+				this.populateDBTable();
+
+				this.inflectedVerb = "h" + this.inflectedVerb;
+				this.setAttributes(TenseType.BEINONI, "passiveParticiple",
+						"unspecified", "any", this.baseGender, this.baseNumber,
+						TriStateType.FALSE, "unspecified",
+						SuffixFunctionType.UNSPECIFIED, "unspecified",
+						"unspecified", "unspecified", DefinitenessType.TRUE);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+
+				this.participleType = "noun";
+				this.populateDBTable();
+				this.participleType = "adjective";
+				this.populateDBTable();
+				this.participleType = "verb";
+				this.baseDefiniteness = DefinitenessType.UNSPECIFIED; // subcoordination
+				this.populateDBTable();
+
+				// System.out.println("h+ participle =" + inflectedVerb);
+				this.setAttributes(TenseType.BEINONI, "passiveParticiple",
+						"unspecified", this.basePerson, this.baseGender,
+						this.baseNumber, TriStateType.FALSE, "unspecified",
+						SuffixFunctionType.UNSPECIFIED, "unspecified",
+						"unspecified", "unspecified", DefinitenessType.FALSE);
+				this.inflectedVerb = inflect.toString();
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+
+				if (!constructFlag) {
+					// morphological changes
+					String base = "";
+					if (this.root.charAt(1) == 'w'
+							|| this.root.charAt(1) == 'i') {
+						base = passiveBase;
+					} else if (this.root.charAt(2) == 'h'
+							|| this.root.charAt(2) == 'i') {
+						base = this.root.substring(0, 2) + "wi";
+					} else if (this.root.charAt(2) == 'a'
+							&& passiveBase.charAt(3) == 'a') {
+						base = this.root.substring(0, 2) + "w"
+								+ this.root.substring(2);
+					} else if (this.root.charAt(2) == 'a'
+							&& passiveBase.charAt(3) == 'i') {
+						base = this.root.substring(0, 2) + "wi";
+					} else {
+						base = this.root.substring(0, 2) + "w"
+								+ this.root.substring(2);
+					}
+					this.generateConstructAndPossessive(base, false);
+					constructFlag = true;
+				}
+			}
+		}
+	}
+
+	/**
+	 * This method generates the construct form out of the 123/M/Sg form
+	 * 
+	 * @param base
+	 *            - the 123/M/Sg form
+	 * @param possessiveFlag
+	 *            - for Nifal,Pual,Hufal - false - because we will not generete
+	 *            the possessive form
+	 * @throws Exception
+	 */
+	@Override
+	public void generateConstructAndPossessive(String base,
+			final boolean possessiveFlag) {
+		if (this.inflectBeinoniConstruct) {
+			String passivSuff = "";
+			// System.out.println();
+			// System.out.println("generateConstructAndPossessive");
+			StringTokenizer stSuff = null;
+			if (base.endsWith("wwh")) {
+				passivSuff = "h,it,i,t";
+			} else if (base.endsWith("h")) {
+				passivSuff = "h,t,i,wt";
+			} else {
+				passivSuff = "-,t,i,wt";
+			}
+			this.stNumber4 = new StringTokenizer(numberTokens4, ",");
+			this.stGender4 = new StringTokenizer(genderTokens4, ",");
+			this.stPerson4 = new StringTokenizer(personTokens4, ",");
+			// StringTokenizer stPGNTokensBeinoni = new StringTokenizer(
+			// PGNTokensBeinoni, ",");
+			stSuff = new StringTokenizer(passivSuff, ",");
+
+			// Morphological changes:
+			if (base.endsWith("h")) {
+				base = base.substring(0, base.length() - 1);
+			}
+			while (this.stNumber4.hasMoreTokens()) {
+				this.setAttributes(TenseType.BEINONI, this.pos, "unspecified",
+						this.basePerson, this.baseGender, this.baseNumber,
+						TriStateType.TRUE, "unspecified",
+						SuffixFunctionType.UNSPECIFIED, "unspecified",
+						"unspecified", "unspecified", DefinitenessType.FALSE);
+				this.baseNumber = NumberType.fromValue(this.stNumber4
+						.nextToken());
+				this.baseGender = GenderType.fromValue(this.stGender4
+						.nextToken());
+				this.basePerson = this.stPerson4.nextToken();
+				// possessive = stPGNTokensBeinoni.nextToken();
+				String suff = stSuff.nextToken();
+				if (suff.equals("-")) {
+					suff = "";
+				}
+
+				final StringBuffer inflected = new StringBuffer().append(base)
+						.append(suff);
+				this.inflectedVerb = inflected.toString();
+				// System.out.print("inflectedVerb =" + inflectedVerb);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				// System.out.print("surface =" + surface);
+				// System.out.println();
+
+				boolean rtRemove;
+				boolean rtReplace;
+				rtRemove = rtReplace = this.replaceRemoveException(this
+						.getReplaceRemoveExceptions());
+
+				if (!rtRemove && !rtReplace) {
+					// עבור צורות הנסמך תכונת היידוע לא רלבנטית
+					this.baseDefiniteness = DefinitenessType.UNSPECIFIED;
+					// רק שם עצם יכול להיות נסמך
+
+					if (this.surface.equals("קטוע")
+							|| this.surface.equals("נטול")) {
+						this.participleType = "adjective";
+					} else {
+						this.participleType = "noun";
+					}
+
+					this.populateDBTable();
+					this.baseDefiniteness = DefinitenessType.FALSE;
+					// possessive flag is false for nifal, hufal and pual - the
+					// possessive form will
+					// not be created for these binyanim
+					if (possessiveFlag && this.inflectBeinoniPossessive) {
+						this.generatePossessive(this.inflectedVerb);
+					}
+					// exceptionInflectBeinoniPossessive still doesn't work well
+					// - to do someday
+				} else if (rtReplace && possessiveFlag
+						&& this.exceptionInflectBeinoniPossessive) {
+					this.generatePossessive(this.inflectedVerb);
+				}
+			}
+		}
+	}
+
+	/**
+	 * This method generates the future form
+	 * 
+	 * @param prefix
+	 *            - concatenate to the begining of the root
+	 * @param suffix
+	 *            - concatenate to the end of the root
+	 * @param inside
+	 *            - concatenate to the middle of the root
+	 * @param index1
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index2
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index3
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @param index4
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @throws Exception
+	 */
+	@Override
+	public void generateFuture(final String prefix, final String suffix,
+			final String inside, final int index1, final int index2,
+			final int index3, final int index4) {
+		if (this.inflectFuture) {
+			StringTokenizer stIn = null;
+			final StringTokenizer stPre = new StringTokenizer(prefix, ",");
+			final StringTokenizer stSuff = new StringTokenizer(suffix, ",");
+			final String genderTokens10 = "masculine and feminine,masculine,feminine,masculine,feminine,masculine and feminine,masculine and feminine,feminine,masculine and feminine,feminine";
+			// final String PGNTokens10 =
+			// "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/MF/Pl,2p/F/Pl,3p/MF/Pl,3p/F/Pl";
+			this.stPerson10 = new StringTokenizer(personTokens10, ",");
+			this.stGender10 = new StringTokenizer(genderTokens10, ",");
+			this.stNumber10 = new StringTokenizer(numberTokens10, ",");
+
+			if (!inside.equals("")) {
+				stIn = new StringTokenizer(inside, ",");
+			}
+			this.stPGN10 = new StringTokenizer(PGNTokens10, ",");
+
+			String linside = "";
+			String lpreffix = "";
+			String lsuffix = "";
+
+			// System.out.println();
+			// System.out.println("generate future");
+
+			this.setAttributes(TenseType.FUTURE, "verb", "unspecified", "any",
+					GenderType.UNSPECIFIED, NumberType.UNSPECIFIED,
+					TriStateType.FALSE, "unspecified",
+					SuffixFunctionType.UNSPECIFIED, "unspecified",
+					"unspecified", "unspecified", DefinitenessType.FALSE);
+			while (stPre.hasMoreTokens()) {
+				lpreffix = stPre.nextToken();
+				if (lpreffix.equals("-")) {
+					lpreffix = "";
+				}
+				lsuffix = stSuff.nextToken();
+				if (lsuffix.equals("-")) {
+					lsuffix = "";
+				}
+				if (stIn != null) {
+					linside = stIn.nextToken();
+					if (linside.equals("-")) {
+						linside = "";
+					}
+				}
+
+				final StringBuffer inflected = new StringBuffer()
+						.append(lpreffix)
+						.append(this.root.substring(index1, index2))
+						.append(linside)
+						.append(this.root.substring(index3, index4))
+						.append(lsuffix);
+				this.inflectedVerb = inflected.toString();
+				// System.out.println("inflectedVerb =" + inflectedVerb);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				// System.out.println("surface =" + surface);
+				// System.out.println();
+
+				this.possessive = "unspecified";
+				this.basePerson = this.stPerson10.nextToken();
+				this.baseNumber = NumberType.fromValue(this.stNumber10
+						.nextToken());
+				this.baseGender = GenderType.fromValue(this.stGender10
+						.nextToken());
+				if (!this.replaceRemoveException(this
+						.getReplaceRemoveExceptions())) {
+					this.populateDBTable();
+				}
+				// ייצור צורת עתיד יחיד או רבים גוף שלישי עם י אחת במקום שתיים
+				if (this.binyan == BinyanType.NIF_AL) {
+					if (this.baseGender == GenderType.MASCULINE
+							&& this.baseNumber == NumberType.SINGULAR
+							&& this.basePerson.equals("3")
+							|| this.baseGender == GenderType.MASCULINE_AND_FEMININE
+							&& this.baseNumber == NumberType.PLURAL
+							&& this.basePerson.equals("3")) {
+						if (!this.replaceRemoveException(this
+								.getReplaceRemoveExceptions())) {
+							this.inflectedVerb = this.inflectedVerb
+									.substring(1);
+							// inflectedVerb = inflected.toString();
+							final SpellingType originalSpalling = this.spelling;
+							this.spelling = SpellingType.IRREGULAR;
+							this.surface = Transliteration
+									.toHebrew(this.inflectedVerb);
+							this.populateDBTable();
+							this.spelling = originalSpalling;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * This method generates the imperative form
+	 * 
+	 * @param suffix
+	 *            - concatenate to the end of the root
+	 * @param inside
+	 *            - concatenate to the middle of the root
+	 * @param index1
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index2
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index3
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @param index4
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @throws Exception
+	 */
+	@Override
+	public void generateImperative(final String prefix, final String suffix,
+			final String inside, final int index1, final int index2,
+			final int index3, final int index4) {
+		if (this.inflectImperative) {
+			StringTokenizer stIn = null;
+			StringTokenizer stSuff = null;
+
+			final String genderImperative = "masculine,feminine,masculine and feminine,feminine";
+
+			this.stGender4 = new StringTokenizer(genderImperative, ",");
+			this.stNumber4 = new StringTokenizer(numberTokens4, ",");
+			// stPGNImperative = new StringTokenizer(PGNTokensImperative, ",");
+			if (!inside.equals("")) {
+				stIn = new StringTokenizer(inside, ",");
+			}
+			stSuff = new StringTokenizer(suffix, ",");
+
+			String linside = "";
+			String lsuffix = "";
+			// System.out.println();
+			// System.out.println("generate imperative");
+
+			this.setAttributes(TenseType.IMPERATIVE, "verb", "unspecified",
+					"2", GenderType.UNSPECIFIED, NumberType.UNSPECIFIED,
+					TriStateType.FALSE, "unspecified",
+					SuffixFunctionType.UNSPECIFIED, "unspecified",
+					"unspecified", "unspecified", DefinitenessType.FALSE);
+			while (stSuff.hasMoreTokens()) {
+				if (stIn != null) {
+					linside = stIn.nextToken();
+					if (linside.equals("-")) {
+						linside = "";
+					}
+				}
+				lsuffix = stSuff.nextToken();
+				if (lsuffix.equals("-")) {
+					lsuffix = "";
+				}
+
+				final StringBuffer inflected = new StringBuffer()
+						.append(prefix)
+						.append(this.root.substring(index1, index2))
+						.append(linside)
+						.append(this.root.substring(index3, index4))
+						.append(lsuffix);
+				this.inflectedVerb = inflected.toString();
+				// System.out.println("inflectedVerb =" + inflectedVerb);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				// System.out.println("surface =" + surface);
+				// System.out.println();
+
+				// possessive = stPGNImperative.nextToken();
+				this.baseNumber = NumberType
+						.fromValue(this.stNumber4.nextToken());
+				this.baseGender = GenderType
+						.fromValue(this.stGender4.nextToken());
+				this.basePerson = "2";
+
+				if (!this.replaceRemoveException(this
+						.getReplaceRemoveExceptions())) {
+					this.populateDBTable();
+				}
+			}
+		}
 	}
 
 	/**
 	 * This method generate the infinitive form <br>
 	 * It creates (1) infinitive + possessive forms <br>
 	 * (2) l+ infinitive <br>
-	 * The infinitive is created from the prefix + root(index1,index2) + inside +
-	 * root(index3,index4) +suffix parts <br>
+	 * The infinitive is created from the prefix + root(index1,index2) + inside
+	 * + root(index3,index4) +suffix parts <br>
 	 * The indexes define the substringing of the root
 	 * 
-	 * @param prefix -
-	 *            concatenate to the begining of the root
-	 * @param inside -
-	 *            concatenate to the middle of the root
-	 * @param index1 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index2 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index3 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @param index4 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @param suffix -
-	 *            concatenate to the end of the root
+	 * @param prefix
+	 *            - concatenate to the begining of the root
+	 * @param inside
+	 *            - concatenate to the middle of the root
+	 * @param index1
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index2
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index3
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @param index4
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @param suffix
+	 *            - concatenate to the end of the root
 	 * @throws Exception
 	 */
-	public void generateInfinitive(String prefix, String inside, int index1,
-			int index2, int index3, int index4, String suffix) throws Exception 
-		{
-		//Bare infinitive is like 'to infinitive' with out the 'to':
+	@Override
+	public void generateInfinitive(final String prefix, final String inside,
+			final int index1, final int index2, final int index3,
+			final int index4, final String suffix) {
+		// Bare infinitive is like 'to infinitive' with out the 'to':
 		// - by shuly definition לשמור -- שמור
-		///////////////////bklm+non inflected infinitive//////////////
+		// /////////////////bklm+non inflected infinitive//////////////
 
-		if (inflectInfinitive) 
-		{
-			//System.out.println("(F)generateInfinitive generate l+infinitive");
-			setAttributes("infinitive", "verb", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"f");
+		if (this.inflectInfinitive) {
+			// System.out.println("(F)generateInfinitive generate l+infinitive");
+			this.setAttributes(TenseType.INFINITIVE, "verb", "unspecified",
+					"unspecified", GenderType.UNSPECIFIED,
+					NumberType.UNSPECIFIED, TriStateType.UNSPECIFIED,
+					"unspecified", SuffixFunctionType.UNSPECIFIED,
+					"unspecified", "unspecified", "unspecified",
+					DefinitenessType.FALSE);
 
-			StringBuffer inflected = new StringBuffer().append("l").append(inflectedVerb);
+			StringBuffer inflected = new StringBuffer().append("l").append(
+					this.inflectedVerb);
 
-			inflectedVerb = inflected.toString();
-			//System.out.println("(F)generateInfinitive inflectedVerb =" + inflectedVerb);
-			surface = Translate.Eng2Heb(inflectedVerb);
-			//System.out.println("(F)generateInfinitive surface =" + surface);
-			//System.out.println();
+			this.inflectedVerb = inflected.toString();
+			// System.out.println("(F)generateInfinitive inflectedVerb =" +
+			// inflectedVerb);
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			// System.out.println("(F)generateInfinitive surface =" + surface);
+			// System.out.println();
 
-			if (!replaceRemoveException("unspecified", tense, "unspecified",
-					"unspecified", "unspecified", replaceExceptionList, false,REPLACE)
-					&& !replaceRemoveException("unspecified", tense,
-							"unspecified", "unspecified", "unspecified",
-							removeExceptionList, false, REMOVE))
-				populateDBTable();
+			if (!this.replaceRemoveException(this.getReplaceRemoveExceptions())) {
+				this.populateDBTable();
+			}
 
-			//System.out.println("generate b+infinitive");
-			setAttributes("infinitive", "verb", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"f");
+			// System.out.println("generate b+infinitive");
+			this.setAttributes(TenseType.INFINITIVE, "verb", "unspecified",
+					"unspecified", GenderType.UNSPECIFIED,
+					NumberType.UNSPECIFIED, TriStateType.UNSPECIFIED,
+					"unspecified", SuffixFunctionType.UNSPECIFIED,
+					"unspecified", "unspecified", "unspecified",
+					DefinitenessType.FALSE);
 
-			inflected = new StringBuffer().append("b").append(inflectedVerb.substring(1));
+			inflected = new StringBuffer().append("b").append(
+					this.inflectedVerb.substring(1));
 
-			inflectedVerb = inflected.toString();
-			//System.out.println("(F)generateInfinitive inflectedVerb =" + inflectedVerb);
-			surface = Translate.Eng2Heb(inflectedVerb);
-			//System.out.println("(F)generateInfinitive surface =" + surface);
-			//System.out.println();
+			this.inflectedVerb = inflected.toString();
+			// System.out.println("(F)generateInfinitive inflectedVerb =" +
+			// inflectedVerb);
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			// System.out.println("(F)generateInfinitive surface =" + surface);
+			// System.out.println();
 
-			if (!replaceRemoveException("unspecified", tense, "unspecified",
-					"unspecified", "unspecified", replaceExceptionList, false,REPLACE)
-					&& !replaceRemoveException("unspecified", tense,
-							"unspecified", "unspecified", "unspecified",
-							removeExceptionList, false, REMOVE))
-				populateDBTable();
+			if (!this.replaceRemoveException(this.getReplaceRemoveExceptions())) {
+				this.populateDBTable();
+			}
 
-			//System.out.println("(F)generateInfinitive generate m+infinitive");
-			setAttributes("infinitive", "verb", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"f");
+			// System.out.println("(F)generateInfinitive generate m+infinitive");
+			this.setAttributes(TenseType.INFINITIVE, "verb", "unspecified",
+					"unspecified", GenderType.UNSPECIFIED,
+					NumberType.UNSPECIFIED, TriStateType.UNSPECIFIED,
+					"unspecified", SuffixFunctionType.UNSPECIFIED,
+					"unspecified", "unspecified", "unspecified",
+					DefinitenessType.FALSE);
 
-			inflected = new StringBuffer().append("m").append(inflectedVerb.substring(1));
+			inflected = new StringBuffer().append("m").append(
+					this.inflectedVerb.substring(1));
 
-			inflectedVerb = inflected.toString();
-			//System.out.println("(F)generateInfinitive inflectedVerb =" + inflectedVerb);
-			surface = Translate.Eng2Heb(inflectedVerb);
-			//System.out.println("(F)generateInfinitive surface =" + surface);
-			//System.out.println();
+			this.inflectedVerb = inflected.toString();
+			// System.out.println("(F)generateInfinitive inflectedVerb =" +
+			// inflectedVerb);
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			// System.out.println("(F)generateInfinitive surface =" + surface);
+			// System.out.println();
 
-			if (!replaceRemoveException("unspecified", tense, "unspecified",
-					"unspecified", "unspecified", replaceExceptionList, false,
-					REPLACE)
-					&& !replaceRemoveException("unspecified", tense,
-							"unspecified", "unspecified", "unspecified",
-							removeExceptionList, false, REMOVE))
-				populateDBTable();
+			if (!this.replaceRemoveException(this.getReplaceRemoveExceptions())) {
+				this.populateDBTable();
+			}
 
-			//System.out.println("(F)generateInfinitive generate k+infinitive");
-			setAttributes("infinitive", "verb", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"f");
+			// System.out.println("(F)generateInfinitive generate k+infinitive");
+			this.setAttributes(TenseType.INFINITIVE, "verb", "unspecified",
+					"unspecified", GenderType.UNSPECIFIED,
+					NumberType.UNSPECIFIED, TriStateType.UNSPECIFIED,
+					"unspecified", SuffixFunctionType.UNSPECIFIED,
+					"unspecified", "unspecified", "unspecified",
+					DefinitenessType.FALSE);
 
-			inflected = new StringBuffer().append("k").append(inflectedVerb.substring(1));
+			inflected = new StringBuffer().append("k").append(
+					this.inflectedVerb.substring(1));
 
-			inflectedVerb = inflected.toString();
-			//System.out.println("(F)generateInfinitive inflectedVerb =" + inflectedVerb);
-			surface = Translate.Eng2Heb(inflectedVerb);
-			//System.out.println("(F)generateInfinitive surface =" + surface);
-			//System.out.println();
+			this.inflectedVerb = inflected.toString();
+			// System.out.println("(F)generateInfinitive inflectedVerb =" +
+			// inflectedVerb);
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			// System.out.println("(F)generateInfinitive surface =" + surface);
+			// System.out.println();
 
-			if (!replaceRemoveException("unspecified", tense, "unspecified",
-					"unspecified", "unspecified", replaceExceptionList, false,
-					REPLACE)
-					&& !replaceRemoveException("unspecified", tense,
-							"unspecified", "unspecified", "unspecified",
-							removeExceptionList, false, REMOVE))
-				populateDBTable();
+			if (!this.replaceRemoveException(this.getReplaceRemoveExceptions())) {
+				this.populateDBTable();
+			}
 		}
 
-			///////////////////////////////////////////////////////////////////////////////
-			if (binyan.equals("Pa\\'al") && !replaceRemoveInfinitive) 
-			{
-				//System.out.println("generate infinitive without prefix l - for bkm prefixes");
-				StringBuffer inflected = new StringBuffer().append(prefix).append(
-						root.substring(index1, index2)).append(inside).append(
-						root.substring(index3, index4)).append(suffix);
+		// /////////////////////////////////////////////////////////////////////////////
+		if (this.binyan.equals("Pa\\'al") && !this.replaceRemoveInfinitive) {
+			// System.out.println("generate infinitive without prefix l - for bkm prefixes");
+			final StringBuffer inflected = new StringBuffer().append(prefix)
+					.append(this.root.substring(index1, index2)).append(inside)
+					.append(this.root.substring(index3, index4)).append(suffix);
 
-				inflectedVerb = inflected.toString();
-			} 
-			else if(inflectInfinitive)
-				inflectedVerb = inflectedVerb.substring(1);
+			this.inflectedVerb = inflected.toString();
+		} else if (this.inflectInfinitive) {
+			this.inflectedVerb = this.inflectedVerb.substring(1);
+		}
 
-			setAttributes("infinitive", "verb", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"possessive", "unspecified", "unspecified", "unspecified",
-					"f");
-			generateAccusativeNominative(inflectedVerb);
+		this.setAttributes(TenseType.INFINITIVE, "verb", "unspecified",
+				"unspecified", GenderType.UNSPECIFIED, NumberType.UNSPECIFIED,
+				TriStateType.UNSPECIFIED, "unspecified",
+				SuffixFunctionType.POSSESSIVE, "unspecified", "unspecified",
+				"unspecified", DefinitenessType.FALSE);
+		this.generateAccusativeNominative(this.inflectedVerb);
 
-			//////////////////////////////////////////////////////////////
-			//System.out.println();
+		// ////////////////////////////////////////////////////////////
+		// System.out.println();
 	}
 
 	/**
@@ -660,142 +883,256 @@ public class VerbGenIP implements VerbInterface
 	 * root(index3,index4) +suffix parts <br>
 	 * The indexes define the substringing of the root
 	 * 
-	 * @param prefix -
-	 *            concatenate to the begining of the root
-	 * @param suffix -
-	 *            concatenate to the end of the root
-	 * @param inside -
-	 *            concatenate to the middle of the root
-	 * @param index1 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index2 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index3 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @param index4 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
+	 * @param prefix
+	 *            - concatenate to the begining of the root
+	 * @param suffix
+	 *            - concatenate to the end of the root
+	 * @param inside
+	 *            - concatenate to the middle of the root
+	 * @param index1
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index2
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index3
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @param index4
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
 	 * @throws Exception
 	 */
-	public void generatePast(String prefix, String suffix, String inside,
-			int index1, int index2, int index3, int index4) throws Exception 
-		{
-		if (inflectPast) 
-		{
-			PGN = "unspecified";
+	@Override
+	public void generatePast(final String prefix, final String suffix,
+			final String inside, final int index1, final int index2,
+			final int index3, final int index4) {
+		if (this.inflectPast) {
+			this.possessive = "unspecified";
 			StringTokenizer stIn1 = null;
 			StringTokenizer stPre = null;
 			StringTokenizer stSuff = null;
 
 			stSuff = new StringTokenizer(suffix, ",");
-			StringTokenizer stPGN9 = new StringTokenizer(PGNTokens9, ",");
-			StringTokenizer stPerson9 = new StringTokenizer(personTokens9, ",");
-			StringTokenizer stGender9 = new StringTokenizer(genderTokens9, ",");
-			StringTokenizer stNumber9 = new StringTokenizer(numberTokens9, ",");
+			final StringTokenizer stPerson9 = new StringTokenizer(
+					personTokens9, ",");
+			final StringTokenizer stGender9 = new StringTokenizer(
+					genderTokens9, ",");
+			final StringTokenizer stNumber9 = new StringTokenizer(
+					numberTokens9, ",");
 
-			if (!inside.equals(""))
+			if (!inside.equals("")) {
 				stIn1 = new StringTokenizer(inside, ",");
-			if (!prefix.equals(""))
+			}
+			if (!prefix.equals("")) {
 				stPre = new StringTokenizer(prefix, ",");
+			}
 
 			String linside = "";
 			String lprefix = "";
 			String lsuffix = "";
 
-			//System.out.println();
-			//System.out.println("generate  past");
+			// System.out.println();
+			// System.out.println("generate  past");
 
-			while (stSuff.hasMoreTokens()) 
-			{
+			while (stSuff.hasMoreTokens()) {
 				lsuffix = stSuff.nextToken();
-				if (lsuffix.equals("-"))
+				if (lsuffix.equals("-")) {
 					lsuffix = "";
+				}
 
-				if (stIn1 != null) 
-				{
+				if (stIn1 != null) {
 					linside = stIn1.nextToken();
-					if (linside.equals("-"))
+					if (linside.equals("-")) {
 						linside = "";
+					}
 				}
 
-				if (stPre != null) 
-				{
+				if (stPre != null) {
 					lprefix = stPre.nextToken();
-					if (lprefix.equals("-"))
+					if (lprefix.equals("-")) {
 						lprefix = "";
+					}
 				}
-				setAttributes("past", "verb", "unspecified", "unspecified",
+				this.setAttributes(TenseType.PAST, "verb", "unspecified",
+						"unspecified", GenderType.UNSPECIFIED,
+						NumberType.UNSPECIFIED, TriStateType.UNSPECIFIED,
+						"unspecified", SuffixFunctionType.UNSPECIFIED,
 						"unspecified", "unspecified", "unspecified",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "unspecified", "f");
-				StringBuffer inflected = new StringBuffer().append(lprefix)
-						.append(root.substring(index1, index2)).append(linside)
-						.append(root.substring(index3, index4)).append(lsuffix);
-				inflectedVerb = inflected.toString();
-				//System.out.println("inflectedVerb =" + inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				//System.out.println("surface =" + surface);
-				//System.out.println();
-				basePerson = stPerson9.nextToken();
-				baseNumber = stNumber9.nextToken();
-				baseGender = stGender9.nextToken();
+						DefinitenessType.FALSE);
+				final StringBuffer inflected = new StringBuffer()
+						.append(lprefix)
+						.append(this.root.substring(index1, index2))
+						.append(linside)
+						.append(this.root.substring(index3, index4))
+						.append(lsuffix);
+				this.inflectedVerb = inflected.toString();
+				// System.out.println("inflectedVerb =" + inflectedVerb);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				// System.out.println("surface =" + surface);
+				// System.out.println();
+				this.basePerson = stPerson9.nextToken();
+				this.baseNumber = NumberType.fromValue(stNumber9.nextToken());
+				this.baseGender = GenderType.fromValue(stGender9.nextToken());
 
-				if (!replaceRemoveException("unspecified", tense, baseGender,
-						baseNumber, basePerson, replaceExceptionList, false,
-						REPLACE)
-						&& !replaceRemoveException("unspecified", tense,
-								baseGender, baseNumber, basePerson,
-								removeExceptionList, false, REMOVE))
-					populateDBTable();
+				if (!this.replaceRemoveException(this
+						.getReplaceRemoveExceptions())) {
+					this.populateDBTable();
+				}
 			}
 		}
 	}
 
-	public void generatePastFromBaseForm(String baseForm, String suffix) throws Exception 
-		{
-		PGN = "unspecified";
+	public void generatePastFromBaseForm(final String baseForm,
+			final String suffix) {
+		this.possessive = "unspecified";
 		StringTokenizer stSuff = null;
 		String lsuffix = "";
 
 		stSuff = new StringTokenizer(suffix, ",");
-		StringTokenizer stPGN9 = new StringTokenizer(PGNTokens9, ",");
-		StringTokenizer stPerson9 = new StringTokenizer(personTokens9, ",");
-		StringTokenizer stGender9 = new StringTokenizer(genderTokens9, ",");
-		StringTokenizer stNumber9 = new StringTokenizer(numberTokens9, ",");
+		final StringTokenizer stPerson9 = new StringTokenizer(personTokens9,
+				",");
+		final StringTokenizer stGender9 = new StringTokenizer(genderTokens9,
+				",");
+		final StringTokenizer stNumber9 = new StringTokenizer(numberTokens9,
+				",");
 
-		//System.out.println();
-		//System.out.println("generate  past");
-
-		while (stSuff.hasMoreTokens()) 
-		{
+		while (stSuff.hasMoreTokens()) {
 			lsuffix = stSuff.nextToken();
-			if (lsuffix.equals("-"))
+			if (lsuffix.equals("-")) {
 				lsuffix = "";
+			}
 
-			setAttributes("past", "verb", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"f");
-			StringBuffer inflected = new StringBuffer().append(baseForm)
+			this.setAttributes(TenseType.PAST, "verb", "unspecified",
+					"unspecified", GenderType.UNSPECIFIED,
+					NumberType.UNSPECIFIED, TriStateType.UNSPECIFIED,
+					"unspecified", SuffixFunctionType.UNSPECIFIED,
+					"unspecified", "unspecified", "unspecified",
+					DefinitenessType.FALSE);
+			final StringBuffer inflected = new StringBuffer().append(baseForm)
 					.append(lsuffix);
-			inflectedVerb = inflected.toString();
-			//System.out.println("inflectedVerb =" + inflectedVerb);
-			surface = Translate.Eng2Heb(inflectedVerb);
-			//System.out.println("surface =" + surface);
-			//System.out.println();
-			basePerson = stPerson9.nextToken();
-			baseNumber = stNumber9.nextToken();
-			baseGender = stGender9.nextToken();
-			if (!replaceRemoveException("unspecified", tense, baseGender,
-					baseNumber, basePerson, replaceExceptionList, false,
-					REPLACE)
-					&& !replaceRemoveException("unspecified", tense,
-							baseGender, baseNumber, basePerson,
-							removeExceptionList, false, REMOVE))
-				populateDBTable();
+			this.inflectedVerb = inflected.toString();
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			this.basePerson = stPerson9.nextToken();
+			this.baseNumber = NumberType.fromValue(stNumber9.nextToken());
+			this.baseGender = GenderType.fromValue(stGender9.nextToken());
+			if (!this.replaceRemoveException(this.getReplaceRemoveExceptions())) {
+				this.populateDBTable();
+			}
+		}
+	}
+
+	/**
+	 * This method generate the possessive form out of the 123/M/Sg form
+	 * 
+	 * @param base
+	 *            - the base form from which the possessive form will be created
+	 * @throws Exception
+	 */
+	@Override
+	public void generatePossessive(String base) {
+		StringTokenizer stSuff = null;
+		String suff;
+
+		this.setAttributes(this.tense, this.pos, "unspecified",
+				this.basePerson, this.baseGender, this.baseNumber,
+				TriStateType.FALSE, "unspecified",
+				SuffixFunctionType.POSSESSIVE, "unspecified", "unspecified",
+				"unspecified", DefinitenessType.FALSE);
+		this.stPGN10 = new StringTokenizer(PGNTokens10, ",");
+
+		// morphological changes:
+		if (base.endsWith("h")) {
+			base = base.substring(0, base.length() - 1);
+		}
+		// System.out.println("baseNumber = " + baseNumber);
+		// System.out.println("baseGender = " + baseGender);
+		if (this.baseGender.equals("feminine")
+				&& this.baseNumber.equals("plural")) {
+			suff = suffixFPlural;
+		} else if (this.baseGender.equals("masculine")
+				&& this.baseNumber.equals("plural")) {
+			suff = suffixMPlural;
+		} else {
+			suff = suffixSingular;
+		}
+		// System.out.println("suff=" + suff);
+		stSuff = new StringTokenizer(suff, ",");
+		String suffPossessive;
+		while (this.stPGN10.hasMoreTokens()) {
+			this.possessive = this.stPGN10.nextToken();
+			suffPossessive = stSuff.nextToken();
+			if (suffPossessive.equals("-")) {
+				suffPossessive = "";
+			}
+			this.inflectedVerb = base + suffPossessive;
+			if (this.inflectedVerb.endsWith("www")) {
+				this.inflectedVerb = this.inflectedVerb.substring(0,
+						this.inflectedVerb.length() - 1);
+			}
+			// System.out.println(inflectedVerb);
+			this.surface = Transliteration.toHebrew(this.inflectedVerb);
+			// System.out.print("surface =" + surface);
+			// System.out.println();
+			// רק שם עצם יכול להיות עם קניין
+
+			this.participleType = "noun";
+			this.populateDBTable();
+			this.generatePossessiveColloquial(base);
+		}
+	}
+
+	private void generatePossessiveColloquial(final String base) {
+		// handling exceptions for feminine, plural
+		this.participleType = "noun";
+		final SpellingType currentSpelling = this.spelling;
+		if (this.baseGender.equals("feminine")
+				&& this.baseNumber.equals("plural")) {
+			if (this.possessive.equals("1p/MF/Sg")) {
+				this.inflectedVerb = base + "i";
+				if (currentSpelling.equals("standard")) {
+					this.spelling = SpellingType.IRREGULAR;
+				}
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				this.populateDBTable();
+			} else if (this.possessive.equals("2p/F/Sg")) {
+				this.inflectedVerb = base + "ik";
+				if (currentSpelling.equals("standard")) {
+					this.spelling = SpellingType.IRREGULAR;
+				}
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				this.populateDBTable();
+			}
+			// if (currentScript.equals("formal"))
+			// script = "formal";
+			// else if (currentScript.equals("slang"))
+			// script = "slang";
+			this.spelling = currentSpelling;
+
+		}
+		// handling exceptions for feminine, plural
+		if (this.baseGender == GenderType.MASCULINE
+				&& this.baseNumber == NumberType.PLURAL) {
+			if (this.possessive.equals("1p/MF/Sg")) {
+				this.inflectedVerb = base;
+				if (currentSpelling == SpellingType.STANDARD) {
+					this.spelling = SpellingType.IRREGULAR;
+				}
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				this.populateDBTable();
+			} else if (this.possessive.equals("2p/F/Sg")) {
+				this.inflectedVerb = base + "k";
+				if (currentSpelling == SpellingType.STANDARD) {
+					this.spelling = SpellingType.IRREGULAR;
+				}
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				this.populateDBTable();
+			}
+			this.spelling = currentSpelling;
+			// if (currentScript.equals("formal"))
+			// script = "formal";
+			// else if (currentScript.equals("slang"))
+			// script = "slang";
 		}
 	}
 
@@ -805,32 +1142,32 @@ public class VerbGenIP implements VerbInterface
 	 * possessive form from the construct form for all binyans except for <br>
 	 * נפעל , פועל ו והופעל
 	 * 
-	 * @param prefix -
-	 *            concatenate to the begining of the root
-	 * @param suffix -
-	 *            concatenate to the end of the root
-	 * @param inside -
-	 *            concatenate to the middle of the root
-	 * @param index1 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index2 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index3 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @param index4 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
+	 * @param prefix
+	 *            - concatenate to the begining of the root
+	 * @param suffix
+	 *            - concatenate to the end of the root
+	 * @param inside
+	 *            - concatenate to the middle of the root
+	 * @param index1
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index2
+	 *            - substringing the root from index1 to index2 for
+	 *            concatenation of the inside part
+	 * @param index3
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
+	 * @param index4
+	 *            - substringing the root from index3 to index4 for
+	 *            concatenation of the inside part
 	 * @throws Exception
 	 */
 
-	public void generatePresent(String prefix, String suffix, String inside,
-			int index1, int index2, int index3, int index4) throws Exception 
-		{
-		if (inflectBeinoni) 
-		    {
+	@Override
+	public void generatePresent(final String prefix, final String suffix,
+			final String inside, final int index1, final int index2,
+			final int index3, final int index4) {
+		if (this.inflectBeinoni) {
 			StringTokenizer stIn = null;
 			StringTokenizer stPre = null;
 			StringTokenizer stNumber4 = null;
@@ -843,13 +1180,11 @@ public class VerbGenIP implements VerbInterface
 			stPerson4 = new StringTokenizer(personTokens4, ",");
 			stSuff = new StringTokenizer(suffix, ",");
 
-			if (!inside.equals("")) 
-			{
+			if (!inside.equals("")) {
 				stIn = new StringTokenizer(inside, ",");
 			}
 
-			if (!prefix.equals("")) 
-			{
+			if (!prefix.equals("")) {
 				stPre = new StringTokenizer(prefix, ",");
 			}
 
@@ -857,731 +1192,454 @@ public class VerbGenIP implements VerbInterface
 			String lprefix = "";
 			String lsuffix = "";
 
-			//System.out.println();
-			//System.out.println("generate participle");
+			// System.out.println();
+			// System.out.println("generate participle");
 
 			boolean constructFlag = false;
 
-			while (stSuff.hasMoreTokens()) 
-			{
+			while (stSuff.hasMoreTokens()) {
 				lsuffix = stSuff.nextToken();
-				if (lsuffix.equals("-"))
+				if (lsuffix.equals("-")) {
 					lsuffix = "";
+				}
 
-				if (stIn != null) 
-				{
+				if (stIn != null) {
 					linside = stIn.nextToken();
-					if (linside.equals("-"))
+					if (linside.equals("-")) {
 						linside = "";
+					}
 				}
-				if (stPre != null) 
-				{
+				if (stPre != null) {
 					lprefix = stPre.nextToken();
-					if (lprefix.equals("-"))
+					if (lprefix.equals("-")) {
 						lprefix = "";
+					}
 				}
 
-				setAttributes("beinoni", "participle", "unspecified",
-						basePerson, baseGender, baseNumber, "false",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "unspecified", "tf");
+				this.setAttributes(TenseType.BEINONI, this.participleType,
+						"unspecified", this.basePerson, this.baseGender,
+						this.baseNumber, TriStateType.FALSE, "unspecified",
+						SuffixFunctionType.UNSPECIFIED, "unspecified",
+						"unspecified", "unspecified", DefinitenessType.FALSE);
 
-				baseNumber = stNumber4.nextToken();
-				baseGender = stGender4.nextToken();
-				basePerson = stPerson4.nextToken();
+				this.baseNumber = NumberType.fromValue(stNumber4.nextToken());
+				this.baseGender = GenderType.fromValue(stGender4.nextToken());
+				this.basePerson = stPerson4.nextToken();
 
-				//I don't remember why the following commented lines exists
+				// I don't remember why the following commented lines exists
 				// ????????????????????
-				//				if (lsuffix.equals("") && linside.equals("") &&
-				//				 lprefix.equals("")) {
-				//					constructFlag = true;
-				//					continue;
-				//				}
+				// if (lsuffix.equals("") && linside.equals("") &&
+				// lprefix.equals("")) {
+				// constructFlag = true;
+				// continue;
+				// }
 
-				StringBuffer inflected = new StringBuffer().append(lprefix)
-						.append(root.substring(index1, index2)).append(linside)
-						.append(root.substring(index3, index4)).append(lsuffix);
+				final StringBuffer inflected = new StringBuffer()
+						.append(lprefix)
+						.append(this.root.substring(index1, index2))
+						.append(linside)
+						.append(this.root.substring(index3, index4))
+						.append(lsuffix);
 
-				inflectedVerb = inflected.toString();
-				//System.out.println("inflectedVerb =" + inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				//System.out.println("surface =" + surface);
-				//System.out.println();
+				this.inflectedVerb = inflected.toString();
+				// System.out.println("inflectedVerb =" + inflectedVerb);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				// System.out.println("surface =" + surface);
+				// System.out.println();
 
-				//for comparing in the repalceRemove
-				//				String PGNNumner = "";
-				//				if (baseNumber.equals("singular"))
-				//					PGNNumner = "Sg";
-				//				else
-				//					PGNNumner = "Pl";
-				//				if (basePerson.equals("any"))
-				//					PGN = "123p/" + baseGender.substring(0, 1).toUpperCase()
-				//							+ "/" + PGNNumner;
-				//				else
-				//					PGN = basePerson + "/"
-				//							+ baseGender.substring(0, 1).toUpperCase() + "/"
-				//							+ PGNNumner;
-				if (!replaceRemoveException("unspecified", tense, baseGender,
-						baseNumber, basePerson, replaceExceptionList, false,
-						REPLACE)
-						&& !replaceRemoveException(PGN, tense, baseGender,
-								baseNumber, basePerson, removeExceptionList,
-								false, REMOVE)) 
-				{
-					PGN = "unspecified";
+				// for comparing in the repalceRemove
+				// String PGNNumner = "";
+				// if (baseNumber.equals("singular"))
+				// PGNNumner = "Sg";
+				// else
+				// PGNNumner = "Pl";
+				// if (basePerson.equals("any"))
+				// possessive = "123p/" + baseGender.substring(0,
+				// 1).toUpperCase()
+				// + "/" + PGNNumner;
+				// else
+				// possessive = basePerson + "/"
+				// + baseGender.substring(0, 1).toUpperCase() + "/"
+				// + PGNNumner;
+				if (!this.replaceRemoveException(this
+						.getReplaceRemoveExceptions())) {
+					this.possessive = "unspecified";
 
 					// - הכל יכול להיות - לא מיודע, לא קניין , לא נסמך
-					participleType = "noun";
-					populateDBTable();
-					participleType = "verb";
-					populateDBTable();
-					participleType = "adjective";
-					populateDBTable();
+					this.participleType = "noun";
+					this.populateDBTable();
+					this.participleType = "verb";
+					this.populateDBTable();
+					this.participleType = "adjective";
+					this.populateDBTable();
 
 				}
 
-				//generate h + beinoni - השומר
-				inflectedVerb = "h" + inflectedVerb;
-				setAttributes("beinoni", "participle", "unspecified",
-						basePerson, baseGender, baseNumber, "false",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "unspecified", "tt");
-				surface = Translate.Eng2Heb(inflectedVerb);
+				// generate h + beinoni - השומר
+				this.inflectedVerb = "h" + this.inflectedVerb;
+				this.setAttributes(TenseType.BEINONI, "participle",
+						"unspecified", this.basePerson, this.baseGender,
+						this.baseNumber, TriStateType.FALSE, "unspecified",
+						SuffixFunctionType.UNSPECIFIED, "unspecified",
+						"unspecified", "unspecified", DefinitenessType.TRUE);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
 
-				////////////////////////////
+				// //////////////////////////
 
-				participleType = "noun";
-				populateDBTable();
-				participleType = "adjective";
-				populateDBTable();
-				participleType = "verb";
-				baseDefiniteness = "s";
-				populateDBTable();
+				this.participleType = "noun";
+				this.populateDBTable();
+				this.participleType = "adjective";
+				this.populateDBTable();
+				this.participleType = "verb";
+				this.baseDefiniteness = DefinitenessType.UNSPECIFIED;
+				this.populateDBTable();
 
-				///////////////////////////
-				//System.out.println("h+ participle =" + inflectedVerb);
-				setAttributes("beinoni", "participle", "unspecified",
-						basePerson, baseGender, baseNumber, "false",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "unspecified", "tf");
-				inflectedVerb = inflectedVerb.substring(1);
-				surface = Translate.Eng2Heb(inflectedVerb);
+				// /////////////////////////
+				// System.out.println("h+ participle =" + inflectedVerb);
+				this.setAttributes(TenseType.BEINONI, "participle",
+						"unspecified", this.basePerson, this.baseGender,
+						this.baseNumber, TriStateType.FALSE, "unspecified",
+						SuffixFunctionType.UNSPECIFIED, "unspecified",
+						"unspecified", "unspecified", DefinitenessType.FALSE);
+				this.inflectedVerb = this.inflectedVerb.substring(1);
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
 
-				//The construct form is created from the 123/M/Sg form
+				// The construct form is created from the 123/M/Sg form
 
-				//the generation of the possessive form is determaind by two
+				// the generation of the possessive form is determaind by two
 				// values:
-				//1) possessive flag - determined according to the binyan - we
+				// 1) possessive flag - determined according to the binyan - we
 				// will not generate possessive form for binyan nifal, hufal and
 				// pual
-				//2) the beinoniPossessive form set by the user in the lexicon
-				if (!constructFlag) 
-				{
-					if (((intInflectedPattern >= 1) && (intInflectedPattern < 36))
-							|| ((intInflectedPattern >= 42) && intInflectedPattern <= 53))
-						generateConstructAndPossessive(inflectedVerb, true);
-					else
-						generateConstructAndPossessive(inflectedVerb, false);
-					constructFlag = true;
-					PGN = "unspecified";
-				}
-			}
-		}
-	}
-
-	/**
-	 * This method generates the future form
-	 * 
-	 * @param prefix -
-	 *            concatenate to the begining of the root
-	 * @param suffix -
-	 *            concatenate to the end of the root
-	 * @param inside -
-	 *            concatenate to the middle of the root
-	 * @param index1 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index2 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index3 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @param index4 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @throws Exception
-	 */
-	public void generateFuture(String prefix, String suffix, String inside,
-			int index1, int index2, int index3, int index4) throws Exception 
-		{
-		if (inflectFuture) 
-		    {
-			StringTokenizer stIn = null;
-			StringTokenizer stPre = new StringTokenizer(prefix, ",");
-			StringTokenizer stSuff = new StringTokenizer(suffix, ",");
-			final String genderTokens10 = "masculine and feminine,masculine,feminine,masculine,feminine,masculine and feminine,masculine and feminine,feminine,masculine and feminine,feminine";
-			//final String PGNTokens10 =
-			// "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/MF/Pl,2p/F/Pl,3p/MF/Pl,3p/F/Pl";
-			stPerson10 = new StringTokenizer(personTokens10, ",");
-			stGender10 = new StringTokenizer(genderTokens10, ",");
-			stNumber10 = new StringTokenizer(numberTokens10, ",");
-
-			if (!inside.equals(""))
-				stIn = new StringTokenizer(inside, ",");
-			stPGN10 = new StringTokenizer(PGNTokens10, ",");
-
-			String linside = "";
-			String lpreffix = "";
-			String lsuffix = "";
-
-			//System.out.println();
-			//System.out.println("generate future");
-
-			setAttributes("future", "verb", "unspecified", "any",
-					"unspecified", "unspecified", "false", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"f");
-			while (stPre.hasMoreTokens()) 
-			{
-				lpreffix = stPre.nextToken();
-				if (lpreffix.equals("-"))
-					lpreffix = "";
-				lsuffix = stSuff.nextToken();
-				if (lsuffix.equals("-"))
-					lsuffix = "";
-				if (stIn != null) 
-				{
-					linside = stIn.nextToken();
-					if (linside.equals("-"))
-						linside = "";
-				}
-
-				StringBuffer inflected = new StringBuffer().append(lpreffix)
-						.append(root.substring(index1, index2)).append(linside)
-						.append(root.substring(index3, index4)).append(lsuffix);
-				inflectedVerb = inflected.toString();
-				//System.out.println("inflectedVerb =" + inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				//System.out.println("surface =" + surface);
-				//System.out.println();
-
-				PGN = "unspecified";
-				basePerson = stPerson10.nextToken();
-				baseNumber = stNumber10.nextToken();
-				baseGender = stGender10.nextToken();
-				if (!replaceRemoveException("unspecified", tense, baseGender,
-						baseNumber, basePerson, replaceExceptionList, false,
-						REPLACE)
-						&& !replaceRemoveException("unspecified", tense,
-								baseGender, baseNumber, basePerson,
-								replaceExceptionList, false, REMOVE))
-					populateDBTable();
-				//ייצור צורת עתיד יחיד או רבים גוף שלישי עם י אחת במקום שתיים
-				if (binyan.equals("Nif\\'al")) 
-				{
-					if ((baseGender.equals("masculine")
-							&& baseNumber.equals("singular") && basePerson
-							.equals("3"))
-							|| (baseGender.equals("masculine and feminine")
-									&& baseNumber.equals("plural") && basePerson.equals("3"))) 
-					{
-						if (!replaceRemoveException("unspecified", tense,
-								baseGender, baseNumber, basePerson,
-								replaceExceptionList, false, REMOVE)
-								&& !replaceRemoveException("unspecified",
-										tense, baseGender, baseNumber,
-										basePerson, replaceExceptionList,
-										false, REPLACE)) 
-						{
-							inflectedVerb = inflectedVerb.substring(1);
-							//		inflectedVerb = inflected.toString();
-							String originalSpalling = spelling;
-							spelling = "irregular";
-							surface = Translate.Eng2Heb(inflectedVerb);
-							populateDBTable();
-							spelling = originalSpalling;
-						}
+				// 2) the beinoniPossessive form set by the user in the lexicon
+				if (!constructFlag) {
+					if (this.intInflectedPattern >= 1
+							&& this.intInflectedPattern < 36
+							|| this.intInflectedPattern >= 42
+							&& this.intInflectedPattern <= 53) {
+						this.generateConstructAndPossessive(this.inflectedVerb,
+								true);
+					} else {
+						this.generateConstructAndPossessive(this.inflectedVerb,
+								false);
 					}
-				}
-			}
-		}
-	}
-
-	/**
-	 * This method generates the imperative form
-	 * 
-	 * @param suffix -
-	 *            concatenate to the end of the root
-	 * @param inside -
-	 *            concatenate to the middle of the root
-	 * @param index1 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index2 -
-	 *            substringing the root from index1 to index2 for concatenation
-	 *            of the inside part
-	 * @param index3 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @param index4 -
-	 *            substringing the root from index3 to index4 for concatenation
-	 *            of the inside part
-	 * @throws Exception
-	 */
-	public void generateImperative(String prefix, String suffix, String inside,
-			int index1, int index2, int index3, int index4) throws Exception 
-		{
-		if (inflectImperative) 
-		    {
-			StringTokenizer stIn = null;
-			StringTokenizer stSuff = null;
-
-			String genderImperative = "masculine,feminine,masculine and feminine,feminine";
-
-			stGender4 = new StringTokenizer(genderImperative, ",");
-			stNumber4 = new StringTokenizer(numberTokens4, ",");
-			//stPGNImperative = new StringTokenizer(PGNTokensImperative, ",");
-			if (!inside.equals(""))
-				stIn = new StringTokenizer(inside, ",");
-			stSuff = new StringTokenizer(suffix, ",");
-
-			String linside = "";
-			String loutside = "";
-			String lsuffix = "";
-			//System.out.println();
-			//System.out.println("generate imperative");
-
-			setAttributes("imperative", "verb", "unspecified", "2",
-					"unspecified", "unspecified", "false", "unspecified",
-					"unspecified", "unspecified", "unspecified", "unspecified",
-					"f");
-			while (stSuff.hasMoreTokens()) 
-			{
-				if (stIn != null) 
-				{
-					linside = stIn.nextToken();
-					if (linside.equals("-"))
-						linside = "";
-				}
-				lsuffix = stSuff.nextToken();
-				if (lsuffix.equals("-"))
-					lsuffix = "";
-
-				StringBuffer inflected = new StringBuffer().append(prefix)
-						.append(root.substring(index1, index2)).append(linside)
-						.append(root.substring(index3, index4)).append(lsuffix);
-				inflectedVerb = inflected.toString();
-				//System.out.println("inflectedVerb =" + inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				//System.out.println("surface =" + surface);
-				//System.out.println();
-
-				//PGN = stPGNImperative.nextToken();
-				baseNumber = stNumber4.nextToken();
-				baseGender = stGender4.nextToken();
-				basePerson = "2";
-
-				if (!replaceRemoveException("unspecified", tense, baseGender,
-						baseNumber, basePerson, replaceExceptionList, false,
-						REPLACE)
-						&& !replaceRemoveException("unspecified", tense,
-								baseGender, baseNumber, basePerson,
-								removeExceptionList, false, REMOVE))
-					populateDBTable();
-			}
-		}
-	}
-
-	/**
-	 * This method generate the beinoni paul (only for binyan Paal)
-	 * 
-	 * @param passiveBase -
-	 *            the base form on which the generation works
-	 * @throws Exception
-	 */
-	public void generateBeinoniPassive(String passiveBase) throws Exception 
-	{
-		if (valence.indexOf("WithoutPaul") == -1) 
-		{
-			//System.out.println();
-			//System.out.println("generateBeinoniPassive");
-			StringTokenizer stSuff = null;
-			StringTokenizer stNumber4 = null;
-			StringTokenizer stGender4 = null;
-
-			String passivSuff = "-,h,im,wt";
-			stSuff = new StringTokenizer(passivSuff, ",");
-			stNumber4 = new StringTokenizer(numberTokens4, ",");
-			stGender4 = new StringTokenizer(genderTokens4, ",");
-			boolean constructFlag = false;
-
-			while (stSuff.hasMoreTokens()) 
-			{
-				setAttributes("beinoni", "passiveParticiple", "unspecified",
-						"any", "unspecified", "unspecified", "false",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "unspecified", "f");
-				baseNumber = stNumber4.nextToken();
-				baseGender = stGender4.nextToken();
-				String suffix = stSuff.nextToken();
-				if (suffix.equals("-"))
-					suffix = "";
-				StringBuffer inflect = new StringBuffer().append(passiveBase).append(suffix);
-				inflectedVerb = inflect.toString();
-				surface = Translate.Eng2Heb(inflectedVerb);
-
-				//System.out.println("surface =" + surface);
-				//System.out.println();
-
-				participleType = "adjective";
-
-				populateDBTable();
-
-				inflectedVerb = "h" + inflectedVerb;
-				setAttributes("beinoni", "passiveParticiple", "unspecified",
-						"any", baseGender, baseNumber, "false", "unspecified",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "tt");
-				surface = Translate.Eng2Heb(inflectedVerb);
-
-				participleType = "noun";
-				populateDBTable();
-				participleType = "adjective";
-				populateDBTable();
-				participleType = "verb";
-				baseDefiniteness = "s"; //subcoordination
-				populateDBTable();
-
-				//System.out.println("h+ participle =" + inflectedVerb);
-				setAttributes("beinoni", "passiveParticiple", "unspecified",
-						basePerson, baseGender, baseNumber, "false",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "unspecified", "f");
-				inflectedVerb = inflect.toString();
-				surface = Translate.Eng2Heb(inflectedVerb);
-
-				if (!constructFlag) 
-				{
-					//morphological changes
-					String base = "";
-					if (root.charAt(1) == 'w' || root.charAt(1) == 'i')
-						base = passiveBase;
-					else if (root.charAt(2) == 'h' || root.charAt(2) == 'i')
-						base = root.substring(0, 2) + "wi";
-					else if (root.charAt(2) == 'a'
-							&& passiveBase.charAt(3) == 'a')
-						base = root.substring(0, 2) + "w" + root.substring(2);
-					else if (root.charAt(2) == 'a'
-							&& passiveBase.charAt(3) == 'i')
-						base = root.substring(0, 2) + "wi";
-					else
-						base = root.substring(0, 2) + "w" + root.substring(2);
-					generateConstructAndPossessive(base, false);
 					constructFlag = true;
+					this.possessive = "unspecified";
 				}
 			}
 		}
 	}
 
 	/**
-	 * This method generates the construct form out of the 123/M/Sg form
+	 * @return Returns the dottedLexiconItem.
+	 */
+	public String getDottedLexiconItem() {
+		return this.dottedLexiconItem;
+	}
+
+	/**
+	 * @return Returns the hebRoot.
+	 */
+	public String getHebRoot() {
+		return this.hebRoot;
+	}
+
+	/**
+	 * @return Returns the inflectedVerb.
+	 */
+	public String getInflectedVerb() {
+		return this.inflectedVerb;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<VerbException> getReplaceRemoveExceptions() {
+		return filter(Matchers.anyOf(
+				Matchers.instanceOf(VerbExceptionReplace.class),
+				Matchers.instanceOf(VerbExceptionRemove.class)),
+				verb.getExceptions());
+	}
+
+	/**
+	 * @return Returns the valence.
+	 */
+	public Valence getValence() {
+		return this.valence;
+	}
+
+	/**
+	 * @return Returns the inflectBareInfinitive.
+	 */
+	public boolean isInflectBareInfinitive() {
+		return this.inflectBareInfinitive;
+	}
+
+	/**
+	 * @return Returns the inflectBeinoni.
+	 */
+	public boolean isInflectBeinoni() {
+		return this.inflectBeinoni;
+	}
+
+	/**
+	 * @return Returns the inflectBeinoniConstruct.
+	 */
+	public boolean isInflectBeinoniConstruct() {
+		return this.inflectBeinoniConstruct;
+	}
+
+	/**
+	 * @return Returns the inflectBeinoniPossessive.
+	 */
+	public boolean isInflectBeinoniPossessive() {
+		return this.inflectBeinoniPossessive;
+	}
+
+	/**
+	 * @return Returns the inflectFuture.
+	 */
+	public boolean isInflectFuture() {
+		return this.inflectFuture;
+	}
+
+	/**
+	 * @return Returns the inflectImperative.
+	 */
+	public boolean isInflectImperative() {
+		return this.inflectImperative;
+	}
+
+	/**
+	 * @return Returns the inflectInfinitive.
+	 */
+	public boolean isInflectInfinitive() {
+		return this.inflectInfinitive;
+	}
+
+	/**
+	 * @return Returns the inflectInfintive.
+	 */
+	public boolean isInflectInfinitiveb() {
+		return this.inflectInfinitiveb;
+	}
+
+	/**
+	 * @return Returns the independent.
+	 */
+	public boolean isInflectInfinitiveIndependent() {
+		return this.inflectInfinitiveIndependent;
+	}
+
+	/**
+	 * @return Returns the inflectInfintive.
+	 */
+	public boolean isInflectInfinitivel() {
+		return this.inflectInfinitivel;
+	}
+
+	/**
+	 * @return Returns the inflectPast.
+	 */
+	public boolean isInflectPast() {
+		return this.inflectPast;
+	}
+
+	/**
+	 * This methos handles filling the inflection record with values to be
+	 * inserted to the database
 	 * 
-	 * @param base -
-	 *            the 123/M/Sg form
-	 * @param possessiveFlag -
-	 *            for Nifal,Pual,Hufal - false - because we will not generete
-	 *            the possessive form
 	 * @throws Exception
 	 */
-	public void generateConstructAndPossessive(String base,boolean possessiveFlag) throws Exception 
-		{
-		if (inflectBeinoniConstruct) 
-		    {
-			String passivSuff = "";
-			//System.out.println();
-			//System.out.println("generateConstructAndPossessive");
-			StringTokenizer stSuff = null;
-			if (base.endsWith("wwh"))
-				passivSuff = "h,it,i,t";
-			else if (base.endsWith("h"))
-				passivSuff = "h,t,i,wt";
-			else
-				passivSuff = "-,t,i,wt";
-			stNumber4 = new StringTokenizer(numberTokens4, ",");
-			stGender4 = new StringTokenizer(genderTokens4, ",");
-			stPerson4 = new StringTokenizer(personTokens4, ",");
-			//StringTokenizer stPGNTokensBeinoni = new StringTokenizer(
-			//PGNTokensBeinoni, ",");
-			stSuff = new StringTokenizer(passivSuff, ",");
+	private void populateDBTable() {
+		final Inflection inf = new Inflection();
+		inf.setRegister(this.register);
+		inf.setSpelling(this.spelling);
+		inf.setBasePos(this.pos);
+		inf.setBaseUndottedLItem(this.baseUndot);
+		inf.setBaseTransliteratedLItem(this.baseTransliterated);
+		inf.setBaseUndottedLItem(this.baseUndot);
+		inf.setBaseLexiconPointer(this.baseLexiconPointer);
+		inf.setBinyan(this.binyan);
+		inf.setRoot(this.hebRoot);
+		inf.setTense(this.tense);
+		inf.setPGN(this.possessive);
+		inf.setSuffixStatus(this.construct);
+		inf.setBaseGender(this.baseGender);
+		inf.setBaseNumber(this.baseNumber);
+		inf.setBasePerson(this.basePerson);
+		inf.setBaseDefiniteness(this.baseDefiniteness);
+		inf.setSurface(this.surface);
+		inf.setTransliterated(this.inflectedVerb);
+		inf.setSuffixFunction(this.suffixFunction);
+		inf.setDottedLexiconItem(this.dottedLexiconItem);
+		inf.setType(this.participleType);
+		inf.setPolarity(PolarityType.UNSPECIFIED);
+		inf.setValue("");
+		generatedInflections.add(inf);
+	}
 
-			//Morphological changes:
-			if (base.endsWith("h"))
-				base = base.substring(0, base.length() - 1);
-			while (stNumber4.hasMoreTokens()) 
-			{
-				setAttributes("beinoni", pos, "unspecified", basePerson,
-						baseGender, baseNumber, "true", "unspecified",
-						"unspecified", "unspecified", "unspecified",
-						"unspecified", "f");
-				baseNumber = stNumber4.nextToken();
-				baseGender = stGender4.nextToken();
-				basePerson = stPerson4.nextToken();
-				//PGN = stPGNTokensBeinoni.nextToken();
-				String suff = stSuff.nextToken();
-				if (suff.equals("-"))
-					suff = "";
+	/**
+	 * This method is used for handling remove and replace exceptions <br>
+	 * It checks whether there is a matching value for the current generated
+	 * form <br>
+	 * The decision is taken by testing the possessive,tense and accusation
+	 * values <br>
+	 * 
+	 * @param possessive
+	 *            - person/gender/number value generated by the generation
+	 *            program
+	 * @param tense
+	 *            - the tense of the generated form
+	 * @param accusativeSuffix
+	 *            - currently we are not handling accusative values
+	 * @param exceptionList
+	 *            - remove/replace exception list for the current lexicon item
+	 * @param action
+	 *            - remove/replace
+	 * @return - boolean value: true - replacement/removement has been done
+	 * @throws Exception
+	 */
+	public boolean replaceRemoveException(final List<VerbException> exceptions) {
+		boolean match = false;
+		for (final VerbException excp : exceptions) {
+			String ePerson = excp.getPerson();
+			final TenseType eTense = TenseType.fromValue(excp.getTense()
+					.value());
+			final GenderType eGender = GenderType.fromValue(excp.getGender()
+					.value());
+			final NumberType eNumber = NumberType.fromValue(excp.getNumber()
+					.value());
+			final String ePossesive = excp.getPossessive();
+			if (excp.getPerson().equals("3") && this.tense == TenseType.BEINONI) {
+				ePerson = "any";
+			}
+			this.exceptionInflectBeinoniPossessive = excp
+					.isInflectBeinoniPossessive();
+			if (!(eTense == this.tense && eGender == this.baseGender
+					&& eNumber == this.baseNumber
+					&& ePerson.equals(this.basePerson) && ePossesive
+						.equals(this.possessive))) {
+				/*
+				 * the exception doesn't match the current situation - do
+				 * nothing
+				 */
+				continue;
+			}
 
-				StringBuffer inflected = new StringBuffer().append(base).append(suff);
-				inflectedVerb = inflected.toString();
-				//System.out.print("inflectedVerb =" + inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				//System.out.print("surface =" + surface);
-				//System.out.println();
+			ExcpType eType = null;
+			if (excp instanceof VerbExceptionAdd) {
+				eType = ExcpType.ADD;
+			}
+			if (excp instanceof VerbExceptionRemove) {
+				eType = ExcpType.REMOVE;
+			}
+			if (excp instanceof VerbExceptionReplace) {
+				eType = ExcpType.REPLACE;
+			}
 
-				boolean rtRemove = replaceRemoveException("unspecified", tense,
-						baseGender, baseNumber, basePerson,
-						replaceExceptionList, true, REMOVE);
-				boolean rtReplace = replaceRemoveException("unspecified",
-						tense, baseGender, baseNumber, basePerson,
-						replaceExceptionList, true, REPLACE);
-
-				if (!rtRemove && !rtReplace) 
-				{
-					//עבור צורות הנסמך תכונת היידוע לא רלבנטית
-					definitenessVal = "unspecified";
-					//רק שם עצם יכול להיות נסמך
-
-					if (surface.equals("קטוע") || surface.equals("נטול"))
-						participleType = "adjective";
-					else
-						participleType = "noun";
-
-					populateDBTable();
-					definitenessVal = "tf";
-					//					possessive flag is false for nifal, hufal and pual - the
-					// possessive form will
-					// not be created for these binyanim
-					if (possessiveFlag && inflectBeinoniPossessive) 
-					{
-						generatePossessive(inflectedVerb);
+			switch (eType) {
+			case ADD:
+				this.addException(excp);
+				break;
+			case REMOVE:
+				break;
+			case REPLACE:
+				final String oldInflected = this.inflectedVerb;
+				this.inflectedVerb = excp.getTransliterated();
+				this.surface = Transliteration.toHebrew(this.inflectedVerb);
+				switch (eTense) {
+				case INFINITIVE:
+					if (this.inflectedVerb.charAt(0) == oldInflected.charAt(0)) {
+						this.populateDBTable();
+						match = true;
 					}
-					//exceptionInflectBeinoniPossessive still doesn't work well
-					// - to do someday
-				} 
-				else if (rtReplace && possessiveFlag
-						&& exceptionInflectBeinoniPossessive)
-					generatePossessive(inflectedVerb);
-			}
-		}
-	}
-
-	private void generatePossessiveColloquial(String base) throws Exception 
-	{
-		//    	handling exceptions for feminine, plural
-		participleType = "noun";
-		String currentSpelling = spelling;
-		if (baseGender.equals("feminine") && baseNumber.equals("plural")) 
-		{
-			if (PGN.equals("1p/MF/Sg")) 
-			{
-				inflectedVerb = base + "i";
-				if (currentSpelling.equals("standard"))
-					spelling = "irregular";
-				surface = Translate.Eng2Heb(inflectedVerb);
-				populateDBTable();
-			} 
-			else if (PGN.equals("2p/F/Sg")) 
-			{
-				inflectedVerb = base + "ik";
-				if (currentSpelling.equals("standard"))
-					spelling = "irregular";
-				surface = Translate.Eng2Heb(inflectedVerb);
-				populateDBTable();
-			}
-			//			if (currentScript.equals("formal"))
-			//				script = "formal";
-			//			else if (currentScript.equals("slang"))
-			//				script = "slang";
-			spelling = currentSpelling;
-
-		}
-		//				handling exceptions for feminine, plural
-		if (baseGender.equals("masculine") && baseNumber.equals("plural")) 
-		{
-			if (PGN.equals("1p/MF/Sg")) 
-			{
-				inflectedVerb = base;
-				if (currentSpelling.equals("standard"))
-					spelling = "irregular";
-				surface = Translate.Eng2Heb(inflectedVerb);
-				populateDBTable();
-			} 
-			else if (PGN.equals("2p/F/Sg")) 
-			{
-				inflectedVerb = base + "k";
-				if (currentSpelling.equals("standard"))
-					spelling = "irregular";
-				surface = Translate.Eng2Heb(inflectedVerb);
-				populateDBTable();
-			}
-			spelling = currentSpelling;
-			//			if (currentScript.equals("formal"))
-			//				script = "formal";
-			//			else if (currentScript.equals("slang"))
-			//				script = "slang";
-		}
-	}
-
-	/**
-	 * This method generate the possessive form out of the 123/M/Sg form
-	 * 
-	 * @param base -
-	 *            the base form from which the possessive form will be created
-	 * @throws Exception
-	 */
-	public void generatePossessive(String base) throws Exception 
-	{
-		//System.out.println();
-		//System.out.println("generatePossessive");
-		StringTokenizer stSuff = null;
-		StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
-		String suff;
-
-		setAttributes(tense, pos, "unspecified", basePerson, baseGender,
-				baseNumber, "false", "unspecified", "possessive",
-				"unspecified", "unspecified", "unspecified", "f");
-		stPGN10 = new StringTokenizer(PGNTokens10, ",");
-
-		//morphological changes:
-		if (base.endsWith("h"))
-			base = base.substring(0, base.length() - 1);
-		//System.out.println("baseNumber = " + baseNumber);
-		//System.out.println("baseGender = " + baseGender);
-		if (baseGender.equals("feminine") && baseNumber.equals("plural"))
-			suff = suffixFPlural;
-		else if (baseGender.equals("masculine") && baseNumber.equals("plural"))
-			suff = suffixMPlural;
-		else
-			suff = suffixSingular;
-		//System.out.println("suff=" + suff);
-		stSuff = new StringTokenizer(suff, ",");
-		String suffPossessive;
-		while (stPGN10.hasMoreTokens()) 
-		{
-			PGN = stPGN10.nextToken();
-			suffPossessive = stSuff.nextToken();
-			if (suffPossessive.equals("-"))
-				suffPossessive = "";
-			inflectedVerb = base + suffPossessive;
-			if (inflectedVerb.endsWith("www"))
-				inflectedVerb = inflectedVerb.substring(0, inflectedVerb.length() - 1);
-			//System.out.println(inflectedVerb);
-			surface = Translate.Eng2Heb(inflectedVerb);
-			//System.out.print("surface =" + surface);
-			//System.out.println();
-			//רק שם עצם יכול להיות עם קניין
-
-			participleType = "noun";
-			populateDBTable();
-			generatePossessiveColloquial(base);
-		}
-	}
-
-	/**
-	 * This method generate the possessive form out of the 123/M/Sg form
-	 * 
-	 * @param base -
-	 *            the base form from which the possessive form will be created
-	 * @throws Exception
-	 */
-	public void generateAccusativeNominative(String base) throws Exception 
-	{
-		//System.out.println();
-		//System.out.println("generateAccusativenNominative");
-		StringTokenizer stSuff = null;
-		StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
-		String suff;
-
-		setAttributes(tense, pos, "unspecified", basePerson, baseGender,
-				baseNumber, "false", "unspecified", "accusative or nominative",
-				"unspecified", "unspecified", "unspecified", "f");
-		stPGN10 = new StringTokenizer(PGNTokens10, ",");
-
-		//morphological changes:
-		//if (base.endsWith("h"))
-		//	base = base.substring(0, base.length() - 1);
-		//System.out.println("baseNumber = " + baseNumber);
-		//System.out.println("baseGender = " + baseGender);
-		if (baseGender.equals("feminine") && baseNumber.equals("plural"))
-			suff = suffixFPlural;
-		else if (baseGender.equals("masculine") && baseNumber.equals("plural"))
-			suff = suffixMPlural;
-		else
-			suff = suffixSingular;
-		//System.out.println("suff=" + suff);
-		stSuff = new StringTokenizer(suff, ",");
-		String suffPossessive;
-		while (stPGN10.hasMoreTokens()) 
-		{
-			PGN = stPGN10.nextToken();
-			suffPossessive = stSuff.nextToken();
-			if (suffPossessive.equals("-"))
-				suffPossessive = "";
-			inflectedVerb = base + suffPossessive;
-
-			if (inflectInfinitiveb) 
-			{
-				if (inflectInfinitiveIndependent)
-				{
-				pos = "indInf";
-				//System.out.println(inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				//System.out.print("surface =" + surface);
-				//System.out.println();
-				populateDBTable();
-				pos = "verb";
+					/*
+					 * XXX: Original code reset inflectedVerb and surface in the
+					 * else
+					 */
+					break;
+				case BEINONI:
+					if (ePossesive.equals("unspecified")
+							&& !excp.isBeinoniConstruct()
+							&& this.baseDefiniteness == DefinitenessType.FALSE) {
+						this.participleType = "noun";
+						this.populateDBTable();
+						this.participleType = "adjective";
+						this.populateDBTable();
+						this.participleType = "verb";
+						this.populateDBTable();
+					} else if (!ePossesive.equals("unspecified")
+							|| excp.isBeinoniConstruct()) {
+						this.participleType = "noun";
+						this.populateDBTable();
+					} else if (this.baseDefiniteness == DefinitenessType.TRUE) {
+						this.participleType = "noun";
+						this.populateDBTable();
+						this.participleType = "adjective";
+						this.populateDBTable();
+						this.participleType = "verb";
+						this.baseDefiniteness = DefinitenessType.UNSPECIFIED;
+						this.populateDBTable();
+					}
+					break;
+				/*
+				 * XXX: Commented this out, dunno what a "PASSIVE_PARTICIPLE"
+				 * is. Do we have those?
+				 */
+				// case PASSIVE_PARTICIPLE:
+				// if (ePossesive.equals("unspecified") && !beinoniConstruct
+				// && baseDefiniteness == DefinitenessType.FALSE) {
+				// participleType = "adjective";
+				// populateDBTable();
+				// participleType = "verb";
+				// populateDBTable();
+				// } else if (beinoniConstruct) {
+				// participleType = "noun";
+				// populateDBTable();
+				// } else if (baseDefiniteness == DefinitenessType.TRUE) {
+				// participleType = "noun";
+				// populateDBTable();
+				// participleType = "adjective";
+				// populateDBTable();
+				// participleType = "verb";
+				// baseDefiniteness = DefinitenessType.UNSPECIFIED;
+				// populateDBTable();
+				// }
+				default:
+					this.populateDBTable();
+					match = true;
+					break;
 				}
-			}
-
-			//generate l + inflectedInfinitive just for יוצא or עומד with
-			// inflectInfinitive = true
-			if (inflectInfinitivel) 
-			{
-				inflectedVerb = "l" + inflectedVerb;
-				//System.out.println(inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				populateDBTable();
-			}
-
-			//generate b+ inflectedInfinitive for all verbs
-			if (inflectInfinitiveb) 
-			{
-				if (inflectInfinitivel)
-					inflectedVerb = "b" + inflectedVerb.substring(1);
-				else
-					inflectedVerb = "b" + inflectedVerb;
-				//System.out.println(inflectedVerb);
-				surface = Translate.Eng2Heb(inflectedVerb);
-				populateDBTable();
+				break;
 			}
 		}
+
+		return match;
 	}
 
-	public static void main(String[] args) 
-	{
+	private void setAttributes(final TenseType tense, final String pos,
+			final String PGN, final String basePerson,
+			final GenderType baseGender, final NumberType baseNumber,
+			final TriStateType construct, final String accusativeSuffix,
+			final SuffixFunctionType suffixFunction, final String suffixNumber,
+			final String suffixGender, final String suffixPerson,
+			final DefinitenessType baseDefiniteness) {
+		this.tense = tense;
+		this.possessive = PGN;
+		this.pos = pos;
+		this.construct = construct;
+		this.basePerson = basePerson;
+		this.baseGender = baseGender;
+		this.baseNumber = baseNumber;
+		this.suffixFunction = suffixFunction;
+		this.baseDefiniteness = baseDefiniteness;
+		this.participleType = "unspecified";
 	}
 
 	/**
 	 * @param baseLexiconPointer
 	 *            The baseLexiconPointer to set.
 	 */
-	public void setBaseLexiconPointer(String baseLexiconPointer) 
-	{
+	public void setBaseLexiconPointer(final String baseLexiconPointer) {
 		this.baseLexiconPointer = baseLexiconPointer;
 	}
 
@@ -1589,8 +1647,7 @@ public class VerbGenIP implements VerbInterface
 	 * @param baseTransliterated
 	 *            The baseTransliterated to set.
 	 */
-	public void setBaseTransliterated(String baseTransliterated) 
-	{
+	public void setBaseTransliterated(final String baseTransliterated) {
 		this.baseTransliterated = baseTransliterated;
 	}
 
@@ -1598,8 +1655,7 @@ public class VerbGenIP implements VerbInterface
 	 * @param baseUndot
 	 *            The baseUndot to set.
 	 */
-	public void setBaseUndot(String baseUndot) 
-	{
+	public void setBaseUndot(final String baseUndot) {
 		this.baseUndot = baseUndot;
 	}
 
@@ -1607,303 +1663,171 @@ public class VerbGenIP implements VerbInterface
 	 * @param binyan
 	 *            The binyan to set.
 	 */
-	public void setBinyan(String binyan) 
-	{
+	public void setBinyan(final BinyanType binyan) {
 		this.binyan = binyan;
-	}
-
-	/**
-	 * @param root
-	 *            The root to set.
-	 */
-	public void setRoot(String root) 
-	{
-		this.root = root;
-	}
-
-	/**
-	 *  
-	 */
-	public void setRegister(String register) 
-	{
-		this.register = register;
-	}
-
-	/**
-	 *  
-	 */
-	public void setSpelling(String spelling) 
-	{
-		this.spelling = spelling;
-	}
-
-	/**
-	 * @param removeExceptionList
-	 *            The removeExceptionList to set.
-	 */
-	public void setRemoveExceptionList(List removeExceptionList) 
-	{
-		this.removeExceptionList = removeExceptionList;
-	}
-
-	/**
-	 * @return Returns the valence.
-	 */
-	public String getValence() 
-	{
-		return valence;
-	}
-
-	/**
-	 * @param valence
-	 *            The valence to set.
-	 */
-	public void setValence(String valence) 
-	{
-		this.valence = valence;
-	}
-
-	/**
-	 * @return Returns the dottedLexiconItem.
-	 */
-	public String getDottedLexiconItem() 
-	{
-		return dottedLexiconItem;
 	}
 
 	/**
 	 * @param dottedLexiconItem
 	 *            The dottedLexiconItem to set.
 	 */
-	public void setDottedLexiconItem(String dottedLexiconItem) 
-	{
+	public void setDottedLexiconItem(final String dottedLexiconItem) {
 		this.dottedLexiconItem = dottedLexiconItem;
 	}
 
 	/**
-	 * @return Returns the inflectInfintive.
+	 * @param hebRoot
+	 *            The hebRoot to set.
 	 */
-	public boolean isInflectInfinitivel() 
-	{
-		return inflectInfinitivel;
-	}
-
-	/**
-	 * @param inflectInfintive
-	 *            The inflectInfintive to set.
-	 */
-	public void setInflectInfinitivel(boolean inflectInfintivel) 
-	{
-		this.inflectInfinitivel = inflectInfintivel;
-	}
-
-	/**
-	 * @return Returns the inflectInfintive.
-	 */
-	public boolean isInflectInfinitiveb() 
-	{
-		return inflectInfinitiveb;
-	}
-
-	/**
-	 * @param inflectInfintive
-	 *            The inflectInfintive to set.
-	 */
-	public void setInflectInfinitiveb(boolean inflectInfintiveb) 
-	{
-		this.inflectInfinitiveb = inflectInfintiveb;
-	}
-
-	/**
-	 * @return Returns the inflectBeinoni.
-	 */
-	public boolean isInflectBeinoni() 
-	{
-		return inflectBeinoni;
-	}
-
-	/**
-	 * @param inflectBeinoni
-	 *            The inflectBeinoni to set.
-	 */
-	public void setInflectBeinoni(boolean inflectBeinoni) 
-	{
-		this.inflectBeinoni = inflectBeinoni;
-	}
-
-	/**
-	 * @return Returns the independent.
-	 */
-	public boolean isInflectInfinitiveIndependent() 
-	{
-		return inflectInfinitiveIndependent;
-	}
-
-	/**
-	 * @param independent
-	 *            The independent to set.
-	 */
-	public void setInflectInfinitiveIndependent(boolean inflectInfinitiveIndependent) 
-	{
-		this.inflectInfinitiveIndependent = inflectInfinitiveIndependent;
-	}
-
-	/**
-	 * @param replaceExceptionList
-	 *            The replaceExceptionList to set.
-	 */
-	public void setReplaceExceptionList(List replaceExceptionList) 
-	{
-		this.replaceExceptionList = replaceExceptionList;
-	}
-
-	/**
-	 * @param replaceRemoveInfinitive
-	 *            The replaceRemoveInfinitive to set.
-	 */
-	public void setReplaceRemoveInfinitive(boolean replaceRemoveInfinitive) 
-	{
-		this.replaceRemoveInfinitive = replaceRemoveInfinitive;
-	}
-
-	/**
-	 * @return Returns the inflectBeinoniConstruct.
-	 */
-	public boolean isInflectBeinoniConstruct() 
-	{
-		return inflectBeinoniConstruct;
-	}
-
-	/**
-	 * @param inflectBeinoniConstruct
-	 *            The inflectBeinoniConstruct to set.
-	 */
-	public void setInflectBeinoniConstruct(boolean inflectBeinoniConstruct) 
-	{
-		this.inflectBeinoniConstruct = inflectBeinoniConstruct;
-	}
-
-	/**
-	 * @return Returns the inflectBeinoniPossessive.
-	 */
-	public boolean isInflectBeinoniPossessive() 
-	{
-		return inflectBeinoniPossessive;
-	}
-
-	/**
-	 * @param inflectBeinoniPossessive
-	 *            The inflectBeinoniPossessive to set.
-	 */
-	public void setInflectBeinoniPossessive(boolean inflectBeinoniPossessive) 
-	{
-		this.inflectBeinoniPossessive = inflectBeinoniPossessive;
-	}
-
-	/**
-	 * @return Returns the inflectedVerb.
-	 */
-	public String getInflectedVerb() 
-	{
-		return inflectedVerb;
-	}
-
-	/**
-	 * @param inflectedVerb
-	 *            The inflectedVerb to set.
-	 */
-	public void setInflectedVerb(String inflectedVerb) 
-	{
-		this.inflectedVerb = inflectedVerb;
-	}
-
-	/**
-	 * @return Returns the inflectPast.
-	 */
-	public boolean isInflectPast() 
-	{
-		return inflectPast;
-	}
-
-	/**
-	 * @param inflectPast
-	 *            The inflectPast to set.
-	 */
-	public void setInflectPast(boolean inflectPast) 
-	{
-		this.inflectPast = inflectPast;
-	}
-
-	/**
-	 * @return Returns the inflectImperative.
-	 */
-	public boolean isInflectImperative() 
-	{
-		return inflectImperative;
-	}
-
-	/**
-	 * @param inflectImperative
-	 *            The inflectImperative to set.
-	 */
-	public void setInflectImperative(boolean inflectImperative) 
-	{
-		this.inflectImperative = inflectImperative;
-	}
-
-	/**
-	 * @return Returns the inflectFuture.
-	 */
-	public boolean isInflectFuture() 
-	{
-		return inflectFuture;
-	}
-
-	/**
-	 * @param inflectFuture
-	 *            The inflectFuture to set.
-	 */
-	public void setInflectFuture(boolean inflectFuture) 
-	{
-		this.inflectFuture = inflectFuture;
-	}
-
-	/**
-	 * @return Returns the inflectBareInfinitive.
-	 */
-	public boolean isInflectBareInfinitive() 
-	{
-		return inflectBareInfinitive;
+	public void setHebRoot(final String hebRoot) {
+		this.hebRoot = hebRoot;
 	}
 
 	/**
 	 * @param inflectBareInfinitive
 	 *            The inflectBareInfinitive to set.
 	 */
-	public void setInflectBareInfinitive(boolean inflectBareInfinitive) 
-	{
+	public void setInflectBareInfinitive(final boolean inflectBareInfinitive) {
 		this.inflectBareInfinitive = inflectBareInfinitive;
 	}
 
 	/**
-	 * @return Returns the inflectInfinitive.
+	 * @param inflectBeinoni
+	 *            The inflectBeinoni to set.
 	 */
-	public boolean isInflectInfinitive() 
-	{
-		return inflectInfinitive;
+	public void setInflectBeinoni(final boolean inflectBeinoni) {
+		this.inflectBeinoni = inflectBeinoni;
+	}
+
+	/**
+	 * @param inflectBeinoniConstruct
+	 *            The inflectBeinoniConstruct to set.
+	 */
+	public void setInflectBeinoniConstruct(final boolean inflectBeinoniConstruct) {
+		this.inflectBeinoniConstruct = inflectBeinoniConstruct;
+	}
+
+	/**
+	 * @param inflectBeinoniPossessive
+	 *            The inflectBeinoniPossessive to set.
+	 */
+	public void setInflectBeinoniPossessive(
+			final boolean inflectBeinoniPossessive) {
+		this.inflectBeinoniPossessive = inflectBeinoniPossessive;
+	}
+
+	/**
+	 * @param inflectedVerb
+	 *            The inflectedVerb to set.
+	 */
+	public void setInflectedVerb(final String inflectedVerb) {
+		this.inflectedVerb = inflectedVerb;
+	}
+
+	/**
+	 * @param inflectFuture
+	 *            The inflectFuture to set.
+	 */
+	public void setInflectFuture(final boolean inflectFuture) {
+		this.inflectFuture = inflectFuture;
+	}
+
+	/**
+	 * @param inflectImperative
+	 *            The inflectImperative to set.
+	 */
+	public void setInflectImperative(final boolean inflectImperative) {
+		this.inflectImperative = inflectImperative;
 	}
 
 	/**
 	 * @param inflectInfinitive
 	 *            The inflectInfinitive to set.
 	 */
-	public void setInflectInfinitive(boolean inflectInfinitive) 
-	{
+	public void setInflectInfinitive(final boolean inflectInfinitive) {
 		this.inflectInfinitive = inflectInfinitive;
 	}
-	
-	public void setTable(String _table)
-	{
+
+	/**
+	 * @param inflectInfintive
+	 *            The inflectInfintive to set.
+	 */
+	public void setInflectInfinitiveb(final boolean inflectInfintiveb) {
+		this.inflectInfinitiveb = inflectInfintiveb;
+	}
+
+	/**
+	 * @param independent
+	 *            The independent to set.
+	 */
+	public void setInflectInfinitiveIndependent(
+			final boolean inflectInfinitiveIndependent) {
+		this.inflectInfinitiveIndependent = inflectInfinitiveIndependent;
+	}
+
+	/**
+	 * @param inflectInfintive
+	 *            The inflectInfintive to set.
+	 */
+	public void setInflectInfinitivel(final boolean inflectInfintivel) {
+		this.inflectInfinitivel = inflectInfintivel;
+	}
+
+	/**
+	 * @param inflectPast
+	 *            The inflectPast to set.
+	 */
+	public void setInflectPast(final boolean inflectPast) {
+		this.inflectPast = inflectPast;
+	}
+
+	/**
+	 * @param inflectedPattern
+	 *            The inflectedPattern to set.
+	 */
+	public void setIntInflectedPattern(final int intInflectedPattern) {
+		this.intInflectedPattern = intInflectedPattern;
+	}
+
+	/**
+	 *  
+	 */
+	public void setRegister(final RegisterType register2) {
+		this.register = register2;
+	}
+
+	/**
+	 * @param replaceRemoveInfinitive
+	 *            The replaceRemoveInfinitive to set.
+	 */
+	public void setReplaceRemoveInfinitive(final boolean replaceRemoveInfinitive) {
+		this.replaceRemoveInfinitive = replaceRemoveInfinitive;
+	}
+
+	/**
+	 * @param root
+	 *            The root to set.
+	 */
+	public void setRoot(final String root) {
+		this.root = root;
+	}
+
+	/**
+	 *  
+	 */
+	public void setSpelling(final SpellingType spelling2) {
+		this.spelling = spelling2;
+	}
+
+	public void setTable(final String _table) {
 		this.table = _table;
+	}
+
+	/**
+	 * @param valence2
+	 *            The valence to set.
+	 */
+	public void setValence(final Valence valence2) {
+		this.valence = valence2;
 	}
 }

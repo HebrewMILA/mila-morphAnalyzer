@@ -1,99 +1,89 @@
-/*
- * Created on 19/09/2005
- *
- * TODO To change the template for this generated file go to
- * Window - Preferences - Java - Code Style - Code Templates
- */
 package org.mila.generator.generation;
+
+import static ch.lambdaj.Lambda.filter;
+
 import java.util.List;
-import lexicon.contents.exception_types.InterrogativeExceptionType;
-import lexicon.contents.types.ItemType;
 
-/**
- * @author daliabo
- *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
- */
-public class InterrogativeGen extends ItemGen 
-{
-	
-	public InterrogativeGen (ItemType item) 
-	{
-		super(item);
-	}
-	
-	private void replaceException() 
-	{
-		String sql = buildSql("replace", "interrogative_exception_type");
-		replaceExceptionList = handleException(sql);
+import javax.persistence.EntityManager;
+
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.InterrogativeException;
+import org.mila.entities.lexicon.InterrogativeExceptionAdd;
+import org.mila.entities.lexicon.InterrogativeExceptionRemove;
+import org.mila.entities.lexicon.InterrogativeExceptionReplace;
+import org.mila.entities.lexicon.InterrogativeLexicon;
+import org.mila.entities.lexicon.Item;
+
+public class InterrogativeGen extends ItemGen {
+	InterrogativeLexicon interrogative;
+
+	public InterrogativeGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		interrogative = (InterrogativeLexicon) item.getSubitem();
 	}
 
-	
-	protected boolean replaceExceptionExist() throws Exception 
-	{
-		boolean match = false;
-		for (int i = 0; i < replaceExceptionList.size(); i++) 
-		{
-			InterrogativeExceptionType interrogativeExceptionType = new InterrogativeExceptionType();
-			interrogativeExceptionType.open(((Integer) replaceExceptionList.get(i))
-					.intValue());
-				inflectedItem = interrogativeExceptionType.getTransliterated();
-				surface = interrogativeExceptionType.getUndotted();
-				spelling = interrogativeExceptionType.getSpelling();
-				register = interrogativeExceptionType.getRegister();
-				match = true;
-				populateDatabase();
-				break;	
+	protected List<InterrogativeException> getReplaceExceptions() {
+		return filter(Matchers.instanceOf(InterrogativeExceptionReplace.class),
+				interrogative.getExceptions());
+	}
+
+	protected List<InterrogativeException> getRemoveExceptions() {
+		return filter(Matchers.instanceOf(InterrogativeExceptionRemove.class),
+				interrogative.getExceptions());
+	}
+
+	protected boolean replaceExceptionExist() {
+		for (InterrogativeException ex : getReplaceExceptions()) {
+
+			inflectedItem = ex.getTransliterated();
+			surface = ex.getUndotted();
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			register = RegisterType.fromValue(ex.getRegister().value());
+			populateDatabase();
+			return true;
 		}
-		return match;
+		return false;
 	}
 
-	protected void addException() throws Exception 
-	{
-		String sql = buildSql("add", "interrogative_exception_type");
-		List addExceptionList = handleException(sql);
-		if (addExceptionList.size() > 0) 
-		{
-			analyseExceptionList(addExceptionList);
-		}
+	protected void addException() {
+		analyseAddExceptionList(filter(
+				Matchers.instanceOf(InterrogativeExceptionAdd.class),
+				interrogative.getExceptions()));
 	}
 
-	private void analyseExceptionList(List exceptionList) throws Exception 
-	{
-		for (int i = 0; i < exceptionList.size(); i++) 
-		{
-			InterrogativeExceptionType interrogativeExceptionType = new InterrogativeExceptionType();
-			interrogativeExceptionType.open(((Integer) exceptionList.get(i)).intValue());
-			inflectedItem = interrogativeExceptionType.getTransliterated();
-			surface = interrogativeExceptionType.getUndotted();
-			spelling = interrogativeExceptionType.getSpelling();
-			register = interrogativeExceptionType.getRegister();
-			PGN = interrogativeExceptionType.getPersonGenderNumber();
-			/*if(!PGN.equals("unspecified"))
-			{
-				suffixFunction="pronomial";
-			}*/
+	private void analyseAddExceptionList(List<InterrogativeException> exceptions) {
+		for (InterrogativeException ex : exceptions) {
+			inflectedItem = ex.getTransliterated();
+			surface = ex.getUndotted();
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			register = RegisterType.fromValue(ex.getRegister().value());
+			PGN = ex.getPossessive();
+			/*
+			 * if(!PGN.equals("unspecified")) { suffixFunction="pronomial"; }
+			 */
 			populateDatabase();
 		}
 	}
 
-	private void analyse() 
-	{
+	private void analyse() {
 		analyseItem();
 		inflectedItem = transliterated;
 		surface = undot;
-		suffixFunction = "unspecified";
-		PGN="unspecified";
-		type = item.getInterrogative().getInterrogativeType();
+		suffixFunction = SuffixFunctionType.UNSPECIFIED;
+		PGN = "unspecified";
+		type = interrogative.getInterrogativeType().value();
 	}
 
-	public void inflect() throws Exception 
-	{
-		//There is no logic for remove functionality
+	public List<Inflection> inflect() {
+		/* XXX: There is no logic for remove functionality */
 		analyse();
 		populateDatabase();
-		replaceException();
 		addException();
+		return this.getGeneratedInflections();
 	}
 }

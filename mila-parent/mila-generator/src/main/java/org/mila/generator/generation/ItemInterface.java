@@ -28,10 +28,4 @@ public interface ItemInterface {
 	
 	final static int REMOVE = 2;
 	
-	final static String UNSPECIFIED="unspecified";
-	
-	final static String IRREGULAR_SPELLING="irregular";
-	final static String STANDARD_SPELLING="standard";
-	final static String FORMAL_REGISTER="formal";
-	
 }

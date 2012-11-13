@@ -6,159 +6,121 @@
  */
 package org.mila.generator.generation;
 
+import static ch.lambdaj.Lambda.filter;
 
-import lexicon.contents.exception_types.ProperNameExceptionType;
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.ProperNameException;
+import org.mila.entities.lexicon.ProperNameExceptionAdd;
+import org.mila.entities.lexicon.ProperNameLexicon;
+import org.mila.generator.utils.Transliteration;
 
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
-public class ProperNameGen extends ItemGen 
-{
-	public ProperNameGen(ItemType item) 
-	{
-		super(item);
+public class ProperNameGen extends ItemGen {
+	ProperNameLexicon properName;
+
+	public ProperNameGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		properName = (ProperNameLexicon) item.getSubitem();
 	}
 
-	private void analyse() 
-	{
+	private void analyse() {
 		analyseItem();
 
-		//fix a bug in the lexicon for propername with period like אי.סי.אי
-		//remove after fixing lexicon code
-		//transliterated = Translate.Heb2Eng(undot);
-		//transliterated = transliterated.replaceAll("&#39;", "'");
-		//baseTransliteratedItem = transliterated;
-		///////////////////////////////////////////////////////////
-		gender = item.getProperName().getGender();
-		number = item.getProperName().getNumber();
-		type = item.getProperName().getType();
-		definitness = item.getProperName().getDefiniteness();
-		direction = item.getProperName().getDirection();
+		gender = GenderType.fromValue(properName.getGender().value());
+		number = NumberType.fromValue(properName.getNumber().value());
+		type = properName.getType().value();
+		definitness = properName.getDefiniteness();
+		/* Again, this seems useless */
+		direction = properName.getDirection().value();
 		surface = undot;
 		inflectedItem = transliterated;
-		suffixFunction = "unspecified";
-		basePos = item.getPos().toLowerCase();
+		suffixFunction = SuffixFunctionType.UNSPECIFIED;
+		basePos = "propername";
 	}
 
-	private void inflectAddExceptions() throws Exception 
-	{
-		super.getException("add");
-		if (addExceptionList.size() > 0) 
-		{
-			analyseExceptionList();
-		}
+	private void addExceptions() {
+		analyseAddExceptionList(filter(
+				Matchers.instanceOf(ProperNameExceptionAdd.class),
+				properName.getExceptions()));
 	}
 
-	private void analyseExceptionList() throws Exception 
-	{
-		int size = addExceptionList.size();
-		System.out.println("addExceptionList size" + size);
-		for (int i = 0; i < size; i++) 
-		{
-			ProperNameExceptionType properNameExceptionType = new ProperNameExceptionType();
-			properNameExceptionType.open(((Integer) addExceptionList.get(i)).intValue());
-			inflectedItem = properNameExceptionType.getTransliterated();
-			//inflectedItem = inflectedItem.replaceAll("&#39;", "'");
-			System.out.println("inflectedItem=" + inflectedItem);
-			System.out.println("i=" + i);
-			surface = properNameExceptionType.getUndotted();
-			//suffixGender = nounExceptionType.getGender();
-			
-			if (properNameExceptionType.getTransliterated().startsWith("w")
-					&& !properNameExceptionType.getTransliterated().startsWith("ww")) 
-			{
-				inflectedItem = "w"+ properNameExceptionType.getTransliterated();
-				//inflectedItem = inflectedItem.replaceAll("&#39;", "'");
-				surface = "ו" + properNameExceptionType.getUndotted();
-				addExceptionListHandling(properNameExceptionType);
+	private void analyseAddExceptionList(List<ProperNameException> exceptions) {
+		for (ProperNameException ex : exceptions) {
+			inflectedItem = ex.getTransliterated();
+			surface = ex.getUndotted();
+
+			if (ex.getTransliterated().startsWith("w")
+					&& !ex.getTransliterated().startsWith("ww")) {
+				inflectedItem = "w" + ex.getTransliterated();
+				surface = "ו" + ex.getUndotted();
 			}
-			else
-				addExceptionListHandling(properNameExceptionType);
-		}
-	}
 
-	private void addExceptionListHandling(ProperNameExceptionType properNameExceptionType) 
-	{
-		try 
-		{
-			gender = lexiconGender = properNameExceptionType.getGender();
-			number = lexiconNumber = properNameExceptionType.getNumber();
-			spelling = properNameExceptionType.getSpelling();
-			register = properNameExceptionType.getRegister();
-			type = properNameExceptionType.getType();
-			definitness = properNameExceptionType.getDefiniteness();
+			gender = GenderType.fromValue((lexiconGender = ex.getGender())
+					.value());
+			number = NumberType.fromValue((lexiconNumber = ex.getNumber())
+					.value());
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			register = RegisterType.fromValue(ex.getRegister().value());
+			type = ex.getType().value();
+			definitness = ex.getDefiniteness();
 			handleDefiniteness(inflectedItem);
-		} 
-		catch (Exception e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	private void handleDefiniteness(String item)
-	{
-		try
-		{
-    		if (definitness.equals("required")) 
-    		{
-    			definitnessVal = "rt";
-    			populateDatabase();
-    			
-    			definitnessVal = "tt";
-    			inflectedItem = "h" + item;
-    			surface = Translate.Eng2Heb(inflectedItem);
-    			populateDatabase();
-    			
-    		} 
-    		else if (definitness.equals("optional")) 
-    		{
-    			definitnessVal = "tf";
-    			populateDatabase();
-    			definitnessVal = "tt";
-    			inflectedItem = "h" + item;
-    			System.out.println();
-    			System.out.println("inflectedItem =" + inflectedItem);
-    			surface = Translate.Eng2Heb(inflectedItem);
-    			System.out.println("surface =" + surface);
-    			System.out.println();
-    			populateDatabase();
-    			//שמות פרטיים שאסור שיהיו מיודעים  כמו קולורדו
-    		} 
-    		else 
-    		{
-    			definitnessVal = "f";
-    			populateDatabase();
-    			
-    			// this part was commented by me (yossi) because it created definiteness even when it was defined as prohibtied 1.12.11
-    			/*definitnessVal = "rf";
-    			inflectedItem = "h" + item;
-    			surface = Translate.Eng2Heb(inflectedItem);
-    			populateDatabase();*/
-    		}
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
 		}
 	}
 
-	public void inflect() throws Exception 
-	{
+	private void handleDefiniteness(String item) {
+		switch (definitness) {
+		case REQUIRED:
+			definitnessVal = DefinitenessType.TRUE;
+			populateDatabase();
+
+			definitnessVal = DefinitenessType.TRUE;
+			inflectedItem = "h" + item;
+			surface = Transliteration.toHebrew(inflectedItem);
+			populateDatabase();
+			break;
+		case OPTIONAL:
+			definitnessVal = DefinitenessType.FALSE;
+			populateDatabase();
+			definitnessVal = DefinitenessType.TRUE;
+			inflectedItem = "h" + item;
+			surface = Transliteration.toHebrew(inflectedItem);
+			populateDatabase();
+			break;
+		default:
+			definitnessVal = DefinitenessType.FALSE;
+			populateDatabase();
+			break;
+		}
+	}
+
+	public List<Inflection> inflect() {
 		analyse();
 		handleDefiniteness(inflectedItem);
-		//טיפול בשמות שמתחילים ב-ו כמו וינה שיזהה גם בווינה
-		if (transliterated.startsWith("w") && !transliterated.startsWith("ww")) 
-		{
+		// טיפול בשמות שמתחילים ב-ו כמו וינה שיזהה גם בווינה
+		if (transliterated.startsWith("w") && !transliterated.startsWith("ww")) {
 			inflectedItem = "w" + transliterated;
-			surface = Translate.Eng2Heb(inflectedItem);
+			surface = Transliteration.toHebrew(inflectedItem);
 			handleDefiniteness(inflectedItem);
 		}
-		inflectAddExceptions();
+		addExceptions();
+		return this.getGeneratedInflections();
 	}
 }

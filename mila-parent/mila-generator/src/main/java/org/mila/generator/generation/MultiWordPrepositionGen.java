@@ -1,110 +1,91 @@
-/*
- * Created on 14/11/2005
- *
- * TODO To change the template for this generated file go to
- * Window - Preferences - Java - Code Style - Code Templates
- */
 package org.mila.generator.generation;
 
-import java.io.UnsupportedEncodingException;
+import java.util.Collections;
+import java.util.List;
 import java.util.StringTokenizer;
 
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import javax.persistence.EntityManager;
 
-/**
- * @author daliabo
- * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
- */
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.MultiWordPrepositionLexicon;
+import org.mila.entities.lexicon.Pos;
+import org.mila.generator.utils.Transliteration;
+
 public class MultiWordPrepositionGen extends ItemGen {
+
+	public MultiWordPrepositionGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		popMWE = new PopulateMWE(inflections);
+		mwprepos = (MultiWordPrepositionLexicon) item.getSubitem();
+	}
+
 	boolean definiteness;
 
-	String mwPos = "";
+	MultiWordPrepositionLexicon mwprepos;
+	Pos mwPos = Pos.UNSPECIFIED;
 
-	PopulateMWE popualteMWE = new PopulateMWE();
-
-	public MultiWordPrepositionGen(ItemType item) {
-		super(item);
-
-	}
+	PopulateMWE popMWE;
 
 	private void analyse() {
 		analyseItem();
-		mwPos = "preposition";
+		mwPos = Pos.PREPOSITION;
 		surface = undot;
 		type = "unspecified";
-		number = item.getMultiWordPreposition().getNumber();
+		number = NumberType.fromValue(mwprepos.getNumber().value());
 
 	}
 
-	protected void inflectPronomial(String transliteratedLexiconItem, String surfaceLexiconItem ,String inflected, String transliterated1)
-			throws UnsupportedEncodingException, Exception {
-		String suffixFunction = "pronomial";
+	protected void inflectPronomial(String transliteratedLexiconItem,
+			String surfaceLexiconItem, String inflected, String transliterated1) {
+		suffixFunction = SuffixFunctionType.PRONOMIAL;
 		String suffixes = "";
-		StringTokenizer stPGN=null;
-		if (number.equals("plural")){
+		StringTokenizer stPGN = null;
+		if (number.equals("plural")) {
 			suffixes = "i,k,k,ik,w,h,nw,km,kn,hm,hn";
 			final String PGNPluralTokens10 = "1p/MF/Sg,2p/M/Sg,2p/F/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/M/Pl,2p/F/Pl,3p/M/Pl,3p/F/Pl";
 			stPGN = new StringTokenizer(PGNPluralTokens10, ",");
-		}
-		else if (number.equals("singular")){
+		} else if (number.equals("singular")) {
 			stPGN = new StringTokenizer(PGNPRONOMIALTokens10, ",");
 			suffixes = "i,k,k,w,h,nw,km,kn,m,n";
 		}
 		StringTokenizer stSuff = new StringTokenizer(suffixes, ",");
-		
-	
+
 		while (stSuff.hasMoreTokens()) {
 
 			String suffix = stSuff.nextToken();
 
-			String inflectedItem = transliterated1 + " " + inflected + suffix;
-			String PGN = stPGN.nextToken();
-			//System.out.println();
-			System.out.println("inflectedItem =" + inflectedItem);
-			String surface = Translate.Eng2Heb(transliterated1) + " "
-					+ Translate.Eng2Heb(inflected+suffix);
-			if(suffix.equals("k") && PGN.equals("2p/F/Sg") && number.equals("plural"))
-				spelling="irregular";
+			inflectedItem = transliterated1 + " " + inflected + suffix;
+			PGN = stPGN.nextToken();
+			surface = Transliteration.toHebrew(transliterated1) + " "
+					+ Transliteration.toHebrew(inflected + suffix);
+			if (suffix.equals("k") && PGN.equals("2p/F/Sg")
+					&& number.equals("plural"))
+				spelling = SpellingType.IRREGULAR;
 			else
-				spelling="standard";
-			
-		
-				
-			
-			//System.out.println("surface =" + surface);
-			//System.out.println();
+				spelling = SpellingType.STANDARD;
 
-//			if(inflectedItem.endsWith("i") && number.equals("plural") && PGN.equals("1p/MF/Sg")){
-//				popualteMWE.popualteMWETables(inflectedItem, surface, '1',
-//						"preposition", "unspecified", id, "unspecified", PGN, spelling, register);
-//				spelling="irregular";
-//				inflectedItem = transliterated;
-//				System.out.println("inflectedItem =" + inflectedItem);
-//				popualteMWE.popualteMWETables(inflectedItem, surface, '1',
-//						"preposition", "unspecified", id, "unspecified", PGN, spelling, register);
-//				spelling="standard";
-//				
-//			}
-//			else
-			popualteMWE.popualteMWETables(transliteratedLexiconItem, surfaceLexiconItem, '1',
-					"preposition", "unspecified", id, "unspecified", PGN, spelling, register, inflectedItem, surface);
-			
-			
+			this.basePos = this.mwPos.value();
+			popMWE.populateMWETables(this, false);
 		}
 	}
 
-	public void inflect() throws Exception {
+	public List<Inflection> inflect() {
 		analyse();
 		StringTokenizer st = new StringTokenizer(transliterated);
 		String transliterated1 = st.nextToken();
 		String transliterated2 = st.nextToken();
-		popualteMWE.popualteMWETables(transliterated, surface, '1', mwPos,
-				dottedLexiconItem, id, type, spelling, register,false);
-		inflectPronomial(transliterated, surface,transliterated2, transliterated1);
+		this.basePos = this.mwPos.value();
 
+		popMWE.populateMWETables(this, false);
+		inflectPronomial(transliterated, surface, transliterated2,
+				transliterated1);
+
+		return Collections.emptyList();
 	}
 
 }

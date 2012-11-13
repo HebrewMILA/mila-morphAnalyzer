@@ -1,0 +1,11 @@
+javax.persistence.jdbc.driver = org.hsqldb.jdbcDriver
+javax.persistence.jdbc.url = jdbc:hsqldb:mem:generator_testdb;shutdown=false
+javax.persistence.jdbc.user = sa
+javax.persistence.jdbc.password = 
+eclipselink.jdbc.read-connections.min = 1
+eclipselink.jdbc.write-connections.min = 1
+eclipselink.logging.level = FINER
+eclipselink.target-server = None
+eclipselink.ddl-generation = create-tables
+javax.persistence.transactionType = RESOURCE_LOCAL
+provider = org.eclipse.persistence.jpa.PersistenceProvider

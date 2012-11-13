@@ -6,7 +6,12 @@
  */
 package org.mila.generator.generation;
 
-import lexicon.contents.types.ItemType;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Item;
 
 /**
  * @author daliabo
@@ -15,22 +20,21 @@ import lexicon.contents.types.ItemType;
  * Window - Preferences - Java - Code Style - Code Templates
  */
 public class ImpersonalGen extends ItemGen {
-	
-	public ImpersonalGen(ItemType item) {
-		super(item);
-		
+	public ImpersonalGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
 	}
-
 
 	private void analyse() {
 		analyseItem();
 	}
 
-	public void inflect() throws Exception {
+	public List<Inflection> inflect() {
 		analyse();
 		inflectedItem = transliterated;
 		surface = undot;
 		populateDatabase();
+		return this.getGeneratedInflections();
 	}
 
 

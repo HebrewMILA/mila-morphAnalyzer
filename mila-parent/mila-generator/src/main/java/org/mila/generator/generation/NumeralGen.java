@@ -6,66 +6,357 @@
  */
 package org.mila.generator.generation;
 
+import static ch.lambdaj.Lambda.filter;
+
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lexicon.contents.exception_types.NumeralExceptionType;
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import javax.persistence.EntityManager;
 
-/**
- * @author daliabo
- * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
- */
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.corpus.TriStateType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Definitness;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.Numeral;
+import org.mila.entities.lexicon.NumeralException;
+import org.mila.entities.lexicon.NumeralExceptionAdd;
+import org.mila.entities.lexicon.NumeralExceptionRemove;
+import org.mila.entities.lexicon.NumeralExceptionReplace;
+import org.mila.entities.lexicon.NumeralLexicon;
+import org.mila.generator.utils.Transliteration;
+
 public class NumeralGen extends ItemGen {
+	private final NumeralLexicon numeral;
+
 	String personTokens = "";
 
 	String numberTokens = "";
 
 	String genderTokens = "";
 
-	String definiteness = "";
-
-	public NumeralGen(ItemType item) {
-		super(item);
+	public NumeralGen(final Item item, final EntityManager lexicon,
+			final EntityManager generator, final EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		this.numeral = (NumeralLexicon) item.getSubitem();
 	}
 
-	private void replaceException() {
-		String sql = buildSql("replace", "numeral_exception_type");
-		replaceExceptionList = handleException(sql);
+	protected void addException() {
+		this.analyseAddExceptionList(filter(
+				Matchers.instanceOf(NumeralExceptionAdd.class),
+				this.numeral.getExceptions()));
 	}
 
-	protected void addException() throws Exception {
-		String sql = buildSql("add", "numeral_exception_type");
-		List addExceptionList = handleException(sql);
-		if (addExceptionList.size() > 0) {
-			analyseExceptionList(addExceptionList);
+	@Override
+	protected void addH() {
+		if (!(this.definitness == Definitness.PROHIBITED)) {
+			super.addH();
 		}
 	}
 
-	protected boolean replaceExceptionExist() throws Exception {
+	private void analyse() {
+		this.analyseItem();
+		this.PGN = "unspecified";
+		this.type = this.numeral.getType().value();
+		this.gender = GenderType.fromValue(this.numeral.getGender().value());
+		this.number = NumberType.fromValue(this.numeral.getNumber().value());
+		this.inflect = this.numeral.isInflect();
+		this.inflectedItem = this.transliterated;
+		this.surface = this.undot;
+		this.definitness = this.numeral.getDefiniteness();
+		if (this.definitness == Definitness.PROHIBITED) {
+			this.definitnessVal = DefinitenessType.FALSE;
+		} else {
+			this.definitnessVal = DefinitenessType.FALSE;
+		}
+		this.construct = TriStateType.FALSE;
+		this.value = this.numeral.getValue();
+	}
+
+	private void analyseAddExceptionList(final List<NumeralException> exceptions) {
+		for (final NumeralException ex : exceptions) {
+			this.inflectedItem = ex.getTransliterated();
+			this.surface = ex.getUndotted();
+			this.register = RegisterType.fromValue(ex.getRegister().value());
+			this.spelling = SpellingType.fromValue(ex.getSpelling().value());
+			this.PGN = ex.getPossessive();
+			this.construct = TriStateType.fromValue(ex.getConstruct().value());
+			this.gender = GenderType.fromValue(ex.getGender().value());
+			this.number = NumberType.fromValue(ex.getNumber().value());
+			this.definitness = this.numeral.getDefiniteness();
+			this.suffixFunction = SuffixFunctionType.UNSPECIFIED;
+
+			if (this.definitness == Definitness.PROHIBITED) {
+				this.definitnessVal = DefinitenessType.FALSE;
+			} else {
+				this.definitnessVal = DefinitenessType.FALSE;
+			}
+			this.populateDatabase();
+			if (this.construct == TriStateType.FALSE
+					&& (this.PGN.equals("unspecified") || this.PGN.equals(""))) {
+				this.setAttributes(this.gender, NumberType.PLURAL,
+						TriStateType.FALSE, DefinitenessType.TRUE,
+						this.inflectedItem, "unspecified",
+						SuffixFunctionType.UNSPECIFIED);
+
+				this.addH();
+
+			}
+		}
+	}
+
+	protected void generateConstruct() {
+		if (this.numeral.getType() == Numeral.NUMERAL_FRACTIONAL) {
+			if (this.number == NumberType.PLURAL
+					&& this.gender == GenderType.MASCULINE) {
+				this.inflectedItem = this.inflectedItem.substring(0,
+						this.inflectedItem.length() - 1);
+			} else if (this.number == NumberType.PLURAL
+					&& this.gender == GenderType.FEMININE) {
+				this.inflectedItem = this.inflectedItem.substring(0,
+						this.inflectedItem.length());
+			}
+			this.surface = Transliteration.toHebrew(this.inflectedItem);
+			if (!this.replaceExceptionExist()) {
+				this.populateDatabase();
+			}
+		} else if (this.numeral.getType() == Numeral.NUMERAL_CARDINAL
+				&& !this.inflectedItem.equals("axd")
+				&& !this.inflectedItem.equals("eniim")) {
+			/* XXX: What is this, hard coded exceptions? why? */
+			if (this.gender == GenderType.MASCULINE) {
+				this.inflectedItem = this.inflectedItem.substring(0,
+						this.inflectedItem.length() - 1) + "t";
+			}
+			this.surface = Transliteration.toHebrew(this.inflectedItem);
+			if (!this.replaceExceptionExist()) {
+				this.populateDatabase();
+			}
+		}
+	}
+
+	protected void generateFeminine() {
+		/* XXX: The logic here seems wrong */
+		if (this.getReplaceExceptions().size() <= 0) {
+			this.inflectedItem = this.inflectedItem + "t";
+			this.surface = Transliteration.toHebrew(this.inflectedItem);
+			this.populateDatabase();
+		} else {
+			this.replaceExceptionExist();
+		}
+
+	}
+
+	protected void generatePlural() {
+		// generate masculine plural
+		if (this.numeral.getType() == Numeral.NUMERAL_ORDINAL) {
+			if (this.gender == GenderType.MASCULINE) {
+				this.inflectedItem = this.transliterated + "im";
+			} else if (this.gender == GenderType.FEMININE) {
+				this.inflectedItem = this.transliterated + "wt";
+			}
+			this.surface = Transliteration.toHebrew(this.inflectedItem);
+			this.populateDatabase();
+
+		} else if (this.numeral.getType() == Numeral.NUMERAL_FRACTIONAL) {
+			if (this.gender == GenderType.MASCULINE) {
+				this.inflectedItem = this.inflectedItem + "im";
+				this.surface = Transliteration.toHebrew(this.inflectedItem);
+			} else if (this.gender == GenderType.FEMININE) {
+				this.inflectedItem = this.inflectedItem.substring(0,
+						this.inflectedItem.length() - 1) + "wt";
+				this.surface = Transliteration.toHebrew(this.inflectedItem);
+			}
+			if (!this.replaceExceptionExist()) {
+				this.populateDatabase();
+			}
+		}
+
+	}
+
+	private void generatePossessive() {
+		String suffixes = "";
+		final String base = this.inflectedItem;
+		String suffix = "";
+		if (this.type.equals("numeral fractional") && this.inflect) {
+			if (this.number == NumberType.SINGULAR) {
+				suffixes = "i,k,k,w,h,nw,km,kn,m,n";
+			} else if (this.number == NumberType.PLURAL
+					&& this.gender == GenderType.FEMININE) {
+				suffixes = "ii,ik,iik,iw,ih,inw,ikm,ikn,ihm,ihn";
+			} else if (this.number == NumberType.PLURAL
+					&& this.gender == GenderType.MASCULINE) {
+				suffixes = "i,k,ik,w,h,nw,km,kn,hm,hn";
+			}
+			new StringTokenizer(this.inflectedItem, ",");
+			final StringTokenizer stPGN = new StringTokenizer(PGNTokens10, ",");
+			final StringTokenizer stSuffix = new StringTokenizer(suffixes, ",");
+			while (stPGN.hasMoreTokens()) {
+				this.PGN = stPGN.nextToken();
+				suffix = stSuffix.nextToken();
+				this.inflectedItem = base + suffix;
+				this.surface = Transliteration.toHebrew(this.inflectedItem);
+				this.populateDatabase();
+			}
+		}
+		this.inflectedItem = base;
+	}
+
+	protected List<NumeralException> getRemoveExceptions() {
+		return filter(Matchers.instanceOf(NumeralExceptionRemove.class),
+				this.numeral.getExceptions());
+	}
+
+	protected List<NumeralException> getReplaceExceptions() {
+		return filter(Matchers.instanceOf(NumeralExceptionReplace.class),
+				this.numeral.getExceptions());
+	}
+
+	@Override
+	public List<Inflection> inflect() {
+		String feminineBase = "";
+		String pluralBase = "";
+		this.analyse();
+		this.populateDatabase();
+
+		this.setAttributes(this.gender, this.number, this.construct,
+				DefinitenessType.TRUE, this.inflectedItem, "unspecified",
+				SuffixFunctionType.UNSPECIFIED);
+
+		this.addH();
+
+		this.setAttributes(this.gender, this.number, TriStateType.TRUE,
+				DefinitenessType.UNSPECIFIED, this.transliterated,
+				"unspecified", SuffixFunctionType.UNSPECIFIED);
+
+		this.generateConstruct();
+
+		this.setAttributes(this.gender, this.number, TriStateType.FALSE,
+				DefinitenessType.FALSE, this.transliterated, "unspecified",
+				SuffixFunctionType.POSSESSIVE);
+
+		this.generatePossessive();
+
+		if (this.gender != GenderType.FEMININE
+				&& this.numeral.getType() != Numeral.NUMERAL_ORDINAL) {
+
+			this.setAttributes(GenderType.FEMININE, NumberType.SINGULAR,
+					TriStateType.FALSE, DefinitenessType.FALSE,
+					this.transliterated, "unspecified",
+					SuffixFunctionType.UNSPECIFIED);
+
+			this.generateFeminine();
+
+			feminineBase = this.inflectedItem;
+
+		}
+
+		if (this.type.equals("numeral ordinal")
+				|| this.type.equals("numeral fractional"))
+			if (!(this.number == NumberType.PLURAL)) {
+
+				this.setAttributes(
+						GenderType.fromValue(this.numeral.getGender().value()),
+						NumberType.PLURAL, TriStateType.FALSE,
+						DefinitenessType.FALSE, this.transliterated,
+						"unspecified", SuffixFunctionType.UNSPECIFIED);
+
+				this.generatePlural();
+
+				pluralBase = this.inflectedItem;
+			}
+
+		if (!feminineBase.equals("")) {
+
+			this.number = NumberType
+					.fromValue(this.numeral.getNumber().value());
+
+			this.setAttributes(GenderType.FEMININE, this.number,
+					TriStateType.FALSE, DefinitenessType.TRUE, feminineBase,
+					"unspecified", SuffixFunctionType.UNSPECIFIED);
+
+			this.addH();
+
+			this.setAttributes(GenderType.FEMININE, NumberType.PLURAL,
+					TriStateType.FALSE, DefinitenessType.FALSE, feminineBase,
+					"unspecified", SuffixFunctionType.UNSPECIFIED);
+
+			this.generatePlural();
+
+			this.setAttributes(GenderType.FEMININE, NumberType.PLURAL,
+					TriStateType.FALSE, DefinitenessType.TRUE,
+					this.inflectedItem, "unspecified",
+					SuffixFunctionType.UNSPECIFIED);
+
+			this.addH();
+
+			this.setAttributes(GenderType.FEMININE, NumberType.PLURAL,
+					TriStateType.FALSE, DefinitenessType.UNSPECIFIED,
+					feminineBase, "unspecified", SuffixFunctionType.UNSPECIFIED);
+
+			this.generateConstruct();
+
+			this.setAttributes(GenderType.FEMININE, NumberType.PLURAL,
+					TriStateType.FALSE, DefinitenessType.FALSE, feminineBase,
+					"unspecified", SuffixFunctionType.POSSESSIVE);
+
+			this.generatePossessive();
+		}
+
+		if (!pluralBase.equals("")) {
+			this.gender = GenderType
+					.fromValue(this.numeral.getGender().value());
+
+			this.setAttributes(this.gender, NumberType.PLURAL,
+					TriStateType.FALSE, DefinitenessType.TRUE, pluralBase,
+					"unspecified", SuffixFunctionType.UNSPECIFIED);
+
+			this.addH();
+
+			this.setAttributes(this.gender, NumberType.PLURAL,
+					TriStateType.TRUE, DefinitenessType.UNSPECIFIED,
+					pluralBase, "unspecified", SuffixFunctionType.UNSPECIFIED);
+
+			this.generateConstruct();
+
+			this.setAttributes(this.gender, NumberType.PLURAL,
+					TriStateType.FALSE, DefinitenessType.FALSE,
+					this.inflectedItem, "unspecified",
+					SuffixFunctionType.POSSESSIVE);
+
+			this.generatePossessive();
+
+		}
+		this.addException();
+		return this.getGeneratedInflections();
+	}
+
+	@Override
+	protected boolean replaceExceptionExist() {
 		boolean match = false;
-		for (int i = 0; i < replaceExceptionList.size(); i++) {
-			//System.out.println("********************************");
-			NumeralExceptionType numeralExceptionType = new NumeralExceptionType();
-			numeralExceptionType.open(((Integer) replaceExceptionList.get(i))
-					.intValue());
-			String exceptionGender = numeralExceptionType.getGender();
-			String exceptionConstruct = numeralExceptionType.getConstruct();
-			String exceptionNumber = numeralExceptionType.getNumber();
-			//System.out.println("exceptionNumber=" + exceptionNumber);
-			//System.out.println("exceptionConstruct=" + exceptionConstruct);
-			//System.out.println("exceptionGender=" + exceptionGender);
-			if (exceptionGender.equals(gender)
-					&& exceptionConstruct.equals(construct)
-					&& exceptionNumber.equals(number)) {
-				inflectedItem = numeralExceptionType.getTransliterated();
-				surface = numeralExceptionType.getUndotted();
-				register = numeralExceptionType.getRegister();
-				spelling = numeralExceptionType.getSpelling();
-				populateDatabase();
+		for (final NumeralException ex : this.getReplaceExceptions()) {
+			final GenderType exGender = GenderType.fromValue(ex.getGender()
+					.value());
+			final TriStateType exConstruct = TriStateType.fromValue(ex
+					.getConstruct().value());
+			final NumberType exNumber = NumberType.fromValue(ex.getNumber()
+					.value());
+			if (exGender.equals(this.gender)
+					&& exConstruct.equals(this.construct)
+					&& exNumber.equals(this.number)) {
+				this.inflectedItem = ex.getTransliterated();
+				this.surface = ex.getUndotted();
+				this.register = RegisterType
+						.fromValue(ex.getRegister().value());
+				this.spelling = SpellingType
+						.fromValue(ex.getSpelling().value());
+				this.populateDatabase();
 				match = true;
 				break;
 			}
@@ -73,194 +364,10 @@ public class NumeralGen extends ItemGen {
 		return match;
 	}
 
-	private void analyseExceptionList(List exceptionList) throws Exception {
-		for (int i = 0; i < exceptionList.size(); i++) {
-			NumeralExceptionType numeralExceptionType = new NumeralExceptionType();
-			numeralExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
-			inflectedItem = numeralExceptionType.getTransliterated();
-			surface = numeralExceptionType.getUndotted();
-			register = numeralExceptionType.getRegister();
-			spelling = numeralExceptionType.getSpelling();
-			PGN = numeralExceptionType.getPgn();
-			construct = numeralExceptionType.getConstruct();
-			gender = numeralExceptionType.getGender();
-			number = numeralExceptionType.getNumber();
-			definiteness = item.getNumeral().getDefiniteness();
-			suffixFunction = "unspecified";
-		
-			if (definiteness.equals("prohibited"))
-				definitnessVal = "f";
-			else
-				definitnessVal = "tf";
-			populateDatabase();
-			if (construct.equals("false") && ( PGN.equals("unspecified") || PGN.equals(""))){
-				setAttributes(gender, "plural", "false", "tt", inflectedItem,
-						"unspecified", "unspecified");
-
-				addH();
-				
-
-			}
-		}
-	}
-
-	private void analyse() {
-		analyseItem();
-		PGN = "unspecified";
-		type = item.getNumeral().getType();
-		gender = item.getNumeral().getGender();
-		number = item.getNumeral().getNumber();
-		inflect = item.getNumeral().isInflect();
-		inflectedItem = transliterated;
-		surface = undot;
-		definiteness = item.getNumeral().getDefiniteness();
-		if (definiteness.equals("prohibited"))
-			definitnessVal = "f";
-		else
-			definitnessVal = "tf";
-		construct = "false";
-		value = item.getNumeral().getValue();
-	}
-
-	private void generatePossessive() throws Exception {
-		String suffixes = "";
-		String base = inflectedItem;
-		String suffix = "";
-		if (type.equals("numeral fractional") && inflect) {
-			//System.out.println("|||||||||||||||||||||||||||||||||||||");
-			//System.out.println("||||||||||generatePossessive||||||||||||");
-			if (number.equals("singular"))
-				suffixes = "i,k,k,w,h,nw,km,kn,m,n";
-			else if(number.equals("plural") && gender.equals("feminine"))
-				suffixes = "ii,ik,iik,iw,ih,inw,ikm,ikn,ihm,ihn";
-			else if (number.equals("plural") && gender.equals("masculine"))
-				suffixes = "i,k,ik,w,h,nw,km,kn,hm,hn";
-			StringTokenizer stPossessive = new StringTokenizer(inflectedItem,
-					",");
-			StringTokenizer stPGN = new StringTokenizer(PGNTokens10, ",");
-			StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-			StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-			StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
-			StringTokenizer stSuffix = new StringTokenizer(suffixes, ",");
-			while (stPGN.hasMoreTokens()) {
-				PGN = stPGN.nextToken();
-				suffix = stSuffix.nextToken();
-				inflectedItem = base + suffix;
-				//System.out.println();
-				//System.out.println("inflectedItem =" + inflectedItem);
-				surface = Translate.Eng2Heb(inflectedItem);
-				//System.out.println("surface =" + surface);
-				//System.out.println();
-				populateDatabase();
-			}
-		}
-		inflectedItem = base;
-	}
-
-	protected void addH() throws Exception {
-		if (!definitness.equals("prohibited")) {
-			super.addH();
-		}
-	}
-
-	protected void generateFeminine() throws Exception {
-		//System.out.println("|||||||||||||||||||||||||||||||||||||");
-		//System.out.println("||||||||||generateFeminine||||||||||||");
-	
-			if (replaceExceptionList.size() <= 0) {
-				inflectedItem = inflectedItem + "t";
-				surface = Translate.Eng2Heb(inflectedItem);
-				//System.out.println();
-				//System.out.println("inflectedItem =" + inflectedItem);
-				//System.out.println("surface =" + surface);
-				//System.out.println();
-				populateDatabase();
-			} else {
-				replaceExceptionExist();
-			}
-			
-		
-	}
-
-	protected void generateConstruct() throws Exception 
-	{
-		if (type.equals("numeral fractional")) 
-		{
-			//System.out.println("|||||||||||||||||||||||||||||||||||||");
-			//System.out.println("||||||||||generateConstruct||||||||||||");
-			if (number.equals("plural") && gender.equals("masculine"))
-				inflectedItem = inflectedItem.substring(0,inflectedItem.length()-1);
-			else if(number.equals("plural") && gender.equals("feminine"))
-				inflectedItem = inflectedItem.substring(0,inflectedItem.length());
-			surface = Translate.Eng2Heb(inflectedItem);
-			if(!replaceExceptionExist())
-			populateDatabase();
-			//System.out.println();
-			//System.out.println("inflectedItem =" + inflectedItem);
-			//System.out.println("surface =" + surface);
-			//System.out.println();
-		}else if (type.equals("numeral cardinal") && !inflectedItem.equals("axd") && !inflectedItem.equals("eniim"))
-		{
-			//System.out.println("|||||||||||||||||||||||||||||||||||||");
-			//System.out.println("||||||||||generateConstruct||||||||||||");
-			if(gender.equals("masculine"))
-			inflectedItem = inflectedItem.substring(0,inflectedItem.length()-1) + "t";
-			surface = Translate.Eng2Heb(inflectedItem);
-			if(!replaceExceptionExist())
-				populateDatabase();
-				//System.out.println();
-				//System.out.println("inflectedItem =" + inflectedItem);
-				//System.out.println("surface =" + surface);
-				//System.out.println();
-		}
-	}
-
-	protected void generatePlural() throws Exception 
-	{
-		//generate masculine plural
-		if (type.equals("numeral ordinal")) 
-		{
-			//System.out.println("|||||||||||||||||||||||||||||||||||||");
-			//System.out.println("||||||||||generatePlural||||||||||||");
-			if (gender.equals("masculine")) 
-			{
-				inflectedItem = transliterated + "im";
-			} 
-			else if (gender.equals("feminine")) 
-			{
-				inflectedItem = transliterated + "wt";			
-			}
-			surface = Translate.Eng2Heb(inflectedItem);
-			populateDatabase();
-
-		} 
-		else if (type.equals("numeral fractional")) 
-		{
-			//System.out.println("|||||||||||||||||||||||||||||||||||||");
-			//System.out.println("||||||||||generatePlural||||||||||||");
-			if (gender.equals("masculine")) {
-				inflectedItem = inflectedItem + "im";
-				surface = Translate.Eng2Heb(inflectedItem);
-			} else if (gender.equals("feminine")) {
-				inflectedItem = inflectedItem.substring(0, inflectedItem
-						.length() - 1)
-						+ "wt";
-				surface = Translate.Eng2Heb(inflectedItem);
-			}
-			//System.out.println();
-			//System.out.println("inflectedItem =" + inflectedItem);
-			//System.out.println("surface =" + surface);
-			//System.out.println();
-			if(!replaceExceptionExist())
-			populateDatabase();
-		}
-
-	}
-
-	private void setAttributes(String gender, String number, String construct,
-			String definitnessVal, String inflectedItem, String PGN,
-			String suffixFunction) {
+	private void setAttributes(final GenderType gender,
+			final NumberType number, final TriStateType construct,
+			final DefinitenessType definitnessVal, final String inflectedItem,
+			final String PGN, final SuffixFunctionType suffixFunction) {
 		this.inflectedItem = inflectedItem;
 		this.number = number;
 		this.gender = gender;
@@ -268,125 +375,5 @@ public class NumeralGen extends ItemGen {
 		this.definitnessVal = definitnessVal;
 		this.PGN = PGN;
 		this.suffixFunction = suffixFunction;
-	}
-
-	public void inflect() throws Exception {
-		String feminineBase = "";
-		String pluralBase = "";
-		analyse();
-		populateDatabase();
-		replaceException();
-		//numeral ordinal - ����� ��� ����� �����
-		//numeral cardinal - ���,����� ����
-
-		//if (!baseNumeralType.equals("numeral cardinal")) {
-			replaceException();
-
-			setAttributes(gender, number, construct, "tt", inflectedItem,
-					"unspecified", "unspecified");
-
-			addH();
-			
-			setAttributes(gender, number, "true", "unspecified", transliterated,
-					"unspecified", "unspecified");
-
-			generateConstruct();
-
-			setAttributes(gender, number, "false", "tf", transliterated,
-					"unspecified", "possessive");
-
-			generatePossessive();
-
-			
-			if (!gender.equals("feminine") && (type.equals("numeral ordinal"))) {
-
-				setAttributes("feminine", "singular", "false", "tf",
-						transliterated, "unspecified", "unspecified");
-
-				generateFeminine();
-				
-				
-				feminineBase = inflectedItem;
-			
-
-			}
-
-			
-			if (type.equals("numeral ordinal") || type.equals("numeral fractional")) 
-			if (!number.equals("plural")) {
-
-				setAttributes(item.getNumeral().getGender(), "plural", "false",
-						"tf", transliterated, "unspecified", "unspecified");
-
-				generatePlural();
-
-				pluralBase = inflectedItem;
-			}
-
-			////////////////////////////////////////////////////////////
-			if (!feminineBase.equals("")) {
-
-				number = item.getNumeral().getNumber();
-
-				setAttributes("feminine", number, "false", "tt", feminineBase,
-						"unspecified", "unspecified");
-
-				addH();
-
-				setAttributes("feminine", "plural", "false", "tf",
-						feminineBase, "unspecified", "unspecified");
-
-				generatePlural();
-
-				setAttributes("feminine", "plural", "false", "tt",
-						inflectedItem, "unspecified", "unspecified");
-
-				addH();
-
-				setAttributes("feminine", "plural", "true", "unspecified", feminineBase,
-						"unspecified", "unspecified");
-
-				generateConstruct();
-
-				setAttributes("feminine", "plural", "false", "tf",
-						feminineBase, "unspecified", "possessive");
-
-				generatePossessive();
-			}
-
-			////////////////////////////////////////////////////////////////
-
-			if (!pluralBase.equals("")) {
-				gender = item.getNumeral().getGender();
-
-				setAttributes(gender, "plural", "false", "tt", pluralBase,
-						"unspecified", "unspecified");
-
-				addH();
-
-				setAttributes(gender, "plural", "true", "unspecified", pluralBase,
-						"unspecified", "unspecified");
-
-				generateConstruct();
-
-				setAttributes(gender, "plural", "false", "tf", inflectedItem,
-						"unspecified", "possessive");
-
-				generatePossessive();
-
-			}
-			/////////////////////////////////////////////////////////////////
-//		} 
-//		//��� ����� ���
-//		else if(baseNumeralType.equals("numeral cardinal") ){
-//		
-//		//numeral cardinal doesn't accept prefix h	
-//		setAttributes(gender, number, "true", "tf", transliterated,
-//				"unspecified", "unspecified");
-//
-//		generateConstruct();
-//		}
-			addException();
-		 
 	}
 }

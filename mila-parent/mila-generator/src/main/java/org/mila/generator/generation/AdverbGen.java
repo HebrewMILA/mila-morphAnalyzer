@@ -6,106 +6,94 @@
  */
 package org.mila.generator.generation;
 
+import static ch.lambdaj.Lambda.filter;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.List;
-import java.util.StringTokenizer;
 
-import lexicon.contents.exception_types.AdverbExceptionType;
-import lexicon.contents.exception_types.InterjectionExceptionType;
-import lexicon.contents.exception_types.PrepositionExceptionType;
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import javax.persistence.EntityManager;
 
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.AdverbException;
+import org.mila.entities.lexicon.AdverbExceptionAdd;
+import org.mila.entities.lexicon.AdverbExceptionRemove;
+import org.mila.entities.lexicon.AdverbExceptionReplace;
+import org.mila.entities.lexicon.AdverbLexicon;
+import org.mila.entities.lexicon.Item;
+import org.mila.generator.utils.Transliteration;
 
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class AdverbGen extends ItemGen {
 
-	public AdverbGen(ItemType item) {
-		super(item);
+	public AdverbGen(Item item, EntityManager lexicon, EntityManager generator,
+			EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		this.adverb = (AdverbLexicon) item.getSubitem();
 	}
 
-	private void replaceException() {
-		String sql = buildSql("replace", "adverb_exception_type");
-		replaceExceptionList = handleException(sql);
-	}
+	private AdverbLexicon adverb;
 
-	private void removeException() {
-		String sql = buildSql("remove", "adverb_exception_type");
-		removeExceptionList = handleException(sql);
-	}
+	protected boolean replaceExceptionExist() {
+		for (AdverbException ex : adverb.getExceptions()) {
+			if (!(ex instanceof AdverbExceptionReplace))
+				continue;
 
-	
-	
-	
-	protected boolean replaceExceptionExist() throws Exception {
-		boolean match = false;
-		for (int i = 0; i < replaceExceptionList.size(); i++) {
-			AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-			adverbExceptionType.open(((Integer) replaceExceptionList.get(i))
-					.intValue());
-			String exceptionPGN = adverbExceptionType.getPossessiveSuffix();
-			
+			String exceptionPGN = ex.getPossessive();
+
 			if (exceptionPGN.equals(PGN)) {
 				PGN = exceptionPGN;
-				inflectedItem = adverbExceptionType.getTransliterated();
-				surface = adverbExceptionType.getUndotted();
-				register = adverbExceptionType.getRegister();
-				spelling = adverbExceptionType.getSpelling();
-				//populateAcussativeAttribues();
-				match = true;
+				inflectedItem = ex.getTransliterated();
+				surface = ex.getUndotted();
+				register = RegisterType.fromValue(ex.getRegister().value());
+				spelling = SpellingType.fromValue(ex.getSpelling().value());
+				// populateAcussativeAttribues();
 				populateDatabase();
-				break;
+				return true;
 			}
 		}
-		return match;
+		return false;
 	}
-	
-	
-	
-	
-	protected boolean removeExceptionExist() throws Exception {
-		boolean match = false;
-		for (int i = 0; i < removeExceptionList.size(); i++) {
-			AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-			adverbExceptionType.open(((Integer) removeExceptionList.get(i))
-					.intValue());
-			String exceptionPGN = adverbExceptionType.getPossessiveSuffix();
-			if (exceptionPGN.equals(PGN)) {
-				match = true;
-				break;
+
+	private List<AdverbException> getRemoveExceptionList() {
+		return filter(Matchers.instanceOf(AdverbExceptionRemove.class),
+				adverb.getExceptions());
+	}
+
+	protected boolean removeExceptionExist() {
+		for (AdverbException ex : getRemoveExceptionList()) {
+			if (ex.getPossessive().equals(PGN)) {
+				return true;
 			}
 		}
-		return match;
+		return false;
 	}
 
-	protected void addException() throws Exception {
-		String sql = buildSql("add", "adverb_exception_type");
-		List addExceptionList = handleException(sql);
-		if (addExceptionList.size() > 0) {
-			analyseExceptionList(addExceptionList);
-		}
+	protected void addException() {
+		List<AdverbException> l = filter(
+				Matchers.instanceOf(AdverbExceptionAdd.class),
+				adverb.getExceptions());
+		if (l.size() > 0)
+			analyseAddExceptionList(l);
 	}
 
-	private void analyseExceptionList(List exceptionList) throws Exception {
-		for (int i = 0; i < exceptionList.size(); i++) {
-			AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-			adverbExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
-			inflectedItem = adverbExceptionType.getTransliterated();
-			surface = adverbExceptionType.getUndotted();
-			spelling = adverbExceptionType.getSpelling();
-			register = adverbExceptionType.getRegister();
-			PGN = adverbExceptionType.getPossessiveSuffix();
-			if (!PGN.equals("unspecified")){
-				suffixFunction = "pronomial";
-				//populateAcussativeAttribues();
+	private void analyseAddExceptionList(List<AdverbException> l) {
+		for (AdverbException ex : l) {
+			inflectedItem = ex.getTransliterated();
+			surface = ex.getUndotted();
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			register = RegisterType.fromValue(ex.getRegister().value());
+			PGN = ex.getPossessive();
+			if (!PGN.equals("unspecified")) {
+				suffixFunction = SuffixFunctionType.PRONOMIAL;
+				// populateAcussativeAttribues();
 			}
 			populateDatabase();
 		}
@@ -115,53 +103,35 @@ public class AdverbGen extends ItemGen {
 		analyseItem();
 		inflectedItem = transliterated;
 		surface = undot;
-		inflect = item.getAdverb().isInflect();
-		inflectionBase = item.getAdverb().getInflectionBase();
-		suffixFunction="unspecified";
-		PGN="unspecified";
+		inflect = this.adverb.isInflect();
+		inflectionBase = this.adverb.getInflectionBase();
+		suffixFunction = SuffixFunctionType.UNSPECIFIED;
+		PGN = "unspecified";
 	}
-	
-	protected void handleBaseForm() throws Exception {
-		int size = removeExceptionList.size();
-		if (size == 0)
+
+	protected void handleBaseForm() {
+		/* XXX: Replace exceptions are ignored */
+		if (!this.removeExceptionExist())
 			populateDatabase();
-		else {
-			for (int i = 0; i < size; i++) {
-				AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-				adverbExceptionType.open(((Integer) removeExceptionList.get(i))
-						.intValue());
-				String exceptionPGN = adverbExceptionType.getPossessiveSuffix();
-				String action = adverbExceptionType.getAction();
-				if (exceptionPGN.equals("unspecified")
-						&& action.equals("remove")) 
-					;
-				
-				else		
-					populateDatabase();
-				
-
-			}
-		}
 	}
 
-	public void inflect() throws Exception {
+	public List<Inflection> inflect() {
 		analyse();
-		replaceException();
-		removeException();
-		handleBaseForm() ;
-		//populateDatabase();
+		handleBaseForm();
 		addException();
-		
+
 		if (inflect) {
 			if (transliterated.charAt(transliterated.length() - 1) == 'i')
 				suffixes = "i,k,k,w,h,nw,km,kn,hm,hn";
 			else
 				suffixes = "i,k,k,w,h,nw,km,kn,m,n";
-			//PGNTokens = "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/M/Pl,2p/F/Pl,3p/M/Pl,3p/F/Pl";
+			// PGNTokens =
+			// "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/M/Pl,2p/F/Pl,3p/M/Pl,3p/F/Pl";
 			if (!inflectionBase.equals(""))
-				inflectionBaseHandling();
-			inflectPronomial("pronomial");
+				inflectionBase = Transliteration.toEnglish(inflectionBase);
+			inflectPronomial(SuffixFunctionType.PRONOMIAL);
 		}
+		return this.getGeneratedInflections();
 	}
 
 }

@@ -1,10 +1,28 @@
 package org.mila.generator.generation;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import lexicon.contents.exception_types.NounExceptionType;
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import javax.persistence.EntityManager;
+
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.corpus.TriStateType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.AdjectiveLexicon;
+import org.mila.entities.lexicon.Feminine;
+import org.mila.entities.lexicon.Gender;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.NounException;
+import org.mila.entities.lexicon.NounExceptionAdd;
+import org.mila.entities.lexicon.Number;
+import org.mila.entities.lexicon.Plural;
+import org.mila.entities.lexicon.ThreeState;
+import org.mila.generator.utils.Transliteration;
 
 public class AdjectiveGen extends ItemGen {
 	/**
@@ -14,29 +32,29 @@ public class AdjectiveGen extends ItemGen {
 	 *         Lexicon item of pos adjective <br>
 	 *         Lexicon item exception action = add (if exist) <br>
 	 * 
-	 * For each generated lexicon item (not thos items generated from add
-	 * exception items) we need to check <br>
-	 * whethere there exist a remove or replace exception lexicon item <br>
+	 *         For each generated lexicon item (not thos items generated from
+	 *         add exception items) we need to check <br>
+	 *         whethere there exist a remove or replace exception lexicon item <br>
 	 * 
-	 * Generation activities: <br>
-	 * original lexicon item <br>
-	 * h+ original lexicon item <br>
-	 * construct form of the original lexicon item <br>
-	 * feminine form of the original lexicon item <br>
-	 * h+ feminine form of the original lexicon item <br>
-	 * plural form of the original lexicon item <br>
-	 * h+ plural form of the original lexicon item <br>
-	 * construct form of feminine form <br>
-	 * plural form of feminine form <br>
-	 * construct form of plural form <br>
-	 * plural form of plural form <br>
+	 *         Generation activities: <br>
+	 *         original lexicon item <br>
+	 *         h+ original lexicon item <br>
+	 *         construct form of the original lexicon item <br>
+	 *         feminine form of the original lexicon item <br>
+	 *         h+ feminine form of the original lexicon item <br>
+	 *         plural form of the original lexicon item <br>
+	 *         h+ plural form of the original lexicon item <br>
+	 *         construct form of feminine form <br>
+	 *         plural form of feminine form <br>
+	 *         construct form of plural form <br>
+	 *         plural form of plural form <br>
 	 * 
-	 * The generation done based on rules (rules1 table on generator databse)
-	 * <br>
-	 *  
+	 *         The generation done based on rules (rules1 table on generator
+	 *         databse) <br>
+	 * 
 	 */
 
-	//private int pluralSuffixMaxLength;
+	// private int pluralSuffixMaxLength;
 	private String feminineBase = "";
 
 	private String pluralBase = "";
@@ -51,22 +69,30 @@ public class AdjectiveGen extends ItemGen {
 
 	private boolean inflectConstructP = true;
 
-	
+	private AdjectiveLexicon adjective;
 
-	public AdjectiveGen(ItemType item) {
-		super(item);
+	public AdjectiveGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		this.adjective = (AdjectiveLexicon) item.getSubitem();
 	}
 
 	/**
 	 * This method gets the exception item list of action add for the lexicon
 	 * item
 	 * 
-	 * @throws Exception
+	 * @
 	 */
-	protected void inflectAddExceptions() throws Exception {
-		super.getException("add");
-		if (addExceptionList.size() > 0) {
-			analyseExceptionList(addExceptionList);
+	protected void inflectAddExceptions() {
+		AdjectiveLexicon adj = (AdjectiveLexicon) this.item.getSubitem();
+		List<NounExceptionAdd> list = new ArrayList<NounExceptionAdd>();
+		for (NounException ex : adj.getExceptions()) {
+			if (ex instanceof NounExceptionAdd) {
+				list.add((NounExceptionAdd) ex);
+			}
+		}
+		if (list.size() > 0) {
+			analyseExceptionList(list);
 		}
 	}
 
@@ -78,143 +104,136 @@ public class AdjectiveGen extends ItemGen {
 	 * for it
 	 * 
 	 * @param exceptionList
-	 * @throws Exception
+	 *            @
 	 */
-	private void analyseExceptionList(List exceptionList) throws Exception {
-		for (int i = 0; i < exceptionList.size(); i++) {
-			NounExceptionType nounExceptionType = new NounExceptionType();
-			nounExceptionType.open(((Integer) exceptionList.get(i)).intValue());
-			inflectedItem = nounExceptionType.getTransliterated();
-			//inflectedItem = inflectedItem.replaceAll("&#39;", "'");
-			surface = nounExceptionType.getUndotted();
-			lexiconGender = gender = nounExceptionType.getGender();
-			plural = nounExceptionType.getPlural();
-			number = lexiconNumber = nounExceptionType.getNumber();
-			register = nounExceptionType.getRegister();
-			spelling = nounExceptionType.getSpelling();
-			feminine = nounExceptionType.getFeminine();
-			construct = nounExceptionType.getConstruct();
-			definitnessVal = "tf";
-			//populate the databse with the exception (add) lexicon item
+	private void analyseExceptionList(List<NounExceptionAdd> exceptionList) {
+		for (NounExceptionAdd ex : exceptionList) {
+			inflectedItem = ex.getTransliterated();
+			// inflectedItem = inflectedItem.replaceAll("&#39;", "'");
+			surface = ex.getUndotted();
+			gender = GenderType.fromValue((lexiconGender = ex.getGender())
+					.value());
+			plural = ex.getPlural();
+			number = NumberType.fromValue((lexiconNumber = ex.getNumber())
+					.value());
+			register = RegisterType.fromValue(ex.getRegister().value());
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			feminine = ex.getFeminine();
+			construct = TriStateType.fromValue(ex.getConstruct().value());
+			definitnessVal = DefinitenessType.FALSE;
+			// populate the databse with the exception (add) lexicon item
 			populateDatabase();
 			String exceptionBase = inflectedItem;
 
-			//shlomo doesn't inflect it and should be looked more carefully
-			if (lexiconNumber.equals("dual"))
+			// shlomo doesn't inflect it and should be looked more carefully
+			if (lexiconNumber == Number.DUAL)
 				return;
 
-			//setting flags: should we generate construct for the exception
+			// setting flags: should we generate construct for the exception
 			// lexicon item
-			exceptionInflectConstructS = nounExceptionType
-					.isInflectConstructS();
-			exceptionInflectConstructP = nounExceptionType
-					.isInflectConstructP();
+			exceptionInflectConstructS = ex.isInflectConstructS();
+			exceptionInflectConstructP = ex.isInflectConstructP();
 
-			//We use the same generation methods for the lexicon item and for
+			// We use the same generation methods for the lexicon item and for
 			// the exception lexicon item
-			//replaceExceptionList is not relevant for the exception type
+			// replaceExceptionList is not relevant for the exception type
 			// lexicon item (action add)
-			replaceExceptionList = null;
-			inflectAddException("add", exceptionBase);
+			inflectAddException(exceptionBase);
 			if (exceptionBase.startsWith("w")
 					&& !exceptionBase.startsWith("ww")) {
 				exceptionBase = "w" + exceptionBase;
-				surface = "ו" + nounExceptionType.getUndotted();
-				inflectAddException("add", exceptionBase);
+				surface = "ו" + ex.getUndotted();
+				inflectAddException(exceptionBase);
 			}
 
 		}
 	}
 
-	private void inflectAddException(String action, String exceptionBase)
-			throws Exception {
+	private void inflectAddException(String exceptionBase) {
 
 		String exceptionFeminineBase = "";
 		String exceptionPluralBase = "";
 
-		if (!construct.equals("true") 
-				&& exceptionPluralBase.equals("")) {
-			setAttributes(lexiconGender, lexiconNumber, "false", "tt",
-					exceptionBase);
+		if (!(construct == TriStateType.TRUE) && exceptionPluralBase.equals("")) {
+			setAttributes(lexiconGender, lexiconNumber, TriStateType.FALSE,
+					DefinitenessType.TRUE, exceptionBase);
 			addH();
 		}
-		//exception type lexicon item has two attributes relevant for construct
+		// exception type lexicon item has two attributes relevant for construct
 		// generation
-		//1) a flag indicating whether there is a construct form for this item
-		//2) construct attribute pointing out if the current excpetion item
-		//is the construct form
+		// 1) a flag indicating whether there is a construct form for this item
+		// 2) construct attribute pointing out if the current excpetion item
+		// is the construct form
 
-		//17/01/06 - if singular adjective ends with i - don't generate
+		// 17/01/06 - if singular adjective ends with i - don't generate
 		// construct
-		if (exceptionInflectConstructS && construct.equals("false")
+		if (exceptionInflectConstructS && construct == TriStateType.FALSE
 				&& (exceptionBase.charAt(exceptionBase.length() - 1) != 'i')
-				&& lexiconNumber.equals("singular")) {
-			setAttributes(lexiconGender, lexiconNumber, "true", "tf",
-					exceptionBase);
+				&& lexiconNumber == Number.SINGULAR) {
+			setAttributes(lexiconGender, lexiconNumber, TriStateType.TRUE,
+					DefinitenessType.FALSE, exceptionBase);
 			generateConstruct();
 		}
-		
-		
 
-		if (lexiconGender.equals("masculine")
-				&& !feminine.equals("unspecified")) {
-			setAttributes("feminine", lexiconNumber, "false", "tf",
-					exceptionBase);
+		if (lexiconGender == Gender.MASCULINE
+				&& feminine != Feminine.UNSPECIFIED) {
+			setAttributes(Gender.FEMININE, lexiconNumber, TriStateType.FALSE,
+					DefinitenessType.FALSE, exceptionBase);
 			generateFeminine();
 			exceptionFeminineBase = inflectedItem;
-			setAttributes("feminine", lexiconNumber, "false", "tt",
-					exceptionFeminineBase);
+			setAttributes(Gender.FEMININE, lexiconNumber, TriStateType.FALSE,
+					DefinitenessType.TRUE, exceptionFeminineBase);
 			addH();
 		}
 
-		if (!plural.equals("unspecified")) {
-			setAttributes(lexiconGender, "plural", "false", "tf",
-					exceptionBase);
+		if (plural != Plural.UNSPECIFIED) {
+			setAttributes(lexiconGender, Number.SINGULAR, TriStateType.FALSE,
+					DefinitenessType.FALSE, exceptionBase);
 			generatePlural(plural);
 			exceptionPluralBase = inflectedItem;
-			setAttributes(lexiconGender, "plural", "false", "tt",
-					exceptionPluralBase);
+			setAttributes(lexiconGender, Number.SINGULAR, TriStateType.FALSE,
+					DefinitenessType.TRUE, exceptionPluralBase);
 			addH();
 		}
 
-		/////////////////////////////////////////////////////////////
+		// ///////////////////////////////////////////////////////////
 		// Feminine form inflections: plural,construct,possessive
-		/////////////////////////////////////////////////////////////
+		// ///////////////////////////////////////////////////////////
 
 		if (!exceptionFeminineBase.equals("")) {
 
-			
-
 			if (exceptionInflectConstructS) {
-				setAttributes("feminine", "singular", "true", "tf",
+				setAttributes(Gender.FEMININE, Number.SINGULAR,
+						TriStateType.TRUE, DefinitenessType.FALSE,
 						exceptionFeminineBase);
 				generateConstruct();
 			}
 
-			setAttributes("feminine", "plural", "false", "tf",
-					exceptionFeminineBase);
-			generatePlural("wt");
+			setAttributes(Gender.FEMININE, Number.SINGULAR, TriStateType.FALSE,
+					DefinitenessType.FALSE, exceptionFeminineBase);
+			generatePlural(Plural.WT);
 			String exceptionPluralFeminineBase = inflectedItem;
-			
-			setAttributes("feminine", "plural", "false", "tt",
-					exceptionPluralFeminineBase);
+
+			setAttributes(Gender.FEMININE, Number.SINGULAR, TriStateType.FALSE,
+					DefinitenessType.TRUE, exceptionPluralFeminineBase);
 			addH();
 
-
 			if (exceptionInflectConstructP) {
-				setAttributes("feminine", "plural", "true", "tf",
+				setAttributes(Gender.FEMININE, Number.SINGULAR,
+						TriStateType.TRUE, DefinitenessType.FALSE,
 						exceptionPluralFeminineBase);
 				generateConstruct();
 			}
 
 		}
 
-		////////////////////////////////////////////////////////////
-		//pluralBase inflections: construct, plural
-		///////////////////////////////////////////////////////////
+		// //////////////////////////////////////////////////////////
+		// pluralBase inflections: construct, plural
+		// /////////////////////////////////////////////////////////
 		if (!exceptionPluralBase.equals("")) {
-			if (number.equals("plural")  && exceptionInflectConstructP) {
-				setAttributes(lexiconGender, "plural", "true", "tf",
+			if (number == NumberType.SINGULAR && exceptionInflectConstructP) {
+				setAttributes(lexiconGender, Number.SINGULAR,
+						TriStateType.TRUE, DefinitenessType.FALSE,
 						exceptionPluralBase);
 				generateConstruct();
 			}
@@ -230,79 +249,64 @@ public class AdjectiveGen extends ItemGen {
 	 * generated item <br>
 	 * If there is a remove item - the generated item will not be inserted to
 	 * the database <br>
-	 * The method compares the remove/replace exception item gender and
-	 * number with <br>
+	 * The method compares the remove/replace exception item gender and number
+	 * with <br>
 	 * the generated item gender,number - if there is an equality <br>
 	 * the generated item is replaced/removed
 	 * 
-	 * @param gender -
-	 *            gender value of lexicon item
-	 * @param number -
-	 *            number value of lexicon item
-	 * @param construct -
-	 *            construct value of lexicon item
-	 * @param exceptionList -
-	 *            remove/replace exception list
-	 * @param action -
-	 *            remove/replace
-	 * @return
-	 * @throws Exception
+	 * @param gender
+	 *            - gender value of lexicon item
+	 * @param number
+	 *            - number value of lexicon item
+	 * @param construct
+	 *            - construct value of lexicon item
+	 * @param exceptionList
+	 *            - remove/replace exception list
+	 * @param action
+	 *            - remove/replace
+	 * @return @
 	 */
-	private boolean replaceRemoveException(String gender,
-			String number, String construct, List exceptionList, String action)
-			throws Exception {
+	private boolean replaceRemoveException(GenderType gender_,
+			NumberType number_, TriStateType construct_,
+			List<NounException> exceptionList, String action) {
 		boolean match = false;
+		Gender gender = Gender.fromValue(gender_.value());
+		Number number = Number.fromValue(number_.value());
+		ThreeState construct = ThreeState.fromValue(construct_.value());
 		if (exceptionList != null) {
-			for (int i = 0; i < exceptionList.size(); i++) {
-				NounExceptionType nounExceptionType = new NounExceptionType();
-				nounExceptionType.open(((Integer) exceptionList.get(i))
-						.intValue());
-				String exceptionGender = nounExceptionType.getGender();
-				String exceptionNumber = nounExceptionType.getNumber();
-				String exceptionConstruct = nounExceptionType.getConstruct();
-				/*
-				System.out.println("----------------------------");
-				System.out.println(action + " handling");
-				System.out.println("exceptionGender =" + exceptionGender);
-				System.out.println("gender =" + gender);
-				System.out.println("exceptionNumber =" + exceptionNumber);
-				System.out.println("number =" + number);
-				System.out.println("exceptionConstruct  =" + exceptionConstruct);
-				System.out.println("construct  =" + construct);
-				System.out.println("PGN  =" + PGN);*/
-				if (exceptionGender.equals(gender)
-						&& exceptionNumber.equals(number)
-						&& (exceptionConstruct.equals(construct)
-								|| (exceptionConstruct.equals("false") && construct
-										.equals("unspecified")) || (exceptionConstruct
-								.equals("unspecified") && construct
-								.equals("false"))) ) {
+			for (NounException ex : exceptionList) {
+				Gender exceptionGender = ex.getGender();
+				Number exceptionNumber = ex.getNumber();
+				ThreeState exceptionConstruct = ex.getConstruct();
+
+				if ((exceptionGender == gender)
+						&& (exceptionNumber == number)
+						&& (exceptionConstruct == construct
+								|| (exceptionConstruct == ThreeState.FALSE && construct == ThreeState.UNSPECIFIED) || (exceptionConstruct == ThreeState.UNSPECIFIED && construct == ThreeState.FALSE))) {
 					if (action.equals("replace")) {
-						//System.out.println("exception action = replace ");
+						// System.out.println("exception action = replace ");
 						if (doebleVavHandling
-								&& !nounExceptionType.getTransliterated()
-										.startsWith("ww"))
-							inflectedItem = "w"
-									+ nounExceptionType.getTransliterated();
+								&& !ex.getTransliterated().startsWith("ww"))
+							inflectedItem = "w" + ex.getTransliterated();
 						else
-							inflectedItem = nounExceptionType
-									.getTransliterated();
-						surface = Translate.Eng2Heb(inflectedItem);
-						//System.out.println("exception transliterated  ="+ inflectedItem);
+							inflectedItem = ex.getTransliterated();
+						surface = Transliteration.toHebrew(inflectedItem);
+						// System.out.println("exception transliterated  ="+
+						// inflectedItem);
 						populateDatabase();
 						match = true;
-						//System.out.println("----------------------------");
+						// System.out.println("----------------------------");
 						return match;
 					} else if (action.equals("remove")) {
-						//System.out.println("exception action = remove ");
+						// System.out.println("exception action = remove ");
 						match = true;
-						//System.out.println("----------------------------");
+						// System.out.println("----------------------------");
 						return match;
 					}
 				}
 			}
 		}
-		//System.out.println("----------------------------");
+		// System.out.println("----------------------------");
 		return match;
 	}
 
@@ -311,38 +315,38 @@ public class AdjectiveGen extends ItemGen {
 	 */
 	private void analyzeAdjective() {
 		super.analyseItem();
-		plural = item.getAdjective().getPlural();
-		lexiconGender = gender = item.getAdjective().getGender();
-		feminine = item.getAdjective().getFeminine();
-		lexiconNumber = number = item.getAdjective().getNumber();
-		suffixFunction = "unspecified";
-		basePos = item.getPos();
+		AdjectiveLexicon adj = (AdjectiveLexicon) item.getSubitem();
+		plural = adj.getPlural();
+		gender = GenderType
+				.fromValue((lexiconGender = adj.getGender()).value());
+		feminine = adj.getFeminine();
+		number = NumberType
+				.fromValue((lexiconNumber = adj.getNumber()).value());
+		suffixFunction = SuffixFunctionType.UNSPECIFIED;
+		basePos = "adjective";
 		surface = undot;
 		inflectedItem = transliterated;
-		construct = "false";
-		definitnessVal = "tf";
+		construct = TriStateType.FALSE;
+		definitnessVal = DefinitenessType.FALSE;
 		PGN = "unspecified";
-		inflectConstructS = item.getAdjective().isInflectConstructS();
-		inflectConstructP = item.getAdjective().isInflectConstructP();
-		hebForeign = item.getAdjective().isForeign();
+		inflectConstructS = adj.isInflectConstructS();
+		inflectConstructP = adj.isInflectConstructP();
+		hebForeign = adj.isForeignSource();
 	}
 
-	private void handleDoublingVavForAdjectivesStartsWithVav() throws Exception 
-	{
-		if (transliterated.startsWith("w") && !transliterated.startsWith("ww")) 
-		{
-			//System.out.println("|||||||||||||||||||||||||||||||||||||");
-			//System.out.println("||||||||||double VAV for nouns starts with single VAV||||||||||||");
+	private void handleDoublingVavForAdjectivesStartsWithVav() {
+		analyzeAdjective();
+		if (transliterated.startsWith("w") && !transliterated.startsWith("ww")) {
+			// System.out.println("|||||||||||||||||||||||||||||||||||||");
+			// System.out.println("||||||||||double VAV for nouns starts with single VAV||||||||||||");
 
 			inflectLexiconItem();
-
-			//double VAV
 			analyzeAdjective();
 			transliterated = "w" + transliterated;
-			surface = Translate.Eng2Heb(transliterated);
+			surface = Transliteration.toHebrew(transliterated);
 			inflectedItem = transliterated;
-			register = FORMAL_REGISTER;
-			spelling=STANDARD_SPELLING;
+			register = RegisterType.FORMAL;
+			spelling = SpellingType.STANDARD;
 			pluralBase = "";
 			doebleVavHandling = true;
 			inflectLexiconItem();
@@ -350,52 +354,49 @@ public class AdjectiveGen extends ItemGen {
 			inflectLexiconItem();
 	}
 
-	private void generateConstruct() throws Exception 
-	{
-		//System.out.println("|||||||||||||||||||||||||||||||||||||");
-		//System.out.println("||||||||||generateConstruct||||||||||||");
-		
-			if (!replaceRemoveException(lexiconGender,
-					lexiconNumber, "true", replaceExceptionList, "replace")) 
-			{
-				//System.out.println("No exception handling");
-				if (number.equals("plural"))
-					// in noun rules file it refers to feminine as well - it's a
-					// mistake
-					findRule(inflectedItem, "", "constructMasculinePlural"
-							+ basePos, 2);
-				else if (gender.equals("feminine")
-						|| gender.equals("masculine and feminine"))
-					findRule(inflectedItem, "", "constructFeminineSingular"
-							+ basePos, 2);
-				//deny problems of translation for אמ"נ and אמ"ן פילטרופ סירופ
-				if (inflectedItem.endsWith("n") || inflectedItem.endsWith("p") || inflectedItem.endsWith("c")
-						&&  
-						inflectedItem.equals(transliterated))
-					surface = undot;
-				else
-					surface = Translate.Eng2Heb(inflectedItem);
-				populateDatabase();
-			
+	private void generateConstruct() {
+		// System.out.println("|||||||||||||||||||||||||||||||||||||");
+		// System.out.println("||||||||||generateConstruct||||||||||||");
+
+		if (!replaceRemoveException(gender, number, TriStateType.TRUE,
+				adjective.getExceptions(), "replace")) {
+			// System.out.println("No exception handling");
+			if (number == NumberType.SINGULAR)
+				// in noun rules file it refers to feminine as well - it's a
+				// mistake
+				findRule(inflectedItem, "", "constructMasculinePlural"
+						+ basePos, 2);
+			else if (gender == GenderType.FEMININE
+					|| gender == GenderType.MASCULINE_AND_FEMININE)
+				findRule(inflectedItem, "", "constructFeminineSingular"
+						+ basePos, 2);
+			// deny problems of translation for אמ"נ and אמ"ן פילטרופ סירופ
+			if (inflectedItem.endsWith("n") || inflectedItem.endsWith("p")
+					|| inflectedItem.endsWith("c")
+					&& inflectedItem.equals(transliterated))
+				surface = undot;
+			else
+				surface = Transliteration.toHebrew(inflectedItem);
+			populateDatabase();
+
 		}
 	}
 
-	private void generatePlural(String pluralSuffix) throws Exception 
-	{
-		//System.out.println("|||||||||||||||||||||||||||||||||||||");
-		//System.out.println("||||||||||generatePlural||||||||||||");
+	private void generatePlural(Plural plural) {
+		// System.out.println("|||||||||||||||||||||||||||||||||||||");
+		// System.out.println("||||||||||generatePlural||||||||||||");
 		String action = "";
 
-		if (!replaceRemoveException(gender, "plural",
-				"unspecified", replaceExceptionList, "replace")) 
-		{
-			action = identifyPluralAction(pluralSuffix);
-			if (!action.equals("")) 
-			{
-				//System.out.println("plural base = " + inflectedItem);
-				findRule(inflectedItem, pluralSuffix, action,pluralSuffixMaxLength);
-				//System.out.println("plural inflectedItem = " + inflectedItem);
-				surface = Translate.Eng2Heb(inflectedItem);
+		if (!replaceRemoveException(gender, NumberType.PLURAL,
+				TriStateType.UNSPECIFIED, adjective.getExceptions(), "replace")) {
+			action = identifyPluralAction(plural);
+			if (!action.equals("")) {
+				// System.out.println("plural base = " + inflectedItem);
+				findRule(inflectedItem, plural.value(), action,
+						pluralSuffixMaxLength);
+				// System.out.println("plural inflectedItem = " +
+				// inflectedItem);
+				surface = Transliteration.toHebrew(inflectedItem);
 				populateDatabase();
 				if (pluralBase.equals(""))
 					pluralBase = inflectedItem;
@@ -406,183 +407,163 @@ public class AdjectiveGen extends ItemGen {
 		}
 	}
 
-	private void generateFeminine() throws Exception 
-	{
-		//System.out.println("|||||||||||||||||||||||||||||||||||||");
-		//System.out.println("||||||||||generateFeminine||||||||||||");
-		if (!replaceRemoveException("feminine", number,
-				"unspecified", replaceExceptionList, "replace")) {
+	private void generateFeminine() {
+		if (!replaceRemoveException(GenderType.FEMININE, number,
+				TriStateType.UNSPECIFIED, adjective.getExceptions(), "replace")) {
 			String action = identifyFeminineAction();
-			findRule(inflectedItem, feminine, action, 1);
-			surface = Translate.Eng2Heb(inflectedItem);
+			findRule(inflectedItem, feminine.value(), action, 1);
+			surface = Transliteration.toHebrew(inflectedItem);
 			populateDatabase();
 		}
 	}
 
-	public void inflect() throws Exception 
-	{
-		//Get lexicon Item (for which pos = adjective ) attributes
-		//The lexicon item can have any attributes for example
-		//single masculine/single feminine/ plural feminine etc
+	public List<Inflection> inflect() {
+		// Get lexicon Item (for which pos = adjective ) attributes
+		// The lexicon item can have any attributes for example
+		// single masculine/single feminine/ plural feminine etc
 		analyzeAdjective();
-		//Get list of exceptions of type replace for this lexicon Item
-		getException("replace");
-		//Get list of exceptions of type remove for this lexicon Item
-		getException("remove");
-
 		handleDoublingVavForAdjectivesStartsWithVav();
 
-		//inflect exception type items of action add - if exist
+		// inflect exception type items of action add - if exist
 		inflectAddExceptions();
+		
+		return this.getGeneratedInflections();
 	}
 
 	/**
 	 * This is a service method which is called before every generation
 	 * operation. The attributes are changed for each generation
 	 * 
-	 * @param gender -
-	 *            the gender attribute value of the generated item
-	 * @param number -
-	 *            the number attribute value of the generated item
-	 * @param construct -
-	 *            true/false/unspecified value for the generated item
-	 * @param definitnessVal -
-	 *            This attribute value is a combination of <br>
+	 * @param gender
+	 *            - the gender attribute value of the generated item
+	 * @param number
+	 *            - the number attribute value of the generated item
+	 * @param construct
+	 *            - true/false/unspecified value for the generated item
+	 * @param definitnessVal
+	 *            - This attribute value is a combination of <br>
 	 *            the lexicon item baseDefinitness and the generated item base
 	 *            definitness <br>
 	 *            All nouns can be added h - so the lexiocn item base
 	 *            definitness id t(true) <br>
-	 *            The generated item can appear with added h (t) and without (f)
-	 *            <br>
+	 *            The generated item can appear with added h (t) and without (f) <br>
 	 *            The relevant values are : tt, tf
-	 * @param inflectedItem -
-	 *            The base form on which the next generation action will work
-	 *            <br>
+	 * @param inflectedItem
+	 *            - The base form on which the next generation action will work <br>
 	 *            For example - it is important that creating possessive will
 	 *            work on the construct form
 	 * @param suffixFunction
 	 *            -A flag indication whether a possessive actin is done
 	 */
-	private void setAttributes(String gender, String number, String construct,
-			String definitnessVal, String inflectedItem) {
+	private void setAttributes(Gender gender,
+			org.mila.entities.lexicon.Number number, TriStateType construct,
+			DefinitenessType definitnessVal, String inflectedItem) {
 		this.inflectedItem = inflectedItem;
-		this.number = number;
-		this.gender = gender;
+		this.number = NumberType.fromValue(number.value());
+		this.gender = GenderType.fromValue(gender.value());
 		this.construct = construct;
 		this.definitnessVal = definitnessVal;
 		this.PGN = "unspecified";
-		this.suffixFunction = "unspecified";
+		this.suffixFunction = SuffixFunctionType.UNSPECIFIED;
 	}
 
-	
-	
 	/**
 	 * This method is used by noun, adjective, quantifier,pronoun <br>
 	 * It is used to generate h+inflectedItem because of special handling for
 	 * adjective starts with ww - we don't use the function from itemGen
 	 * 
-	 * @throws Exception
+	 * @
 	 */
-	protected void addH() throws Exception 
-	{
-		String originalSpelling=spelling;
-		String origInflectedItem=inflectedItem;
-		//System.out.println("|||||||||||||||||||||||||||||||||||||");
-		//System.out.println("||||||||||generateHForm||||||||||||");
-		///////////////////////////////////////////////////////////////////
+	protected void addH() {
+		SpellingType originalSpelling = spelling;
+		String origInflectedItem = inflectedItem;
+		// System.out.println("|||||||||||||||||||||||||||||||||||||");
+		// System.out.println("||||||||||generateHForm||||||||||||");
+		// /////////////////////////////////////////////////////////////////
 		if (inflectedItem.startsWith("w") && !inflectedItem.startsWith("ww"))
-			spelling = IRREGULAR_SPELLING;
+			spelling = SpellingType.IRREGULAR;
 		else if (inflectedItem.startsWith("ww"))
-			spelling = STANDARD_SPELLING;
-		//////////////////////////////////////////////////////////////////
+			spelling = SpellingType.STANDARD;
+		// ////////////////////////////////////////////////////////////////
 		inflectedItem = "h" + inflectedItem;
 		surface = "ה" + surface;
 
-	
-		populateDatabase();
-	
-		inflectedItem=origInflectedItem;
-		spelling=originalSpelling;
-	}
-	
-	private void inflectLexiconItem() throws Exception 
-	{
 		populateDatabase();
 
-		setAttributes(lexiconGender, lexiconNumber, "false", "tt",
-				transliterated);
+		inflectedItem = origInflectedItem;
+		spelling = originalSpelling;
+	}
+
+	private void inflectLexiconItem() {
+		populateDatabase();
+
+		setAttributes(lexiconGender, lexiconNumber, TriStateType.FALSE,
+				DefinitenessType.TRUE, transliterated);
 		addH();
 
-		//17/01/06 - if singular adjective ends with i - don't generate
+		// 17/01/06 - if singular adjective ends with i - don't generate
 		// construct
-		if ((lexiconNumber.equals("singular") && inflectConstructS)
+		if ((lexiconNumber == Number.SINGULAR && inflectConstructS)
 				&& ((transliterated.charAt(transliterated.length() - 1)) != 'i')) {
-			setAttributes(lexiconGender, lexiconNumber, "true", "unspecified",
-					transliterated);
+			setAttributes(lexiconGender, lexiconNumber, TriStateType.TRUE,
+					DefinitenessType.UNSPECIFIED, transliterated);
 			generateConstruct();
 		}
 
-		if (lexiconGender.equals("masculine")
-				&& !feminine.equals("unspecified")) {
-			setAttributes("feminine", lexiconNumber, "false", "tf",
-					transliterated);
+		if (lexiconGender == Gender.MASCULINE
+				&& feminine != Feminine.UNSPECIFIED) {
+			setAttributes(Gender.FEMININE, lexiconNumber, TriStateType.FALSE,
+					DefinitenessType.FALSE, transliterated);
 			generateFeminine();
 			feminineBase = inflectedItem;
-			setAttributes("feminine", lexiconNumber, "false", "tt",
-					feminineBase);
+			setAttributes(Gender.FEMININE, lexiconNumber, TriStateType.FALSE,
+					DefinitenessType.TRUE, feminineBase);
 			addH();
 		}
 
-		if (!plural.equals("unspecified") && !lexiconNumber.equals("plural")) {
-			setAttributes(lexiconGender, "plural", "false", "tf",
-					transliterated);
+		if (plural != Plural.UNSPECIFIED && lexiconNumber != Number.PLURAL) {
+			setAttributes(lexiconGender, Number.SINGULAR, TriStateType.FALSE,
+					DefinitenessType.FALSE, transliterated);
 			generatePlural(plural);
-			setAttributes(lexiconGender, "plural", "false", "tt",
-					inflectedItem);
+			setAttributes(lexiconGender, Number.SINGULAR, TriStateType.FALSE,
+					DefinitenessType.TRUE, inflectedItem);
 			addH();
 		}
 
-		/////////////////////////////////////////////////////////////
-		// Feminine form inflections: plural,construct
-		/////////////////////////////////////////////////////////////
+		/* Feminine form inflections: plural,construct */
 
-		if (!feminineBase.equals("")) 
-		{
-			//System.out.println("**************************************");
-			//System.out.println("**********feminine form inflections**********");
-
-			if(inflectConstructS){
-			setAttributes("feminine", "singular", "true", "unspecified", feminineBase);
-			generateConstruct();
+		if (!feminineBase.equals("")) {
+			if (inflectConstructS) {
+				setAttributes(Gender.FEMININE, Number.SINGULAR,
+						TriStateType.TRUE, DefinitenessType.UNSPECIFIED,
+						feminineBase);
+				generateConstruct();
 			}
-			
-			setAttributes("feminine", "plural", "false", "tf", feminineBase);
-			generatePlural("wt");
+
+			setAttributes(Gender.FEMININE, Number.SINGULAR, TriStateType.FALSE,
+					DefinitenessType.FALSE, feminineBase);
+			generatePlural(Plural.WT);
 
 			String pluralFeminineBase = inflectedItem;
 
-			setAttributes("feminine", "plural", "false", "tt",
-					pluralFeminineBase);
+			setAttributes(Gender.FEMININE, Number.PLURAL, TriStateType.FALSE,
+					DefinitenessType.TRUE, pluralFeminineBase);
 			addH();
-			
-			if(inflectConstructP){
-			setAttributes("feminine", "plural", "true", "unspecified",
-					pluralFeminineBase);
-			generateConstruct();
+
+			if (inflectConstructP) {
+				setAttributes(Gender.FEMININE, Number.PLURAL,
+						TriStateType.TRUE, DefinitenessType.UNSPECIFIED,
+						pluralFeminineBase);
+				generateConstruct();
 			}
 		}
 
-		/////////////////////////////////////////////////////////////
-		// plural form inflections: construct
-		/////////////////////////////////////////////////////////////
+		/* plural form inflections: construct */
 
-		if (!pluralBase.equals("") &&  inflectConstructP) 
-		{
-			//System.out.println("**************************************");
-			//System.out.println("**********plural form inflections**********");
-			//System.out.println("pluralBase = " + pluralBase);
-
-			setAttributes(lexiconGender, "plural", "true", "unspecified", pluralBase);
+		if (!pluralBase.equals("") && inflectConstructP) {
+			setAttributes(lexiconGender,
+					org.mila.entities.lexicon.Number.PLURAL, TriStateType.TRUE,
+					DefinitenessType.UNSPECIFIED, pluralBase);
 			generateConstruct();
 		}
 

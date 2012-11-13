@@ -6,40 +6,46 @@
  */
 package org.mila.generator.generation;
 
-import lexicon.contents.types.ItemType;
+import java.util.List;
 
-/**
- * @author daliabo
- *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
- */
+import javax.persistence.EntityManager;
+
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.GenderType;
+import org.mila.entities.corpus.NumberType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.TitleLexicon;
+
+
 public class TitleGen extends ItemGen {
-	boolean definiteness;
-	public TitleGen(ItemType item) {
-		super(item);
-		
+	private TitleLexicon title;
+
+	public TitleGen(Item item, EntityManager lexicon, EntityManager generator,
+			EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		title = (TitleLexicon) item.getSubitem();
 	}
 
+	boolean isDefinite;
 
 	private void analyse() {
 		analyseItem();
-		gender = item.getTitle().getGender();
-		number = item.getTitle().getNumber();
-		definiteness  = item.getTitle().isDefiniteness();
-		System.out.println(definiteness);
-		if(definiteness)
-			definitnessVal = "tt";
-		else 
-			definitnessVal = "tf";
+		gender = GenderType.fromValue(title.getGender().value());
+		number = NumberType.fromValue(title.getNumber().value());
+		isDefinite = title.isDefiniteness();
+		if (isDefinite)
+			definitnessVal = DefinitenessType.TRUE;
+		else
+			definitnessVal = DefinitenessType.FALSE;
 		inflectedItem = transliterated;
 		surface = undot;
 	}
 
-	public void inflect() throws Exception {
+	public List<Inflection> inflect() {
 		analyse();
 		populateDatabase();
+		return this.getGeneratedInflections();
 	}
-
 
 }

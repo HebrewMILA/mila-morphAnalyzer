@@ -6,343 +6,179 @@
  */
 package org.mila.generator.generation;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.util.List;
-import java.util.StringTokenizer;
+import static ch.lambdaj.Lambda.filter;
 
-import lexicon.contents.exception_types.QuantifierExceptionType;
-import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.hamcrest.Matchers;
+import org.mila.entities.corpus.DefinitenessType;
+import org.mila.entities.corpus.RegisterType;
+import org.mila.entities.corpus.SpellingType;
+import org.mila.entities.corpus.SuffixFunctionType;
+import org.mila.entities.corpus.TriStateType;
+import org.mila.entities.inflections.Inflection;
+import org.mila.entities.lexicon.Item;
+import org.mila.entities.lexicon.QuantifierException;
+import org.mila.entities.lexicon.QuantifierExceptionAdd;
+import org.mila.entities.lexicon.QuantifierExceptionRemove;
+import org.mila.entities.lexicon.QuantifierExceptionReplace;
+import org.mila.entities.lexicon.QuantifierLexicon;
+import org.mila.entities.lexicon.QuantifierType;
 
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class QuantifierGen extends ItemGen {
-	String personTokens = "";
+	QuantifierLexicon quantifier;
 
-	String numberTokens = "";
-
-	String genderTokens = "";
-
-	public QuantifierGen(ItemType item) {
-		super(item);
+	public QuantifierGen(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections) {
+		super(item, lexicon, generator, inflections);
+		quantifier = (QuantifierLexicon) item.getSubitem();
 	}
 
-	private void replaceException() {
-		String sql = buildSql("replace", "quantifier_exception_type");
-		replaceExceptionList = handleException(sql);
+	private void addExceptions() {
+		analyseAddExceptionList(filter(
+				Matchers.instanceOf(QuantifierExceptionAdd.class),
+				quantifier.getExceptions()));
 	}
 
-	private void removeException() {
-		String sql = buildSql("remove", "quantifier_exception_type");
-		removeExceptionList = handleException(sql);
+	protected List<QuantifierException> getReplaceExceptions() {
+		return filter(Matchers.instanceOf(QuantifierExceptionReplace.class),
+				quantifier.getExceptions());
 	}
 
-	protected void addException() throws Exception {
-		String sql = buildSql("add", "quantifier_exception_type");
-		List addExceptionList = handleException(sql);
-		if (addExceptionList.size() > 0) {
-			analyseExceptionList(addExceptionList);
-		}
-	}
-
-	protected boolean replaceExceptionExist() throws Exception {
-		boolean match = false;
-		for (int i = 0; i < replaceExceptionList.size(); i++) {
-			System.out.println("********************************");
-			QuantifierExceptionType quantifierExceptionType = new QuantifierExceptionType();
-			quantifierExceptionType
-					.open(((Integer) replaceExceptionList.get(i)).intValue());
-			String exceptionPGN = quantifierExceptionType.getPgn();
-			if (exceptionPGN.equals(PGN)) {
-				PGN = exceptionPGN;
-				inflectedItem = quantifierExceptionType.getTransliterated();
-				surface = quantifierExceptionType.getUndotted();
-				spelling = quantifierExceptionType.getSpelling();
-				register = quantifierExceptionType.getRegister();
-				match = true;
+	protected boolean replaceExceptionExist() {
+		for (QuantifierException ex : getReplaceExceptions()) {
+			String exPGN = ex.getPossessive();
+			if (exPGN.equals(PGN)) {
+				PGN = exPGN;
+				inflectedItem = ex.getTransliterated();
+				surface = ex.getUndotted();
+				spelling = SpellingType.fromValue(ex.getSpelling().value());
+				register = RegisterType.fromValue(ex.getRegister().value());
 				populateDatabase();
-				break;
+				return true;
 			}
 		}
-		return match;
+		return false;
 	}
 
-	protected boolean removeExceptionExist() throws Exception {
-		boolean match = false;
-		for (int i = 0; i < removeExceptionList.size(); i++) {
-			System.out.println("********************************");
-			QuantifierExceptionType quantifierExceptionType = new QuantifierExceptionType();
-			quantifierExceptionType.open(((Integer) removeExceptionList.get(i))
-					.intValue());
-			//String exceptionGender = quantifierExceptionType.getGender();
-			String exceptionPGN = quantifierExceptionType.getPgn();
-			if (exceptionPGN.equals(PGN)) {
-				PGN = exceptionPGN;
-				inflectedItem = quantifierExceptionType.getTransliterated();
-				surface = quantifierExceptionType.getUndotted();
-				spelling = quantifierExceptionType.getSpelling();
-				register = quantifierExceptionType.getRegister();
-				construct = quantifierExceptionType.getConstruct();
-				match = true;
-			}
-		}
-		return match;
+	protected List<QuantifierException> getRemoveExceptions() {
+		return filter(Matchers.instanceOf(QuantifierExceptionRemove.class),
+				quantifier.getExceptions());
 	}
 
-	private void analyseExceptionList(List exceptionList) throws Exception {
-		for (int i = 0; i < exceptionList.size(); i++) {
-			QuantifierExceptionType quantifierExceptionType = new QuantifierExceptionType();
-			quantifierExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
-			inflectedItem = quantifierExceptionType.getTransliterated();
-			surface = quantifierExceptionType.getUndotted();
-			spelling = quantifierExceptionType.getSpelling();
-			register = quantifierExceptionType.getRegister();
-			PGN = quantifierExceptionType.getPgn();
-			construct = quantifierExceptionType.getConstruct();
+	protected boolean removeExceptionExist() {
+		for (QuantifierException ex : getRemoveExceptions())
+			if (ex.getPossessive().equals(PGN))
+				return true;
+
+		return false;
+	}
+
+	private void analyseAddExceptionList(List<QuantifierException> exceptions) {
+		for (QuantifierException ex : exceptions) {
+			inflectedItem = ex.getTransliterated();
+			surface = ex.getUndotted();
+			spelling = SpellingType.fromValue(ex.getSpelling().value());
+			register = RegisterType.fromValue(ex.getRegister().value());
+			PGN = ex.getPossessive();
+			construct = TriStateType.fromValue(ex.getConstruct().value());
 
 			if (!PGN.equals("unspecified")) {
-				suffixFunction = "pronomial";
-				construct = "unspecified";
+				suffixFunction = SuffixFunctionType.PRONOMIAL;
+				construct = TriStateType.UNSPECIFIED;
 			}
-			if(!construct.equals("true") && type.equals("partitive") && PGN.equals("unspecified")){
-				definitnessVal = "tf";
+			if (construct != TriStateType.TRUE
+					&& quantifier.getType() == QuantifierType.PARTITIVE
+					&& PGN.equals("unspecified")) {
+				definitnessVal = DefinitenessType.FALSE;
 			}
-			//else if(PGN.equals("unspecified") && construct.equals("false") &&
-			// !definitness.equals("prohibited")){
-			//	addH();
-			//}else
+
 			populateDatabase();
-			if(!construct.equals("true") && type.equals("partitive") && PGN.equals("unspecified")){
-				construct = "unspecified";
+			if (construct != TriStateType.TRUE
+					&& quantifier.getType() == QuantifierType.PARTITIVE
+					&& PGN.equals("unspecified")) {
+				construct = TriStateType.UNSPECIFIED;
 				addH();
-				
 			}
 		}
 	}
 
 	private void analyse() {
 		analyseItem();
-		type = item.getQuantifier().getType();
-		inflect = item.getQuantifier().isInflect();
-		inflectionBase = item.getQuantifier().getInflectionBase();
+		type = quantifier.getType().value();
+		inflect = quantifier.isInflect();
+		inflectionBase = quantifier.getInflectionBase();
 		inflectedItem = transliterated;
 		surface = undot;
-		suffixFunction = "unspecified";
-		construct = "false";
+		suffixFunction = SuffixFunctionType.UNSPECIFIED;
+		construct = TriStateType.FALSE;
 		PGN = "unspecified";
-		definitness = item.getQuantifier().getDefiniteness();
-		
-
+		definitness = quantifier.getDefiniteness();
 	}
 
-	private void generateConstruct(String transliterated) throws Exception {
-		if (!gender.equals("masculine and feminine")) {
-			int index = transliterated.indexOf('-');
-			if (index == -1) {
-				String inputCondition = "";
-				inputCondition = "masculine";
-				if (gender.equals("masculine")) {
-					findRule(transliterated, inputCondition,
-							"constructQuantifier", 3);
-					surface = Translate.Eng2Heb(inflectedItem);
-				}
-				construct = "true";
-				//if absolute and construct are the same don't produce separate
-				// entry
-				//if (!transliterated.equals(inflectedItem)) {
-				boolean match = false;
-				// Handle replace of construct
-				if (replaceExceptionList.size() > 0) {
-					for (int i = 0; i < replaceExceptionList.size(); i++) {
-						QuantifierExceptionType quantifierExceptionType = new QuantifierExceptionType();
-						quantifierExceptionType
-								.open(((Integer) replaceExceptionList.get(i))
-										.intValue());
-						String exceptionConstruct = quantifierExceptionType
-								.getConstruct();
-						if (exceptionConstruct.equals("true")) {
-							inflectedItem = quantifierExceptionType
-									.getTransliterated();
-							surface = Translate.Eng2Heb(inflectedItem);
-							inflectionBase = Translate.Eng2Heb(inflectedItem);
-							spelling = quantifierExceptionType.getSpelling();
-							register = quantifierExceptionType.getRegister();
-							PGN = quantifierExceptionType.getPgn();
-							populateDatabase();
-							match = true;
-							break;
-						}
-					}
-					//}
-					if (!match) {
-						inflectionBase = inflectedItem;
-						populateDatabase();
-					}
-				}
-			}
-		}
-	}
-
-	//	// replace exceptions are not defined for possessive for quantifier only
-	// for
-	//	// construct - so it has it's own inflectPossessive version
-	//	protected void inflectPossessive() throws Exception {
-	//		StringTokenizer stSuff = new StringTokenizer(suffixes, ",");
-	//		StringTokenizer stPGN = new StringTokenizer(PGNTokens, ",");
-	//		StringTokenizer stPerson = new StringTokenizer(personTokens, ",");
-	//		StringTokenizer stNumber = new StringTokenizer(numberTokens, ",");
-	//		StringTokenizer stGender = new StringTokenizer(genderTokens, ",");
-	//		suffixFunction = "possessive";
-	//		if (!inflectionBase.equals("")) {
-	//			try {
-	//				inflectionBase = URLDecoder.decode(inflectionBase, "UTF-8");
-	//			} catch (UnsupportedEncodingException e) {
-	//				// TODO Auto-generated catch block
-	//				e.printStackTrace();
-	//			}
-	//			inflectionBase = Translate.Heb2Eng(inflectionBase);
-	//			System.out.println("inflectionBase =" + inflectionBase);
-	//		}
-	//		while (stSuff.hasMoreTokens()) {
-	//			String suffix = stSuff.nextToken();
-	//			if (!inflectionBase.equals(""))
-	//				inflectedItem = inflectionBase + suffix;
-	//			else
-	//				inflectedItem = transliterated + suffix;
-	//			System.out.println();
-	//			System.out.println("inflectedItem =" + inflectedItem);
-	//			surface = Translate.Eng2Heb(inflectedItem);
-	//			System.out.println("surface =" + surface);
-	//			System.out.println();
-	//
-	//			PGN = stPGN.nextToken();
-	//			suffixPerson = stPerson.nextToken();
-	//			suffixNumber = stNumber.nextToken();
-	//			suffixGender = stGender.nextToken();
-	//			populateDatabase();
-	//
-	//		}
-	//	}
-
-	//	private void generatePlural() {
-	//		if (gender.equals("feminine")) {
-	//			inflectedItem = transliterated + "wt";
-	//			surface = Translate.Eng2Heb(inflectedItem);
-	//		} else if (gender.equals("masculine")) {
-	//			inflectedItem = transliterated + "im";
-	//
-	//		} else if (gender.equals("masculine and feminine")) {
-	//			inflectedItem = transliterated + "im";
-	//
-	//		}
-	//		surface = Translate.Eng2Heb(inflectedItem);
-	//		populateDatabase();
-	//
-	//		generateConstruct(inflectedItem);
-	//	}
-
-	private void generatePronomial() throws Exception {
+	private void generatePronomial() {
 		if (inflect) {
-			inflectionBaseHandling();
 			suffixes = "i,k,k,w,h,nw,km,kn,hm,hn";
-			inflectPronomial("pronomial");
-			suffixFunction = "unspecified";
+			inflectPronomial(SuffixFunctionType.PRONOMIAL);
+			suffixFunction = SuffixFunctionType.UNSPECIFIED;
 			PGN = "unspecified";
-			//			if (gender.equals("unspecified") ) {
-			//				suffixes = "i,k,k,w,h,nw,km,kn,m,n";
-			//				inflectPronomial();
-			//			} else if (gender.equals("feminine")) {
-			//				suffixes = "nw,kn,hn";
-			//				inflectPronomial();
-			//			} else if (gender.equals("masculine")) {
-			//				suffixes = "nw,km,m";
-			//				inflectPronomial();
-			//			} else if (gender.equals("masculine and feminine")) {
-			//				suffixes = "i,k,k,w,h,nw,km,kn,hm,hn";
-			//				inflectPronomial();
-			//			}
 		}
 	}
 
-	protected void addH() throws Exception {
-		definitnessVal = "tt";
+	protected void addH() {
+		definitnessVal = DefinitenessType.TRUE;
 		super.addH();
-		definitnessVal = "unspecified";
+		definitnessVal = DefinitenessType.UNSPECIFIED;
 	}
 
-	public void inflect() throws Exception {
-		//�� ����� ������ ���� ���� �� ����� (�� ���� �����)
-		//����� �������� �"� ����� ����� ����
+	public List<Inflection> inflect() {
 		analyse();
-		removeException();
-		replaceException();
 
-		if (type.equals("amount")) {
-			definitnessVal = "unspecified";
-			construct = "true";
+		switch (quantifier.getType()) {
+		case AMOUNT:
+			definitnessVal = DefinitenessType.UNSPECIFIED;
+			construct = TriStateType.TRUE;
 			populateDatabase();
-			construct = "false";
+			construct = TriStateType.FALSE;
 			populateDatabase();
-		} else if (type.equals("partitive")) {
-			definitnessVal ="tf";
-			construct = "true";
+			break;
+		case PARTITIVE:
+			definitnessVal = DefinitenessType.FALSE;
+			construct = TriStateType.TRUE;
 			populateDatabase();
-			definitnessVal ="tf";
-			construct = "false";
+			definitnessVal = DefinitenessType.TRUE;
+			construct = TriStateType.FALSE;
 			populateDatabase();
-			construct = "unspecified";
+			construct = TriStateType.UNSPECIFIED;
 			addH();
-			// ���� ����� ���� ��� ���- ������ ���� ����
 			if (inflect) {
-				definitnessVal = "unspecified";
-				inflectionBaseHandling();
+				definitnessVal = DefinitenessType.UNSPECIFIED;
 				suffixes = "i,k,k,w,h,nw,km,kn,hm,hn";
-				inflectPronomial("pronomial");
-				suffixFunction = "unspecified";
+				inflectPronomial(SuffixFunctionType.PRONOMIAL);
+				suffixFunction = SuffixFunctionType.UNSPECIFIED;
 				PGN = "unspecified";
 			}
-		} else if (type.equals("determiner")) {
-			definitnessVal = "unspecified";
-			construct = "true";
+			break;
+		case DETERMINER:
+			definitnessVal = DefinitenessType.UNSPECIFIED;
+			construct = TriStateType.TRUE;
 			populateDatabase();
 			generatePronomial();
+			break;
+		case UNSPECIFIED:
+			/* do nothing */
+			break;
 		}
 
-		//		if (definitness.equals("required")) {
-		//			definitnessVal = "tt";
-		//			inflectedItem = "h" + inflectedItem;
-		//			surface = Translate.Eng2Heb(inflectedItem);
-		//			if(!removeExceptionExist())
-		//			populateDatabase();
-		//
-		//			addException();
-		//			
-		//		} else {
-		//			
-		//			if (definitness.equals("optional"))
-		//				definitnessVal = "tf";
-		//			else
-		//				definitnessVal = "f";
-		//
-		//			generateConstruct(transliterated);
-		//			if(!removeExceptionExist())
-		//			populateDatabase();
-		//			
-		//			construct = "false";
-		//			if (!(definitness.equals("prohibited"))){
-		//				addH();
-		//			}
-		//			
-		//			generatePronomial();
-		addException();
-		//			//generatePlural();
-		//		}
-
+		addExceptions();
+		return this.getGeneratedInflections();
 	}
 }
