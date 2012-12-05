@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.multipart.saveDir" value="/data/uploader_temp" />
+	<package name="fileuploader" extends="struts-default">
+		<interceptors>
+			<interceptor name="login" class="org.mila.uploader.LoginInterceptor" />
+			<interceptor-stack name="uploaderStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="login" />
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="uploaderStack" />
+		<default-action-ref name="index" />
+
+		<global-results>
+			<result name="login" type="redirect">/login.jsp</result>
+		</global-results>
+
+		<action name="index" class="indexAction">
+			<result>/index.jsp</result>
+		</action>
+
+		<action name="login">
+			<result>/login.jsp</result>
+		</action>
+
+		<action name="logout" class="logoutAction">
+			<result>/login.jsp</result>
+		</action>
+
+		<action name="download" class="downloadAction">
+			<result name="success" type="stream">
+				<param name="contentType">application/xml</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="tagged_output.xml"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="error">/download_error.jsp</result>
+		</action>
+
+		<action name="doUpload" class="uploadAction">
+			<result name="success" type="redirectAction">index</result>
+			<result name="error">/upload_error.jsp</result>
+		</action>
+
+		<action name="doLogin" class="loginAction">
+			<result name="success" type="redirectAction">index</result>
+			<result name="error">/login_error.jsp</result>
+		</action>
+	</package>
+
+</struts>

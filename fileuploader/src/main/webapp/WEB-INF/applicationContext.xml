@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd 
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd 
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-3.1.xsd 
+    http://www.springframework.org/schema/security 
+    http://www.springframework.org/schema/security/spring-security-3.1.xsd 
+    http://www.springframework.org/schema/task 
+    http://www.springframework.org/schema/task/spring-task-3.1.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"
+	default-autowire="byName">
+
+	<task:annotation-driven executor="myExecutor"
+		scheduler="myScheduler" />
+	<!-- Note that pool-size MUST be 1, because the analyzer is in no way thread 
+		safe. -->
+	<task:executor id="myExecutor" pool-size="1"
+		rejection-policy="ABORT" queue-capacity="512" />
+	<task:scheduler id="myScheduler" pool-size="10" />
+
+	<bean id="asyncBean" class="org.mila.uploader.AsyncBean">
+		<property name="tempDir" value="/data/uploader_temp" />
+		<property name="hmmTaggerDir" value="/data/tagger" />
+		<property name="royTaggerDir" value="/data/tagger/royTagger" />
+		<property name="taggerLOFDir" value="/data/tagger/taggerLearningOutputFile" />
+	</bean>
+	<bean id="uploadAction" class="org.mila.uploader.UploadAction"
+		scope="prototype">
+		<property name="tempDir" value="/data/uploader_temp" />
+		<property name="asyncBean" ref="asyncBean" />
+	</bean>
+
+	<bean id="loginAction" class="org.mila.uploader.LoginAction"
+		scope="prototype" />
+	<bean id="indexAction" class="org.mila.uploader.IndexAction"
+		scope="prototype" />
+	<bean id="downloadAction" class="org.mila.uploader.DownloadAction"
+		scope="prototype" />
+	<bean id="logoutAction" class="org.mila.uploader.LogoutAction"
+		scope="prototype" />
+
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+	<bean id="userService" class="org.mila.uploader.services.UserServiceImpl" />
+	<bean id="tagRequestService" class="org.mila.uploader.services.TagRequestServiceImpl" />
+
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean
+				class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter">
+				<property name="database" value="MYSQL" />
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost/website" />
+		<property name="username" value="root" />
+		<property name="password" value="zindel" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+
+	<context:component-scan base-package="org.mila.uploader" />
+	<context:annotation-config />
+</beans>
