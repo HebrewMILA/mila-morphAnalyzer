@@ -12,7 +12,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TriStateType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.AdjectiveLexicon;
 import org.mila.entities.lexicon.Feminine;
 import org.mila.entities.lexicon.Gender;
@@ -417,7 +417,7 @@ public class AdjectiveGen extends ItemGen {
 		}
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		// Get lexicon Item (for which pos = adjective ) attributes
 		// The lexicon item can have any attributes for example
 		// single masculine/single feminine/ plural feminine etc

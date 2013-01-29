@@ -21,7 +21,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TriStateType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Definitness;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.Numeral;
@@ -219,7 +219,7 @@ public class NumeralGen extends ItemGen {
 	}
 
 	@Override
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		String feminineBase = "";
 		String pluralBase = "";
 		this.analyse();

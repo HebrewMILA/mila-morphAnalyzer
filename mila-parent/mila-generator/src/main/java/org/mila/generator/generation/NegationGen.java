@@ -11,7 +11,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.mila.entities.corpus.DefinitenessType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 
 public class NegationGen extends ItemGen {
@@ -25,7 +25,7 @@ public class NegationGen extends ItemGen {
 		analyseItem();
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		definitnessVal = DefinitenessType.FALSE;
 		inflectedItem = transliterated;

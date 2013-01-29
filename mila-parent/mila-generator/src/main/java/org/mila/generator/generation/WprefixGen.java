@@ -19,7 +19,7 @@ import org.mila.entities.corpus.NumberType;
 import org.mila.entities.corpus.PolarityType;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.WprefixException;
 import org.mila.entities.lexicon.WprefixExceptionAdd;
@@ -62,7 +62,7 @@ public class WprefixGen extends ItemGen {
 		polarityVal = PolarityType.fromValue(wPrefix.getPolarity().value());
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		definitnessVal = DefinitenessType.FALSE;
 		inflectedItem = transliterated;

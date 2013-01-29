@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.jpa.JpaEntityManager;
 import org.eclipse.persistence.queries.ReadAllQuery;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.generator.exceptions.ItemGenerationException;
 import org.mila.generator.exceptions.ItemInflectionException;
@@ -49,6 +49,36 @@ public class Generation {
 	 */
 	public void generateItem(Item item) throws ItemGenerationException,
 			ItemInflectionException {
+		ItemGen gen = getGenerator(item, lexicon, generator, inflections);
+		this.inflections.getTransaction().begin();
+		try {
+			try {
+				this.removeInflectionsFor(item);
+			} catch (Exception e) {
+				throw new ItemInflectionException(
+						"Failed to remove old inflections for " + item.getId(),
+						e);
+			}
+			try {
+				for (PersistableInflection inf : gen.inflect()) {
+					this.inflections.persist(inf);
+				}
+			} catch (Exception e) {
+				throw new ItemInflectionException("Failed to inflect "
+						+ item.getId() + ", \"" + item.getTransliterated()
+						+ "\"", e);
+			}
+		} catch (ItemInflectionException e) {
+			this.inflections.getTransaction().rollback();
+			throw e;
+		}
+		this.inflections.getTransaction().commit();
+		this.inflections.clear(); /* good voodoo to make things go faster! */
+	}
+
+	public static ItemGen getGenerator(Item item, EntityManager lexicon,
+			EntityManager generator, EntityManager inflections)
+			throws ItemGenerationException {
 		final String className = item.getSubitem().getClass().getSimpleName()
 				.replaceFirst("Lexicon$", "Gen");
 		StringBuffer sb = new StringBuffer("org.mila.generator.generation.")
@@ -67,30 +97,7 @@ public class Generation {
 			throw new ItemGenerationException(
 					"Failed to instantiate generator", e);
 		}
-		this.inflections.getTransaction().begin();
-		try {
-			try {
-				this.removeInflectionsFor(item);
-			} catch (Exception e) {
-				throw new ItemInflectionException(
-						"Failed to remove old inflections for " + item.getId(),
-						e);
-			}
-			try {
-				for (Inflection inf : gen.inflect()) {
-					this.inflections.persist(inf);
-				}
-			} catch (Exception e) {
-				throw new ItemInflectionException("Failed to inflect "
-						+ item.getId() + ", \"" + item.getTransliterated()
-						+ "\"", e);
-			}
-		} catch (ItemInflectionException e) {
-			this.inflections.getTransaction().rollback();
-			throw e;
-		}
-		this.inflections.getTransaction().commit();
-		this.inflections.clear(); /* good voodoo to make things go faster! */
+		return gen;
 	}
 
 	public void removeInflectionsFor(Item item) {

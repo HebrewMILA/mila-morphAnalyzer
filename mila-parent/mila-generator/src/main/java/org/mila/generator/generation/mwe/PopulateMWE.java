@@ -1,4 +1,4 @@
-package org.mila.generator.generation;
+package org.mila.generator.generation.mwe;
 
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -9,6 +9,7 @@ import org.apache.commons.lang.text.StrTokenizer;
 import org.mila.entities.inflections.MWElement;
 import org.mila.entities.inflections.MWFirstElement;
 import org.mila.entities.inflections.MWOtherElement;
+import org.mila.generator.generation.ItemGen;
 
 public class PopulateMWE {
 

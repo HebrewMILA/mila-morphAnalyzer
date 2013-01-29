@@ -17,7 +17,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TriStateType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.PrepositionException;
 import org.mila.entities.lexicon.PrepositionExceptionAdd;
@@ -108,7 +108,7 @@ public class PrepositionGen extends ItemGen {
 		dottedLexiconItem = item.getDotted();
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		// Handle base form
 		handleBaseForm();

@@ -9,10 +9,11 @@ import javax.persistence.EntityManager;
 import org.mila.entities.corpus.NumberType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.MultiWordPrepositionLexicon;
 import org.mila.entities.lexicon.Pos;
+import org.mila.generator.generation.mwe.PopulateMWE;
 import org.mila.generator.utils.Transliteration;
 
 public class MultiWordPrepositionGen extends ItemGen {
@@ -74,7 +75,7 @@ public class MultiWordPrepositionGen extends ItemGen {
 		}
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		StringTokenizer st = new StringTokenizer(transliterated);
 		String transliterated1 = st.nextToken();

@@ -11,7 +11,7 @@ import org.hamcrest.Matchers;
 import org.mila.entities.corpus.DefinitenessType;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.AcronymDefiniteness;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.MultiWordFrozenException;
@@ -20,6 +20,7 @@ import org.mila.entities.lexicon.MultiWordFrozenExceptionRemove;
 import org.mila.entities.lexicon.MultiWordFrozenExceptionReplace;
 import org.mila.entities.lexicon.MultiWordFrozenLexicon;
 import org.mila.entities.lexicon.Pos;
+import org.mila.generator.generation.mwe.PopulateMWE;
 
 public class MultiWordFrozenGen extends ItemGen {
 	private AcronymDefiniteness definiteness;
@@ -69,7 +70,7 @@ public class MultiWordFrozenGen extends ItemGen {
 		acceptDefiniteness = (definiteness == AcronymDefiniteness.EXTERNAL || definiteness == AcronymDefiniteness.INTERNAL_AND_EXTERNAL);
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		System.out.println("MultiWordFrozenGen:inflect()");
 		analyse();
 		PopulateMWE popMWE = new PopulateMWE(this.inflections);

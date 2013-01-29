@@ -19,7 +19,7 @@ import org.mila.entities.corpus.NumberType;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.ProperNameException;
 import org.mila.entities.lexicon.ProperNameExceptionAdd;
@@ -111,7 +111,7 @@ public class ProperNameGen extends ItemGen {
 		}
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		handleDefiniteness(inflectedItem);
 		// טיפול בשמות שמתחילים ב-ו כמו וינה שיזהה גם בווינה

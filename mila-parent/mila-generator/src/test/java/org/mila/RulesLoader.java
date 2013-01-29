@@ -7,11 +7,10 @@ import org.mila.entities.generator.InflectionRule;
 public class RulesLoader {
 	public static void LoadRules(EntityManager generator) {
 		InflectionRule rule = null;
-		
+
 		generator.getTransaction().begin();
-		
+
 		rule = new InflectionRule();
-		rule.setId(0);
 		rule.setInputPattern("");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -21,7 +20,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(1);
 		rule.setInputPattern("iih");
 		rule.setInputSuffixLen(3);
 		rule.setInputCondition("wt");
@@ -31,7 +29,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(2);
 		rule.setInputPattern("ait");
 		rule.setInputSuffixLen(3);
 		rule.setInputCondition("wt");
@@ -41,7 +38,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(3);
 		rule.setInputPattern("wt");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("wt");
@@ -51,7 +47,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(4);
 		rule.setInputPattern("it");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("wt");
@@ -61,7 +56,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(5);
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("wt");
@@ -71,7 +65,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(6);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("wt");
@@ -81,7 +74,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(7);
 		rule.setInputPattern("wt");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("iwt");
@@ -91,7 +83,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(8);
 		rule.setInputPattern("it");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("iwt");
@@ -101,7 +92,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(9);
 		rule.setInputPattern("ait");
 		rule.setInputSuffixLen(3);
 		rule.setInputCondition("iwt");
@@ -111,7 +101,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(10);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("awt");
@@ -121,7 +110,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(11);
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("im");
@@ -131,7 +119,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(12);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("im");
@@ -141,7 +128,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(13);
 		rule.setInputPattern("t");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("wt");
@@ -151,7 +137,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(14);
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("awt");
@@ -161,7 +146,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(17);
 		rule.setInputPattern("im");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("");
@@ -171,7 +155,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(18);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -181,7 +164,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(19);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -191,7 +173,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(20);
 		rule.setInputPattern("ai");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("");
@@ -201,7 +182,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(21);
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("");
@@ -211,7 +191,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(22);
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("im");
@@ -221,7 +200,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(23);
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("wt");
@@ -231,7 +209,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(24);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("im");
@@ -241,7 +218,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(25);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("wt");
@@ -251,7 +227,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(26);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -261,7 +236,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(27);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -271,7 +245,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(28);
 		rule.setInputPattern("i");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("");
@@ -281,7 +254,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(29);
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("");
@@ -291,7 +263,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(30);
 		rule.setInputPattern("im");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("");
@@ -301,7 +272,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(71);
 		rule.setInputPattern("iim");
 		rule.setInputSuffixLen(3);
 		rule.setInputCondition("");
@@ -311,7 +281,6 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(32);
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -321,7 +290,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(33);
+
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("h");
@@ -331,7 +300,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(34);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("h");
@@ -341,7 +310,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(35);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("t");
@@ -351,7 +320,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(36);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("it");
@@ -361,7 +330,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(37);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("h");
@@ -371,7 +340,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(38);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("t");
@@ -381,7 +350,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(39);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("it");
@@ -391,7 +360,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(40);
+
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("masculine");
@@ -401,7 +370,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(41);
+
 		rule.setInputPattern("iim");
 		rule.setInputSuffixLen(3);
 		rule.setInputCondition("masculine");
@@ -411,7 +380,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(42);
+
 		rule.setInputPattern("im");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("masculine");
@@ -421,7 +390,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(43);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -431,7 +400,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(44);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("masculine and feminine");
@@ -441,7 +410,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(45);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("masculine");
@@ -451,7 +420,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(46);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("feminine");
@@ -461,7 +430,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(47);
+
 		rule.setInputPattern("ii");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("inflectionBase");
@@ -471,7 +440,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(48);
+
 		rule.setInputPattern("im");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("inflectionBase");
@@ -481,7 +450,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(49);
+
 		rule.setInputPattern("in");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("inflectionBase");
@@ -491,7 +460,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(50);
+
 		rule.setInputPattern("ai");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("im");
@@ -501,7 +470,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(51);
+
 		rule.setInputPattern("ai");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("");
@@ -511,7 +480,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(52);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("plural");
@@ -521,7 +490,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(54);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("singular");
@@ -531,7 +500,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(55);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -541,7 +510,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(57);
+
 		rule.setInputPattern("t");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("plural");
@@ -551,7 +520,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(58);
+
 		rule.setInputPattern("in");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("");
@@ -561,7 +530,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(59);
+
 		rule.setInputPattern("t");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("wt");
@@ -571,7 +540,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(60);
+
 		rule.setInputPattern("ii");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("");
@@ -581,7 +550,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(61);
+
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("");
@@ -591,7 +560,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(62);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("");
@@ -601,7 +570,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(63);
+
 		rule.setInputPattern("");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("");
@@ -611,7 +580,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(64);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("ii");
@@ -621,7 +590,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(65);
+
 		rule.setInputPattern("default");
 		rule.setInputSuffixLen(0);
 		rule.setInputCondition("iim");
@@ -631,7 +600,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(66);
+
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("iim");
@@ -641,7 +610,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(67);
+
 		rule.setInputPattern("i");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("");
@@ -651,7 +620,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(68);
+
 		rule.setInputPattern("wh");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("wt");
@@ -661,7 +630,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(69);
+
 		rule.setInputPattern("th");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("th");
@@ -671,7 +640,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(70);
+
 		rule.setInputPattern("i");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("m");
@@ -681,7 +650,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(72);
+
 		rule.setInputPattern("h");
 		rule.setInputSuffixLen(1);
 		rule.setInputCondition("iwt");
@@ -691,7 +660,7 @@ public class RulesLoader {
 		generator.persist(rule);
 
 		rule = new InflectionRule();
-		rule.setId(73);
+
 		rule.setInputPattern("ih");
 		rule.setInputSuffixLen(2);
 		rule.setInputCondition("");

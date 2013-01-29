@@ -16,11 +16,12 @@ import org.hamcrest.Matchers;
 import org.mila.entities.corpus.BinyanType;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.Valence;
 import org.mila.entities.lexicon.VerbExceptionAdd;
 import org.mila.entities.lexicon.VerbLexicon;
+import org.mila.generator.generation.verb.VerbGenIP;
 import org.mila.generator.utils.Transliteration;
 
 /**
@@ -2639,7 +2640,7 @@ public class VerbGen extends ItemGen {
 				verb.getExceptions()));
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 
 		analyseVerb();
 

@@ -16,7 +16,7 @@ import org.hamcrest.Matchers;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.AdverbException;
 import org.mila.entities.lexicon.AdverbExceptionAdd;
 import org.mila.entities.lexicon.AdverbExceptionRemove;
@@ -115,7 +115,7 @@ public class AdverbGen extends ItemGen {
 			populateDatabase();
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		handleBaseForm();
 		addException();

@@ -10,7 +10,7 @@ import org.hamcrest.Matchers;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.InterrogativeException;
 import org.mila.entities.lexicon.InterrogativeExceptionAdd;
 import org.mila.entities.lexicon.InterrogativeExceptionRemove;
@@ -79,7 +79,7 @@ public class InterrogativeGen extends ItemGen {
 		type = interrogative.getInterrogativeType().value();
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		/* XXX: There is no logic for remove functionality */
 		analyse();
 		populateDatabase();

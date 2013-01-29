@@ -13,7 +13,7 @@ import javax.persistence.EntityManager;
 import org.mila.entities.corpus.DefinitenessType;
 import org.mila.entities.corpus.GenderType;
 import org.mila.entities.corpus.NumberType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.TitleLexicon;
 
@@ -42,7 +42,7 @@ public class TitleGen extends ItemGen {
 		surface = undot;
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		populateDatabase();
 		return this.getGeneratedInflections();

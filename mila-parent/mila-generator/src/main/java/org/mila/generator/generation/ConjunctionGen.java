@@ -11,7 +11,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.mila.entities.corpus.SuffixFunctionType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.ConjunctionLexicon;
 import org.mila.entities.lexicon.Item;
 
@@ -37,7 +37,7 @@ public class ConjunctionGen extends ItemGen {
 		suffixFunction = SuffixFunctionType.UNSPECIFIED;
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		inflectedItem = transliterated;
 		surface = undot;

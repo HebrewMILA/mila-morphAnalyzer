@@ -21,7 +21,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TenseType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.CopulaException;
 import org.mila.entities.lexicon.CopulaExceptionAdd;
 import org.mila.entities.lexicon.CopulaLexicon;
@@ -147,7 +147,7 @@ public class CopulaGen extends ItemGen {
 		polarityVal = PolarityType.fromValue(copula.getPolarity().value());
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		inflectedItem = transliterated;
 		surface = undot;

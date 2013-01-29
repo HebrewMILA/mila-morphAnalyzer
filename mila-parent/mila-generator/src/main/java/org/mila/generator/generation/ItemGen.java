@@ -34,6 +34,7 @@ import org.mila.entities.corpus.TenseType;
 import org.mila.entities.corpus.TriStateType;
 import org.mila.entities.generator.InflectionRule;
 import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Definitness;
 import org.mila.entities.lexicon.Feminine;
 import org.mila.entities.lexicon.Gender;
@@ -96,7 +97,7 @@ public abstract class ItemGen implements ItemInterface {
 	protected String value = "";
 	protected PrefixTransliteratedType prefix = PrefixTransliteratedType.UNSPECIFIED;
 
-	protected List<Inflection> generatedInflections;
+	protected List<PersistableInflection> generatedInflections;
 	
 	// ----------------------------------------------------------------------------------
 	public Item getItem() {
@@ -422,7 +423,7 @@ public abstract class ItemGen implements ItemInterface {
 		this.lexicon = lexicon;
 		this.generator = generator;
 		this.inflections = inflections;
-		this.generatedInflections = new ArrayList<Inflection>();
+		this.generatedInflections = new ArrayList<PersistableInflection>();
 	}
 
 	/**
@@ -711,10 +712,10 @@ public abstract class ItemGen implements ItemInterface {
 		return false;
 	}
 
-	public abstract List<Inflection> inflect();
+	public abstract List<PersistableInflection> inflect();
 	
 	@SuppressWarnings("unchecked")
-	public List<Inflection> getGeneratedInflections() {
+	public List<PersistableInflection> getGeneratedInflections() {
 		return Collections.unmodifiableList(generatedInflections);
 	}
 

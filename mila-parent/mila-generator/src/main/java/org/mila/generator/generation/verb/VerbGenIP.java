@@ -1,4 +1,4 @@
-package org.mila.generator.generation;
+package org.mila.generator.generation.verb;
 
 import static ch.lambdaj.Lambda.filter;
 
@@ -20,6 +20,7 @@ import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TenseType;
 import org.mila.entities.corpus.TriStateType;
 import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Valence;
 import org.mila.entities.lexicon.VerbException;
 import org.mila.entities.lexicon.VerbExceptionAdd;
@@ -48,7 +49,7 @@ public class VerbGenIP implements VerbInterface {
 	private String possessive = "";
 	private String hebRoot = "";
 	private TriStateType construct;
-	private String pos = "verb";
+	private String pos = "verb"; 
 	private DefinitenessType baseDefiniteness = DefinitenessType.FALSE;
 	private NumberType baseNumber;
 	private GenderType baseGender;
@@ -84,16 +85,16 @@ public class VerbGenIP implements VerbInterface {
 	boolean inflectInfinitiveIndependent = false;
 	boolean exceptionInflectBeinoniPossessive = false;
 
-	boolean bareInfinitiveException = false;
+	public boolean bareInfinitiveException = false;
 	String table = "";
 	protected EntityManager inflections;
 
 	protected EntityManager lexicon;
 	private VerbLexicon verb;
-	private List<Inflection> generatedInflections;
+	private List<PersistableInflection> generatedInflections;
 
 	@SuppressWarnings("unchecked")
-	public List<Inflection> getGeneratedInflections() {
+	public List<PersistableInflection> getGeneratedInflections() {
 		return Collections.unmodifiableList(generatedInflections);
 	}
 
@@ -103,7 +104,7 @@ public class VerbGenIP implements VerbInterface {
 		this.inflections = inflections;
 		this.lexicon = lexicon;
 		this.verb = verb;
-		this.generatedInflections = new ArrayList<Inflection>();
+		this.generatedInflections = new ArrayList<PersistableInflection>();
 	}
 
 	/**

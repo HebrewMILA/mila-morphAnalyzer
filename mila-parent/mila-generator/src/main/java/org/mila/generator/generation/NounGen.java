@@ -15,7 +15,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TriStateType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Feminine;
 import org.mila.entities.lexicon.Gender;
 import org.mila.entities.lexicon.Item;
@@ -672,7 +672,7 @@ public class NounGen extends ItemGen {
 		}
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyzeNoun();
 		handleDoublingVavForNounsStartsWithVav();
 

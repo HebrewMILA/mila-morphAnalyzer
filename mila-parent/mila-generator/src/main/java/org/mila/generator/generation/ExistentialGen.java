@@ -21,7 +21,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TenseType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Definitness;
 import org.mila.entities.lexicon.ExistentialException;
 import org.mila.entities.lexicon.ExistentialExceptionAdd;
@@ -104,7 +104,7 @@ public class ExistentialGen extends ItemGen {
 		}
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 
 		analyse();
 		inflectedItem = transliterated;

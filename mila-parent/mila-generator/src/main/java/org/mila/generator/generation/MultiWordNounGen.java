@@ -11,7 +11,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 
 
@@ -29,7 +29,7 @@ public class MultiWordNounGen extends ItemGen {
 	}
 
 	@Override
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		// TODO: Port this from the original.
 		return Collections.emptyList();		
 	}

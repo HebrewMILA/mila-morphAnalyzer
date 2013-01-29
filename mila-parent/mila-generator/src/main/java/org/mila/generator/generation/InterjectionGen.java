@@ -16,7 +16,7 @@ import org.hamcrest.Matchers;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.InterjectionException;
 import org.mila.entities.lexicon.InterjectionExceptionAdd;
 import org.mila.entities.lexicon.InterjectionExceptionRemove;
@@ -99,7 +99,7 @@ public class InterjectionGen extends ItemGen {
 		PGN = "unspecified";
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		populateDatabase();
 		addException();

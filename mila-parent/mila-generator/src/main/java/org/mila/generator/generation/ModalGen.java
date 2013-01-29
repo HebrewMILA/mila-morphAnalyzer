@@ -20,7 +20,7 @@ import org.mila.entities.corpus.NumberType;
 import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.TenseType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.ModalException;
 import org.mila.entities.lexicon.ModalExceptionAdd;
@@ -110,7 +110,7 @@ public class ModalGen extends ItemGen {
 		definitnessVal = DefinitenessType.UNSPECIFIED;
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		/* XXX: I don't see remove functionality here */
 		analyse();
 		inflectedItem = transliterated;

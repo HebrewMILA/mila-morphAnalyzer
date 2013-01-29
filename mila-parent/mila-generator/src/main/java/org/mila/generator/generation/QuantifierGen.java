@@ -18,7 +18,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 import org.mila.entities.corpus.SuffixFunctionType;
 import org.mila.entities.corpus.TriStateType;
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 import org.mila.entities.lexicon.QuantifierException;
 import org.mila.entities.lexicon.QuantifierExceptionAdd;
@@ -139,7 +139,7 @@ public class QuantifierGen extends ItemGen {
 		definitnessVal = DefinitenessType.UNSPECIFIED;
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 
 		switch (quantifier.getType()) {

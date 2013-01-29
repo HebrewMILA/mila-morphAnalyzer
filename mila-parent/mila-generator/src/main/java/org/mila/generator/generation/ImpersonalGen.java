@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import org.mila.entities.inflections.Inflection;
+import org.mila.entities.inflections.PersistableInflection;
 import org.mila.entities.lexicon.Item;
 
 /**
@@ -29,7 +29,7 @@ public class ImpersonalGen extends ItemGen {
 		analyseItem();
 	}
 
-	public List<Inflection> inflect() {
+	public List<PersistableInflection> inflect() {
 		analyse();
 		inflectedItem = transliterated;
 		surface = undot;
