@@ -33,7 +33,7 @@ public class XMLDBRoundtripTest {
     @Before
     public void setUp() throws Exception {
 	lexicon_props.load(this.getClass().getClassLoader()
-		.getResourceAsStream("test_postgres_lexicon.props"));
+		.getResourceAsStream("test_lexicon.props"));
 
 	lexicon_emf = Persistence.createEntityManagerFactory(
 		"org.mila.entities.corpus:org.mila.entities.lexicon",

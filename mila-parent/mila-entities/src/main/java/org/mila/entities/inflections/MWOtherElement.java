@@ -12,7 +12,7 @@ import org.mila.entities.corpus.RegisterType;
 import org.mila.entities.corpus.SpellingType;
 
 @Entity(name = "MWOtherElement")
-public class MWOtherElement extends MWElement {
+public class MWOtherElement extends MWElement implements PersistableInflection {
     private static final long serialVersionUID = 1L;
 
     MWElement formerElement;

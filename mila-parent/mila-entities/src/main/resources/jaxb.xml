@@ -87,13 +87,6 @@
     </jxb:bindings>
 
 
-    <!-- I want this to be a proper enum -->
-
-    <jxb:bindings
-	node="//xsd:complexType[@name='XMWEAtom']/xsd:attribute[@name='type']/xsd:simpleType">
-      <jxb:typesafeEnumClass name="XMWEAtomTypeEnum" />
-    </jxb:bindings>
-
     <!-- Rename these names to be more helpful (Start with XMWE) -->
     <jxb:bindings
 	node="//xsd:complexType[@id='XMWEAtomPointer']">
@@ -128,7 +121,7 @@
 	</annox:annotate>
 	<annox:annotate annox:class="javax.persistence.JoinColumn"
 			name="ATOM_POINTER_ID" />
-	<annox:annotate annox:class="javax.persistence.Transient" />
+	<annox:annotate annox:class="java.lang.Deprecated" />
       </annox:annotate>    
     </jxb:bindings>
 
@@ -146,25 +139,7 @@
 	</annox:annotate>
 	<annox:annotate annox:class="javax.persistence.JoinColumn"
 			name="ITEM_POINTER_ID" />
-	<annox:annotate annox:class="javax.persistence.Transient" />
-      </annox:annotate>    
-    </jxb:bindings>
-
-    <jxb:bindings node="//xsd:attribute[@id='SuffixPointerRef']">
-      <jxb:property>
-	<jxb:baseType name="XMWEAtom" />
-      </jxb:property>
-      <hj:ignored />
-      <annox:annotate target="getter">
-	<annox:annotate annox:class="javax.persistence.OneToOne"
-			targetEntity="org.mila.entities.lexicon.XMWEAtom">
-	  <annox:annotate annox:field="cascade">
-	    <annox:annotate>ALL</annox:annotate>
-	  </annox:annotate>
-	</annox:annotate>
-	<annox:annotate annox:class="javax.persistence.JoinColumn"
-			name="SUFFIX_POINTER_ID" />
-	<annox:annotate annox:class="javax.persistence.Transient" />
+	<annox:annotate annox:class="java.lang.Deprecated" />
       </annox:annotate>    
     </jxb:bindings>
 
@@ -181,7 +156,9 @@
 	</annox:annotate>
 	<annox:annotate annox:class="javax.persistence.JoinColumn"
 			name="SUBITEM_ID" />
-	<annox:annotate annox:class="javax.persistence.Transient" />
+	<annox:annotate annox:class="javax.persistence.Transient"
+			/>
+	<annox:annotate annox:class="java.lang.Deprecated" />
       </annox:annotate>    
     </jxb:bindings> 
 
@@ -194,6 +171,20 @@
         <annox:annotate
             annox:class="javax.persistence.DiscriminatorColumn"
             length="63" />
+
+      </annox:annotate>    
+    </jxb:bindings> 
+
+    <!--
+        Shorten table names for really long types, to avoid name collisions
+        on truncation. Also add a length enhancement annotation...
+    -->
+    <jxb:bindings node="//xsd:complexType[contains(@name, 'MultiWord')]" multiple="true">
+      <annox:annotate>
+        <annox:annotate
+            annox:class="javax.persistence.DiscriminatorColumn"
+            length="63" />
+
       </annox:annotate>
     </jxb:bindings>
 

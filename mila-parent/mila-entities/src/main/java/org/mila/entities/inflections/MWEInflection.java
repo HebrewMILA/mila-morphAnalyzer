@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity(name = "MWEInflection")
-public class MWEInflection implements Serializable {
+public class MWEInflection implements Serializable, PersistableInflection {
     private static final long serialVersionUID = -7092895993694412830L;
 
     protected long id;

@@ -4,7 +4,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 
 @Entity(name = "MWFirstElement")
-public class MWFirstElement extends MWElement {
+public class MWFirstElement extends MWElement implements PersistableInflection {
     private static final long serialVersionUID = 1L;
 
     String pos;

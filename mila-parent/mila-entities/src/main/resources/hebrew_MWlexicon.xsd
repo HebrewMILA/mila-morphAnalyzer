@@ -1185,6 +1185,7 @@
       <xsd:enumeration value="title" />
       <xsd:enumeration value="conjunction" />
       <xsd:enumeration value="participle" />
+      <xsd:enumeration value="passiveParticiple" />
       <xsd:enumeration value="unspecified" />
     </xsd:restriction>
   </xsd:simpleType>
@@ -2894,11 +2895,8 @@
 	      </xsd:sequence>	  
 	    </xsd:complexType>
 	  </xsd:element>
-	  <xsd:element name="anchors" type="XMWEAtomPointerList" />
 	</xsd:sequence>
-<!--
-	<xsd:attribute name="pos" type="XMWEPos" />
--->
+	<xsd:attribute name="pos" type="Pos" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -2915,24 +2913,68 @@
     </xsd:sequence>
   </xsd:complexType>	  
 
-
   <!--
       <xsd:complexType name="XMWExceptions">
       </xsd:complexType>
   -->
 
-  <!--
-  <xsd:simpleType name="XMWEPos">
-    <xsd:simpleContent>
-      <xsd:extension base="Pos">
-	<xsd:enumeration value="verb_phrase" />
-	<xsd:enumeration value="noun_phrase" />
-	<xsd:enumeration value="noun_adjective_phrase" />
-	<xsd:enumeration value="prepositional_phrase" />
-      </xsd:extension>
-    </xsd:simpleContent>
+  <xsd:simpleType name="Prefix">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="m"/>
+      <xsd:enumeration value="e"/>
+      <xsd:enumeration value="h"/>
+      <xsd:enumeration value="w"/>
+      <xsd:enumeration value="k"/>
+      <xsd:enumeration value="l"/>
+      <xsd:enumeration value="b"/>
+      <xsd:enumeration value="ke"/>
+      <xsd:enumeration value="me"/>
+      <xsd:enumeration value="mb"/>
+      <xsd:enumeration value="ml"/>
+      <xsd:enumeration value="be"/>
+      <xsd:enumeration value="lke"/>
+      <xsd:enumeration value="unspecified"/>
+    </xsd:restriction>
   </xsd:simpleType>
-  -->
+  
+  <xsd:simpleType name="SuffixFunction">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="possessive"/>
+      <xsd:enumeration value="accusative"/>
+      <xsd:enumeration value="nominative"/>
+      <xsd:enumeration value="accusative or nominative"/>
+      <xsd:enumeration value="pronomial"/>
+      <xsd:enumeration value="unspecified"/>
+      <!-- כינוי קניין חבור    -->
+      <!-- כינוי מושא חבור     -->
+      <!-- כינוי נושא חבור     -->
+      <!--כינוי מושא חבור או כינוי נושא חבור    -->
+      <!-- נטיית גוף/מין/מספר חבורה -->
+      <!-- הקטגוריה אינה ידועה -->
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+  <xsd:complexType name="XMWEConstraint" id="XMWEConstraint">
+      <xsd:sequence>
+	<xsd:element name="polarity" type="Polarity"
+		     minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="register" type="Register"
+		     minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="spelling" type="Spelling"
+		     minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="prefix" type="Prefix"
+		     minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="definiteness" type="Definitness"
+		     minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="baseNumber" type="Number"
+		     minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="suffixFunction" type="SuffixFunction"
+		     minOccurs="0" maxOccurs="unbounded" />
+	<xsd:element name="partOfSpeech" type="Pos"
+		     minOccurs="0" maxOccurs="unbounded" />
+      </xsd:sequence>
+  </xsd:complexType>
 
   <xsd:complexType name="XMWEAtom">
     <xsd:attribute name="id">
@@ -2942,49 +2984,60 @@
 	</xsd:restriction>
       </xsd:simpleType>
     </xsd:attribute>
-    <xsd:attribute name="type">
-      <xsd:simpleType>
-	<xsd:restriction base="xsd:token">
-	  <xsd:enumeration value="lexicon" />
-	  <xsd:enumeration value="suffix" />
-	  <xsd:enumeration value="prefix" />
-	</xsd:restriction>
-      </xsd:simpleType>
-    </xsd:attribute>
-    <xsd:attribute name="pointer" use="optional" id="AtomLexiconRef">
+    <xsd:attribute name="pointer" id="AtomLexiconRef">
       <xsd:simpleType>
 	<xsd:restriction base="xsd:IDREF">
 	  <xsd:pattern value="I[1-9][0-9]" />
 	</xsd:restriction>
       </xsd:simpleType>
     </xsd:attribute>
+    <xsd:attribute name="anchor" id="Anchor" type="xsd:boolean" />
   </xsd:complexType>
 
   <xsd:complexType name="XMWETemplate">
-    <xsd:choice minOccurs="1" maxOccurs="unbounded">
-      <xsd:element name="atom" type="XMWEAtomPointer">
-    </xsd:element>
-      <xsd:element name="any">
-	<xsd:complexType id="XMWEAnything">
-	  <xsd:complexContent>
-	    <xsd:extension base="XMWEBase" />
-	  </xsd:complexContent>
+    <xsd:sequence>
+      <xsd:choice minOccurs="1" maxOccurs="unbounded">
+	<xsd:element name="atom" type="XMWEAtomPointer">
+	</xsd:element>
+	<xsd:element name="any">
+	  <xsd:complexType id="XMWEAnything">
+	    <xsd:complexContent>
+	      <xsd:extension base="XMWEBase" />
+	    </xsd:complexContent>
+	  </xsd:complexType>
+	</xsd:element>
+      </xsd:choice>
+      <xsd:element name="homogeneous_set"
+		   minOccurs="0" maxOccurs="unbounded">
+	<xsd:complexType>
+	  <xsd:sequence>
+	    <xsd:element name="position" type="xsd:long"
+			 minOccurs="2" maxOccurs="unbounded" />
+	  </xsd:sequence>
+	  <xsd:attribute name="property">
+	    <xsd:simpleType>
+	      <xsd:restriction base="xsd:token">
+		<xsd:enumeration value="polarity" />
+		<xsd:enumeration value="register" />
+		<xsd:enumeration value="spelling" />
+		<xsd:enumeration value="prefix" />
+		<xsd:enumeration value="definiteness" />
+	      </xsd:restriction>
+	    </xsd:simpleType>
+	  </xsd:attribute>
 	</xsd:complexType>
       </xsd:element>
-    </xsd:choice>
+    </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="XMWEAtomPointer" id="XMWEAtomPointer">
     <xsd:complexContent>
       <xsd:extension base="XMWEBase">
+	<xsd:sequence>
+	  <xsd:element name="constraint" type="XMWEConstraint" 
+		       minOccurs="0" maxOccurs="unbounded" />
+	</xsd:sequence>
 	<xsd:attribute name="pointer" id="AtomPointerRef" use="required">
-	  <xsd:simpleType>
-	    <xsd:restriction base="xsd:IDREF">
-	      <xsd:pattern value="I[1-9][0-9]*X[1-9][0-9]*" />
-	    </xsd:restriction>
-	  </xsd:simpleType>
-	</xsd:attribute>
-	<xsd:attribute name="suffix" id="SuffixPointerRef" use="optional">
 	  <xsd:simpleType>
 	    <xsd:restriction base="xsd:IDREF">
 	      <xsd:pattern value="I[1-9][0-9]*X[1-9][0-9]*" />

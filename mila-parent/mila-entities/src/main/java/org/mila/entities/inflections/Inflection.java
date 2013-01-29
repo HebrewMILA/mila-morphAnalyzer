@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -26,8 +28,9 @@ import org.mila.entities.corpus.TriStateType;
 
 @Entity(name = "Inflection")
 @Table(name = "INFLECTIONS")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Cache(type = CacheType.SOFT_WEAK)
-public class Inflection implements Serializable {
+public class Inflection implements Serializable, PersistableInflection {
     private static final long serialVersionUID = 1L;
 
     protected long id;

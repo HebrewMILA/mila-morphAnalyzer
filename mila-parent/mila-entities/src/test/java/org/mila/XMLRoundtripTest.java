@@ -16,7 +16,6 @@ import org.custommonkey.xmlunit.NodeDetail;
 import org.custommonkey.xmlunit.XMLUnit;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 import org.mila.lexicon.XMLReader;
 import org.mila.lexicon.XMLWriter;
 import org.w3c.dom.NamedNodeMap;
@@ -57,7 +56,7 @@ public class XMLRoundtripTest {
 	sb.append(">");
     }
 
-    @Test
+    //@Test
     public void test() throws JAXBException, SAXException, IOException,
 	    ParserConfigurationException {
 	XMLWriter wrtr = null;

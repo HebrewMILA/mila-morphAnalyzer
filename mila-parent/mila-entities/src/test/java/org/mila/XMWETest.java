@@ -10,8 +10,6 @@ import org.mila.entities.lexicon.XMWEAnything;
 import org.mila.entities.lexicon.XMWEAtom;
 import org.mila.entities.lexicon.XMWEAtomList;
 import org.mila.entities.lexicon.XMWEAtomPointer;
-import org.mila.entities.lexicon.XMWEAtomPointerList;
-import org.mila.entities.lexicon.XMWEAtomTypeEnum;
 import org.mila.entities.lexicon.XMWELexicon;
 import org.mila.entities.lexicon.XMWETemplate;
 import org.mila.entities.lexicon.XMWETemplateList;
@@ -83,7 +81,6 @@ public class XMWETest {
 				    {
 					setId("I23986X1");
 					setPointer(fi8442);
-					setType(XMWEAtomTypeEnum.LEXICON);
 				    }
 				});
 				getAtom().add(new XMWEAtom() {
@@ -91,18 +88,6 @@ public class XMWETest {
 				    {
 					setId("I23986X2");
 					setPointer(fi3382);
-					setType(XMWEAtomTypeEnum.LEXICON);
-				    }
-				});
-				getAtom().add(new XMWEAtom() {
-				    private static final long serialVersionUID = 1L;
-				    {
-					setId("I23986X3");
-					setPointer(null); /*
-							   * SUFFIX has no
-							   * pointer
-							   */
-					setType(XMWEAtomTypeEnum.SUFFIX);
 				    }
 				});
 				getAtom().add(new XMWEAtom() {
@@ -110,7 +95,6 @@ public class XMWETest {
 				    {
 					setId("I23986X4");
 					setPointer(fi4917);
-					setType(XMWEAtomTypeEnum.LEXICON);
 				    }
 				});
 				getAtom().add(new XMWEAtom() {
@@ -118,7 +102,6 @@ public class XMWETest {
 				    {
 					setId("I23986X5");
 					setPointer(fi608);
-					setType(XMWEAtomTypeEnum.LEXICON);
 				    }
 				});
 			    }
@@ -146,7 +129,13 @@ public class XMWETest {
 							setPointer(getAtoms()
 								.getAtom().get(
 									1));
-							setSuffix(getAtoms()
+						    }
+						});
+					getAtomOrAny().add(
+						new XMWEAtomPointer() {
+						    private static final long serialVersionUID = 1L;
+						    {
+							setPointer(getAtoms()
 								.getAtom().get(
 									2));
 						    }
@@ -158,15 +147,6 @@ public class XMWETest {
 							setPointer(getAtoms()
 								.getAtom().get(
 									3));
-						    }
-						});
-					getAtomOrAny().add(
-						new XMWEAtomPointer() {
-						    private static final long serialVersionUID = 1L;
-						    {
-							setPointer(getAtoms()
-								.getAtom().get(
-									4));
 						    }
 						});
 
@@ -184,9 +164,6 @@ public class XMWETest {
 							setPointer(getAtoms()
 								.getAtom().get(
 									1));
-							setSuffix(getAtoms()
-								.getAtom().get(
-									2));
 						    }
 						});
 					getAtomOrAny().add(
@@ -204,7 +181,7 @@ public class XMWETest {
 						    {
 							setPointer(getAtoms()
 								.getAtom().get(
-									3));
+									2));
 						    }
 						});
 					getAtomOrAny().add(
@@ -213,7 +190,7 @@ public class XMWETest {
 						    {
 							setPointer(getAtoms()
 								.getAtom().get(
-									4));
+									3));
 						    }
 						});
 
@@ -249,7 +226,7 @@ public class XMWETest {
 						    {
 							setPointer(getAtoms()
 								.getAtom().get(
-									3));
+									2));
 						    }
 						});
 					getAtomOrAny().add(
@@ -258,7 +235,7 @@ public class XMWETest {
 						    {
 							setPointer(getAtoms()
 								.getAtom().get(
-									4));
+									3));
 						    }
 						});
 
@@ -266,18 +243,6 @@ public class XMWETest {
 				});
 			    }
 			});
-			setAnchors(new XMWEAtomPointerList() {
-			    private static final long serialVersionUID = 1L;
-			    {
-				getAtom().add(new XMWEAtomPointer() {
-				    private static final long serialVersionUID = 1L;
-				    {
-					setPointer(getAtoms().getAtom().get(4));
-				    }
-				});
-			    }
-			});
-
 		    }
 		});
 

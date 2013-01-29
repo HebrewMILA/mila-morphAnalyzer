@@ -19,7 +19,7 @@ import javax.persistence.Transient;
 @Entity(name = "MWElement")
 @Table(name = "MWE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class MWElement implements Serializable {
+public abstract class MWElement implements Serializable, PersistableInflection {
     private static final long serialVersionUID = 1L;
 
     protected long id;
