@@ -211,9 +211,9 @@ public class XMLProcessor {
 
 		root.addAttribute("name", "Demo Hebrew tokenized text in XML");
 
-		root.addAttribute("version", "1.6.0").addAttribute("maintainer",
+		root.addAttribute("version", "1.7.0").addAttribute("maintainer",
 
-		"Yossi Jacob").addAttribute("email", "mila@cs.technion.ac.il");
+		"Matan Peled").addAttribute("email", "mila@cs.technion.ac.il");
 
 		Element metadata = root.addElement("metadata");
 
@@ -231,7 +231,7 @@ public class XMLProcessor {
 
 		DateFormat.SHORT).format(now));
 
-		metadata.addElement("maintainer").addText("Yossi Jacob");
+		metadata.addElement("maintainer").addText("Matan Peled");
 
 		metadata.addElement("email").addText("mila@cs.technion.ac.il");
 

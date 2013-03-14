@@ -1909,7 +1909,7 @@ public class CreateCorpusXML implements Constants {
 	 */
 	public void createXMLDoc() {
 		try {
-			jc = JAXBContext.newInstance("generated");
+			jc = JAXBContext.newInstance("mila.generated");
 		} catch (JAXBException e) {
 			System.out
 					.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");
@@ -1926,9 +1926,9 @@ public class CreateCorpusXML implements Constants {
 		corpus.setName("Analysis Results");
 		// corpus.setVersion((float) 1.0);
 		// corpus.setMaintainer("Dalia Bojan");
-		corpus.setMaintainer("Yossi Jacob");
+		corpus.setMaintainer("Matan Peled");
 		corpus.setEmail("mila@cs.technion.ac.il");
-		corpus.setComment("versions info: lexicon :30/11/2010;  morphologicalAnalyzer:1.6 (30/11/2010); "
+		corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
 				+ "corpus schema 16/06/2009; lexicon schema 16/06/2009");
 		try {
 			validator = jc.createValidator();

@@ -6,8 +6,8 @@
  */
 package mila.mw;
 
+import java.net.InetAddress;
 import java.util.Calendar;
-
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -16,7 +16,6 @@ import mila.corpus.CreateCorpusXML;
 import mila.generated.BaseType;
 import mila.generated.MWEType;
 import mila.generated.ObjectFactory;
-
 
 /**
  * @author daliabo
@@ -100,10 +99,18 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 					.println("CreateCorpusXML:createXMLdOC Exception while creating corpus");
 			e1.printStackTrace();
 		}
-		corpus.setName("Web Analysis Results @ " + Calendar.getInstance().getTime());
+		String hostname = "unknown.unknown";
+		try {
+			hostname = InetAddress.getLocalHost().getHostName();
+		} catch (Throwable t) {
+
+		}
+		corpus.setName("Analysis Results (" + hostname + ") @ "
+				+ Calendar.getInstance().getTime());
 		corpus.setMaintainer("Matan Peled");
 		corpus.setEmail("mila@cs.technion.ac.il");
-		corpus.setComment("versions info: lexicon :30/11/2010;  morphologicalAnalyzer:1.6 (30/11/2010); "
+
+		corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
 				+ "corpus schema 16/06/2009; lexicon schema 16/06/2009");
 		try {
 			validator = jc.createValidator();

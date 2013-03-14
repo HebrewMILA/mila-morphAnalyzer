@@ -222,7 +222,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		// a.analyzeSingleToken(pw, inputString);
 		//
 		// String result = sw.toString();
-		// result = result.trim();
+		// result = result.trim();P
 		// System.out.println(result);
 		// System.exit(0);
 
@@ -286,27 +286,10 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 				// System.out.println(outputFile);
 				analyzeFile(inputFile, outputFile);
-				PostProcessor1 postProcessor = new PostProcessor1();
-
-				int index = outputFile.lastIndexOf("\\");
-				// String
-				// cleanOutputFile="C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\shulyCleanFiles\\"
-				// + outputFile.substring(index+1);
-				// String
-				// cleanOutputFile="c:\\Documents and Settings\\gtabajah\\My Documents\\work\\Input\\morphologicalAnalyzer\\output_clean\\"
-				// + outputFile.substring(index+1);
-				String cleanOutputFile = outputFile.substring(index + 1); // changed
-																			// from
-																			// the
-																			// line
-																			// above
-																			// to
-																			// this
-																			// (yossi
-																			// 31.10.10)
+				PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
 
 				try {
-					postProcessor.process(outputFile, cleanOutputFile);
+					postProcessor.process(outputFile, outputFile);
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -687,24 +670,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		System.out.println("(F)MWXMLMorphAnalyzer:processSingleFile()");
 		dataLoad();
 		analyzeFile(inputFile, outputFile);
-		PostProcessor1 postProcessor = new PostProcessor1();
-
-		int index = outputFile.lastIndexOf("\\");
-		// String
-		// cleanOutputFile="C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\shulyCleanFiles\\"
-		// + outputFile.substring(index+1);
-		// String
-		// cleanOutputFile="c:\\Documents and Settings\\gtabajah\\My Documents\\work\\Input\\morphologicalAnalyzer\\output_clean\\"
-		// + outputFile.substring(index+1);
-		String cleanOutputFile = outputFile.substring(index + 1); // changed
-																	// from the
-																	// line
-																	// above to
-																	// this
-																	// (yossi
-																	// 31.10.10)
+		PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
 		try {
-			postProcessor.process(outputFile, cleanOutputFile);
+			postProcessor.process(outputFile, outputFile);
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -740,6 +708,19 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		dataLoad(dinflectionsFile, dprefixesFile, gimartiasFile,
 				dmwinflectionsFile, mwe1File, mwe2File, mwe3File, mwe4File);
 		analyzeFile(inputFile, outputFile);
+		PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
+		try {
+			postProcessor.process(outputFile, outputFile);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JAXBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
