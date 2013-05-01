@@ -345,6 +345,7 @@ public class XMLTokenizer1 implements Constants {
 			try {
 				line = bi.readLine();
 			} catch (IOException e) {
+				line = null;
 				System.out
 						.println("XMLTokenizer:dropMiddleFileEmptyLines - Exception in readLine line= "
 								+ line);
