@@ -3,7 +3,7 @@
 	<name>milaLexicon</name>
 	<comment></comment>
 	<projects>
-		<project>access</project>
+		<project>lexicon</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -1,11 +1,12 @@
-<%@ page language="java" 
-        import="gen.TestMWGeneration"
-	import="lexicon.generate.*"
+<%@ 
+page language="java" 
+import="gen.TestMWGeneration"
+import="lexicon.generate.*"
 %> 
 
 <html>
 <HEAD>
-<meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <TITLE>
        Multi Word Expressions Generator Viewer - database generator 
 </TITLE>

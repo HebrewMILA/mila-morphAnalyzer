@@ -73,7 +73,7 @@ if (request.getParameter("username") != null) {
 		user.open(uid);	
 	}				
 }	
-List users = visitor.getContents("SELECT * FROM users", "uid");
+List<?> users = visitor.getContents("SELECT * FROM users", "uid");
 %>
 <html>
 <head>
@@ -84,7 +84,7 @@ List users = visitor.getContents("SELECT * FROM users", "uid");
 <%
 if (!msg.equals("")) {
 %>
-<font color=blue size++><%=msg%></font>
+<font color=blue><%=msg%></font>
 <%
 }
 %>

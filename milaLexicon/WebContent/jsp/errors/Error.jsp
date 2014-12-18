@@ -71,7 +71,7 @@ else	{
 <title>טעות</title>
 </head>
 <body dir="rtl">
-<table border="0" height="20" cellspacing="3" cellpadding="1" width="100%" class="menu_color">
+<table class="menu_color">
 	<tr>
 		<td align="center" width="30%" bgcolor="white">
 		<b><a href="javascript:self.history.back();">&lt;&lt; חזרה לעמוד הקודם</a></b></td> 
@@ -81,14 +81,11 @@ else	{
 <h1>תקלה!</h1>
 <p>
 בדף זה נתגלתה תקלה:<br><br>
-<center>
 <font class=errorfont><strong><%= exceptionMessage %></strong></font>
-</center>
 <p>
-בלה לבה:<br><br>
+<br><br>
 <ul>
-<li>ניתן לשלוח דואל אל: <a href="mailto:dannysh@gmail.com">דני שחם</a> 
-<li>ניתן להתקשר לטלפון: 04-8288292.
+<li>ניתן לשלוח דואל אל: <a href="mailto:mila@cs.technion.ac.il">סלבה דמנדר</a> 
 </ul>
 <br><br>
 <%
@@ -103,7 +100,7 @@ exception.printStackTrace();
 out.println("</textarea>");
 %>
 <br><br>
-<table border="0" height="20" cellspacing="3" cellpadding="1" width="100%" class="menu_color">
+<table class="menu_color">
 	<tr>
 		<td align="center" width="30%" bgcolor="white">
 		<b><a href="javascript:self.history.back();">&lt;&lt; חזרה לעמוד הקודם</a></b></td>

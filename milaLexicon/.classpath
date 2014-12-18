@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/lexicon"/>
+	<classpathentry kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/javaee-api-6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jstl-api-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jstl-impl.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dbpool-6.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxb-libs.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lexicon.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mariadb-java-client-1.1.7.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/namespace.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xsdlib.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JspQueries.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
