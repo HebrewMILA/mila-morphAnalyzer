@@ -547,8 +547,11 @@ public class MultiWordNounGen extends ItemGen {
 		
 		//String masculineSingularConstruct="";
 		try {
+//			connection = DriverManager.getConnection(
+//					"jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest",
+// 					"dummy1", "health&happiness");
 			connection = DriverManager.getConnection(
-					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest",
+					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_generatorTest",
  					"dummy1", "health&happiness");
  			
 			PreparedStatement statement = null;

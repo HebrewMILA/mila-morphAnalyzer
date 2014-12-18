@@ -13,17 +13,18 @@ import java.sql.Statement;
 
 public class TestGeneration 
 {
-    String dataBaseUrl = "jdbc:mysql://yeda.cs.technion.ac.il:3306/";
-    String lexiconTestURL = dataBaseUrl + "lexiconTest";
+    String dataBaseUrl = "jdbc:mariadb://yeda.cs.technion.ac.il:3306/";
+//    String lexiconTestURL = dataBaseUrl + "lexiconTest";
     String lexiconPURL = dataBaseUrl + "lexiconP";
 
+    String lexiconTestURL = dataBaseUrl + "lexiconTest";
 	public void deleteInflections() 
 	{
 	    Connection connection = null;
         PreparedStatement statement = null;
 		try 
 		{
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("org.mariadb.jdbc.Driver").newInstance();
 			connection = DriverManager.getConnection(lexiconTestURL,"maital", "AnaXAd3Ke@aJ8F");
 			statement = connection.prepareStatement("delete from inflections");
 			statement.execute();
@@ -66,7 +67,7 @@ public class TestGeneration
         try
         {
             query = "delete FROM inflectionsEdit WHERE id='"+id+"'";
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Class.forName("org.mariadb.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(lexiconPURL,"lexiconUser", "!adgj?");
             statement = connection.createStatement();
             statement.execute(query);
@@ -94,7 +95,7 @@ public class TestGeneration
         try
         {
             query = "INSERT INTO inflectionsEdit "+ iEntry.GetInsertQueryDetails();
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Class.forName("org.mariadb.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(lexiconPURL,"lexiconUser", "!adgj?");
             statement = connection.createStatement();
             statement.execute(query);
@@ -116,7 +117,7 @@ public class TestGeneration
         {
             Connection connection = null;
             PreparedStatement statement = null;
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Class.forName("org.mariadb.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(lexiconTestURL,"maital", "AnaXAd3Ke@aJ8F");
             statement = connection.prepareStatement("SELECT * FROM inflections WHERE baseLexiconPointer= ?");
             statement.setObject(1, lexiconId);
@@ -137,7 +138,7 @@ public class TestGeneration
         PreparedStatement statement = null;
         ResultSet rs = null;
 
-        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        Class.forName("org.mariadb.jdbc.Driver").newInstance();
         connection = DriverManager.getConnection(lexiconPURL,"lexiconUser", "!adgj?");
         statement = connection.prepareStatement("SELECT * FROM item WHERE id= ?");
         statement.setObject(1, lexiconId);
@@ -160,7 +161,7 @@ public class TestGeneration
 			Connection connection = null;
 			PreparedStatement statement = null;
 
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("org.mariadb.jdbc.Driver").newInstance();
 			connection = DriverManager.getConnection(lexiconTestURL,"maital", "AnaXAd3Ke@aJ8F");
 			statement = connection.prepareStatement("SELECT * FROM inflections WHERE baseLexiconPointer= ?");
 			statement.setObject(1, lexiconId);
@@ -228,7 +229,7 @@ public class TestGeneration
     			// now i want to put here the list of removed inflections.
     			connection = DriverManager.getConnection(lexiconPURL,"lexiconUser", "!adgj?");
     			statement = connection.prepareStatement("SELECT * FROM lexiconP.inflectionsEdit WHERE baseLexiconPointer= ?");
-                statement.setObject(1, lexiconId);
+    			statement.setObject(1, lexiconId);
                 output +="</br> List of removed inflections</br>";
                 
                 output += "<table align='center' cellpadding='0' cellspacing='0' width='85%' >" +
@@ -355,7 +356,7 @@ public class TestGeneration
             TestGeneration tg = new TestGeneration();
             tg.RestoreRemoveInflectedEntry("13");
             /*query = "INSERT INTO inflectionsEdit (baseLexiconPointer, transliterated, baseNumber, baseGender, basePerson, PGN, suffixFunction, suffixStatus, binyan, tense, baseDefinitness, register, spelling, polarity, prefix,type) VALUES('11926','mrb','singular','masculine','','u','u','true','','','tf','formal','standard','u','u','')";
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Class.forName("org.mariadb.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection("jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconP","maital", "AnaXAd3Ke@aJ8F");
             statement = connection.createStatement();
             statement.execute(query);

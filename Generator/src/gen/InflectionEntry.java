@@ -13,7 +13,7 @@ import lexicon.dbUtils.Inflections;
 import lexicon.generate.ItemGen;
 
 public class InflectionEntry {
-    String dataBaseUrl = "jdbc:mysql://yeda.cs.technion.ac.il:3306/";
+    String dataBaseUrl = "jdbc:mariadb://yeda.cs.technion.ac.il:3306/";
     String lexiconPURL = dataBaseUrl + "lexiconP";
 
     private String id;

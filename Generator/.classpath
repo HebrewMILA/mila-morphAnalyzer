@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/commons-el.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/dbpool-6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/el-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/javaee-api-6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/JspQueries.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/mariadb-java-client-1.1.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/namespace.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/or124.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/xsdlib.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jaxb-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jaxb-impl.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jaxb-libs.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jaxb-xjc.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jax-qname.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jsf-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jsf-impl.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jstl-api-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/jstl-impl.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/relaxngDatatype.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/newWorkspace/jarsRepo/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

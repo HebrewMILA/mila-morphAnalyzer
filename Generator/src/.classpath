@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/jaas.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/jax-qname.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/jta-spec1_0_1.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/namespace.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/xmlsec.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/connection pool/DBPool_v4.7.1.zip"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/lib/xsdlib.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/JARS/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/JARS/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/JARS/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/JARS/jaxb-libs.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/gtabajah/My Documents/Downloads/mysql-connector-java-3.1.11/mysql-connector-java-3.1.11-bin.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

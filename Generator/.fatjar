@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu May 03 11:28:23 IDT 2012
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=/home/smip/Generation.jar
+manifest.mergeall=false
+manifest.mainclass=lexicon.generate.Generation
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=<jar|commons-el.jar>;<jar|el-api.jar>;<jar|el-api-1.0.jar>;<jar|javaee-api-6.0.jar>;<jar|namespace.jar>
+includes=

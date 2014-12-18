@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Wed Dec 14 11:23:01 IST 2011
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=Generation.jar
+manifest.mergeall=true
+manifest.mainclass=lexicon.generate.Generation
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|UNIX Generator>~lexicon/~dbUtils/~Download2File.java;<po|UNIX Generator>~.classpath;<po|UNIX Generator>~.fatjar;<po|UNIX Generator>~.project;<po|UNIX Generator>~Generation.jar;<po|UNIX Generator>~generator.jar;<po|UNIX Generator>~vssver2.scc
+includes=
