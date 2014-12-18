@@ -112,9 +112,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 		File f = new File(configFileName);
 		if (!f.exists()) {
-			System.out.println("can not find configuration file "
+			System.out.println("Can not find configuration file!"
 					+ configFileName);
-			System.out.println("creating deafult configurarion file ");
+			System.out.println("Creating deafult configurarion file...");
 			a.CreateConfigurationFile(configFileName);
 		}
 
@@ -124,9 +124,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		} catch (Exception e) {
 			System.out.println("ERROR");
 			System.out
-					.println("bad configuration file " + configFileName + " ");
-			System.out.println("delete file " + configFileName
-					+ " to force deafult configuration file creation");
+					.println("Bad configuration file " + configFileName + " ");
+			System.out.println("Delete file " + configFileName
+					+ " to force default configuration file creation.");
 			e.printStackTrace();
 			System.exit(1);
 		}
@@ -148,10 +148,10 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			 */
 			for (String filename : files) {
 				if ((filename == null) || (filename.length() < 3)) {
-					System.out.println("bad configuration file "
+					System.out.println("Bad configuration file "
 							+ configFileName);
-					System.out.println("delete file " + configFileName
-							+ " to force deafult configuration file creation");
+					System.out.println("Delete file " + configFileName
+							+ " to force default configuration file creation.");
 					System.exit(0);
 				}
 			}
@@ -192,13 +192,13 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 				}
 			} else
 				System.out
-						.println("input and output should both be files or should both be existing directories");
+						.println("Input and output should both be files or should both be existing directories.");
 
 			break;
 
 		default:
 			System.out.println("Morpological Analyzer");
-			System.out.println("wrong number of parameters");
+			System.out.println("Wrong number of parameters");
 			System.out.println("USAGE:");
 			System.out
 					.println("java -jar morphAnalyzer.jar [database flag] [input] [output]");
@@ -207,7 +207,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			System.out
 					.println("external .data files names are in the configuration file : "
 							+ configFileName);
-			System.out.println("example:");
+			System.out.println("Example:");
 			System.out
 					.println("java -jar morphAnalyzer.jar false input/ output/");
 		}
@@ -323,7 +323,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			// createXML.printDoc();
 		} catch (Exception e) {
 			System.out
-					.println("An error occured make sure you have tokenized the input file, if error still existes send the developer the input file");
+					.println("An error occured make sure you have tokenized the input file, if error still exists send the developer the input file");
 			e.printStackTrace();
 		} finally {
 			// System.exit(0);

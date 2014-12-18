@@ -1,0 +1,2 @@
+[(PROPERNAME-DEF qriih)]
+EOF

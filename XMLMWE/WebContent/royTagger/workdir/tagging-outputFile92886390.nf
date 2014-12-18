@@ -1,0 +1,2 @@
+[(ADJECTIVE bkiriM)][(QM QM)][(PREFIX w)	(PREFIX b)(NOUN-POSSESSIVE raeM)]
+EOF

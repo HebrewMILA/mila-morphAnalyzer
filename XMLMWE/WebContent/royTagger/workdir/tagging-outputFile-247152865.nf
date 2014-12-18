@@ -1,0 +1,2 @@
+[(NEGATION al)][(VERB tlK)][(DOT DOT)]
+EOF

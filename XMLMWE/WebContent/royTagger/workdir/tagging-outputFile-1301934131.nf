@@ -1,0 +1,2 @@
+[(NOUN-CONST kpri)]
+EOF

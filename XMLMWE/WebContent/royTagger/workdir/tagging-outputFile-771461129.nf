@@ -1,0 +1,2 @@
+[(VERB emrti)]
+EOF

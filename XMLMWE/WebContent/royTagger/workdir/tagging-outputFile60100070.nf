@@ -1,0 +1,2 @@
+[(CONJUNCTION aM)][(PREFIX w)	(CONJUNCTION kaer)]
+EOF

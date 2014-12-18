@@ -1,0 +1,2 @@
+[(PREPOSITION yl)][(NOUN-CONST pni)]
+EOF

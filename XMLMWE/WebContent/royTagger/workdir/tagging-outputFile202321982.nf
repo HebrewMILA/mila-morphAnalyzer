@@ -1,0 +1,2 @@
+[(ADJECTIVE kpriiM)]
+EOF

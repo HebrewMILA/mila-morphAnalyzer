@@ -1,0 +1,3 @@
+[(PROPERNAME a.)][(PROPERNAME erwN)][(DOT DOT)]
+[(PROPERNAME bgiN)][(VERB amr)][(PROPERNAME la.)][(PROPERNAME erwN)][(VERB amr)][(ADVERB kN)][(DOT DOT)]
+EOF

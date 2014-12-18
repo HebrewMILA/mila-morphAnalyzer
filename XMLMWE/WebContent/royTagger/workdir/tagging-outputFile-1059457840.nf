@@ -1,0 +1,2 @@
+[(PROPERNAME baizw)][(INTERROGATIVE aizw)]
+EOF

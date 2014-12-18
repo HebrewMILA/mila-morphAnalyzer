@@ -1,0 +1,2 @@
+[(NOUN-DEF hyitwN)][(LRB LRB)][(PROPERNAME lh)][(PROPERNAME pigarw)][(RRB RRB)]
+EOF

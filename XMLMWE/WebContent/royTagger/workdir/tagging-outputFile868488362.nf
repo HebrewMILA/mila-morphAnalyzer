@@ -1,0 +1,2 @@
+[(ADVERB knrah)]
+EOF

@@ -1,0 +1,100 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.CopulaExceptionType"
+%>
+<%
+CopulaExceptionType copulaException = new CopulaExceptionType();  
+if (aid != 0 && pos.equals("copula")) 
+{
+	copulaException.open(aid); 
+}
+if (request.getParameter("delete_action") !=null)	
+{
+	if (request.getParameter("delete_action").equals("copula")) 
+	{
+		//Showing confirmation message
+		if (request.getParameter("confirm") != null)	
+		{
+			int feedback = copulaException.remove();
+			if (feedback > 0)	
+			{
+				actionDone = "remove";
+				copulaException = new CopulaExceptionType();
+				removeMsg = "<font color=blue><b>הפעולה נמחקה בהצלחה</b>";
+			}
+			else	
+			{
+				notRemoveMsg = "<font class=errorfont>הפעולה לא נמחקה</font><br>";
+			}
+		}	//End of doing DELETE
+	}
+}
+if (request.getParameter("action_pos")!= null) 
+{
+	if (request.getParameter("action_pos").equals("copula") && !request.getParameter("copula_exception_undotted").equals("")) 
+	{
+		copulaException.setUndotted(request.getParameter("copula_exception_undotted").trim());
+		if (request.getParameter("copula_exception_dotted")!= null) 
+		{
+			copulaException.setDotted(request.getParameter("copula_exception_dotted").trim());
+		}
+		if (request.getParameter("copula_exception_register")!= null) 
+		{
+			copulaException.setRegister(request.getParameter("copula_exception_register"));
+		}	
+		if (request.getParameter("copula_exception_spelling")!= null) 
+		{
+            copulaException.setSpelling(request.getParameter("copula_exception_spelling"));
+        }
+		if (request.getParameter("copula_exception_person")!= null) 
+		{
+            copulaException.setPerson(request.getParameter("copula_exception_person"));
+        }
+        if (request.getParameter("copula_exception_number")!= null) 
+        {
+			copulaException.setNumber(request.getParameter("copula_exception_number"));
+		}
+	    if (request.getParameter("copula_exception_gender")!= null) 
+	    {
+            copulaException.setGender(request.getParameter("copula_exception_gender"));
+        }
+		if (request.getParameter("copula_exception_tense")!= null) 
+		{
+            copulaException.setTense(request.getParameter("copula_exception_tense"));
+        }
+		if (request.getParameter("copula_exception_action")!= null) 
+		{
+            copulaException.set("action", request.getParameter("copula_exception_action"));
+        }
+
+		if (id != 0) 
+		{	
+			if (aid == 0) 
+			{
+				actionDone = "add";
+				aid = copulaException.add(item.getID());
+				if (aid >0) 
+				{
+					addingMsg = "<font color=blue><b> "+ item.getID() +" התוספה פעולה חדשה לפריט</b>";
+				}				
+			} 
+			else 
+			{	
+				if (aid != 0) 
+				{
+					int feedback = copulaException.update(); 
+					if (feedback >0) 
+					{
+						addingMsg = "<font color=blue><b>הפעולה התעדכנה בהצלחה</b>";
+					}					
+					actionDone = "update"; 
+				}
+			}	
+			copulaException.open(aid);	
+			item.open(id);
+		}	
+	}
+}
+%>

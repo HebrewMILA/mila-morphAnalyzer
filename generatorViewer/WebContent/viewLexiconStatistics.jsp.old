@@ -1,0 +1,183 @@
+<%@ page import="java.sql.*"
+import="java.net.URLDecoder"
+import="lexicon.ShowLexiconStatistic"
+ %>
+<%
+Connection connection = null;
+Statement statement = null;
+ResultSet rs = null;
+%>
+
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
+<TITLE>
+       Generator Viewer - database generator 
+</TITLE>
+</HEAD>
+<body>
+<%
+try{
+String lexiconId = request.getParameter("lexiconId");
+response.setContentType("text/html; charset=UTF-8");
+ShowLexiconStatistic s = new ShowLexiconStatistic();
+s.getStatistic();
+ 
+%>
+<table BGCOLOR="#DDCCCC"  align="center"   cellpadding="10" cellspacing="1" border="2%">
+<tr align="center" BGCOLOR="#EEEEE"><th>Pos</th>
+<th>Item's </th>
+<th>exception type </th>
+</tr>
+<tr>
+<%
+int nounCount = s.getNounCount();
+int adjectiveCount = s.getAdjectiveCount();
+int  verbCount = s.getVerbCount();
+int propernameCount = s.getPropernameCount();
+int existentialCount = s.getExistentialCount();
+int interjectionCount = s.getInterjectionCount();
+int interrogativeCount = s.getInterrogativeCount();
+int modalCount = s.getModalCount();
+int numeralCount = s.getNumeralCount();
+int quantifierCount = s.getQuantifierCount();
+int pronounCount = s.getPronounCount (); 
+int prepositionCount = s.getPrepositionCount();
+int titleCount = s.getTitleCount();
+int copulaCount = s.getCopulaCount();
+int negationCount = s.getNegationCount();
+int wPrefixCount = s.getWPrefixCount();
+int adverbCount = s.getAdverbCount();
+int conjunctionCount = s.getConjunctionCount();
+int noun_exception_typeCount = s.getNoun_exception_typeCount();
+int adjective_exception_typeCount = s.getAdjective_exception_typeCount();
+int adverb_exception_typeCount = s.getAdverb_exception_typeCount();
+int interjection_exception_typeCount = s.getInterjection_exception_typeCount();
+int interrogative_exception_typeCount = s.getInterrogative_exception_typeCount();
+int modal_exception_typeCount = s.getModal_exception_typeCount();
+int numeral_exception_typeCount = s.getNumeral_exception_typeCount();
+int preposition_exception_typeCount = s.getPreposition_exception_typeCount();
+int pronoun_exception_typeCount = s.getPronoun_exception_typeCount();
+int propername_exception_typeCount = s.getPropername_exception_typeCount();
+int quantifier_exception_typeCount = s.getQuantifier_exception_typeCount();
+int verb_exception_typeCount = s.getVerb_exception_typeCount();
+int total = nounCount + adjectiveCount + adverbCount + conjunctionCount + existentialCount + interjectionCount + 
+interrogativeCount + modalCount + negationCount + numeralCount + pronounCount + propernameCount + prepositionCount +
+quantifierCount + verbCount + wPrefixCount;
+
+int exceptionTotal = adjective_exception_typeCount + adverb_exception_typeCount + interjection_exception_typeCount + 
+interrogative_exception_typeCount + modal_exception_typeCount + noun_exception_typeCount + numeral_exception_typeCount +
+pronoun_exception_typeCount + preposition_exception_typeCount + propername_exception_typeCount + quantifier_exception_typeCount + verb_exception_typeCount;
+%>
+<tr>
+<td align="center"><font size="5">adjective</font></td>
+<td align="center"><font size=5><%=adjectiveCount %></font></td>
+<td align="center"><font size=5><%=adjective_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">adverb</font></td>
+<td align="center"><font size=5><%=adverbCount %></font></td>
+<td align="center"><font size=5><%=adverb_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">conjunction</font></td>
+<td align="center"><font size=5><%=conjunctionCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">copula</font></td>
+<td align="center"><font size=5><%=copulaCount %></font></td>
+</tr>
+
+<tr>
+<td align="center"><font size="5">existential</font></td>
+<td align="center"><font size=5><%=existentialCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">interjection</font></td>
+<td align="center"><font size=5><%=interjectionCount %></font></td>
+<td align="center"><font size=5><%=interjection_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">interrogative</font></td>
+<td align="center"><font size=5><%=interrogativeCount %></font></td>
+<td align="center"><font size=5><%=interrogative_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">modal</font></td>
+<td align="center"><font size=5><%=modalCount %></font></td>
+<td align="center"><font size=5><%=modal_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">negation</font></td>
+<td align="center"><font size=5><%=negationCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">noun</font></td>
+<td align="center"><font size=5><%=nounCount %></font></td>
+<td align="center"><font size=5><%=noun_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">numeral</font></td>
+<td align="center"><font size=5><%=numeralCount %></font></td>
+<td align="center"><font size=5><%=numeral_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">pronoun</font></td>
+<td align="center"><font size=5><%=pronounCount %></font></td>
+<td align="center"><font size=5><%=pronoun_exception_typeCount %></font></td>
+</tr>
+
+<tr>
+<td align="center"><font size="5">preposition</font></td>
+<td align="center"><font size=5><%=prepositionCount %></font></td>
+<td align="center"><font size=5><%=preposition_exception_typeCount %></font></td>
+</tr>
+
+<tr>
+<td align="center"><font size="5">properame</font></td>
+<td align="center"><font size=5><%=propernameCount %></font></td>
+<td align="center"><font size=5><%=propername_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">quantifier</font></td>
+<td align="center"><font size=5><%=quantifierCount %></font></td>
+<td align="center"><font size=5><%=quantifier_exception_typeCount %></font></td>
+</tr>
+
+<tr>
+<td align="center"><font size="5">title</font></td>
+<td align="center"><font size=5><%=titleCount %></font></td>
+</tr>
+
+
+
+<tr>
+<td align="center"><font size="5">verb</font></td>
+<td align="center"><font size=5><%=verbCount %></font></td>
+<td align="center"><font size=5><%=verb_exception_typeCount %></font></td>
+</tr>
+<tr>
+<td align="center"><font size="5">wPrefix</font></td>
+<td align="center"><font size=5><%=wPrefixCount %></font></td>
+</tr>
+<tr bgcolor="white">
+<td align="center"><font size="5">total</font></td>
+<td align="center"><font size=5><%=total %></font></td>
+<td align="center"><font size=5><%=exceptionTotal %></font></td>
+</tr>
+
+<%
+
+
+s.releaseConnection();
+
+}catch(Exception e)
+{
+out.println(e.getMessage());
+}
+%>
+</table>
+
+</body></html>
+
+

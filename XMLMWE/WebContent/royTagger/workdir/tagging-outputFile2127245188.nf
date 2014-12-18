@@ -1,0 +1,2 @@
+[(PROPERNAME rpiq)]
+EOF

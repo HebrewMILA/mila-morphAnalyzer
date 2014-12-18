@@ -1,0 +1,2 @@
+[(PROPERNAME mgh)]
+EOF

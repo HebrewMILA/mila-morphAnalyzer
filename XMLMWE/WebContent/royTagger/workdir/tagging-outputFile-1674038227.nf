@@ -1,0 +1,2 @@
+[(PROPERNAME eni)][(PROPERNAME awrN)][(INTERROGATIVE mh)][(COPULA ihih)]
+EOF

@@ -1,0 +1,87 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.PronounExceptionType"
+%>
+<%
+PronounExceptionType pronounException = new PronounExceptionType();  
+if (aid != 0 && pos.equals("pronoun")) {
+	pronounException.open(aid); 
+}
+if (request.getParameter("delete_action") !=null)	{
+	if (request.getParameter("delete_action").equals("pronoun")) {
+		//Showing confirmation message
+		if (request.getParameter("confirm") != null)	{
+			int feedback = pronounException.remove();
+			if (feedback > 0)	{
+				actionDone = "remove";
+				pronounException = new PronounExceptionType();
+				removeMsg = "<font color=blue><b>הפעולה נמחקה בהצלחה</b>";
+			}
+			else	{
+				notRemoveMsg = "<font class=errorfont>הפעולה לא נמחקה</font><br>";
+			}
+			
+		}	//End of doing DELETE
+	}
+}
+if (request.getParameter("action_pos")!= null) {
+	if (request.getParameter("action_pos").equals("pronoun") && !request.getParameter("pronoun_exception_undotted").equals("")) {
+		pronounException.setUndotted(request.getParameter("pronoun_exception_undotted").trim());
+		if (request.getParameter("pronoun_exception_dotted")!= null) {
+			pronounException.setDotted(request.getParameter("pronoun_exception_dotted").trim());
+		}
+		if (request.getParameter("pronoun_exception_register")!= null) {
+			pronounException.setRegister(request.getParameter("pronoun_exception_register"));
+		}
+		
+		if (request.getParameter("pronoun_exception_spelling")!= null) {
+                        pronounException.setSpelling(request.getParameter("pronoun_exception_spelling"));
+                }
+
+
+		if (request.getParameter("pronoun_exception_person")!= null) {
+                        pronounException.setPerson(request.getParameter("pronoun_exception_person"));
+                }
+
+        	if (request.getParameter("pronoun_exception_number")!= null) {
+			pronounException.setNumber(request.getParameter("pronoun_exception_number"));
+		}
+
+	        if (request.getParameter("pronoun_exception_gender")!= null) {
+                        pronounException.setGender(request.getParameter("pronoun_exception_gender"));
+                }
+
+		 if (request.getParameter("pronoun_exception_pgn")!= null) {
+                        pronounException.setPgn(request.getParameter("pronoun_exception_pgn"));
+                }
+
+
+		
+		 if (request.getParameter("pronoun_exception_action")!= null) {
+                        pronounException.set("action", request.getParameter("pronoun_exception_action"));
+                }
+
+		if (id != 0) {	
+			if (aid == 0) {
+				actionDone = "add";
+				aid = pronounException.add(item.getID());  
+				if (aid >0) {
+					addingMsg = "<font color=blue><b>התוספה פעולה חדשה</b>";
+				}				
+			} else {	
+				if (aid != 0) {
+					int feedback = pronounException.update(); 
+					if (feedback >0) {
+						addingMsg = "<font color=blue><b>הפעולה התעדכנה בהצלחה</b>";
+					}					
+					actionDone = "update"; 
+				}
+			}	
+			pronounException.open(aid);	
+			item.open(id);
+		}	
+	}
+}
+%>

@@ -1,0 +1,188 @@
+﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	%>
+<%@ page import="lexicon.contents.exception_types.AcronymExceptionType" %>
+<div id='acronym_div_action' style="display: none;">
+	<table width='100%' border='1' RULES=NONE FRAME=BOX bordercolor='red'
+		bordercolordark='WHITE'>
+		<tr>
+			<td>פעולה:</td>
+			<td><select name='acronym_exception_action'>
+					<option value='add'
+						<%if (acronymException.getAction().equals("add"))
+				out.print("SELECTED");%>>הוספה</option>
+					<option value='replace'
+						<%if (acronymException.getAction().equals("replace"))
+				out.print("SELECTED");%>>החלפה</option>
+					<option value='remove'
+						<%if (acronymException.getAction().equals("remove"))
+				out.print("SELECTED");%>>הסרה</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>צורה לא מנוקדת:</td>
+			<td><input type='text' name='acronym_exception_undotted' size=20
+				value='<%=acronymException.getUndotted()%>'></td>
+		</tr>
+		<tr>
+			<td>צורת תעתיק:</td>
+			<td><%=acronymException.getTransliterated()%></td>
+		</tr>
+		<tr>
+			<td>צורה מנוקדת:</td>
+			<td><input type='text' name='acronym_exception_dotted' size=20
+				value='<%=acronymException.getDotted()%>'></td>
+		</tr>
+		<tr>
+			<td>משלב:</td>
+			<td><select name='acronym_exception_register'>
+					<option value='formal'
+						<%if (acronymException.getRegister().equals("formal"))
+				out.print("SELECTED");%>>תקני</option>
+					<option value='archaic'
+						<%if (acronymException.getRegister().equals("archaic"))
+				out.print("SELECTED");%>>ארכאי</option>
+					<option value='informal'
+						<%if (acronymException.getRegister().equals("informal"))
+				out.print("SELECTED");%>>תת
+						- תקני</option>
+			</select></td>
+		</tr>
+
+
+		<tr>
+			<td>כתיב:</td>
+			<td><select name='acronym_exception_spelling'>
+					<option value='standard'
+						<%if (acronymException.getSpelling().equals("standard"))
+				out.print("SELECTED");%>>תקני</option>
+					<option value='irregular'
+						<%if (acronymException.getSpelling().equals("irregular"))
+				out.print("SELECTED");%>>תת-תקני</option>
+			</select></td>
+		</tr>
+
+
+
+		<tr>
+			<td>מין:</td>
+			<td><select name='acronym_exception_gender'>
+					<option value='masculine'
+						<%if (acronymException.getGender().equals("masculine"))
+				out.print("SELECTED");%>>זכר</option>
+					<option value='feminine'
+						<%if (acronymException.getGender().equals("feminine"))
+				out.print("SELECTED");%>>נקבה</option>
+					<option value='masculine and feminine'
+						<%if (acronymException.getGender().equals("masculine and feminine"))
+				out.print("SELECTED");%>>גם
+						זכר וגם נקבה</option>
+					<option value='unspecified'
+						<%if (acronymException.getGender().equals("unspecified"))
+				out.print("SELECTED");%>>לא
+						ידוע</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>מספר:</td>
+			<td><select name='acronym_exception_number'>
+					<option value='unspecified'
+						<%if (acronymException.getNumber().equals("unspecified"))
+				out.print("SELECTED");%>>לא
+						ידוע</option>
+					<option value='singular'
+						<%if (acronymException.getNumber().equals("singular"))
+				out.print("SELECTED");%>>יחיד</option>
+					<option value='plural'
+						<%if (acronymException.getNumber().equals("plural"))
+				out.print("SELECTED");%>>רבים</option>
+			</select></td>
+		</tr>
+
+
+
+
+		<tr>
+			<td>סוג של שם פרטי( אם חלק הדיבר הוא שם פרטי):</td>
+			<td><select name='acronym_exception_properNameType'>
+					<option value='unspecified'
+						<%if (acronymException.getProperNameType().equals("unspecified"))
+				out.print("SELECTED");%>>הקטגוריה
+						אינה ידועה</option>
+
+					<option value='person'
+						<%if (acronymException.getProperNameType().equals("person"))
+				out.print("SELECTED");%>>שם
+						של אדם</option>
+					<option value='location'
+						<%if (acronymException.getProperNameType().equals("location"))
+				out.print("SELECTED");%>>שם
+						של מקום</option>
+					<option value='country'
+						<%if (acronymException.getProperNameType().equals("country"))
+				out.print("SELECTED");%>>שם
+						של ארץ</option>
+					<option value='organization'
+						<%if (acronymException.getProperNameType().equals("organization"))
+				out.print("SELECTED");%>>שם
+						של ארגון</option>
+					<option value='product'
+						<%if (acronymException.getProperNameType().equals("product"))
+				out.print("SELECTED");%>>שם
+						של מוצר</option>
+					<option value='language'
+						<%if (acronymException.getProperNameType().equals("language"))
+				out.print("SELECTED");%>>שם
+						של שפה</option>
+					<option value='symbol'
+						<%if (acronymException.getProperNameType().equals("symbol"))
+				out.print("SELECTED");%>>שם
+						של אות או תו</option>
+					<option value='dateTime'
+						<%if (acronymException.getProperNameType().equals("dateTime"))
+				out.print("SELECTED");%>>תאריך</option>
+					<option value='other'
+						<%if (acronymException.getProperNameType().equals("other"))
+				out.print("SELECTED");%>>אף
+						אחד מהאפשרויות שלעיל</option>
+			</select></td>
+		</tr>
+
+
+
+
+		<tr>
+			<td>סוג של מילת חיבור (אם חלק הדיבר הוא מילת חיבור):</td>
+			<td><select name='acronym_exception_conjunctionType'>
+					<option value='unspecified'
+						<%if (acronymException.getConjunctionType().equals("unspecified"))
+				out.print("SELECTED");%>>לא
+						ידוע</option>
+					<option value='coordinating'
+						<%if (acronymException.getConjunctionType().equals("coordinating"))
+				out.print("SELECTED");%>>מילת
+						קישור</option>
+					<option value='subordinating'
+						<%if (acronymException.getConjunctionType().equals("subordinating"))
+				out.print("SELECTED");%>>מילת
+						שיעבוד</option>
+					<option value='relativizing'
+						<%if (acronymException.getConjunctionType().equals("relativizing"))
+				out.print("SELECTED");%>>מילת
+						זיקה</option>
+			</select></td>
+		</tr>
+
+
+
+
+
+
+
+
+		<tr>
+			<td colspan=2><input type=Submit value='<%=actionFormButton%>'>
+			</td>
+		</tr>
+	</table>
+</div>

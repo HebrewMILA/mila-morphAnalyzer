@@ -1,0 +1,2 @@
+[(PROPERNAME baizw)]
+EOF

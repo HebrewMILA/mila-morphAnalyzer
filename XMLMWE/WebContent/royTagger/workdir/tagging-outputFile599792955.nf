@@ -1,0 +1,2 @@
+[(NOUN qrN)][(CM CM)][(PROPERNAME-DEF hawUM)][(CM CM)][(PROPERNAME aivlih)]
+EOF

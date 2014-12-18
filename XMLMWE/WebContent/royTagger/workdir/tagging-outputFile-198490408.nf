@@ -1,0 +1,2 @@
+[(PROPERNAME eni)][(PROPERNAME awrN)][(NOUN-DEF hmlkh)]
+EOF

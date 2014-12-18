@@ -1,0 +1,18 @@
+command: -dir /usr/local/apache-tomcat-5.5.12/webapps/XMLMWE/royTagger/workdir -rmtmp /tmp/mydir6983028120819473993XMLHMMTagger/outputFile-1751864632.nf /usr/local/apache-tomcat-5.5.12/webapps/XMLMWE/taggerLearningOutputFile/corpus.lm /usr/local/apache-tomcat-5.5.12/webapps/XMLMWE/taggerLearningOutputFile/corpus.lex.prob
+analyses file: /tmp/mydir6983028120819473993XMLHMMTagger/outputFile-1751864632.nf
+language model file: /usr/local/apache-tomcat-5.5.12/webapps/XMLMWE/taggerLearningOutputFile/corpus.lm
+Order: 3
+NBest: 1
+Output probability: no
+lexical probabilities: /usr/local/apache-tomcat-5.5.12/webapps/XMLMWE/taggerLearningOutputFile/corpus.lex.prob
+working directory: /usr/local/apache-tomcat-5.5.12/webapps/XMLMWE/royTagger/workdir
+normal run
+no evaluation
+corpus analyses used
+Retrieving counted corpus...
+no ambiguous corpus
+Creating map file...
+known morph-tag pairs 5 (50.0000006.2), unknown pairs 5 (50.0000006.2)
+low probability: -30
+normalize factor: 0.001
+Tagging sentence no: 1

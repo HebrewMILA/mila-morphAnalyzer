@@ -1,0 +1,2 @@
+[(QUANTIFIER aizh)][(INTERROGATIVE aizw)]
+EOF

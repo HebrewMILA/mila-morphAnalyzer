@@ -1,0 +1,2 @@
+[(INTERROGATIVE mh)][(PREPOSITION at)][(VERB awmrt)][(QM QM)]
+EOF

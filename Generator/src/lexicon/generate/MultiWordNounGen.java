@@ -548,8 +548,9 @@ public class MultiWordNounGen extends ItemGen {
 		//String masculineSingularConstruct="";
 		try {
 			connection = DriverManager.getConnection(
-					"jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest",
+					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest",
  					"dummy1", "health&happiness");
+ 			
 			PreparedStatement statement = null;
 			statement = connection
 					.prepareStatement("SELECT *  FROM inflections where baseTransliteratedLItem=? and PGN!= 'unspecified'  and basePos='noun'" );									  

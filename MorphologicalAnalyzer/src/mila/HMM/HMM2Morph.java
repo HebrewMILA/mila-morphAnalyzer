@@ -655,7 +655,8 @@ public class HMM2Morph {
 		boolean rt = false;
 		int morphPrefixListSize = 0;
 		int hmmPrefixListSize = 0;
-		List<String> morphPrefixList = analysis.getPrefix();
+		@SuppressWarnings("unchecked")
+		List<PrefixType> morphPrefixList = (List<PrefixType>) analysis.getPrefix();
 		if (morphPrefixList != null)
 			morphPrefixListSize = morphPrefixList.size();
 		if (hmmPrefixList != null)
@@ -1194,8 +1195,6 @@ public class HMM2Morph {
 						prefixListSize = Data
 								.getPrefixes(transliteratedproperNamePrefix);
 					} catch (Exception e) {
-						// TODO Auto-generated catch
-						// block
 						e.printStackTrace();
 					}
 					for (int prefixIndex = 0; prefixIndex < prefixListSize; prefixIndex++) {
@@ -1206,10 +1205,9 @@ public class HMM2Morph {
 						else {
 							String description = pr.getDescription();
 
-							List<List> list = null;
+							List<PrefixRec> list = null;
 							try {
-								list = Translate
-										.analyzeMixedHebEng(description);
+								list = Translate.analyzeMixedHebEng(description);
 							} catch (UnsupportedEncodingException e) {
 								System.out
 										.println("CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description="
@@ -1554,26 +1552,26 @@ public class HMM2Morph {
 			 * debuging
 			 */
 
-			List articleTypeList = collection.getArticle();
+			List<ArticleType> articleTypeList = collection.getArticle();
 			ArticleType article = (ArticleType) articleTypeList.get(0);
-			List paragraphTypeList = article.getParagraph();
+			List<ParagraphType> paragraphTypeList = article.getParagraph();
 			int paragraphTypeListSize = paragraphTypeList.size();
 			for (int paragraphIndex = 0; paragraphIndex < paragraphTypeListSize; paragraphIndex++) {
 				ParagraphType paragraph = (ParagraphType) paragraphTypeList
 						.get(paragraphIndex);
-				List sentenceTypeList = paragraph.getSentence();
+				List<SentenceType> sentenceTypeList = paragraph.getSentence();
 				int sentenceTypeListSize = sentenceTypeList.size();
 				for (int sentenceIndex = 0; sentenceIndex < sentenceTypeListSize; sentenceIndex++) {
 					SentenceType sentence = (SentenceType) sentenceTypeList
 							.get(sentenceIndex);
-					List tokenTypeList = sentence.getToken();
+					List<TokenType> tokenTypeList = sentence.getToken();
 					int tokenTypeListSize = tokenTypeList.size();
 					for (int tokenIndex = 0; tokenIndex < tokenTypeListSize; tokenIndex++) {
 						System.out
 								.println("Token #################################");
 						TokenType token = (TokenType) tokenTypeList
 								.get(tokenIndex);
-						List analysisTypeList = token.getAnalysis();
+						List<AnalysisType> analysisTypeList = token.getAnalysis();
 						int analysisTypeListSize = analysisTypeList.size();
 						for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
 							AnalysisType analysis = (AnalysisType) analysisTypeList
@@ -1652,11 +1650,11 @@ public class HMM2Morph {
 	// -----------------------------------------------------------------------------------------------------------------
 	public Corpus parseXML(final JAXBContext jc, final InputStream in)
 			throws Exception {
-		List articleTypeList;
-		List paragraphTypeList;
-		List sentenceTypeList;
-		List tokenTypeList;
-		List analysisTypeList;
+		List<ArticleType> articleTypeList;
+		List<ParagraphType> paragraphTypeList;
+		List<SentenceType> sentenceTypeList;
+		List<TokenType> tokenTypeList;
+		List<AnalysisType> analysisTypeList;
 		Corpus collection = null;
 		String hmmSentence = "";
 		Unmarshaller unmarshaller = jc.createUnmarshaller();
@@ -1671,33 +1669,34 @@ public class HMM2Morph {
 		// Documents\\lexicon\\diffTests\\dprefixes.data");
 		// Data.webFlag = true;
 
-		paragraphTypeList = article.getParagraph();
+		paragraphTypeList = (List<ParagraphType>) article.getParagraph();
 		int paragraphTypeListSize = paragraphTypeList.size();
 		for (int paragraphIndex = 0; paragraphIndex < paragraphTypeListSize; paragraphIndex++) {
-
 			ParagraphType paragraph = (ParagraphType) paragraphTypeList
 					.get(paragraphIndex);
-			sentenceTypeList = paragraph.getSentence();
+			sentenceTypeList = (List<SentenceType>)paragraph.getSentence();
 			int sentenceTypeListSize = sentenceTypeList.size();
 			for (int sentenceIndex = 0; sentenceIndex < sentenceTypeListSize; sentenceIndex++) {
 				// ///////////////////////////////////////////
 				hmmSentence = bi.readLine();
-
 				// ///////////////////////////////////////////
 				SentenceType sentence = (SentenceType) sentenceTypeList
 						.get(sentenceIndex);
-				tokenTypeList = sentence.getToken();
+				tokenTypeList = (List<TokenType>) sentence.getToken();
 				int tokenTypeListSize = tokenTypeList.size();
-				StringTokenizer hmmstSentence = new StringTokenizer(
-						hmmSentence, "][");
+				if (hmmSentence==null){
+					//System.out.println("1111111111 hmmSentence is null");
+					continue;
+				}
+				StringTokenizer hmmstSentence = new StringTokenizer(hmmSentence, "][");
 				for (int tokenIndex = 0; tokenIndex < tokenTypeListSize; tokenIndex++) {
 					try {
 						MWECounter = 0.0;
-						TokenType token = (TokenType) tokenTypeList
-								.get(tokenIndex);
+						TokenType token = (TokenType) tokenTypeList.get(tokenIndex);
 						morphSurface = token.getSurface();
 						// System.out.println("morphSurface=" + morphSurface);
-
+						if (!hmmstSentence.hasMoreElements())
+							continue;
 						String hmmToken = hmmstSentence.nextToken();
 						// System.out.println("hmmSentence ="+hmmSentence);
 						// System.out.println("hmmToken ="+hmmToken);
@@ -1942,17 +1941,18 @@ public class HMM2Morph {
 	 *            printing it
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public Corpus parseXML(final JAXBContext jc, final InputStream in,
 			final String dprefixesFile, String taggedFilePath) {
 		// System.out.println("(F) HMM2MORPH.parseXML Perl program output file "+
 		// taggedFilePath);
 		String hmmSentence = "";
 		Corpus collection = null;
-		List articleTypeList;
-		List paragraphTypeList;
-		List sentenceTypeList;
-		List tokenTypeList;
-		List analysisTypeList;
+		List<AnalysisType> articleTypeList;
+		List<ParagraphType> paragraphTypeList;
+		List<SentenceType> sentenceTypeList;
+		List<TokenType> tokenTypeList;
+		List<AnalysisType> analysisTypeList;
 
 		Unmarshaller unmarshaller = null;
 		try {
@@ -1973,13 +1973,13 @@ public class HMM2Morph {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		articleTypeList = collection.getArticle();
+		articleTypeList = (List<AnalysisType>)collection.getArticle();
 		ArticleType article = (ArticleType) articleTypeList.get(0);
 		String morphSurface = "";
 		String hmmPos = "";
 		Data.init(dprefixesFile);
 
-		paragraphTypeList = article.getParagraph();
+		paragraphTypeList = (List<ParagraphType>)article.getParagraph();
 		int paragraphTypeListSize = paragraphTypeList.size();
 		for (int paragraphIndex = 0; paragraphIndex < paragraphTypeListSize; paragraphIndex++) {
 			ParagraphType paragraph = (ParagraphType) paragraphTypeList
@@ -1993,10 +1993,8 @@ public class HMM2Morph {
 					// System.out.println("(F) HMM2Morph.parseXML() hmmSentence = "+
 					// hmmSentence);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-
 				// ///////////////////////////////////////////
 				SentenceType sentence = (SentenceType) sentenceTypeList
 						.get(sentenceIndex);
@@ -2288,16 +2286,17 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private boolean prefixSpecialCases(final List tokenList,
+	private boolean prefixSpecialCases(final List<TokenType> tokenList,
 			final int tokenTypeListSize, final int tokenIndex,
 			AnalysisType analysis, final int analysisIndex,
-			final List hmmPrefixList, final String hmmPos) {
+			final ArrayList<String> hmmPrefixList, final String hmmPos) {
 		boolean rt = false;
 		TokenType nextToken = null;
 		int nextTokenIndex = tokenIndex + 1;
 		if (nextTokenIndex < tokenTypeListSize) {
 			nextToken = (TokenType) tokenList.get(nextTokenIndex);
-			List nextTokenAnalysisTypeList = nextToken.getAnalysis();
+			@SuppressWarnings("unchecked")
+			List<AnalysisType> nextTokenAnalysisTypeList = (List<AnalysisType>)nextToken.getAnalysis();
 			int nextTokenAnalysisTypeListSize = nextTokenAnalysisTypeList
 					.size();
 			for (int nextTokenAnalysisIndex = 0; nextTokenAnalysisIndex < nextTokenAnalysisTypeListSize; nextTokenAnalysisIndex++) {
@@ -2356,7 +2355,7 @@ public class HMM2Morph {
 		try {
 			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
 			in = new ByteArrayInputStream(XMLMorphStr.getBytes("UTF-8"));
-			readFile(taggedFilePath); // read file into class varible bi
+			readFile(taggedFilePath); // read file into class variable bi
 			// System.out.println("(F) HMM2Morph:process reading file - "+taggedFilePath);
 			// System.out.println("(F) HMM2Morph:process XMLMorphStr - "+XMLMorphStr);
 			Corpus collection = parseXML(jc, in, dprefixesFile, taggedFilePath);
@@ -2407,7 +2406,8 @@ public class HMM2Morph {
 			bi = new BufferedReader(new InputStreamReader(new FileInputStream(
 					inputFile)));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}catch (Exception e){
 			e.printStackTrace();
 		}
 	}
@@ -2429,6 +2429,12 @@ public class HMM2Morph {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally{
+			try{
+				bi.close();
+			}catch(IOException e){
+				e.printStackTrace();
+			}
 		}
 		return morphAnalysis.toString();
 	}
@@ -2442,7 +2448,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private int setMWandZeroOtherAnalysis(List analysisTypeList,
+	private int setMWandZeroOtherAnalysis(List<AnalysisType> analysisTypeList,
 			int analysisTypeListSize) {
 		int scoreCounter = 0;
 		for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
@@ -2458,7 +2464,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private void setZeroToAllAnalysis(List analysisTypeList,
+	private void setZeroToAllAnalysis(List<AnalysisType> analysisTypeList,
 			int analysisTypeListSize) {
 		for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
 			AnalysisType analysis = (AnalysisType) analysisTypeList

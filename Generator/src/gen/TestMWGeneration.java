@@ -15,8 +15,9 @@ public class TestMWGeneration
 			Connection connection = null;
 			PreparedStatement statement = null;
 
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("org.mariadb.jdbc.Driver").newInstance();
 			connection = DriverManager.getConnection("jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconTest","maital", "AnaXAd3Ke@aJ8F");
+//			connection = DriverManager.getConnection("jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_lexiconTest","maital", "AnaXAd3Ke@aJ8F");
 			statement = connection.prepareStatement("delete from mweinflections");
 			statement.execute();
 			statement = connection.prepareStatement("delete from mwe1");
@@ -43,8 +44,9 @@ public class TestMWGeneration
 			Connection connection = null;
 			PreparedStatement statement = null;
 
-			Class.forName("com.mysql.jdbc.Driver").newInstance();		
+			Class.forName("org.mariadb.jdbc.Driver").newInstance();		
 			connection = DriverManager.getConnection("jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconTest","maital", "AnaXAd3Ke@aJ8F");
+//			connection = DriverManager.getConnection("jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_lexiconTest","maital", "AnaXAd3Ke@aJ8F");
 			statement = connection.prepareStatement("SELECT * FROM mwe2 WHERE lexiconId= ?");
 			statement.setObject(1, lexiconId);
 			rs = statement.executeQuery();
@@ -111,8 +113,9 @@ public class TestMWGeneration
 			Connection connection = null;
 			PreparedStatement statement = null;
 
-			Class.forName("com.mysql.jdbc.Driver").newInstance();		
+			Class.forName("org.mariadb.jdbc.Driver").newInstance();		
 			connection = DriverManager.getConnection("jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconTest","maital", "AnaXAd3Ke@aJ8F");
+//			connection = DriverManager.getConnection("jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_lexiconTest","maital", "AnaXAd3Ke@aJ8F");
 			statement = connection.prepareStatement("SELECT * FROM mwe3 WHERE lexiconId= ?");
 			statement.setObject(1, lexiconId);
 			rs = statement.executeQuery();
@@ -178,8 +181,9 @@ public class TestMWGeneration
 			Connection connection = null;
 			PreparedStatement statement = null;
 
-			Class.forName("com.mysql.jdbc.Driver").newInstance();	
+			Class.forName("org.mariadb.jdbc.Driver").newInstance();	
 			connection = DriverManager.getConnection("jdbc:mysql://yeda.cs.technion.ac.il:3306/lexiconTest","maital", "AnaXAd3Ke@aJ8F");
+//			connection = DriverManager.getConnection("jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_lexiconTest","maital", "AnaXAd3Ke@aJ8F");
 			statement = connection.prepareStatement("SELECT * FROM mwe4 WHERE lexiconId= ?");
 			statement.setObject(1, lexiconId);
 			rs = statement.executeQuery();

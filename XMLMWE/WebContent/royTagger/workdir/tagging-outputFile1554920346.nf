@@ -1,0 +1,2 @@
+[(COPULA lhiwtw)]
+EOF

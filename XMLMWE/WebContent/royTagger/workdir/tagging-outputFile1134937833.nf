@@ -1,0 +1,2 @@
+[(PROPERNAME bgiN)][(VERB amr)][(PROPERNAME la.)][(PROPERNAME erwN)][(DOT DOT)]
+EOF

@@ -1,0 +1,2 @@
+[(ADJECTIVE-CONST rxb)][(NOUN lb)]
+EOF

@@ -56,8 +56,9 @@ public class VerbGen extends ItemGen
 		root = item.getVerb().getRoot();
 		//root = root.replaceAll("&#39;", "'");
 		root = Translate.Heb2Eng(root);
-		
+		System.out.println("1111111111111:"+root);
 		inflectedPattern = item.getVerb().getInflectionPattern();
+		System.out.println("1111111111111:"+inflectedPattern);
 		intInflectedPattern = Integer.parseInt(inflectedPattern);
 		register = item.getRegister();
 		spelling = item.getSpelling();
@@ -95,10 +96,10 @@ public class VerbGen extends ItemGen
 		vgIP.setValence(valence);
 		vgIP.setDottedLexiconItem(dottedLexiconItem);
 		vgIP.setInflectInfinitivel(inflectInfinitivel);
-		vgIP.setInflectInfinitive(inflectInfinitive);
+		//vgIP.setInflectInfinitive(inflectInfinitive);
 		vgIP.setInflectInfinitiveb(inflectInfinitiveb);
 		vgIP.setInflectBeinoni(inflectBeinoni);
-		vgIP.setInflectInfinitiveIndependent(inflectInfinitiveIndependent);
+		//vgIP.setInflectInfinitiveIndependent(inflectInfinitiveIndependent);
 		vgIP.setInflectBeinoniPossessive(inflectBeinoniPossessive);
 		vgIP.setInflectBeinoniConstruct(inflectBeinoniConstruct);
 		vgIP.setInflectPast(inflectPast);
@@ -1008,6 +1009,9 @@ public class VerbGen extends ItemGen
 	{
 		setGenInflection();
 		int len = root.length();
+		if (len<3){
+			int i=0;
+		}
 		if ((root.charAt(len - 1) == 'h') || (root.charAt(len - 1) == 'i')) 
 		{
 			//vgIP.generatePresent("-,m,-,-", "-,h,-,-", "-,w,-,-", 0, 1, 1,
@@ -1185,6 +1189,9 @@ public class VerbGen extends ItemGen
 		if (root.indexOf("i") != -1)
 			vgIP.setSpelling(IRREGULAR_SPELLING);
 		int len = root.length();
+		if (len<3){
+			int i=0;
+		}
 		//הפועל התרוקן הוא יצא דופן - צריך להטות אותו כמקרה פרטי
 		if (root.equals("rqn")) 
 		{

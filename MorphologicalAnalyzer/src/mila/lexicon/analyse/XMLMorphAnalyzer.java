@@ -151,7 +151,7 @@ public class XMLMorphAnalyzer implements Constants {
 		default:
 			System.out.println("wrong parameters number");
 			System.out
-					.println("java -Xmx1024m -jar morphAnalyzer false <input File /directory> <output file / directory> dinflections.data dprefixes.data gimaria.data [-v]");
+					.println("java -Xmx1G -jar morphAnalyzer false <input File /directory> <output file / directory> dinflections.data dprefixes.data gimaria.data [-v]");
 
 		}
 

@@ -1,0 +1,2 @@
+[(CONJUNCTION mpni)][(PREFIX e)(NOUN-DEF hlkt)]
+EOF

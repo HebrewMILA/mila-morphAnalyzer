@@ -1,0 +1,2 @@
+[(PROPERNAME beainw)]
+EOF

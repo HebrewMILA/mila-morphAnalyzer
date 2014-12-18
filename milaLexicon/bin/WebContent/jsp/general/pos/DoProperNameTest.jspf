@@ -1,0 +1,112 @@
+﻿<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.pos.ProperNameTestLexiconType"
+%>
+<%
+ProperNameTestLexiconType properNameTest = new ProperNameTestLexiconType();
+if (!newItem && item.getProperNameTest() != null && id != 0) {
+	properNameTest.open(id);
+	changeGroup = properNameTest.getContents("propernameTest_exception_type", "id", id);
+}  
+if (request.getParameter("pos")!= null) {
+	if (request.getParameter("pos").equals("properNameTest")) {
+		if (request.getParameter("properNameTest_gender")!= null) {
+			properNameTest.setGender(request.getParameter("properNameTest_gender"));
+		}
+		if (request.getParameter("properNameTest_number")!= null) {
+			properNameTest.setNumber(request.getParameter("properNameTest_number"));
+		}
+		if (request.getParameter("properNameTest_type")!= null) {
+			properNameTest.setType(request.getParameter("properNameTest_type"));
+		}
+		if (request.getParameter("properNameTest_definiteness")!= null) {
+			properNameTest.setDefiniteness(request.getParameter("properNameTest_definiteness"));
+		}
+		if (request.getParameter("properNameTest_direction")!= null) {
+			properNameTest.setDirection(request.getParameter("properNameTest_direction"));
+		}
+		if (newItem) {
+			properNameTest.add(item.getID());
+		} else {
+			properNameTest.update();
+		}
+		item.open(item.getID());
+		properNameTest.open(item.getID());
+	}
+}
+%>
+<div id='properNameTest_div' style="display:none;">
+<table>
+	<tr>
+		<td>
+			מין:
+		</td>
+		<td>
+			<select name='properNameTest_gender'>
+				<option value='masculine' <%if (properNameTest.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+				<option value='feminine' <%if (properNameTest.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+				<option value='masculine and feminine' <%if (properNameTest.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+				<option value='irrelevant' <%if (properNameTest.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+				<option value='unspecified' <%if (properNameTest.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option> 								
+			</select>				
+		</td> 
+	</tr>	
+	<tr>
+		<td>
+			מספר:
+		</td>
+		<td>
+			<select name='properNameTest_number'>
+				<option value='singular' <%if (properNameTest.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+				<option value='plural' <%if (properNameTest.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+				<option value='dual' <%if (properNameTest.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+				<option value='dual and plural' <%if (properNameTest.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+				<option value='singular and plural' <%if (properNameTest.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+				<option value='unspecified' <%if (properNameTest.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>									
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			סוג:
+		</td>
+		<td>
+			<select name='properNameTest_type'>
+				<option value='person' <%if (properNameTest.getType().equals("person")) out.print("SELECTED");%>>שם של אדם</option>
+				<option value='location' <%if (properNameTest.getType().equals("location")) out.print("SELECTED");%>>שם של מקום</option>
+				<option value='country' <%if (properNameTest.getType().equals("country")) out.print("SELECTED");%>>שם של ארץ</option>
+				<option value='organization' <%if (properNameTest.getType().equals("organization")) out.print("SELECTED");%>>שם של ארגון</option>
+				<option value='product' <%if (properNameTest.getType().equals("product")) out.print("SELECTED");%>>שם של מוצר</option>
+				<option value='dateTime' <%if (properNameTest.getType().equals("dateTime")) out.print("SELECTED");%>>תאריך</option>
+				<option value='other' <%if (properNameTest.getType().equals("other")) out.print("SELECTED");%>>אף אחד מהאפשרויות שלעיל</option>				
+				<option value='unspecified' <%if (properNameTest.getType().equals("unspecified")) out.print("SELECTED");%>>הקטגוריה אינה ידועה</option>
+			</select>				
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			האם מקבל ה' הידיעה?  
+		</td>
+		<td>
+			<select name='properNameTest_definiteness'>
+				<option value='optional' <%if (properNameTest.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>
+				<option value='prohibited' <%if (properNameTest.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>
+				<option value='required' <%if (properNameTest.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option> 			
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td>
+			האם מכיל ה' המגמה?  
+		</td>
+		<td>
+			<select name='properNameTest_direction'>
+				<option value='unspecified' <%if (properNameTest.getDirection().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				<option value='true' <%if (properNameTest.getDirection().equals("true")) out.print("SELECTED");%>>כן</option>
+				<option value='false' <%if (properNameTest.getDirection().equals("false")) out.print("SELECTED");%>>לא</option> 			
+			</select>				
+		</td>
+	</tr>				
+</table>
+</div>

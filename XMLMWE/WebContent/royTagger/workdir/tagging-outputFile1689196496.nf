@@ -1,0 +1,2 @@
+[(PROPERNAME ahrwN)][(VERB gr)][(PREFIX b)	(PROPERNAME irweliM)]
+EOF

@@ -1,0 +1,2 @@
+[(NEGATION aiN)][(EXISTENTIAL ie)]
+EOF

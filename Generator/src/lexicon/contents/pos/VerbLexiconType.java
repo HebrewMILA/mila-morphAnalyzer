@@ -188,7 +188,7 @@ public class VerbLexiconType extends Content implements lexicon.jaxb.VerbLexicon
 		sql += ", "+(isInflectBeinoniPossessive()?1:0);
 		sql += ", "+(isInflectInfinitiveIndependent()?1:0);
 		sql += ")";
-		System.out.println(sql);
+//		System.out.println(sql);
 		int feedback =execute(sql);
 		id = getCurrentID(getTableName(), getIDName()); 
 		addActions(id);

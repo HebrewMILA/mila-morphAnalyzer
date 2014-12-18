@@ -87,7 +87,7 @@ public class MultiWordNounAdjectiveLexiconType extends Content implements lexico
 		sql += ", '" + getPluralMaleNoun() + "'";
 		sql += ", '" + getPluralMaleAdjective() + "'";
 		sql += ")";
-		System.out.println("this is the sql" + sql);
+		//System.out.println("this is the sql" + sql);
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		addActions(id);

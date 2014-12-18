@@ -1,10 +1,15 @@
 package mila.tools;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.CharBuffer;
 import java.nio.MappedByteBuffer;
@@ -21,10 +26,9 @@ import mila.HMM.MorphMult2TaggerFormat;
 import mila.lexicon.analyse.Data;
 
 public class OnlyTagger implements Tool {
-	private String hmmTaggerDir = System.getProperty("user.dir")
-			+ File.separator;
+	private String hmmTaggerDir = System.getProperty("user.dir");
 	private String royTaggerDir = hmmTaggerDir + File.separator + "royTagger";
-	private String taggerLOFDir = hmmTaggerDir + File.separator;
+	private String taggerLOFDir = hmmTaggerDir;
 	private String dprefixesFile = "dataFiles/dprefixes.data";
 
 	public static void main(String args[]) throws IOException, JAXBException {
@@ -70,7 +74,6 @@ public class OnlyTagger implements Tool {
 				.append(File.separator).append("workdir")
 				.append(File.separator).append("tagging-").append(fileName);
 		String taggedFile = sb.toString();
-
 		PrintWriter pw = new PrintWriter(new FileOutputStream(output));
 
 		System.err.println("Start output to file");
@@ -93,6 +96,10 @@ public class OnlyTagger implements Tool {
 		System.err.println("Running command: " + cmdline);
 
 		Process proc = Runtime.getRuntime().exec(cmdline);
+		
+		
+		
+		
 		boolean flag = true;
 		int rc = -1;
 		while (flag) {

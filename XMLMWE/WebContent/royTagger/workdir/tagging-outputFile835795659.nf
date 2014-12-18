@@ -1,0 +1,2 @@
+[(QUANTIFIER di)]
+EOF

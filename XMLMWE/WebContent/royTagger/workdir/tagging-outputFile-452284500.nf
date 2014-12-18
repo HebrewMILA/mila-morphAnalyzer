@@ -1,0 +1,2 @@
+[(PRONOUN ani)][(VERB mkir)][(PREPOSITION awtw)][(PREFIX m)	(PREFIX k)(NUMERAL xmieh)][(NOUN xwdeiM)][(PREPOSITION yd)][(PREFIX m)	(PREFIX k)(NOUN-POSSESSIVE enh)]
+EOF

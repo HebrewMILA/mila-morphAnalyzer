@@ -1,0 +1,145 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.ProperNameExceptionType"
+%>
+<div id='properName_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='properName_exception_action'>
+				<option value='add' <%if (properNameException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (properNameException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (properNameException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='properName_exception_undotted' size=20 value='<%=properNameException.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=properNameException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='properName_exception_dotted' size=20 value='<%=properNameException.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='properName_exception_register'>
+				<option value='formal' <%if (properNameException.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (properNameException.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (properNameException.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+			</select>				
+		</td>
+	</tr>	
+
+	  <tr>
+                <td>
+                        כתיב:
+                </td>
+                <td>
+                        <select name='properName_exception_spelling'>
+                                <option value='standard' <%if (properNameException.getSpelling().equals("standard")) out.print("SELECTED");
+%>>תקני</option>
+                                <option value='irregular' <%if (properNameException.getSpelling().equals("irregular")) out.print("SELECTED"
+);%>>תת-תקני</option>
+                        </select>
+                </td>
+        </tr>
+
+
+	 <tr>
+                <td>
+                        מין:
+                </td>
+                <td>
+                        <select name='properName_exception_gender'>
+                                <option value='masculine' <%if (properNameException.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (properNameException.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+                                <option value='masculine and feminine' <%if (properNameException.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+                                <option value='unspecified' <%if (properNameException.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+ <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='properName_exception_number'>
+                                <option value='singular' <%if (properNameException.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (properNameException.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                                <option value='dual' <%if (properNameException.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+                                <option value='dual and plural' <%if (properNameException.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+                                <option value='singular and plural' <%if (properNameException.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+                                <option value='unspecified' <%if (properNameException.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>                                                                    
+                        </select>
+                </td>
+        </tr>
+ <tr>                <td>
+                        סוג:                </td>
+                <td>                        <select name='properName_exception_type'>                                
+					<option value='person' <%if (properNameException.getType().equals("person")) out.print("SELECTED");%>>שם של אדם</option> 
+                               <option value='location' <%if (properNameException.getType().equals("location")) 
+				out.print("SELECTED");%>>שם של מקום</option> 
+				
+                               <option value='town' <%if (properNameException.getType().equals("town"))                                out.print("SELECTED");%>>שם של יישוב</option>
+
+				   <option value='country' <%if (properNameException.getType().equals("country")) 
+                                out.print("SELECTED");%>>שם של ארץ</option> 
+				 <option value='language' <%if (properNameException.getType().equals("language")) out.print("SELECTED");%>>שם של שפה</option>
+                                <option value='symbol' <%if (properNameException.getType().equals("symbol")) out.print("SELECTED");%>>שם של אות או תו</option>
+                                <!--option value='coin' <%if (properNameException.getType().equals("coin")) out.print("SELECTED");%>>שם של מטבע</option-->
+
+                              <option value='organization' <%if (properNameException.getType().equals("organization")) out.print("SELECTED");%>>שם של ארגון</option>                                <option value='product' <%if (properNameException.getType().equals("product")) out.print("SELECTED");%>>שם של מוצר</option>                                <option value='dateTime' <%if (properNameException.getType().equals("dateTime")) out.print("SELECTED");%>>תאריך</option>                                <option value='other' <%if (properNameException.getType().equals("other")) out.print("SELECTED");%>>אף אחד מהאפשרויות שלעיל</option>                                <option value='unspecified' <%if (properNameException.getType().equals("unspecified")) out.print("SELECTED");%>>הקטגוריה אינה ידועה</option>                        </select>
+                </td>        </tr>
+
+ <tr>                <td>
+                        האם מקבל ה' הידיעה?                </td>
+                <td>                        <select name='properName_exception_definiteness'>                                <option value='optional' <%if (properNameException.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>                                <option value='prohibited' <%if (properNameException.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>                                <option value='required' <%if (properNameException.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option>
+                        </select>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        האם מכיל ה' המגמה?
+                </td>                <td>
+                        <select name='properName_exception_direction'>                                <option value='unspecified' <%if (properNameException.getDirection().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>                                <option value='true' <%if (properNameException.getDirection().equals("true")) out.print("SELECTED");%>>כן</option>                                <option value='false' <%if (properNameException.getDirection().equals("false")) out.print("SELECTED");%>>לא</option>                        </select>
+                </td>        </tr>
+	
+
+
+
+
+
+
+	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>		 			
+</table>
+</div>

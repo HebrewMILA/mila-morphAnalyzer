@@ -1,0 +1,2 @@
+[(PREPOSITION aitK)]
+EOF

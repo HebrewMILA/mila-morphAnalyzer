@@ -1,0 +1,2 @@
+[(PROPERNAME qriit)]
+EOF

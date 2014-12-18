@@ -1,6 +1,7 @@
 package mila.lexicon.dbUtils;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -39,73 +40,36 @@ public class Connected {
 	private static ConnectionPool pool = null;
 	static {
 		try {
-			// if (pc)
-			// properties.load(new FileInputStream(
-			// "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\"
-			// + "lexicon.properties"));
-			// // else
-			// // properties.load(new FileInputStream(
-			// //
-			// "/usr/local/apache-tomcat-5.5.12/webapps/MWXMLMorphlogicalAnalyzer/generator.properties"));
-			// // properties.load(new FileInputStream(
-			// // "/usr/local/apache-tomcat-5.5.12/webapps/webViewAnalysis/"
-			// // + "generator.properties"));
-			// // else
-			// properties.load(new FileInputStream("./generator.properties"));
-			mysqlUser = properties.getProperty("mysqlUser");
-			// System.out.println("mysqlUser =" + mysqlUser);
-			mysqlPassword = properties.getProperty("mysqlPassword");
-			// System.out.println("mysqlPassword =" + mysqlPassword);
-			myurl = properties.getProperty("url");
-			// System.out.println("myurl =" + myurl );
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000, myurl,
+			Driver driver = (Driver) Class.forName("org.mariadb.jdbc.Driver").newInstance();
+			DriverManager.registerDriver(driver);
+			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000, myurl,
 			// mysqlUser, mysqlPassword);
-			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000,
+			
+			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/generator",
 			// "dummy1", "health&happiness");
-			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000,
+			
+			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 			// "jdbc:mysql://localhost/lexicon_06_08_09",
 			// "root", "dalia");
 
-			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000,
+			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest",
 			// "tommy", "tammy2010!)");
-			pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000,
-					"jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest",
+			pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
+					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest",
 					"morphuser", "qetu");
 
-			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 180000,
+			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/mwGenerator",
 			// "gili", "dr7R2c8edru");
-			// } catch (FileNotFoundException e) {
-			// System.out.println("Error: fileNotFound: " + "./*.properties");
-			// e.printStackTrace();
-			// System.exit(0);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);
 		}
 	}
 
-	// properties mysql
-	// private static String url = myurl;
-	// pc mysql
-	// private static String url = "jdbc:mysql://localhost:3306/lexicon3";
-	// unix mysql
-	// private static String url =
-	// "jdbc:mysql://yeda.cs.technion.ac.il:3306/lexicon3";
-
-	// properties mysql
-	// private static final ConnectionPool pool = new
-	// ConnectionPool("mysqlLexiocn",10, 20, 180000, myurl, mysqlUser,
-	// mysqlPassword);
-	// pc - mysql
-	// private static final ConnectionPool pool = new
-	// ConnectionPool("mysqlLexiocn",10, 20, 180000, url, "root", "dalia");
-	// unix - mysql
-	// private static final ConnectionPool pool = new
-	// ConnectionPool("mysqlLexiocn",10, 20, 180000, url, "root", "admin");
 	public static DataSource cpds;
 	/**
 	 * A Connection object used by the object and it's extentions in order to
@@ -141,6 +105,7 @@ public class Connected {
 			return 0;
 		int feedback = 0;
 		try {
+			System.out.println("Preparing connection for query: "+sql);
 			prepareConnection();
 			stmt = conn.createStatement();
 			feedback = stmt.executeUpdate(sql);
@@ -148,6 +113,7 @@ public class Connected {
 			System.out.println(sql);
 			E.printStackTrace();
 		} finally {
+			System.out.println("Releasing connection for query: "+sql);
 			releaseConnection();
 		}
 		return feedback;
@@ -182,7 +148,6 @@ public class Connected {
 		 * System.out.println("Exception in creating the DataSource!");
 		 * ne.printStackTrace(); } } conn = getCPDS().getConnection();
 		 */
-		Connection con = null;
 		long timeout = 2000; // 2 second timeout
 		conn = pool.getConnection(timeout);
 	}

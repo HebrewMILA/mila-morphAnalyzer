@@ -1,0 +1,2 @@
+[(CONJUNCTION aM)][(PROPERNAME chUl)][(VERB iica)][(PREFIX l)(NOUN mtqph)][(PREFIX e)	(PREFIX k)(PRONOUN zw)][(CM CM)][(VERB tiptx)][(NOUN-CONST xzit)][(PREFIX b)(NOUN-POSSESSIVE gbwlh)][(ADJECTIVE-DEF hcpwni)][(PREPOSITION el)][(PROPERNAME ieral)][(PREPOSITION yM)][(PROPERNAME xizballh)][(PREFIX w)	(PROPERNAME swrih)][(DOT DOT)]
+EOF

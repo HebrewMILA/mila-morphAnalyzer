@@ -1,0 +1,2 @@
+[(NOUN-CONST bti)][(NOUN-POSSESSIVE xwliM)][(PROPERNAME siywdiim..)]
+EOF

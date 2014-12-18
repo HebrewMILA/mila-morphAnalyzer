@@ -1,0 +1,92 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.MultiWordNounExceptionType"
+%>
+<%
+MultiWordNounExceptionType multiWordNounException = new MultiWordNounExceptionType();  
+if (aid != 0 && pos.equals("multiWordNoun")) {
+	multiWordNounException.open(aid); 
+}
+if (request.getParameter("delete_action") !=null)	{
+	if (request.getParameter("delete_action").equals("multiWordNoun")) {
+		//Showing confirmation message
+		if (request.getParameter("confirm") != null)	{
+			int feedback = multiWordNounException.remove();
+			if (feedback > 0)	{
+				actionDone = "remove";
+				multiWordNounException = new MultiWordNounExceptionType();
+				removeMsg = "<font color=blue><b>הפעולה נמחקה בהצלחה</b>";
+			}
+			else	{
+				notRemoveMsg = "<font class=errorfont>הפעולה לא נמחקה</font><br>";
+			}
+			
+		}	//End of doing DELETE
+	}
+}
+if (request.getParameter("action_pos")!= null) {
+	if (request.getParameter("action_pos").equals("multiWordNoun") && !request.getParameter("multiWordNoun_exception_undotted").equals("")) {
+		multiWordNounException.setUndotted(request.getParameter("multiWordNoun_exception_undotted").trim());
+		if (request.getParameter("multiWordNoun_exception_dotted")!= null) {
+			multiWordNounException.setDotted(request.getParameter("multiWordNoun_exception_dotted").trim());
+		}
+		if (request.getParameter("multiWordNoun_exception_register")!= null) {
+			multiWordNounException.setRegister(request.getParameter("multiWordNoun_exception_register"));
+		}
+		if (request.getParameter("multiWordNoun_exception_spelling")!= null) {
+                        multiWordNounException.setSpelling(request.getParameter("multiWordNoun_exception_spelling"));
+                }
+
+		if (request.getParameter("multiWordNoun_exception_gender")!= null) {
+			multiWordNounException.setGender(request.getParameter("multiWordNoun_exception_gender"));
+		}
+		if (request.getParameter("multiWordNoun_exception_number")!= null) {
+			multiWordNounException.setNumber(request.getParameter("multiWordNoun_exception_number"));
+		}
+		if (request.getParameter("multiWordNoun_exception_feminine")!= null) {
+			multiWordNounException.setFeminine(request.getParameter("multiWordNoun_exception_feminine"));
+		}
+		if (request.getParameter("multiWordNoun_exception_plural")!= null) {
+			multiWordNounException.setPlural(request.getParameter("multiWordNoun_exception_plural"));
+		}
+		 if (request.getParameter("multiWordNoun_exception_definiteness")!= null) {
+                        multiWordNounException.setDefiniteness(request.getParameter("multiWordNoun_exception_definiteness"));
+                }
+		
+		if (request.getParameter("multiWordNoun_exception_possessive")!= null) {
+                        multiWordNounException.setPossessive(request.getParameter("multiWordNoun_exception_possessive"));
+                }
+
+		if (request.getParameter("multiWordNoun_exception_inflectPossessiveS")!= null) {
+			multiWordNounException.setInflectPossessiveS(request.getParameter("multiWordNoun_exception_inflectPossessiveS").equals("1"));
+		}
+		if (request.getParameter("multiWordNoun_exception_inflectPossessiveP")!= null) {
+			multiWordNounException.setInflectPossessiveP(request.getParameter("multiWordNoun_exception_inflectPossessiveP").equals("1"));
+		}
+		if (request.getParameter("multiWordNoun_exception_action")!= null) {
+			multiWordNounException.set("action", request.getParameter("multiWordNoun_exception_action"));
+		}	
+		if (id != 0) {	
+			if (aid == 0) {
+				aid = multiWordNounException.add(item.getID()); 
+				if (aid >0) {
+					addingMsg = "<font color=blue><b>התוספה פעולה חדשה</b>";
+				}				 
+				actionDone = "add";
+			} else {	
+				if (aid != 0) {
+					int feedback = multiWordNounException.update(); 
+					if (feedback >0) {
+						addingMsg = "<font color=blue><b>הפעולה התעדכנה בהצלחה</b>";
+					}					
+					actionDone = "update";
+				}
+			}	
+			multiWordNounException.open(aid);
+			item.open(id);	
+		}			
+	}
+}
+%>

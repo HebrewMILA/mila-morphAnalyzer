@@ -560,10 +560,8 @@ public class PopulateMWE extends ConnectedGenerator {
 
 			System.out.println(sqlSelect);
 			rs = getData(sqlSelect);
-
 			while (rs.next())
 				checkedId = rs.getString("aid");
-
 			releaseConnection();
 			if (checkedId.equals("")) {
 				if (len == 0)

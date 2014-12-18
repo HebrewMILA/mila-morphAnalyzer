@@ -1,0 +1,2 @@
+[(ADVERB kK)]
+EOF

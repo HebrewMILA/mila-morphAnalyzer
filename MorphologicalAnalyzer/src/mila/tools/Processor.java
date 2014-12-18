@@ -81,7 +81,7 @@ public class Processor {
 		if (input.isDirectory()) {
 			if (!output.isDirectory())
 				throw new FileNotFoundException(
-						"Output path must be a directory");
+						"Input is a directory, output path must be a directory too");
 			proc.processDir(input, output, tmpDir);
 		} else {
 			proc.processFile(input, output, tmpDir);

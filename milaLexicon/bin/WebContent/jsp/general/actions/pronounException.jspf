@@ -1,0 +1,152 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.PronounExceptionType"
+%>
+<div id='pronoun_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='pronoun_exception_action'>
+				<option value='add' <%if (pronounException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (pronounException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (pronounException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='pronoun_exception_undotted' size=20 value='<%=pronounException.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=pronounException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='pronoun_exception_dotted' size=20 value='<%=pronounException.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='pronoun_exception_register'>
+				<option value='formal' <%if (pronounException.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (pronounException.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (pronounException.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+			</select>				
+		</td>
+	</tr>	
+
+	 <tr>
+                <td>
+                        כתיב:
+                </td>
+                <td>
+                        <select name='pronoun_exception_spelling'>
+                                <option value='standard' <%if (pronounException.getSpelling().equals("standard")) out.print("SELECTED");
+%>>תקני</option>
+                                <option value='irregular' <%if (pronounException.getSpelling().equals("irregular")) out.print("SELECTED"
+);%>>תת-תקני</option>
+                        </select>
+                </td>
+        </tr>
+
+
+
+ <tr>
+                <td>
+                        מין:
+                </td>
+                <td>
+                        <select name='pronoun_exception_gender'>
+                                <option value='masculine' <%if (pronounException.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (pronounException.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>                                <option value='masculine and feminine' <%if (pronounException.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>                                      <option value='unspecified' <%if (pronounException.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='pronoun_exception_number'>                                <option value='singular' <%if (pronounException.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (pronounException.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+			 <option value='unspecified' <%if (pronounException.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+
+                        </select>
+                </td>
+        </tr>
+
+        <tr>
+                <td>
+                        גוף:
+                </td>
+                <td>
+                        <select name='pronoun_exception_person'>                                <option value='unspecified' <%if (pronounException.getPerson().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</
+option>
+                                <option value='1' <%if (pronounException.getPerson().equals("1")) out.print("SELECTED");%>>גוף ראשון</option>
+                                <option value='2' <%if (pronounException.getPerson().equals("2")) out.print("SELECTED");%>>גוף שני</option>
+                                <option value='3' <%if (pronounException.getPerson().equals("3")) out.print("SELECTED");%>>גוף שלישי</option>
+                                <option value='any' <%if (pronounException.getPerson().equals("any")) out.print("SELECTED");%>>גוף כלשהו</option>
+
+                        </select>
+                </td>
+        </tr>
+
+
+
+
+
+
+
+ <tr>
+		
+
+		<td>
+			נטיית שייכות חבורה:
+		</td>
+		<td>
+			<select name='pronoun_exception_pgn'>
+				<option value='unspecified' <%if (pronounException.getPgn().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1p/MF/Sg' <%if (pronounException.getPgn().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+				<option value='2p/M/Sg' <%if (pronounException.getPgn().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+				<option value='2p/F/Sg' <%if (pronounException.getPgn().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+				<option value='3p/M/Sg' <%if (pronounException.getPgn().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+				<option value='3p/F/Sg' <%if (pronounException.getPgn().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+				<option value='1p/MF/Pl' <%if (pronounException.getPgn().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+				<option value='2p/M/Pl' <%if (pronounException.getPgn().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+				<option value='2p/F/Pl' <%if (pronounException.getPgn().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+				<option value='3p/M/Pl' <%if (pronounException.getPgn().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+				<option value='3p/F/Pl' <%if (pronounException.getPgn().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+				 <option value='3p/MF/Pl' <%if (pronounException.getPgn().equals("3p/MF/Pl")) out.print("SELECTED");%>>גוף שלישי /  זכר וגם נקבה         / רבים</option>
+			</select>				
+		</td>
+	</tr>	
+
+
+	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>		 			
+</table>
+</div>

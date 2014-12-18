@@ -1,0 +1,9 @@
+[(VERB xwtkiM)][(PREPOSITION at)][(NOUN-DEF hygbniwt)][(PREFIX l)(NOUN-CONST qwbiwt)][(NOUN binwniwt)][(DOT DOT)]
+[(VERB xwtkiM)][(PREPOSITION at)][(NOUN-DEF hewM)][(PREFIX l)(NOUN ribwyiM)][(ADJECTIVE qvniM)][(INTERROGATIVE kmh)][(PREFIX e)	(MODAL aper)][(LRB LRB)][(CONJUNCTION kdi)][(VERB-INF lmcwt)][(PREPOSITION at)][(NOUN-DEF hvyM)][(PREPOSITION elhM)][(RRB RRB)][(VERB xwtkiM)][(PREPOSITION at)][(NOUN-DEF hplpl)][(ADJECTIVE-DEF hxriP)][(PREFIX l)(NOUN-DEF vbywt)][(DOT DOT)]
+</paragraph>
+[(NOUN myrbbiM)][(ADJECTIVE vwb)][(ADJECTIVE vwb)][(PREPOSITION at)][(QUANTIFIER kl)][(NOUN-DEF hrkibiM)][(CM CM)][(PREPOSITION yM)][(NOUN-POSSESSIVE emN)][(NOUN zit)][(PREFIX w)(NOUN mlx)][(PREPOSITION lpi)][(NOUN-DEF hvyM)][(DOT DOT)]
+[(VERB nwtniM)][(PREFIX l)(NOUN-DEF ygbniwt)][(VERB-INF lspwg)][(PREPOSITION at)][(NOUN-DEF hvyM)][(PREPOSITION bmeK)][(NUMERAL 3)][(DASH DASH)][(NUMERAL 4)][(NOUN eywt)][(CM CM)][(PREFIX w)(NOUN-DEF hslv)][(VERB mwkN)][(PREFIX l)(NOUN-DEF hgeh)][(DOT DOT)]
+</paragraph>
+[(NOUN-CONST hyrwt)][(NOUN aM)][(VERB rwciM)][(ADVERB pxwt)][(NOUN xripwt)][(DASH DASH)][(MODAL nitN)][(VERB-INF lhwcia)][(PREPOSITION at)][(NOUN-DEF hgryiniM)][(PREFIX m)(NOUN-DEF hplpl)][(ADJECTIVE-DEF hirwq)][(PREPOSITION lpni)][(NOUN-POSSESSIVE hwsptw)][(PREFIX l)(NOUN-DEF slv)][(DOT DOT)]
+[(ADJECTIVE xewb)][(PREFIX e)(NOUN-DEF hplpl)][(COPULA ihih)][(ADJECTIVE irwq)][(CM CM)][(CONJUNCTION kdi)][(PREFIX e)	(CONJUNCTION aM)][(VERB rwciM)][(PREPOSITION at)][(NOUN-DEF hslv)][(NOUN ygbniwt)][(ADJECTIVE xripwt)][(QUANTIFIER ywd)][(ADVERB pxwt)][(ADJECTIVE xriP)][(DASH DASH)][(MODAL nitN)][(COPULA ihih)][(VERB-INF lakwl)][(ADVERB rq)][(PREPOSITION at)][(NOUN-DEF hygbniwt)][(PREFIX b)	(NOUN qlwt)][(PREFIX w)	(PREPOSITION bli)][(VERB-INF lhtblbl)][(PREPOSITION biN)][(NOUN-DEF hygbniwt)][(PROPERNAME hxrpiwt)][(VERB-INF lplpl)][(NOUN-DEF hxriP)][(DOT DOT)]
+EOF

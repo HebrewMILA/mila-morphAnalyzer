@@ -1,0 +1,2 @@
+[(PREFIX w)	(CONJUNCTION gM)]
+EOF

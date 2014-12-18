@@ -117,10 +117,10 @@ public class AutoActivities extends ConnectedGenerator
 				dotted = URLEncoder.encode(dotted, "UTF-8");				
 				System.out.println("dotted =" + dotted);
 				String sql = "update lexiconP.item set dotted='"
-					+ dotted
-					+"' where id="
-					+ id;
-				
+						+ dotted
+						+"' where id="
+						+ id;
+								
 				execute(sql);
 				releaseConnection();						
 			}
@@ -348,7 +348,7 @@ public class AutoActivities extends ConnectedGenerator
 			transliterated = Translate.Heb2Eng(t1) + "+" + Translate.Heb2Eng(t2);
 			
 			System.out.println(undotted);
-			
+
 			String sql = "insert into lexiconP.item (pos,undotted,transliterated,register, spelling) values ("
 					+ "'multiWord','"
 					+ undotted
@@ -371,10 +371,10 @@ public class AutoActivities extends ConnectedGenerator
 			}
 
 			releaseConnection();			
-
 			sql = "insert into lexiconP.multiWord (id,pos,type,consecutive) values ("
-				+ Integer.parseInt(last)
-				+ ",'properName', 'town', '1')";
+					+ Integer.parseInt(last)
+					+ ",'properName', 'town', '1')";
+			
 		execute(sql);
 		releaseConnection();
 

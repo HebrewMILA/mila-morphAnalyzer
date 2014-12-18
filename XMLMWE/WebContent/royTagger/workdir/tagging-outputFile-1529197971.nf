@@ -1,0 +1,2 @@
+[(NOUN-DEF hmnhig)][(ADJECTIVE-DEF hnwcri)][(VERB eb)][(PREFIX w)(VERB hdgie)][(CONJUNCTION ki)][(NOUN-DEF hgwe)][(ADJECTIVE-DEF hprlmnvri)][(PREFIX e)(PREPOSITION awtw)][(VERB mwbil)][(NOUN syd)][(PREPOSITION al)][(DASH DASH)][(NOUN-POSSESSIVE xriri)][(VERB iyeh)][(QUANTIFIER hkl)][(CONJUNCTION kdi)][(VERB-INF lslwl)][(PREPOSITION at)][(NOUN-POSSESSIVE drkw)][(PREFIX l)	(NOUN khwnh)][(ADJECTIVE nwspt)][(PREFIX k)	(NOUN-CONST rae)][(NOUN-DEF hmmelh)][(DOT DOT)]
+EOF

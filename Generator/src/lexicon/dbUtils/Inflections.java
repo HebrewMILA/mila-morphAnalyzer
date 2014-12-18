@@ -656,7 +656,7 @@ public void getWholeNouns() {
 			
 		String sql = "  select undotted from " +
 				" lexiconP.item where pos='wPrefix'";	
-			
+		
 			String transliterated = "";
 			ResultSet rs = null;
 			rs = getData(sql);

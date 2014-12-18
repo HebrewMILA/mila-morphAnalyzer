@@ -624,8 +624,8 @@ public class NounGen extends ItemGen
 				StringTokenizer stGender = new StringTokenizer(genderTokens10,",");
 				while (stPGN.hasMoreTokens()) 
 				{
-					PGN = stPGN.nextToken();
 					inflectedItem = stPossessive.nextToken();
+					PGN = stPGN.nextToken();
 					if (!replaceRemoveException(PGN, gender, number, "false",
 							removeExceptionList, "remove") && !replaceRemoveException(PGN, gender, number, "false",replaceExceptionList, "replace")) 
 					{

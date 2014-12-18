@@ -1,0 +1,221 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 TRANSITIONAL//EN">
+<HTML>
+  <HEAD>
+    <TITLE>Multi Word Expression Morphlogical Analyzer Demo-  מנתח מורפולוגי לעברית כולל ביטויים </TITLE>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8">
+
+    <META NAME="description" CONTENT="Hebrew Morphological Analyzer With Support To Multi Word Expressions">
+    <META NAME="keywords" CONTENT="computational linguistics, natural language processing, Hebrew, morphology, java , demo, source , example, tokenizer, multi word expressions , בלשנות, עברית">
+<style type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body { 
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 12px;  text-align: justify; color: black; 
+background-color:#C6C6C6;
+}
+h1 { color: #336699; font-size: 21px; font-weight: bold; font-variant: small-caps; margin: 0px; padding: 5px 0 10px 0; }
+h2 { color: #336699; font-size: 18px; font-weight: bold; font-variant: normal; margin: 0px; padding: 5px 0 10px 0; }
+h3 { color: #C8B560; font-size: 26px; font-weight: bold; font-variant: normal; margin: 0px; padding: 5px 0 10px 0; }
+h4 { color: white; font-size: 18px;  font-variant: normal; margin: 0px; padding: 5px 0 10px 0; }
+h5 { color: black; font-size: 10px;     font-weight: bold; font-variant: small-caps; margin: 0px; padding: 5px 0 5px 0; }
+h6 { color: black; font-size: 10px; font-weight: bold; font-variant: normal; margin: 0px; padding: 5px 2px 0 0; display: inline; }
+textarea { 
+  font-size: 130%; 
+  text-align: right; 
+  color: black; 
+  font-family: arial, helvetica, sans-serif;
+  padding:  3% 3% 0% 0%;
+  border-style: ridge;
+  scrollbar-base-color:#ECD672; 
+  background-color:#ECE5B6;
+}
+p { margin: 0px; padding: 0 0 10px 0; }
+pre { margin: 0px; padding: 0 0 10px 0; }
+
+h1 a, h2 a, h3 a { color: #336699; text-decoration: none; }
+h4 a, h5 a, h6 a { color: white; text-decoration: none; 
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { text-decoration: underline; }
+
+
+#Section {
+        position: relative;
+        top: -3%;
+        margin: 0px;
+        padding: 0% 2% 2% 2%;
+        width: 100%;
+}
+
+#SectionHeader {
+        background:#C6C6C6 ;
+        position: relative;
+        overflow: hidden;
+        margin: 2px  0 2px 0;
+        padding: 0px;
+        height: 10%;
+        width: 100%;
+        border-left: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+}
+
+
+#SectionMenuBackground {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 150%;
+        text-align: right;
+        color: white;
+        height: 50%;
+        width: 93%;
+        margin: 0px;
+        padding: 0px;
+}
+
+
+#SectionMenuBackground a{
+        font-size: 100%;
+        text-align: center;
+        color: white;
+	font-weight: bold;
+}
+
+
+#SectionMenu {
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        text-align: right;
+        color: #FFFFFF;
+        position: relative;
+        top: -15%;
+        margin: 0px;
+        padding: 0px;
+        width: 600%;
+}
+#SectionMenu a {
+        color: #FFFFFF;
+        text-decoration: none;
+}
+#SectionMenu a:hover {
+        text-decoration: underline;
+}
+
+#Content {
+        position: relative; 
+       margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 2px;  
+        width: 100%;
+}
+#ContentBody {
+        border: 1px solid #CCCCCC;
+        overflow: hidden;
+        text-align: justify;
+	font-weight: bold;
+	font-size: 150%;        
+        padding: 1% 2% 3% 2%;
+        width: 100%;
+	 background: #FDF5E6;
+       /*  background: #EEEEEE; */
+        margin: 0px;
+        min-height: 320%;
+}
+
+
+#ContentBody input {
+ font-family: arial, helvetica, sans-serif;
+ font-size:100%;
+font-weight:bold;
+  none; 
+color:#000; 
+width:10%; 
+background-color:#C8B560; 
+border:1px solid;
+border-top-color:#696;
+border-left-color:#696;
+border-right-color:#363;
+border-bottom-color:#363;
+}
+#Footer {
+        clear: both;        position: relative;
+        overflow: hidden;        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+        font-size: 10px;        color: #666666;
+        text-align: left;
+        margin: 0px;
+        padding: 0px;
+        width: 80%;
+}
+
+
+</style>
+</head>
+ <BODY>
+<center>
+<form accept-charset="UTF-8" METHOD="POST" onSubmit="if (input_text.value.length ==0 ){alert('יש להקליד טקסט בעברית לא מנוקדת לניתוח'); return false}" action="processAnalyzerXML.jsp"  >
+<div id="Content">
+
+        <div id="Section">
+                <div id="SectionHeader">
+                        <div id="SectionMenuBackground">
+<img src="images/demos_header.gif" width="120%"  height="31"  alt="demo">
+  <a href='MorphologicalAnalyzer-ReleaseNotes-1.1.doc'> תיעוד מנתח מורפולוגי</a> 
+| <a href='http://www.mila.cs.technion.ac.il/'>אתר הבית</a>  
+| <a href='http://yeda.cs.technion.ac.il:8088/XMLMWE/FreezedMWE.html'><font color="#817339">רשימת ביטויים נתמכים</font> </a> </div>
+
+</div>
+ <div id="ContentBody">
+	<center>
+			 <h3>Multi Word Expression Morphological Analyzer Demo</h3>
+                        <h3>מנתח מורפולוגי לעברית כולל ביטויים</h3>
+
+	<p>
+	 והקש על תייג   ( (tokens)  העתק או הקלד קטע טקסט בעברית לא מנוקדת  (עד 100 תמניות
+	</p>
+
+                <textarea dir="rtl" name="input_text"   cols="70" rows="13" 
+  ></textarea><br><br>
+
+
+                <INPUT TYPE="reset" VALUE="נקה"> 
+		<INPUT TYPE="submit" VALUE="תייג">  
+          </center>
+</div>
+</div>
+<div id="Footer">
+Copyright &copy; <a href="http://www.mila.cs.technion.ac.il">Mila</a>
+</div>
+</form>
+</center>
+</body>
+</html>

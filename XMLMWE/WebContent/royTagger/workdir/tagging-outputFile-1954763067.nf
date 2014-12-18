@@ -1,0 +1,2 @@
+[(NUMERAL gA)][(NOUN-POSSESSIVE eliei)][(CONJUNCTION aw)][(PROPERNAME d)][(VERB gre)]
+EOF

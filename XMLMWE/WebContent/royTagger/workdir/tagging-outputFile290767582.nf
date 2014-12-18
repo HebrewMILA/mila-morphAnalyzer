@@ -1,0 +1,2 @@
+[(NOUN bmai)][(NUMERAL 2001)][(CM CM)][(NOUN-CONST xil)][(NOUN-DEF hiM)][(ADJECTIVE-DEF hierali)][(VERB iirv)][(NOUN awniih)][(ADJECTIVE nwspt)][(CM CM)][(PROPERNAME snvwrini)][(CM CM)][(CONJUNCTION aer)][(VERB neah)][(NUMERAL 40)][(NOUN vwnwt)][(PREPOSITION el)][(NOUN viliM)][(CM CM)][(NOUN-CONST kli)][(NOUN neq)][(PREPOSITION ngd)][(NOUN vnqiM)][(CM CM)][(NOUN mrgmwt)][(PREFIX w)(NOUN neq)][(ADJECTIVE awvwmvi)][(PREFIX l)	(NOUN qbwcwt)][(ADJECTIVE xmwewt)][(PREFIX b)	(PROPERNAME yzh)][(DOT DOT)]
+EOF

@@ -57,7 +57,7 @@ public class MultiWordPrepositionLexiconType extends Content implements lexicon.
 		sql += ", "+(isConstruct1()?1:0);
 		sql += ", "+(isPossessive2()?1:0);
 		sql += ")";
-		System.out.println("this is the sql"+ sql);
+//		System.out.println("this is the sql"+ sql);
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return feedback;

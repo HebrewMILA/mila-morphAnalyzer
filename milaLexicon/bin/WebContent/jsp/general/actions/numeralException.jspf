@@ -1,0 +1,168 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.NumeralExceptionType"
+%>
+<div id='numeral_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='numeral_exception_action'>
+				<option value='add' <%if (numeralException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (numeralException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (numeralException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='numeral_exception_undotted' size=20 value='<%=numeralException.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=numeralException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='numeral_exception_dotted' size=20 value='<%=numeralException.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			כתיב:
+		</td>
+		<td>
+			<select name='numeral_exception_register'>
+				<option value='formal' <%if (numeralException.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (numeralException.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (numeralException.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+			</select>				
+		</td>
+	</tr>	
+
+	 <tr>
+                <td>
+                        כתיב:
+                </td>
+                <td>
+                        <select name='numeral_exception_spelling'>
+                                <option value='standard' <%if (numeralException.getSpelling().equals("standard")) out.print("SELECTED");%>>תקני</option>
+                                <option value='irregular' <%if (numeralException.getSpelling().equals("irregular")) out.print("SELECTED");%>>תת-תקני</option>
+                        </select>
+                </td>
+        </tr>
+
+	 <tr>
+                <td>
+                        מין:
+                </td>
+                <td>
+                        <select name='numeral_exception_gender'>
+                                <option value='masculine' <%if (numeralException.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (numeralException.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+                                <option value='masculine and feminine' <%if (numeralException.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+                                <option value='irrelevant' <%if (numeralException.getGender().equals("irrelevant")) out.print("SELECTED");%>>לא רלוונטי</option>
+                                <option value='unspecified' <%if (numeralException.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+ <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='numeral_exception_number'>
+                                <option value='singular' <%if (numeralException.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (numeralException.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                                <option value='dual' <%if (numeralException.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+                                <option value='dual and plural' <%if (numeralException.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+                                <option value='singular and plural' <%if (numeralException.getNumber().equals("singular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+                                <option value='unspecified' <%if (numeralException.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>                                                                    
+                        </select>
+                </td>
+        </tr>
+
+
+
+ <tr>                <td>
+                        האם מקבל ה' הידיעה?                </td>
+                <td>                        <select name='numeral_exception_definiteness'>                                <option value='optional' <%if (numeralException.getDefiniteness().equals("optional")) out.print("SELECTED");%>>מותר</option>                                <option value='prohibited' <%if (numeralException.getDefiniteness().equals("prohibited")) out.print("SELECTED");%>>אסור</option>                                <option value='required' <%if (numeralException.getDefiniteness().equals("required")) out.print("SELECTED");%>>חובה</option>
+                        </select>
+                </td>
+        </tr>
+        
+
+ <tr>
+		<td>
+			נטיית שייכות חבורה:
+		</td>
+		<td>
+			<select name='numeral_exception_pgn'>
+				<option value='unspecified' <%if (numeralException.getPgn().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+				<option value='1p/MF/Sg' <%if (numeralException.getPgn().equals("1p/MF/Sg")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / יחיד</option>
+				<option value='2p/M/Sg' <%if (numeralException.getPgn().equals("2p/M/Sg")) out.print("SELECTED");%>>גוף שני   / זכר          / יחיד</option>
+				<option value='2p/F/Sg' <%if (numeralException.getPgn().equals("2p/F/Sg")) out.print("SELECTED");%>>גוף שני   / נקבה         / יחיד</option>
+				<option value='3p/M/Sg' <%if (numeralException.getPgn().equals("3p/M/Sg")) out.print("SELECTED");%>>גוף שלישי / זכר          / יחיד</option>
+				<option value='3p/F/Sg' <%if (numeralException.getPgn().equals("3p/F/Sg")) out.print("SELECTED");%>>גוף שלישי / נקבה         / יחיד</option>
+				<option value='1p/MF/Pl' <%if (numeralException.getPgn().equals("1p/MF/Pl")) out.print("SELECTED");%>>גוף ראשון / זכר וגם נקבה / רבים</option>
+				<option value='2p/M/Pl' <%if (numeralException.getPgn().equals("2p/M/Pl")) out.print("SELECTED");%>>גוף שני   / זכר          / רבים</option>
+				<option value='2p/F/Pl' <%if (numeralException.getPgn().equals("2p/F/Pl")) out.print("SELECTED");%>>גוף שני   / נקבה         / רבים</option>
+				<option value='3p/M/Pl' <%if (numeralException.getPgn().equals("3p/M/Pl")) out.print("SELECTED");%>>גוף שלישי / זכר          / רבים</option>
+				<option value='3p/F/Pl' <%if (numeralException.getPgn().equals("3p/F/Pl")) out.print("SELECTED");%>>גוף שלישי / נקבה         / רבים</option>
+				<option value='123p/M/Sg' <%if (numeralException.getPgn().equals("123p/M/Sg")) out.print("SELECTED");%>>גוף כלשהו / זכר / יחיד</option>
+				<option value='123p/F/Sg' <%if (numeralException.getPgn().equals("123p/F/Sg")) out.print("SELECTED");%>>גוף כלשהו / נקבה / יחיד</option>
+				<option value='123p/M/Pl' <%if (numeralException.getPgn().equals("123p/M/Pl")) out.print("SELECTED");%>>גוף כלשהו / זכר / רבים</option>
+				<option value='123p/F/Pl' <%if (numeralException.getPgn().equals("123p/F/Pl")) out.print("SELECTED");%>>גוף כלשהו / נקבה / רבים</option>				
+			</select>				
+		</td>
+	</tr>	
+
+ <tr>
+		<td>
+			האם צורת נסמך?
+		</td>
+		<td>
+			<select name='numeral_exception_construct'>
+				<option value='false' <%if (numeralException.getConstruct().equals("false")) out.print("SELECTED");%>>לא</option>
+				<option value='true' <%if (numeralException.getConstruct().equals("true")) out.print("SELECTED");%>>כן</option>		
+				<option value='unspecified' <%if (numeralException.getConstruct().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+				
+			</select>				
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			האם ניתן לבצע נטיית סמיכות?
+		</td>
+		<td>
+			<select name='numeral_exception_inflectConstruct'>
+				<option value='1' <%if (numeralException.isInflectConstruct()) out.print("SELECTED");%>>כן</option>												
+				<option value='0' <%if (!numeralException.isInflectConstruct()) out.print("SELECTED");%>>לא</option>				
+			</select>				
+		</td>
+	</tr>		
+
+
+	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>		 			
+</table>
+</div>

@@ -40,13 +40,12 @@ public class Generation {
 			List list = eContent.getContents(sql, "id");
 			int listSize = list.size();
 			for (i = 0; i < listSize; i++) {
-				// System.out.println(" ---lexicon Item count =" + i + "----");
 
 				ItemType item = new ItemType();
 				item.open(((Integer) list.get(i)).intValue());
-
+				System.out.println(" ---lexicon Item count =" + i + " Item transliterated = "+item.getUndotted()+"----");
 				String pos = item.getPos();
-
+				
 				// Using reflection for avoiding multy dispatch and for generic
 				// considerations
 				StringBuffer className = new StringBuffer()
@@ -90,31 +89,31 @@ public class Generation {
 
 		switch (args.length) {
 		case 0:
-			System.out.println("generator: missing command line arguments");
+			System.out.println("Generator: missing command line arguments");
 			System.out
-					.println("running generator by pos: java -jar generator.jar -pos <pos>");
+					.println("Running generator by pos: java -jar generator.jar -pos <pos>");
 			System.out
 					.println("pos={adjective,adverb,conjunction,interjection,interrogative,noun,preposition,pronoun,properName,quantifier,verb,negation}");
 			System.out
-					.println("running generator by lexicon id: java -id generator.jar -id <id>");
+					.println("Running generator by lexicon id: java -id generator.jar -id <id>");
 			System.out
-					.println("running generator for all lexicon items : java -jar generator.jar all");
+					.println("Running generator for all lexicon items : java -jar generator.jar all");
 			System.out
-					.println("running generator for a provided transliterated : java -jar -transliterated <transliterated>");
+					.println("Running generator for a provided transliterated : java -jar -transliterated <transliterated>");
 			// System.exit(1);
 		case 1:
 			if (param.equals("-help")) {
-				System.out.println("generator: missing command line arguments");
+				System.out.println("Generator: help");
 				System.out
-						.println("running generator by pos: java -jar generator.jar -pos <pos>");
+						.println("Running generator by POS: java -jar generator.jar -pos <pos>");
 				System.out
 						.println("pos={adjective,adverb,conjunction,interjection,interrogative,noun,preposition,pronoun,properName,quantifier,verb,negation}");
 				System.out
-						.println("running generator by lexicon id: java -id generator.jar -id <id>");
+						.println("Running generator by lexicon id: java -id generator.jar -id <id>");
 				System.out
-						.println("running generator for all lexicon items : java -jar generator.jar -all");
+						.println("Running generator for all lexicon items : java -jar generator.jar -all");
 				System.out
-						.println("running generator for a provided transliterated : java -jar -transliterated <transliterated>");
+						.println("Running generator for a provided transliterated : java -jar -transliterated <transliterated>");
 				// System.exit(1);
 			} else if (param.equals("-all"))
 				sql = "SELECT id FROM item where deleted = 0";
@@ -132,13 +131,13 @@ public class Generation {
 						+ "' and deleted = 0";
 			else {
 				System.out
-						.println("wrong/missing command line arguments, run java -jar generator.jar -help");
+						.println("Wrong/missing command line arguments, run java -jar generator.jar -help");
 				// System.exit(1);
 			}
 			break;
 		default:
 			System.out
-					.println("wrong/missing command line arguments, run java -jar generator.jar -help");
+					.println("Wrong/missing command line arguments, run java -jar generator.jar -help");
 			// System.exit(1);
 			break;
 		}
@@ -150,6 +149,9 @@ public class Generation {
 			InvocationTargetException, IllegalAccessException,
 			InstantiationException, NoSuchMethodException {
 		String sql = commandLineHandling(args);
+		if (sql.isEmpty()){
+			return;
+		}
 		getItem(sql);
 	}
 

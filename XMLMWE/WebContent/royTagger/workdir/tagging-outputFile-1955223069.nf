@@ -1,0 +1,2 @@
+[(PRONOUN zh)]
+EOF

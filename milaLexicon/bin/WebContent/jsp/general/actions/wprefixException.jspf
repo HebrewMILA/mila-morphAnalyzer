@@ -1,0 +1,107 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.WprefixExceptionType"
+%>
+<div id='wprefix_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='wprefix_exception_action'>
+				<option value='add' <%if (wprefixException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (wprefixException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (wprefixException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='wprefix_exception_undotted' size=20 value='<%=wprefixException.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=wprefixException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='wprefix_exception_dotted' size=20 value='<%=wprefixException.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='wprefix_exception_register'>
+				<option value='formal' <%if (wprefixException.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (wprefixException.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (wprefixException.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+			</select>				
+		</td>
+	</tr>	
+
+	 <tr>
+                <td>
+                        כתיב:
+                </td>
+                <td>
+                        <select name='wprefix_exception_spelling'>
+                                <option value='standard' <%if (wprefixException.getSpelling().equals("standard")) out.print("SELECTED");
+%>>תקני</option>
+                                <option value='irregular' <%if (wprefixException.getSpelling().equals("irregular")) out.print("SELECTED"
+);%>>תת-תקני</option>
+                        </select>
+                </td>
+        </tr>
+
+
+
+ <tr>
+                <td>
+                        מין:
+                </td>
+                <td>
+                        <select name='wprefix_exception_gender'>
+                                <option value='masculine' <%if (wprefixException.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (wprefixException.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>                                <option value='masculine and feminine' <%if (wprefixException.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>                                      <option value='unspecified' <%if (wprefixException.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='wprefix_exception_number'>                                <option value='singular' <%if (wprefixException.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (wprefixException.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                        </select>
+                </td>
+        </tr>
+
+
+
+
+
+	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>		 			
+</table>
+</div>

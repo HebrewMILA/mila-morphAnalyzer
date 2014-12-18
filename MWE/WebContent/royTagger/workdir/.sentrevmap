@@ -1,0 +1,21 @@
+<s> <s>
+ [_PREFIX_NOUN-DEF_] {(PREFIX b) (NOUN-DEF ptx)} [_PREFIX_NOUN-CONST_] {(PREFIX b) (NOUN-CONST ptx)} [_PREFIX_NOUN_] {(PREFIX b) (NOUN ptx)} [_PREFIX_PROPERNAME-DEF_] {(PREFIX b) (PROPERNAME-DEF tx)} [_VERB-INF_] {(VERB-INF bptx)}
+ [_NOUN-DEF_] {(NOUN-DEF ieibh)}
+ [_VERB_] {(VERB amr)}
+ [_PROPERNAME_] {(PROPERNAME awlmrv)}
+ [_yyCLN_] {(yyCLN yyCLN)} [_CLN_] {(CLN CLN)}
+ [_QUOT_] {(QUOT QUOT)} [_yyQUOT_] {(yyQUOT yyQUOT)}
+ [_PRONOUN_] {(PRONOUN anw)} [_VERB_] {(VERB anw)}
+ [_ADJECTIVE_] {(ADJECTIVE nweaim)} [_NOUN_] {(NOUN nweaim)}
+ [_PREFIX_NOUN-DEF_] {(PREFIX b) (NOUN-DEF axriwt)} [_PREFIX_NOUN-CONST_] {(PREFIX b) (NOUN-CONST axriwt)} [_PREFIX_NOUN_] {(PREFIX b) (NOUN axriwt)}
+ [_ADJECTIVE-DEF_] {(ADJECTIVE-DEF qwlqvibit)}
+ [_ADJECTIVE-DEF_] {(ADJECTIVE-DEF yliwnh)}
+ [_PREFIX_MODAL_] {(PREFIX w) (MODAL crikim)} [_PREFIX_ADJECTIVE_] {(PREFIX w) (ADJECTIVE crikim)}
+ [_VERB-INF_] {(VERB-INF lhieir)}
+ [_ADJECTIVE_] {(ADJECTIVE yiniim)} [_NOUN_] {(NOUN yiniim)}
+ [_PREFIX_NOUN-DEF_] {(PREFIX l) (NOUN-DEF mepxwt)} [_PREFIX_NOUN-CONST_] {(PREFIX l) (NOUN-CONST mepxwt)} [_PREFIX_NOUN_] {(PREFIX l) (NOUN mepxwt)}
+ [_yyDASH_] {(yyDASH yyDASH)} [_DASH_] {(DASH DASH)}
+ [_PREFIX_PREFIX_NOUN-DEF_] {(PREFIX w) (PREFIX b) (NOUN-DEF yiqr)} [_PREFIX_PREFIX_QUANTIFIER_] {(PREFIX w) (PREFIX b) (QUANTIFIER yiqr)} [_PREFIX_ADVERB_] {(PREFIX w) (ADVERB byiqr)} [_PREFIX_PREFIX_NOUN_] {(PREFIX w) (PREFIX b) (NOUN yiqr)} [_PREFIX_PREFIX_NOUN-CONST_] {(PREFIX w) (PREFIX b) (NOUN-CONST yiqr)}
+ [_PREFIX_NOUN-POSSESSIVE_] {(PREFIX l) (NOUN-POSSESSIVE mcpwnnw)}
+ [_QUOT_] {(QUOT QUOT)} [_yyQUOT_] {(yyQUOT yyQUOT)}
+</s> </s>

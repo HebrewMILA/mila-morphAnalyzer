@@ -76,7 +76,7 @@ public class MultiWordNounLexiconType extends Content implements
 		sql += ", '"+ inflectionBase +"'";
 		sql += ", '"+ getType() +"'";
 		sql += ")";
-		System.out.println("this is the sql" + sql);
+//		System.out.println("this is the sql" + sql);
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		addActions(id);

@@ -1,0 +1,2 @@
+[(PREFIX w)	(EXISTENTIAL ie)][(PREFIX w)	(COPULA hih)][(DOT DOT)]
+EOF

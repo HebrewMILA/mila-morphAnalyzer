@@ -1,0 +1,2 @@
+[(PREPOSITION al)][(DASH DASH)][(NOUN mxebwN)]
+EOF

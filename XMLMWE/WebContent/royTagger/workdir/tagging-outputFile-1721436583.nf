@@ -1,0 +1,2 @@
+[(NOUN-CONST bit)][(NOUN spr)][(PROPERNAME bawM)][(PROPERNAME al)][(PROPERNAME paxM)]
+EOF

@@ -1,0 +1,2 @@
+[(PREFIX b)][(CM CM)][(PROPERNAME d)]
+EOF

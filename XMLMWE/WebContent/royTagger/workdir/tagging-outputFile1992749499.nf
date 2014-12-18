@@ -1,0 +1,2 @@
+[(CONJUNCTION qri)]
+EOF

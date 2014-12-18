@@ -1,0 +1,2 @@
+[(VERB mtkwwN)]
+EOF

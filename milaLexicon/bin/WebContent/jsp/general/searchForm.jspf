@@ -1,0 +1,187 @@
+<%@ page 
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="java.util.*"
+	import="lexicon.contents.SearchItem"	
+	import="lexicon.tools.LexiconUtils"
+%>
+<%
+String dotted_search = "";
+String undotted_search = "";
+String id_search = "";
+String trans_search = "";
+boolean usingSearch = false; 
+String advancedSearch = "";
+String advancedSearchDisplay = "none";
+if (request.getParameter("advanced_search") != null && request.getParameter("advanced_search").equals("1")) 
+{
+	advancedSearch = "CHECKED";
+	advancedSearchDisplay = "";
+}
+if (request.getParameter("search_dotted") != null && !request.getParameter("search_dotted").equals("")) 
+{
+	dotted_search = request.getParameter("search_dotted").trim();
+	searchUrl += "&search_dotted="+dotted_search;
+	usingSearch = true;
+}
+if (request.getParameter("search_undotted") != null && !request.getParameter("search_undotted").equals("")) 
+{
+	undotted_search = request.getParameter("search_undotted").trim(); 
+	searchUrl += "&search_undotted="+undotted_search;
+	usingSearch = true;
+}
+if (request.getParameter("search_id") != null && !request.getParameter("search_id").equals("")) 
+{
+	id_search = request.getParameter("search_id").trim();
+	searchUrl += "&search_id="+id_search;
+	usingSearch = true;
+} 
+if (request.getParameter("search_transliterated") != null && !request.getParameter("search_transliterated").equals("")) 
+{
+	trans_search = request.getParameter("search_transliterated").trim(); 
+	searchUrl += "&search_transliterated="+trans_search;
+	usingSearch = true;
+}
+if (usingSearch) 
+{
+	if (searchUrl.startsWith("&")) 
+	{
+		searchUrl = searchUrl.substring(1);
+	}
+	searchedItems = LexiconUtils.searchForItems(id_search, dotted_search, undotted_search, trans_search);
+	undotted_search = URLEncoder.encode(undotted_search, "ISO-8859-1");
+	undotted_search = URLDecoder.decode(undotted_search, "UTF-8");
+	%>
+	<%=undotted_search%>
+	<%
+	dotted_search = URLEncoder.encode(dotted_search, "ISO-8859-1");
+	dotted_search = URLDecoder.decode(dotted_search, "UTF-8");	
+	searchUrl = URLEncoder.encode(searchUrl, "ISO-8859-1");
+	searchUrl = searchUrl.replaceAll("%3D", "="); 
+	//searchUrl = URLDecoder.decode(searchUrl, "UTF-8");	
+	if (searchedItems.size() == 0) 
+	{
+		undotted_search = undotted_search.replaceAll("'", "&#39;");
+		item.setUndotted(undotted_search);
+	} 
+}
+%>
+<script>
+function toggleDispaly(search) 
+{
+	if (search.checked) 
+	{
+		document.getElementById("advancedSearch").style.display = "";
+	}
+	else 
+	{
+		document.getElementById("advancedSearch").style.display = "none";
+	}
+}
+</script>
+<table width='100%'>
+	<tr>
+		<td width='100%'>
+			<!-- the form for searching -->
+			<form name='search_item' action="DoItem.jsp" method="post">
+			<table width='100%'>
+				<tr> 
+					<td width='100%'>
+						<b>חיפוש פריטים:</b>
+						&nbsp;&nbsp;
+						ע"פ צורה לא מנוקדת:
+						&nbsp;&nbsp;
+						<input type=text name='search_undotted' size=15 value=''>
+						&nbsp;&nbsp;
+						<input type=checkbox name='advanced_search' onClick="toggleDispaly(this)" value='1' <%=advancedSearch%>>
+						חיפוש מתקדם
+						&nbsp;&nbsp;
+						<input type=Submit value='חיפוש'>
+					</td>					
+				</tr>				
+				<tr>
+					<td>
+						<div id='advancedSearch' style="display:none;">
+							<table>
+								<tr> 
+									<td>
+										ע"פ צורה מנוקדת:
+									</td>
+									<td>
+										<input type=text name='search_dotted' size=15 value=''>
+									</td>
+								</tr>								
+								<tr> 
+									<td>
+										ע"פ תעתיק:
+									</td>
+									<td>
+										<input type=text name='search_transliterated' size=15 value=''>
+									</td>
+								</tr>	
+								<tr> 
+									<td>
+										ע"פ מספר מזהה:
+									</td>
+									<td>
+										<input type=text name='search_id' size=15 value=''>
+									</td>
+								</tr>			
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</td>
+	</tr>
+<%
+if (searchedItems != null) 
+{
+%>
+	<tr>
+		<td valign='top'>
+			תוצאות: נמצאו <b><%=searchedItems.size()%></b> פריטים.&nbsp;
+<%
+	String undottedForm = "";
+	String dottedForm = "";
+    String _pos="";
+	int idForm = 0;
+	for (int i=0; i<searchedItems.size(); i++) 
+	{
+        SearchItem searched = (SearchItem)searchedItems.get(i);
+        _pos = searched.getPos();
+		undottedForm = searched.getUndotted();
+		dottedForm = searched.getDotted();
+		if (dottedForm == null || dottedForm.equals("")) 
+		{
+			dottedForm = "&nbsp;";
+		} 
+		else 
+		{
+			dottedForm = "&nbsp;["+dottedForm+"]";
+		}
+		idForm = searched.getID();
+		String theName = undottedForm+dottedForm;
+		String changedName = theName; // theName.replaceAll("'", "&#39;");
+		changedName = changedName.replaceAll("\"","%22");
+		changedName = changedName.replaceAll("'","%27");
+%>
+		&nbsp;&#149;
+			<a href="DoItem.jsp?id=<%=idForm+"&search_id="+idForm+"&POS="+_pos%>"><%=theName%>&nbsp;</a>
+			<!-- <a href="DoItem.jsp?id=<%=idForm+"&"+searchUrl+"&POS="+_pos%>"><%=theName%>&nbsp;(<%=Names.getPos(searched.getPos())%>)</a> -->
+			&nbsp;
+			<img src='/milaLexicon/images/delete.gif' width='16' height='16' style="cursor:pointer" border=0 onClick='savedoc("del_item", "<%=changedName%>", "<%=idForm%>", null, "<%=searchUrl%>")'>
+<%
+	}
+%>		
+		</td>
+	</tr>		
+<%
+}
+%>	
+</table>
+<script language="javascript" type="text/javascript">
+	document.getElementById("advancedSearch").style.display = "<%=advancedSearchDisplay%>";
+</script>
+	

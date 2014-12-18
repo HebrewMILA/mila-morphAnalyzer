@@ -1,0 +1,3 @@
+[(EXISTENTIAL ie)][(PREPOSITION li)][(NOUN xwM)][(DOT DOT)]
+[(EXISTENTIAL thih)][(PREPOSITION li)][(NOUN arC)][(ADJECTIVE vrwpit)][(ADJECTIVE iph)][(DOT DOT)]
+EOF

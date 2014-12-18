@@ -1,0 +1,2 @@
+[(VERB-INF lbel)][(PREPOSITION at)][(PROPERNAME hnwdls)][(PREFIX w)(NOUN-DEF heywyit)][(ADJECTIVE-DEF hirwqh)][(ADVERB ixd)][(PREFIX b)	(NOUN-DEF miM)][(PREPOSITION yd)][(PROPERNAME ehnwdls)][(VERB mwkN)][(CM CM)][(VERB-INF lsnN)][(PREFIX w)(VERB-INF levwP)][(PREFIX b)	(NOUN-DEF miM)][(CM CM)][(VERB-INF lhnix)][(VERB-INF lhtiibe)][(CM CM)][(PREFIX b)	(NOUN zmN)][(PRONOUN hzh)][(VERB-INF lxtwK)][(PREPOSITION at)][(NOUN-DEF hywP)][(PREFIX w)	(QUANTIFIER ear)][(NOUN-DEF hmcrkiM)][(CM CM)][(VERB-INF lhknis)][(PREFIX l)(NOUN-DEF qyrh)][(DOT DOT)]
+EOF

@@ -1,0 +1,2 @@
+[(PROPERNAME i)][(CM CM)][(PROPERNAME iA)]
+EOF

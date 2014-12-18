@@ -23,8 +23,8 @@ import lexicon.stringUtils.Translate;
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class Download2File extends ConnectedGenerator {
 
@@ -36,7 +36,7 @@ public class Download2File extends ConnectedGenerator {
 
 	static PrintStream pOut = null;
 
-	////////////////////////////////////////////////
+	// //////////////////////////////////////////////
 	static final String POS_QUANTIFIER = "1";
 
 	static final String POS_INTERJECTION = "2";
@@ -99,7 +99,7 @@ public class Download2File extends ConnectedGenerator {
 
 	static final String UNSPECIFIED = "31";
 
-	///////////////////////////////////////////////////////
+	// /////////////////////////////////////////////////////
 
 	static final String CONSTRUCT_TRUE = "1";
 
@@ -107,7 +107,7 @@ public class Download2File extends ConnectedGenerator {
 
 	static final String CONSTRUCT_UNDEFINED = "3";
 
-	/////////////////////////////////////////////////////
+	// ///////////////////////////////////////////////////
 	static final String PARTICIPLE_TYPE_NOUN = "1";
 
 	static final String PARTICIPLE_TYPE_ADJECTIVE = "2";
@@ -116,16 +116,14 @@ public class Download2File extends ConnectedGenerator {
 
 	static final String PARTICIPLE_TYPE_UNSPECIFIED = "4";
 
-	////////////////////////////////////////////////////
+	// //////////////////////////////////////////////////
 	static final String CONJUNCTION_TYPE_COORDINATING = "1";
 
 	static final String CONJUNCTION_TYPE_SUBORDINATING = "2";
 
 	static final String CONJUNCTION_TYPE_RELATIVIZING = "3";
-	
-	
 
-	/////////////////////////////////////////////////////
+	// ///////////////////////////////////////////////////
 	static final String INTERROGATIVE_TYPE_PRONOUN = "1";
 
 	static final String INTERROGATIVE_TYPE_PROADVERB = "2";
@@ -136,13 +134,203 @@ public class Download2File extends ConnectedGenerator {
 
 	static final String INTERROGATIVE_TYPE_UNSPECIFIED = "5";
 
-	////////////////////////////////////////////////////
-	
-	static final String QUANTIFIER_TYPE_AMOUNT="1";
-	static final String QUANTIFIER_TYPE_PARTITIVE="2";
-	static final String QUANTIFIER_TYPE_DETERMINER="3";
-	///////////////////////////////////////////////////////
+	// //////////////////////////////////////////////////
 
+	static final String QUANTIFIER_TYPE_AMOUNT = "1";
+	static final String QUANTIFIER_TYPE_PARTITIVE = "2";
+	static final String QUANTIFIER_TYPE_DETERMINER = "3";
+
+	// /////////////////////////////////////////////////////
+
+	// --------------------------------------------------------------------------------------
+	public void WriteMWE_2File(int num) throws SQLException,
+			FileNotFoundException {
+		ResultSet rs = null;
+		StringBuffer mwe = null;
+
+		out = new FileOutputStream(dir + "mwe" + num + ".data");
+		pOut = new PrintStream(out);
+
+		String sql = "select * from mwe" + num;
+		rs = getData(sql);
+		if (rs != null) {
+			while (rs.next()) {
+				String aid, id, formerItemId, surface, transliterated, consecutive, lexiconId;
+				String transliteratedLexiconItem, dottedLexiconItem, undottedLexiconItem, mwTransliterated;
+				String mwUndotted, PGN, spelling, register, gender, number, definiteness;
+
+				aid = rs.getString("aid");
+				id = rs.getString("id");
+				formerItemId = rs.getString("formerItemId");
+				surface = rs.getString("surface");
+				transliterated = rs.getString("transliterated");
+				consecutive = rs.getString("consecutive");
+				lexiconId = rs.getString("lexiconId");
+				transliteratedLexiconItem = rs
+						.getString("transliteratedLexiconItem");
+				dottedLexiconItem = rs.getString("dottedLexiconItem");
+				undottedLexiconItem = rs.getString("undottedLexiconItem");
+				mwTransliterated = rs.getString("mwTransliterated");
+				mwUndotted = rs.getString("mwUndotted");
+				PGN = rs.getString("PGN");
+				spelling = rs.getString("spelling");
+				register = rs.getString("register");
+				gender = rs.getString("gender");
+				number = rs.getString("number");
+				definiteness = rs.getString("definiteness");
+
+				mwe = new StringBuffer();
+				mwe.append(transliterated);
+				mwe.append("|");
+				mwe.append(aid);
+				mwe.append("|");
+				mwe.append(id);
+				mwe.append("|");
+				mwe.append(formerItemId);
+				mwe.append("|");
+				mwe.append(surface);
+				mwe.append("|");
+				mwe.append(consecutive);
+				mwe.append("|");
+				mwe.append(lexiconId);
+				mwe.append("|");
+				mwe.append(transliteratedLexiconItem);
+				mwe.append("|");
+				mwe.append(dottedLexiconItem);
+				mwe.append("|");
+				mwe.append(undottedLexiconItem);
+				mwe.append("|");
+				mwe.append(mwTransliterated);
+				mwe.append("|");
+				mwe.append(mwUndotted);
+				mwe.append("|");
+				mwe.append(PGN);
+				mwe.append("|");
+				mwe.append(spelling);
+				mwe.append("|");
+				mwe.append(register);
+				mwe.append("|");
+				mwe.append(gender);
+				mwe.append("|");
+				mwe.append(number);
+				mwe.append("|");
+				mwe.append(definiteness);
+
+				pOut.println(mwe);
+
+			}
+			rs.close();
+			pOut.close();
+			System.out.println("end mwe1 download to file");
+		}
+	}
+
+	// --------------------------------------------------------------------------------------
+	public void WriteMWE1_2File() throws SQLException, FileNotFoundException {
+		ResultSet rs = null;
+		StringBuffer mwe1 = null;
+
+		out = new FileOutputStream(dir + "mwe1.data");
+		pOut = new PrintStream(out);
+
+		String sql = "select * from mwe1";
+		rs = getData(sql);
+		if (rs != null) {
+			while (rs.next()) {
+				String id, transliterated, surface, pos, consecutive, type;
+
+				id = rs.getString("id");
+				transliterated = rs.getString("transliterated");
+				surface = rs.getString("surface");
+				consecutive = rs.getString("consecutive");
+				type = rs.getString("type");
+				pos = rs.getString("pos");
+
+				mwe1 = new StringBuffer();
+				mwe1.append(transliterated);
+				mwe1.append("|");
+				mwe1.append(id);
+				mwe1.append("|");
+				mwe1.append(surface);
+				mwe1.append("|");
+				mwe1.append(pos);
+				mwe1.append("|");
+				mwe1.append(consecutive);
+				mwe1.append("|");
+				mwe1.append(type);
+
+				pOut.println(mwe1);
+
+				System.out.println(transliterated);
+			}
+			rs.close();
+			pOut.close();
+			System.out.println("end mwe1 download to file");
+		}
+	}
+
+	// ------------------------------------------------------------------------------------------------------
+	/**
+	 * @author yossi jacob this function takes the mwinflections table and
+	 *         output it into a file
+	 */
+	public void WriteMWinflections2File() {
+		String transliterated = "";
+		String surface = "";
+		String pos = "";
+		String mweId = "";
+		String type = "";
+		String prefix = "";
+
+		String sql = "select * from mweinflections";
+
+		StringBuffer mweinflectionRec = null;
+		ResultSet rs = null;
+		try {
+			out = new FileOutputStream(dir + "mwinflections.data");
+			pOut = new PrintStream(out);
+			rs = getData(sql);
+			if (rs != null) {
+				while (rs.next()) {
+					transliterated = rs.getString("transliterated");
+					surface = rs.getString("surface");
+					pos = rs.getString("pos");
+					mweId = rs.getString("mweId");
+					type = rs.getString("type");
+					prefix = rs.getString("prefix");
+
+					mweinflectionRec = new StringBuffer();
+					mweinflectionRec.append(transliterated);
+					mweinflectionRec.append("|");
+					mweinflectionRec.append(surface);
+					mweinflectionRec.append("|");
+					mweinflectionRec.append(pos);
+					mweinflectionRec.append("|");
+					mweinflectionRec.append(mweId);
+					mweinflectionRec.append("|");
+					mweinflectionRec.append(type);
+					mweinflectionRec.append("|");
+					mweinflectionRec.append(prefix);
+					pOut.println(mweinflectionRec);
+				}
+				rs.close();
+				pOut.close();
+				System.out.println("end mwinflections download to file");
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			releaseConnection();
+			System.exit(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			releaseConnection();
+			System.exit(1);
+		} finally {
+			releaseConnection();
+		}
+	}
+
+	// ------------------------------------------------------------------------------------------------------
 	public void writeGimatria2File() {
 
 		String transliterated = "";
@@ -179,7 +367,6 @@ public class Download2File extends ConnectedGenerator {
 		} finally {
 			releaseConnection();
 		}
-
 	}
 
 	public void writePrefixes2File() {
@@ -340,20 +527,20 @@ public class Download2File extends ConnectedGenerator {
 						conjunctionTag = "+";
 					decodedPrefixRecord = new StringBuffer().append(prefix)
 							.append("|").append(description).append("|")
-							.append(definiteArticleTag).append("|").append(
-									defArtHE).append("|").append(relHE).append(
-									"|").append(adverbKAF).append("|").append(
-									subConOrRelSHIN).append("|").append(
-									tempSubConKAFSHIN).append("|").append(
-									tempSubConMEMSHIN).append("|").append(
-									tempSubConLAMEDKAFSHIN).append("|").append(
-									tempSubConBETSHIN).append("|").append(
-									relativizerTag).append("|").append(
-									temporalSubConjTag).append("|").append(
-									subordinatingConjunctionTag).append("|")
+							.append(definiteArticleTag).append("|")
+							.append(defArtHE).append("|").append(relHE)
+							.append("|").append(adverbKAF).append("|")
+							.append(subConOrRelSHIN).append("|")
+							.append(tempSubConKAFSHIN).append("|")
+							.append(tempSubConMEMSHIN).append("|")
+							.append(tempSubConLAMEDKAFSHIN).append("|")
+							.append(tempSubConBETSHIN).append("|")
+							.append(relativizerTag).append("|")
+							.append(temporalSubConjTag).append("|")
+							.append(subordinatingConjunctionTag).append("|")
 							.append(prefPartUnit).append("|").append(prepBET)
-							.append("|").append(prepKAF).append("|").append(
-									prepLAMED).append("|").append(prepMEM)
+							.append("|").append(prepKAF).append("|")
+							.append(prepLAMED).append("|").append(prepMEM)
 							.append("|").append(prepositionTag).append("|")
 							.append(conjunctionTag);
 					System.out.println(decodedPrefixRecord);
@@ -392,8 +579,8 @@ public class Download2File extends ConnectedGenerator {
 			case 'v':
 				participleTypeCode = PARTICIPLE_TYPE_VERB;
 				break;
-			//case 'u':
-			//	participleTypeCode = PARTICIPLE_TYPE_UNSPECIFIED;
+			// case 'u':
+			// participleTypeCode = PARTICIPLE_TYPE_UNSPECIFIED;
 			default:
 				final String message = "illegal participleType: " + type
 						+ " for lexiconItem: " + lexiconItem
@@ -420,7 +607,7 @@ public class Download2File extends ConnectedGenerator {
 			case 'e':
 				if (type.length() == 6)
 					interrogativeTypeCode = INTERROGATIVE_TYPE_PRODET;
-				
+
 				break;
 			case 'd':
 				interrogativeTypeCode = INTERROGATIVE_TYPE_YESNO;
@@ -435,24 +622,23 @@ public class Download2File extends ConnectedGenerator {
 		}
 		return interrogativeTypeCode;
 	}
-	
-	
+
 	public static String str2NumQuantifierType(final String type,
 			final String lexiconItem, final String word) {
 		String quantifierTypeCode = "";
 		if (type != null && type.length() > 0) {
 			char typeStartChar = type.charAt(0);
 			switch (typeStartChar) {
-			case 'a':		
+			case 'a':
 				quantifierTypeCode = QUANTIFIER_TYPE_AMOUNT;
 				break;
 			case 'p':
-					quantifierTypeCode = QUANTIFIER_TYPE_PARTITIVE;			
+				quantifierTypeCode = QUANTIFIER_TYPE_PARTITIVE;
 				break;
 			case 'd':
 				quantifierTypeCode = QUANTIFIER_TYPE_DETERMINER;
 				break;
-			
+
 			default:
 				final String message = "illegal quantifierType: " + type
 						+ " for lexiconItem: " + lexiconItem
@@ -480,8 +666,8 @@ public class Download2File extends ConnectedGenerator {
 		return strConstruct;
 	}
 
-	private String str2NumBasePos(final String basePos, final String lexiconItem,
-			final String word) {
+	private String str2NumBasePos(final String basePos,
+			final String lexiconItem, final String word) {
 		String strBasePos = "0";
 		if (basePos.equals("quantifier"))
 			strBasePos = POS_QUANTIFIER;
@@ -662,11 +848,11 @@ public class Download2File extends ConnectedGenerator {
 		return strScript;
 	}
 
-private String encodeNumber(String number) {
+	private String encodeNumber(String number) {
 		String strNumber = "";
 		if (number.equals("singular"))
 			strNumber = "1";
-		else if (number.equals("singular and plural"))	
+		else if (number.equals("singular and plural"))
 			strNumber = "2";
 		else if (number.equals("plural"))
 			strNumber = "3";
@@ -681,7 +867,9 @@ private String encodeNumber(String number) {
 			System.exit(1);
 		}
 		return strNumber;
-	}	private String encodeGender(String gender) {
+	}
+
+	private String encodeGender(String gender) {
 		String strGender = "";
 		if (gender.equals("masculine"))
 			strGender = "1";
@@ -719,8 +907,8 @@ private String encodeNumber(String number) {
 		return strBaseDefinitness;
 	}
 
-	private String str2NumConjunctionType(final String baseConjunctionType, final String lexiconItem,
-			final String word) {
+	private String str2NumConjunctionType(final String baseConjunctionType,
+			final String lexiconItem, final String word) {
 		String strBaseConjunctionType = "";
 		if (baseConjunctionType.equals("coordinating")) {
 			strBaseConjunctionType = CONJUNCTION_TYPE_COORDINATING;
@@ -731,36 +919,37 @@ private String encodeNumber(String number) {
 		else if (baseConjunctionType.equals("unspecified"))
 			strBaseConjunctionType = "-";
 		else {
-			final String message = "illegal baseConjunctionType: " +baseConjunctionType
-			+ " for lexiconItem: " + lexiconItem
-			+ " for input token: " + word;
-	System.out.println(message);
-	System.exit(1);
+			final String message = "illegal baseConjunctionType: "
+					+ baseConjunctionType + " for lexiconItem: " + lexiconItem
+					+ " for input token: " + word;
+			System.out.println(message);
+			System.exit(1);
 		}
 		return strBaseConjunctionType;
 	}
 
-	private String encodeBasePronounType(final String basePronounType, final String lexiconItem,
-			final String word) {
+	private String encodeBasePronounType(final String basePronounType,
+			final String lexiconItem, final String word) {
+		final String bpt = basePronounType.trim();
 		String strBasePronounType = "";
-		if (basePronounType.equals("interrogative"))
+		if (bpt.equals("interrogative"))
 			strBasePronounType = "1";
-		else if (basePronounType.equals("personal"))
+		else if (bpt.equals("personal"))
 			strBasePronounType = "2";
-		else if (basePronounType.equals("demonstrative"))
+		else if (bpt.equals("demonstrative"))
 			strBasePronounType = "3";
-		else if (basePronounType.equals("impersonal"))
+		else if (bpt.equals("impersonal"))
 			strBasePronounType = "4";
-		else if (basePronounType.equals("relativizer"))
+		else if (bpt.equals("relativizer"))
 			strBasePronounType = "5";
-		else if (basePronounType.equals("reflexive"))
+		else if (bpt.equals("reflexive"))
 			strBasePronounType = "6";
 		else {
-			final String message = "illegal basePronounType: " +basePronounType
-			+ " for lexiconItem: " + lexiconItem
-			+ " for input token: " + word;
-	System.out.println(message);
-	System.exit(1);
+			final String message = "illegal basePronounType: " + bpt
+					+ " for lexiconItem: " + lexiconItem + " for input token: "
+					+ word;
+			System.out.println(message);
+			System.exit(1);
 		}
 		return strBasePronounType;
 	}
@@ -865,40 +1054,42 @@ private String encodeNumber(String number) {
 		String participleType = "";
 		String interrogativeType = "";
 		String baseUndottedLItem = "";
-		String quantifierType="";
+		String quantifierType = "";
 		String surface = "";
 
 		String field;
 		StringBuffer decodedInflectionRecord = null;
 		BufferedOutputStream bf;
-		//String sql = "select * from inflections where baseLexiconPointer=10521";
+		// String sql =
+		// "select * from inflections where baseLexiconPointer=10521";
+		// String sql =
+		// "select * from inflections where baseLexiconPointer=26525";
 		String sql = "select * from inflections";
 		int counter = 0;
 		ResultSet rs = null;
 		if (pc)
 			dir = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\";
+		// dir = "C:\\NLP Project\\sg\\Download2File1\\Output\\";
 		else
 			dir = "";
 		try {
-			//bf = new BufferedOutputStream(new FileOutputStream(dir
-			//		+ "inflections.data"));
+			// bf = new BufferedOutputStream(new FileOutputStream(dir
+			// + "inflections.data"));
 			out = new FileOutputStream(dir + "./inflections.data");
 			pOut = new PrintStream(out);
 			rs = getData(sql);
 			if (rs != null) {
 				while (rs.next()) {
-					type="-";
-					//baseLexiconPointer
+					type = "-";
+					// baseLexiconPointer
 					field = rs.getString("baseLexiconPointer");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
 						baseLexiconPointer = "-";
 					else
 						baseLexiconPointer = field;
-					
-				
 
-					//basePos
+					// basePos
 					field = rs.getString("basePos");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -907,7 +1098,7 @@ private String encodeNumber(String number) {
 						basePos = str2NumBasePos(field,
 								baseTransliteratedLItem, transliterated);
 
-					//baseTransliteratedLItem
+					// baseTransliteratedLItem
 					field = rs.getString("baseTransliteratedLItem");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -915,15 +1106,17 @@ private String encodeNumber(String number) {
 					else
 						baseTransliteratedLItem = field;
 
-					//baseUndottedLItem
+					// baseUndottedLItem
 					field = rs.getString("baseUndottedLItem");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
 						baseUndottedLItem = "-";
 					else
 						baseUndottedLItem = field;
+					baseUndottedLItem = baseUndottedLItem.replaceAll(
+							"%26%2339%3B", "%27");
 
-					//baseUndottedLItem
+					// surface
 					field = rs.getString("surface");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -931,7 +1124,7 @@ private String encodeNumber(String number) {
 					else
 						surface = field;
 
-					//register
+					// register
 					field = rs.getString("register");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -939,7 +1132,7 @@ private String encodeNumber(String number) {
 					else
 						register = encodeRegister(field);
 
-					//spelling
+					// spelling
 					field = rs.getString("spelling");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -947,7 +1140,7 @@ private String encodeNumber(String number) {
 					else
 						spelling = encodeSpelling(field);
 
-					//suffixStatus
+					// suffixStatus
 					field = rs.getString("suffixStatus");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -955,7 +1148,7 @@ private String encodeNumber(String number) {
 					else
 						suffixStatus = encodeConstruct(field);
 
-					//transliterated
+					// transliterated
 					field = rs.getString("transliterated");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -963,7 +1156,9 @@ private String encodeNumber(String number) {
 					else
 						transliterated = field;
 
-					//PGN
+					transliterated = transliterated.replaceAll("&#39;", "'");
+
+					// PGN
 					field = rs.getString("PGN");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -971,7 +1166,7 @@ private String encodeNumber(String number) {
 					else
 						PGN = encodePGN(field);
 
-					//binyan
+					// binyan
 					field = rs.getString("binyan");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -979,7 +1174,7 @@ private String encodeNumber(String number) {
 					else
 						binyan = encodeBinyan(field);
 
-					//tense
+					// tense
 					field = rs.getString("tense");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -987,7 +1182,7 @@ private String encodeNumber(String number) {
 					else
 						tense = encodeTense(field);
 
-					//root
+					// root
 
 					field = rs.getString("root");
 					if (field == null || field.equals("")
@@ -995,10 +1190,16 @@ private String encodeNumber(String number) {
 						root = "-";
 						field = rs.getString("root");
 					} else {
-						root = URLDecoder.decode(field, "UTF-8");
-						root = Translate.Heb2Eng(root);
+						root = field;
+						// root = URLDecoder.decode(field, "UTF-8"); // EDIT
+						// removed so that it will be encoded (yossi 27.12.11)
+						// root = Translate.Heb2Eng(root); // EDIT : removed
+						// this line so it will be the same as in the mysql
+						// version (yossi 21.7.11)
 					}
+					root = root.replaceAll("&#39;", "'");
 
+					// dottedLexiconItem
 					field = rs.getString("dottedLexiconItem");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified")) {
@@ -1007,8 +1208,10 @@ private String encodeNumber(String number) {
 					} else {
 						dottedLexiconItem = field;
 					}
+					dottedLexiconItem = dottedLexiconItem.replaceAll(
+							"%26%2339%3B", "%27");
 
-					//baseNumber
+					// baseNumber
 					field = rs.getString("baseNumber");
 					if (field == null || field.equals("")
 							|| field.equals("null")
@@ -1017,7 +1220,7 @@ private String encodeNumber(String number) {
 					else
 						baseNumber = encodeNumber(field);
 
-					//baseGender
+					// baseGender
 					field = rs.getString("baseGender");
 					if (field == null || field.equals("")
 							|| field.equals("null")
@@ -1026,7 +1229,7 @@ private String encodeNumber(String number) {
 					else
 						baseGender = encodeGender(field);
 
-					//baseNamedEntityType
+					// baseNamedEntityType
 					if (basePos.equals(POS_PROPERNAME)) {
 						field = rs.getString("type");
 						if (field == null || field.equals("")
@@ -1038,7 +1241,7 @@ private String encodeNumber(String number) {
 						type = baseNamedEntityType;
 					}
 
-					//baseDefinitness
+					// baseDefinitness
 					field = rs.getString("baseDefinitness");
 					if (field == null || field.equals("")
 							|| field.equals("unspecified"))
@@ -1046,7 +1249,7 @@ private String encodeNumber(String number) {
 					else
 						baseDefinitness = encodeBaseDefinitness(field);
 
-					//baseConjunctionType
+					// baseConjunctionType
 					if (basePos.equals(POS_CONJUNCTION)) {
 						field = rs.getString("type");
 						if (field == null || field.equals("")
@@ -1054,11 +1257,12 @@ private String encodeNumber(String number) {
 								|| field.equals("unspecified"))
 							baseConjunctionType = "-";
 						else
-							baseConjunctionType = str2NumConjunctionType(field,baseTransliteratedLItem, transliterated);
+							baseConjunctionType = str2NumConjunctionType(field,
+									baseTransliteratedLItem, transliterated);
 						type = baseConjunctionType;
 					}
 
-					//basePronounType
+					// basePronounType
 					if (basePos.equals(POS_PRONOUN)) {
 						field = rs.getString("type");
 						if (field == null || field.equals("")
@@ -1066,11 +1270,12 @@ private String encodeNumber(String number) {
 								|| field.equals("unspecified"))
 							basePronounType = "-";
 						else
-							basePronounType = encodeBasePronounType(field,baseTransliteratedLItem, transliterated);
+							basePronounType = encodeBasePronounType(field,
+									baseTransliteratedLItem, transliterated);
 						type = basePronounType;
 					}
 
-					//basePerson
+					// basePerson
 					field = rs.getString("basePerson");
 					if (field == null || field.equals("")
 							|| field.equals("null")
@@ -1081,7 +1286,7 @@ private String encodeNumber(String number) {
 					else
 						basePerson = field;
 
-					//suffix function
+					// suffix function
 					field = rs.getString("suffixFunction");
 					if (field == null || field.equals("")
 							|| field.equals("null")
@@ -1100,7 +1305,7 @@ private String encodeNumber(String number) {
 							baseNumeralType = encodeBaseNumeralType(field);
 						type = baseNumeralType;
 					}
-					
+
 					if (basePos.equals(POS_QUANTIFIER)) {
 						field = rs.getString("type");
 						if (field == null || field.equals("")
@@ -1108,7 +1313,7 @@ private String encodeNumber(String number) {
 								|| field.equals("unspecified"))
 							quantifierType = "-";
 						else
-							quantifierType= str2NumQuantifierType(field,
+							quantifierType = str2NumQuantifierType(field,
 									baseTransliteratedLItem, transliterated);
 						type = quantifierType;
 					}
@@ -1126,8 +1331,7 @@ private String encodeNumber(String number) {
 
 					}
 
-				
-					if (basePos.equals(POS_PARTICIPLE )
+					if (basePos.equals(POS_PARTICIPLE)
 							|| basePos.equals(POS_PASSIVEPARTICIPLE)) {
 
 						field = rs.getString("type");
@@ -1139,7 +1343,6 @@ private String encodeNumber(String number) {
 							participleType = str2NumParticipleType(field,
 									baseTransliteratedLItem, transliterated);
 						type = participleType;
-
 					}
 
 					field = rs.getString("value");
@@ -1147,6 +1350,7 @@ private String encodeNumber(String number) {
 						value = "-";
 					else
 						value = field;
+					value = value.replaceAll("%26%2339%3B", "%27");
 
 					field = rs.getString("polarity");
 					if (field.equals("2") || field.equals("unspecified"))
@@ -1164,22 +1368,22 @@ private String encodeNumber(String number) {
 					if (prefix.equals("unspecified"))
 						prefix = "-";
 
-					decodedInflectionRecord = new StringBuffer().append(
-							transliterated).append("|").append(basePos).append("|").append(register)
-							.append("|").append(spelling).append("|").append(
-									suffixStatus).append("|").append(
-									baseLexiconPointer).append("|").append(PGN)
-							.append("|").append(binyan).append("|").append(
-									tense).append("|").append(root).append("|")
+					decodedInflectionRecord = new StringBuffer()
+							.append(transliterated).append("|").append(basePos)
+							.append("|").append(register).append("|")
+							.append(spelling).append("|").append(suffixStatus)
+							.append("|").append(baseLexiconPointer).append("|")
+							.append(PGN).append("|").append(binyan).append("|")
+							.append(tense).append("|").append(root).append("|")
 							.append(baseNumber).append("|").append(baseGender)
 							.append("|").append(baseDefinitness).append("|")
-							.append(basePerson).append("|").append(
-									suffixFunction).append("|").append(
-									dottedLexiconItem).append("|").append(
-									baseUndottedLItem).append("|").append(
-									polarity).append("|").append(value).append(
-									"|").append(type).append("|").append(
-									foreign).append("|").append(prefix);
+							.append(basePerson).append("|")
+							.append(suffixFunction).append("|")
+							.append(dottedLexiconItem).append("|")
+							.append(baseUndottedLItem).append("|")
+							.append(polarity).append("|").append(value)
+							.append("|").append(type).append("|")
+							.append(foreign).append("|").append(prefix);
 
 					counter++;
 					System.out.println(decodedInflectionRecord);
@@ -1204,23 +1408,25 @@ private String encodeNumber(String number) {
 	}
 
 	public static void main(String[] args) {
-
 		long startTime = System.currentTimeMillis();
 		Download2File st = new Download2File();
-		//Download2File.dir = args[0];
-		//System.out.println("dir =" + dir);
+		// Download2File.dir = args[0];
+		// System.out.println("dir =" + dir);
 		try {
 			st.writeInflections2File();
+			st.WriteMWinflections2File();
 			st.writePrefixes2File();
 			st.writeGimatria2File();
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-			System.exit(1);
+			st.WriteMWE1_2File();
+			st.WriteMWE_2File(2);
+			st.WriteMWE_2File(3);
+			st.WriteMWE_2File(4);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(1);
 		}
-		//st.writePrefixes2File();
+
+		// st.writePrefixes2File();
 		long elapsedTime = System.currentTimeMillis() - startTime;
 		System.out.println("Elapsed time = " + elapsedTime + " ms");
 		System.exit(0);

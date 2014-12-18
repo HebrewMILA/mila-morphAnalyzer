@@ -1,0 +1,2 @@
+[(PREFIX w)][(QUOT QUOT)][(PROPERNAME lh)][(PROPERNAME arhUb)][(VERB pigrw)][(QUOT QUOT)][(DOT DOT)]
+EOF

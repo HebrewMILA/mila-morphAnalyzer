@@ -1,0 +1,119 @@
+<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.MultiWordNounAdjectiveExceptionType"
+%>
+<%
+MultiWordNounAdjectiveExceptionType multiWordNounAdjectiveException = new MultiWordNounAdjectiveExceptionType();  
+if (aid != 0 && pos.equals("multiWordNounAdjective")) 
+{
+	multiWordNounAdjectiveException.open(aid); 
+}
+if (request.getParameter("delete_action") !=null)	
+{
+	if (request.getParameter("delete_action").equals("multiWordNounAdjective")) 
+	{
+		//Showing confirmation message
+		if (request.getParameter("confirm") != null)	
+		{
+			int feedback = multiWordNounAdjectiveException.remove();
+			if (feedback > 0)	
+			{
+				actionDone = "remove";
+				multiWordNounAdjectiveException = new MultiWordNounAdjectiveExceptionType();
+				removeMsg = "<font color=blue><b>הפעולה נמחקה בהצלחה</b>";
+			}
+			else	
+			{
+				notRemoveMsg = "<font class=errorfont>הפעולה לא נמחקה</font><br>";
+			}
+			
+		}	//End of doing DELETE
+	}
+}
+if (request.getParameter("action_pos")!= null) 
+{
+	if (request.getParameter("action_pos").equals("multiWordNounAdjective") && !request.getParameter("multiWordNounAdjective_exception_undotted").equals("")) 
+	{
+		multiWordNounAdjectiveException.setUndotted(request.getParameter("multiWordNounAdjective_exception_undotted").trim());
+		if (request.getParameter("multiWordNounAdjective_exception_dotted")!= null) 
+		{
+			multiWordNounAdjectiveException.setDotted(request.getParameter("multiWordNounAdjective_exception_dotted").trim());
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_register")!= null) 
+		{
+			multiWordNounAdjectiveException.setRegister(request.getParameter("multiWordNounAdjective_exception_register"));
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_spelling")!= null) 
+		{
+           multiWordNounAdjectiveException.setSpelling(request.getParameter("multiWordNounAdjective_exception_spelling"));
+        }
+
+		if (request.getParameter("multiWordNounAdjective_exception_gender")!= null) 
+		{
+			multiWordNounAdjectiveException.setGender(request.getParameter("multiWordNounAdjective_exception_gender"));
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_number")!= null) 
+		{
+			multiWordNounAdjectiveException.setNumber(request.getParameter("multiWordNounAdjective_exception_number"));
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_feminine")!= null) 
+		{
+			multiWordNounAdjectiveException.setFeminine(request.getParameter("multiWordNounAdjective_exception_feminine"));
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_plural")!= null) 
+		{
+			multiWordNounAdjectiveException.setPlural(request.getParameter("multiWordNounAdjective_exception_plural"));
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_definiteness")!= null) 
+		{
+            multiWordNounAdjectiveException.setDefiniteness(request.getParameter("multiWordNounAdjective_exception_definiteness"));
+        }
+		
+		if (request.getParameter("multiWordNounAdjective_exception_possessive")!= null) 
+		{
+            multiWordNounAdjectiveException.setPossessive(request.getParameter("multiWordNounAdjective_exception_possessive"));
+        }
+
+		if (request.getParameter("multiWordNounAdjective_exception_inflectPossessiveS")!= null) 
+		{
+			multiWordNounAdjectiveException.setInflectPossessiveS(request.getParameter("multiWordNounAdjective_exception_inflectPossessiveS").equals("1"));
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_inflectPossessiveP")!= null) 
+		{
+			multiWordNounAdjectiveException.setInflectPossessiveP(request.getParameter("multiWordNounAdjective_exception_inflectPossessiveP").equals("1"));
+		}
+		if (request.getParameter("multiWordNounAdjective_exception_action")!= null) 
+		{
+			multiWordNounAdjectiveException.set("action", request.getParameter("multiWordNounAdjective_exception_action"));
+		}	
+		if (id != 0) 
+		{	
+			if (aid == 0) 
+			{
+				aid = multiWordNounAdjectiveException.add(item.getID()); 
+				if (aid >0) 
+				{
+					addingMsg = "<font color=blue><b>התוספה פעולה חדשה</b>";
+				}				 
+				actionDone = "add";
+			} 
+			else 
+			{	
+				if (aid != 0) 
+				{
+					int feedback = multiWordNounAdjectiveException.update(); 
+					if (feedback >0) 
+					{
+						addingMsg = "<font color=blue><b>הפעולה התעדכנה בהצלחה</b>";
+					}					
+					actionDone = "update";
+				}
+			}	
+			multiWordNounAdjectiveException.open(aid);
+			item.open(id);	
+		}			
+	}
+}
+%>

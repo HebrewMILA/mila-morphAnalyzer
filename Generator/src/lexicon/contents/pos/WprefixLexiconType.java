@@ -74,7 +74,7 @@ public class WprefixLexiconType extends Content implements lexicon.jaxb.WprefixL
 		sql += " , number='"+getNumber()+"'";
 		sql += " WHERE id="+getID();
 		int feedback = execute(sql);
-		System.out.println(sql);
+//		System.out.println(sql);
 		return 1;
 	}
 	public void load() {

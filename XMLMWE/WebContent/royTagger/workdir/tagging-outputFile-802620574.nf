@@ -1,0 +1,2 @@
+[(INTERJECTION elwM)][(NOUN kith)][(PROPERNAME a)][(APOS APOS)][(DOT DOT)]
+EOF

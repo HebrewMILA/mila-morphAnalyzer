@@ -1,0 +1,2 @@
+[(QUOT QUOT)][(PROPERNAME lbnwN)][(ADJECTIVE erwih)][(PREFIX b)	(NOUN mcb)][(NEGATION la)][(ADJECTIVE icib)][(PREFIX w)(ADJECTIVE rgie)][(ADVERB biwtr)][(QUOT QUOT)][(CM CM)][(VERB nktb)][(PREFIX b)	(NOUN hwdyh)][(PREFIX e)	(VERB prsM)][(NOUN-CONST sgN)][(NOUN-CONST er)][(NOUN-DEF hxwC)][(ADJECTIVE-DEF hairani)][(PREFIX l)	(NOUN-CONST yniini)][(NOUN-DEF hmzrx)][(ADJECTIVE-DEF htikwN)][(CM CM)][(PROPERNAME rawP)][(PROPERNAME eiibani)][(DOT DOT)]
+EOF

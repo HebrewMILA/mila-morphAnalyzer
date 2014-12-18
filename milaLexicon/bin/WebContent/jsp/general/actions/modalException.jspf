@@ -1,0 +1,147 @@
+﻿<%@ page 
+	language="java"
+	contentType ="text/html; charset=utf-8"
+	pageEncoding="utf-8"
+	import="lexicon.contents.exception_types.ModalExceptionType"
+%>
+<div id='modal_div_action' style="display:none;">
+<table width='100%' border='1'  RULES=NONE FRAME=BOX bordercolor='red' bordercolordark='WHITE'>
+	<tr>
+		<td>
+			פעולה:
+		</td>
+		<td>
+			<select name='modal_exception_action'>
+				<option value='add' <%if (modalException.getAction().equals("add")) out.print("SELECTED");%>>הוספה</option>
+				<option value='replace' <%if (modalException.getAction().equals("replace")) out.print("SELECTED");%>>החלפה</option>
+				<option value='remove' <%if (modalException.getAction().equals("remove")) out.print("SELECTED");%>>הסרה</option>
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			צורה לא מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='modal_exception_undotted' size=20 value='<%=modalException.getUndotted().trim()%>'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורת תעתיק:
+		</td>
+		<td>
+			<%=modalException.getTransliterated()%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			צורה מנוקדת:
+		</td>
+		<td>
+			<input type='text' name='modal_exception_dotted' size=20 value='<%=modalException.getDotted().trim()%>'>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			משלב:
+		</td>
+		<td>
+			<select name='modal_exception_register'>
+				<option value='formal' <%if (modalException.getRegister().equals("formal")) out.print("SELECTED");%>>תקני</option>
+				<option value='archaic' <%if (modalException.getRegister().equals("archaic")) out.print("SELECTED");%>>ארכאי</option>
+				<option value='informal' <%if (modalException.getRegister().equals("informal")) out.print("SELECTED");%>>תת-תקני</option>
+			</select>				
+		</td>
+	</tr>	
+
+
+	 <tr>
+                <td>
+                        כתיב:
+                </td>   
+                <td>
+                        <select name='modal_exception_spelling'>
+                                <option value='standard' <%if (modalException.getSpelling().equals("standard")) out.print("SELECTED");%>>תקני</option>
+                                <option value='irregular' <%if (modalException.getSpelling().equals("irregular")) out.print("SELECTED");%>>תת-תקני</option>
+                        </select>
+                </td>           
+        </tr>
+	
+	 <tr>
+                <td>
+                        מין:
+                </td>
+                <td>
+                        <select name='modal_exception_gender'>
+                                <option value='masculine' <%if (modalException.getGender().equals("masculine")) out.print("SELECTED");%>>זכר</option>
+                                <option value='feminine' <%if (modalException.getGender().equals("feminine")) out.print("SELECTED");%>>נקבה</option>
+                                <option value='masculine and feminine' <%if (modalException.getGender().equals("masculine and feminine")) out.print("SELECTED");%>>גם זכר וגם נקבה</option>
+                                <option value='unspecified' <%if (modalException.getGender().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>
+                        </select>
+                </td>
+        </tr>
+ <tr>
+                <td>
+                        מספר:
+                </td>
+                <td>
+                        <select name='modal_exception_number'>
+                                <option value='singular' <%if (modalException.getNumber().equals("singular")) out.print("SELECTED");%>>יחיד</option>
+                                <option value='plural' <%if (modalException.getNumber().equals("plural")) out.print("SELECTED");%>>רבים</option>
+                                <option value='dual' <%if (modalException.getNumber().equals("dual")) out.print("SELECTED");%>>זוגי</option>
+                                <option value='dual and plural' <%if (modalException.getNumber().equals("dual and plural")) out.print("SELECTED");%>>גם זוגי וגם רבים</option>
+                                <option value='singular and plural' <%if (modalException.getNumber().equals("ingular and plural")) out.print("SELECTED");%>>גם יחיד וגם רבים</option>
+                                <option value='unspecified' <%if (modalException.getNumber().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</option>                                                                    
+                        </select>
+                </td>
+        </tr>
+	<tr>
+                <td>
+                        גוף:
+                </td>
+                <td>
+                        <select name='modal_exception_person'>
+                                <option value='unspecified' <%if (modalException.getPerson().equals("unspecified")) out.print("SELECTED");%>>לא ידוע</
+option>
+                                <option value='1' <%if (modalException.getPerson().equals("1")) out.print("SELECTED");%>>גוף ראשון</option>
+                                <option value='2' <%if (modalException.getPerson().equals("2")) out.print("SELECTED");%>>גוף שני</option>
+                                <option value='3' <%if (modalException.getPerson().equals("3")) out.print("SELECTED");%>>גוף שלישי</option>
+                                <option value='any' <%if (modalException.getPerson().equals("any")) out.print("SELECTED");%>>גוף כלשהו</option>
+
+                        </select>
+                </td>
+        </tr>
+
+
+	 <tr>
+                <td>
+                        זמן:
+                </td>
+                <td>
+                        <select name='modal_exception_tense'>
+                                 <option value='past' <%if (modalException.getTense().equals("past")) out.print("SELECTED");%>>עבר</option>                                
+				 <option value='beinoni' <%if (modalException.getTense().equals("beinoni")) out.print("SELECTED");%>>בינוני</option>
+                  <option value='future' <%if (modalException.getTense().equals("future")) out.print("SELECTED");%>>עתיד</option>
+                                <option value='imperative' <%if (modalException.getTense().equals("imperative")) out.print("SELECTED");%>>ציווי</option>
+                                 <option value='infinitive' <%if (modalException.getTense().equals("infinitive")) out.print("SELECTED");%>>שם הפועל</option>			
+				  <option value='unspecified' <%if (modalException.getTense().equals("unspecified")) out.print("SELECTED");%>>לא מוגדר</option>
+
+                        </select>
+                </td>
+        </tr>
+	
+
+
+
+
+
+
+	
+	<tr>
+		<td colspan=2>
+			<input type=Submit value='<%=actionFormButton%>'>
+		</td>
+	</tr>		 			
+</table>
+</div>

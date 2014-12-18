@@ -1,0 +1,2 @@
+[(PREFIX k)][(NUMERAL 500)]
+EOF

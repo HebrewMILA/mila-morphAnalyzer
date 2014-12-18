@@ -62,7 +62,7 @@ public class MultiWordFrozenLexiconType extends Content implements lexicon.jaxb.
 		sql += ", "+(isDefiniteness()?1:0);
 		sql += ", "+(isAcceptDefiniteness()?1:0);
 		sql += ")";
-		System.out.println("this is the sql"+ sql);
+		//System.out.println("this is the sql"+ sql);
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return feedback;

@@ -467,8 +467,8 @@ public abstract class ItemGen implements ItemInterface {
 
 	/**
 	 * This methos is the interface to the rules handling class The relevant
-	 * rule is selected by 3 parameters: 1) The action - a text describing the
-	 * rule action for example pluralWTnoun <br>
+	 * rule is selected by 3 parameters: <br>
+	 * 1) The action - a text describing the rule action for example pluralWTnoun <br>
 	 * It means that this rule is applicable for generating the plural with the
 	 * suffix WT <br>
 	 * For the nouns - the actions chosen according to the rules files of xfst <br>

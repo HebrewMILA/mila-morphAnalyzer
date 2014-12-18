@@ -72,6 +72,7 @@ public abstract class Content extends Connected
 	protected final int DOUBLECODE = 8;
 	protected final int LONGCODE = -5;
 	protected final int REALCODE = 7;
+	protected final int VARBINARY = -3;
 	
 	
 
@@ -235,7 +236,7 @@ public abstract class Content extends Connected
 					set(meta.getColumnName(i), rs.getDouble(i));
 				}
 				//We treat Strings and Blobs the same way
-				else if (cType == STRINGCODE || cType == CHARCODE) {
+				else if (cType == STRINGCODE || cType == CHARCODE || cType == VARBINARY) {
 					String blobText = "";
 					if (rs.getBytes(i) != null) {
 						blobText = new String(rs.getBytes(i));

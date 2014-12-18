@@ -1,0 +1,2 @@
+[(PREFIX l)	(INTERROGATIVE mi)]
+EOF

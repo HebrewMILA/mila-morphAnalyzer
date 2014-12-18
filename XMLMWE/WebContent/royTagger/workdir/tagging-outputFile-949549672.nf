@@ -1,0 +1,2 @@
+[(PREFIX e)	(PREFIX b)	(PROPERNAME khna)][(VERB xi)]
+EOF

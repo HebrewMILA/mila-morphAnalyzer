@@ -1,0 +1,2 @@
+[(NOUN qrih)]
+EOF

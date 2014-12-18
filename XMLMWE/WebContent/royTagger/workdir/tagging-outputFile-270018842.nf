@@ -1,0 +1,2 @@
+[(VERB mqlpiM)][(PREPOSITION at)][(ADJECTIVE-DEF htpwxiM)][(PREFIX e)(NOUN-CONST atmwl)][(NOUN-POSSESSIVE qninw)]
+EOF
