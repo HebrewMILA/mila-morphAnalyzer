@@ -7,6 +7,11 @@
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.multipart.saveDir" value="/data/uploader_temp" />
 	<package name="fileuploader" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
 		<interceptors>
 			<interceptor name="login" class="org.mila.uploader.LoginInterceptor" />
 			<interceptor-stack name="uploaderStack">
@@ -18,20 +23,22 @@
 		<default-interceptor-ref name="uploaderStack" />
 		<default-action-ref name="index" />
 
+
+
 		<global-results>
-			<result name="login" type="redirect">/login.jsp</result>
+			<result name="login" type="tiles">login</result>
 		</global-results>
 
 		<action name="index" class="indexAction">
-			<result>/index.jsp</result>
+			<result type="tiles">index</result>
 		</action>
 
 		<action name="login">
-			<result>/login.jsp</result>
+			<result type="tiles">login</result>
 		</action>
 
 		<action name="logout" class="logoutAction">
-			<result>/login.jsp</result>
+			<result type="tiles">login</result>
 		</action>
 
 		<action name="download" class="downloadAction">
@@ -41,17 +48,17 @@
 				<param name="contentDisposition">attachment;filename="tagged_output.xml"</param>
 				<param name="bufferSize">1024</param>
 			</result>
-			<result name="error">/download_error.jsp</result>
+			<result name="error" type="tiles">download_error</result>
 		</action>
 
 		<action name="doUpload" class="uploadAction">
 			<result name="success" type="redirectAction">index</result>
-			<result name="error">/upload_error.jsp</result>
+			<result name="error" type="tiles">upload_error</result>
 		</action>
 
 		<action name="doLogin" class="loginAction">
 			<result name="success" type="redirectAction">index</result>
-			<result name="error">/login_error.jsp</result>
+			<result name="error" type="tiles">login_error</result>
 		</action>
 	</package>
 

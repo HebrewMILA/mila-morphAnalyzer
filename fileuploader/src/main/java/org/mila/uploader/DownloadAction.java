@@ -3,8 +3,11 @@ package org.mila.uploader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.zip.GZIPInputStream;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
 import org.mila.uploader.entities.TagRequest;
 import org.mila.uploader.entities.TagRequestState;
@@ -32,14 +35,28 @@ public class DownloadAction extends ActionSupport {
 		/* don't let people download other people's files */
 		if (!tagRequest.getUser().getMail().equals(getUsername()))
 			return ERROR;
-		
+
+		InputStream fis = null;
+		InputStream gzipis = null;
 		try {
-			inputStream = new FileInputStream(
-					new File(tagRequest.getFilename()));
+			fis = new FileInputStream(new File(tagRequest.getFilename()));
+			gzipis = new GZIPInputStream(fis);
+
+			inputStream = gzipis;
 		} catch (FileNotFoundException e) {
 			logger.error(
 					"Can't find tagged file named " + tagRequest.getFilename(),
 					e);
+			IOUtils.closeQuietly(fis);
+			IOUtils.closeQuietly(gzipis);
+			tagRequest.setState(TagRequestState.ERROR);
+			tagRequestService.save(tagRequest);
+			return ERROR;
+		} catch (IOException e) {
+			logger.error("IOException, probably corrupt gzip file at "
+					+ tagRequest.getFilename(), e);
+			IOUtils.closeQuietly(fis);
+			IOUtils.closeQuietly(gzipis);
 			tagRequest.setState(TagRequestState.ERROR);
 			tagRequestService.save(tagRequest);
 			return ERROR;

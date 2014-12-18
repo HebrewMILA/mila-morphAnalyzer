@@ -5,35 +5,7 @@
 <html>
 <head>
 <title>Tag Request</title>
-<style type="text/css">
-table {
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 12px;
-	background: #fff;
-	width: 480px;
-	border-collapse: collapse;
-	text-align: left;
-	margin: 20px;
-}
 
-th {
-	font-size: 14px;
-	font-weight: normal;
-	color: #039;
-	border-bottom: 2px solid #6678b1;
-	padding: 10px 8px;
-}
-
-td {
-	border-bottom: 1px solid #ccc;
-	color: #669;
-	padding: 6px 8px;
-}
-
-tbody tr:hover td {
-	color: #009;
-}
-</style>
 </head>
 <body>
 	<h1>MILA Tagging Request Service</h1>
@@ -41,11 +13,13 @@ tbody tr:hover td {
 		Currently logged in as
 		<s:property value="username" />
 		<s:url id="logout" action="logout" />
-		(
-		<s:a href="%{logout}">logout...</s:a>
-		)
+		(<s:a href="%{logout}">logout...</s:a>)
 	</p>
 	<h3>Submit new tagging request</h3>
+	<p>This service accepts either a single Hebrew text file in UTF-8
+		encoding, or several Hebrew text files in UTF-8 encoding inside a ZIP
+		file.</p>
+	<p>Other file formats will not work as expected (or at all).</p>
 	<p>
 		<s:form action="doUpload" method="post" enctype="multipart/form-data">
 			<s:file name="upload" label="File" />
@@ -53,7 +27,7 @@ tbody tr:hover td {
 		</s:form>
 	</p>
 	<h3>Previously submitted tagging requests</h3>
-	<table>
+	<table id="uploads">
 		<thead>
 			<tr>
 				<th>ID</th>

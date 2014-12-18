@@ -11,6 +11,8 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.zip.GZIPOutputStream;
 
+import javax.mail.MessagingException;
+
 import mila.HMM.HMM2Morph;
 import mila.HMM.MorphMult2TaggerFormat;
 import mila.mw.MWXMLTokenizer;
@@ -19,6 +21,9 @@ import mila.mw.PostProcessor1;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.ReaderInputStream;
+import org.apache.commons.lang3.text.StrBuilder;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.SimpleEmail;
 import org.apache.log4j.Logger;
 import org.mila.uploader.entities.TagRequest;
 import org.mila.uploader.entities.TagRequestState;
@@ -48,6 +53,34 @@ public class AsyncBean {
 			/* ??? */
 		}
 
+		try {
+			sendReadyMail(tagreq);
+		} catch (Exception e) {
+			logger.info("Failed to send mail", e);
+		}
+
+	}
+
+	private void sendReadyMail(TagRequest tagreq) throws MessagingException,
+			EmailException {
+		SimpleEmail email = new SimpleEmail();
+		email.setHostName("csm.cs.technion.ac.il");
+		email.addTo(tagreq.getUser().getMail());
+		email.setFrom("mila@cs.technion.ac.il");
+		email.addBcc("mila@cs.technion.ac.il");
+		email.setSubject("MILA Knowledge Center -- Tagging request finished");
+		StrBuilder msgText = new StrBuilder();
+		msgText.appendln("Hello,");
+		msgText.appendNewLine();
+		msgText.append("This message is to inform you that your submitted file, ");
+		msgText.append(tagreq.getUploadedFilename());
+		msgText.appendln(", has been tagged and is ready to be downloaded from the website:");
+		msgText.appendln("http://mila.cs.technion.ac.il:8088/fileuploader/");
+		msgText.appendNewLine();
+		msgText.appendln("Thank you, and have a good day,");
+		msgText.appendln("MILA Engineer");
+		email.setMsg(msgText.toString());
+		email.send();
 	}
 
 	public void tag(final File input, TagRequest tagreq) throws TagException {

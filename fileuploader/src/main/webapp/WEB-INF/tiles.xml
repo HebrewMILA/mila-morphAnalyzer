@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="baseLayout" template="/base.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header" value="/header.jsp" />
+		<put-attribute name="menu" value="/menu.jsp" />
+		<put-attribute name="body" value="/body.jsp" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition>
+
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/login.jsp" />
+	</definition>
+
+	<definition name="index" extends="baseLayout">
+		<put-attribute name="title" value="Index" />
+		<put-attribute name="body" value="/index.jsp" />
+	</definition>
+
+	<definition name="login_error" extends="baseLayout">
+		<put-attribute name="title" value="Login error" />
+		<put-attribute name="body" value="/login_error.jsp" />
+	</definition>
+
+	<definition name="upload_error" extends="baseLayout">
+		<put-attribute name="title" value="Upload error" />
+		<put-attribute name="body" value="/upload_error.jsp" />
+	</definition>
+
+	<definition name="download_error" extends="baseLayout">
+		<put-attribute name="title" value="Download error" />
+		<put-attribute name="body" value="/download_error.jsp" />
+	</definition>
+</tiles-definitions>
