@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/smip/jars/jax-qname.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/xsdlib.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/jaxb-api.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/jaxb-impl.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/jaxb-libs.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/jaxb-xjc.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/namespace.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/relaxngDatatype.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/javaee-api-6.0.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/xerces-2_11_0/xercesImpl.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/mysql-connector-java-3.1.11-bin.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/jax-qname.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/xsdlib.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/jaxb-libs.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/namespace.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/mariadb-java-client-1.1.7.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="/home/smip/jars/DBPool_v4.7.1.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/commons-cli-1.2/commons-cli-1.2.jar" sourcepath="/home/smip/jars/commons-cli-1.2/commons-cli-1.2-sources.jar"/>
-	<classpathentry kind="lib" path="/home/smip/jars/commons-io-2.4.jar" sourcepath="/home/smip/jars/commons-io-2.4-sources.jar">
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/dbpool-6.0.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/commons-cli-1.2/commons-cli-1.2.jar" sourcepath="/home/smip/jars/commons-cli-1.2/commons-cli-1.2-sources.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/commons-io-2.4.jar" sourcepath="/home/smip/jars/commons-io-2.4-sources.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/home/smip/jars/commons-io-2.4-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/javaee-api-7.0.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/slf4j-simple-1.7.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
