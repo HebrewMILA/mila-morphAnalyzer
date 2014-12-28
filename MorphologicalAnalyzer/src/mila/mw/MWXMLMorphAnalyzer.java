@@ -23,17 +23,17 @@ import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
 
 /**
- * 
+ *
  * <p>
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GPL
- * 
+ *
  * This library is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE.
  * </p>
- * 
- * 
+ *
+ *
  * @author Dalia Bojan
  * @version 1.0
  */
@@ -59,7 +59,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 	/**
 	 * data files mode working
-	 * 
+	 *
 	 * @param dinflectionsFile
 	 *            dinflections input data file path
 	 * @param dprefixesFile
@@ -70,7 +70,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	public static void dataLoad(String dinflectionsFile, String dprefixesFile,
 			String gimatriasFile, String dmwinflectionsFile, String mwe1File,
 			String mwe2File, String mwe3File, String mwe4File) {
-		long startTime = System.currentTimeMillis();
+		final long startTime = System.currentTimeMillis();
 		Data.webFlag = false;
 		Data.dinflectionsFile = dinflectionsFile;
 		Data.dmwinflectionsFile = dmwinflectionsFile;
@@ -87,15 +87,15 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see lexicon.analyse.MorphAnalyzer#main(java.lang.String[])
 	 */
 	public static void main(String[] args) {
-		MWXMLMorphAnalyzer a = new MWXMLMorphAnalyzer();
+		final MWXMLMorphAnalyzer a = new MWXMLMorphAnalyzer();
 
 		// 1) working with input / output file/directories
 
-		int argc = args.length;
+		final int argc = args.length;
 
 		boolean webFlag = false;
 		String dinflectionsFile = "";
@@ -108,24 +108,24 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		String dmwe4File = "";
 		String input = "";
 		String output = "";
-		String configFileName = "morphanalyzer.cfg";
+		final String configFileName = "morphanalyzer.cfg";
 
-		File f = new File(configFileName);
+		final File f = new File(configFileName);
 		if (!f.exists()) {
-			System.out.println("Can not find configuration file!"
+			System.err.println("Can not find configuration file!"
 					+ configFileName);
-			System.out.println("Creating deafult configurarion file...");
+			System.err.println("Creating deafult configurarion file...");
 			a.CreateConfigurationFile(configFileName);
 		}
 
 		String[] files = null;
 		try {
 			files = a.LoadConfigurationFile(configFileName); // load config file
-		} catch (Exception e) {
-			System.out.println("ERROR");
-			System.out
-					.println("Bad configuration file " + configFileName + " ");
-			System.out.println("Delete file " + configFileName
+		} catch (final Exception e) {
+			System.err.println("ERROR");
+			System.err
+			.println("Bad configuration file " + configFileName + " ");
+			System.err.println("Delete file " + configFileName
 					+ " to force default configuration file creation.");
 			e.printStackTrace();
 			System.exit(1);
@@ -133,7 +133,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 		switch (argc) {
 		case 3:
-			webFlag = (new Boolean(args[0]).booleanValue());
+			webFlag = new Boolean(args[0]).booleanValue();
 			System.out.println("webFlag=" + webFlag);
 			input = args[1];
 			System.out.println("input =" + input);
@@ -146,12 +146,14 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			 * dprefixesFile); gimartiasFile = args[5];
 			 * System.out.println("gimatrias File=" + gimartiasFile);
 			 */
-			for (String filename : files) {
-				if ((filename == null) || (filename.length() < 3)) {
-					System.out.println("Bad configuration file "
+			for (final String filename : files) {
+				if (filename == null || filename.length() < 3) {
+					System.err.println("Bad configuration file "
 							+ configFileName);
-					System.out.println("Delete file " + configFileName
-							+ " to force default configuration file creation.");
+					System.err
+							.println("Delete file "
+									+ configFileName
+									+ " to force default configuration file generation.");
 					System.exit(0);
 				}
 			}
@@ -172,8 +174,8 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			System.out.println("mwe2 File=" + dmwe2File);
 			System.out.println("mwe3 File=" + dmwe3File);
 			System.out.println("mwe4 File=" + dmwe4File);
-			File in = new File(input);
-			File out = new File(output);
+			final File in = new File(input);
+			final File out = new File(output);
 			if (in.isDirectory() && out.isDirectory()) {
 				if (webFlag) {
 					a.processDirectory(input, output);
@@ -190,25 +192,26 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 							dprefixesFile, gimartiasFile, dmwinflectionsFile,
 							dmwe1File, dmwe2File, dmwe3File, dmwe4File);
 				}
-			} else
+			} else {
 				System.out
-						.println("Input and output should both be files or should both be existing directories.");
+				.println("Input and output should both be files or should both be existing directories.");
+			}
 
 			break;
 
 		default:
-			System.out.println("Morpological Analyzer");
-			System.out.println("Wrong number of parameters");
-			System.out.println("USAGE:");
-			System.out
-					.println("java -jar morphAnalyzer.jar [database flag] [input] [output]");
-			System.out
-					.println("database flag = true for using the mysql database or false for using the external .data files");
-			System.out
-					.println("external .data files names are in the configuration file : "
-							+ configFileName);
-			System.out.println("Example:");
-			System.out
+			System.err.println("Morpological Analyzer");
+			System.err.println("Wrong number of parameters");
+			System.err.println("USAGE:");
+			System.err
+			.println("java -jar morphAnalyzer.jar [database flag] [input] [output]");
+			System.err
+			.println("database flag = true for using the mysql database or false for using the external .data files");
+			System.err
+			.println("external .data files names are in the configuration file : "
+					+ configFileName);
+			System.err.println("Example:");
+			System.err
 					.println("java -jar morphAnalyzer.jar false input/ output/");
 		}
 
@@ -251,8 +254,8 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	}
 
 	protected static long printTimesHandling(long startTime) {
-		long afterLoadTime = System.currentTimeMillis();
-		long load2MemoryElapsedTime = afterLoadTime - startTime;
+		final long afterLoadTime = System.currentTimeMillis();
+		final long load2MemoryElapsedTime = afterLoadTime - startTime;
 		System.out.println("Finished loading data into memory, Elapsed time = "
 				+ load2MemoryElapsedTime + " ms");
 		return afterLoadTime;
@@ -264,43 +267,47 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		if (inputDirectory.isDirectory()) {
 			// create correspond directory for xml
 
-			String out = outputDirectory
+			final String out = outputDirectory
 					+ inputDirectory.getAbsolutePath().substring(pos);
 			// System.out.println(out);
-			if (!(new File(out)).exists()) {
-				if ((new File(out)).mkdir())
+			if (!new File(out).exists()) {
+				if (new File(out).mkdir()) {
 					System.out.println("Success creating directory: " + out);
-				else
-					System.out
-							.println("Error in creation of directory: " + out);
+				} else {
+					System.err
+					.println("Error in creation of directory: " + out);
+				}
 			}
 			// call for analysis of each file/dir under the currect directory
-			File[] files = inputDirectory.listFiles();
+			final File[] files = inputDirectory.listFiles();
 			Arrays.sort(files);
-			for (int i = 0; i < files.length; i++)
-				analyzeDirectory(files[i], outputDirectory, pos);
+			for (final File file : files) {
+				analyzeDirectory(file, outputDirectory, pos);
+			}
 		} else { // file to be analyzed
-			String inputFile = inputDirectory.getAbsolutePath();
-			String outputFile = outputDirectory + inputFile.substring(pos);
+			final String inputFile = inputDirectory.getAbsolutePath();
+			final String outputFile = outputDirectory
+					+ inputFile.substring(pos);
 			try {
 
 				// System.out.println(outputFile);
 				analyzeFile(inputFile, outputFile);
-				PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
+				final PostProcessor1 postProcessor = new PostProcessor1(
+						!Data.webFlag);
 
 				try {
 					postProcessor.process(outputFile, outputFile);
-				} catch (UnsupportedEncodingException e) {
+				} catch (final UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} catch (SQLException e) {
+				} catch (final SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} catch (JAXBException e) {
+				} catch (final JAXBException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} catch (Exception e) {
+			} catch (final Exception e) {
 				e.printStackTrace();
 			}
 		}
@@ -312,18 +319,18 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	private void analyzeFile(String inputFile, String outputFile) {
 		System.out.println("(F) MWXMLMorphAnalyzer: analyzeFile()");
 		try {
-			long afterLoadTime = System.currentTimeMillis();
+			final long afterLoadTime = System.currentTimeMillis();
 			// ///////////////////////////////////////
 			ReadXMLFile(inputFile, outputFile);
 			// //////////////////////////////////////
-			long elapsedTime = System.currentTimeMillis() - afterLoadTime;
+			final long elapsedTime = System.currentTimeMillis() - afterLoadTime;
 			System.out.println("analyze elapsed time = " + elapsedTime + "ms");
 			// System.out.println("tokens count = " + tokensCount);
 
 			// createXML.printDoc();
-		} catch (Exception e) {
-			System.out
-					.println("An error occured make sure you have tokenized the input file, if error still exists send the developer the input file");
+		} catch (final Exception e) {
+			System.err
+			.println("An error occured make sure you have tokenized the input file, if error still exists send the developer the input file");
 			e.printStackTrace();
 		} finally {
 			// System.exit(0);
@@ -335,7 +342,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * tokenizer and get an analysis.<br>
 	 * This method should be used in cases when we have the text already
 	 * tokenized. It is quicker than any other way.<br>
-	 * 
+	 *
 	 * @param pw
 	 *            output XML format according to Mila standards
 	 * @param inputSt
@@ -347,17 +354,16 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		String hebWord = "";
 		try {
 			hebWord = URLDecoder.decode(inputSt, "UTF-8");
-		} catch (UnsupportedEncodingException e2) {
-			// TODO Auto-generated catch block
+		} catch (final UnsupportedEncodingException e2) {
 			e2.printStackTrace();
 		}
 
-		MWCreateCorpusXML mwcreateXML = new MWCreateCorpusXML();
+		final MWCreateCorpusXML mwcreateXML = new MWCreateCorpusXML();
 		try {
 			mwcreateXML.createXMLDoc();
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			System.out
-					.println("XMLMorphAnalyzer:processXMLOutput while createXMLdOC - Exception");
+			.println("XMLMorphAnalyzer:processXMLOutput while createXMLdOC - Exception");
 			e.printStackTrace();
 		}
 		mwcreateXML.createArticle();
@@ -365,16 +371,14 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		mwcreateXML.createSentence();
 		mwcreateXML.createToken(hebWord);
 
-		MWTokenizationParser mwtokenizationParser = new MWTokenizationParser(
+		final MWTokenizationParser mwtokenizationParser = new MWTokenizationParser(
 				mwcreateXML);
 		if (!checkKitzur(hebWord, mwtokenizationParser)) {
 			try {
 				mwtokenizationParser.readInput(hebWord);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			} catch (final IOException e) {
 				e.printStackTrace();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
+			} catch (final Exception e) {
 				e.printStackTrace();
 			}
 		}
@@ -387,7 +391,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	/**
 	 * This method is used only when input is a single token it simulates
 	 * tokenizer kitzurim handling
-	 * 
+	 *
 	 * @param hebWord
 	 * @return
 	 */
@@ -398,31 +402,30 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			// System.out.println("analyzeStringInput : hebWord=" + hebWord);
 			// token length
 			int indexKitzur = 0;
-			if (((indexKitzur = hebWord.indexOf("וכד'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("מס'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("מע'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("מח'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("וכו'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("רח'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("טל'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("שכ'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("שד'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("פרופ'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("עמ'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("אונ'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("וגו'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("גב'")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("ש\"ס")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("ש''ס")) != -1)
-					|| ((indexKitzur = hebWord.indexOf("ק\"ג")) != -1))
+			if ((indexKitzur = hebWord.indexOf("וכד'")) != -1
+					|| (indexKitzur = hebWord.indexOf("מס'")) != -1
+					|| (indexKitzur = hebWord.indexOf("מע'")) != -1
+					|| (indexKitzur = hebWord.indexOf("מח'")) != -1
+					|| (indexKitzur = hebWord.indexOf("וכו'")) != -1
+					|| (indexKitzur = hebWord.indexOf("רח'")) != -1
+					|| (indexKitzur = hebWord.indexOf("טל'")) != -1
+					|| (indexKitzur = hebWord.indexOf("שכ'")) != -1
+					|| (indexKitzur = hebWord.indexOf("שד'")) != -1
+					|| (indexKitzur = hebWord.indexOf("פרופ'")) != -1
+					|| (indexKitzur = hebWord.indexOf("עמ'")) != -1
+					|| (indexKitzur = hebWord.indexOf("אונ'")) != -1
+					|| (indexKitzur = hebWord.indexOf("וגו'")) != -1
+					|| (indexKitzur = hebWord.indexOf("גב'")) != -1
+					|| (indexKitzur = hebWord.indexOf("ש\"ס")) != -1
+					|| (indexKitzur = hebWord.indexOf("ש''ס")) != -1
+					|| (indexKitzur = hebWord.indexOf("ק\"ג")) != -1) {
 				if (indexKitzur > 0) {
 					isKitzur = true;
 
 					String checkedPrefix = hebWord.substring(0, indexKitzur);
 					String hebBase = hebWord.substring(indexKitzur);
 					if (checkedPrefix.endsWith("ה")) {
-						checkedPrefix = (checkedPrefix.replace('ה', ' '))
-								.trim();
+						checkedPrefix = checkedPrefix.replace('ה', ' ').trim();
 						hebBase = "ה" + hebBase;
 					}
 					if (StringUtils.moshevkaleb(Translate
@@ -433,6 +436,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 								Translate.Heb2Eng(hebWord), hebWord);
 					}
 				}
+			}
 		}
 		return isKitzur;
 
@@ -443,79 +447,76 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * create a configuration file which contain the external data files names
 	 */
 	private void CreateConfigurationFile(String filename) {
-		try {
-			FileWriter outFile = new FileWriter(filename);
-			PrintWriter out = new PrintWriter(outFile);
-
-			try {
-				out.println("dinflections.data");
-				out.println("dprefixes.data");
-				out.println("gimatria.data");
-				out.println("dmwinflections.data");
-				out.println("dmwe1.data");
-				out.println("dmwe2.data");
-				out.println("dmwe3.data");
-				out.println("dmwe4.data");
-			} catch (Exception e) {
-				// System.out.println("bad configuration file " + filename + " "
-				// );
-				// System.out.println("delete file " + filename +
-				// " to force deafult configuration file creation" );
-			}
-
-			out.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+		try (final PrintWriter out = new PrintWriter(new FileWriter(filename))) {
+			out.println("dataFiles/dinflections.data");
+			out.println("dataFiles/dprefixes.data");
+			out.println("dataFiles/gimatria.data");
+			out.println("dataFiles/dmwinflections.data");
+			out.println("dataFiles/dmwe1.data");
+			out.println("dataFiles/dmwe2.data");
+			out.println("dataFiles/dmwe3.data");
+			out.println("dataFiles/dmwe4.data");
+		} catch (final Exception e) {
+			System.err.println("Bad configuration file " + filename + ".");
+			System.err.println("Couldn't generate default configuration file.");
 		}
 	}
 
 	// -------------------------------------------------------------------------------------------------------
 	/**
 	 * create a configuration file which contain the external data files names
-	 * 
+	 *
 	 * @throws IOException
 	 */
 	private String[] LoadConfigurationFile(String filename) throws Exception {
-		String line[] = { "", "", "", "", "", "", "", "" };
+		final String line[] = { "", "", "", "", "", "", "", "" };
 		/*
 		 * try {
 		 */
 		System.out.print("Loading Configuration file...");
-		FileReader input = new FileReader(filename);
-		BufferedReader bufRead = new BufferedReader(input);
+		final FileReader input = new FileReader(filename);
+		final BufferedReader bufRead = new BufferedReader(input);
 
 		line[0] = bufRead.readLine(); // dinflections.data
-		if (line[0] == null)
-			System.out
-					.println("Error in configuration file - missing entry for dinflections.data file");
+		if (line[0] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for dinflections.data file");
+		}
 		line[1] = bufRead.readLine(); // dprefixes.data
-		if (line[1] == null)
-			System.out
-					.println("Error in configuration file - missing entry for dprefixes.data file");
+		if (line[1] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for dprefixes.data file");
+		}
 		line[2] = bufRead.readLine(); // gimatria.data
-		if (line[2] == null)
-			System.out
-					.println("Error in configuration file - missing entry for gimatria.data file");
+		if (line[2] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for gimatria.data file");
+		}
 		line[3] = bufRead.readLine(); // dmwinflections.data
-		if (line[3] == null)
-			System.out
-					.println("Error in configuration file - missing entry for dmwinflections.data file");
+		if (line[3] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for dmwinflections.data file");
+		}
 		line[4] = bufRead.readLine(); // dmwe1.data
-		if (line[4] == null)
-			System.out
-					.println("Error in configuration file - missing entry for dmwe1.data file");
+		if (line[4] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for dmwe1.data file");
+		}
 		line[5] = bufRead.readLine(); // dmwe2.data
-		if (line[5] == null)
-			System.out
-					.println("Error in configuration file - missing entry for dmwe2.data file");
+		if (line[5] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for dmwe2.data file");
+		}
 		line[6] = bufRead.readLine(); // dmwe3.data
-		if (line[6] == null)
-			System.out
-					.println("Error in configuration file - missing entry for dmwe3.data file");
+		if (line[6] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for dmwe3.data file");
+		}
 		line[7] = bufRead.readLine(); // dmwe4.data
-		if (line[7] == null)
-			System.out
-					.println("Error in configuration file - missing entry for dmwe4.data file");
+		if (line[7] == null) {
+			System.err
+			.println("Error in configuration file - missing entry for dmwe4.data file");
+		}
 
 		bufRead.close();
 		System.out.println("OK");
@@ -533,7 +534,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	/**
 	 * In this method we assume that the data files are already loaded We use it
 	 * in Client server architecture.
-	 * 
+	 *
 	 * @param pw
 	 * @param tokenizationOutputStr
 	 */
@@ -551,7 +552,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * This method accepts XML String of tokenized text (the output of Mila
 	 * Tokenizer) and produce analyzed text in XML format according to Mila
 	 * standards
-	 * 
+	 *
 	 * @param tokenizationOutputStr
 	 *            input string containing tokenized Hebrew in XML format - the
 	 *            output of Mila tokenizer
@@ -577,7 +578,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	/**
 	 * In this method we assume that the data files are already loaded We use it
 	 * in Client server architecture.
-	 * 
+	 *
 	 * @param pw
 	 * @param tokenizationOutputStr
 	 */
@@ -593,16 +594,16 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * This method is used for mass processing in database mode working- It can
 	 * process directory of files/directories. It is especially useful for
 	 * processing corpora.
-	 * 
+	 *
 	 * @param inputDirectory
 	 * @param outputDirectory
 	 */
 	@Override
 	public void processDirectory(String inputDirectory, String outputDirectory) {
 		System.out.println("(F) MWXMLMorphAnalyzer: processDirectory()");
-		File in = new File(inputDirectory);
-		int pos = (in.isDirectory() ? in.getAbsolutePath().length() : in
-				.getParent().length());
+		final File in = new File(inputDirectory);
+		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
+				.getParent().length();
 		dataLoad();
 		analyzeDirectory(in, outputDirectory, pos);
 	}
@@ -611,7 +612,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * This method is used for mass processing in data files mode working- It
 	 * can process a directory of files/directories. It is especially useful for
 	 * processing corpora.
-	 * 
+	 *
 	 * @param inputDirectory
 	 *            path of directory which contains either xml tokenized files or
 	 *            directories of xml tokenized file
@@ -630,10 +631,10 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			String gimartiasFile, String dmwinflectionsFile, String mwe1File,
 			String mwe2File, String mwe3File, String mwe4File) {
 		System.out
-				.println("(F) MWXMLMorphAnalyzer: processDirectory(datafiles..)");
-		File in = new File(inputDirectory);
-		int pos = (in.isDirectory() ? in.getAbsolutePath().length() : in
-				.getParent().length());
+		.println("(F) MWXMLMorphAnalyzer: processDirectory(datafiles..)");
+		final File in = new File(inputDirectory);
+		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
+				.getParent().length();
 		dataLoad(dinflectionsFile, dprefixesFile, gimartiasFile,
 				dmwinflectionsFile, mwe1File, mwe2File, mwe3File, mwe4File);
 		analyzeDirectory(in, outputDirectory, pos);
@@ -643,23 +644,23 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * This method is used for mass processing without dataLoading- It can
 	 * process directory of files/directories. It is especially useful for
 	 * processing corpora.
-	 * 
+	 *
 	 * @param inputDirectory
 	 * @param outputDirectory
 	 */
 	@Override
 	public void processDirectoryNoDataLoad(String inputDirectory,
 			String outputDirectory) {
-		File in = new File(inputDirectory);
-		int pos = (in.isDirectory() ? in.getAbsolutePath().length() : in
-				.getParent().length());
+		final File in = new File(inputDirectory);
+		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
+				.getParent().length();
 		analyzeDirectory(in, outputDirectory, pos);
 	}
 
 	/**
 	 * This method is used for processing a single xml already tokenized file in
 	 * database mode working. This input file is prepared with Mila tokenizer.
-	 * 
+	 *
 	 * @param inputFile
 	 *            - xml tokenized file
 	 * @param outputFile
@@ -670,16 +671,16 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		System.out.println("(F)MWXMLMorphAnalyzer:processSingleFile()");
 		dataLoad();
 		analyzeFile(inputFile, outputFile);
-		PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
+		final PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
 		try {
 			postProcessor.process(outputFile, outputFile);
-		} catch (UnsupportedEncodingException e) {
+		} catch (final UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (final SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (JAXBException e) {
+		} catch (final JAXBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -689,7 +690,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	/**
 	 * This method is used for processing a single xml already tokenized file in
 	 * data files mode working. This input file is prepared with Mila tokenizer.
-	 * 
+	 *
 	 * @param inputFile
 	 *            xml tokenized file to be morphologically analyzed
 	 * @param outputFile
@@ -708,23 +709,23 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		dataLoad(dinflectionsFile, dprefixesFile, gimartiasFile,
 				dmwinflectionsFile, mwe1File, mwe2File, mwe3File, mwe4File);
 		analyzeFile(inputFile, outputFile);
-		PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
+		final PostProcessor1 postProcessor = new PostProcessor1(!Data.webFlag);
 		try {
 			postProcessor.process(outputFile, outputFile);
-		} catch (UnsupportedEncodingException e) {
+		} catch (final UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (final SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (JAXBException e) {
+		} catch (final JAXBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void ReadXMLFile(String tokenizationOutputStr, PrintWriter pw) {
 		// System.out.println("(F) ReadXMLFile() ");
@@ -732,28 +733,28 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		try {
 			in = new ByteArrayInputStream(
 					tokenizationOutputStr.getBytes("UTF-8"));
-		} catch (UnsupportedEncodingException e) {
+		} catch (final UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		MWCreateCorpusXML mwcreateXML = new MWCreateCorpusXML();
+		final MWCreateCorpusXML mwcreateXML = new MWCreateCorpusXML();
 		mwcreateXML.createXMLDoc();
 		mwcreateXML.createArticle();
 
-		MWTokenizationParser mwtokenizationParser = new MWTokenizationParser(
+		final MWTokenizationParser mwtokenizationParser = new MWTokenizationParser(
 				mwcreateXML);
 		mwtokenizationParser.parse(in);
 		mwcreateXML.printDoc(pw);
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void ReadXMLFile(String inputFile, String outputFile) {
 		InputStream in = null;
 		try {
 			in = new FileInputStream(new File(inputFile));
-		} catch (FileNotFoundException e) {
+		} catch (final FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -762,11 +763,11 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		// + DateFormat.getDateTimeInstance(DateFormat.SHORT,
 		// DateFormat.SHORT).format(now));
 		// System.out.println("ReadXMLFile: "+inputFile);
-		MWCreateCorpusXML mwcreateXML = new MWCreateCorpusXML(outputFile);
+		final MWCreateCorpusXML mwcreateXML = new MWCreateCorpusXML(outputFile);
 		mwcreateXML.createXMLDoc();
 		mwcreateXML.createArticle();
 
-		MWTokenizationParser mwtokenizationParser = new MWTokenizationParser(
+		final MWTokenizationParser mwtokenizationParser = new MWTokenizationParser(
 				mwcreateXML);
 		mwtokenizationParser.parse(in); // in gets input from input file
 		mwcreateXML.printDoc();
