@@ -11,7 +11,7 @@
 	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/relaxngDatatype.jar"/>
 	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/xercesImpl.jar"/>
 	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/mariadb-java-client-1.1.7.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/dbpool-6.0.jar"/>
 	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/commons-cli-1.2/commons-cli-1.2.jar" sourcepath="/home/smip/jars/commons-cli-1.2/commons-cli-1.2-sources.jar"/>
