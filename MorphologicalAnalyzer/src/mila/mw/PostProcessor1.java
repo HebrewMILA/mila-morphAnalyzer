@@ -79,7 +79,7 @@ public class PostProcessor1 extends Connected {
 			String prevId, String transliterated,
 			ArrayList prevTransliteratedList, AnalysisType analysis,
 			TokenType prevToken, TokenType token)
-					throws UnsupportedEncodingException, JAXBException {
+			throws UnsupportedEncodingException, JAXBException {
 		if (this.useDataFiles) {
 			return this.checkBackwordsNew(id, expectedPrevId, prevId,
 					transliterated, prevTransliteratedList, analysis,
@@ -95,7 +95,7 @@ public class PostProcessor1 extends Connected {
 			String prevId, String transliterated,
 			ArrayList prevTransliteratedList, AnalysisType analysis,
 			TokenType prevToken, TokenType token)
-					throws UnsupportedEncodingException, JAXBException {
+			throws UnsupportedEncodingException, JAXBException {
 		// System.out.println("\n(F) PostProcessor1:checkBackwords(id = "+id+",expecedPrevId = "+expectedPrevId+",prevId = "+prevId+","+transliterated+")");
 		boolean rt = false;
 		final int prevTransliteratedListSize = prevTransliteratedList.size();
@@ -175,7 +175,7 @@ public class PostProcessor1 extends Connected {
 
 				final Iterator<MWE1record> itr = result.iterator();
 				while (itr.hasNext()) // goind over first list and finding match
-					// in 2nd
+				// in 2nd
 				{
 					final MWE1record me1rec = itr.next();
 					// System.out.println("(F) PostProcessor1:checkBackwords():  pos = "
@@ -187,16 +187,16 @@ public class PostProcessor1 extends Connected {
 						// me1rec.getId() + " mwerec.getFormerItemId() " +
 						// mwerec.getFormerItemId());
 						if (me1rec.getId().equals(mwerec.getFormerItemId())) // if
-							// they
-							// have
-							// the
-							// same
-							// id
-							// then
-							// we
-							// have
-							// a
-							// match
+						// they
+						// have
+						// the
+						// same
+						// id
+						// then
+						// we
+						// have
+						// a
+						// match
 						{
 							// System.out.println("(F) PostProcessor1:checkBackwords(): found MATCH  trans = "
 							// + me1rec.getTransliterated());
@@ -224,17 +224,17 @@ public class PostProcessor1 extends Connected {
 				// #####################################
 				final String firstWord = ((String) prevTransliteratedList
 						.get(prevTransliteratedListSize - 3)).replaceAll("'",
-								"\\\\'");
+						"\\\\'");
 
 				phraze = firstWord
 						+ " "
 						+ ((String) prevTransliteratedList
 								.get(prevTransliteratedListSize - 2))
 								.replaceAll("'", "\\\\'")
-								+ " "
-								+ ((String) prevTransliteratedList
-										.get(prevTransliteratedListSize - 1))
-										.replaceAll("'", "\\\\'");
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 1))
+								.replaceAll("'", "\\\\'");
 
 				selectSql = " select mwe3.PGN, mwe3.spelling, mwe3.register ,  mwe3.gender, mwe3.number ,mwe3.definiteness,  mwe3.mwTransliterated,  mwe3.mwUndotted, mwe"
 						+ id
@@ -281,14 +281,14 @@ public class PostProcessor1 extends Connected {
 
 				final Iterator<MWErecord> itr = result3.iterator();
 				while (itr.hasNext()) // goind over first list and finding match
-					// in 3rd
+				// in 3rd
 				{
 					final MWErecord mwe3rec = itr.next();
 					if (mwe3rec.getMwTransliterated().equals(phraze)
-							&& (mwe3rec.getTransliterated()
-									.equals(transliterated)))
-						// MwTransliterated == phraze && mwe3.transliterated =
-						// transliterated
+							&& mwe3rec.getTransliterated().equals(
+									transliterated))
+					// MwTransliterated == phraze && mwe3.transliterated =
+					// transliterated
 					{
 						// System.out.println("mwe3rec.getMwTransliterated() = "
 						// + mwe3rec.getMwTransliterated()+" ?= "+phraze);
@@ -304,22 +304,23 @@ public class PostProcessor1 extends Connected {
 									prevTransliterated)
 									&& mwe2rec.getAid().equals(
 											mwe3rec.getFormerItemId())) // if
-								// they
-								// have
-								// the
-								// same
-								// id
-								// then
-								// we
-								// have
-								// a
-								// match
+							// they
+							// have
+							// the
+							// same
+							// id
+							// then
+							// we
+							// have
+							// a
+							// match
 							{
 								// System.out.println("mwe2rec.getTransliterated() = "
 								// + mwe2rec.getTransliterated()+" ?= " +
 								// prevTransliterated);
 
-								final Iterator<MWE1record> itr1 = result.iterator();
+								final Iterator<MWE1record> itr1 = result
+										.iterator();
 								while (itr1.hasNext()) {
 									final MWE1record mwe1rec = itr1.next();
 									if (mwe1rec.getId().equals(
@@ -348,10 +349,10 @@ public class PostProcessor1 extends Connected {
 
 				final String firstWord = ((String) prevTransliteratedList
 						.get(prevTransliteratedListSize - 4)).replaceAll("'",
-								"\\\\'");
+						"\\\\'");
 				final String secondWord = ((String) prevTransliteratedList
 						.get(prevTransliteratedListSize - 3)).replaceAll("'",
-								"\\\\'");
+						"\\\\'");
 
 				phraze = firstWord
 						+ " "
@@ -360,10 +361,10 @@ public class PostProcessor1 extends Connected {
 						+ ((String) prevTransliteratedList
 								.get(prevTransliteratedListSize - 2))
 								.replaceAll("'", "\\\\'")
-								+ " "
-								+ ((String) prevTransliteratedList
-										.get(prevTransliteratedListSize - 1))
-										.replaceAll("'", "\\\\'");
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 1))
+								.replaceAll("'", "\\\\'");
 				// System.out.println("*********************" + phraze);
 
 				selectSql = " select mwe4.PGN, mwe4.spelling, mwe4.register  , mwe4.gender, mwe4.number, mwe4.mwTransliterated,  mwe4.definiteness, mwe4.mwUndotted, mwe"
@@ -409,13 +410,13 @@ public class PostProcessor1 extends Connected {
 
 				final Iterator<MWErecord> itr4 = result4.iterator();
 				while (itr4.hasNext()) // goind over first list and finding
-					// match in 4rd
+				// match in 4rd
 				{
 					final MWErecord mwe4rec = itr4.next();
 					if (mwe4rec.getMwTransliterated().equals(phraze)
-							&& (mwe4rec.getTransliterated()
-									.equals(transliterated))) // MwTransliterated
-						// == phraze
+							&& mwe4rec.getTransliterated().equals(
+									transliterated)) // MwTransliterated
+					// == phraze
 					{
 						final Iterator<MWErecord> itr3 = result3.iterator();
 						while (itr3.hasNext()) {
@@ -427,18 +428,19 @@ public class PostProcessor1 extends Connected {
 									prevTransliterated)
 									&& mwe3rec.getAid().equals(
 											mwe4rec.getFormerItemId())) // if
-								// they
-								// have
-								// the
-								// same
-								// id
-								// then
-								// we
-								// have
-								// a
-								// match
+							// they
+							// have
+							// the
+							// same
+							// id
+							// then
+							// we
+							// have
+							// a
+							// match
 							{
-								final Iterator<MWErecord> itr2 = result2.iterator();
+								final Iterator<MWErecord> itr2 = result2
+										.iterator();
 								while (itr2.hasNext()) {
 									final MWErecord mwe2rec = itr2.next();
 									// System.out.println("mwe2rec.getaaId() = "
@@ -447,33 +449,34 @@ public class PostProcessor1 extends Connected {
 									// mwe3rec.getFormerItemId());
 									if (mwe2rec.getAid().equals(
 											mwe3rec.getFormerItemId())) // if
-										// they
-										// have
-										// the
-										// same
-										// id
-										// then
-										// we
-										// have
-										// a
-										// match
+									// they
+									// have
+									// the
+									// same
+									// id
+									// then
+									// we
+									// have
+									// a
+									// match
 									{
 										final Iterator<MWE1record> itr1 = result
 												.iterator();
 										while (itr1.hasNext()) {
-											final MWE1record mwe1rec = itr1.next();
+											final MWE1record mwe1rec = itr1
+													.next();
 											if (mwe1rec.getId().equals(
 													mwe2rec.getFormerItemId())) // if
-												// they
-												// have
-												// the
-												// same
-												// id
-												// then
-												// we
-												// have
-												// a
-												// match
+											// they
+											// have
+											// the
+											// same
+											// id
+											// then
+											// we
+											// have
+											// a
+											// match
 											{
 												// System.out.println("(F) PostProcessor1:checkBackwords(): found MATCH  trans = "
 												// +
@@ -503,7 +506,7 @@ public class PostProcessor1 extends Connected {
 			/*
 			 * ResultSet rs = null; try { rs = getData(selectSql); try {
 			 * rs.last();
-			 *
+			 * 
 			 * if (resultSetSize != rs.getRow()) { System.out.println(
 			 * "(F) PostProcessor1:checkBackwords THIS IS NOT GOOD !!! expectedPrevId="
 			 * +expectedPrevId);
@@ -631,9 +634,9 @@ public class PostProcessor1 extends Connected {
 					PGN = cRes.getPGN();
 
 					if (lastPGN.length() > 0 && !lastPGN.equals(PGN)
-							// && (lastSpelling.length() > 0 &&
-							// !lastSpelling.equals(spelling))
-							) {
+					// && (lastSpelling.length() > 0 &&
+					// !lastSpelling.equals(spelling))
+					) {
 						final int newId = token.getAnalysis().size() + 1;
 						objFactory = new ObjectFactory();
 						newAnalysis = objFactory.createAnalysisType();
@@ -719,7 +722,7 @@ public class PostProcessor1 extends Connected {
 			String prevId, String transliterated,
 			ArrayList prevTransliteratedList, AnalysisType analysis,
 			TokenType prevToken, TokenType token)
-					throws UnsupportedEncodingException, JAXBException {
+			throws UnsupportedEncodingException, JAXBException {
 		boolean rt = false;
 		final int prevTransliteratedListSize = prevTransliteratedList.size();
 		final int intId = Integer.parseInt(id);
@@ -759,11 +762,11 @@ public class PostProcessor1 extends Connected {
 			if (expectedPrevId.equals("1")) {
 				phraze = ((String) prevTransliteratedList
 						.get(prevTransliteratedListSize - 2)).replaceAll("'",
-								"\\\\'")
-								+ " "
-								+ ((String) prevTransliteratedList
-										.get(prevTransliteratedListSize - 1))
-										.replaceAll("'", "\\\\'");
+						"\\\\'")
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 1))
+								.replaceAll("'", "\\\\'");
 				// System.out.println("*********************" + phraze);
 				selectSql = " select mwe2.spelling, mwe2.register, mwe2.gender, mwe2.number,mwe2.definiteness,  mwe2.mwTransliterated,  mwe2.mwUndotted, mwe"
 						+ id
@@ -792,15 +795,15 @@ public class PostProcessor1 extends Connected {
 			} else if (expectedPrevId.equals("2")) {
 				phraze = ((String) prevTransliteratedList
 						.get(prevTransliteratedListSize - 3)).replaceAll("'",
-								"\\\\'")
-								+ " "
-								+ ((String) prevTransliteratedList
-										.get(prevTransliteratedListSize - 2))
-										.replaceAll("'", "\\\\'")
-										+ " "
-										+ ((String) prevTransliteratedList
-												.get(prevTransliteratedListSize - 1))
-												.replaceAll("'", "\\\\'");
+						"\\\\'")
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 2))
+								.replaceAll("'", "\\\\'")
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 1))
+								.replaceAll("'", "\\\\'");
 				// System.out.println("*********************" + phraze);
 				selectSql = " select mwe3.PGN, mwe3.spelling, mwe3.register ,  mwe3.gender, mwe3.number ,mwe2.definiteness,  mwe3.mwTransliterated,  mwe3.mwUndotted, mwe"
 						+ id
@@ -834,19 +837,19 @@ public class PostProcessor1 extends Connected {
 			} else if (expectedPrevId.equals("3")) {
 				phraze = ((String) prevTransliteratedList
 						.get(prevTransliteratedListSize - 4)).replaceAll("'",
-								"\\\\'")
-								+ " "
-								+ ((String) prevTransliteratedList
-										.get(prevTransliteratedListSize - 3))
-										.replaceAll("'", "\\\\'")
-										+ " "
-										+ ((String) prevTransliteratedList
-												.get(prevTransliteratedListSize - 2))
-												.replaceAll("'", "\\\\'")
-												+ " "
-												+ ((String) prevTransliteratedList
-														.get(prevTransliteratedListSize - 1))
-														.replaceAll("'", "\\\\'");
+						"\\\\'")
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 3))
+								.replaceAll("'", "\\\\'")
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 2))
+								.replaceAll("'", "\\\\'")
+						+ " "
+						+ ((String) prevTransliteratedList
+								.get(prevTransliteratedListSize - 1))
+								.replaceAll("'", "\\\\'");
 				// System.out.println("*********************" + phraze);
 
 				selectSql = " select mwe4.PGN, mwe4.spelling, mwe4.register  , mwe4.gender, mwe4.number, mwe4.mwTransliterated,  mwe4.definiteness, mwe4.mwUndotted, mwe"
@@ -933,15 +936,15 @@ public class PostProcessor1 extends Connected {
 										&& dottedLexiconItem.length() > 0
 										&& dottedLexiconItem.charAt(0) != 'u') {
 									analysis.getBase()
-									.setDottedLexiconItem(
-											URLDecoder.decode(
-													dottedLexiconItem,
-													"UTF-8"));
+											.setDottedLexiconItem(
+													URLDecoder.decode(
+															dottedLexiconItem,
+															"UTF-8"));
 								}
 								analysis.getBase().setLexiconPointer(lexiconId);
 								analysis.getBase()
-								.setTransliteratedLexiconItem(
-										transliteratedLexiconItem);
+										.setTransliteratedLexiconItem(
+												transliteratedLexiconItem);
 								if (type.charAt(0) != 'u') {
 									analysis.getBase().getMWE().setType(type);
 								}
@@ -951,16 +954,16 @@ public class PostProcessor1 extends Connected {
 										URLDecoder.decode(undottedLexiconItem,
 												"UTF-8"));
 								analysis.getBase().getMWE()
-								.setSpelling(spelling);
+										.setSpelling(spelling);
 								analysis.getBase().getMWE()
-								.setRegister(register);
+										.setRegister(register);
 								if (!number.equals("unspecified")) {
 									analysis.getBase().getMWE()
-									.setNumber(number);
+											.setNumber(number);
 								}
 								if (!gender.equals("unspecified")) {
 									analysis.getBase().getMWE()
-									.setGender(gender);
+											.setGender(gender);
 								}
 								if (!definiteness.equals("unspecified")) {
 									if (definiteness.equals("tt")
@@ -972,18 +975,18 @@ public class PostProcessor1 extends Connected {
 										definiteness = "false";
 									}
 									analysis.getBase().getMWE()
-									.setDefiniteness(definiteness);
+											.setDefiniteness(definiteness);
 								}
 
 								analysis.getBase()
-								.getMWE()
-								.setMultiWordTransliterated(
-										mwTransliterated);
+										.getMWE()
+										.setMultiWordTransliterated(
+												mwTransliterated);
 								analysis.getBase()
-								.getMWE()
-								.setMultiWordUndotted(
-										URLDecoder.decode(mwUndotted,
-												"UTF-8"));
+										.getMWE()
+										.setMultiWordUndotted(
+												URLDecoder.decode(mwUndotted,
+														"UTF-8"));
 								if (expectedPrevId.equals("1")) {
 									pos = rs.getString("pos");
 									removeAnalysisByPos(prevToken, pos);
@@ -995,9 +998,9 @@ public class PostProcessor1 extends Connected {
 							PGN = rs.getString("PGN");
 
 							if (lastPGN.length() > 0 && !lastPGN.equals(PGN)
-									// && (lastSpelling.length() > 0 &&
-									// !lastSpelling.equals(spelling))
-									) {
+							// && (lastSpelling.length() > 0 &&
+							// !lastSpelling.equals(spelling))
+							) {
 								final int newId = token.getAnalysis().size() + 1;
 								objFactory = new ObjectFactory();
 								newAnalysis = objFactory.createAnalysisType();
@@ -1096,7 +1099,7 @@ public class PostProcessor1 extends Connected {
 	// ----------------------------------------------------------------------------------------------------
 	public boolean checkForward(String transliterated,
 			String nextTransliterated, String prevTransliterated, int id)
-					throws UnsupportedEncodingException {
+			throws UnsupportedEncodingException {
 		boolean rt = false;
 		String selectSql = "";
 		final int nextId = id + 1;
@@ -1134,7 +1137,7 @@ public class PostProcessor1 extends Connected {
 	/*--------------------------------------------------------------------------------------------------------------------------*/
 	public boolean checkForward(String transliterated,
 			String nextTransliterated, String pos, String type)
-					throws UnsupportedEncodingException {
+			throws UnsupportedEncodingException {
 		if (this.useDataFiles) {
 			return this.checkForwardNew(transliterated, nextTransliterated,
 					pos, type);
@@ -1146,7 +1149,7 @@ public class PostProcessor1 extends Connected {
 
 	public boolean checkForwardNew(String transliterated,
 			String nextTransliterated, String pos, String type)
-					throws UnsupportedEncodingException {
+			throws UnsupportedEncodingException {
 		// System.out.println("############# (F) PostProcessor1:checkForward(pos="+pos+")");
 		final boolean rt = false;
 		final String selectSql = "";
@@ -1158,7 +1161,8 @@ public class PostProcessor1 extends Connected {
 		// by yossi
 		nextTransliterated = nextTransliterated.replaceAll("'", "\\\\'");
 
-		final ArrayList<MWE1record> result = MWE1data.getMWE1records(transliterated); // get
+		final ArrayList<MWE1record> result = MWE1data
+				.getMWE1records(transliterated); // get
 		// first
 		// from
 		// mwe1
@@ -1175,13 +1179,13 @@ public class PostProcessor1 extends Connected {
 			if (mwe1rec.getPos().equalsIgnoreCase(pos)) // mwe1.pos= pos
 			{
 				if (!pos.equals("propername")
-						|| (mwe1rec.getType().equalsIgnoreCase(type))) // if pos
-					// ==
-					// propername
-					// so
-					// need
-					// also
-					// mwe1.type=type
+						|| mwe1rec.getType().equalsIgnoreCase(type)) // if pos
+				// ==
+				// propername
+				// so
+				// need
+				// also
+				// mwe1.type=type
 				{
 					// System.out.println("(F) PostProcessor1:checkForward():  pos = "
 					// + mwe1rec.getPos());
@@ -1192,16 +1196,16 @@ public class PostProcessor1 extends Connected {
 						// + mwe1rec.getId()+" mwerec.getFormerItemId() " +
 						// mwerec.getFormerItemId());
 						if (mwe1rec.getId().equals(mwerec.getFormerItemId())) // if
-							// they
-							// have
-							// the
-							// same
-							// id
-							// then
-							// we
-							// have
-							// a
-							// match
+						// they
+						// have
+						// the
+						// same
+						// id
+						// then
+						// we
+						// have
+						// a
+						// match
 						{
 							return true; // found one so return true
 							// testB = true;
@@ -1225,16 +1229,15 @@ public class PostProcessor1 extends Connected {
 		 * getData(selectSql); if (rs != null) { try { if (rs.next()) { rt =
 		 * true;
 		 *//*
-		 * if (testB != true) { System.out.println(
-		 * "(F) PostProcessor1:checkForward() huston WE GOT A PROBLEM");
-		 * System.out.println(selectSql); try { System.in.read(); } catch
-		 * (IOException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); } }
-		 *//*
-		 * } } catch (SQLException e) {
-		 * block e.printStackTrace(); } } } finally {
-		 * releaseConnection(); }
-		 */
+			 * if (testB != true) { System.out.println(
+			 * "(F) PostProcessor1:checkForward() huston WE GOT A PROBLEM");
+			 * System.out.println(selectSql); try { System.in.read(); } catch
+			 * (IOException e) { // TODO Auto-generated catch block
+			 * e.printStackTrace(); } }
+			 *//*
+				 * } } catch (SQLException e) { block e.printStackTrace(); } } }
+				 * finally { releaseConnection(); }
+				 */
 		return rt;
 		// return testB;
 	}
@@ -1242,7 +1245,7 @@ public class PostProcessor1 extends Connected {
 	// --------------------------------------------------------------------------------------------------------------------------------------
 	public boolean checkForwardOld(String transliterated,
 			String nextTransliterated, String pos, String type)
-					throws UnsupportedEncodingException {
+			throws UnsupportedEncodingException {
 		boolean rt = false;
 		String selectSql = "";
 		transliterated = transliterated.replaceAll("'", "\\\\'"); // update line
@@ -1311,8 +1314,8 @@ public class PostProcessor1 extends Connected {
 					if (lexiconPointer != null) {
 						return;
 					}
-					final boolean multiWordPrefixExist = analysis.getBase().getMWE()
-							.isMultiWordPrefixExist();
+					final boolean multiWordPrefixExist = analysis.getBase()
+							.getMWE().isMultiWordPrefixExist();
 					final String id = analysis.getBase().getMWE().getId();
 					final int expectedNextId = Integer.parseInt(id) + 1;
 					expectedNextIdStr = String.valueOf(expectedNextId);
@@ -1327,7 +1330,8 @@ public class PostProcessor1 extends Connected {
 									.get(nextTokenIndex + 1);
 						}
 						final List nextAnalysisList = nextToken.getAnalysis();
-						final int nextAnalysisListSize = nextAnalysisList.size();
+						final int nextAnalysisListSize = nextAnalysisList
+								.size();
 						foundNext = false;
 
 						// System.out.println("next token surface="+
@@ -1336,9 +1340,10 @@ public class PostProcessor1 extends Connected {
 							final AnalysisType nextAnalysis = (AnalysisType) nextAnalysisList
 									.get(nextAnalysisIndex);
 							if (multiWordPrefixExist) {
-								final List nextPrefixList = nextAnalysis.getPrefix();
+								final List nextPrefixList = nextAnalysis
+										.getPrefix();
 								if (nextPrefixList.size() > 0) {
-									if (((PrefixType) (nextPrefixList).get(0))
+									if (((PrefixType) nextPrefixList.get(0))
 											.isMultiWord()) {
 										foundNext = true;
 										break;
@@ -1349,9 +1354,10 @@ public class PostProcessor1 extends Connected {
 							if (nextBase != null) {
 								final MWEType nextMweType = nextBase.getMWE();
 								if (nextMweType != null) {
-									final String nextIdStr = nextAnalysis.getBase()
-											.getMWE().getId();
-									final int nextId = Integer.parseInt(nextIdStr);
+									final String nextIdStr = nextAnalysis
+											.getBase().getMWE().getId();
+									final int nextId = Integer
+											.parseInt(nextIdStr);
 									final String nextLexiconPointer = nextAnalysis
 											.getBase().getLexiconPointer();
 
@@ -1392,7 +1398,8 @@ public class PostProcessor1 extends Connected {
 		final String expectedNextIdStr = String.valueOf(expectedNextId);
 		final int nextTokenIndex = tokenIndex + 1;
 		if (nextTokenIndex < tokenListSize) {
-			final TokenType nextToken = (TokenType) tokenList.get(nextTokenIndex);
+			final TokenType nextToken = (TokenType) tokenList
+					.get(nextTokenIndex);
 			final List nextAnalysisList = nextToken.getAnalysis();
 			final int nextAnalysisListSize = nextAnalysisList.size();
 
@@ -1406,7 +1413,8 @@ public class PostProcessor1 extends Connected {
 					nextMweType = nextBase.getMWE();
 				}
 				if (nextMweType != null) {
-					final String nextId = nextAnalysis.getBase().getMWE().getId();
+					final String nextId = nextAnalysis.getBase().getMWE()
+							.getId();
 					final String lexiconPointer = nextAnalysis.getBase()
 							.getLexiconPointer();
 					if (nextId.equals(expectedNextIdStr)
@@ -1429,7 +1437,8 @@ public class PostProcessor1 extends Connected {
 			final AnalysisType nextTokenAnalysis = (AnalysisType) nextTokenAnalysesList
 					.get(nextTokenAnalysisIndex);
 			if (nextTokenAnalysis.getBase() != null) {
-				final MWEType nextTokenMWE = nextTokenAnalysis.getBase().getMWE();
+				final MWEType nextTokenMWE = nextTokenAnalysis.getBase()
+						.getMWE();
 				if (nextTokenMWE != null) {
 					final String nextTokenMWId = nextTokenMWE.getId();
 					nextTokenIdList.append(nextTokenMWId);
@@ -1444,7 +1453,7 @@ public class PostProcessor1 extends Connected {
 	// ---------------------------------------------------------------------------------------------------------------
 	public boolean checkPrefixForward(String transliterated,
 			TokenType nextToken, String pos, String type)
-					throws UnsupportedEncodingException {
+			throws UnsupportedEncodingException {
 		// System.out.println("BAZINGA");
 		boolean rt = false;
 		boolean testB = false;
@@ -1457,8 +1466,8 @@ public class PostProcessor1 extends Connected {
 			final List prefixList = analysis.getPrefix();
 			if (prefixList.size() == 1) {
 				final PrefixType prefix = (PrefixType) prefixList.get(0);
-				final String prefixTranslietarted = Translate.getHebToEng(prefix
-						.getSurface());
+				final String prefixTranslietarted = Translate
+						.getHebToEng(prefix.getSurface());
 
 				final ArrayList<MWE1record> result = MWE1data
 						.getMWE1records(transliterated); // get first from mwe1
@@ -1467,7 +1476,7 @@ public class PostProcessor1 extends Connected {
 
 				final Iterator<MWE1record> itr = result.iterator();
 				while (itr.hasNext()) // goind over first list and finding match
-					// in 2nd
+				// in 2nd
 				{
 					final MWE1record mwe1rec = itr.next();
 					// System.out.println("(F) PostProcessor1:checkForward():  id = "
@@ -1485,16 +1494,16 @@ public class PostProcessor1 extends Connected {
 							// mwerec.getFormerItemId());
 							if (mwe1rec.getId()
 									.equals(mwerec.getFormerItemId())) // if
-								// they
-								// have
-								// the
-								// same
-								// id
-								// then
-								// we
-								// have
-								// a
-								// match
+							// they
+							// have
+							// the
+							// same
+							// id
+							// then
+							// we
+							// have
+							// a
+							// match
 							{
 								prefix.setMultiWord(true);
 								analysis.getPrefix().set(0, prefix);
@@ -1545,14 +1554,14 @@ public class PostProcessor1 extends Connected {
 		}
 		if (testB != rt) {
 			System.out
-			.println("(W) PostProcessor1:checkPrefixForward() mismatch between datafiles and DB");
+					.println("(W) PostProcessor1:checkPrefixForward() mismatch between datafiles and DB");
 		}
 		return rt;
 	}
 
 	public void createMWWAnalysis(TokenType token, BaseType originalBase,
 			int originalAnalysisIndex, String multiWord, String id)
-					throws JAXBException {
+			throws JAXBException {
 		ObjectFactory objFactory = null;
 		objFactory = new ObjectFactory();
 
@@ -1586,7 +1595,7 @@ public class PostProcessor1 extends Connected {
 	// ---------------------------------------------------------------------------------------------------------------------------
 	public TokenType createUnknownAnalysis(TokenType token,
 			final String hebWord, final String transliterated)
-					throws JAXBException {
+			throws JAXBException {
 		ObjectFactory objFactory;
 		objFactory = new ObjectFactory();
 
@@ -1753,9 +1762,9 @@ public class PostProcessor1 extends Connected {
 					TokenType prevToken = null;
 					TokenType nextToken = null;
 					token = tokenList.get(tokenIndex);
-					if (((AnalysisType) (token.getAnalysis().get(0))).getBase() != null
-							&& ((AnalysisType) (token.getAnalysis().get(0)))
-							.getBase().getPunctuation() != null) {
+					if (((AnalysisType) token.getAnalysis().get(0)).getBase() != null
+							&& ((AnalysisType) token.getAnalysis().get(0))
+									.getBase().getPunctuation() != null) {
 						continue;
 					}
 					// check whether the previous token had mw analysis
@@ -1764,8 +1773,7 @@ public class PostProcessor1 extends Connected {
 						prevToken = tokenList.get(tokenIndex - 1);
 						final String prevTokenSurface = prevToken.getSurface();
 						if (prevTokenSurface.equals("-") && tokenIndex - 1 > 0) {
-							prevToken = tokenList
-									.get(tokenIndex - 2);
+							prevToken = tokenList.get(tokenIndex - 2);
 						}
 						prevId = MWEAnalysisExist(prevToken);
 
@@ -1785,8 +1793,7 @@ public class PostProcessor1 extends Connected {
 						String nextSurface = nextToken.getSurface();
 						if (nextSurface.equals("-")) {
 							if (tokenIndex + 2 < tokenListSize) {
-								nextToken = tokenList
-										.get(tokenIndex + 2);
+								nextToken = tokenList.get(tokenIndex + 2);
 								nextSurface = nextToken.getSurface();
 							}
 						}
@@ -1815,8 +1822,7 @@ public class PostProcessor1 extends Connected {
 					mwMWExistFlag = false;
 
 					for (int analysisIndex = 0; analysisIndex < analysisListSize; analysisIndex++) {
-						analysis = analysesList
-								.get(analysisIndex);
+						analysis = analysesList.get(analysisIndex);
 
 						final BaseType base = analysis.getBase();
 						if (base != null) {
@@ -1850,9 +1856,8 @@ public class PostProcessor1 extends Connected {
 								if (prefixList.size() > 0) {
 									for (int prefixIndex = 0; prefixIndex < prefixList
 											.size(); prefixIndex++) {
-										prefixTransliterated = ((PrefixType) (prefixList
-												.get(prefixIndex)))
-												.getSurface();
+										prefixTransliterated = ((PrefixType) prefixList
+												.get(prefixIndex)).getSurface();
 										prefixLen = prefixLen
 												+ prefixTransliterated.length();
 									}
@@ -1882,10 +1887,10 @@ public class PostProcessor1 extends Connected {
 								// ביטוי עם מזהה שונה מ1 לא יכול להיות
 								// התמנית
 								// הראשונה של ביטוי
-								if ((firstMWTokenIndexInSentence == -1)
+								if (firstMWTokenIndexInSentence == -1
 										&& !id.equals("1")) {
 									removeAnalysisFlag = true;
-								} else if ((tokenIndex == tokenListSize - 1)
+								} else if (tokenIndex == tokenListSize - 1
 										&& id.equals("1")) {
 									removeAnalysisFlag = true;
 
@@ -1984,7 +1989,7 @@ public class PostProcessor1 extends Connected {
 
 		articles = reader.getArticle();
 		if (articles == null) // UPDATE 21.11.10 (yossi) - insted of exiting
-			// return so it can move to next file
+		// return so it can move to next file
 		{
 			return;
 		}
@@ -2002,20 +2007,19 @@ public class PostProcessor1 extends Connected {
 				firstMWTokenIndexInSentence = -1;
 
 				sentence = (SentenceType) sentenceList.get(sentenceIndex); // s);
-				System.out.println(sentence.getId());
 				tokenList = sentence.getToken();
 				final int tokenListSize = tokenList.size();
 
 				for (tokenIndex = 0; tokenIndex < tokenListSize; tokenIndex++) {
-					System.out.println(tokenIndex);
 					TokenType prevToken = null;
 					TokenType nextToken = null;
 					token = (TokenType) tokenList.get(tokenIndex);
 
-					if ( 	(AnalysisType) (token.getAnalysis().get(0)) != null
-							&&((AnalysisType) (token.getAnalysis().get(0))).getBase() != null
-							&& ((AnalysisType) (token.getAnalysis().get(0)))
-							.getBase().getPunctuation() != null) {
+					if ((AnalysisType) token.getAnalysis().get(0) != null
+							&& ((AnalysisType) token.getAnalysis().get(0))
+									.getBase() != null
+							&& ((AnalysisType) token.getAnalysis().get(0))
+									.getBase().getPunctuation() != null) {
 						continue;
 					}
 					// check whether the previous token had mw analysis
@@ -2109,9 +2113,8 @@ public class PostProcessor1 extends Connected {
 								if (prefixList.size() > 0) {
 									for (int prefixIndex = 0; prefixIndex < prefixList
 											.size(); prefixIndex++) {
-										prefixTransliterated = ((PrefixType) (prefixList
-												.get(prefixIndex)))
-												.getSurface();
+										prefixTransliterated = ((PrefixType) prefixList
+												.get(prefixIndex)).getSurface();
 										prefixLen = prefixLen
 												+ prefixTransliterated.length();
 									}
@@ -2141,10 +2144,10 @@ public class PostProcessor1 extends Connected {
 								// ביטוי עם מזהה שונה מ1 לא יכול להיות
 								// התמנית
 								// הראשונה של ביטוי
-								if ((firstMWTokenIndexInSentence == -1)
+								if (firstMWTokenIndexInSentence == -1
 										&& !id.equals("1")) {
 									removeAnalysisFlag = true;
-								} else if ((tokenIndex == tokenListSize - 1)
+								} else if (tokenIndex == tokenListSize - 1
 										&& id.equals("1")) {
 									removeAnalysisFlag = true;
 
@@ -2209,7 +2212,7 @@ public class PostProcessor1 extends Connected {
 			List nextBaseList, BaseType currentBase, TokenType token,
 			TokenType prevToken, TokenType nextToken, int currentAnalysisIndex,
 			List prevAnalysisIndexList, List nextAnalysisIndexList)
-					throws JAXBException {
+			throws JAXBException {
 		int prefixListsize = -1;
 		final List prefixList = new ArrayList();
 
@@ -2220,16 +2223,17 @@ public class PostProcessor1 extends Connected {
 
 		final String nextProperNameType = nextBase.getProperName().getType();
 
-		final String currentProperNameType = currentBase.getProperName().getType();
+		final String currentProperNameType = currentBase.getProperName()
+				.getType();
 
 		final String prevLexiconPointer = prevBase.getLexiconItem();
 		final String nextLexiconPointer = nextBase.getLexiconItem();
 		final String currentLexiconPointer = currentBase.getLexiconItem();
 
-		if ((prevProperNameType.equals(currentProperNameType) && currentProperNameType
-				.equals(nextProperNameType))
-				|| prevProperNameType == null
-				|| currentProperNameType == null || nextProperNameType == null) {
+		if (prevProperNameType.equals(currentProperNameType)
+				&& currentProperNameType.equals(nextProperNameType)
+				|| prevProperNameType == null || currentProperNameType == null
+				|| nextProperNameType == null) {
 			multiWord = prevLexiconPointer + " " + currentLexiconPointer + " "
 					+ nextLexiconPointer;
 
@@ -2254,8 +2258,8 @@ public class PostProcessor1 extends Connected {
 			for (int l = 0; l < prefixListsize; l++) {
 				final PrefixType pref = (PrefixType) prefixList.get(l);
 
-				((AnalysisType) (prevToken.getAnalysis().get(i))).getPrefix()
-				.add(pref);
+				((AnalysisType) prevToken.getAnalysis().get(i)).getPrefix()
+						.add(pref);
 			}
 			createMWWAnalysis(nextToken, nextBase,
 					((Integer) nextAnalysisIndexList.get(j)).intValue(),
@@ -2266,13 +2270,14 @@ public class PostProcessor1 extends Connected {
 
 	public void ProperNameAnalysisExists(TokenType prevToken, TokenType token,
 			TokenType nextToken, int currentAnalysisIndex, BaseType currentBase)
-					throws JAXBException {
+			throws JAXBException {
 		String multiWord = "";
 		int prefixListsize = -1;
 		List nextBaseList = null;
 		final List prevAnalysisIndexList = new ArrayList();
 		final List nextAnalysisIndexList = new ArrayList();
-		final List prevBaseList = getProperName(prevToken, prevAnalysisIndexList);
+		final List prevBaseList = getProperName(prevToken,
+				prevAnalysisIndexList);
 		final List prefixList = new ArrayList();
 		if (nextToken != null) {
 			nextBaseList = getProperName(nextToken, nextAnalysisIndexList);
@@ -2282,14 +2287,16 @@ public class PostProcessor1 extends Connected {
 			if (nextToken == null || nextBaseList.size() == 0) {
 				final BaseType prevBase = (BaseType) prevBaseList.get(i);
 
-				final String prevProperNameType = prevBase.getProperName().getType();
-
-				final String currentProperNameType = currentBase.getProperName()
+				final String prevProperNameType = prevBase.getProperName()
 						.getType();
+
+				final String currentProperNameType = currentBase
+						.getProperName().getType();
 
 				final String prevLexiconPointer = prevBase.getLexiconItem();
 
-				final String currentLexiconPointer = currentBase.getLexiconItem();
+				final String currentLexiconPointer = currentBase
+						.getLexiconItem();
 
 				if (((AnalysisType) prevToken.getAnalysis().get(i)).getPrefix()
 						.size() > 0) {
@@ -2324,8 +2331,8 @@ public class PostProcessor1 extends Connected {
 							final PrefixType pref = (PrefixType) nextAnalysis
 									.getPrefix().get(l);
 
-							((AnalysisType) (token.getAnalysis()
-									.get(currentAnalysisIndex))).getPrefix()
+							((AnalysisType) token.getAnalysis().get(
+									currentAnalysisIndex)).getPrefix()
 									.add(pref);
 						}
 					}
@@ -2337,7 +2344,7 @@ public class PostProcessor1 extends Connected {
 					for (int j = 0; j < nextBaseListSize; j++) {
 						if (((AnalysisType) nextToken.getAnalysis().get(
 								((Integer) nextAnalysisIndexList.get(j))
-								.intValue())).getPrefix().size() == 0) {
+										.intValue())).getPrefix().size() == 0) {
 							processProperNameToken(i, j, prevBaseList,
 									nextBaseList, currentBase, token,
 									prevToken, nextToken, currentAnalysisIndex,

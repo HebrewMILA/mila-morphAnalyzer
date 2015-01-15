@@ -1,15 +1,10 @@
 package mila.tools;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.CharBuffer;
 import java.nio.MappedByteBuffer;
@@ -19,11 +14,11 @@ import java.nio.charset.CharsetDecoder;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.commons.io.FileUtils;
-
 import mila.HMM.HMM2Morph;
 import mila.HMM.MorphMult2TaggerFormat;
 import mila.lexicon.analyse.Data;
+
+import org.apache.commons.io.FileUtils;
 
 public class OnlyTagger implements Tool {
 	private String hmmTaggerDir = System.getProperty("user.dir");
@@ -32,13 +27,13 @@ public class OnlyTagger implements Tool {
 	private String dprefixesFile = "dataFiles/dprefixes.data";
 
 	public static void main(String args[]) throws IOException, JAXBException {
-		String input_name = args[0];
-		String output_name = args[1];
+		final String input_name = args[0];
+		final String output_name = args[1];
 
-		File input = new File(input_name);
-		File output = new File(output_name);
+		final File input = new File(input_name);
+		final File output = new File(output_name);
 
-		Tool tool = new OnlyTagger();
+		final Tool tool = new OnlyTagger();
 
 		tool.processFile(input, output);
 
@@ -50,14 +45,15 @@ public class OnlyTagger implements Tool {
 
 	}
 
+	@Override
 	public void processFile(File input, File output) throws IOException,
-			JAXBException {
-		String processedXML = readFile(input).toString();
-		File tempDir = createTempDir();
+	JAXBException {
+		final String processedXML = readFile(input).toString();
+		final File tempDir = createTempDir();
 
 		try {
 			Data.webFlag = Processor.WEB_FLAG;
-			String taggerFormat = goRoyTag(processedXML, tempDir);
+			final String taggerFormat = goRoyTag(processedXML, tempDir);
 			goConvertToXML(output, processedXML, taggerFormat);
 		} finally {
 			FileUtils.deleteDirectory(tempDir);
@@ -66,21 +62,21 @@ public class OnlyTagger implements Tool {
 
 	private void goConvertToXML(File output, String processedXML,
 			String taggerFormat) throws IOException, FileNotFoundException {
-		HMM2Morph h = new HMM2Morph();
-		String fileName = taggerFormat.substring(1);
-		String homeDirectoy = new java.io.File(".").getCanonicalPath();
-		StringBuilder sb = new StringBuilder();
+		final HMM2Morph h = new HMM2Morph();
+		final String fileName = taggerFormat.substring(1);
+		final String homeDirectoy = new java.io.File(".").getCanonicalPath();
+		final StringBuilder sb = new StringBuilder();
 		sb.append(homeDirectoy).append(File.separator).append("royTagger")
-				.append(File.separator).append("workdir")
-				.append(File.separator).append("tagging-").append(fileName);
-		String taggedFile = sb.toString();
-		PrintWriter pw = new PrintWriter(new FileOutputStream(output));
+		.append(File.separator).append("workdir")
+		.append(File.separator).append("tagging-").append(fileName);
+		final String taggedFile = sb.toString();
+		final PrintWriter pw = new PrintWriter(new FileOutputStream(output));
 
 		System.err.println("Start output to file");
 		try {
 			Data.webFlag = Processor.WEB_FLAG;
 			h.process(processedXML, taggedFile, pw, dprefixesFile);
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new IOException(e);
 		}
 		System.err.println("End output to file");
@@ -89,24 +85,22 @@ public class OnlyTagger implements Tool {
 	private String goRoyTag(String processedXML, File tempDir)
 			throws JAXBException, IOException {
 		Data.webFlag = Processor.WEB_FLAG;
-		MorphMult2TaggerFormat mm2tf = new MorphMult2TaggerFormat();
-		String taggerFormat = mm2tf.myMorp2Tagger(processedXML,
+		final MorphMult2TaggerFormat mm2tf = new MorphMult2TaggerFormat();
+		final String taggerFormat = mm2tf.myMorp2Tagger(processedXML,
 				tempDir.getAbsolutePath());
-		String cmdline = createPerlCommand(tempDir.toString() + taggerFormat);
+		final String cmdline = createPerlCommand(tempDir.toString()
+				+ taggerFormat);
 		System.err.println("Running command: " + cmdline);
 
-		Process proc = Runtime.getRuntime().exec(cmdline);
-		
-		
-		
-		
+		final Process proc = Runtime.getRuntime().exec(cmdline);
+
 		boolean flag = true;
 		int rc = -1;
 		while (flag) {
 			try {
 				rc = proc.waitFor();
 				flag = false;
-			} catch (InterruptedException e) {
+			} catch (final InterruptedException e) {
 				/* Do nothing -- flag is true so we'll continue waiting */
 				System.err.println("Waiting for tagger, go kill that if stuck");
 			}
@@ -119,50 +113,54 @@ public class OnlyTagger implements Tool {
 	}
 
 	public StringBuilder readFile(File f) throws IOException {
-		FileInputStream fis = new FileInputStream(f);
-		FileChannel fc = fis.getChannel();
+		final FileInputStream fis = new FileInputStream(f);
+		final FileChannel fc = fis.getChannel();
 
-		int sz = (int) fc.size();
-		MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, sz);
+		final int sz = (int) fc.size();
+		final MappedByteBuffer bb = fc
+				.map(FileChannel.MapMode.READ_ONLY, 0, sz);
 
-		Charset utf8 = Charset.forName("UTF-8");
-		CharsetDecoder decoder = utf8.newDecoder();
-		CharBuffer cb = decoder.decode(bb);
+		final Charset utf8 = Charset.forName("UTF-8");
+		final CharsetDecoder decoder = utf8.newDecoder();
+		final CharBuffer cb = decoder.decode(bb);
 
-		StringBuilder outBuffer = new StringBuilder(cb);
+		final StringBuilder outBuffer = new StringBuilder(cb);
 		fc.close();
 		fis.close();
 		return outBuffer;
 	}
 
 	private String createPerlCommand(String taggerInput) {
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		sb.append("perl -I").append(royTaggerDir).append(" ")
-				.append(royTaggerDir).append(File.separator)
-				.append("MTTest.pl -dir ").append(royTaggerDir)
-				.append(File.separator).append("workdir -rmtmp ")
-				.append(taggerInput).append(" ").append(taggerLOFDir)
-				.append(File.separator).append("corpus.lm ")
-				.append(taggerLOFDir).append(File.separator)
-				.append("corpus.lex.prob");
+		.append(royTaggerDir).append(File.separator)
+		.append("MTTest.pl -dir ").append(royTaggerDir)
+		.append(File.separator).append("workdir -rmtmp ")
+		.append(taggerInput).append(" ").append(taggerLOFDir)
+		.append(File.separator).append("corpus.lm ")
+		.append(taggerLOFDir).append(File.separator)
+		.append("corpus.lex.prob");
 		return sb.toString();
 	}
 
 	private File createTempDir() throws IOException {
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		sb.append(File.separator).append(System.getProperty("user.dir"))
-				.append(File.separator).append("/morphanalyzer_tmp");
-		File tempParentDir = new File(sb.toString());
+				.append(File.separator);
+		final File tempParentDir = new File(sb.toString());
 		File tempDir = null;
+
 		try {
 			tempDir = File.createTempFile("mydir", "ClientServerHMMTagger",
 					tempParentDir);
-			if (!tempDir.delete())
+			if (!tempDir.delete()) {
 				throw new IOException();
+			}
 			// tempFile.mkdir();
-			if (!tempDir.mkdir())
+			if (!tempDir.mkdir()) {
 				throw new IOException();
-		} catch (IOException ex) {
+			}
+		} catch (final IOException ex) {
 			System.err
 					.println("Cannot create temp file ("
 							+ tempParentDir.getAbsolutePath() + "): "
