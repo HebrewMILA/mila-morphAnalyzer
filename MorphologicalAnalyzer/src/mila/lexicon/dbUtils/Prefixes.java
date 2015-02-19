@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  * @author daliabo
- * 
+ *
  *         TODO To change the template for this generated type comment go to
  *         Window - Preferences - Java - Code Style - Code Templates
  */
@@ -22,11 +22,11 @@ public class Prefixes extends Connected {
 
 	public ArrayList get(String input) throws UnsupportedEncodingException {
 		ArrayList result = new ArrayList();
-		String sql = "SELECT * FROM prefixes where prefix ='" + input + "'";
+		String sql = "SELECT * FROM prefixes where prefix =?";
 		// System.out.println("sql="+ sql);
 		ResultSet rs = null;
 		try {
-			rs = getData(sql);
+			rs = getData(sql,input);
 			if (rs != null) {
 
 				while (rs.next()) {

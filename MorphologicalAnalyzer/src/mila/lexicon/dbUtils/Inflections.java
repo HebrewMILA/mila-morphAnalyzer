@@ -17,7 +17,7 @@ import mila.dataStructures.DBInflectionsRecord;
 
 /**
  * @author daliabo
- * 
+ *
  *         TODO To change the template for this generated type comment go to
  *         Window - Preferences - Java - Code Style - Code Templates
  */
@@ -103,7 +103,7 @@ public class Inflections extends Connected {
 				// System.out.println("strOut1 = " + strOut);
 			}
 			// case of two apostrophe
-			int index2 = (strIn.substring(index1 + 1)).indexOf('\'');
+			int index2 = strIn.substring(index1 + 1).indexOf('\'');
 			if (index2 != -1) {
 				index2 = strOut.lastIndexOf('\'');
 				// System.out.println("index2 = " + index2);
@@ -111,8 +111,9 @@ public class Inflections extends Connected {
 						+ strOut.substring(index2);
 				// System.out.println("strOut2 = " + strOut);
 			}
-		} else
+		} else {
 			strOut = strIn;
+		}
 		return strOut;
 	}
 
@@ -130,12 +131,11 @@ public class Inflections extends Connected {
 			// System.out.println("REPLACED \\ to \\\\ in " + input );
 		}
 		/***** UPDATE END */
-		String sql = "select * from inflections where transliterated ='"
-				+ input + "'";
+		String sql = "SELECT * FROM inflections WHERE transliterated=?";
 		// System.out.println(sql);
 		ResultSet rs = null;
 		try {
-			rs = getData(sql);
+			rs = getData(sql, input);
 			if (rs != null) {
 				while (rs.next()) {
 					DBInflectionsRecord inflectionsRecDB = new DBInflectionsRecord();
@@ -169,9 +169,10 @@ public class Inflections extends Connected {
 					inflectionsRecDB.setPolarity(rs.getString("polarity"));
 					inflectionsRecDB.setValue(rs.getString("value"));
 					String foreign = rs.getString("hebForeign");
-					if (foreign.length() > 0)
+					if (foreign.length() > 0) {
 						inflectionsRecDB.setForeign(Integer.parseInt(rs
 								.getString("hebForeign")));
+					}
 					inflectionsRecDB.setPrefixPerEntry(rs.getString("prefix")
 							.charAt(0));
 					result.add(inflectionsRecDB);

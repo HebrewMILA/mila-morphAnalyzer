@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * @author daliabo
- * 
+ *
  *         TODO To change the template for this generated type comment go to
  *         Window - Preferences - Java - Code Style - Code Templates
  */
@@ -43,12 +43,11 @@ public class Gimatria extends Connected {
 			// input = apostropheHandling(input);
 			input = input.replaceAll("\'", "\\\\'");
 		}
-		String sql = "SELECT * FROM gimatria where transliterated ='" + input
-				+ "'";
+		String sql = "SELECT * FROM gimatria where transliterated =?";
 		// System.out.println("sql="+ sql);
 		ResultSet rs = null;
 		try {
-			rs = staticGetData(sql);
+			rs = staticGetData(sql,input);
 			if (rs != null) {
 				while (rs.next()) {
 					transliterated = rs.getString("transliterated");
@@ -66,9 +65,8 @@ public class Gimatria extends Connected {
 		return val;
 	}
 
-	public ArrayList getAll() {
-		ArrayList array = new ArrayList();
-		int val = -1;
+	public ArrayList<String> getAll() {
+		ArrayList<String> array = new ArrayList<String>();
 		String transliterated = "";
 
 		String sql = "SELECT * FROM gimatria";
