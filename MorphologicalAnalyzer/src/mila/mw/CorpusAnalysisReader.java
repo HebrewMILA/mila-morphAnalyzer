@@ -14,6 +14,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.UnmarshalException;
 import javax.xml.bind.Unmarshaller;
 
+import mila.generated.ArticleType;
 import mila.generated.Corpus;
 
 /**
@@ -22,7 +23,7 @@ import mila.generated.Corpus;
  */
 
 public class CorpusAnalysisReader {
-	private List articleTypeList;
+	private List<ArticleType> articleTypeList;
 	private String xmlFile;
 	private Corpus collection;
 	private static final String JAXB_PACKAGE = "mila.generated";
@@ -39,7 +40,7 @@ public class CorpusAnalysisReader {
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------------------
-	public List getArticle() {
+	public List<ArticleType> getArticle() {
 		if (articleTypeList == null) {
 			System.out.println("The articleType list is NULL :(");
 			// System.exit(-1); // UPDATE 21.11.10 (yossi)
@@ -56,6 +57,7 @@ public class CorpusAnalysisReader {
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
 	public void parse(InputStream input) {
 		try {
 			jc = JAXBContext.newInstance(JAXB_PACKAGE);
