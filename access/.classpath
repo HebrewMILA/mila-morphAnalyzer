@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/MilaProjects/External Libraries/servlet/servlet.jar"/>
+	<classpathentry kind="lib" path="C:/MilaProjects/External Libraries/password/ostermillerutils_1_07_00.jar"/>
+	<classpathentry kind="lib" path="C:/MilaProjects/External Libraries/lib/activation.jar"/>
+	<classpathentry kind="lib" path="C:/MilaProjects/External Libraries/lib/mail.jar"/>
+	<classpathentry kind="lib" path="/home/slav4ik/oldWorkspace/jarsRepo/mariadb-java-client-1.1.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
