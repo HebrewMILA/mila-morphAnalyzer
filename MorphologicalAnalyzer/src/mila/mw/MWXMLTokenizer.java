@@ -1,6 +1,6 @@
 // Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
 // Jad home page: http://www.kpdus.com/jad.html
-// Decompiler options: packimports(3) 
+// Decompiler options: packimports(3)
 // Source File Name:   MWXMLTokenizer.java
 
 package mila.mw;
@@ -64,11 +64,7 @@ public class MWXMLTokenizer extends XMLTokenizer1 {
 		// webFlag = false;
 		Document document = null;
 		try {
-			bi = new BufferedReader(new InputStreamReader(in, "UTF8")); // read
-																		// input
-																		// into
-																		// buffer
-																		// reader
+			bi = new BufferedReader(new InputStreamReader(in, "UTF8")); // read into buffer reader
 			webProcess();
 			xmlTokenizer.finalizeDoc();
 			document = xmlTokenizer.getDocument();

@@ -87,7 +87,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see lexicon.analyse.MorphAnalyzer#main(java.lang.String[])
 	 */
 	public static void main(String[] args) {
@@ -124,7 +124,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		} catch (final Exception e) {
 			System.err.println("ERROR");
 			System.err
-			.println("Bad configuration file " + configFileName + " ");
+					.println("Bad configuration file " + configFileName + " ");
 			System.err.println("Delete file " + configFileName
 					+ " to force default configuration file creation.");
 			e.printStackTrace();
@@ -151,9 +151,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 					System.err.println("Bad configuration file "
 							+ configFileName);
 					System.err
-							.println("Delete file "
-									+ configFileName
-									+ " to force default configuration file generation.");
+					.println("Delete file "
+							+ configFileName
+							+ " to force default configuration file generation.");
 					System.exit(0);
 				}
 			}
@@ -194,7 +194,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 				}
 			} else {
 				System.out
-				.println("Input and output should both be files or should both be existing directories.");
+						.println("Input and output should both be files or should both be existing directories.");
 			}
 
 			break;
@@ -204,15 +204,15 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			System.err.println("Wrong number of parameters");
 			System.err.println("USAGE:");
 			System.err
-			.println("java -jar morphAnalyzer.jar [database flag] [input] [output]");
+					.println("java -jar morphAnalyzer.jar [database flag] [input] [output]");
 			System.err
-			.println("database flag = true for using the mysql database or false for using the external .data files");
+					.println("database flag = true for using the mysql database or false for using the external .data files");
 			System.err
-			.println("external .data files names are in the configuration file : "
-					+ configFileName);
+					.println("external .data files names are in the configuration file : "
+							+ configFileName);
 			System.err.println("Example:");
 			System.err
-					.println("java -jar morphAnalyzer.jar false input/ output/");
+			.println("java -jar morphAnalyzer.jar false input/ output/");
 		}
 
 		// /////////////////////////////////////////////////////
@@ -275,7 +275,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 					System.out.println("Success creating directory: " + out);
 				} else {
 					System.err
-					.println("Error in creation of directory: " + out);
+							.println("Error in creation of directory: " + out);
 				}
 			}
 			// call for analysis of each file/dir under the currect directory
@@ -330,7 +330,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			// createXML.printDoc();
 		} catch (final Exception e) {
 			System.err
-			.println("An error occured make sure you have tokenized the input file, if error still exists send the developer the input file");
+					.println("An error occured make sure you have tokenized the input file, if error still exists send the developer the input file");
 			e.printStackTrace();
 		} finally {
 			// System.exit(0);
@@ -363,7 +363,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			mwcreateXML.createXMLDoc();
 		} catch (final Exception e) {
 			System.out
-			.println("XMLMorphAnalyzer:processXMLOutput while createXMLdOC - Exception");
+					.println("XMLMorphAnalyzer:processXMLOutput while createXMLdOC - Exception");
 			e.printStackTrace();
 		}
 		mwcreateXML.createArticle();
@@ -480,42 +480,42 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		line[0] = bufRead.readLine(); // dinflections.data
 		if (line[0] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for dinflections.data file");
+					.println("Error in configuration file - missing entry for dinflections.data file");
 		}
 		line[1] = bufRead.readLine(); // dprefixes.data
 		if (line[1] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for dprefixes.data file");
+					.println("Error in configuration file - missing entry for dprefixes.data file");
 		}
 		line[2] = bufRead.readLine(); // gimatria.data
 		if (line[2] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for gimatria.data file");
+					.println("Error in configuration file - missing entry for gimatria.data file");
 		}
 		line[3] = bufRead.readLine(); // dmwinflections.data
 		if (line[3] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for dmwinflections.data file");
+					.println("Error in configuration file - missing entry for dmwinflections.data file");
 		}
 		line[4] = bufRead.readLine(); // dmwe1.data
 		if (line[4] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for dmwe1.data file");
+					.println("Error in configuration file - missing entry for dmwe1.data file");
 		}
 		line[5] = bufRead.readLine(); // dmwe2.data
 		if (line[5] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for dmwe2.data file");
+					.println("Error in configuration file - missing entry for dmwe2.data file");
 		}
 		line[6] = bufRead.readLine(); // dmwe3.data
 		if (line[6] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for dmwe3.data file");
+					.println("Error in configuration file - missing entry for dmwe3.data file");
 		}
 		line[7] = bufRead.readLine(); // dmwe4.data
 		if (line[7] == null) {
 			System.err
-			.println("Error in configuration file - missing entry for dmwe4.data file");
+					.println("Error in configuration file - missing entry for dmwe4.data file");
 		}
 
 		bufRead.close();
@@ -631,7 +631,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			String gimartiasFile, String dmwinflectionsFile, String mwe1File,
 			String mwe2File, String mwe3File, String mwe4File) {
 		System.out
-		.println("(F) MWXMLMorphAnalyzer: processDirectory(datafiles..)");
+				.println("(F) MWXMLMorphAnalyzer: processDirectory(datafiles..)");
 		final File in = new File(inputDirectory);
 		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
 				.getParent().length();
@@ -758,11 +758,6 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// Date now = new Date();
-		// System.out.println("XMLAnalyzer: processXMLOutput Starts At"
-		// + DateFormat.getDateTimeInstance(DateFormat.SHORT,
-		// DateFormat.SHORT).format(now));
-		// System.out.println("ReadXMLFile: "+inputFile);
 		final MWCreateCorpusXML mwcreateXML = new MWCreateCorpusXML(outputFile);
 		mwcreateXML.createXMLDoc();
 		mwcreateXML.createArticle();
