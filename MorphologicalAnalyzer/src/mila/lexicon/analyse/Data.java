@@ -11,9 +11,9 @@ import mila.lexicon.utils.Load2memory;
 import mila.lexicon.utils.Translate;
 
 /**
- * 
+ *
  * Data.java Purpose: interface to the databse
- * 
+ *
  * @author Dalia Bojan
  * @version %G%
  */
@@ -81,7 +81,7 @@ public class Data implements Constants {
 	/**
 	 * This method populate a data structure with values from the prefix table/
 	 * data file the value - means unspecified
-	 * 
+	 *
 	 * @param j
 	 * @return
 	 */
@@ -90,7 +90,7 @@ public class Data implements Constants {
 		PrefixRecord pr = new PrefixRecord();
 		// gete from databse
 		if (webFlag) {
-			System.out.println("(F) Data:analyzePrefixList() webFlag = TRUE ");
+//			System.out.println("(F) Data:analyzePrefixList() webFlag = TRUE ");
 			pr = (PrefixRecord) prefixesList.get(j);
 		}
 		// get from files
@@ -105,124 +105,144 @@ public class Data implements Constants {
 			// System.out.println("(F) analyzePrefixList description =" +
 			// pr.getDescription());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setDefiniteArticleTag(false);
-			else
+			} else {
 				pr.setDefiniteArticleTag(true);
+			}
 			// System.out.println("DefiniteArticleTag =" +
 			// pr.isDefiniteArticleTag());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setDefArtHE(false);
-			else
+			} else {
 				pr.setDefArtHE(true);
+			}
 			// System.out.println("DefArtHE =" + pr.isDefArtHE());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setRelHE(false);
-			else
+			} else {
 				pr.setRelHE(true);
+			}
 			// System.out.println("RelHE =" + pr.isRelHE());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setAdverbKAF(false);
-			else
+			} else {
 				pr.setAdverbKAF(true);
+			}
 			// System.out.println("AdverbKAF =" + pr.isAdverbKAF());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setSubConOrRelSHIN(false);
-			else
+			} else {
 				pr.setSubConOrRelSHIN(true);
+			}
 			// System.out.println("SubConOrRelSHIN =" + pr.isSubConOrRelSHIN());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setTempSubConKAFSHIN(false);
-			else
+			} else {
 				pr.setTempSubConKAFSHIN(true);
+			}
 			// System.out.println("TempSubConKAFSHIN =" +
 			// pr.isTempSubConKAFSHIN());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setTempSubConMEMSHIN(false);
-			else
+			} else {
 				pr.setTempSubConMEMSHIN(true);
+			}
 			// System.out.println("TempSubConMEMSHIN =" +
 			// pr.isTempSubConMEMSHIN());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setTempSubConLAMEDKAFSHIN(false);
-			else
+			} else {
 				pr.setTempSubConLAMEDKAFSHIN(true);
+			}
 			// System.out.println("TempSubConLAMEDKAFSHIN ="
 			// + pr.isTempSubConLAMEDKAFSHIN());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setTempSubConBETSHIN(false);
-			else
+			} else {
 				pr.setTempSubConBETSHIN(true);
+			}
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setRelativizerTag(false);
-			else
+			} else {
 				pr.setRelativizerTag(true);
+			}
 			// System.out.println("RelativizerTag =" + pr.isRelativizerTag());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setTemporalSubConjTag(false);
-			else
+			} else {
 				pr.setTemporalSubConjTag(true);
+			}
 			// System.out.println("TemporalSubConjTag =" +
 			// pr.isTemporalSubConjTag());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setSubordinatingConjunctionTag(false);
-			else
+			} else {
 				pr.setSubordinatingConjunctionTag(true);
+			}
 			// System.out.println("SubordinatingConjunctionTag ="
 			// + pr.isSubordinatingConjunctionTag());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setPrefPartUnit(false);
-			else
+			} else {
 				pr.setPrefPartUnit(true);
+			}
 			// System.out.println("PrefPartUnit =" + pr.isPrefPartUnit());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setPrepBET(false);
-			else
+			} else {
 				pr.setPrepBET(true);
+			}
 			// System.out.println("PrepBET =" + pr.isPrepBET());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setPrepKAF(false);
-			else
+			} else {
 				pr.setPrepKAF(true);
+			}
 			// System.out.println("PrepKAF =" + pr.isPrepKAF());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setPrepLAMED(false);
-			else
+			} else {
 				pr.setPrepLAMED(true);
+			}
 			// System.out.println("PrepLAMED =" + pr.isPrepLAMED());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setPrepMEM(false);
-			else
+			} else {
 				pr.setPrepMEM(true);
+			}
 			// System.out.println("PrepMEM =" + pr.isPrepMEM());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setPrepositionTag(false);
-			else
+			} else {
 				pr.setPrepositionTag(true);
+			}
 			// System.out.println("PrepositionTag =" + pr.isPrepositionTag());
 			field = st.nextToken();
-			if (field.equals("-"))
+			if (field.equals("-")) {
 				pr.setConjunctionTag(false);
-			else
+			}
+			else {
 				pr.setConjunctionTag(true);
 			// System.out.println("PrepositionTag =" + pr.isPrepositionTag());
+			}
 		}
 		return pr;
 	}
@@ -231,7 +251,7 @@ public class Data implements Constants {
 	 * This method is used in data files mode Each line in the data file matches
 	 * an entry in the inflections table. The various fields in the inflections
 	 * table appears in the data file line separated by the delimiter|
-	 * 
+	 *
 	 * @param inflectionsList
 	 *            - all the inflections data file entries relevant to the key
 	 * @param i
@@ -323,10 +343,11 @@ public class Data implements Constants {
 		// ////////////////////////////////////////////////////
 
 		String person = st.nextToken();
-		if (person.charAt(0) == '4')
+		if (person.charAt(0) == '4') {
 			person = "any";
-		else if (person.charAt(0) == '-')
+		} else if (person.charAt(0) == '-') {
 			person = "unspecified";
+		}
 		dbInflectionsRec.setBasePerson(person);
 
 		// /////////////////////////////////////////////////
@@ -337,8 +358,9 @@ public class Data implements Constants {
 		// ////////////////////////////////////////////////
 
 		String dottedLexiconItem = st.nextToken();
-		if (dottedLexiconItem.charAt(0) == '-')
+		if (dottedLexiconItem.charAt(0) == '-') {
 			dottedLexiconItem = "";
+		}
 		dbInflectionsRec.setDottedLexiconItem(dottedLexiconItem);
 
 		String baseUndottedLItem = st.nextToken();
@@ -357,8 +379,9 @@ public class Data implements Constants {
 		dbInflectionsRec.setForeign(foreign);
 
 		char prefix = st.nextToken().charAt(0);
-		if (prefix == '-')
+		if (prefix == '-') {
 			prefix = 'u';
+		}
 		dbInflectionsRec.setPrefixPerEntry(prefix);
 
 		return dbInflectionsRec;
@@ -369,7 +392,7 @@ public class Data implements Constants {
 	 * table/data file for the existence of the gimatria provided as a key In
 	 * this case as opposed to prefixes or inflections, the return value is not
 	 * an array list but the numeric value of the gimatria
-	 * 
+	 *
 	 * @param key
 	 *            - candidate to be gimatria
 	 * @return - the numeric value of the gimatria
@@ -379,7 +402,7 @@ public class Data implements Constants {
 		int val = 0;
 		// get from databse
 		if (webFlag) {
-			System.out.println("(F) Data:getGimatrias() webFlag = TRUE ");
+//			System.out.println("(F) Data:getGimatrias() webFlag = TRUE ");
 			val = mila.lexicon.dbUtils.Gimatria.get(key);
 		} else {// get from lists
 			val = gimatrias.get(key);
@@ -390,7 +413,7 @@ public class Data implements Constants {
 	/**
 	 * This method handles getting all the relevant analysis according to the
 	 * key from the inflections table or from the data file table
-	 * 
+	 *
 	 * @param key
 	 *            - the transliterated form of the inflected item
 	 * @return
@@ -431,7 +454,7 @@ public class Data implements Constants {
 	 * table or prefix data file for example there can be two options for the
 	 * prefix wb option 1 - w + b which is not definited option 2 - w + b which
 	 * is definited
-	 * 
+	 *
 	 * @param key
 	 * @return the number of relevant prefixes which were found
 	 * @throws Exception
@@ -441,21 +464,22 @@ public class Data implements Constants {
 		int size = 0;
 		// get from database
 		if (webFlag) {
-			System.out.println("(F) Data:getPrefixes() webFlag = TRUE ");
+//			System.out.println("(F) Data:getPrefixes() webFlag = TRUE ");
 			mila.lexicon.dbUtils.Prefixes pref = new mila.lexicon.dbUtils.Prefixes();
 			prefixesList = pref.get(key);
 			// get from lists
 		} else {
 			prefixesList = prefixes.get(key);
 		}
-		if (prefixesList != null)
+		if (prefixesList != null) {
 			size = prefixesList.size();
+		}
 		return size;
 	}
 
 	/**
 	 * This method is used only on data file working mode
-	 * 
+	 *
 	 * @param myVerboseFlag
 	 */
 	public static void init(boolean myVerboseFlag) {
@@ -516,7 +540,7 @@ public class Data implements Constants {
 	 * translate the morphological analyzer output to the tagger format replaces
 	 * every unknown analysis with propername analysis It also try to find out
 	 * whether there is a prefix for the propername
-	 * 
+	 *
 	 * @param dprefixesFile
 	 */
 	public static void init(String dprefixesFile) {
@@ -530,7 +554,7 @@ public class Data implements Constants {
 	 * This method populate a data structure with values from the inflections
 	 * table/ data file The values are codes for making performance better when
 	 * doing equality tests
-	 * 
+	 *
 	 * @param dbInfRec
 	 * @param word
 	 * @return
@@ -575,8 +599,8 @@ public class Data implements Constants {
 
 		// tense and binyan are relevant only for verb, participle,
 		// passiveParticiple, independentInfinitive
-		if ((posi == ENUM_POS.VERB && word.indexOf('"') == -1)
-				|| (posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1)
+		if (posi == ENUM_POS.VERB && word.indexOf('"') == -1
+				|| posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1
 				|| posi == ENUM_POS.PASSIVEPARTICIPLE
 				|| posi == ENUM_POS.INDEPENDENTINFINITIVE) {
 			String binyan = dbInfRec.getBinyan();
@@ -589,7 +613,7 @@ public class Data implements Constants {
 					transliteratedLexiconItem, word);
 			infRecNum.setTense(tensei);
 		}
-		if ((posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1)
+		if (posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1
 				|| posi == ENUM_POS.PASSIVEPARTICIPLE) {
 			String participleType = dbInfRec.getType();
 			int participleTypei = Str2Num.str2NumStrParticipleType(
@@ -614,7 +638,7 @@ public class Data implements Constants {
 	/**
 	 * This method handles getting all the relevant analysis according to the
 	 * key from the inflections table
-	 * 
+	 *
 	 * @param key
 	 *            - the transliterated form of the inflected item
 	 * @return an arrayList of all the analysis conform to the key
@@ -642,7 +666,7 @@ public class Data implements Constants {
 	/**
 	 * In case of data files mode working we initialize the data file with the
 	 * data files paths
-	 * 
+	 *
 	 * @param dinflectionsFile
 	 *            - inflections data file path
 	 * @param dprefixesFile
