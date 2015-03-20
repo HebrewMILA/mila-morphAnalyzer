@@ -125,7 +125,6 @@ public class PostProcessor1 extends Connected {
 		String phraze = "";
 		String prevTransliterated = "";
 		String definiteness = "";
-
 		int resultSetSize = 0;
 
 		for (int prevTransliteratedListIndex = prevTransliteratedListSize - 2; prevTransliteratedListIndex >= 0; prevTransliteratedListIndex--) {
@@ -527,6 +526,7 @@ public class PostProcessor1 extends Connected {
 		String prevTransliterated = "";
 		String definiteness = "";
 		ResultSet rs = null;
+		String query = "";
 		try {
 		for (int prevTransliteratedListIndex = prevTransliteratedListSize - 2; prevTransliteratedListIndex >= 0; prevTransliteratedListIndex--) {
 			prevTransliterated = prevTransliteratedList.get(prevTransliteratedListIndex);
@@ -537,31 +537,32 @@ public class PostProcessor1 extends Connected {
 						prevTransliteratedListSize - 2)
 						.replaceAll("'", "\\\\'") + " " + prevTransliteratedList.get(prevTransliteratedListSize - 1).replaceAll("'","\\\\'");
 				// System.out.println("*********************" + phraze);
-				rs = getData(String.format("SELECT mwe2.spelling, mwe2.register, mwe2.gender, mwe2.number, mwe2.definiteness,  mwe2.mwTransliterated,  mwe2.mwUndotted, "
+				query =String.format("SELECT mwe2.spelling, mwe2.register, mwe2.gender, mwe2.number, mwe2.definiteness,  mwe2.mwTransliterated,  mwe2.mwUndotted, "
 						+ " mwe%1$s.lexiconId, mwe%1$s.undottedLexiconItem, mwe%1$s.PGN, mwe%1$s.dottedLexiconItem, mwe%1$s.transliteratedLexiconItem, mwe1.pos, mwe1.type "
-						+ " FROM  mwe%1$s,  mwe1 WHERE mwe%1$s.transliterated=? AND mwe1.transliterated=? AND mwe%1$s.formerItemId=mwe1.id",id),transliterated,prevTransliterated);
+						+ " FROM  mwe%1$s,  mwe1 WHERE mwe%1$s.transliterated=? AND mwe1.transliterated=? AND mwe%1$s.formerItemId=mwe1.id",id);
+				rs = getData(query,transliterated,prevTransliterated);
 			} else if (expectedPrevId.equals("2")) {
 				phraze = prevTransliteratedList.get(prevTransliteratedListSize - 3).replaceAll("'", "\\\\'")
 						+ " " + prevTransliteratedList.get(prevTransliteratedListSize - 2).replaceAll("'","\\\\'")
 						+ " " + prevTransliteratedList.get(prevTransliteratedListSize - 1).replaceAll("'","\\\\'");
 				// System.out.println("*********************" + phraze);
-				rs = getData(String.format("SELECT mwe3.PGN, mwe3.spelling, mwe3.register, mwe3.gender, mwe3.number, mwe2.definiteness,  mwe3.mwTransliterated, "
+				query = String.format("SELECT mwe3.PGN, mwe3.spelling, mwe3.register, mwe3.gender, mwe3.number, mwe2.definiteness,  mwe3.mwTransliterated, "
 						+ " mwe3.mwUndotted, mwe%1$s.lexiconId, mwe%1$s.undottedLexiconItem , mwe%1$s.dottedLexiconItem, mwe%1$s.transliteratedLexiconItem,"
 						+ " mwe1.type, mwe1.pos "
 						+ " FROM  mwe%1$s, mwe%2$s, mwe1 WHERE  mwe3.mwTransliterated=? AND mwe%1$s.transliterated=? AND mwe%2$s.transliterated=? AND "
-						+ "	mwe%1$s.formerItemId=mwe%2$s.aid and mwe2.formerItemId=mwe1.id",id, expectedPrevId),phraze, transliterated, prevTransliterated);
+						+ "	mwe%1$s.formerItemId=mwe%2$s.aid and mwe2.formerItemId=mwe1.id",id, expectedPrevId);
+				rs = getData(query,phraze, transliterated, prevTransliterated);
 			} else if (expectedPrevId.equals("3")) {
 				phraze = prevTransliteratedList.get(prevTransliteratedListSize - 4).replaceAll("'", "\\\\'")
 						+ " " + prevTransliteratedList.get(prevTransliteratedListSize - 3).replaceAll("'","\\\\'")
 						+ " " + prevTransliteratedList.get(prevTransliteratedListSize - 2).replaceAll("'","\\\\'")
 						+ " " + prevTransliteratedList.get(prevTransliteratedListSize - 1).replaceAll("'","\\\\'");
-
-				rs = getData(String.format("SELECT mwe4.PGN, mwe4.spelling, mwe4.register, mwe4.gender, mwe4.number, mwe4.mwTransliterated,  mwe4.definiteness, "
+				query = String.format("SELECT mwe4.PGN, mwe4.spelling, mwe4.register, mwe4.gender, mwe4.number, mwe4.mwTransliterated,  mwe4.definiteness, "
 						+ " mwe4.mwUndotted, mwe%1$s.lexiconId, mwe%1$s.undottedLexiconItem, mwe%1$s.dottedLexiconItem, mwe%1$s.transliteratedLexiconItem,"
 						+ " mwe1.type, mwe1.pos "
 						+ " FROM  mwe%1$s,  mwe%2$s, mwe2 , mwe1 WHERE mwe4.mwTransliterated=? AND mwe%1$s.transliterated=? AND mwe%2$s.transliterated=?"
-						+ " AND mwe%1$s.formerItemId=mwe%2$s.aid AND mwe3.formerItemId=mwe2.aid AND mwe2.formerItemId=mwe1.id",id,expectedPrevId),
-						phraze, transliterated,prevTransliterated);
+						+ " AND mwe%1$s.formerItemId=mwe%2$s.aid AND mwe3.formerItemId=mwe2.aid AND mwe2.formerItemId=mwe1.id",id,expectedPrevId);
+				rs = getData(query, phraze, transliterated,prevTransliterated);
 
 			}
 			// System.out.println("prev selectSql =" + selectSql);
@@ -1364,7 +1365,9 @@ public class PostProcessor1 extends Connected {
 
 					analysesList = token.getAnalysis();
 					int analysisListSize = analysesList.size();
-
+					if (analysisListSize == 0){
+						System.err.println("No analysis for "+token.getSurface());
+					}
 					mwMWExistFlag = false;
 
 					for (int analysisIndex = 0; analysisIndex < analysisListSize; analysisIndex++) {
@@ -1609,7 +1612,10 @@ public class PostProcessor1 extends Connected {
 
 					analysesList = token.getAnalysis();
 					int analysisListSize = analysesList.size();
-
+					/***************************************/
+					if (analysisListSize == 0){
+						System.err.println("No analysis for "+token.getSurface());
+					}
 					mwMWExistFlag = false;
 
 					for (int analysisIndex = 0; analysisIndex < analysisListSize; analysisIndex++) {
