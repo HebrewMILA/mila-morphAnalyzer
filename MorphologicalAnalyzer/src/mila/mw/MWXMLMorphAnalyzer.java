@@ -87,7 +87,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see lexicon.analyse.MorphAnalyzer#main(java.lang.String[])
 	 */
 	public static void main(String[] args) {
@@ -263,7 +263,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 
 	private void analyzeDirectory(File inputDirectory, String outputDirectory,
 			final int pos) {
-		System.out.println("(F) MWXMLMorphAnalyzer: analyzeDirectory()");
+//		System.out.println("(F) MWXMLMorphAnalyzer: analyzeDirectory()");
 		if (inputDirectory.isDirectory()) {
 			// create correspond directory for xml
 
@@ -290,7 +290,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 					+ inputFile.substring(pos);
 			try {
 
-				// System.out.println(outputFile);
+				System.out.println("Morphological Analyzer: Analyzing file "+inputFile);
 				analyzeFile(inputFile, outputFile);
 				final PostProcessor1 postProcessor = new PostProcessor1(
 						!Data.webFlag);
@@ -317,7 +317,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * This method is called when using input/output files
 	 */
 	private void analyzeFile(String inputFile, String outputFile) {
-		System.out.println("(F) MWXMLMorphAnalyzer: analyzeFile()");
+//		System.out.println("(F) MWXMLMorphAnalyzer: analyzeFile()");
 		try {
 			final long afterLoadTime = System.currentTimeMillis();
 			// ///////////////////////////////////////
@@ -600,7 +600,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 */
 	@Override
 	public void processDirectory(String inputDirectory, String outputDirectory) {
-		System.out.println("(F) MWXMLMorphAnalyzer: processDirectory()");
+//		System.out.println("(F) MWXMLMorphAnalyzer: processDirectory()");
 		final File in = new File(inputDirectory);
 		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
 				.getParent().length();
@@ -630,8 +630,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			String dinflectionsFile, String dprefixesFile,
 			String gimartiasFile, String dmwinflectionsFile, String mwe1File,
 			String mwe2File, String mwe3File, String mwe4File) {
-		System.out
-				.println("(F) MWXMLMorphAnalyzer: processDirectory(datafiles..)");
+//		System.out.println("(F) MWXMLMorphAnalyzer: processDirectory(datafiles..)");
 		final File in = new File(inputDirectory);
 		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
 				.getParent().length();
