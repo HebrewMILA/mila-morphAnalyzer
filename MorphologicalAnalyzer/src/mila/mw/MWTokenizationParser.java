@@ -64,7 +64,7 @@ public class MWTokenizationParser extends TokenizationParser {
 		try {
 			prefixListSize = Data.getPrefixes(prefix);
 		} catch (final Exception e2) {
-			System.out
+			System.err
 			.println("XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
 					+ base + "and prefix=" + prefix);
 			e2.printStackTrace();
@@ -82,7 +82,7 @@ public class MWTokenizationParser extends TokenizationParser {
 							inflectionsRecNum, mwcreateXML,
 							Translate.Eng2Heb(base));
 				} catch (final Exception e3) {
-					System.out
+					System.err
 					.println("XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
 							+ base + "and prefix=" + prefix);
 					e3.printStackTrace();
@@ -107,7 +107,7 @@ public class MWTokenizationParser extends TokenizationParser {
 		try {
 			inflectionsList = Data.getInflections(base);
 		} catch (final Exception e) {
-			System.out
+			System.err
 			.println("XMLMorphAnalyzer:analyzeBase - Exception while getting inflections list for base = "
 					+ base);
 			e.printStackTrace();
@@ -120,7 +120,7 @@ public class MWTokenizationParser extends TokenizationParser {
 					inflectionsRecNum = Data.Str2NumBeforeValidation(
 							inflectionsRecDB, hebWord);
 				} catch (final Exception e1) {
-					System.out
+					System.err
 					.println("XMLMorphAnalyzer:analyzeBase - Exception while analyzeInflectionList for word="
 							+ base);
 					e1.printStackTrace();
@@ -147,7 +147,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				try {
 					prefixListSize = Data.getPrefixes(prefix);
 				} catch (final Exception e2) {
-					System.out
+					System.err
 					.println("XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
 							+ base + "and prefix=" + prefix);
 					e2.printStackTrace();
@@ -167,7 +167,7 @@ public class MWTokenizationParser extends TokenizationParser {
 									inflectionsRecDB, inflectionsRecNum,
 									mwcreateXML, Translate.Eng2Heb(base));
 						} catch (final Exception e3) {
-							System.out
+							System.err
 							.println("XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
 									+ base + " and prefix=" + prefix);
 							e3.printStackTrace();
@@ -252,7 +252,7 @@ public class MWTokenizationParser extends TokenizationParser {
 					inflectionsRecNum = Data.Str2NumBeforeValidation(
 							inflectionsRecDB, hebWord);
 				} catch (final Exception e1) {
-					System.out
+					System.err
 					.println("TokenizationParser: Exception occured while analyzeBaseNoPrefix for word="
 							+ transliterated);
 					e1.printStackTrace();
@@ -304,7 +304,7 @@ public class MWTokenizationParser extends TokenizationParser {
 												inflectionsRecNum, mwcreateXML,
 												Translate.Eng2Heb(base));
 									} catch (final Exception e3) {
-										System.out
+										System.err
 										.println("XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
 												+ base
 												+ "and prefix="
@@ -396,7 +396,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				inflectionsRecNum = Data.Str2NumBeforeValidation(
 						inflectionsRecDB, hebWord);
 			} catch (final Exception e1) {
-				System.out
+				System.err
 				.println("TokenizationParser: Exception occured while analyzeBaseNoPrefix for word="
 						+ transliterated);
 				e1.printStackTrace();
@@ -471,7 +471,7 @@ public class MWTokenizationParser extends TokenizationParser {
 							.analyzeHebrewSingleLetter(hebWord.substring(2, 3));
 				}
 			} catch (final Exception e) {
-				System.out
+				System.err
 				.println("XMLAnalyzer:analyzeHebrewDotSingleLetter Exception occured  for hebWord="
 						+ hebWord);
 				e.printStackTrace();
@@ -482,7 +482,7 @@ public class MWTokenizationParser extends TokenizationParser {
 					TextOutput.buildSimpleXMLAnalysis(outputPattern,
 							mwcreateXML, hebWord, -1);
 				} catch (final JAXBException e1) {
-					System.out
+					System.err
 					.println("XMLAnalyzer:analyzeHebrewDotSingleLetter JAXBException occured  for hebWord="
 							+ hebWord);
 					e1.printStackTrace();
@@ -501,7 +501,7 @@ public class MWTokenizationParser extends TokenizationParser {
 			isHebrewSingleLetter = StringUtils
 					.analyzeHebrewSingleLetter(hebWord);
 		} catch (final Exception e) {
-			System.out
+			System.err
 			.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord="
 					+ hebWord);
 			e.printStackTrace();
@@ -512,7 +512,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				TextOutput.buildSimpleXMLAnalysis(outputPattern, mwcreateXML,
 						hebWord, -1);
 			} catch (final JAXBException e1) {
-				System.out
+				System.err
 				.println("XMLAnalyzer:analyzeNumbers JAXBException occured  for hebWord="
 						+ hebWord);
 				e1.printStackTrace();
@@ -537,7 +537,7 @@ public class MWTokenizationParser extends TokenizationParser {
 		try {
 			mweInflectionsList = MWData.getMWEinflections(base);
 		} catch (final Exception e) {
-			System.out
+			System.err
 			.println("XMLMorphAnalyzer:analyzeBase - Exception while getting inflections list for base = "
 					+ base);
 			e.printStackTrace();
@@ -551,7 +551,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				mweinflectionsRec = mweInflectionsList
 						.get(i);
 			} catch (final Exception e1) {
-				System.out
+				System.err
 				.println("XMLMorphAnalyzer:analyzeBase - Exception while analyzeInflectionList for word="
 						+ base);
 				e1.printStackTrace();
@@ -572,7 +572,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				try {
 					prefixListSize = Data.getPrefixes(prefix);
 				} catch (final Exception e2) {
-					System.out
+					System.err
 					.println("XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
 							+ base + "and prefix=" + prefix);
 					e2.printStackTrace();
@@ -591,7 +591,7 @@ public class MWTokenizationParser extends TokenizationParser {
 							MWTextOutput.buildPrefixMWXMLOutput(pr,
 									mwcreateXML, mweinflectionsRec);
 						} catch (final Exception e3) {
-							System.out
+							System.err
 							.println("XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
 									+ base + "and prefix=" + prefix);
 							e3.printStackTrace();
@@ -638,7 +638,7 @@ public class MWTokenizationParser extends TokenizationParser {
 		try {
 			isNumber = StringUtils.analyzeNumbers(hebWord);
 		} catch (final Exception e) {
-			System.out
+			System.err
 			.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord="
 					+ hebWord);
 			e.printStackTrace();
@@ -670,7 +670,7 @@ public class MWTokenizationParser extends TokenizationParser {
 		try {
 			gimatriaVal = Data.getGimatrias(base);
 		} catch (final Exception e2) {
-			System.out
+			System.err
 			.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while getting Gimatria for base="
 					+ base + " and prefix=" + prefix);
 			e2.printStackTrace();
@@ -691,7 +691,7 @@ public class MWTokenizationParser extends TokenizationParser {
 							inflectionRecNum, mwcreateXML, base);
 
 				} catch (final Exception e1) {
-					System.out
+					System.err
 					.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while buildXMLPrefixOutput for base="
 							+ base + " and prefix=" + prefix);
 					e1.printStackTrace();
@@ -706,7 +706,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				try {
 					prefixListSize = Data.getPrefixes(prefix);
 				} catch (final Exception e1) {
-					System.out
+					System.err
 					.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while getting prefixes for base="
 							+ base + " and prefix=" + prefix);
 					e1.printStackTrace();
@@ -726,7 +726,7 @@ public class MWTokenizationParser extends TokenizationParser {
 									mwcreateXML, base);
 
 						} catch (final Exception e) {
-							System.out
+							System.err
 							.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while buildXMLPrefixOutput for base="
 									+ base + " and prefix=" + prefix);
 							e.printStackTrace();
@@ -909,7 +909,7 @@ public class MWTokenizationParser extends TokenizationParser {
 						inflectionRecNum, mwcreateXML, hebPrefix);
 
 			} catch (final Exception e) {
-				System.out
+				System.err
 				.println("XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix="
 						+ prefix);
 				e.printStackTrace();
@@ -924,7 +924,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				// System.out.println("(F) handlePrefix  Data.getPrefixes("+prefix+")");
 				prefixListSize = Data.getPrefixes(prefix);
 			} catch (final Exception e1) {
-				System.out
+				System.err
 				.println("XMLAnalyzer:handlePrefix Exception occured while getting prefixes for prefix="
 						+ prefix);
 				e1.printStackTrace();
@@ -950,7 +950,7 @@ public class MWTokenizationParser extends TokenizationParser {
 									inflectionRecDB, inflectionRecNum,
 									mwcreateXML, "");
 						} catch (final Exception e) {
-							System.out
+							System.err
 							.println("XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix="
 									+ prefix);
 							e.printStackTrace();
@@ -1106,11 +1106,11 @@ public class MWTokenizationParser extends TokenizationParser {
 				try {
 					readInput(hebWord);
 				} catch (final IOException e1) {
-					System.out
+					System.err
 					.println("XMLMorphAnalyzer:startElemen(element) - IOException while readInput");
 					e1.printStackTrace();
 				} catch (final Exception e1) {
-					System.out
+					System.err
 					.println("XMLMorphAnalyzer:startElemen(element) - Exception while readInput");
 					e1.printStackTrace();
 				}
