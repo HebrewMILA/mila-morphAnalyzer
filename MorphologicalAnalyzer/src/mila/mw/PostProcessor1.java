@@ -55,8 +55,8 @@ public class PostProcessor1 extends Connected {
 
 	public PostProcessor1(boolean _useDataFiles) {
 		useDataFiles = _useDataFiles;
-		System.err.println("(D) Postprocessor initialied, data files? "
-				+ _useDataFiles);
+//		System.err.println("(D) Postprocessor initialied, data files? "
+//				+ _useDataFiles);
 	}
 
 	public void arrangeAnalysisIdAfterRemove(TokenType token) {
@@ -1560,7 +1560,8 @@ public class PostProcessor1 extends Connected {
 					token = tokenList.get(tokenIndex);
 					if (token.getAnalysis() == null
 							|| token.getAnalysis().size() == 0) {
-						System.err.println(token.getId());
+						System.err.println("Token id:"+token.getId()+" "+token.getSurface()+" has no analysis");
+						System.out.println("Token id:"+token.getId()+" "+token.getSurface()+" has no analysis");
 					}
 					if ((AnalysisType) token.getAnalysis().get(0) != null
 							&& ((AnalysisType) token.getAnalysis().get(0))
@@ -1612,10 +1613,6 @@ public class PostProcessor1 extends Connected {
 
 					analysesList = token.getAnalysis();
 					int analysisListSize = analysesList.size();
-					/***************************************/
-					if (analysisListSize == 0){
-						System.err.println("No analysis for "+token.getSurface());
-					}
 					mwMWExistFlag = false;
 
 					for (int analysisIndex = 0; analysisIndex < analysisListSize; analysisIndex++) {
