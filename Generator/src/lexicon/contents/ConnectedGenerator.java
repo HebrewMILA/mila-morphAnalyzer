@@ -2,7 +2,6 @@ package lexicon.contents;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -44,17 +43,22 @@ public class ConnectedGenerator {
 	    /*
 	     * lexicon test is for the testing inside the lexicon.
 	     */
-	    pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
-				"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest",
-				"tommy", "tammy2010!)");
-//	    pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
-//			"jdbc:mysql://yeda.cs.technion.ac.il:3306/playground_lexiconTest",
-//			"tommy", "tammy2010!)");
-
+	    initPool();
 	} catch (Exception e) {
 	    e.printStackTrace();
 	    System.exit(0);
 	}
+    }
+
+    private static void initPool() {
+
+	pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
+			"jdbc:mariadb://yeda.cs.technion.ac.il:3306/lexiconTest",
+			"tommy", "tammy2010!)");
+//    pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
+//		"jdbc:mysql://yeda.cs.technion.ac.il:3306/playground_lexiconTest",
+//		"tommy", "tammy2010!)");
+	pool.setCaching(false);
     }
 
     public static DataSource cpds;
@@ -98,44 +102,16 @@ public class ConnectedGenerator {
     protected static ResultSet getData(String sql) {
 	ResultSet rs = null;
 	try {
-	    conn = prepareConnection();
+	    prepareConnection();
 	    stmt = conn.createStatement();
 	    stmt.execute(sql);
 	    rs = stmt.getResultSet();
 	} catch (SQLException E) {
 	    System.out.println("Lexicon Message: Content.getData Error");
 	    E.printStackTrace();
-	} finally{
-		releaseConnection();
 	}
 	return rs;
     }
-	protected static ResultSet getData(String query, String... params) {
-		ResultSet rs = null;
-		try {
-			conn = prepareConnection();
-			PreparedStatement stmt = conn.prepareStatement(query);
-			for (int i = 1; i <= params.length; i++) {
-				stmt.setString(i, params[i - 1]);
-			}
-			stmt.execute();
-			rs = stmt.getResultSet();
-		} catch (SQLException E) {
-			String paramsOut = "";
-			for (String param : params){
-				paramsOut += " "+param;
-
-			}
-			System.err
-					.println("Generator Message: Content.getData Error trying to excute:\n"
-							+ query + paramsOut);
-			E.printStackTrace();
-		} finally{
-			releaseConnection();
-		}
-		return rs;
-
-	}
 
     /**
      * Opens the <code>conn</code> Connection object. The method default opening
@@ -149,13 +125,18 @@ public class ConnectedGenerator {
      * @see #conn
      * @see #prepareDirectConnection
      */
-    protected static Connection prepareConnection() throws SQLException {
-		long timeout = 18000; // longer timeout
-		Connection conn = pool.getConnection(timeout);
-		if (conn == null) {
-		    throw new SQLException();
-		}
-		return conn;
+    protected static void prepareConnection() throws SQLException {
+	long timeout = 18000; // longer timeout
+	conn = pool.getConnection(timeout);
+	if (conn == null) {
+	    /*
+	     * XXX: We have a bad resource leak, somewhere. This is a horrible
+	     * band-aid around that issue.
+	     */
+	    initPool();
+	    // throw new RuntimeException("conn is null!");
+	    conn = pool.getConnection(timeout);
+	}
     }
 
     public static void setCPDS(DataSource cpds) {
