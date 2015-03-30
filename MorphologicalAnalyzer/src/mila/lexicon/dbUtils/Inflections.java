@@ -119,18 +119,7 @@ public class Inflections extends Connected {
 
 	// ------------------------------------------------------------------------------------------------------------------------------
 	public ArrayList get(String input) throws UnsupportedEncodingException {
-		input = apostropheHandling(input);
 		ArrayList result = new ArrayList();
-		/*****
-		 * UPDATE checking input does not contain "\" character so it will not
-		 * cause an SQL error - yossi 16.11.10
-		 */
-		if (input.endsWith("\\")) {
-			// System.out.println("BEFORE \\ to \\\\ in " + input );
-			input = input.replace("\\", "\\\\");
-			// System.out.println("REPLACED \\ to \\\\ in " + input );
-		}
-		/***** UPDATE END */
 		String sql = "SELECT * FROM inflections WHERE transliterated=?";
 		// System.out.println(sql);
 		ResultSet rs = null;
