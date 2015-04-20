@@ -273,6 +273,8 @@
 						<xsl:when test="base//@number='singular'">יחיד</xsl:when>
 						<xsl:when test="base//@number='plural'">רבים</xsl:when>
 						<xsl:when test="base//@number='dual'">	זוגי</xsl:when>
+						<xsl:when test="base//@number='dual and plural'">זוגי וגם רבים</xsl:when>
+						<xsl:when test="base//@number='singular and plural'">יחיד וגם רבים</xsl:when>
 						</xsl:choose>
 					</xsl:variable>
 					<xsl:variable name="CONSTRUCT">
@@ -308,6 +310,8 @@
 						<xsl:when test="suffix/@number='singular'">יחיד</xsl:when>
 						<xsl:when test="suffix/@number='plural'">רבים</xsl:when>
 						<xsl:when test="suffix/@number='dual'"	>זוגי</xsl:when>
+						<xsl:when test="suffix/@number='dual and plural'">זוגי וגם רבים</xsl:when>
+						<xsl:when test="suffix/@number='singular and plural'">יחיד וגם רבים</xsl:when>
 						</xsl:choose>
 					</xsl:variable> 
 					<xsl:variable name="SUFFIX_PERSON">
