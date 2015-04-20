@@ -1,0 +1,215 @@
+body {
+	background-color: #f5f6f7;
+	direction: rtl;
+	font-size: 20px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	color: black;
+	width: 99%;
+	height: 95%;
+}
+
+#Form {
+	text-align: center;
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+}
+
+textarea
+{ 
+	margin-top: 5%;
+	font-size: 130%;
+	
+	margin-top: 10px;
+	width: 90%;
+	height: 87%;
+	text-align: right;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	padding: 10px 10px 10px 10px;
+	border-style: ridge;
+	background-color:#ECE5B6;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+	color:    darkgray;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    darkgray;
+	opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    darkgray;
+	opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:    darkgray;
+}
+
+h1 { 
+	color: #336699; 
+	font-size: 26px; 
+	font-weight: bold; 
+	font-variant: normal; 
+	text-align: center;
+}
+
+article {
+	padding: 0 0 0 0;
+}
+
+ol.paragraphs {
+	counter-reset: item;
+	list-style-type: none;
+}
+
+ol.paragraphs li:before {
+	font-weight: bold; 
+	content: 'פסקה ' counter(item, decimal) ' ';
+	counter-increment: item;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+ol.sents {
+	counter-reset: item;
+	list-style-type: decimal;
+}
+
+ol.sents li:before {
+	content: none;
+	counter-increment: item;
+}
+
+ol.sents li a { 
+	margin: 0px;  
+	width: 100%; 
+	height: 0%;
+}
+
+table.AnalysisTable {
+	resize:none;
+	overflow:auto;
+	border: 1px solid gray;
+	border-spacing: 2px;
+	border-collapse: separate;
+	background-color: white;
+}
+
+table.AnalysisTable  th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #FFCC99;
+	border-style: inset;
+	border-width: 2px;
+	padding: 3px;
+	max-width: 130px;
+	overflow:auto;
+	text-align: center;
+}
+
+table.AnalysisTable td {
+	border-style: inset;
+	border-width: 2px;
+	padding: 3px;
+	overflow:auto;
+	text-align: center;
+}
+col.PREFIX {
+	font-weight: bold;
+	text-align: center;
+	background-color: #ADFF2F;
+}
+table.LEXICON_ITEM {
+	text-align: right;
+	background-color: #FFFFCC;
+}
+col.SCORE {
+	font-weight: bold;
+	text-align: center;
+	background-color: #FFCCFF;
+}
+
+
+span.clickable {
+	/* קו תחתון מסתיר את הניקוד */
+	color: blue;
+}
+
+span.clickable:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+# tool tip
+
+span.token {
+	outline:none;
+}
+
+span.token:hover {
+	color: red;
+	cursor: pointer;
+	text-decoration:none;
+}
+ 
+span.token span.tooltip{
+	font-size: 18px;
+	display:none;
+	padding:5px 10px;
+	margin-top:43px; 
+	margin-left:auto;
+	width:auto; 
+	line-height:16px;
+	border-radius:2px;        
+	box-shadow: 0px 0px 8px 4px #666;
+}
+span.token:hover span.tooltip {
+	display:inline;
+	position:absolute;
+	border:2px solid #FFF;
+	color:#EEE;
+	background:#333 url(images/css-tooltip-gradient-bg.png) repeat-x 0 0;
+}
+span.token span.tooltip:hover {
+	display:none;
+}
+.callout {
+	position:absolute;
+	border:0;
+	top:-14px;
+	left:auto;
+}
+footer {
+	width: 95%;
+	position: fixed;
+	bottom: 5px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	clear: both;
+	text-align: center;
+}
+.w2ui-tb-caption {
+	font-size: 16px;
+}
+#layout_layout_panel_left  {
+	text-align: left;
+}
+#xml {
+	overflow-y: scroll;
+	min-height: 100%;
+	height: 100%;
+}
+/* details summary::-webkit-details-marker { display:none; } */
+.xml_delim {	color: blue; }
+.xml_tag {  }
+.xml_att_name {	color: red; }
+.xml_att_val {	color: green; }
