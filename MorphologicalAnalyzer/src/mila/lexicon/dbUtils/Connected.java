@@ -36,8 +36,6 @@ public class Connected {
 	static String mysqlUser = "";
 	static String mysqlPassword = "";
 	static String myurl = "";
-	private static String url = "";
-	private static boolean pc = true;
 	private static ConnectionPool pool = null;
 	static {
 		try {
@@ -61,7 +59,7 @@ public class Connected {
 			pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest",
 					"morphuser", "qetu");
-
+			pool.setCaching(false);
 			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/mwGenerator",
 			// "gili", "dr7R2c8edru");
