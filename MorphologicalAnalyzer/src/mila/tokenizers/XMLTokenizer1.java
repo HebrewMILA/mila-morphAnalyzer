@@ -26,7 +26,9 @@ import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 import mila.lexicon.analyse.Constants;
@@ -44,7 +46,31 @@ public class XMLTokenizer1 implements Constants {
 	boolean webFlag = false;
 
 	final static int MAX_EMPTY_LINES = 100;
-
+	final static private Set<String> kitzurim = new HashSet<>();
+	static{
+		populateKitzurim();
+	}
+	static private void populateKitzurim(){
+		kitzurim.add("וכד'");
+		kitzurim.add("וכדו'");
+		kitzurim.add("מס'");
+		kitzurim.add("נק'");
+		kitzurim.add("מע'");
+		kitzurim.add("מח'");
+		kitzurim.add("וכו'");
+		kitzurim.add("רח'");
+		kitzurim.add("טל'");
+		kitzurim.add("שכ'");
+		kitzurim.add("שד'");
+		kitzurim.add("גר'");
+		kitzurim.add("פרופ'");
+		kitzurim.add("אונ'");
+		kitzurim.add("וגו'");
+		kitzurim.add("גב'");
+		kitzurim.add("להית'");
+		kitzurim.add("להת'");
+		kitzurim.add("י-ם");
+	}
 	public static void main(String[] args) {
 		int argc = args.length;
 		XMLTokenizer1 t = new XMLTokenizer1();
@@ -1152,6 +1178,7 @@ public class XMLTokenizer1 implements Constants {
 		return returnValue;
 	}
 
+
 	/**
 	 * We must recognize known acronym ends with ' because our default is to
 	 * separate the ' from the token In this specific case we need to leave it
@@ -1164,94 +1191,47 @@ public class XMLTokenizer1 implements Constants {
 		int tokenLen = token.length();
 		boolean returnValue = false;
 		int indexKitzur = 0;
-		if ((indexKitzur = token.indexOf("וכד'")) != -1
-				|| (indexKitzur = token.indexOf("וכדו'")) != -1
-				|| (indexKitzur = token.indexOf("מס'")) != -1
-				|| (indexKitzur = token.indexOf("נק'")) != -1
-				|| (indexKitzur = token.indexOf("מע'")) != -1
-				|| (indexKitzur = token.indexOf("מח'")) != -1
-				|| (indexKitzur = token.indexOf("וכו'")) != -1
-				|| (indexKitzur = token.indexOf("רח'")) != -1
-				|| (indexKitzur = token.indexOf("טל'")) != -1
-				|| (indexKitzur = token.indexOf("שכ'")) != -1
-				|| (indexKitzur = token.indexOf("שד'")) != -1
-				|| (indexKitzur = token.indexOf("גר'")) != -1
-				|| (indexKitzur = token.indexOf("פרופ'")) != -1
-				|| (indexKitzur = token.indexOf("עמ'")) != -1
-				|| (indexKitzur = token.indexOf("אונ'")) != -1
-				|| (indexKitzur = token.indexOf("וגו'")) != -1
-				|| (indexKitzur = token.indexOf("גב'")) != -1
-				|| (indexKitzur = token.indexOf("להית'")) != -1
-				|| (indexKitzur = token.indexOf("להת'")) != -1
-				|| (indexKitzur = token.indexOf("ושות'")) != -1
-				// || ((indexKitzur = token.indexOf("ש\"ס")) != -1)
-				// || ((indexKitzur = token.indexOf("ש''ס")) != -1)
-				// || ((indexKitzur = token.indexOf("ש\"ח")) != -1)
-				|| (indexKitzur = token.indexOf("י-ם")) != -1
-				// || ((indexKitzur = token.indexOf("ק\"ג")) != -1)
-				) {
-			if (indexKitzur == 0) // is it at the begining of the token ?
-			{
-				if (token.endsWith("'") // if ends with ' or in range of letters
-						|| token.charAt(tokenLen - 1) >= 'א'
-						&& token.charAt(tokenLen - 1) <= 'ת') {
-					xmlTokenizer.createTokens(token);
-					returnValue = true;
-				} else {
-					char currentChar;
-					int i = tokenLen - 1;
+		for (String kitzur:kitzurim){
+			if ((indexKitzur = token.indexOf(kitzur)) != -1){
+				break;
+			}
+		}
+		if (indexKitzur == -1){
+			return false;
+		}
+		if (indexKitzur == 0){ // is it at the begining of the token ?
+			if (token.endsWith("'") // if ends with ' or in range of letters
+					|| token.charAt(tokenLen - 1) >= 'א'
+					&& token.charAt(tokenLen - 1) <= 'ת') {
+				xmlTokenizer.createTokens(token);
+				returnValue = true;
+			} else {
+				char currentChar;
+				int i = tokenLen - 1;
 
-					while (i > 0) {
-						currentChar = token.charAt(i);
-						if (!(currentChar >= 'א' && currentChar <= 'ת')
-								&& currentChar != '\''
-								&& token.charAt(i - 1) == '\'') // fixed by
-							// yossi
-							// 17.10.10
-							// , the
-							// charAt(i-1)
-							// was
-							// missing
-						{
-							xmlTokenizer.createTokens(token.substring(0, i));
-							break;
-						} else {
-							i--;
-						}
+				while (i > 0) {
+					currentChar = token.charAt(i);
+					if (!(currentChar >= 'א' && currentChar <= 'ת')
+							&& currentChar != '\''
+							&& token.charAt(i - 1) == '\'')
+					{
+						xmlTokenizer.createTokens(token.substring(0, i));
+						break;
+					} else {
+						i--;
 					}
-					String suffix = token.substring(i);
-					if (suffix.length() > 0) {
-						createSuffixTokens(suffix);
-					}
-					returnValue = true;
 				}
-			} else // not in the begining of the token
-			{
-				String checkedPrefix = token.substring(0, indexKitzur);
-				if (StringUtils.moshevkaleb(checkedPrefix)) {
-					char currentChar;
-					int i = tokenLen - 1;
-					while (i > 0) {
-						currentChar = token.charAt(i);
-						if (!(currentChar >= 'א' && currentChar <= 'ת')
-								&& currentChar != '\'') {
-							xmlTokenizer
-							.createTokens("prefix="
-									+ checkedPrefix
-									+ " token="
-									+ token.substring(
-											checkedPrefix.length(), i));
-							break;
-						} else {
-							i--;
-						}
-					}
-					String suffix = token.substring(i);
-					if (suffix.length() > 0) {
-						createSuffixTokens(suffix);
-					}
-					returnValue = true;
+				String suffix = token.substring(i);
+				if (suffix.length() > 0) {
+					createSuffixTokens(suffix);
 				}
+				returnValue = true;
+			}
+		} else {// not at the beginning of the token
+			String checkedPrefix = token.substring(0, indexKitzur);
+			if (StringUtils.moshevkaleb(checkedPrefix)) {
+				xmlTokenizer.createTokens("prefix=" + checkedPrefix + " token=" + token.substring(indexKitzur));
+				returnValue = true;
 			}
 		}
 		return returnValue;
