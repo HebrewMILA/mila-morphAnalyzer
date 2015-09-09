@@ -35,10 +35,9 @@ import mila.lexicon.utils.Translate;
 public class PostProcessor1 extends Connected {
 	public static void main(String[] args) throws Exception {
 		final PostProcessor1 postProcessor = new PostProcessor1();
-		final String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\shulyOutputFolder\\90.xml";
-		final String outputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\shulyCleanFiles\\90.xml";
+		final String inputFile = args[0];
+		final String outputFile = args[1];
 		postProcessor.process(inputFile, outputFile);
-
 	}
 
 	boolean useDataFiles = false; // like webFlag = true

@@ -125,10 +125,6 @@ public class Num2Str implements Constants {
 		}
 		return pos;
 	}
-
-	public static void main(String[] args) {
-	}
-
 	/**
 	 * This method translates data file codes for binyan to strings
 	 * 

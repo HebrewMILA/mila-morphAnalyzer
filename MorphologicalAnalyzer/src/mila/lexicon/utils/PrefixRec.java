@@ -13,9 +13,6 @@ package mila.lexicon.utils;
  *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class PrefixRec {
-	public static void main(String[] args) {
-	}
-
 	private String surface = "";
 	private String function = "";
 

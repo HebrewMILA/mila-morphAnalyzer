@@ -753,12 +753,4 @@ public class Load2memory {
 		}
 		return prefixes;
 	}
-
-	// -------------------------------------------------------------------------------------------------------
-
-	public static void main(String[] args) {
-		// Load2memory.loadInflections();
-		// System.exit(0);
-	}
-
 }

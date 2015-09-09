@@ -27,8 +27,8 @@ import java.util.Vector;
 public class PerformUniqeOutput {
 	public static void main(String[] args) throws IOException {
 		PerformUniqeOutput r = new PerformUniqeOutput();
-		String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy1.txt";
-		String outputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy2.txt";
+		String inputFile = args[0];
+		String outputFile = args[1];
 		r.myUniqueOutput("</paragraph>\n" + "#\n" + "hhzdmnwt\n"
 				+ "\t(NOUN hzdmnwt)" + "U\n" + "(yyQUOT yyQUOT)\n" + ".\n"
 				+ "(yyDOT yyDOT)", outputFile);

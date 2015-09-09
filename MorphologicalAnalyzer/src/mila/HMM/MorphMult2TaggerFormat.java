@@ -52,15 +52,10 @@ public class MorphMult2TaggerFormat implements Constants {
 	// final String JAXB_PACKAGE = "mila.generated";
 
 	public static void main(String[] args) {
-		String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\output1.xml";
-		String outputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy1.txt";
-		String dprefixesDataFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\dprefixes.data";
-		// String inputFile = args[0];
-		// String outputFile = args[1];
+		String inputFile = args[0];
+		String outputFile = args[1];
 		MorphMult2TaggerFormat m = new MorphMult2TaggerFormat();
 		m.process(inputFile, outputFile);
-		System.exit(0);
-
 	}
 
 	BufferedWriter bw = null;

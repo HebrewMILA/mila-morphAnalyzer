@@ -121,9 +121,6 @@ public class Str2Num implements Constants {
 	return strPGN;
     }
 
-    public static void main(String[] args) {
-    }
-
     /**
      * This method is used to translate baseNameEntityType (types of properName)
      * to codes
