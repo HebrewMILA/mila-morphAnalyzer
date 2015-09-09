@@ -1,6 +1,6 @@
 package mila.tools.api;
 
-public class MilaException extends Exception {
+public class MilaException extends RuntimeException {
 	public MilaException(Throwable e) {
 		super(e);
 	}
