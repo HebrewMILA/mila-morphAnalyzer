@@ -10,11 +10,12 @@ import java.util.List;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.UnmarshalException;
 import javax.xml.bind.Unmarshaller;
 
 import mila.generated.ArticleType;
 import mila.generated.Corpus;
+import mila.lexicon.analyse.Constants;
+import mila.tools.api.MilaException;
 
 /**
  * This shows how to use JAXB to unmarshal an xml file Then display the
@@ -22,11 +23,11 @@ import mila.generated.Corpus;
  */
 
 public class CorpusAnalysisReader {
+	/** Types defined in the automatically generated code of jaxb */
+	public final static JAXBContext jc = acquireJAXBContext();
 	private List<ArticleType> articleTypeList;
 	private String xmlFile;
 	private Corpus collection;
-	private static final String JAXB_PACKAGE = "mila.generated";
-	JAXBContext jc;
 
 	// -------------------------------------------------------------------------------------------------------------------------------
 	public CorpusAnalysisReader() {
@@ -56,23 +57,18 @@ public class CorpusAnalysisReader {
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------------------
-	public void parse(InputStream input) {
+	public static Corpus parse(InputStream input) {
 		try {
-			jc = JAXBContext.newInstance(JAXB_PACKAGE);
 			Unmarshaller unmarshaller = jc.createUnmarshaller();
 			unmarshaller.setValidating(false);
-			collection = (Corpus) unmarshaller.unmarshal(input);
-			articleTypeList = collection.getArticle();
-		} catch (UnmarshalException e) {
-			e.printStackTrace();
+			return (Corpus) unmarshaller.unmarshal(input);
 		} catch (JAXBException e) {
-			e.printStackTrace();
+			throw new MilaException(e);
 		}
 	}
 
 	public void save(PrintWriter pw) {
 		try {
-			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
 			Marshaller marshaller = jc.createMarshaller();
 			marshaller.marshal(collection, pw);
 
@@ -84,7 +80,6 @@ public class CorpusAnalysisReader {
 
 	public String save(String whereTo) {
 		try {
-			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
 			Marshaller marshaller = jc.createMarshaller();
 			marshaller.marshal(collection, new FileOutputStream(whereTo));
 			return whereTo;
@@ -92,5 +87,14 @@ public class CorpusAnalysisReader {
 			e.printStackTrace();
 		}
 		return "";
+	}
+
+	private static JAXBContext acquireJAXBContext(){
+		try {
+			return JAXBContext.newInstance(Constants.JAXB_PACKAGE);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+			throw new MilaException(e);
+		}
 	}
 }

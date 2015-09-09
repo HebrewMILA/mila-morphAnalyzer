@@ -52,6 +52,7 @@ import mila.lexicon.analyse.Str2Num;
 import mila.lexicon.utils.PrefixRec;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
+import mila.tools.api.MilaException;
 
 /**
  *
@@ -67,7 +68,7 @@ import mila.lexicon.utils.Translate;
 public class CreateCorpusXML implements Constants {
 
 	/** Types defined in the automatically generated code of jaxb */
-	protected JAXBContext jc;
+	public final static JAXBContext jc = acquireJAXBContext();
 
 	protected ArticleType article;
 
@@ -1853,12 +1854,6 @@ public class CreateCorpusXML implements Constants {
 	 * This method creates the header of the XML document
 	 */
 	public void createXMLDoc() {
-		try {
-			jc = JAXBContext.newInstance("mila.generated");
-		} catch (final JAXBException e) {
-			System.err.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");
-			e.printStackTrace();
-		}
 		objFactory = new ObjectFactory();
 		try {
 			corpus = objFactory.createCorpus();
@@ -2176,4 +2171,14 @@ public class CreateCorpusXML implements Constants {
 	// // c.finalizeSentence();
 	// // c.printDoc();
 	// }
+	
+
+	private static JAXBContext acquireJAXBContext(){
+		try {
+			return JAXBContext.newInstance(JAXB_PACKAGE);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+			throw new MilaException(e);
+		}
+	}
 }

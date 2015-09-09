@@ -13,10 +13,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Random;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
+import mila.corpus.CreateCorpusXML;
 import mila.generated.*;
 import mila.lexicon.analyse.Constants;
 import mila.lexicon.analyse.Data;
@@ -30,7 +30,6 @@ import mila.lexicon.utils.Translate;
  */
 public final class MorphMult2TaggerFormat implements Constants {
 	private BufferedWriter bw = null;
-	private BufferedReader bi = null;
 	private StringBuffer outputString = new StringBuffer();
 	private final static Random generator = new Random();
 
@@ -547,8 +546,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		List<TokenType> tokenTypeList;
 		List<AnalysisType> analysisTypeList;
 		Corpus collection = null;
-		JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
-		Unmarshaller unmarshaller = jc.createUnmarshaller();
+		Unmarshaller unmarshaller = CreateCorpusXML.jc.createUnmarshaller();
 		unmarshaller.setValidating(false);
 		collection = (Corpus) unmarshaller.unmarshal(in);
 		articleTypeList = collection.getArticle();

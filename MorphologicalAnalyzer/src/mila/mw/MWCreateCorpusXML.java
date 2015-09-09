@@ -9,7 +9,6 @@ package mila.mw;
 import java.net.InetAddress;
 import java.util.Calendar;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
 import mila.corpus.CreateCorpusXML;
@@ -83,13 +82,6 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 
 	@Override
 	public void createXMLDoc() {
-		// System.out.println("(F) createXMLdOC() ");
-		try {
-			jc = JAXBContext.newInstance("mila.generated");
-		} catch (final JAXBException e) {
-			System.out.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");
-			e.printStackTrace();
-		}
 		objFactory = new ObjectFactory();
 		try {
 			corpus = objFactory.createCorpus();
@@ -104,7 +96,7 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 
 		}
 		corpus.setName("Analysis Results (" + hostname + ") @ " + Calendar.getInstance().getTime());
-		corpus.setMaintainer("Slava Demender");
+		corpus.setMaintainer("Yamit Barshatz");
 		corpus.setEmail("mila@cs.technion.ac.il");
 
 		corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
