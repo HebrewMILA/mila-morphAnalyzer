@@ -1,8 +1,5 @@
 /*
  * Created on 03/05/2007
- *
- * TODO To change the template for this generated file go to
- * Window - Preferences - Java - Code Style - Code Templates
  */
 package mila.HMM;
 
@@ -20,18 +17,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import mila.generated.AnalysisType;
-import mila.generated.ArticleType;
-import mila.generated.BaseType;
-import mila.generated.Corpus;
-import mila.generated.GenderNumberStatusDefinitenessType;
-import mila.generated.ParagraphType;
-import mila.generated.ParticipleType;
-import mila.generated.PrefixType;
-import mila.generated.ProperNameType;
-import mila.generated.SentenceType;
-import mila.generated.TokenType;
-import mila.generated.VerbType;
+import mila.generated.*;
 import mila.lexicon.analyse.Constants;
 import mila.lexicon.analyse.Data;
 import mila.lexicon.dbUtils.PrefixRecord;
@@ -43,14 +29,23 @@ import mila.lexicon.utils.Translate;
  * @author daliabo
  */
 public final class MorphMult2TaggerFormat implements Constants {
+	private BufferedWriter bw = null;
+	private BufferedReader bi = null;
+	private StringBuffer outputString = new StringBuffer();
+	private final static Random generator = new Random();
 
-	BufferedWriter bw = null;
-
-	BufferedReader bi = null;
-
-	StringBuffer outputString = new StringBuffer();
-
-	public void handleAdjective(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
+	public String myMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
+		String outputFilename = outputDir + "/myOutputFile.nf";
+		try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFilename)));
+				InputStream in = new java.io.ByteArrayInputStream(inStr.getBytes("UTF-8"))) {
+			parseXML(in, false, bw);
+		}
+		String randomNum = String.valueOf(generator.nextInt());
+		String outputFileName = "/outputFile" + randomNum + ".nf";
+		return outputFileName;
+	}
+	
+	private void handleAdjective(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
 		GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 		ParticipleType participle = base.getParticiple();
 		String definiteness = "";
@@ -91,7 +86,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public void handleDefinitedProperName(String hebWord, boolean prefixExistFlag) throws IOException {
+	private void handleDefinitedProperName(String hebWord, boolean prefixExistFlag) throws IOException {
 		if (!prefixExistFlag) {
 			bw.write("\t");
 			outputString.append("\t" + "(PROPERNAME-DEF " + hebWord + ")" + "\n");
@@ -102,7 +97,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		bw.newLine();
 	}
 
-	public boolean handleHebWordAndPunctuation(String hebWord, List<AnalysisType> analysisList) throws IOException {
+	private boolean handleHebWordAndPunctuation(String hebWord, List<AnalysisType> analysisList) throws IOException {
 		boolean punctuation = false;
 		if (analysisList.size() > 0) {
 			AnalysisType analysis = analysisList.get(0);
@@ -346,7 +341,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		return punctuation;
 	}
 
-	public void handleNoun(AnalysisType analysis, BaseType base, String hebWord, boolean prefixExistFlag)
+	private void handleNoun(AnalysisType analysis, BaseType base, String hebWord, boolean prefixExistFlag)
 			throws IOException {
 		ParticipleType participle = base.getParticiple();
 		GenderNumberStatusDefinitenessType noun = base.getNoun();
@@ -398,7 +393,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public void handleParticiple(AnalysisType analysis, String hebWord, boolean prefixExistFlag) throws IOException {
+	private void handleParticiple(AnalysisType analysis, String hebWord, boolean prefixExistFlag) throws IOException {
 		BaseType base = analysis.getBase();
 		ParticipleType participle = base.getParticiple();
 		String type = participle.getType();
@@ -458,7 +453,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public String handlePrefix(AnalysisType analysis) throws IOException {
+	private String handlePrefix(AnalysisType analysis) throws IOException {
 		// System.out.println("(F) handlePrefix");
 		List<?> prefixList = analysis.getPrefix();
 		int prefixListSize = prefixList.size();
@@ -479,13 +474,13 @@ public final class MorphMult2TaggerFormat implements Constants {
 		return prefixSurfaceSB.toString();
 	}
 
-	public void handlePrefixProperName(String hebWord, boolean prefixExistFlag) throws IOException {
+	private void handlePrefixProperName(String hebWord, boolean prefixExistFlag) throws IOException {
 		outputString.append("(PROPERNAME " + hebWord + ")" + "\n");
 		bw.write("(PROPERNAME " + hebWord + ")");
 		bw.newLine();
 	}
 
-	public void handleProperName(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
+	private void handleProperName(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
 		ProperNameType properName = base.getProperName();
 		String definiteness = properName.getDefiniteness();
 		if (definiteness != null && definiteness.equals("true")) {
@@ -509,7 +504,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public void handleSimplePos(BaseType base, String hebWord, String pos, boolean prefixExistFlag) throws IOException {
+	private void handleSimplePos(BaseType base, String hebWord, String pos, boolean prefixExistFlag) throws IOException {
 		if (!prefixExistFlag) {
 			bw.write("\t");
 			outputString.append("\t" + "(" + pos + " " + hebWord + ")" + "\n");
@@ -519,7 +514,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		bw.newLine();
 	}
 
-	public void handleVerb(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
+	private void handleVerb(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
 		VerbType verb = base.getVerb();
 		String tense = verb.getTense();
 		if (tense != null && tense.equals("infinitive")) {
@@ -541,20 +536,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	private final static Random generator = new Random();
-
-	public String myMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
-		String outputFilename = outputDir + "/myOutputFile.nf";
-		try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFilename)));
-				InputStream in = new java.io.ByteArrayInputStream(inStr.getBytes("UTF-8"))) {
-			parseXML(in, false, bw);
-		}
-		String randomNum = String.valueOf(generator.nextInt());
-		String outputFileName = "/outputFile" + randomNum + ".nf";
-		return outputFileName;
-	}
-
-	public void parseXML(InputStream in, boolean webFlag, BufferedWriter bw2) throws JAXBException, IOException {
+	private void parseXML(InputStream in, boolean webFlag, BufferedWriter bw2) throws JAXBException, IOException {
 		// for running in my PC with eclipse uncomment Data.webFlag = true;
 		if (webFlag)
 			Data.webFlag = webFlag;
