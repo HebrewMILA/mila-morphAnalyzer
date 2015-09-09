@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 import mila.dataStructures.DBInflectionsRecord;
 
-
 /**
  * @author daliabo
  *
@@ -98,8 +97,7 @@ public class Inflections extends Connected {
 				strOut = strIn.charAt(0) + "\\" + strIn.substring(index1);
 				// System.out.println("strOut = " + strOut);
 			} else {
-				strOut = strIn.substring(0, index1) + "\\"
-						+ strIn.substring(index1);
+				strOut = strIn.substring(0, index1) + "\\" + strIn.substring(index1);
 				// System.out.println("strOut1 = " + strOut);
 			}
 			// case of two apostrophe
@@ -107,8 +105,7 @@ public class Inflections extends Connected {
 			if (index2 != -1) {
 				index2 = strOut.lastIndexOf('\'');
 				// System.out.println("index2 = " + index2);
-				strOut = strOut.substring(0, index2) + "\\"
-						+ strOut.substring(index2);
+				strOut = strOut.substring(0, index2) + "\\" + strOut.substring(index2);
 				// System.out.println("strOut2 = " + strOut);
 			}
 		} else {
@@ -128,42 +125,33 @@ public class Inflections extends Connected {
 			if (rs != null) {
 				while (rs.next()) {
 					DBInflectionsRecord inflectionsRecDB = new DBInflectionsRecord();
-					inflectionsRecDB.setBaseLexiconPointer(rs
-							.getString("baseLexiconPointer"));
+					inflectionsRecDB.setBaseLexiconPointer(rs.getString("baseLexiconPointer"));
 					inflectionsRecDB.setBasePos(rs.getString("basePos"));
-					inflectionsRecDB.setBaseTransliteratedLItem(rs
-							.getString("baseTransliteratedLItem"));
+					inflectionsRecDB.setBaseTransliteratedLItem(rs.getString("baseTransliteratedLItem"));
 					inflectionsRecDB.setRegister(rs.getString("register"));
 					inflectionsRecDB.setSpelling(rs.getString("spelling"));
-					inflectionsRecDB.setSuffixFunction(rs
-							.getString("suffixFunction"));
+					inflectionsRecDB.setSuffixFunction(rs.getString("suffixFunction"));
 					inflectionsRecDB.setStatus(rs.getString("suffixStatus"));
 					inflectionsRecDB.setSurface(rs.getString("surface"));
-					inflectionsRecDB.setTransliterated(rs
-							.getString("transliterated"));
+					inflectionsRecDB.setTransliterated(rs.getString("transliterated"));
 					inflectionsRecDB.setPGN(rs.getString("PGN"));
-					inflectionsRecDB.setBaseUndottedLItem(rs
-							.getString("baseUndottedLItem"));
+					inflectionsRecDB.setBaseUndottedLItem(rs.getString("baseUndottedLItem"));
 					inflectionsRecDB.setBinyan(rs.getString("binyan"));
 					inflectionsRecDB.setTense(rs.getString("tense"));
 					inflectionsRecDB.setRoot(rs.getString("root"));
 					inflectionsRecDB.setBaseNumber(rs.getString("baseNumber"));
 					inflectionsRecDB.setBaseGender(rs.getString("baseGender"));
-					inflectionsRecDB.setHAttribute(rs
-							.getString("baseDefinitness"));
+					inflectionsRecDB.setHAttribute(rs.getString("baseDefinitness"));
 					inflectionsRecDB.setBasePerson(rs.getString("basePerson"));
 					inflectionsRecDB.setType(rs.getString("type"));
-					inflectionsRecDB.setDottedLexiconItem(rs
-							.getString("dottedLexiconItem"));
+					inflectionsRecDB.setDottedLexiconItem(rs.getString("dottedLexiconItem"));
 					inflectionsRecDB.setPolarity(rs.getString("polarity"));
 					inflectionsRecDB.setValue(rs.getString("value"));
 					String foreign = rs.getString("hebForeign");
 					if (foreign.length() > 0) {
-						inflectionsRecDB.setForeign(Integer.parseInt(rs
-								.getString("hebForeign")));
+						inflectionsRecDB.setForeign(Integer.parseInt(rs.getString("hebForeign")));
 					}
-					inflectionsRecDB.setPrefixPerEntry(rs.getString("prefix")
-							.charAt(0));
+					inflectionsRecDB.setPrefixPerEntry(rs.getString("prefix").charAt(0));
 					result.add(inflectionsRecDB);
 				}
 				rs.close();

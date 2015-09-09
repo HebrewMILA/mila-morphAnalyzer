@@ -14,8 +14,7 @@ public class OutputTokenRecord {
 		return surface;
 	}
 
-	public void setOutputAnalysisList(
-			ArrayList<OutputAnalysisRecord> outputAnalysisList) {
+	public void setOutputAnalysisList(ArrayList<OutputAnalysisRecord> outputAnalysisList) {
 		this.outputAnalysisList = outputAnalysisList;
 	}
 

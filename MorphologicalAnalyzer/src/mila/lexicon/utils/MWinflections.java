@@ -33,11 +33,11 @@ public class MWinflections implements Serializable {
 	public void put(String key, MWEinflectionsRecord mwinflectRecord) {
 		// System.out.println("(F) MWinflections:put()");
 		if (mwinflectRecord == null) {
-			System.out
-					.println("(F) MWinflections:put(): Bad idea! You tried to insert a null object into a Chain!");
+			System.out.println("(F) MWinflections:put(): Bad idea! You tried to insert a null object into a Chain!");
 			System.exit(1);
 			// throw new
-			// RuntimeException("Bad idea! You tried to insert a null object into a Chain!");
+			// RuntimeException("Bad idea! You tried to insert a null object
+			// into a Chain!");
 		}
 
 		// System.out.println("key=" + key);
@@ -50,7 +50,8 @@ public class MWinflections implements Serializable {
 			map.put(key, chain);
 			// Adding an element to an already existing chain
 		} else { // if entry already exist
-					// System.out.println("Adding an element to an already existing chain");
+					// System.out.println("Adding an element to an already
+					// existing chain");
 			ArrayList<MWEinflectionsRecord> existingChain = new ArrayList<MWEinflectionsRecord>();
 			existingChain = (ArrayList<MWEinflectionsRecord>) map.get(key);
 			// System.out.println("existingChain size="+ existingChain.size());
@@ -64,8 +65,7 @@ public class MWinflections implements Serializable {
 
 	public void sput(String key, ArrayList<MWEinflectionsRecord> mwinflectRecordChain) {
 		if (mwinflectRecordChain == null)
-			throw new RuntimeException(
-					"Bad idea! You tried to insert a null object into a Chain!");
+			throw new RuntimeException("Bad idea! You tried to insert a null object into a Chain!");
 		map.put(key, mwinflectRecordChain);
 	}
 }

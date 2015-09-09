@@ -305,8 +305,7 @@ public class PrefixRecord {
 	 * @param subordinatingConjunctionTag
 	 *            The subordinatingConjunctionTag to set.
 	 */
-	public void setSubordinatingConjunctionTag(
-			boolean subordinatingConjunctionTag) {
+	public void setSubordinatingConjunctionTag(boolean subordinatingConjunctionTag) {
 		this.subordinatingConjunctionTag = subordinatingConjunctionTag;
 	}
 

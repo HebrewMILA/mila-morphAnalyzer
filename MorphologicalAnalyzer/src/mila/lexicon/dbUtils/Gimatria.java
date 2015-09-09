@@ -47,7 +47,7 @@ public class Gimatria extends Connected {
 		// System.out.println("sql="+ sql);
 		ResultSet rs = null;
 		try {
-			rs = staticGetData(sql,input);
+			rs = staticGetData(sql, input);
 			if (rs != null) {
 				while (rs.next()) {
 					transliterated = rs.getString("transliterated");

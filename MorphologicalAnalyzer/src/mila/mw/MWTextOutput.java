@@ -19,8 +19,7 @@ import mila.lexicon.dbUtils.PrefixRecord;
 
 public class MWTextOutput extends TextOutput {
 
-	static public void buildMWXMLOutput(MWCreateCorpusXML createXML,
-			MWEinflectionsRecord mweinflectionsRec) {
+	static public void buildMWXMLOutput(MWCreateCorpusXML createXML, MWEinflectionsRecord mweinflectionsRec) {
 		String mweId = mweinflectionsRec.getMweId();
 		String mweBaseFormId = mweinflectionsRec.getMweBaseFormId();
 		String surface = mweinflectionsRec.getSurface();
@@ -30,12 +29,12 @@ public class MWTextOutput extends TextOutput {
 		boolean prefix = mweinflectionsRec.isPrefix();
 		String outputPattern = "MWE" + mweId;
 
-		createXML.createMWEAnalysis("", transliterated, surface, mweBaseFormId,
-				pos, mweId, type, prefix, "unspecified");
+		createXML.createMWEAnalysis("", transliterated, surface, mweBaseFormId, pos, mweId, type, prefix,
+				"unspecified");
 	}
 
-	static public void buildPrefixMWXMLOutput(PrefixRecord pr,
-			MWCreateCorpusXML createXML, MWEinflectionsRecord mweinflectionsRec) {
+	static public void buildPrefixMWXMLOutput(PrefixRecord pr, MWCreateCorpusXML createXML,
+			MWEinflectionsRecord mweinflectionsRec) {
 		String definiteness = "";
 		String mweId = mweinflectionsRec.getMweId();
 		String mweBaseFormId = mweinflectionsRec.getMweBaseFormId();
@@ -50,8 +49,8 @@ public class MWTextOutput extends TextOutput {
 			definiteness = "false";
 		String outputPattern = "MWE" + mweId;
 		String description = pr.getDescription();
-		createXML.createMWEAnalysis(description, transliterated, surface,
-				mweBaseFormId, pos, mweId, type, prefix, definiteness);
+		createXML.createMWEAnalysis(description, transliterated, surface, mweBaseFormId, pos, mweId, type, prefix,
+				definiteness);
 	}
 
 }

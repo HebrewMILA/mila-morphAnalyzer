@@ -26,30 +26,26 @@ public class Prefixes extends Connected {
 		// System.out.println("sql="+ sql);
 		ResultSet rs = null;
 		try {
-			rs = getData(sql,input);
+			rs = getData(sql, input);
 			if (rs != null) {
 
 				while (rs.next()) {
 					pr = new PrefixRecord();
 					pr.setAdverbKAF(rs.getBoolean("adverbKAF"));
 					pr.setDefArtHE(rs.getBoolean("defArtHE"));
-					pr.setDefiniteArticleTag(rs
-							.getBoolean("definiteArticleTag"));
+					pr.setDefiniteArticleTag(rs.getBoolean("definiteArticleTag"));
 					pr.setDescription(rs.getString("description"));
 					pr.setPrefix(rs.getString("prefix"));
 					pr.setPrefPartUnit(rs.getBoolean("prefPartUnit"));
 					pr.setRelativizerTag(rs.getBoolean("relativizerTag"));
 					pr.setRelHE(rs.getBoolean("relHE"));
 					pr.setSubConOrRelSHIN(rs.getBoolean("subConOrRelSHIN"));
-					pr.setSubordinatingConjunctionTag(rs
-							.getBoolean("subordinatingConjunctionTag"));
-					pr.setTemporalSubConjTag(rs
-							.getBoolean("temporalSubConjTag"));
+					pr.setSubordinatingConjunctionTag(rs.getBoolean("subordinatingConjunctionTag"));
+					pr.setTemporalSubConjTag(rs.getBoolean("temporalSubConjTag"));
 					pr.setTempSubConKAFSHIN(rs.getBoolean("tempSubConKAFSHIN"));
 					pr.setTempSubConBETSHIN(rs.getBoolean("tempSubConBETSHIN"));
 					pr.setTempSubConMEMSHIN(rs.getBoolean("tempSubConMEMSHIN"));
-					pr.setTempSubConLAMEDKAFSHIN(rs
-							.getBoolean("tempSubConLAMEDKAFSHIN"));
+					pr.setTempSubConLAMEDKAFSHIN(rs.getBoolean("tempSubConLAMEDKAFSHIN"));
 					pr.setPrepositionTag(rs.getBoolean("prepositionTag"));
 					pr.setPrepBET(rs.getBoolean("prepBet"));
 					pr.setPrepKAF(rs.getBoolean("prepKAF"));

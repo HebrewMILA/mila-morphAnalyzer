@@ -17,11 +17,15 @@ public class InflectedRecordNum implements Constants {
 	String surface = "";
 	/** transliterated form of the inflected form */
 	String transliterated = "";
-	/** transliterated form of the lexicon entry relevant to the inflected form */
+	/**
+	 * transliterated form of the lexicon entry relevant to the inflected form
+	 */
 	String transliteratedLexiconItem = "";
 	/** hebrew form of the lexicon entry relevant to the inflected form */
 	String undottedLexiconItem = "";
-	/** hebrew dotted form of the lexicon entry relevant to the inflected form */
+	/**
+	 * hebrew dotted form of the lexicon entry relevant to the inflected form
+	 */
 	String dottedLexiconItem = "";
 	/** lexicon id of the lexicon entry relevant to the inflected form */
 	int lexiconPointer = -1;

@@ -23,7 +23,6 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-
 /**
  * 
  * TokenizationParse.java Purpose: parse input XML file which contains
@@ -42,7 +41,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 */
 	public boolean prefixPerEntryExistFlag = false;
 
-	/** CreateCorpusXML class object which is used for creating the XML output */
+	/**
+	 * CreateCorpusXML class object which is used for creating the XML output
+	 */
 	private CreateCorpusXML createXML = null;
 	// protected int tokensCount = 0;
 
@@ -82,13 +83,11 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @throws Exception
 	 */
 
-	protected boolean analyzeAcronymsBaseAndPrefix(String transliterated)
-			throws Exception {
+	protected boolean analyzeAcronymsBaseAndPrefix(String transliterated) throws Exception {
 		boolean rt = false;
 		int transliteratedLen = transliterated.length();
 		// the longest prefix known is 6 chars long
-		for (int i = 1; i < 6 && i < transliteratedLen
-				&& transliterated.charAt(i) != '"'
+		for (int i = 1; i < 6 && i < transliteratedLen && transliterated.charAt(i) != '"'
 				&& transliterated.charAt(i) != '\''; i++) {
 			String prefix = transliterated.substring(0, i);
 			// לא תיתכן תחילית שאינה משהוכלב
@@ -112,8 +111,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @param hebWord
 	 * @return
 	 */
-	public boolean analyzeBase(final String base, String prefix,
-			final String transliterated, final String hebWord) {
+	public boolean analyzeBase(final String base, String prefix, final String transliterated, final String hebWord) {
 		// A flag signify whether we have found an anlysis based on prefix +
 		// base
 		boolean foundAnalysis = false;
@@ -137,9 +135,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			// file/table according to the key=base
 			inflectionsList = Data.getInflections(base);
 		} catch (Exception e) {
-			System.out
-					.println("XMLMorphAnalyzer:analyzeBase - Exception while getting inflections list for base = "
-							+ base);
+			System.out.println(
+					"XMLMorphAnalyzer:analyzeBase - Exception while getting inflections list for base = " + base);
 			e.printStackTrace();
 		}
 		baseListSize = inflectionsList.size();
@@ -151,12 +148,10 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			for (int i = 0; i < baseListSize; i++) {
 				try {
 					inflectionsRecDB = inflectionsList.get(i);
-					inflectionsRecNum = Data.Str2NumBeforeValidation(
-							inflectionsRecDB, hebWord);
+					inflectionsRecNum = Data.Str2NumBeforeValidation(inflectionsRecDB, hebWord);
 				} catch (Exception e1) {
-					System.out
-							.println("XMLMorphAnalyzer:analyzeBase - Exception while analyzeInflectionList for word="
-									+ base);
+					System.out.println(
+							"XMLMorphAnalyzer:analyzeBase - Exception while analyzeInflectionList for word=" + base);
 					e1.printStackTrace();
 				}
 
@@ -185,9 +180,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 				try {
 					prefixListSize = Data.getPrefixes(prefix);
 				} catch (Exception e2) {
-					System.out
-							.println("XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
-									+ base + "and prefix=" + prefix);
+					System.out.println("XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
+							+ base + "and prefix=" + prefix);
 					e2.printStackTrace();
 				}
 				// System.out.println("prefixListSize =" + prefixListSize);
@@ -202,12 +196,11 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 						try {
 							foundAnalysis = true;
 							// generate the XML analysis
-							TextOutput.buildXMLPrefixOutput(pr,
-									inflectionsRecDB, inflectionsRecNum,
-									createXML, Translate.Eng2Heb(base));
+							TextOutput.buildXMLPrefixOutput(pr, inflectionsRecDB, inflectionsRecNum, createXML,
+									Translate.Eng2Heb(base));
 						} catch (Exception e3) {
-							System.out
-									.println("XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
+							System.out.println(
+									"XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
 											+ base + " and prefix=" + prefix);
 							e3.printStackTrace();
 						}
@@ -227,8 +220,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @param transliterated
 	 * @return
 	 */
-	protected boolean analyzeBaseAndPrefix(final String hebWord,
-			final String transliterated) {
+	protected boolean analyzeBaseAndPrefix(final String hebWord, final String transliterated) {
 		boolean foundAnalysisPerPrefixEntry = false;
 		boolean foundAnalysisNoPerPrefixEntry = false;
 		// We already know the value of prefixPerEntry from analyzeBaseNoPrefix
@@ -249,12 +241,10 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			// found
 			// afterwards we will try to check whether there are several
 			// combinations for the prefix
-			foundAnalysisPerPrefixEntry = analyzeBaseAndPrefixAndPrefixPerEntry(
-					hebWord, transliterated);
+			foundAnalysisPerPrefixEntry = analyzeBaseAndPrefixAndPrefixPerEntry(hebWord, transliterated);
 
 		try {
-			foundAnalysisNoPerPrefixEntry = analyzeBaseAndPrefixNoPrefixPreEntry(
-					hebWord, transliterated);
+			foundAnalysisNoPerPrefixEntry = analyzeBaseAndPrefixNoPrefixPreEntry(hebWord, transliterated);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -272,8 +262,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @param transliterated
 	 * @return
 	 */
-	protected boolean analyzeBaseAndPrefixAndPrefixPerEntry(
-			final String hebWord, final String transliterated) {
+	protected boolean analyzeBaseAndPrefixAndPrefixPerEntry(final String hebWord, final String transliterated) {
 		// System.out.println(hebWord);
 		boolean foundAnalysis = false;
 		// unspecified- we initialize it to unspecified, although we already
@@ -298,15 +287,12 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			for (int i = 0; i < listSize; i++) {
 				prefixPerEntry = 'u';
 				try {
-					inflectionsRecDB = (DBInflectionsRecord) inflectionsList
-							.get(i);
-					inflectionsRecNum = Data.Str2NumBeforeValidation(
-							inflectionsRecDB, hebWord);
+					inflectionsRecDB = (DBInflectionsRecord) inflectionsList.get(i);
+					inflectionsRecNum = Data.Str2NumBeforeValidation(inflectionsRecDB, hebWord);
 
 				} catch (Exception e1) {
-					System.out
-							.println("TokenizationParser: Exception occured while analyzeBaseNoPrefix for word="
-									+ transliterated);
+					System.out.println("TokenizationParser: Exception occured while analyzeBaseNoPrefix for word="
+							+ transliterated);
 					e1.printStackTrace();
 				}
 				// there are special entries for which we define prefix per
@@ -323,8 +309,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 							// we need to redefine the prefix - to take the
 							// prefixPerEntry from the base and to move it to
 							// the prefix
-							if (prefix.length() == 1
-									&& prefixPerEntry == prefix.charAt(0))
+							if (prefix.length() == 1 && prefixPerEntry == prefix.charAt(0))
 								base = transliterated;
 							else if (prefix.charAt(k - 1) == prefixPerEntry) {
 								base = transliterated.substring(k - 1);
@@ -337,8 +322,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 							try {
 								prefixListSize = Data.getPrefixes(prefix);
 							} catch (Exception e2) {
-								System.out
-										.println("XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
+								System.out.println(
+										"XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
 												+ base + "and prefix=" + prefix);
 								e2.printStackTrace();
 							}
@@ -348,21 +333,16 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 							for (int j = 0; j < prefixListSize; j++) {
 								pr = new PrefixRecord();
 								pr = Data.analyzePrefixList(j);
-								if (validateByRules(base, prefix,
-										inflectionsRecNum, pr)) {
+								if (validateByRules(base, prefix, inflectionsRecNum, pr)) {
 									try {
 										foundAnalysis = true;
 
-										TextOutput.buildXMLPrefixOutput(pr,
-												inflectionsRecDB,
-												inflectionsRecNum, createXML,
-												Translate.Eng2Heb(base));
+										TextOutput.buildXMLPrefixOutput(pr, inflectionsRecDB, inflectionsRecNum,
+												createXML, Translate.Eng2Heb(base));
 									} catch (Exception e3) {
-										System.out
-												.println("XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
-														+ base
-														+ "and prefix="
-														+ prefix);
+										System.out.println(
+												"XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
+														+ base + "and prefix=" + prefix);
 										e3.printStackTrace();
 									}
 								}
@@ -384,8 +364,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	protected boolean analyzeBaseAndPrefixNoPrefixPreEntry(
-			final String hebWord, final String transliterated) throws Exception {
+	protected boolean analyzeBaseAndPrefixNoPrefixPreEntry(final String hebWord, final String transliterated)
+			throws Exception {
 		// System.out.println(hebWord);
 		boolean foundAnalysis = false;
 		boolean currentFoundAnalysis = false;
@@ -396,8 +376,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			// לא תיתכן תחילית שאינה משהוכלב
 			if (StringUtils.moshevkaleb(prefix)) {
 				String base = transliterated.substring(j);
-				currentFoundAnalysis = analyzeBase(base, prefix,
-						transliterated, hebWord);
+				currentFoundAnalysis = analyzeBase(base, prefix, transliterated, hebWord);
 				if (currentFoundAnalysis)
 					foundAnalysis = true;
 			} else
@@ -416,8 +395,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	protected boolean analyzeBaseNoPrefix(final String hebWord,
-			final String transliterated) throws Exception {
+	protected boolean analyzeBaseNoPrefix(final String hebWord, final String transliterated) throws Exception {
 		boolean foundAnalysis = false;
 		char prefixPerEntry = 'u'; // unspecified
 		prefixPerEntryExistFlag = false;
@@ -446,17 +424,14 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			try {
 
 				inflectionsRecDB = (DBInflectionsRecord) inflectionsList.get(i);
-				inflectionsRecNum = Data.Str2NumBeforeValidation(
-						inflectionsRecDB, hebWord);
+				inflectionsRecNum = Data.Str2NumBeforeValidation(inflectionsRecDB, hebWord);
 			} catch (Exception e1) {
-				System.out
-						.println("TokenizationParser: Exception occured while analyzeBaseNoPrefix for word="
-								+ transliterated);
+				System.out.println(
+						"TokenizationParser: Exception occured while analyzeBaseNoPrefix for word=" + transliterated);
 				e1.printStackTrace();
 			}
 
-			if (!checkEndOfToken(transliterated, hebWord,
-					inflectionsRecDB.getSurface()))
+			if (!checkEndOfToken(transliterated, hebWord, inflectionsRecDB.getSurface()))
 				continue;
 			// there are special entries for which we define prefix per
 			// entry - we can't define a rule per pos etc for them
@@ -466,15 +441,13 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 
 			// handle the simple case for which prefixPerEntry='unspecified'
 			if (prefixPerEntry == 'u') {
-				if (validateByRulesWithoutPrefixes(transliterated,
-						inflectionsRecNum)) {
+				if (validateByRulesWithoutPrefixes(transliterated, inflectionsRecNum)) {
 					foundAnalysis = true;
 					try {
-						TextOutput.buildXMLOutput(inflectionsRecDB,
-								inflectionsRecNum, createXML, hebWord);
+						TextOutput.buildXMLOutput(inflectionsRecDB, inflectionsRecNum, createXML, hebWord);
 					} catch (UnsupportedEncodingException e2) {
-						System.out
-								.println("XMLAnalyzer:handlePrefix UnsupportedEncodingException occured while buildXMLOutput for word="
+						System.out.println(
+								"XMLAnalyzer:handlePrefix UnsupportedEncodingException occured while buildXMLOutput for word="
 										+ transliterated);
 						e2.printStackTrace();
 					} catch (JAXBException e2) {
@@ -512,12 +485,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		if (isForeign) {
 			try {
 				ENUM_OUTPUT_PATTERN outputPattern = ENUM_OUTPUT_PATTERN.FOREIGN;
-				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML,
-						hebWord, -1);
+				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML, hebWord, -1);
 			} catch (JAXBException e1) {
-				System.out
-						.println("XMLAnalyzer:analyzeForeign JAXBException occured  for hebWord="
-								+ hebWord);
+				System.out.println("XMLAnalyzer:analyzeForeign JAXBException occured  for hebWord=" + hebWord);
 				e1.printStackTrace();
 			}
 		}
@@ -531,31 +501,24 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	protected boolean analyzeHebrewDotSingleLetter(String hebWord)
-			throws Exception {
+	protected boolean analyzeHebrewDotSingleLetter(String hebWord) throws Exception {
 		boolean isHebrewSingleLetter = false;
 		ENUM_OUTPUT_PATTERN outputPattern = null;
 		int hebWordLen = hebWord.length();
 		if (hebWordLen == 2 && hebWord.charAt(1) == '.') {
 
 			try {
-				isHebrewSingleLetter = StringUtils
-						.analyzeHebrewSingleLetter(hebWord.substring(0, 1));
+				isHebrewSingleLetter = StringUtils.analyzeHebrewSingleLetter(hebWord.substring(0, 1));
 			} catch (Exception e) {
-				System.out
-						.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord="
-								+ hebWord);
+				System.out.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord=" + hebWord);
 				e.printStackTrace();
 			}
 			if (isHebrewSingleLetter) {
 				try {
 					outputPattern = ENUM_OUTPUT_PATTERN.HEBREWLETTER;
-					TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML,
-							hebWord, -1);
+					TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML, hebWord, -1);
 				} catch (JAXBException e1) {
-					System.out
-							.println("XMLAnalyzer:analyzeNumbers JAXBException occured  for hebWord="
-									+ hebWord);
+					System.out.println("XMLAnalyzer:analyzeNumbers JAXBException occured  for hebWord=" + hebWord);
 					e1.printStackTrace();
 				}
 			}
@@ -570,28 +533,21 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	protected boolean analyzeHebrewSingleLetter(String hebWord)
-			throws Exception {
+	protected boolean analyzeHebrewSingleLetter(String hebWord) throws Exception {
 		boolean isHebrewSingleLetter = false;
 		ENUM_OUTPUT_PATTERN outputPattern = null;
 		try {
-			isHebrewSingleLetter = StringUtils
-					.analyzeHebrewSingleLetter(hebWord);
+			isHebrewSingleLetter = StringUtils.analyzeHebrewSingleLetter(hebWord);
 		} catch (Exception e) {
-			System.out
-					.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord="
-							+ hebWord);
+			System.out.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord=" + hebWord);
 			e.printStackTrace();
 		}
 		if (isHebrewSingleLetter) {
 			try {
 				outputPattern = ENUM_OUTPUT_PATTERN.HEBREWLETTER;
-				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML,
-						hebWord, -1);
+				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML, hebWord, -1);
 			} catch (JAXBException e1) {
-				System.out
-						.println("XMLAnalyzer:analyzeNumbers JAXBException occured  for hebWord="
-								+ hebWord);
+				System.out.println("XMLAnalyzer:analyzeNumbers JAXBException occured  for hebWord=" + hebWord);
 				e1.printStackTrace();
 			}
 		}
@@ -620,12 +576,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 
 		if (isNumberExpression) {
 			try {
-				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML,
-						hebWord, -1);
+				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML, hebWord, -1);
 			} catch (JAXBException e1) {
-				System.out
-						.println("XMLAnalyzer:analyzePunctuations JAXBException occured  for hebWord="
-								+ hebWord);
+				System.out.println("XMLAnalyzer:analyzePunctuations JAXBException occured  for hebWord=" + hebWord);
 				e1.printStackTrace();
 			}
 		}
@@ -645,20 +598,15 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		try {
 			isNumber = StringUtils.analyzeNumbers(hebWord);
 		} catch (Exception e) {
-			System.out
-					.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord="
-							+ hebWord);
+			System.out.println("XMLAnalyzer:analyzeNumbers Exception occured  for hebWord=" + hebWord);
 			e.printStackTrace();
 		}
 		if (isNumber) {
 			try {
 				outputPattern = ENUM_OUTPUT_PATTERN.LITERAL_NUMBERS;
-				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML,
-						hebWord, -1);
+				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML, hebWord, -1);
 			} catch (JAXBException e1) {
-				System.out
-						.println("XMLAnalyzer:analyzeNumbers JAXBException occured  for hebWord="
-								+ hebWord);
+				System.out.println("XMLAnalyzer:analyzeNumbers JAXBException occured  for hebWord=" + hebWord);
 				e1.printStackTrace();
 			}
 		}
@@ -675,8 +623,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @param prefix
 	 * @return
 	 */
-	protected boolean analyzePrefixGimatriaAndInvertedCommas(String base,
-			String prefix) {
+	protected boolean analyzePrefixGimatriaAndInvertedCommas(String base, String prefix) {
 
 		boolean foundAnalysis = false;
 		PrefixRecord pr = null;
@@ -688,8 +635,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		try {
 			gimatriaVal = Data.getGimatrias(base);
 		} catch (Exception e2) {
-			System.out
-					.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while getting Gimatria for base="
+			System.out.println(
+					"XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while getting Gimatria for base="
 							+ base + " and prefix=" + prefix);
 			e2.printStackTrace();
 		}
@@ -702,30 +649,27 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			// System.out.println("gimatriaVal="+ gimatriaVal);
 			if (prefix.length() == 1 && prefix.charAt(0) == 'h') {
 				foundAnalysis = true;
-				inflectionRecNum
-						.setHAttribute(ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE);
+				inflectionRecNum.setHAttribute(ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE);
 				try {
-					TextOutput.buildXMLPrefixOutput(pr, inflectionRecDB,
-							inflectionRecNum, createXML, base);
+					TextOutput.buildXMLPrefixOutput(pr, inflectionRecDB, inflectionRecNum, createXML, base);
 
 				} catch (Exception e1) {
-					System.out
-							.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while buildXMLPrefixOutput for base="
+					System.out.println(
+							"XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while buildXMLPrefixOutput for base="
 									+ base + " and prefix=" + prefix);
 					e1.printStackTrace();
 				}
 			} else {
 				if (prefix.endsWith("h")) {
 					prefix = prefix.substring(0, prefix.length() - 1);
-					inflectionRecNum
-							.setHAttribute(ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE);
+					inflectionRecNum.setHAttribute(ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE);
 				}
 				int prefixListSize = 0;
 				try {
 					prefixListSize = Data.getPrefixes(prefix);
 				} catch (Exception e1) {
-					System.out
-							.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while getting prefixes for base="
+					System.out.println(
+							"XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while getting prefixes for base="
 									+ base + " and prefix=" + prefix);
 					e1.printStackTrace();
 				}
@@ -739,13 +683,11 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 						pr = Data.analyzePrefixList(j);
 						try {
 
-							TextOutput.buildXMLPrefixOutput(pr,
-									inflectionRecDB, inflectionRecNum,
-									createXML, base);
+							TextOutput.buildXMLPrefixOutput(pr, inflectionRecDB, inflectionRecNum, createXML, base);
 
 						} catch (Exception e) {
-							System.out
-									.println("XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while buildXMLPrefixOutput for base="
+							System.out.println(
+									"XMLAnalyzer:analyzePrefixGimatriaAndInvertedCommas Exception occured while buildXMLPrefixOutput for base="
 											+ base + " and prefix=" + prefix);
 							e.printStackTrace();
 						}
@@ -771,12 +713,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		if (isPunctuation) {
 			try {
 				outputPattern = ENUM_OUTPUT_PATTERN.PUNCTUATION;
-				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML,
-						hebWord, -1);
+				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML, hebWord, -1);
 			} catch (JAXBException e1) {
-				System.out
-						.println("XMLAnalyzer:analyzePunctuations JAXBException occured  for hebWord="
-								+ hebWord);
+				System.out.println("XMLAnalyzer:analyzePunctuations JAXBException occured  for hebWord=" + hebWord);
 				e1.printStackTrace();
 			}
 		}
@@ -797,12 +736,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		if (isURL) {
 			try {
 				outputPattern = ENUM_OUTPUT_PATTERN.URL;
-				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML,
-						hebWord, -1);
+				TextOutput.buildSimpleXMLAnalysis(outputPattern, createXML, hebWord, -1);
 			} catch (JAXBException e1) {
-				System.out
-						.println("XMLAnalyzer:analyzeURL Exception occured  for hebWord="
-								+ hebWord);
+				System.out.println("XMLAnalyzer:analyzeURL Exception occured  for hebWord=" + hebWord);
 				e1.printStackTrace();
 			}
 		}
@@ -821,8 +757,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		boolean foundAnalysis = false;
 		String transliterated = Translate.Heb2Eng(hebWord);
 		int gimatriaVal = -1;
-		if (transliterated.indexOf("\'") != -1
-				&& transliterated.indexOf("\"") != -1)
+		if (transliterated.indexOf("\'") != -1 && transliterated.indexOf("\"") != -1)
 			return foundAnalysis;
 		// ///////////////////////////////////////////////////////////
 		// טיפול בגרש
@@ -839,9 +774,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 					// look for the word with the apostrophe at the end
 					foundAnalysis = true;
 
-					createXML.createNumeralAnalysis("", null, null, null, "",
-							"", "", String.valueOf(gimatriaVal), "", "", "",
-							"", "gematria", "", "", "", "", "");
+					createXML.createNumeralAnalysis("", null, null, null, "", "", "", String.valueOf(gimatriaVal), "",
+							"", "", "", "gematria", "", "", "", "", "");
 					// ///////////////////////////////////////////////
 					// Non Gimatria analysis
 					// /////////////////////////////////////////////
@@ -849,8 +783,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 				// ייתן לב' ניתוח של גימטריא וגם של יום ב'
 				// else {
 				foundAnalysis = analyzeBaseNoPrefix(hebWord, transliterated)
-						| analyzeBaseAndPrefix(hebWord, transliterated)
-						| analyzeAcronymsBaseAndPrefix(transliterated);
+						| analyzeBaseAndPrefix(hebWord, transliterated) | analyzeAcronymsBaseAndPrefix(transliterated);
 				// }
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
@@ -870,16 +803,14 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 					// The whole token was found in Gimatria table
 					// /////////////////////////////////////////////////////////
 					// create gimatria analysis
-					createXML.createNumeralAnalysis("", null, null, null, "",
-							"", "", String.valueOf(gimatriaVal), "", "", "",
-							"", "gematria", "", "", "", "", "");
+					createXML.createNumeralAnalysis("", null, null, null, "", "", "", String.valueOf(gimatriaVal), "",
+							"", "", "", "gematria", "", "", "", "", "");
 					// /////////////////////////////////////////////////////////////////
 					// The whole token was ***not found*** in Gimatria table
 					// ////////////////////////////////////////////////////////////////
 				} else {
 					// check if it a combination of prefix + gimatria
-					foundAnalysis = foundAnalysis
-							|| analyzeAcronymsBaseAndPrefix(transliterated);
+					foundAnalysis = foundAnalysis || analyzeAcronymsBaseAndPrefix(transliterated);
 				}
 
 				// הוספתי את 2 הפונקציות הבאות כדי שנקבל גם ניתוח גימטריא וגם לא
@@ -891,8 +822,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 				// check if it a combination of prefix + inflection
 				// need to keep | and not || because we want all options to be
 				// checked in any case
-				foundAnalysis = foundAnalysis
-						| analyzeBaseNoPrefix(hebWord, transliterated)
+				foundAnalysis = foundAnalysis | analyzeBaseNoPrefix(hebWord, transliterated)
 						| analyzeBaseAndPrefix(hebWord, transliterated);
 
 			} catch (UnsupportedEncodingException e) {
@@ -917,22 +847,19 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @param inflectionsHebWord
 	 * @return
 	 */
-	protected boolean checkEndOfToken(String transliterated, String hebWord,
-			String inflectionsHebWord) {
+	protected boolean checkEndOfToken(String transliterated, String hebWord, String inflectionsHebWord) {
 		boolean rt = false;
 		if (inflectionsHebWord != null && inflectionsHebWord.length() > 0) {
 			try {
 				// System.out.println(inflectionsHebWord);
-				inflectionsHebWord = URLDecoder.decode(inflectionsHebWord,
-						"UTF-8");
+				inflectionsHebWord = URLDecoder.decode(inflectionsHebWord, "UTF-8");
 				// System.out.println(inflectionsHebWord);
 			} catch (UnsupportedEncodingException e1) {
 				// // TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			char endChar = transliterated.charAt(transliterated.length() - 1);
-			if (endChar == 'c' || endChar == 'n' || endChar == 'p'
-					|| endChar == 'k') {
+			if (endChar == 'c' || endChar == 'n' || endChar == 'p' || endChar == 'k') {
 				if (hebWord.equals(inflectionsHebWord))
 					rt = true;
 			} else
@@ -951,8 +878,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * java.lang.String, java.lang.String)
 	 */
 	@Override
-	public void endElement(String namespaceURI, String localName, String rowName)
-			throws SAXException {
+	public void endElement(String namespaceURI, String localName, String rowName) throws SAXException {
 
 		if (rowName.equals("paragraph")) {
 			createXML.finalizeParagraph();
@@ -984,13 +910,11 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			try {
 				outputPattern = ENUM_OUTPUT_PATTERN.PREFIXES;
 				inflectionRecNum.setOutputPattern(outputPattern);
-				TextOutput.buildXMLPrefixOutput(null, inflectionRecDB,
-						inflectionRecNum, createXML, hebPrefix);
+				TextOutput.buildXMLPrefixOutput(null, inflectionRecDB, inflectionRecNum, createXML, hebPrefix);
 
 			} catch (Exception e) {
-				System.out
-						.println("XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix="
-								+ prefix);
+				System.out.println(
+						"XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix=" + prefix);
 				e.printStackTrace();
 			}
 		} else {
@@ -1002,9 +926,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			try {
 				prefixListSize = Data.getPrefixes(prefix);
 			} catch (Exception e1) {
-				System.out
-						.println("XMLAnalyzer:handlePrefix Exception occured while getting prefixes for prefix="
-								+ prefix);
+				System.out.println(
+						"XMLAnalyzer:handlePrefix Exception occured while getting prefixes for prefix=" + prefix);
 				e1.printStackTrace();
 			}
 			if (prefixListSize > 0) {
@@ -1021,16 +944,13 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 					boolean prepLAMED = pr.isPrepLAMED();
 					boolean prepMEM = pr.isPrepMEM();
 					// ל-100 לא רוצים פעמיים אנליזה של ל
-					if ((!isDefiniteArticle)
-							&& ((!prepKAF) || (!prepMEM) || (!prepLAMED)))
+					if ((!isDefiniteArticle) && ((!prepKAF) || (!prepMEM) || (!prepLAMED)))
 						try {
-							TextOutput.buildXMLPrefixOutput(pr,
-									inflectionRecDB, inflectionRecNum,
-									createXML, "");
+							TextOutput.buildXMLPrefixOutput(pr, inflectionRecDB, inflectionRecNum, createXML, "");
 
 						} catch (Exception e) {
-							System.out
-									.println("XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix="
+							System.out.println(
+									"XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix="
 											+ prefix);
 							e.printStackTrace();
 						}
@@ -1047,8 +967,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	protected boolean noEntryInInflections(final String hebWord,
-			final String transliterated) throws Exception {
+	protected boolean noEntryInInflections(final String hebWord, final String transliterated) throws Exception {
 
 		createXML.createUnknownAnalysis(hebWord, transliterated);
 		// System.out.println("No entry=" + hebWord);
@@ -1060,8 +979,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		try {
 			_parser.parse(in, this);
 		} catch (SAXParseException spe) {
-			System.err
-					.println("Input file is not a tokenized XML file by Mila standards");
+			System.err.println("Input file is not a tokenized XML file by Mila standards");
 			// spe.printStackTrace();
 		} catch (SAXException se) {
 			se.printStackTrace();
@@ -1083,8 +1001,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		// System.out.println(hebWord);
 		if (!analyzeURL(hebWord))
 			if (!analyzeForeign(hebWord)) {
-				if (!analyzePunctuations(hebWord) && !analyzeNumbers(hebWord)
-						&& !analyzeNumberExpression(hebWord)) {
+				if (!analyzePunctuations(hebWord) && !analyzeNumbers(hebWord) && !analyzeNumberExpression(hebWord)) {
 					String transliterated = Translate.Heb2Eng(hebWord);
 					if (StringUtils.gimatriaPossibility(hebWord)) {
 						if (!apostropheInvertedCommasHandling(hebWord))
@@ -1095,8 +1012,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 						// want both to be done anyway
 						if (!analyzeBaseNoPrefix(hebWord, transliterated)
 								& !analyzeBaseAndPrefix(hebWord, transliterated)
-								& !analyzeHebrewDotSingleLetter(hebWord)
-								& !analyzeHebrewSingleLetter(hebWord))
+								& !analyzeHebrewDotSingleLetter(hebWord) & !analyzeHebrewSingleLetter(hebWord))
 							noEntryInInflections(hebWord, transliterated);
 					}
 
@@ -1112,8 +1028,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * java.lang.String, java.lang.String, org.xml.sax.Attributes)
 	 */
 	@Override
-	public void startElement(String namespaceURI, String localName,
-			String rowName, Attributes attributes) throws SAXException {
+	public void startElement(String namespaceURI, String localName, String rowName, Attributes attributes)
+			throws SAXException {
 		// Create XML outputFile
 		// Handle paragraph
 		// if (rowName.equals("article")) {
@@ -1145,8 +1061,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 					int prefixEquallIndex = hebWord.indexOf("=");
 					int tokenEqualIndex = hebWord.lastIndexOf("=");
 					int spaceIndex = hebWord.lastIndexOf(" ");
-					String hebPrefix = hebWord.substring(prefixEquallIndex + 1,
-							spaceIndex);
+					String hebPrefix = hebWord.substring(prefixEquallIndex + 1, spaceIndex);
 					String hebBase = hebWord.substring(tokenEqualIndex + 1);
 					// טפול במקרה של יידוע - יש להעביר את הה' לתמנית
 					// מהתחילית
@@ -1156,25 +1071,20 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 					}
 					String hebTokenWithoutSigning = hebPrefix + hebBase;
 					createXML.createToken(hebTokenWithoutSigning);
-					String transliteratedHebBase = Translate.Heb2Eng(hebPrefix
-							+ hebBase);
+					String transliteratedHebBase = Translate.Heb2Eng(hebPrefix + hebBase);
 					if (hebPrefix.length() > 0)
-						returnValue = analyzeBase(Translate.Heb2Eng(hebBase),
-								Translate.Heb2Eng(hebPrefix),
-								Translate.Heb2Eng(hebTokenWithoutSigning),
-								hebWord);
+						returnValue = analyzeBase(Translate.Heb2Eng(hebBase), Translate.Heb2Eng(hebPrefix),
+								Translate.Heb2Eng(hebTokenWithoutSigning), hebWord);
 					else
 						try {
-							returnValue = analyzeBaseNoPrefix(hebPrefix
-									+ hebBase, transliteratedHebBase);
+							returnValue = analyzeBaseNoPrefix(hebPrefix + hebBase, transliteratedHebBase);
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					if (!returnValue)
 						try {
-							noEntryInInflections(hebPrefix + hebBase,
-									transliteratedHebBase);
+							noEntryInInflections(hebPrefix + hebBase, transliteratedHebBase);
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -1196,12 +1106,10 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 				try {
 					readInput(hebWord);
 				} catch (IOException e1) {
-					System.out
-							.println("XMLMorphAnalyzer:startElemen(element) - IOException while readInput");
+					System.out.println("XMLMorphAnalyzer:startElemen(element) - IOException while readInput");
 					e1.printStackTrace();
 				} catch (Exception e1) {
-					System.out
-							.println("XMLMorphAnalyzer:startElemen(element) - Exception while readInput");
+					System.out.println("XMLMorphAnalyzer:startElemen(element) - Exception while readInput");
 					e1.printStackTrace();
 				}
 			} //
@@ -1229,8 +1137,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		ENUM_TENSE tensei;
 		// ENUM_HATTRIBUTE haaributei = inflectedRecordNum.getHAttribute();
 		ENUM_POS posi = inflectedRecordNum.getPos();
-		ENUM_SUFFIX_FUNCTION suffixFunctioni = inflectedRecordNum
-				.getSuffixFunction();
+		ENUM_SUFFIX_FUNCTION suffixFunctioni = inflectedRecordNum.getSuffixFunction();
 		ENUM_STATUS constructi = inflectedRecordNum.getStatus();
 		ENUM_HATTRIBUTE hAttributei = inflectedRecordNum.getHAttribute();
 		char prefixPerEntry = inflectedRecordNum.getPrefixPerEntry();
@@ -1244,8 +1151,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		boolean tempSubConMEMSHIN = pr.isTempSubConMEMSHIN();
 		boolean tempSubConLAMEDKAFSHIN = pr.isTempSubConLAMEDKAFSHIN();
 		boolean relativizerTag = pr.isRelativizerTag();
-		boolean subordinatingConjunctionTag = pr
-				.isSubordinatingConjunctionTag();
+		boolean subordinatingConjunctionTag = pr.isSubordinatingConjunctionTag();
 		boolean temporalSubConjTag = pr.isTemporalSubConjTag();
 		boolean prepBET = pr.isPrepBET();
 		boolean prepKAF = pr.isPrepKAF();
@@ -1276,8 +1182,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 
 		// ארגון השומר חייב להיות מיודע - אסור שיופיע בשומר ללא יידוע רק
 		// ב(ה)שומר
-		if (!definiteArticleTag
-				&& (posi == ENUM_POS.PROPERNAME)
+		if (!definiteArticleTag && (posi == ENUM_POS.PROPERNAME)
 				&& (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)) {
 			return false;
 		}
@@ -1292,22 +1197,19 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		// ////// ה' חבויה
 		// ///////////////////////////////////////////////////////////////////////
 		// כדי למנוע הופעת אנליזה ל-בהילד כהילד להילד
-		if ((prepBET || prepKAF || prepLAMED)
-				&& hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE) {
+		if ((prepBET || prepKAF || prepLAMED) && hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE) {
 			return false;
 		}
 		// למנוע הופעה כפולה עבור תחיליות שמופיעות עם ה ובלי ה - למשל ש
 		// ושה כאשר מצטרפים לש"ע או שם פרטי מיודע
 
-		if (prefPartUnit
-				&& hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_FALSE
-				&& definiteArticleTag) {
+		if (prefPartUnit && hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_FALSE && definiteArticleTag) {
 			return false;
 		}
 
 		if (adverbKAF && (posi == ENUM_POS.PROPERNAME
-		// || posi == ENUM_POS.VERB
-		// ושלכשעה, ושבכשעה
+				// || posi == ENUM_POS.VERB
+				// ושלכשעה, ושבכשעה
 				|| posi == ENUM_POS.ADJECTIVE
 				// || posi == ENUM_POS.PRONOUN
 				|| posi == ENUM_POS.PREPOSITION || posi == ENUM_POS.ADVERB
@@ -1327,47 +1229,44 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			if (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE) {
 				return false;
 			}
-			if ((subordinatingConjunctionTag && relativizerTag)
-					|| conjunctionTag) {
+			if ((subordinatingConjunctionTag && relativizerTag) || conjunctionTag) {
 				return true;
 			}
 			return false;
 		}
-		// ///////////////////////////////////////////////////////////////////////
-		// למנוע ל+לגביך
-		// - נחליף את החוק הבא בחוקים יותר מעודנים
-		// צריך עוד לבדוק אפשרות זאת
-		/***************************************************************
-		 * case PREPOSITION: //if (posi == ENUM_POS.PREPOSITION) {
-		 * if(prepositionTag || adverbKAF) { return false; } return true; }
-		 ***************************************************************/
+			// ///////////////////////////////////////////////////////////////////////
+			// למנוע ל+לגביך
+			// - נחליף את החוק הבא בחוקים יותר מעודנים
+			// צריך עוד לבדוק אפשרות זאת
+			/***************************************************************
+			 * case PREPOSITION: //if (posi == ENUM_POS.PREPOSITION) {
+			 * if(prepositionTag || adverbKAF) { return false; } return true; }
+			 ***************************************************************/
 
-		// /////////////////////////////////////////////////////////////////////////
-		// Pronoun
-		// /////////////////////////////////////////////////////////////////////////
+			// /////////////////////////////////////////////////////////////////////////
+			// Pronoun
+			// /////////////////////////////////////////////////////////////////////////
 
-		// למנוע הופעת ניתוח כינוי גוף ל- בהם, להם - הניתוח צריך להיות
-		// של מילת יחס
-		// אבל אנחנו רוצים לאפשר בכל"ם עם מספרים נטויים - בשלושתנו
-		// בארבעתנו
+			// למנוע הופעת ניתוח כינוי גוף ל- בהם, להם - הניתוח צריך להיות
+			// של מילת יחס
+			// אבל אנחנו רוצים לאפשר בכל"ם עם מספרים נטויים - בשלושתנו
+			// בארבעתנו
 
-		// לפי רשימה של נועם - כזה הלזו זהו לא יקבלו בכלם
-		// כינויי גוף מסוג שאלה מקבלים בכל"ם עלפ"י העיול הספציפי - לכן
-		// נכליל שלא ועבוא עיולים מסויימים נשתמש בשדה
-		// תחילית בטבלת inflections
-		// לסמן אם מקבל תחילית בכל"ם או לא
+			// לפי רשימה של נועם - כזה הלזו זהו לא יקבלו בכלם
+			// כינויי גוף מסוג שאלה מקבלים בכל"ם עלפ"י העיול הספציפי - לכן
+			// נכליל שלא ועבוא עיולים מסויימים נשתמש בשדה
+			// תחילית בטבלת inflections
+			// לסמן אם מקבל תחילית בכל"ם או לא
 		case PRONOUN:
 		// if(posi == ENUM_POS.PRONOUN)
 		{
-			if ((prepLAMED || prepBET || prepMEM || prepKAF || adverbKAF)
-					&& (prefixPerEntry == 'u')) {
+			if ((prepLAMED || prepBET || prepMEM || prepKAF || adverbKAF) && (prefixPerEntry == 'u')) {
 				return false;
 			}
 			if (prepBET && prepKAF) {
 				return false;
 			}
-			if (hAttributei == ENUM_HATTRIBUTE.UNSPECIFIED
-					&& definiteArticleTag) {
+			if (hAttributei == ENUM_HATTRIBUTE.UNSPECIFIED && definiteArticleTag) {
 				return false;
 			}
 			if (adverbKAF) {
@@ -1376,15 +1275,14 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			return true;
 		}
 
-		// /////////////////////////////////////////////////////////////////
-		// ///////////QUANTIFIER
-		// //////////////////////////////////////////////////////////
+			// /////////////////////////////////////////////////////////////////
+			// ///////////QUANTIFIER
+			// //////////////////////////////////////////////////////////
 		case QUANTIFIER:
 		// if(posi == ENUM_POS.QUANTIFIER)
 		{
 			if (type == QUANTIFIER_TYPE_PARTITIVE) {
-				if (constructi == ENUM_STATUS.CONSTRUCT_FALSE
-						&& !definiteArticleTag) {
+				if (constructi == ENUM_STATUS.CONSTRUCT_FALSE && !definiteArticleTag) {
 					return false;
 				}
 				return true;
@@ -1394,42 +1292,37 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			return true;
 		}
 
-		// /////////////////////////////////////////////////////////////////////////
-		// / verbs
-		// /////////////////////////////////////////////////////////////////////////
-		// אנו מעוניינים למנוע הופעה של ב\כ\ל\מ\ש\לכש\ ועוד כתחילית עם
-		// ציווי אבל כן נאפשר הופעת ו+ ציווי - ולכי
+			// /////////////////////////////////////////////////////////////////////////
+			// / verbs
+			// /////////////////////////////////////////////////////////////////////////
+			// אנו מעוניינים למנוע הופעה של ב\כ\ל\מ\ש\לכש\ ועוד כתחילית עם
+			// ציווי אבל כן נאפשר הופעת ו+ ציווי - ולכי
 		case VERB:
 		// if(posi == ENUM_POS.VERB)
 		{
 			tensei = inflectedRecordNum.getTense();
 			if (tensei == ENUM_TENSE.IMPERATIVE
-					&& (prepLAMED || prepBET || prepMEM || prepKAF || adverbKAF
-							|| subConOrRelSHIN || tempSubConKAFSHIN
+					&& (prepLAMED || prepBET || prepMEM || prepKAF || adverbKAF || subConOrRelSHIN || tempSubConKAFSHIN
 							|| tempSubConBETSHIN || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN)) {
 				return false;
 			}
 			// לא יופיעו בכל"ם לפני פעלים בעבר ועתיד
-			if (prepositionTag
-					&& (tensei == ENUM_TENSE.PAST || tensei == ENUM_TENSE.FUTURE)) {
+			if (prepositionTag && (tensei == ENUM_TENSE.PAST || tensei == ENUM_TENSE.FUTURE)) {
 				return false;
 			}
 			// למנוע ניתוח של כ+מלאך מ+מלאך ל+מלאך ב+מלאך אבל לאפשר ניתוח של
 			// למלאך במלאך כלומר תחיליות ב ול יופיעו
 			// כחלק מהצורה ולא כתחיליות כי מייצרים אותן
 			// לאפשר ניתוח של בלהלביש ובלשמור
-			if (prepositionTag
-					&& tensei == ENUM_TENSE.INFINITIVE
+			if (prepositionTag && tensei == ENUM_TENSE.INFINITIVE
 					&& suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_ACCUSATIVE_OR_NOMINATIVE
 					&& base.charAt(0) != 'l' && base.charAt(0) != 'b') {
 				return false;
 			}
 			// למנוע ניתוח של בבשמור ממשמור ללשמור ככשמור
 			if (tensei == ENUM_TENSE.INFINITIVE) {
-				if ((prepBET && base.charAt(0) == 'b')
-						|| (prepKAF && base.charAt(0) == 'k')
-						|| (prepMEM && base.charAt(0) == 'm')
-						|| (prepLAMED && base.charAt(0) == 'l')) {
+				if ((prepBET && base.charAt(0) == 'b') || (prepKAF && base.charAt(0) == 'k')
+						|| (prepMEM && base.charAt(0) == 'm') || (prepLAMED && base.charAt(0) == 'l')) {
 
 					return false;
 				}
@@ -1439,7 +1332,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			}
 			return true;
 		}
-		// מקור מוחלט לא מקבל מילות יחס
+			// מקור מוחלט לא מקבל מילות יחס
 		case INDEPENDENTINFINITIVE:
 		// if(posi == ENUM_POS.INDEPENDENTINFINITIVE)
 		{
@@ -1449,9 +1342,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			return true;
 		}
 
-		// //////////////////////////////////////////////////////////////////////
-		// / (conjunction) מילת חיובר
-		// /////////////////////////////////////////////////////////////////////
+			// //////////////////////////////////////////////////////////////////////
+			// / (conjunction) מילת חיובר
+			// /////////////////////////////////////////////////////////////////////
 
 		case CONJUNCTION:
 		// if(posi == ENUM_POS.CONJUNCTION)
@@ -1464,21 +1357,19 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			}
 			return true;
 		}
-		// //////////////////////////////////////////////////////////////////////
-		// / (interjection) מילת קריאה
-		// /////////////////////////////////////////////////////////////////////
+			// //////////////////////////////////////////////////////////////////////
+			// / (interjection) מילת קריאה
+			// /////////////////////////////////////////////////////////////////////
 		case INTERJECTION:
 		// if(posi == ENUM_POS.INTERJECTION)
 		{
 			if (definiteArticleTag) {
 				return false;
 			}
-			if (subConOrRelSHIN || tempSubConKAFSHIN || tempSubConMEMSHIN
-					|| tempSubConLAMEDKAFSHIN) {
+			if (subConOrRelSHIN || tempSubConKAFSHIN || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN) {
 				return false;
 			}
-			if (relativizerTag || subordinatingConjunctionTag
-					|| temporalSubConjTag) {
+			if (relativizerTag || subordinatingConjunctionTag || temporalSubConjTag) {
 				return false;
 			}
 			if (prepositionTag) {
@@ -1489,9 +1380,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			}
 			return true;
 		}
-		// //////////////////////////////////////////////////////////////////////
-		// / (interogative) מילת שאלה
-		// /////////////////////////////////////////////////////////////////////
+			// //////////////////////////////////////////////////////////////////////
+			// / (interogative) מילת שאלה
+			// /////////////////////////////////////////////////////////////////////
 		case INTERROGATIVE:
 		// if((posi == ENUM_POS.INTERROGATIVE) && (type !=
 		// INTERROGATIVE_TYPE_PRONOUN))
@@ -1500,8 +1391,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 				return false;
 			}
 			if (type != INTERROGATIVE_TYPE_PRONOUN) {
-				if (subConOrRelSHIN || tempSubConKAFSHIN || tempSubConMEMSHIN
-						|| tempSubConLAMEDKAFSHIN) {
+				if (subConOrRelSHIN || tempSubConKAFSHIN || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN) {
 					return false;
 				}
 				if (prepositionTag) {
@@ -1512,10 +1402,10 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			}
 		}
 
-		// /////////////////////////////////////////////////////////////////////////////
-		// ///////////// שם פרטי
-		// ////////////////////////////////////////////////////////////////////////////
-		// למנוע הופעה של שם פרטי עם תחילית בש - כמו בשדליה
+			// /////////////////////////////////////////////////////////////////////////////
+			// ///////////// שם פרטי
+			// ////////////////////////////////////////////////////////////////////////////
+			// למנוע הופעה של שם פרטי עם תחילית בש - כמו בשדליה
 		case PROPERNAME:
 		// if(posi == ENUM_POS.PROPERNAME)
 		{
@@ -1525,9 +1415,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			return true;
 		}
 
-		// //////////////////////////////////////////////////////////////////////////////
-		// תואר הפועל
-		// ///////////////////////////////////////////////////////////////////////////////
+			// //////////////////////////////////////////////////////////////////////////////
+			// תואר הפועל
+			// ///////////////////////////////////////////////////////////////////////////////
 		case ADVERB:
 		// if(posi == ENUM_POS.ADVERB)
 		{
@@ -1537,9 +1427,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			return true;
 		}
 
-		// /////////////////////////////////////////////////////////////////////
+			// /////////////////////////////////////////////////////////////////////
 
-		// למנוע כ+אל ב+יש
+			// למנוע כ+אל ב+יש
 		case MODAL:
 		// if(posi == ENUM_POS.MODAL)
 		{
@@ -1549,7 +1439,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			return true;
 		}
 
-		// לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ
+			// לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ
 		case COPULA:
 		// if(posi == ENUM_POS.COPULA)
 		{
@@ -1559,7 +1449,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			return true;
 		}
 
-		// participleType handling
+			// participleType handling
 		case PARTICIPLE:
 		case PASSIVEPARTICIPLE:
 		// if(posi == ENUM_POS.PARTICIPLE || posi == ENUM_POS.PASSIVEPARTICIPLE)
@@ -1567,19 +1457,18 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 			if (!conjunctionTag && type == PARTICIPLE_TYPE_ADJECTIVE) {
 				return false;
 			}
-			if (!conjunctionTag && !subConOrRelSHIN
-					&& type == PARTICIPLE_TYPE_VERB) {
+			if (!conjunctionTag && !subConOrRelSHIN && type == PARTICIPLE_TYPE_VERB) {
 				return false;
 			}
 			return true;
 		}
 
-		// /////////////////////////////////////////////////////////////////
-		// ///////////PREPOSITION
-		// //////////////////////////////////////////////////////////
-		// לא לאפשר ש+לי - מותר רק שלי
-		// כן לאפשר ש+בי - לכן אי אפשר חוק כללי וצריך לבדוק שמדובר בעיול
-		// ספציפי
+			// /////////////////////////////////////////////////////////////////
+			// ///////////PREPOSITION
+			// //////////////////////////////////////////////////////////
+			// לא לאפשר ש+לי - מותר רק שלי
+			// כן לאפשר ש+בי - לכן אי אפשר חוק כללי וצריך לבדוק שמדובר בעיול
+			// ספציפי
 		case PREPOSITION:
 		// if(posi == ENUM_POS.PREPOSITION
 		// && suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL)
@@ -1592,12 +1481,9 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 				return false;
 			}
 			if (suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL) {
-				if (prefix.equals("e")
-						&& (base.equals("li") || base.equals("lk")
-								|| base.equals("lw") || base.equals("lh")
-								|| base.equals("lnw") || base.equals("lkm")
-								|| base.equals("lkn") || base.equals("lhm") || base
-									.equals("lhn"))) {
+				if (prefix.equals("e") && (base.equals("li") || base.equals("lk") || base.equals("lw")
+						|| base.equals("lh") || base.equals("lnw") || base.equals("lkm") || base.equals("lkn")
+						|| base.equals("lhm") || base.equals("lhn"))) {
 					return false;
 				}
 			}
@@ -1736,8 +1622,8 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * BASE_PRONOUN_TYPE_PERSONAL && // suffixFunctioni !=
 	 * SUFFIX_FUNCTION_PRONOMIAL) // לפי רשימה של נועם - כזה הלזו זהו לא יקבלו
 	 * בכלם // && !(prepositionTag && basePronounTypei == //
-	 * BASE_PRONOUN_TYPE_DEMONSTRATIVE) // כינויי גוף מסוג שאלה מקבלים
-	 * בכל"ם עלפ"י העיול הספציפי - לכן // נכליל שלא ועבוא עיולים מסויימים נשתמש
+	 * BASE_PRONOUN_TYPE_DEMONSTRATIVE) // כינויי גוף מסוג שאלה מקבלים בכל
+	 * "ם עלפ"י העיול הספציפי - לכן // נכליל שלא ועבוא עיולים מסויימים נשתמש
 	 * בשדה // תחילית בטבלת inflections // לסמן אם מקבל תחילית בכל"ם או לא &&
 	 * !((prepLAMED || prepBET || prepMEM || prepKAF || adverbKAF) && posi ==
 	 * ENUM_POS.PRONOUN && prefixPerEntry == 'u')
@@ -1910,8 +1796,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 	 * @param inflectedRecordNum
 	 * @return
 	 */
-	protected boolean validateByRulesWithoutPrefixes(String transliterated,
-			InflectedRecordNum inflectedRecordNum) {
+	protected boolean validateByRulesWithoutPrefixes(String transliterated, InflectedRecordNum inflectedRecordNum) {
 		boolean validate = false;
 		// מקור יופיע אלא אם נמנע
 		// שם פועל מוטה לא יופיע כעומד בפני עצמו רק בצירוף תחילית
@@ -1925,22 +1810,20 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		ENUM_TENSE tensei = inflectedRecordNum.getTense();
 		ENUM_HATTRIBUTE haaributei = inflectedRecordNum.getHAttribute();
 		ENUM_POS posi = inflectedRecordNum.getPos();
-		ENUM_SUFFIX_FUNCTION suffixFunctioni = inflectedRecordNum
-				.getSuffixFunction();
+		ENUM_SUFFIX_FUNCTION suffixFunctioni = inflectedRecordNum.getSuffixFunction();
 		ENUM_STATUS constructi = inflectedRecordNum.getStatus();
 
 		if (!(haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE)
-				&& !(posi == ENUM_POS.QUANTIFIER
-						&& haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_FALSE && constructi == ENUM_STATUS.CONSTRUCT_FALSE)
-				// שונה בגלל ליצואן
-				// && !((posi != ENUM_POS.PRONOUN )&& haaributei ==
-				// ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
-				&& !((posi != ENUM_POS.PRONOUN && posi != ENUM_POS.PROPERNAME) && haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
-				&& !(posi == ENUM_POS.VERB
-						&& tensei == ENUM_TENSE.INFINITIVE
+				&& !(posi == ENUM_POS.QUANTIFIER && haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_FALSE
+						&& constructi == ENUM_STATUS.CONSTRUCT_FALSE)
+						// שונה בגלל ליצואן
+						// && !((posi != ENUM_POS.PRONOUN )&& haaributei ==
+						// ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
+				&& !((posi != ENUM_POS.PRONOUN && posi != ENUM_POS.PROPERNAME)
+						&& haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
+				&& !(posi == ENUM_POS.VERB && tensei == ENUM_TENSE.INFINITIVE
 						&& suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_ACCUSATIVE_OR_NOMINATIVE
-						&& transliterated.charAt(0) != 'b' && transliterated
-						.charAt(0) != 'l'))
+						&& transliterated.charAt(0) != 'b' && transliterated.charAt(0) != 'l'))
 			validate = true;
 		return validate;
 	}

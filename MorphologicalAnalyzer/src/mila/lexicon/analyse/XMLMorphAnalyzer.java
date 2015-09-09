@@ -51,8 +51,7 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param gimatriasFile
 	 *            gimatrias data file path
 	 */
-	public static void dataLoad(String dinflectionsFile, String dprefixesFile,
-			String gimatriasFile) {
+	public static void dataLoad(String dinflectionsFile, String dprefixesFile, String gimatriasFile) {
 		final long startTime = System.currentTimeMillis();
 		Data.webFlag = false;
 		Data.dinflectionsFile = dinflectionsFile;
@@ -98,19 +97,16 @@ public class XMLMorphAnalyzer implements Constants {
 				if (webFlag) {
 					a.processDirectory(input, output);
 				} else {
-					a.processDirectory(input, output, dinflectionsFile,
-							dprefixesFile, gimartiasFile);
+					a.processDirectory(input, output, dinflectionsFile, dprefixesFile, gimartiasFile);
 				}
 			} else if (!in.isDirectory() && !out.isDirectory()) {
 				if (webFlag) {
 					a.processSingleFile(input, output);
 				} else {
-					a.processSingleFile(input, output, dinflectionsFile,
-							dprefixesFile, gimartiasFile);
+					a.processSingleFile(input, output, dinflectionsFile, dprefixesFile, gimartiasFile);
 				}
 			} else {
-				System.err
-				.println("Input and output should both be files or should both be existing directories");
+				System.err.println("Input and output should both be files or should both be existing directories");
 			}
 
 			break;
@@ -137,27 +133,24 @@ public class XMLMorphAnalyzer implements Constants {
 				if (webFlag) {
 					a.processDirectory(input, output);
 				} else {
-					a.processDirectory(input, output, dinflectionsFile,
-							dprefixesFile, gimartiasFile);
+					a.processDirectory(input, output, dinflectionsFile, dprefixesFile, gimartiasFile);
 				}
 			} else if (!in.isDirectory() && !out.isDirectory()) {
 				if (webFlag) {
 					a.processSingleFile(input, output);
 				} else {
-					a.processSingleFile(input, output, dinflectionsFile,
-							dprefixesFile, gimartiasFile);
+					a.processSingleFile(input, output, dinflectionsFile, dprefixesFile, gimartiasFile);
 				}
 			} else {
-				System.err
-				.println("Input and output should both be files or should both be existing directories");
+				System.err.println("Input and output should both be files or should both be existing directories");
 			}
 
 			break;
 
 		default:
 			System.err.println("wrong parameters number");
-			System.err
-			.println("java -Xmx1G -jar morphAnalyzer false <input File /directory> <output file / directory> dinflections.data dprefixes.data gimaria.data [-v]");
+			System.err.println(
+					"java -Xmx1G -jar morphAnalyzer false <input File /directory> <output file / directory> dinflections.data dprefixes.data gimaria.data [-v]");
 
 		}
 
@@ -209,8 +202,7 @@ public class XMLMorphAnalyzer implements Constants {
 		final long afterLoadTime = System.currentTimeMillis();
 		final long load2MemoryElapsedTime = afterLoadTime - startTime;
 		if (myVerboseFlag) {
-			System.out.println("load2Memory Elapsed time = "
-					+ load2MemoryElapsedTime + " ms");
+			System.out.println("load2Memory Elapsed time = " + load2MemoryElapsedTime + " ms");
 		}
 		return afterLoadTime;
 	}
@@ -225,20 +217,17 @@ public class XMLMorphAnalyzer implements Constants {
 	 *            - index in the string which holds the input directory, it is
 	 *            used for building the input directories tree in the output
 	 */
-	private void analyzeDirectory(File inputDirectory, String outputDirectory,
-			final int pos) {
+	private void analyzeDirectory(File inputDirectory, String outputDirectory, final int pos) {
 		if (inputDirectory.isDirectory()) {
 			// create correspond directory for xml
 
-			final String out = outputDirectory
-					+ inputDirectory.getAbsolutePath().substring(pos);
+			final String out = outputDirectory + inputDirectory.getAbsolutePath().substring(pos);
 			// System.out.println(out);
 			if (!new File(out).exists()) {
 				if (new File(out).mkdir()) {
 					System.out.println("Success creating directory: " + out);
 				} else {
-					System.err
-					.println("Error in creation of directory: " + out);
+					System.err.println("Error in creation of directory: " + out);
 				}
 			}
 			// call for analysis of each file/dir under the currect directory
@@ -250,8 +239,7 @@ public class XMLMorphAnalyzer implements Constants {
 
 		} else { // file to be analyzed
 			final String inputFile = inputDirectory.getAbsolutePath();
-			final String outputFile = outputDirectory
-					+ inputFile.substring(pos);
+			final String outputFile = outputDirectory + inputFile.substring(pos);
 			try {
 				System.out.println(outputFile);
 				analyzeFile(inputFile, outputFile);
@@ -280,8 +268,8 @@ public class XMLMorphAnalyzer implements Constants {
 			// createXML.printDoc();
 
 		} catch (final Exception e) {
-			System.err
-			.println("An error occured make sure you have tokenized the input file, if error still existes send the developer the input file");
+			System.err.println(
+					"An error occured make sure you have tokenized the input file, if error still existes send the developer the input file");
 			e.printStackTrace();
 		} finally {
 			// System.exit(0);
@@ -313,8 +301,7 @@ public class XMLMorphAnalyzer implements Constants {
 		try {
 			createXML.createXMLDoc();
 		} catch (final Exception e) {
-			System.out
-			.println("XMLMorphAnalyzer:processXMLOutput while createXMLdOC - Exception");
+			System.out.println("XMLMorphAnalyzer:processXMLOutput while createXMLdOC - Exception");
 			e.printStackTrace();
 		}
 		createXML.createArticle();
@@ -322,8 +309,7 @@ public class XMLMorphAnalyzer implements Constants {
 		createXML.createSentence();
 		createXML.createToken(hebWord);
 
-		final TokenizationParser tokenizationParser = new TokenizationParser(
-				createXML);
+		final TokenizationParser tokenizationParser = new TokenizationParser(createXML);
 		if (!checkKitzur(hebWord, tokenizationParser)) {
 			try {
 				tokenizationParser.readInput(hebWord);
@@ -348,37 +334,24 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param hebWord
 	 * @return
 	 */
-	private boolean checkKitzur(String hebWord,
-			TokenizationParser tokenizationParser) {
+	private boolean checkKitzur(String hebWord, TokenizationParser tokenizationParser) {
 		boolean isKitzur = false;
 		if (hebWord.endsWith("'")) {
 			// System.out.println("analyzeStringInput : hebWord=" + hebWord);
 			// token length
 			int indexKitzur = 0;
-			if ((indexKitzur = hebWord.indexOf("וכד'")) != -1
-					|| (indexKitzur = hebWord.indexOf("וכדו'")) != -1
-					|| (indexKitzur = hebWord.indexOf("מס'")) != -1
-					|| (indexKitzur = hebWord.indexOf("מע'")) != -1
-					|| (indexKitzur = hebWord.indexOf("מח'")) != -1
-					|| (indexKitzur = hebWord.indexOf("וכו'")) != -1
-					|| (indexKitzur = hebWord.indexOf("רח'")) != -1
-					|| (indexKitzur = hebWord.indexOf("נק'")) != -1
-					|| (indexKitzur = hebWord.indexOf("טל'")) != -1
-					|| (indexKitzur = hebWord.indexOf("שכ'")) != -1
-					|| (indexKitzur = hebWord.indexOf("שד'")) != -1
-					|| (indexKitzur = hebWord.indexOf("גר'")) != -1
-					|| (indexKitzur = hebWord.indexOf("פרופ'")) != -1
-					|| (indexKitzur = hebWord.indexOf("עמ'")) != -1
-					|| (indexKitzur = hebWord.indexOf("אונ'")) != -1
-					|| (indexKitzur = hebWord.indexOf("וגו'")) != -1
-					|| (indexKitzur = hebWord.indexOf("גב'")) != -1
-					|| (indexKitzur = hebWord.indexOf("להית'")) != -1
-					|| (indexKitzur = hebWord.indexOf("להת'")) != -1
-					|| (indexKitzur = hebWord.indexOf("ושות'")) != -1
-					|| (indexKitzur = hebWord.indexOf("ש\"ס")) != -1
-					|| (indexKitzur = hebWord.indexOf("ש''ס")) != -1
-					|| (indexKitzur = hebWord.indexOf("ש\"ח")) != -1
-					|| (indexKitzur = hebWord.indexOf("ק\"ג")) != -1) {
+			if ((indexKitzur = hebWord.indexOf("וכד'")) != -1 || (indexKitzur = hebWord.indexOf("וכדו'")) != -1
+					|| (indexKitzur = hebWord.indexOf("מס'")) != -1 || (indexKitzur = hebWord.indexOf("מע'")) != -1
+					|| (indexKitzur = hebWord.indexOf("מח'")) != -1 || (indexKitzur = hebWord.indexOf("וכו'")) != -1
+					|| (indexKitzur = hebWord.indexOf("רח'")) != -1 || (indexKitzur = hebWord.indexOf("נק'")) != -1
+					|| (indexKitzur = hebWord.indexOf("טל'")) != -1 || (indexKitzur = hebWord.indexOf("שכ'")) != -1
+					|| (indexKitzur = hebWord.indexOf("שד'")) != -1 || (indexKitzur = hebWord.indexOf("גר'")) != -1
+					|| (indexKitzur = hebWord.indexOf("פרופ'")) != -1 || (indexKitzur = hebWord.indexOf("עמ'")) != -1
+					|| (indexKitzur = hebWord.indexOf("אונ'")) != -1 || (indexKitzur = hebWord.indexOf("וגו'")) != -1
+					|| (indexKitzur = hebWord.indexOf("גב'")) != -1 || (indexKitzur = hebWord.indexOf("להית'")) != -1
+					|| (indexKitzur = hebWord.indexOf("להת'")) != -1 || (indexKitzur = hebWord.indexOf("ושות'")) != -1
+					|| (indexKitzur = hebWord.indexOf("ש\"ס")) != -1 || (indexKitzur = hebWord.indexOf("ש''ס")) != -1
+					|| (indexKitzur = hebWord.indexOf("ש\"ח")) != -1 || (indexKitzur = hebWord.indexOf("ק\"ג")) != -1) {
 				if (indexKitzur > 0) {
 					isKitzur = true;
 
@@ -388,12 +361,9 @@ public class XMLMorphAnalyzer implements Constants {
 						checkedPrefix = checkedPrefix.replace('ה', ' ').trim();
 						hebBase = "ה" + hebBase;
 					}
-					if (StringUtils.moshevkaleb(Translate
-							.Heb2Eng(checkedPrefix))) {
+					if (StringUtils.moshevkaleb(Translate.Heb2Eng(checkedPrefix))) {
 
-						tokenizationParser.analyzeBase(
-								Translate.Heb2Eng(hebBase),
-								Translate.Heb2Eng(checkedPrefix),
+						tokenizationParser.analyzeBase(Translate.Heb2Eng(hebBase), Translate.Heb2Eng(checkedPrefix),
 								Translate.Heb2Eng(hebWord), hebWord);
 					}
 				}
@@ -410,8 +380,7 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param pw
 	 * @param tokenizationOutputStr
 	 */
-	public void morphologicalAnalyzer(PrintWriter pw,
-			String tokenizationOutputStr) {
+	public void morphologicalAnalyzer(PrintWriter pw, String tokenizationOutputStr) {
 		dataLoad();
 		// ///////////////////////////////////////
 		ReadXMLFile(tokenizationOutputStr, pw);
@@ -435,9 +404,8 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param gimatriasFile
 	 *            input data gimatria file
 	 */
-	public void morphologicalAnalyzer(String tokenizationOutputStr,
-			PrintWriter pw, String dinflectionsFile, String dprefixesFile,
-			String gimatriasFile) {
+	public void morphologicalAnalyzer(String tokenizationOutputStr, PrintWriter pw, String dinflectionsFile,
+			String dprefixesFile, String gimatriasFile) {
 		dataLoad(dinflectionsFile, dprefixesFile, gimatriasFile);
 		// ///////////////////////////////////////
 		ReadXMLFile(tokenizationOutputStr, pw);
@@ -451,8 +419,7 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param pw
 	 * @param tokenizationOutputStr
 	 */
-	public void morphologicalAnalyzerNoDataLoad(PrintWriter pw,
-			String tokenizationOutputStr) {
+	public void morphologicalAnalyzerNoDataLoad(PrintWriter pw, String tokenizationOutputStr) {
 		// ///////////////////////////////////////
 		ReadXMLFile(tokenizationOutputStr, pw);
 		// //////////////////////////////////////
@@ -468,8 +435,7 @@ public class XMLMorphAnalyzer implements Constants {
 	 */
 	public void processDirectory(String inputDirectory, String outputDirectory) {
 		final File in = new File(inputDirectory);
-		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
-				.getParent().length();
+		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in.getParent().length();
 
 		dataLoad();
 		analyzeDirectory(in, outputDirectory, pos);
@@ -494,12 +460,11 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param gimartiasFile
 	 *            gimatrias data file path
 	 */
-	public void processDirectory(String inputDirectory, String outputDirectory,
-			String dinflectionsFile, String dprefixesFile, String gimartiasFile) {
+	public void processDirectory(String inputDirectory, String outputDirectory, String dinflectionsFile,
+			String dprefixesFile, String gimartiasFile) {
 
 		final File in = new File(inputDirectory);
-		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
-				.getParent().length();
+		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in.getParent().length();
 		dataLoad(dinflectionsFile, dprefixesFile, gimartiasFile);
 		analyzeDirectory(in, outputDirectory, pos);
 
@@ -513,11 +478,9 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param inputDirectory
 	 * @param outputDirectory
 	 */
-	public void processDirectoryNoDataLoad(String inputDirectory,
-			String outputDirectory) {
+	public void processDirectoryNoDataLoad(String inputDirectory, String outputDirectory) {
 		final File in = new File(inputDirectory);
-		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
-				.getParent().length();
+		final int pos = in.isDirectory() ? in.getAbsolutePath().length() : in.getParent().length();
 		analyzeDirectory(in, outputDirectory, pos);
 	}
 
@@ -555,8 +518,8 @@ public class XMLMorphAnalyzer implements Constants {
 	 * @param gimartiasFile
 	 *            gimatrias data file path
 	 */
-	public void processSingleFile(String inputFile, String outputFile,
-			String dinflectionsFile, String dprefixesFile, String gimartiasFile) {
+	public void processSingleFile(String inputFile, String outputFile, String dinflectionsFile, String dprefixesFile,
+			String gimartiasFile) {
 		dataLoad(dinflectionsFile, dprefixesFile, gimartiasFile);
 		analyzeFile(inputFile, outputFile);
 
@@ -571,10 +534,8 @@ public class XMLMorphAnalyzer implements Constants {
 		final CreateCorpusXML createXML = new CreateCorpusXML();
 		createXML.createXMLDoc();
 		createXML.createArticle();
-		final TokenizationParser tokenizationParser = new TokenizationParser(
-				createXML);
-		try (final InputStream in = new ByteArrayInputStream(
-				tokenizationOutputStr.getBytes("UTF-8"))) {
+		final TokenizationParser tokenizationParser = new TokenizationParser(createXML);
+		try (final InputStream in = new ByteArrayInputStream(tokenizationOutputStr.getBytes("UTF-8"))) {
 			tokenizationParser.parse(in);
 			createXML.printDoc(pw);
 		} catch (final Exception e) {

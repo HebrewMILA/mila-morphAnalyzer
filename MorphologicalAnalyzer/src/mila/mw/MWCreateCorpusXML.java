@@ -31,16 +31,13 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 		this.outputFile = outputFile;
 	}
 
-	public void createMWEAnalysis(String description,
-			String transliteratedLexiocnItem, String hebWord,
-			String lexiconPointer, String pos, String mweid, String type,
-			boolean prefix, String definiteness) {
+	public void createMWEAnalysis(String description, String transliteratedLexiocnItem, String hebWord,
+			String lexiconPointer, String pos, String mweid, String type, boolean prefix, String definiteness) {
 		analysisCounter++;
 		try {
 			analysis = objFactory.createAnalysisType();
 		} catch (final JAXBException e) {
-			System.out
-			.println("CreateCorpusXML:createImpersonalAnalysis Exception while creating analysis for hebWord="
+			System.out.println("CreateCorpusXML:createImpersonalAnalysis Exception while creating analysis for hebWord="
 					+ hebWord);
 			e.printStackTrace();
 		}
@@ -49,9 +46,8 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 		try {
 			base = objFactory.createBaseType();
 		} catch (final JAXBException e1) {
-			System.out
-			.println("CreateCorpusXML:createImpersonalAnalysis Exception while creating base for hebWord="
-					+ hebWord);
+			System.out.println(
+					"CreateCorpusXML:createImpersonalAnalysis Exception while creating base for hebWord=" + hebWord);
 			e1.printStackTrace();
 		}
 		if (!description.equals("")) {
@@ -63,9 +59,9 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 		try {
 			mwe1 = objFactory.createMWEType();
 		} catch (final JAXBException e2) {
-			System.out
-			.println("CreateCorpusXML:createImpersonalAnalysis Exception while creating ImpersonalType for hebWord="
-					+ hebWord);
+			System.out.println(
+					"CreateCorpusXML:createImpersonalAnalysis Exception while creating ImpersonalType for hebWord="
+							+ hebWord);
 			e2.printStackTrace();
 		}
 		mwe1.setConsecutive("true");
@@ -91,16 +87,14 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 		try {
 			jc = JAXBContext.newInstance("mila.generated");
 		} catch (final JAXBException e) {
-			System.out
-			.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");
+			System.out.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");
 			e.printStackTrace();
 		}
 		objFactory = new ObjectFactory();
 		try {
 			corpus = objFactory.createCorpus();
 		} catch (final JAXBException e1) {
-			System.out
-			.println("CreateCorpusXML:createXMLdOC Exception while creating corpus");
+			System.out.println("CreateCorpusXML:createXMLdOC Exception while creating corpus");
 			e1.printStackTrace();
 		}
 		String hostname = "unknown.unknown";
@@ -109,8 +103,7 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 		} catch (final Throwable t) {
 
 		}
-		corpus.setName("Analysis Results (" + hostname + ") @ "
-				+ Calendar.getInstance().getTime());
+		corpus.setName("Analysis Results (" + hostname + ") @ " + Calendar.getInstance().getTime());
 		corpus.setMaintainer("Slava Demender");
 		corpus.setEmail("mila@cs.technion.ac.il");
 
@@ -119,14 +112,13 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 		try {
 			validator = jc.createValidator();
 		} catch (final JAXBException e2) {
-			System.out
-			.println("CreateCorpusXML:createXMLdOC Exception while creating Validator");
+			System.out.println("CreateCorpusXML:createXMLdOC Exception while creating Validator");
 			e2.printStackTrace();
 		}
 	}
 
-	protected void setBase(BaseType base, String transliteratedLexiocnItem,
-			String lexiconItem, String lexiconPointer, String dottedLexiconItem) {
+	protected void setBase(BaseType base, String transliteratedLexiocnItem, String lexiconItem, String lexiconPointer,
+			String dottedLexiconItem) {
 		base.setTransliteratedLexiconItem(transliteratedLexiocnItem);
 		base.setLexiconItem(lexiconItem);
 		if (lexiconPointer.length() > 0) {

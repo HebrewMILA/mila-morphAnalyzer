@@ -17,12 +17,14 @@ public class MWEdata extends Data {
 		MWErecord mwinfRec = null;
 		// get from databse
 
-		// System.out.println("(F) getMWEinflections()  get from inflection files !!!");
+		// System.out.println("(F) getMWEinflections() get from inflection files
+		// !!!");
 		// get from inflection files !!!
 		try {
 			switch (tableNum) {
 			case 2: {
-				// System.out.println("(F)MWData:getMWEinflections() - case 2: size = "+
+				// System.out.println("(F)MWData:getMWEinflections() - case 2:
+				// size = "+
 				// mwe2.GetSize());
 				mweList = mwe2.get(key);
 				break;
@@ -37,9 +39,9 @@ public class MWEdata extends Data {
 			}
 			}
 		} catch (Exception e1) {
-			System.err.println("MWEdata.java Exception in key "+key + ", proceeding...");
+			System.err.println("MWEdata.java Exception in key " + key + ", proceeding...");
 			return returnedMweList;
-			//e1.printStackTrace();
+			// e1.printStackTrace();
 		}
 
 		if (mweList != null) {

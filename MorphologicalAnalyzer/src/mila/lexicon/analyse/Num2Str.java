@@ -30,8 +30,7 @@ public class Num2Str implements Constants {
 			decodedPolarity = "unspecified";
 			break;
 		default:
-			throw new Exception("Num2Str:char2StrPolarity illegal value "
-					+ "for polarity=" + polarity);
+			throw new Exception("Num2Str:char2StrPolarity illegal value " + "for polarity=" + polarity);
 
 		}
 		return decodedPolarity;
@@ -45,8 +44,7 @@ public class Num2Str implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	public static String decodePos(ENUM_POS posi, String transliterated)
-			throws Exception {
+	public static String decodePos(ENUM_POS posi, String transliterated) throws Exception {
 		String pos = "";
 		switch (posi) {
 		case QUANTIFIER:
@@ -119,12 +117,12 @@ public class Num2Str implements Constants {
 			pos = "multiWord";
 			break;
 		default:
-			throw new Exception("Num2Str:decodePos illegal  value "
-					+ "for pos=" + pos + " for transliterated: "
-					+ transliterated);
+			throw new Exception(
+					"Num2Str:decodePos illegal  value " + "for pos=" + pos + " for transliterated: " + transliterated);
 		}
 		return pos;
 	}
+
 	/**
 	 * This method translates data file codes for binyan to strings
 	 * 
@@ -135,8 +133,8 @@ public class Num2Str implements Constants {
 	 * @return - the decoded Binyan value
 	 * @throws Exception
 	 */
-	public static String strNum2StrBinyan(final String numBinyan,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrBinyan(final String numBinyan, final String lexiconItem, final String word)
+			throws Exception {
 		String binyan = "";
 		switch (numBinyan.charAt(0)) {
 		case '1':
@@ -165,9 +163,8 @@ public class Num2Str implements Constants {
 			break;
 
 		default:
-			throw new Exception("Num2Str:strNum2StrBinyan illegal value "
-					+ "for binyan=" + binyan + " for lexiconItem: "
-					+ lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrBinyan illegal value " + "for binyan=" + binyan
+					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 		return binyan;
 	}
@@ -182,8 +179,8 @@ public class Num2Str implements Constants {
 	 * @return - the decoded Gender value
 	 * @throws Exception
 	 */
-	public static String strNum2StrGender(final String numGender,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrGender(final String numGender, final String lexiconItem, final String word)
+			throws Exception {
 		String gender = "";
 		switch (numGender.charAt(0)) {
 		case '1':
@@ -202,9 +199,8 @@ public class Num2Str implements Constants {
 			break;
 
 		default:
-			throw new Exception("Num2Str:strNum2StrGender illegal value "
-					+ "for numGender=" + numGender + " for lexiconItem: "
-					+ lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrGender illegal value " + "for numGender=" + numGender
+					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 		return gender;
 	}
@@ -218,8 +214,8 @@ public class Num2Str implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	public static String strNum2StrhAttribute(final String baseDefinitenessi,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrhAttribute(final String baseDefinitenessi, final String lexiconItem,
+			final String word) throws Exception {
 		String baseDefiniteness = "";
 		switch (baseDefinitenessi.charAt(0)) {
 		case '1':
@@ -245,10 +241,8 @@ public class Num2Str implements Constants {
 			break;
 
 		default:
-			throw new Exception("Num2Str:strNum2StrhAttribute illegal value "
-					+ "for baseDefinitenessi=" + baseDefinitenessi
-					+ " for lexiconItem: " + lexiconItem + " for input token: "
-					+ word);
+			throw new Exception("Num2Str:strNum2StrhAttribute illegal value " + "for baseDefinitenessi="
+					+ baseDefinitenessi + " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 
 		return baseDefiniteness;
@@ -264,8 +258,8 @@ public class Num2Str implements Constants {
 	 * @return - the decoded Number value
 	 * @throws Exception
 	 */
-	public static String strNum2StrNumber(final String numNumber,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrNumber(final String numNumber, final String lexiconItem, final String word)
+			throws Exception {
 		String number = "";
 		switch (numNumber.charAt(0)) {
 		case '1':
@@ -288,9 +282,8 @@ public class Num2Str implements Constants {
 			number = "unspecified";
 			break;
 		default:
-			throw new Exception("Num2Str:strNum2StrNumber illegal value "
-					+ "for numNumber=" + numNumber + " for lexiconItem: "
-					+ lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrNumber illegal value " + "for numNumber=" + numNumber
+					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 		return number;
 	}
@@ -307,8 +300,8 @@ public class Num2Str implements Constants {
 	 * @return - the decoded PGN value
 	 * @throws Exception
 	 */
-	public static String strNum2StrPGN(final String numPGN,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrPGN(final String numPGN, final String lexiconItem, final String word)
+			throws Exception {
 		String PGN = "";
 		switch (numPGN.charAt(0)) {
 		case '1':
@@ -381,9 +374,8 @@ public class Num2Str implements Constants {
 			PGN = "unspecified";
 			break;
 		default:
-			throw new Exception("Num2Str:strNum2StrPGN illegal value "
-					+ "for PGN =" + PGN + " for lexiconItem: " + lexiconItem
-					+ " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrPGN illegal value " + "for PGN =" + PGN + " for lexiconItem: "
+					+ lexiconItem + " for input token: " + word);
 		}
 
 		return PGN;
@@ -398,8 +390,8 @@ public class Num2Str implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	public static String strNum2StrPos(final String numPOS,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrPos(final String numPOS, final String lexiconItem, final String word)
+			throws Exception {
 		String pos = "";
 		switch (numPOS.charAt(0)) {
 		case '1':
@@ -443,10 +435,8 @@ public class Num2Str implements Constants {
 					pos = "multiWord";// 24
 					break;
 				default:
-					throw new Exception("Num2Str:strNum2StrPos illegal value "
-							+ "for pos=" + pos + " for lexiconItem: "
-							+ lexiconItem + " for input token: " + word
-							+ "the numPOS is :" + numPOS);
+					throw new Exception("Num2Str:strNum2StrPos illegal value " + "for pos=" + pos + " for lexiconItem: "
+							+ lexiconItem + " for input token: " + word + "the numPOS is :" + numPOS);
 				}
 			}
 			break;
@@ -472,9 +462,8 @@ public class Num2Str implements Constants {
 			pos = "pronoun";
 			break;
 		default:
-			throw new Exception("Num2Str:strNum2StrPos illegal value  "
-					+ "for pos=" + pos + " for lexiconItem: " + lexiconItem
-					+ " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrPos illegal value  " + "for pos=" + pos + " for lexiconItem: "
+					+ lexiconItem + " for input token: " + word);
 		}
 		return pos;
 	}
@@ -489,8 +478,8 @@ public class Num2Str implements Constants {
 	 * @return the decoded script value
 	 * @throws Exception
 	 */
-	public static String strNum2StrRegister(final String numRegister,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrRegister(final String numRegister, final String lexiconItem, final String word)
+			throws Exception {
 		String register = "";
 		switch (numRegister.charAt(0)) {
 		case '1':
@@ -503,9 +492,8 @@ public class Num2Str implements Constants {
 			register = "informal";
 			break;
 		default:
-			throw new Exception("Num2Str:strNum2StrRegister illegal value "
-					+ "for numRegister=" + numRegister + " for lexiconItem: "
-					+ lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrRegister illegal value " + "for numRegister=" + numRegister
+					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 		return register;
 	}
@@ -520,8 +508,8 @@ public class Num2Str implements Constants {
 	 * @return the decoded script value
 	 * @throws Exception
 	 */
-	public static String strNum2StrSpelling(final String numSpelling,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrSpelling(final String numSpelling, final String lexiconItem, final String word)
+			throws Exception {
 		String spelling = "";
 		switch (numSpelling.charAt(0)) {
 		case '1':
@@ -531,9 +519,8 @@ public class Num2Str implements Constants {
 			spelling = "irregular";
 			break;
 		default:
-			throw new Exception("Num2Str:strNum2StrSpelling illegal value "
-					+ "for numSpelling=" + numSpelling + " for lexiconItem: "
-					+ lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrSpelling illegal value " + "for numSpelling=" + numSpelling
+					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 		return spelling;
 	}
@@ -547,8 +534,8 @@ public class Num2Str implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	public static String strNum2StrStatus(final String numStatus,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrStatus(final String numStatus, final String lexiconItem, final String word)
+			throws Exception {
 		String strStatus = "";
 		switch (numStatus.charAt(0)) {
 		case '1':
@@ -562,9 +549,8 @@ public class Num2Str implements Constants {
 			break;
 
 		default:
-			throw new Exception("Num2Str:strNum2StrStatus illegal value "
-					+ "for numStatus=" + numStatus + " for lexiconItem: "
-					+ lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrStatus illegal value " + "for numStatus=" + numStatus
+					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 
 		}
 
@@ -649,8 +635,8 @@ public class Num2Str implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	public static String strNum2StrSuffixFunction(String suffixFunctionCode,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrSuffixFunction(String suffixFunctionCode, final String lexiconItem,
+			final String word) throws Exception {
 		String suffixFunction = "";
 		switch (suffixFunctionCode.charAt(0)) {
 		case '1':
@@ -668,11 +654,8 @@ public class Num2Str implements Constants {
 
 		default:
 
-			throw new Exception(
-					"Num2Str:strNum2StrSuffixFunction illegal value "
-							+ "for suffixFunctionCode=" + suffixFunctionCode
-							+ " for lexiconItem: " + lexiconItem
-							+ " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrSuffixFunction illegal value " + "for suffixFunctionCode="
+					+ suffixFunctionCode + " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 		return suffixFunction;
 	}
@@ -728,8 +711,8 @@ public class Num2Str implements Constants {
 	 * @return - the decoded tense value
 	 * @throws Exception
 	 */
-	public static String strNum2StrTense(final String numTense,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrTense(final String numTense, final String lexiconItem, final String word)
+			throws Exception {
 		String tense = "";
 		switch (numTense.charAt(0)) {
 		case '1':
@@ -757,9 +740,8 @@ public class Num2Str implements Constants {
 			tense = "unspecified";
 			break;
 		default:
-			throw new Exception("Num2Str:strNum2StrTense illegal value "
-					+ "for numTense=" + numTense + " for lexiconItem: "
-					+ lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrTense illegal value " + "for numTense=" + numTense
+					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 		}
 		return tense;
 	}
@@ -776,8 +758,8 @@ public class Num2Str implements Constants {
 	 * @return -the decoded BaseNamedEntityType value
 	 * @throws Exception
 	 */
-	public static String strNum2StrType(final String numType, String numPos,
-			final String lexiconItem, final String word) throws Exception {
+	public static String strNum2StrType(final String numType, String numPos, final String lexiconItem,
+			final String word) throws Exception {
 		String type = "";
 		switch (numPos.charAt(0)) {
 		case '1': // quantifier
@@ -796,9 +778,8 @@ public class Num2Str implements Constants {
 					type = "unspecified";
 					break;
 				default:
-					throw new Exception("Num2Str:strNum2StrType illegal value "
-							+ "for numType=" + numType + " for numPos: "
-							+ numPos);
+					throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
+							+ " for numPos: " + numPos);
 				}
 			} else {
 				switch (numPos.charAt(1)) {
@@ -841,10 +822,8 @@ public class Num2Str implements Constants {
 						type = "unspecified";
 						break;
 					default:
-						throw new Exception(
-								"Num2Str:strNum2StrType illegal value "
-										+ "for numType=" + numType
-										+ " for numPos: " + numPos);
+						throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
+								+ " for numPos: " + numPos);
 					}
 					break;
 				case '3': // participle
@@ -862,10 +841,8 @@ public class Num2Str implements Constants {
 						type = "unspecified";
 						break;
 					default:
-						throw new Exception(
-								"Num2Str:strNum2StrType illegal value "
-										+ "for numType=" + numType
-										+ " for numPos: " + numPos);
+						throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
+								+ " for numPos: " + numPos);
 					}
 					break;
 				case '4':// numeral
@@ -883,10 +860,8 @@ public class Num2Str implements Constants {
 						type = "unspecified";
 						break;
 					default:
-						throw new Exception(
-								"Num2Str:strNum2StrType illegal value "
-										+ "for numType=" + numType
-										+ " for numPos: " + numPos);
+						throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
+								+ " for numPos: " + numPos);
 
 					}
 				}
@@ -909,9 +884,8 @@ public class Num2Str implements Constants {
 					type = "unspecified";
 					break;
 				default:
-					throw new Exception("Num2Str:strNum2StrType illegal value "
-							+ "for numType=" + numType + " for numPos: "
-							+ numPos);
+					throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
+							+ " for numPos: " + numPos);
 
 				}
 			break;
@@ -933,8 +907,8 @@ public class Num2Str implements Constants {
 				type = "unspecified";
 				break;
 			default:
-				throw new Exception("Num2Str:strNum2StrType illegal value "
-						+ "for numType=" + numType + " for numPos: " + numPos);
+				throw new Exception(
+						"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 
 			}
 			break;
@@ -953,8 +927,8 @@ public class Num2Str implements Constants {
 				type = "unspecified";
 				break;
 			default:
-				throw new Exception("Num2Str:strNum2StrType illegal value "
-						+ "for numType=" + numType + " for numPos: " + numPos);
+				throw new Exception(
+						"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 			}
 			break;
 		case '9': // pronoun
@@ -981,13 +955,13 @@ public class Num2Str implements Constants {
 				type = "unspecified";
 				break;
 			default:
-				throw new Exception("Num2Str:strNum2StrType illegal value "
-						+ "for numType=" + numType + " for numPos: " + numPos);
+				throw new Exception(
+						"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 			}
 			break;
 		default:
-			throw new Exception("Num2Str:strNum2StrType illegal value "
-					+ "for numType=" + numType + " for numPos: " + numPos);
+			throw new Exception(
+					"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 		}
 		return type;
 

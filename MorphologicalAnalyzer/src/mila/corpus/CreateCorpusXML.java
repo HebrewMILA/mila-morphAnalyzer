@@ -149,13 +149,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param dottedLexiconItem
 	 * @throws Exception
 	 */
-	public void createAdjectiveAnalysis(final String description,
-			final int foreign, final String expansion, final String gender,
-			final String number, final String status,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String definiteness,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem) throws Exception {
+	public void createAdjectiveAnalysis(final String description, final int foreign, final String expansion,
+			final String gender, final String number, final String status, final String transliteratedLexiocnItem,
+			final String lexiconItem, final String lexiconPointer, final String definiteness, final String hebWord,
+			final String register, final String spelling, final String dottedLexiconItem) throws Exception {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -168,26 +165,23 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		GenderNumberStatusDefinitenessType adjective = null;
 		try {
 			adjective = objFactory.createGenderNumberStatusDefinitenessType();
 		} catch (final JAXBException e2) {
-			System.err
-					.println("CreateCorpusXML:createAdjectiveAnalysis Exception while create createGenderNumberStatusDefinitenessType for hebWord="
+			System.err.println(
+					"CreateCorpusXML:createAdjectiveAnalysis Exception while create createGenderNumberStatusDefinitenessType for hebWord="
 							+ hebWord);
 			e2.printStackTrace();
 		}
 		adjective.setRegister(register);
 		adjective.setSpelling(spelling);
-		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem,
-				hebWord);
+		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
 		if (gender.length() > 0 && genderi != ENUM_GENDER.UNSPECIFIED) {
 			adjective.setGender(gender);
 		}
-		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem,
-				hebWord);
+		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem, hebWord);
 		if (number.length() > 0 && numberi != ENUM_NUMBER.UNSPECIFIED) {
 			adjective.setNumber(number);
 		}
@@ -199,8 +193,7 @@ public class CreateCorpusXML implements Constants {
 			adjective.setForeign(TRUE);
 		}
 		// the definiteness attribute is not relevant for the construct form
-		final ENUM_STATUS statusi = Str2Num.str2NumConstruct(status,
-				lexiconItem, hebWord);
+		final ENUM_STATUS statusi = Str2Num.str2NumConstruct(status, lexiconItem, hebWord);
 		if (statusi != ENUM_STATUS.CONSTRUCT_TRUE) {
 			adjective.setDefiniteness(definiteness);
 		}
@@ -228,13 +221,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param PGN
 	 * @throws JAXBException
 	 */
-	public void createAdverbAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String expansion, String PGN)
-			throws JAXBException {
+	public void createAdverbAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			final String transliteratedLexiocnItem, final String lexiconItem, final String lexiconPointer,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
+			final String expansion, String PGN) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -247,8 +237,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		GenderNumberPersonType adverb = null;
 
 		adverb = objFactory.createGenderNumberPersonType();
@@ -282,8 +271,7 @@ public class CreateCorpusXML implements Constants {
 		try {
 			article = objFactory.createArticleType();
 		} catch (final JAXBException e) {
-			System.err
-					.println("CreateCorpusXML:createArticle Exception while creating article");
+			System.err.println("CreateCorpusXML:createArticle Exception while creating article");
 			e.printStackTrace();
 		}
 		article.setId("1");
@@ -307,12 +295,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param dottedLexiconItem
 	 * @throws JAXBException
 	 */
-	public void createConjunctionAnalysis(final String description,
-			final String expansion, final String type,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem) throws JAXBException {
+	public void createConjunctionAnalysis(final String description, final String expansion, final String type,
+			final String transliteratedLexiocnItem, final String lexiconItem, final String lexiconPointer,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem)
+					throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -325,8 +311,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		ConjunctionType conjunction = null;
 
 		conjunction = objFactory.createConjunctionType();
@@ -365,13 +350,10 @@ public class CreateCorpusXML implements Constants {
 	 *            - person/gender/number of suffix
 	 * @throws Exception
 	 */
-	public void createCopulaAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni, final String gender,
-			final String number, final String person, final String polarity,
-			final String tense, final String transliteratedLexiocnItem,
-			final String lexiconItem, final String register,
-			final String spelling, final String lexiconPointer,
-			final String hebWord, final String dottedLexiconItem,
+	public void createCopulaAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			final String gender, final String number, final String person, final String polarity, final String tense,
+			final String transliteratedLexiocnItem, final String lexiconItem, final String register,
+			final String spelling, final String lexiconPointer, final String hebWord, final String dottedLexiconItem,
 			final String PGN) throws Exception {
 		analysisCounter++;
 
@@ -385,14 +367,12 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		CopulaType copula = null;
 
 		copula = objFactory.createCopulaType();
 
-		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem,
-				hebWord);
+		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem, hebWord);
 		if (tense.length() > 0 && tensei != ENUM_TENSE.INFINITIVE) {
 			copula.setGender(gender);
 			copula.setNumber(number);
@@ -442,14 +422,11 @@ public class CreateCorpusXML implements Constants {
 	 *            - person/gender/number of suffix
 	 * @throws Exception
 	 */
-	public void createExistentialAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni, final String gender,
-			final String number, final String transliterated,
-			final String lexiconItem, final String lexiconPointer,
-			final String root, final String polarity, final String tense,
-			final String definiteness, final String basePerson,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN) throws Exception {
+	public void createExistentialAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			final String gender, final String number, final String transliterated, final String lexiconItem,
+			final String lexiconPointer, final String root, final String polarity, final String tense,
+			final String definiteness, final String basePerson, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem, final String PGN) throws Exception {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -462,8 +439,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliterated, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliterated, lexiconItem, lexiconPointer, dottedLexiconItem);
 		ExistentialType existential = null;
 
 		existential = objFactory.createExistentialType();
@@ -475,18 +451,15 @@ public class CreateCorpusXML implements Constants {
 		if (root.length() > 0 && root.charAt(0) != '-') {
 			existential.setRoot(root);
 		}
-		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem,
-				hebWord);
+		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
 		if (gender.length() > 0 && genderi != ENUM_GENDER.UNSPECIFIED) {
 			existential.setGender(gender);
 		}
-		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem,
-				hebWord);
+		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem, hebWord);
 		if (number.length() > 0 && numberi != ENUM_NUMBER.UNSPECIFIED) {
 			existential.setNumber(number);
 		}
-		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem,
-				hebWord);
+		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem, hebWord);
 		if (tense.length() > 0 && tensei != ENUM_TENSE.UNSPECIFIED) {
 			existential.setTense(tense);
 		}
@@ -546,13 +519,10 @@ public class CreateCorpusXML implements Constants {
 	 *            - person/gender/number in suffix
 	 * @throws JAXBException
 	 */
-	public void createInterjectionAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN)
-			throws JAXBException {
+	public void createInterjectionAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			final String transliteratedLexiocnItem, final String lexiconItem, final String lexiconPointer,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
+			final String PGN) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -566,8 +536,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		InterjectionType interjection = null;
 
 		interjection = objFactory.createInterjectionType();
@@ -602,13 +571,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param interrogativeType
 	 * @throws JAXBException
 	 */
-	public void createInterrogativeAnalysis(final String description,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN,
-			final ENUM_SUFFIX_FUNCTION suffixFunctioni,
-			final String interrogativeType) throws JAXBException {
+	public void createInterrogativeAnalysis(final String description, final String transliteratedLexiocnItem,
+			final String lexiconItem, final String lexiconPointer, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem, final String PGN,
+			final ENUM_SUFFIX_FUNCTION suffixFunctioni, final String interrogativeType) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -621,8 +587,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		InterrogativeType interrogative = null;
 
 		interrogative = objFactory.createInterrogativeType();
@@ -661,13 +626,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param hAttributei
 	 * @throws Exception
 	 */
-	public void createModalAnalysis(final String description,
-			final String gender, final String number, final String basePerson,
-			final String tense, final String transliteratedLexiocnItem,
-			final String lexiconItem, final String lexiconPointer,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem, final ENUM_HATTRIBUTE hAttributei)
-			throws Exception {
+	public void createModalAnalysis(final String description, final String gender, final String number,
+			final String basePerson, final String tense, final String transliteratedLexiocnItem,
+			final String lexiconItem, final String lexiconPointer, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem, final ENUM_HATTRIBUTE hAttributei) throws Exception {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -680,27 +642,23 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		ModalType modal = null;
 		try {
 			modal = objFactory.createModalType();
 		} catch (final JAXBException e2) {
-			System.err
-					.println("CreateCorpusXML:createModalAnalysis Exception while creating ModalType for hebWord="
-							+ hebWord);
+			System.err.println(
+					"CreateCorpusXML:createModalAnalysis Exception while creating ModalType for hebWord=" + hebWord);
 			e2.printStackTrace();
 		}
 		modal.setRegister(register);
 		modal.setSpelling(spelling);
-		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem,
-				hebWord);
+		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
 		if (gender.length() > 0 && genderi != ENUM_GENDER.UNSPECIFIED) {
 			modal.setGender(gender);
 		}
 
-		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem,
-				hebWord);
+		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem, hebWord);
 		if (number.length() > 0 && numberi != ENUM_NUMBER.UNSPECIFIED) {
 			modal.setNumber(number);
 		}
@@ -710,8 +668,7 @@ public class CreateCorpusXML implements Constants {
 			modal.setPerson(basePerson);
 		}
 
-		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem,
-				hebWord);
+		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem, hebWord);
 		if (tensei != ENUM_TENSE.UNSPECIFIED) {
 			modal.setTense(tense);
 		}
@@ -740,12 +697,9 @@ public class CreateCorpusXML implements Constants {
 	 * @param definiteness
 	 * @throws JAXBException
 	 */
-	public void createNegationAnalysis(final String description,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String definiteness)
-			throws JAXBException {
+	public void createNegationAnalysis(final String description, final String transliteratedLexiocnItem,
+			final String lexiconItem, final String lexiconPointer, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem, final String definiteness) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -758,8 +712,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		NegationType negation = null;
 
 		negation = objFactory.createNegationType();
@@ -798,15 +751,11 @@ public class CreateCorpusXML implements Constants {
 	 *            - person/gender/number in suffix
 	 * @throws JAXBException
 	 */
-	public void createNounAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni, final ENUM_STATUS constructi,
-			final int foreign, final String expansion, final String gender,
-			final String number, final String status,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String definiteness,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN)
-			throws JAXBException {
+	public void createNounAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			final ENUM_STATUS constructi, final int foreign, final String expansion, final String gender,
+			final String number, final String status, final String transliteratedLexiocnItem, final String lexiconItem,
+			final String lexiconPointer, final String definiteness, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem, final String PGN) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -819,8 +768,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		GenderNumberStatusDefinitenessType noun = null;
 
 		noun = objFactory.createGenderNumberStatusDefinitenessType();
@@ -875,8 +823,7 @@ public class CreateCorpusXML implements Constants {
 		base = objFactory.createBaseType();
 		NumberExpressionType numberExpression = null;
 		numberExpression = objFactory.createNumberExpressionType();
-		final ENUM_NUMBER_EXPRESSION typei = Str2Num
-				.str2NumNumberExpression(type);
+		final ENUM_NUMBER_EXPRESSION typei = Str2Num.str2NumNumberExpression(type);
 		if (typei != ENUM_NUMBER_EXPRESSION.TIMEGAMESCORE) {
 			numberExpression.setType(type);
 			base.setNumberExpression(numberExpression);
@@ -934,15 +881,12 @@ public class CreateCorpusXML implements Constants {
 	 *            - person/gender/number of suffix
 	 * @throws Exception
 	 */
-	public void createNumeralAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni, ENUM_HATTRIBUTE hAttributei,
-			ENUM_STATUS constructi, final String baseGender,
-			final String baseNumber, final String construct,
-			final String value, final String transliterated,
-			final String lexiconItem, final String lexiconPointer,
-			final String definiteness, final String baseNumeralType,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN) throws Exception {
+	public void createNumeralAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			ENUM_HATTRIBUTE hAttributei, ENUM_STATUS constructi, final String baseGender, final String baseNumber,
+			final String construct, final String value, final String transliterated, final String lexiconItem,
+			final String lexiconPointer, final String definiteness, final String baseNumeralType, final String hebWord,
+			final String register, final String spelling, final String dottedLexiconItem, final String PGN)
+					throws Exception {
 		int prefixesCounter = -1;
 		analysisCounter++;
 
@@ -967,12 +911,9 @@ public class CreateCorpusXML implements Constants {
 			}
 
 		}
-		final ENUM_NUMERAL_TYPE baseNumeralTypei = Str2Num.str2NumNumaralType(
-				baseNumeralType, lexiconItem, hebWord);
-		if (baseNumeralTypei != ENUM_NUMERAL_TYPE.LITERL_NUMBER
-				&& baseNumeralTypei != ENUM_NUMERAL_TYPE.GEMATRIA) {
-			setBase(base, transliterated, lexiconItem, lexiconPointer,
-					dottedLexiconItem);
+		final ENUM_NUMERAL_TYPE baseNumeralTypei = Str2Num.str2NumNumaralType(baseNumeralType, lexiconItem, hebWord);
+		if (baseNumeralTypei != ENUM_NUMERAL_TYPE.LITERL_NUMBER && baseNumeralTypei != ENUM_NUMERAL_TYPE.GEMATRIA) {
+			setBase(base, transliterated, lexiconItem, lexiconPointer, dottedLexiconItem);
 			if (constructi != ENUM_STATUS.CONSTRUCT_TRUE) {
 				numeral.setDefiniteness(definiteness);
 			}
@@ -1026,8 +967,7 @@ public class CreateCorpusXML implements Constants {
 		try {
 			paragraph = objFactory.createParagraphType();
 		} catch (final JAXBException e) {
-			System.err
-					.println("CreateCorpusXML:createParagraph Exception while creating paragraph");
+			System.err.println("CreateCorpusXML:createParagraph Exception while creating paragraph");
 			e.printStackTrace();
 		}
 		paragraph.setId(String.valueOf(paragraphCounter));
@@ -1064,16 +1004,12 @@ public class CreateCorpusXML implements Constants {
 	 *            - relevant in case of acronym
 	 * @throws JAXBException
 	 */
-	public void createParticipleAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni, final ENUM_STATUS constructi,
-			final ENUM_HATTRIBUTE hAttributei, final String gender,
-			final String number, final String status, final String person,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String root,
-			final String binyan, final String definiteness,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN,
-			String participleType, String expansion) throws JAXBException {
+	public void createParticipleAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			final ENUM_STATUS constructi, final ENUM_HATTRIBUTE hAttributei, final String gender, final String number,
+			final String status, final String person, final String transliteratedLexiocnItem, final String lexiconItem,
+			final String lexiconPointer, final String root, final String binyan, final String definiteness,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
+			final String PGN, String participleType, String expansion) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1086,8 +1022,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		ParticipleType participle = null;
 
 		participle = objFactory.createParticipleType();
@@ -1168,20 +1103,18 @@ public class CreateCorpusXML implements Constants {
 	 * @param participleType
 	 *            - adjective/noun/verb
 	 */
-	public void createPassiveParticipleAnalysis(final String description,
-			final ENUM_STATUS constructi, final ENUM_HATTRIBUTE hAttributei,
-			final String gender, final String number, final String status,
-			final String person, final String transliteratedLexiocnItem,
-			final String lexiconItem, final String lexiconPointer,
-			final String root, final String binyan, final String definiteness,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem, String participleType) {
+	public void createPassiveParticipleAnalysis(final String description, final ENUM_STATUS constructi,
+			final ENUM_HATTRIBUTE hAttributei, final String gender, final String number, final String status,
+			final String person, final String transliteratedLexiocnItem, final String lexiconItem,
+			final String lexiconPointer, final String root, final String binyan, final String definiteness,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
+			String participleType) {
 		analysisCounter++;
 		try {
 			analysis = objFactory.createAnalysisType();
 		} catch (final JAXBException e) {
-			System.err
-					.println("CreateCorpusXML:createPassiveParticipleAnalysis Exception while create analysis for hebWord="
+			System.err.println(
+					"CreateCorpusXML:createPassiveParticipleAnalysis Exception while create analysis for hebWord="
 							+ hebWord);
 			e.printStackTrace();
 		}
@@ -1199,14 +1132,13 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		ParticipleType participle = null;
 		try {
 			participle = objFactory.createParticipleType();
 		} catch (final JAXBException e2) {
-			System.err
-					.println("CreateCorpusXML:createPassiveParticipleAnalysis Exception while createPassiveParticipleType for hebWord="
+			System.err.println(
+					"CreateCorpusXML:createPassiveParticipleAnalysis Exception while createPassiveParticipleType for hebWord="
 							+ hebWord);
 			e2.printStackTrace();
 		}
@@ -1247,8 +1179,7 @@ public class CreateCorpusXML implements Constants {
 	 *            - relevant in caes of prefix existence
 	 * @param hAttributei
 	 */
-	public void createPrefixesAnalysis(final String description,
-			ENUM_HATTRIBUTE hAttributei) {
+	public void createPrefixesAnalysis(final String description, ENUM_HATTRIBUTE hAttributei) {
 		analysisCounter++;
 		try {
 			analysis = objFactory.createAnalysisType();
@@ -1264,8 +1195,8 @@ public class CreateCorpusXML implements Constants {
 			try {
 				pref = objFactory.createPrefixType();
 			} catch (final JAXBException e1) {
-				System.err
-						.println("CreateCorpusXML:createPrefixesAnalysis Exception while creating PrefixType for description="
+				System.err.println(
+						"CreateCorpusXML:createPrefixesAnalysis Exception while creating PrefixType for description="
 								+ description);
 				e1.printStackTrace();
 			}
@@ -1278,8 +1209,8 @@ public class CreateCorpusXML implements Constants {
 			try {
 				list = Translate.analyzeMixedHebEng(description);
 			} catch (final UnsupportedEncodingException e1) {
-				System.err
-						.println("CreateCorpusXML:createPrefixesAnalysis Exception while analyzeMixedHebEng for description="
+				System.err.println(
+						"CreateCorpusXML:createPrefixesAnalysis Exception while analyzeMixedHebEng for description="
 								+ description);
 				e1.printStackTrace();
 			}
@@ -1290,8 +1221,8 @@ public class CreateCorpusXML implements Constants {
 				try {
 					pref = objFactory.createPrefixType();
 				} catch (final JAXBException e2) {
-					System.err
-							.println("CreateCorpusXML:createPrefixesAnalysis Exception while createPrefixType for description="
+					System.err.println(
+							"CreateCorpusXML:createPrefixesAnalysis Exception while createPrefixType for description="
 									+ description);
 					e2.printStackTrace();
 				}
@@ -1310,8 +1241,8 @@ public class CreateCorpusXML implements Constants {
 				try {
 					pref = objFactory.createPrefixType();
 				} catch (final JAXBException e2) {
-					System.err
-							.println("CreateCorpusXML:createPrefixesAnalysis Exception while createPrefixType for description="
+					System.err.println(
+							"CreateCorpusXML:createPrefixesAnalysis Exception while createPrefixType for description="
 									+ description);
 					e2.printStackTrace();
 				}
@@ -1342,13 +1273,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param PGN
 	 * @throws JAXBException
 	 */
-	public void createPrepositionAnalysis(final String description,
-			final String expansion, ENUM_SUFFIX_FUNCTION suffixFunctioni,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN)
-			throws JAXBException {
+	public void createPrepositionAnalysis(final String description, final String expansion,
+			ENUM_SUFFIX_FUNCTION suffixFunctioni, final String transliteratedLexiocnItem, final String lexiconItem,
+			final String lexiconPointer, final String hebWord, final String register, final String spelling,
+			final String dottedLexiconItem, final String PGN) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1361,8 +1289,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		GenderNumberPersonType preposition = null;
 
 		preposition = objFactory.createGenderNumberPersonType();
@@ -1404,14 +1331,11 @@ public class CreateCorpusXML implements Constants {
 	 * @param PGN
 	 * @throws Exception
 	 */
-	public void createPronounAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni, ENUM_HATTRIBUTE hAttributei,
-			final String gender, final String number, final String person,
-			final String type, final String baseDefinitness,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN) throws Exception {
+	public void createPronounAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			ENUM_HATTRIBUTE hAttributei, final String gender, final String number, final String person,
+			final String type, final String baseDefinitness, final String transliteratedLexiocnItem,
+			final String lexiconItem, final String lexiconPointer, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem, final String PGN) throws Exception {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1424,26 +1348,22 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		PronounType pronoun = null;
 		try {
 			pronoun = objFactory.createPronounType();
 		} catch (final JAXBException e2) {
-			System.err
-					.println("CreateCorpusXML:createPronounAnalysis Exception while createPronounType for hebWord="
-							+ hebWord);
+			System.err.println(
+					"CreateCorpusXML:createPronounAnalysis Exception while createPronounType for hebWord=" + hebWord);
 			e2.printStackTrace();
 		}
 		pronoun.setRegister(register);
 		pronoun.setSpelling(spelling);
-		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem,
-				hebWord);
+		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
 		if (gender.length() > 0 && genderi != ENUM_GENDER.UNSPECIFIED) {
 			pronoun.setGender(gender);
 		}
-		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem,
-				hebWord);
+		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem, hebWord);
 		if (number.length() > 0 && numberi != ENUM_NUMBER.UNSPECIFIED) {
 			pronoun.setNumber(number);
 		}
@@ -1491,13 +1411,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param dottedLexiconItem
 	 * @throws Exception
 	 */
-	public void createProperNameAnalysis(final String description,
-			final String gender, final String number, final String type,
-			final String expansion, final String transliteratedLexiocnItem,
-			final String lexiconItem, final String lexiconPointer,
-			final String definiteness, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem) throws Exception {
+	public void createProperNameAnalysis(final String description, final String gender, final String number,
+			final String type, final String expansion, final String transliteratedLexiocnItem, final String lexiconItem,
+			final String lexiconPointer, final String definiteness, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem) throws Exception {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1511,38 +1428,32 @@ public class CreateCorpusXML implements Constants {
 			setPrefix(description);
 		}
 
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		ProperNameType properName = null;
 
 		properName = objFactory.createProperNameType();
 
-		final ENUM_REGISTER registeri = Str2Num.str2NumRegister(register,
-				lexiconItem, hebWord);
+		final ENUM_REGISTER registeri = Str2Num.str2NumRegister(register, lexiconItem, hebWord);
 		if (register.length() > 0 && registeri != ENUM_REGISTER.UNSPECIFIED) {
 			properName.setRegister(register);
 		}
-		final ENUM_SPELLING spellingi = Str2Num.str2NumSpelling(spelling,
-				lexiconItem, hebWord);
+		final ENUM_SPELLING spellingi = Str2Num.str2NumSpelling(spelling, lexiconItem, hebWord);
 		if (spelling.length() > 0 && spellingi != ENUM_SPELLING.UNSPECIFIED) {
 			properName.setSpelling(spelling);
 		}
 
-		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem,
-				hebWord);
+		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
 		if (gender.length() > 0 && genderi != ENUM_GENDER.UNSPECIFIED) {
 			properName.setGender(gender);
 		}
-		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem,
-				hebWord);
+		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem, hebWord);
 		if (number.length() > 0 && numberi != ENUM_NUMBER.UNSPECIFIED) {
 			properName.setNumber(number);
 		}
 		if (expansion.length() > 0) {
 			properName.setExpansion(expansion);
 		}
-		final ENUM_PROPERNAME_TYPE typei = Str2Num.str2NumBaseNamedEntityType(
-				type, lexiconItem, hebWord);
+		final ENUM_PROPERNAME_TYPE typei = Str2Num.str2NumBaseNamedEntityType(type, lexiconItem, hebWord);
 		if (type.length() > 0 && typei != ENUM_PROPERNAME_TYPE.UNSPECIFIED) {
 			properName.setType(type);
 		}
@@ -1560,8 +1471,7 @@ public class CreateCorpusXML implements Constants {
 	 * @param hebWord
 	 * @throws JAXBException
 	 */
-	public void createPunctuationAnalysis(final String hebWord)
-			throws JAXBException {
+	public void createPunctuationAnalysis(final String hebWord) throws JAXBException {
 		analysisCounter++;
 		analysis = objFactory.createAnalysisType();
 		analysis.setId(String.valueOf(analysisCounter));
@@ -1602,14 +1512,10 @@ public class CreateCorpusXML implements Constants {
 	 *            - person/gender/number of suffix
 	 * @throws JAXBException
 	 */
-	public void createQuantifierAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN,
-			final String status, final String hAttribute, final String type)
-			throws JAXBException {
+	public void createQuantifierAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni,
+			final String transliteratedLexiocnItem, final String lexiconItem, final String lexiconPointer,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
+			final String PGN, final String status, final String hAttribute, final String type) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1626,8 +1532,7 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		final char statusChar = status.charAt(0);
 		// unspecified
 		if (statusChar != 'u') {
@@ -1660,8 +1565,7 @@ public class CreateCorpusXML implements Constants {
 		try {
 			sentence = objFactory.createSentenceType();
 		} catch (final JAXBException e) {
-			System.err
-					.println("CreateCorpusXML:createSentence Exception while creating Sentence");
+			System.err.println("CreateCorpusXML:createSentence Exception while creating Sentence");
 			e.printStackTrace();
 		}
 		sentence.setId(String.valueOf(sentenceCounter));
@@ -1686,13 +1590,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param dottedLexiconItem
 	 * @throws Exception
 	 */
-	public void createTitleAnalysis(final String description,
-			final String gender, final String number,
-			final String definiteness, final String expansion,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem) throws Exception {
+	public void createTitleAnalysis(final String description, final String gender, final String number,
+			final String definiteness, final String expansion, final String transliteratedLexiocnItem,
+			final String lexiconItem, final String lexiconPointer, final String hebWord, final String register,
+			final String spelling, final String dottedLexiconItem) throws Exception {
 		analysisCounter++;
 		analysis = objFactory.createAnalysisType();
 		analysis.setId(String.valueOf(analysisCounter));
@@ -1705,15 +1606,12 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
-		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem,
-				hebWord);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
+		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
 		if (gender.length() > 0 && genderi != ENUM_GENDER.UNSPECIFIED) {
 			title.setGender(gender);
 		}
-		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem,
-				hebWord);
+		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem, hebWord);
 		if (number.length() > 0 && numberi != ENUM_NUMBER.UNSPECIFIED) {
 			title.setNumber(number);
 		}
@@ -1738,9 +1636,7 @@ public class CreateCorpusXML implements Constants {
 		try {
 			token = objFactory.createTokenType();
 		} catch (final JAXBException e) {
-			System.err
-					.println("CreateCorpusXML:createToken Exception while creating token="
-							+ surface);
+			System.err.println("CreateCorpusXML:createToken Exception while creating token=" + surface);
 			e.printStackTrace();
 		}
 		token.setSurface(surface);
@@ -1757,8 +1653,7 @@ public class CreateCorpusXML implements Constants {
 	 * @param transliterated
 	 * @throws JAXBException
 	 */
-	public void createUnknownAnalysis(final String hebWord,
-			final String transliterated) throws JAXBException {
+	public void createUnknownAnalysis(final String hebWord, final String transliterated) throws JAXBException {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1829,15 +1724,11 @@ public class CreateCorpusXML implements Constants {
 	 *            - relevant in case of acronym
 	 * @throws Exception
 	 */
-	public void createVerbAnalysis(final String description,
-			ENUM_SUFFIX_FUNCTION suffixFunctioni, final String binyan,
-			final String gender, final String number, final String person,
-			final String root, final String tense,
-			final String transliteratedLexiocnItem, final String lexiconItem,
-			final String lexiconPointer, final String hebWord,
-			final String register, final String spelling,
-			final String dottedLexiconItem, final String PGN,
-			final String expansion) throws Exception {
+	public void createVerbAnalysis(final String description, ENUM_SUFFIX_FUNCTION suffixFunctioni, final String binyan,
+			final String gender, final String number, final String person, final String root, final String tense,
+			final String transliteratedLexiocnItem, final String lexiconItem, final String lexiconPointer,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
+			final String PGN, final String expansion) throws Exception {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1850,22 +1741,19 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		VerbType verb = null;
 		try {
 			verb = objFactory.createVerbType();
 		} catch (final JAXBException e2) {
-			System.err
-					.println("CreateCorpusXML:createVerbAnalysis Exception while createVerbType analysis for hebWord="
-							+ hebWord);
+			System.err.println("CreateCorpusXML:createVerbAnalysis Exception while createVerbType analysis for hebWord="
+					+ hebWord);
 			e2.printStackTrace();
 		}
 		verb.setRegister(register);
 		verb.setSpelling(spelling);
 		verb.setBinyan(binyan);
-		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem,
-				hebWord);
+		final ENUM_TENSE tensei = Str2Num.str2NumTense(tense, lexiconItem, hebWord);
 		if (tense.length() > 0 && tensei != ENUM_TENSE.INFINITIVE) {
 			verb.setGender(gender);
 			verb.setNumber(number);
@@ -1915,12 +1803,10 @@ public class CreateCorpusXML implements Constants {
 	 * @param polarity
 	 * @throws Exception
 	 */
-	public void createWprefixAnalysis(final String gender, final String number,
-			final String description, final String transliteratedLexiocnItem,
-			final String lexiconItem, final String lexiconPointer,
-			final String hebWord, final String register, final String spelling,
-			final String dottedLexiconItem, final String definiteness,
-			final String polarity) throws Exception {
+	public void createWprefixAnalysis(final String gender, final String number, final String description,
+			final String transliteratedLexiocnItem, final String lexiconItem, final String lexiconPointer,
+			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
+			final String definiteness, final String polarity) throws Exception {
 		analysisCounter++;
 
 		analysis = objFactory.createAnalysisType();
@@ -1933,24 +1819,21 @@ public class CreateCorpusXML implements Constants {
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer,
-				dottedLexiconItem);
+		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		WprefixType wprefix = null;
 		try {
 			wprefix = objFactory.createWprefixType();
 		} catch (final JAXBException e2) {
-			System.err
-					.println("CreateCorpusXML:createNegationAnalysis Exception while createNegationType analysis for hebWord="
+			System.err.println(
+					"CreateCorpusXML:createNegationAnalysis Exception while createNegationType analysis for hebWord="
 							+ hebWord);
 			e2.printStackTrace();
 		}
-		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem,
-				hebWord);
+		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
 		if (gender.length() > 0 && genderi != ENUM_GENDER.UNSPECIFIED) {
 			wprefix.setGender(gender);
 		}
-		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem,
-				hebWord);
+		final ENUM_NUMBER numberi = Str2Num.str2NumNumber(number, lexiconItem, hebWord);
 		if (number.length() > 0 && numberi != ENUM_NUMBER.UNSPECIFIED) {
 			wprefix.setNumber(number);
 		}
@@ -1973,16 +1856,14 @@ public class CreateCorpusXML implements Constants {
 		try {
 			jc = JAXBContext.newInstance("mila.generated");
 		} catch (final JAXBException e) {
-			System.err
-					.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");
+			System.err.println("CreateCorpusXML:createXMLdOC Exception while creating JAXBContext");
 			e.printStackTrace();
 		}
 		objFactory = new ObjectFactory();
 		try {
 			corpus = objFactory.createCorpus();
 		} catch (final JAXBException e1) {
-			System.err
-					.println("CreateCorpusXML:createXMLdOC Exception while creating corpus");
+			System.err.println("CreateCorpusXML:createXMLdOC Exception while creating corpus");
 			e1.printStackTrace();
 		}
 		corpus.setName("Analysis Results");
@@ -1995,8 +1876,7 @@ public class CreateCorpusXML implements Constants {
 		try {
 			validator = jc.createValidator();
 		} catch (final JAXBException e2) {
-			System.err
-					.println("CreateCorpusXML:createXMLdOC Exception while creating Validator");
+			System.err.println("CreateCorpusXML:createXMLdOC Exception while creating Validator");
 			e2.printStackTrace();
 		}
 	}
@@ -2052,8 +1932,8 @@ public class CreateCorpusXML implements Constants {
 			try {
 				pOut = new OutputStreamWriter(System.out, "UTF8");
 			} catch (final UnsupportedEncodingException e) {
-				System.err
-						.println("CreateCorpusXML:printDoc UnsupportedEncodingException while create OutputStreamWriter");
+				System.err.println(
+						"CreateCorpusXML:printDoc UnsupportedEncodingException while create OutputStreamWriter");
 				e.printStackTrace();
 			}
 		} else {
@@ -2061,15 +1941,14 @@ public class CreateCorpusXML implements Constants {
 			try {
 				out = new FileOutputStream(outputFile);
 			} catch (final FileNotFoundException e1) {
-				System.err
-						.println("CreateCorpusXML:printDoc FileNotFoundException while create OutputStreamWriter");
+				System.err.println("CreateCorpusXML:printDoc FileNotFoundException while create OutputStreamWriter");
 				e1.printStackTrace();
 			}
 			try {
 				pOut = new OutputStreamWriter(out, "UTF8");
 			} catch (final UnsupportedEncodingException e2) {
-				System.err
-						.println("CreateCorpusXML:printDoc UnsupportedEncodingException while create OutputStreamWriter");
+				System.err.println(
+						"CreateCorpusXML:printDoc UnsupportedEncodingException while create OutputStreamWriter");
 				e2.printStackTrace();
 			}
 		}
@@ -2077,22 +1956,19 @@ public class CreateCorpusXML implements Constants {
 		try {
 			m = jc.createMarshaller();
 		} catch (final JAXBException e1) {
-			System.err
-					.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
 			e1.printStackTrace();
 		}
 		try {
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
 		} catch (final PropertyException e2) {
-			System.err
-					.println("CreateCorpusXML:printDoc PropertyException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc PropertyException while create Marshaller");
 			e2.printStackTrace();
 		}
 		try {
 			m.marshal(corpus, pOut);
 		} catch (final JAXBException e3) {
-			System.err
-					.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
 			e3.printStackTrace();
 		}
 		try {
@@ -2101,8 +1977,7 @@ public class CreateCorpusXML implements Constants {
 			// }
 			pOut.close();
 		} catch (final IOException e4) {
-			System.err
-					.println("CreateCorpusXML:printDoc IOException while closeing pOut");
+			System.err.println("CreateCorpusXML:printDoc IOException while closeing pOut");
 			e4.printStackTrace();
 		}
 	}
@@ -2117,8 +1992,7 @@ public class CreateCorpusXML implements Constants {
 			// System.err.println("printDoc");
 			pOut = new OutputStreamWriter(outputStream, "UTF-8");
 		} catch (final UnsupportedEncodingException e) {
-			System.err
-					.println("CreateCorpusXML:printDoc UnsupportedEncodingException while create OutputStreamWriter");
+			System.err.println("CreateCorpusXML:printDoc UnsupportedEncodingException while create OutputStreamWriter");
 			e.printStackTrace();
 		}
 		// pOut = new OutputStreamWriter(outputStream);
@@ -2126,22 +2000,19 @@ public class CreateCorpusXML implements Constants {
 		try {
 			m = jc.createMarshaller();
 		} catch (final JAXBException e1) {
-			System.err
-					.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
 			e1.printStackTrace();
 		}
 		try {
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
 		} catch (final PropertyException e2) {
-			System.err
-					.println("CreateCorpusXML:printDoc PropertyException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc PropertyException while create Marshaller");
 			e2.printStackTrace();
 		}
 		try {
 			m.marshal(corpus, outputStream);
 		} catch (final JAXBException e3) {
-			System.err
-					.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
 			e3.printStackTrace();
 		}
 		try {
@@ -2151,8 +2022,7 @@ public class CreateCorpusXML implements Constants {
 			// }
 			// pOut.close();
 		} catch (final JAXBException e4) {
-			System.err
-					.println("CreateCorpusXML:printDoc JAXBException while create Validator");
+			System.err.println("CreateCorpusXML:printDoc JAXBException while create Validator");
 			e4.printStackTrace();
 		}
 
@@ -2171,22 +2041,19 @@ public class CreateCorpusXML implements Constants {
 		try {
 			m = jc.createMarshaller();
 		} catch (final JAXBException e1) {
-			System.err
-					.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
 			e1.printStackTrace();
 		}
 		try {
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
 		} catch (final PropertyException e2) {
-			System.err
-					.println("CreateCorpusXML:printDoc PropertyException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc PropertyException while create Marshaller");
 			e2.printStackTrace();
 		}
 		try {
 			m.marshal(corpus, pw);
 		} catch (final JAXBException e3) {
-			System.err
-					.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
+			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
 			e3.printStackTrace();
 		}
 	}
@@ -2205,8 +2072,8 @@ public class CreateCorpusXML implements Constants {
 	 * @param dottedLexiconItem
 	 *            - the dotted form of the lexicon form
 	 */
-	private void setBase(BaseType base, String transliteratedLexiocnItem,
-			String lexiconItem, String lexiconPointer, String dottedLexiconItem) {
+	private void setBase(BaseType base, String transliteratedLexiocnItem, String lexiconItem, String lexiconPointer,
+			String dottedLexiconItem) {
 		base.setTransliteratedLexiconItem(transliteratedLexiocnItem);
 		base.setLexiconItem(lexiconItem);
 		base.setLexiconPointer(lexiconPointer);
@@ -2233,9 +2100,8 @@ public class CreateCorpusXML implements Constants {
 		try {
 			list = Translate.analyzeMixedHebEng(description);
 		} catch (final UnsupportedEncodingException e) {
-			System.err
-					.println("CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description="
-							+ description);
+			System.err.println(
+					"CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description=" + description);
 			e.printStackTrace();
 		}
 		final int size = list.size();
@@ -2248,9 +2114,8 @@ public class CreateCorpusXML implements Constants {
 			try {
 				pref = objFactory.createPrefixType();
 			} catch (final JAXBException e1) {
-				System.err
-						.println("CreateCorpusXML:setPrefix Exception while createPrefixType for description="
-								+ description);
+				System.err.println(
+						"CreateCorpusXML:setPrefix Exception while createPrefixType for description=" + description);
 				e1.printStackTrace();
 			}
 			pref.setId(String.valueOf(prefixesCounter + 1));

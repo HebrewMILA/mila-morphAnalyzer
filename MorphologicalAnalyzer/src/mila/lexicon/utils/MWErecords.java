@@ -37,11 +37,11 @@ public class MWErecords implements Serializable {
 	public void put(String key, MWErecord mwRecord) {
 		// System.out.println("(F) MWinflections:put()");
 		if (mwRecord == null) {
-			System.out
-					.println("(F) MWinflections:put(): Bad idea! You tried to insert a null object into a Chain!");
+			System.out.println("(F) MWinflections:put(): Bad idea! You tried to insert a null object into a Chain!");
 			System.exit(1);
 			// throw new
-			// RuntimeException("Bad idea! You tried to insert a null object into a Chain!");
+			// RuntimeException("Bad idea! You tried to insert a null object
+			// into a Chain!");
 		}
 
 		// System.out.println("key=" + key);
@@ -54,7 +54,8 @@ public class MWErecords implements Serializable {
 			map.put(key, chain);
 			// Adding an element to an already existing chain
 		} else { // if entry already exist
-					// System.out.println("Adding an element to an already existing chain");
+					// System.out.println("Adding an element to an already
+					// existing chain");
 			ArrayList<MWErecord> existingChain = new ArrayList<MWErecord>();
 			existingChain = (ArrayList<MWErecord>) map.get(key);
 			// System.out.println("existingChain size="+ existingChain.size());
@@ -68,8 +69,7 @@ public class MWErecords implements Serializable {
 
 	public void sput(String key, ArrayList<MWErecord> mwe1RecordChain) {
 		if (mwe1RecordChain == null)
-			throw new RuntimeException(
-					"Bad idea! You tried to insert a null object into a Chain!");
+			throw new RuntimeException("Bad idea! You tried to insert a null object into a Chain!");
 		map.put(key, mwe1RecordChain);
 	}
 }

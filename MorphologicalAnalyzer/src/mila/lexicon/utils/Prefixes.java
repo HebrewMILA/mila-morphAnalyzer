@@ -30,8 +30,7 @@ public class Prefixes {
 
 	public void put(String key, String p) {
 		if (p == null)
-			throw new RuntimeException("Bad idea! You tried to insert "
-					+ "a null object into a Chain!");
+			throw new RuntimeException("Bad idea! You tried to insert " + "a null object into a Chain!");
 		if (!map.containsKey(key)) {
 			// System.out.println("The first element on the chain");
 			ArrayList<String> chain = new ArrayList<String>();
@@ -39,7 +38,8 @@ public class Prefixes {
 			// System.out.println("chain size=" + chain.size());
 			map.put(key, chain);
 		} else {
-			// System.out.println("Adding an element to an already existing chain");
+			// System.out.println("Adding an element to an already existing
+			// chain");
 			ArrayList<String> existingChain = new ArrayList<String>();
 			existingChain = (ArrayList<String>) map.get(key);
 			// System.out.println("existingChain size="+ existingChain.size());
@@ -51,8 +51,7 @@ public class Prefixes {
 
 	public void sput(String key, ArrayList<String> prefixRecordChain) {
 		if (prefixRecordChain == null)
-			throw new RuntimeException("Bad idea! You tried to insert "
-					+ "a null object into a Chain!");
+			throw new RuntimeException("Bad idea! You tried to insert " + "a null object into a Chain!");
 		map.put(key, prefixRecordChain);
 	}
 

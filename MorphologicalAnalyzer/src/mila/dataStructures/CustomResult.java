@@ -104,11 +104,9 @@ public class CustomResult {
 	}
 
 	public void Print() {
-		System.out.println(spelling + ", " + register + ", " + gender + ", "
-				+ number + ", " + definiteness + ", " + mwTransliterated + ", "
-				+ mwUndotted + ", " + lexiconId + ", " + ", "
-				+ undottedLexiconItem + ", " + PGN + ", " + dottedLexiconItem
-				+ ", " + transliteratedLexiconItem + ", " + pos + ", " + type);
+		System.out.println(spelling + ", " + register + ", " + gender + ", " + number + ", " + definiteness + ", "
+				+ mwTransliterated + ", " + mwUndotted + ", " + lexiconId + ", " + ", " + undottedLexiconItem + ", "
+				+ PGN + ", " + dottedLexiconItem + ", " + transliteratedLexiconItem + ", " + pos + ", " + type);
 	}
 
 	/*

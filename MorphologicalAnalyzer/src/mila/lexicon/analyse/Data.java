@@ -44,7 +44,9 @@ public class Data implements Constants {
 	/** path to the gimatria data file */
 	public static String gimatriaFile = "";
 
-	/** A flag to indicate whether we work on data files mode or database mode */
+	/**
+	 * A flag to indicate whether we work on data files mode or database mode
+	 */
 	public static boolean webFlag = true;
 
 	/**
@@ -90,7 +92,8 @@ public class Data implements Constants {
 		PrefixRecord pr = new PrefixRecord();
 		// gete from databse
 		if (webFlag) {
-//			System.out.println("(F) Data:analyzePrefixList() webFlag = TRUE ");
+			// System.out.println("(F) Data:analyzePrefixList() webFlag = TRUE
+			// ");
 			pr = (PrefixRecord) prefixesList.get(j);
 		}
 		// get from files
@@ -238,10 +241,10 @@ public class Data implements Constants {
 			field = st.nextToken();
 			if (field.equals("-")) {
 				pr.setConjunctionTag(false);
-			}
-			else {
+			} else {
 				pr.setConjunctionTag(true);
-			// System.out.println("PrepositionTag =" + pr.isPrepositionTag());
+				// System.out.println("PrepositionTag =" +
+				// pr.isPrepositionTag());
 			}
 		}
 		return pr;
@@ -259,8 +262,7 @@ public class Data implements Constants {
 	 * @return - populated data structure (record)
 	 * @throws Exception
 	 */
-	public static DBInflectionsRecord extractDataFileData(
-			ArrayList<String> inflectionsList, int i) throws Exception {
+	public static DBInflectionsRecord extractDataFileData(ArrayList<String> inflectionsList, int i) throws Exception {
 		DBInflectionsRecord dbInflectionsRec = new DBInflectionsRecord();
 		StringTokenizer st = null;
 		st = new StringTokenizer(inflectionsList.get(i), "|");
@@ -283,22 +285,19 @@ public class Data implements Constants {
 
 		// /////////////////////////////////////////////////////////////////////////
 		String codeRegister = st.nextToken();
-		String register = Num2Str.strNum2StrRegister(codeRegister, "",
-				transliterated);
+		String register = Num2Str.strNum2StrRegister(codeRegister, "", transliterated);
 		dbInflectionsRec.setRegister(register);
 		// /////////////////////////////////////////////////////////////////////
 
 		// //////////////////////////////////////////////////////////
 		String codeSpelling = st.nextToken();
-		String spelling = Num2Str.strNum2StrSpelling(codeSpelling, "",
-				transliterated);
+		String spelling = Num2Str.strNum2StrSpelling(codeSpelling, "", transliterated);
 		dbInflectionsRec.setSpelling(spelling);
 		// //////////////////////////////////////////////////////////
 
 		// /////////////////////////////////////////////////
 		String codeStatus = st.nextToken();
-		String strStatus = Num2Str.strNum2StrStatus(codeStatus,
-				lexiconItemTransliterated, transliterated);
+		String strStatus = Num2Str.strNum2StrStatus(codeStatus, lexiconItemTransliterated, transliterated);
 		dbInflectionsRec.setStatus(strStatus);
 		// ////////////////////////////////////////////////
 
@@ -311,16 +310,14 @@ public class Data implements Constants {
 
 		// /////////////////////////////////////////////////
 		String codeBinyan = st.nextToken();
-		String binyan = Num2Str.strNum2StrBinyan(codeBinyan,
-				lexiconItemTransliterated, transliterated);
+		String binyan = Num2Str.strNum2StrBinyan(codeBinyan, lexiconItemTransliterated, transliterated);
 		dbInflectionsRec.setBinyan(binyan);
 		// System.out.println(binyan);
 		// /////////////////////////////////////////////////
 
 		// //////////////////////////////////////////////////
 		String codeTense = st.nextToken();
-		String tense = Num2Str.strNum2StrTense(codeTense,
-				lexiconItemTransliterated, transliterated);
+		String tense = Num2Str.strNum2StrTense(codeTense, lexiconItemTransliterated, transliterated);
 		dbInflectionsRec.setTense(tense);
 		// System.out.println(tense);
 		// //////////////////////////////////////////////////
@@ -337,8 +334,7 @@ public class Data implements Constants {
 
 		// //////////////////////////////////////////////////////
 		String codeHAttribute = st.nextToken();
-		String hAttribute = Num2Str.strNum2StrhAttribute(codeHAttribute,
-				lexiconItemTransliterated, transliterated);
+		String hAttribute = Num2Str.strNum2StrhAttribute(codeHAttribute, lexiconItemTransliterated, transliterated);
 		dbInflectionsRec.setHAttribute(hAttribute);
 		// ////////////////////////////////////////////////////
 
@@ -352,8 +348,8 @@ public class Data implements Constants {
 
 		// /////////////////////////////////////////////////
 		String codeSuffixFunction = st.nextToken();
-		String suffixFunction = Num2Str.strNum2StrSuffixFunction(
-				codeSuffixFunction, lexiconItemTransliterated, transliterated);
+		String suffixFunction = Num2Str.strNum2StrSuffixFunction(codeSuffixFunction, lexiconItemTransliterated,
+				transliterated);
 		dbInflectionsRec.setSuffixFunction(suffixFunction);
 		// ////////////////////////////////////////////////
 
@@ -402,7 +398,7 @@ public class Data implements Constants {
 		int val = 0;
 		// get from databse
 		if (webFlag) {
-//			System.out.println("(F) Data:getGimatrias() webFlag = TRUE ");
+			// System.out.println("(F) Data:getGimatrias() webFlag = TRUE ");
 			val = mila.lexicon.dbUtils.Gimatria.get(key);
 		} else {// get from lists
 			val = gimatrias.get(key);
@@ -419,8 +415,7 @@ public class Data implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	public static ArrayList<DBInflectionsRecord> getInflections(final String key)
-			throws Exception {
+	public static ArrayList<DBInflectionsRecord> getInflections(final String key) throws Exception {
 		ArrayList<DBInflectionsRecord> inflectionsList = new ArrayList<DBInflectionsRecord>();
 		ArrayList<String> dataFileInflectionsList = new ArrayList<String>();
 		// get from database
@@ -432,14 +427,12 @@ public class Data implements Constants {
 			dataFileInflectionsList = inflections.get(key);
 			DBInflectionsRecord dbInflectionsRec = null;
 			if (dataFileInflectionsList != null) {
-				int dataFileInflectionsListSize = dataFileInflectionsList
-						.size();
+				int dataFileInflectionsListSize = dataFileInflectionsList.size();
 
 				for (int dataFileInflectionsListIndex = 0; dataFileInflectionsListIndex < dataFileInflectionsListSize; dataFileInflectionsListIndex++) {
-					dbInflectionsRec = extractDataFileData(
-							dataFileInflectionsList,
-							dataFileInflectionsListIndex);
-					// System.out.println("(F) getInflections() root = "+dbInflectionsRec.getRoot());
+					dbInflectionsRec = extractDataFileData(dataFileInflectionsList, dataFileInflectionsListIndex);
+					// System.out.println("(F) getInflections() root =
+					// "+dbInflectionsRec.getRoot());
 					inflectionsList.add(dbInflectionsRec);
 				}
 			}
@@ -464,7 +457,7 @@ public class Data implements Constants {
 		int size = 0;
 		// get from database
 		if (webFlag) {
-//			System.out.println("(F) Data:getPrefixes() webFlag = TRUE ");
+			// System.out.println("(F) Data:getPrefixes() webFlag = TRUE ");
 			mila.lexicon.dbUtils.Prefixes pref = new mila.lexicon.dbUtils.Prefixes();
 			prefixesList = pref.get(key);
 			// get from lists
@@ -487,8 +480,7 @@ public class Data implements Constants {
 		// get from lists
 
 		if (!webFlag && inflections == null) {
-			System.out
-					.println("loading data to memory...(this may take a few minutes)");
+			System.out.println("loading data to memory...(this may take a few minutes)");
 
 			// load to hashmap inflections file
 
@@ -504,17 +496,17 @@ public class Data implements Constants {
 			System.out.print("(F) loading dmwe2File...");
 			mwe2 = Load2memory.LoadMweRecords(dmwe2File, 2);
 			System.out.println("OK");
-			// System.out.println("(F) data:init()  mwe2 was loaded size = " +
+			// System.out.println("(F) data:init() mwe2 was loaded size = " +
 			// mwe2.GetSize());
 			System.out.print("(F) loading dmwe3File...");
 			mwe3 = Load2memory.LoadMweRecords(dmwe3File, 3);
 			System.out.println("OK");
-			// System.out.println("(F) data:init()  mwe3 was loaded size = " +
+			// System.out.println("(F) data:init() mwe3 was loaded size = " +
 			// mwe3.GetSize());
 			System.out.print("(F) loading dmwe4File...");
 			mwe4 = Load2memory.LoadMwe4Records(dmwe4File);
 			System.out.println("OK");
-			// System.out.println("(F) data:init()  mwe4 was loaded size = " +
+			// System.out.println("(F) data:init() mwe4 was loaded size = " +
 			// mwe4.GetSize());
 
 			// System.out.println("End Loading Inflections file ");
@@ -560,38 +552,32 @@ public class Data implements Constants {
 	 * @return
 	 * @throws Exception
 	 */
-	public static InflectedRecordNum Str2NumBeforeValidation(
-			final DBInflectionsRecord dbInfRec, final String word)
+	public static InflectedRecordNum Str2NumBeforeValidation(final DBInflectionsRecord dbInfRec, final String word)
 			throws Exception {
 		// get from the database
 
 		InflectedRecordNum infRecNum = new InflectedRecordNum();
 
-		String transliteratedLexiconItem = dbInfRec
-				.getBaseTransliteratedLItem();
+		String transliteratedLexiconItem = dbInfRec.getBaseTransliteratedLItem();
 		infRecNum.setTransliteratedLexiconItem(transliteratedLexiconItem);
 
 		String construct = dbInfRec.getStatus();
-		ENUM_STATUS constructi = Str2Num.str2NumConstruct(construct,
-				transliteratedLexiconItem, word);
+		ENUM_STATUS constructi = Str2Num.str2NumConstruct(construct, transliteratedLexiconItem, word);
 		infRecNum.setStatus(constructi);
 
 		String hAttribute = dbInfRec.getHAttribute();
-		ENUM_HATTRIBUTE hAttributei = Str2Num.str2NumHAttribute(hAttribute,
-				transliteratedLexiconItem, word);
+		ENUM_HATTRIBUTE hAttributei = Str2Num.str2NumHAttribute(hAttribute, transliteratedLexiconItem, word);
 		infRecNum.setHAttribute(hAttributei);
 
 		String suffixFunction = dbInfRec.getSuffixFunction();
-		ENUM_SUFFIX_FUNCTION suffixFunctioni = Str2Num.str2NumSuffixFunction(
-				suffixFunction, transliteratedLexiconItem, word);
+		ENUM_SUFFIX_FUNCTION suffixFunctioni = Str2Num.str2NumSuffixFunction(suffixFunction, transliteratedLexiconItem,
+				word);
 		infRecNum.setSuffixFunction(suffixFunctioni);
 
 		String pos = dbInfRec.getBasePos();
-		ENUM_POS posi = Str2Num
-				.str2NumPos(pos, transliteratedLexiconItem, word);
+		ENUM_POS posi = Str2Num.str2NumPos(pos, transliteratedLexiconItem, word);
 		infRecNum.setPos(posi);
-		ENUM_OUTPUT_PATTERN outputPatterni = Str2Num.str2NumOutputPattern(pos,
-				transliteratedLexiconItem, word);
+		ENUM_OUTPUT_PATTERN outputPatterni = Str2Num.str2NumOutputPattern(pos, transliteratedLexiconItem, word);
 		infRecNum.setOutputPattern(outputPatterni);
 
 		char prefixPerEntry = dbInfRec.getPrefixPerEntry();
@@ -599,36 +585,29 @@ public class Data implements Constants {
 
 		// tense and binyan are relevant only for verb, participle,
 		// passiveParticiple, independentInfinitive
-		if (posi == ENUM_POS.VERB && word.indexOf('"') == -1
-				|| posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1
-				|| posi == ENUM_POS.PASSIVEPARTICIPLE
-				|| posi == ENUM_POS.INDEPENDENTINFINITIVE) {
+		if (posi == ENUM_POS.VERB && word.indexOf('"') == -1 || posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1
+				|| posi == ENUM_POS.PASSIVEPARTICIPLE || posi == ENUM_POS.INDEPENDENTINFINITIVE) {
 			String binyan = dbInfRec.getBinyan();
-			ENUM_BINYAN binyani = Str2Num.str2NumBinyan(binyan,
-					transliteratedLexiconItem, word);
+			ENUM_BINYAN binyani = Str2Num.str2NumBinyan(binyan, transliteratedLexiconItem, word);
 			infRecNum.setBinyan(binyani);
 
 			String tense = dbInfRec.getTense();
-			ENUM_TENSE tensei = Str2Num.str2NumTense(tense,
-					transliteratedLexiconItem, word);
+			ENUM_TENSE tensei = Str2Num.str2NumTense(tense, transliteratedLexiconItem, word);
 			infRecNum.setTense(tensei);
 		}
-		if (posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1
-				|| posi == ENUM_POS.PASSIVEPARTICIPLE) {
+		if (posi == ENUM_POS.PARTICIPLE && word.indexOf('"') == -1 || posi == ENUM_POS.PASSIVEPARTICIPLE) {
 			String participleType = dbInfRec.getType();
-			int participleTypei = Str2Num.str2NumStrParticipleType(
-					participleType, transliteratedLexiconItem, word);
+			int participleTypei = Str2Num.str2NumStrParticipleType(participleType, transliteratedLexiconItem, word);
 			infRecNum.setType(participleTypei);
 		}
 		if (posi == ENUM_POS.QUANTIFIER) {
 			String quantifierType = dbInfRec.getType();
-			int quantifierTypei = Str2Num.str2NumStrQuantifierType(
-					quantifierType, transliteratedLexiconItem, word);
+			int quantifierTypei = Str2Num.str2NumStrQuantifierType(quantifierType, transliteratedLexiconItem, word);
 			infRecNum.setType(quantifierTypei);
 		} else if (posi == ENUM_POS.INTERROGATIVE) {
 			String interrogativeType = dbInfRec.getType();
-			int interrogativei = Str2Num.str2NumStrInterrogativeType(
-					interrogativeType, transliteratedLexiconItem, word);
+			int interrogativei = Str2Num.str2NumStrInterrogativeType(interrogativeType, transliteratedLexiconItem,
+					word);
 			infRecNum.setType(interrogativei);
 		}
 
@@ -643,8 +622,7 @@ public class Data implements Constants {
 	 *            - the transliterated form of the inflected item
 	 * @return an arrayList of all the analysis conform to the key
 	 */
-	private static ArrayList<DBInflectionsRecord> webGetInflections(
-			final String key) {
+	private static ArrayList<DBInflectionsRecord> webGetInflections(final String key) {
 		ArrayList<DBInflectionsRecord> inflectionsList = new ArrayList<DBInflectionsRecord>();
 
 		mila.lexicon.dbUtils.Inflections inf = new mila.lexicon.dbUtils.Inflections();
@@ -677,10 +655,8 @@ public class Data implements Constants {
 	 *            - a flag to indicate whether it is working in data file mode
 	 *            or database mode
 	 */
-	public Data(String dinflectionsFile, String dprefixesFile,
-			String gimatriaFile, String dmwinflections, String dmwe1File,
-			String dmwe2File, String dmwe3File, String dmwe4File,
-			boolean webFlag) {
+	public Data(String dinflectionsFile, String dprefixesFile, String gimatriaFile, String dmwinflections,
+			String dmwe1File, String dmwe2File, String dmwe3File, String dmwe4File, boolean webFlag) {
 		Data.dinflectionsFile = dinflectionsFile;
 		Data.dprefixesFile = dprefixesFile;
 		Data.gimatriaFile = gimatriaFile;
@@ -727,9 +703,7 @@ public class Data implements Constants {
 	private long printTimesHandling(long startTime) {
 		long afterLoadTime = System.currentTimeMillis();
 		long load2MemoryElapsedTime = afterLoadTime - startTime;
-		System.out
-				.println("Finshed loading data files into memory, Elapsed time = "
-						+ load2MemoryElapsedTime + " ms");
+		System.out.println("Finshed loading data files into memory, Elapsed time = " + load2MemoryElapsedTime + " ms");
 		return afterLoadTime;
 	}
 

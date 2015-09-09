@@ -45,9 +45,13 @@ public class DBInflectionsRecord {
 	 * The binyan of the inflected form - relevant only for verb, participle etc
 	 */
 	String binyan = "";
-	/** The tense of the inflected form - relevant only for verb, participle etc */
+	/**
+	 * The tense of the inflected form - relevant only for verb, participle etc
+	 */
 	String tense = "";
-	/** The root of the inflected form - relevant only for verb, participle etc */
+	/**
+	 * The root of the inflected form - relevant only for verb, participle etc
+	 */
 	String root = "";
 	/** The number of the inflected form */
 	String baseNumber = "";
@@ -78,7 +82,9 @@ public class DBInflectionsRecord {
 	 * example yer-> 10
 	 */
 	String value = "";
-	/** The mood is relevant only for participle - in case of passive it is true */
+	/**
+	 * The mood is relevant only for participle - in case of passive it is true
+	 */
 	String mood = "";
 	/**
 	 * The prefix per entry is relevant only for pronouns - it enables to define

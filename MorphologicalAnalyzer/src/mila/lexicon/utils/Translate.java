@@ -21,8 +21,7 @@ public class Translate {
 	private static HashMap<String, String> hebToEng;
 	private static HashMap<String, String> engToHeb;
 
-	public static List<PrefixRec> analyzeMixedHebEng(String inStr)
-			throws UnsupportedEncodingException {
+	public static List<PrefixRec> analyzeMixedHebEng(String inStr) throws UnsupportedEncodingException {
 		PrefixRec prefixRec = null;
 		StringBuffer result = null;
 		StringBuffer tempStr = null;
@@ -35,8 +34,7 @@ public class Translate {
 			// get function
 			result = new StringBuffer();
 			prefixRec = new PrefixRec();
-			for (int j = i + 2; (tempChar = inStr.charAt(j)) != ']'
-					&& j < len - 1; j++) {
+			for (int j = i + 2; (tempChar = inStr.charAt(j)) != ']' && j < len - 1; j++) {
 				result.append(tempChar);
 				i++;
 			}
@@ -65,34 +63,28 @@ public class Translate {
 
 		for (int i = 0; i < engString.length(); i++) {
 
-			hebString = Translate.getEngToHeb(String.valueOf(engString
-					.charAt(i)));
+			hebString = Translate.getEngToHeb(String.valueOf(engString.charAt(i)));
 			try {
 				encodedHeb = URLDecoder.decode(hebString, "UTF-8");
-				if (((encodedHeb.equals("ך") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ך") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ך") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ך") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "כ";
-				if (((encodedHeb.equals("ם") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ם") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ם") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ם") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "מ";
-				if (((encodedHeb.equals("ן") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ן") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ן") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ן") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "נ";
-				if (((encodedHeb.equals("ף") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ף") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ף") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ף") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "פ";
-				if (((encodedHeb.equals("ץ") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ץ") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ץ") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ץ") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "צ";
 			} catch (Exception e) {
 			}
@@ -264,11 +256,9 @@ public class Translate {
 					e.printStackTrace();
 				}
 				result.append(encodedStr);
-			} else if ((curChar >= 'a' && curChar <= 'z')
-					|| ((curChar >= 'A' && curChar <= 'Z'))) {
+			} else if ((curChar >= 'a' && curChar <= 'z') || ((curChar >= 'A' && curChar <= 'Z'))) {
 				result.append(String.valueOf(curChar));
-			} else if ((curChar == '[') || (curChar == ']') || (curChar == '+')
-					|| (curChar == '/')) {
+			} else if ((curChar == '[') || (curChar == ']') || (curChar == '+') || (curChar == '/')) {
 				result.append(String.valueOf(curChar));
 			}
 		}

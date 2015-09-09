@@ -28,8 +28,7 @@ public class MWEinflections {
 
 	public void put(String key, String g) {
 		if (g == null)
-			throw new RuntimeException(
-					"Bad idea! You tried to insert a null object into a Chain!");
+			throw new RuntimeException("Bad idea! You tried to insert a null object into a Chain!");
 		map.put(key, g);
 	}
 

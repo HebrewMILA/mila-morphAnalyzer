@@ -47,10 +47,12 @@ public class XMLTokenizer1 implements Constants {
 
 	final static int MAX_EMPTY_LINES = 100;
 	final static private Set<String> kitzurim = new HashSet<>();
-	static{
+
+	static {
 		populateKitzurim();
 	}
-	static private void populateKitzurim(){
+
+	static private void populateKitzurim() {
 		kitzurim.add("וכד'");
 		kitzurim.add("וכדו'");
 		kitzurim.add("מס'");
@@ -71,6 +73,7 @@ public class XMLTokenizer1 implements Constants {
 		kitzurim.add("להת'");
 		kitzurim.add("י-ם");
 	}
+
 	public static void main(String[] args) {
 		int argc = args.length;
 		XMLTokenizer1 t = new XMLTokenizer1();
@@ -92,10 +95,9 @@ public class XMLTokenizer1 implements Constants {
 				t.processSingleFile(in, out);
 
 			} else {
-				System.err
-				.println("Both input parameters should be files or both input parameters should be directories");
-				System.err
-				.println("output directory must be an existing directory !!");
+				System.err.println(
+						"Both input parameters should be files or both input parameters should be directories");
+				System.err.println("output directory must be an existing directory !!");
 				System.err.println("exiting...");
 			}
 			// break;
@@ -112,13 +114,11 @@ public class XMLTokenizer1 implements Constants {
 			break;
 
 		default:
-			System.err
-			.println("Usage: java [-Xmx1024m] -jar tokenizer.java <inputfile/directory>"
-					+ " <output file/directory>");
-			System.err
-			.println("Both input parameters should be files or both input parameters should be directories");
-			System.err
-			.println("in case of input files - the input must be a UTF-8 text file and the output file name must be with XML suffix");
+			System.err.println(
+					"Usage: java [-Xmx1024m] -jar tokenizer.java <inputfile/directory>" + " <output file/directory>");
+			System.err.println("Both input parameters should be files or both input parameters should be directories");
+			System.err.println(
+					"in case of input files - the input must be a UTF-8 text file and the output file name must be with XML suffix");
 			System.err.println("exiting...");
 		}
 	}
@@ -134,19 +134,16 @@ public class XMLTokenizer1 implements Constants {
 	 *            appear in the input directory
 	 * @param pos
 	 */
-	private void analyzeDirectory(File inputDirectory, String outputDirectory,
-			final int pos) {
+	private void analyzeDirectory(File inputDirectory, String outputDirectory, final int pos) {
 		if (inputDirectory.isDirectory()) {
 			// create correspond directory for xml
-			String out = outputDirectory
-					+ inputDirectory.getAbsolutePath().substring(pos);
+			String out = outputDirectory + inputDirectory.getAbsolutePath().substring(pos);
 			// System.out.println(out);
 			if (!new File(out).exists()) {
 				if (new File(out).mkdir()) {
 					System.out.println("Success creating directory: " + out);
 				} else {
-					System.out
-							.println("Error in creation of directory: " + out);
+					System.out.println("Error in creation of directory: " + out);
 				}
 			}
 			// call for analysis of each file/dir under the currect directory
@@ -161,9 +158,7 @@ public class XMLTokenizer1 implements Constants {
 		} else { // file to be analyzed
 			String inputFile = inputDirectory.getAbsolutePath();
 			String outputFile = outputDirectory + inputFile.substring(pos + 1);
-			String newOutputFile = outputFile.substring(0,
-					outputFile.lastIndexOf("."))
-					+ ".xml";
+			String newOutputFile = outputFile.substring(0, outputFile.lastIndexOf(".")) + ".xml";
 			System.out.println(inputFile);
 			System.out.println(newOutputFile);
 			try {
@@ -237,16 +232,14 @@ public class XMLTokenizer1 implements Constants {
 				token = removeTnoaot(token);
 				// System.out.println(token);
 
-				if (token.indexOf("'") != -1 || token.indexOf("\"") != -1
-						|| token.indexOf("-") != -1) {
+				if (token.indexOf("'") != -1 || token.indexOf("\"") != -1 || token.indexOf("-") != -1) {
 					if (kitzurExists(token)) {
 						continue;
 					}
 				}
 
 				int prefixLen = findPrefix(token, result, i);
-				String tokenWithoutPrefixWithSuffix = token
-						.substring(prefixLen);
+				String tokenWithoutPrefixWithSuffix = token.substring(prefixLen);
 
 				if (tokenWithoutPrefixWithSuffix.length() > 0) {
 					returnToken = handleToken(tokenWithoutPrefixWithSuffix);
@@ -256,20 +249,16 @@ public class XMLTokenizer1 implements Constants {
 					tokenWithoutPrefixWithSuffix = returnToken;
 					int suffixLen = findSuffix(tokenWithoutPrefixWithSuffix);
 
-					int tokenWithoutPrefixWithSuffixLen = tokenWithoutPrefixWithSuffix
-							.length();
+					int tokenWithoutPrefixWithSuffixLen = tokenWithoutPrefixWithSuffix.length();
 
 					String tokenSuffix = tokenWithoutPrefixWithSuffix
-							.substring(tokenWithoutPrefixWithSuffixLen
-									- suffixLen);
+							.substring(tokenWithoutPrefixWithSuffixLen - suffixLen);
 
-					int suffixStartIndex = tokenWithoutPrefixWithSuffixLen
-							- suffixLen;
-					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix
-							.substring(0, suffixStartIndex);
+					int suffixStartIndex = tokenWithoutPrefixWithSuffixLen - suffixLen;
+					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix.substring(0,
+							suffixStartIndex);
 					if (tokenWithoutPrefixWithoutSuffix.length() > 0) {
-						xmlTokenizer
-						.createTokens(tokenWithoutPrefixWithoutSuffix);
+						xmlTokenizer.createTokens(tokenWithoutPrefixWithoutSuffix);
 					}
 
 					createSuffixTokens(tokenSuffix);
@@ -317,11 +306,9 @@ public class XMLTokenizer1 implements Constants {
 			case 'ע':
 				int afterApostropeeIndex = apostropeIndex + 1;
 				if (afterApostropeeIndex < tokenLen) {
-					char afterApostropheeChar = token
-							.charAt(afterApostropeeIndex);
+					char afterApostropheeChar = token.charAt(afterApostropeeIndex);
 					if (!(afterApostropheeChar >= 'א' && afterApostropheeChar <= 'ת')) {
-						String subTokenWithApostropee = token.substring(0,
-								apostropeIndex + 1);
+						String subTokenWithApostropee = token.substring(0, apostropeIndex + 1);
 						xmlTokenizer.createTokens(subTokenWithApostropee);
 						returnValue = token.substring(apostropeIndex + 1);
 					}
@@ -385,9 +372,7 @@ public class XMLTokenizer1 implements Constants {
 				line = bi.readLine();
 			} catch (IOException e) {
 				line = null;
-				System.out
-				.println("XMLTokenizer:dropMiddleFileEmptyLines - Exception in readLine line= "
-						+ line);
+				System.out.println("XMLTokenizer:dropMiddleFileEmptyLines - Exception in readLine line= " + line);
 				e.printStackTrace();
 			}
 			emptyLineFlag = true;
@@ -418,14 +403,13 @@ public class XMLTokenizer1 implements Constants {
 		try {
 			line = bi.readLine();
 
-			while ((line == null || line.length() == 0)
-					&& emptyLinesCounter < MAX_EMPTY_LINES) {
+			while ((line == null || line.length() == 0) && emptyLinesCounter < MAX_EMPTY_LINES) {
 				line = bi.readLine();
 				emptyLinesCounter++;
 			}
 			if (emptyLinesCounter == MAX_EMPTY_LINES) {
-				System.err
-				.println("No input to process or there are more than MAX_EMPTY_LINES at the begining of the file, Exiting");
+				System.err.println(
+						"No input to process or there are more than MAX_EMPTY_LINES at the begining of the file, Exiting");
 				return;
 			}
 
@@ -436,8 +420,7 @@ public class XMLTokenizer1 implements Constants {
 
 			// handling case of empty lines after BOM
 			emptyLinesCounter = 0;
-			while ((line == null || line.length() == 0)
-					&& emptyLinesCounter < MAX_EMPTY_LINES) {
+			while ((line == null || line.length() == 0) && emptyLinesCounter < MAX_EMPTY_LINES) {
 				line = bi.readLine();
 				emptyLinesCounter++;
 			}
@@ -448,12 +431,10 @@ public class XMLTokenizer1 implements Constants {
 			}
 
 		} catch (IOException e) {
-			System.out
-			.println("Tokenizer:dropEmptyLines - IOException occured while trying to read input file lines ");
+			System.out.println("Tokenizer:dropEmptyLines - IOException occured while trying to read input file lines ");
 			e.printStackTrace();
 		} catch (Exception e) {
-			System.out
-			.println("Tokenizer:dropEmptyLines - Exception occured while trying to read input file lines");
+			System.out.println("Tokenizer:dropEmptyLines - Exception occured while trying to read input file lines");
 			e.printStackTrace();
 		}
 		return;
@@ -477,38 +458,26 @@ public class XMLTokenizer1 implements Constants {
 
 		while (tokenIndex < tokenLen) {
 			currentChar = token.charAt(tokenIndex);
-			if ((currentChar < 'א' || currentChar > 'ת')
-					&& !Character.isDigit(currentChar)
+			if ((currentChar < 'א' || currentChar > 'ת') && !Character.isDigit(currentChar)
 					&& !Character.isLetter(currentChar)) {
 				xmlTokenizer.createTokens(String.valueOf(currentChar));
-				if (currentChar == '.' && token.indexOf("...") == -1
-						|| currentChar == '!' || currentChar == '?') {
+				if (currentChar == '.' && token.indexOf("...") == -1 || currentChar == '!' || currentChar == '?') {
 					// checking cases in which we will not create an end of
 					// sentence though the current
 					// character is . or ! or ?
-					if (!(index + 1 < resultLen && index + 2 < resultLen
-							&& result[index].equals("?") && result[index + 2]
-									.equals("."))
+					if (!(index + 1 < resultLen && index + 2 < resultLen && result[index].equals("?")
+							&& result[index + 2].equals("."))
 
-									&& !(index + 1 < resultLen && index + 2 < resultLen
-											&& result[index].equals("!") && result[index + 2]
-													.equals("."))
+					&& !(index + 1 < resultLen && index + 2 < resultLen && result[index].equals("!")
+							&& result[index + 2].equals("."))
 
-													&& !(index + 1 < resultLen
-															&& result[index].equals("?") && result[index + 1]
-																	.equals(")"))
+					&& !(index + 1 < resultLen && result[index].equals("?") && result[index + 1].equals(")"))
 
-																	&& !(index + 1 < resultLen
-																			&& result[index].equals("!") && result[index + 1]
-																					.equals(")"))
+					&& !(index + 1 < resultLen && result[index].equals("!") && result[index + 1].equals(")"))
 
-																					&& !(index + 1 < resultLen
-																							&& result[index].equals("!") && result[index + 1]
-																									.equals("\""))
+					&& !(index + 1 < resultLen && result[index].equals("!") && result[index + 1].equals("\""))
 
-																									&& !(index + 1 < resultLen
-																											&& result[index].equals("?") && result[index + 1]
-																													.equals("\""))) {
+					&& !(index + 1 < resultLen && result[index].equals("?") && result[index + 1].equals("\""))) {
 						xmlTokenizer.createSentences();
 					}
 				}
@@ -534,8 +503,7 @@ public class XMLTokenizer1 implements Constants {
 		char currentChar;
 		while (tokenIndex >= 0) {
 			currentChar = token.charAt(tokenIndex);
-			if ((currentChar < 'א' || currentChar > 'ת')
-					&& !Character.isDigit(currentChar)
+			if ((currentChar < 'א' || currentChar > 'ת') && !Character.isDigit(currentChar)
 					&& !Character.isLetter(currentChar)) {
 
 				tokenIndex--;
@@ -664,8 +632,7 @@ public class XMLTokenizer1 implements Constants {
 				if (Character.isDigit(currentChar)) {
 					i++;
 				} else if (currentChar == '.' || currentChar == ',') {
-					if (i + 1 < tokenLen
-							&& Character.isDigit(token.charAt(i + 1))) {
+					if (i + 1 < tokenLen && Character.isDigit(token.charAt(i + 1))) {
 						i++;
 					} else {
 						break;
@@ -694,8 +661,7 @@ public class XMLTokenizer1 implements Constants {
 			int j = lastTokenLen - 1;
 			while (j > 0) {
 				currentChar = lastToken.charAt(j);
-				if (!Character.isDigit(currentChar) && currentChar != '%'
-						&& currentChar != '$') {
+				if (!Character.isDigit(currentChar) && currentChar != '%' && currentChar != '$') {
 					j--;
 				} else {
 					break;
@@ -707,8 +673,7 @@ public class XMLTokenizer1 implements Constants {
 
 			// tokens with $ or % are displayed reversed without special
 			// treatment
-			if (lastTokenSuffix.length() == 0 || lastTokenSuffix.length() == 1
-					&& lastTokenSuffix.charAt(0) == '%'
+			if (lastTokenSuffix.length() == 0 || lastTokenSuffix.length() == 1 && lastTokenSuffix.charAt(0) == '%'
 					|| lastTokenSuffix.charAt(0) == '$') {
 				list = Arrays.asList(result);
 			} else {
@@ -721,22 +686,17 @@ public class XMLTokenizer1 implements Constants {
 			for (j = 0; j < reversedResultLen; j++) {
 				xmlTokenizer.createTokens(reversedResult[j]);
 			}
-			if (lastTokenSuffix.length() > 0
-					&& !(lastTokenSuffix.length() == 1
-					&& lastTokenSuffix.charAt(0) == '%' || lastTokenSuffix
-					.charAt(0) == '$')) {
+			if (lastTokenSuffix.length() > 0 && !(lastTokenSuffix.length() == 1 && lastTokenSuffix.charAt(0) == '%'
+					|| lastTokenSuffix.charAt(0) == '$')) {
 				token = result[resultLen - 1];
 			} else {
 				return null;
 			}
-		} else if ((index = token.indexOf(".")) == -1 || index + 1 < tokenLen
-				&& Character.isDigit(token.charAt(index + 1))
-				|| token.indexOf("*") != -1 || token.indexOf("=") != -1
-				|| token.indexOf("(") != -1 || token.indexOf(")") != -1
-				|| token.indexOf("-") != -1 || token.indexOf("&") != -1
-				|| token.indexOf("+") != -1) {
-			String[] result = token
-					.split("(?=[*&()\\+~\\=-])|(?<=[*&()\\+~\\=-])");
+		} else if ((index = token.indexOf(".")) == -1
+				|| index + 1 < tokenLen && Character.isDigit(token.charAt(index + 1)) || token.indexOf("*") != -1
+				|| token.indexOf("=") != -1 || token.indexOf("(") != -1 || token.indexOf(")") != -1
+				|| token.indexOf("-") != -1 || token.indexOf("&") != -1 || token.indexOf("+") != -1) {
+			String[] result = token.split("(?=[*&()\\+~\\=-])|(?<=[*&()\\+~\\=-])");
 			int resultLen = result.length;
 			for (int j = 0; j < resultLen - 1; j++) {
 				xmlTokenizer.createTokens(result[j]);
@@ -775,8 +735,7 @@ public class XMLTokenizer1 implements Constants {
 			} else if (currentChar == '.' || currentChar == ',') {
 				if (i + 1 < tokenLen && Character.isDigit(token.charAt(i + 1))) {
 					i++;
-				} else if (i + 1 < tokenLen && token.charAt(i + 1) >= 'א'
-						&& token.charAt(i + 1) <= 'ת') {
+				} else if (i + 1 < tokenLen && token.charAt(i + 1) >= 'א' && token.charAt(i + 1) <= 'ת') {
 					if (i > 0) {
 						xmlTokenizer.createTokens(token.substring(0, i));
 					}
@@ -847,10 +806,8 @@ public class XMLTokenizer1 implements Constants {
 		// find a possible prefix
 		if (!(token.charAt(0) >= 'א' && token.charAt(0) <= 'ת')) {
 			returnValue = handleAfterPrefixSeparator(token);
-		} else if (token.indexOf("'") != -1 || token.indexOf("-") != -1
-				|| token.indexOf("\"") != -1) {
-			while (i < tokenLen && token.charAt(i) >= 'א'
-					&& token.charAt(i) <= 'ת') {
+		} else if (token.indexOf("'") != -1 || token.indexOf("-") != -1 || token.indexOf("\"") != -1) {
+			while (i < tokenLen && token.charAt(i) >= 'א' && token.charAt(i) <= 'ת') {
 				i++;
 			}
 
@@ -873,8 +830,7 @@ public class XMLTokenizer1 implements Constants {
 					String afterPrefixTokenAndSeparator = token.substring(i);
 					// ב-צ.ה.ל.
 					returnValue = isDotAcronymWithDotEnding(afterPrefixTokenAndSeparator);
-					if (returnValue != null
-							&& returnValue.equals(afterPrefixTokenAndSeparator)) {
+					if (returnValue != null && returnValue.equals(afterPrefixTokenAndSeparator)) {
 						returnValue = handleAfterPrefixSeparator(afterPrefixTokenAndSeparator);
 					}
 
@@ -899,10 +855,8 @@ public class XMLTokenizer1 implements Constants {
 	public String handleSimpleForeignToken(String token) {
 		String returnValue = token;
 		int tokenLen = token.length();
-		if (token.charAt(tokenLen - 1) >= 'A'
-				&& token.charAt(tokenLen - 1) <= 'Z'
-				|| token.charAt(tokenLen - 1) >= 'a'
-				&& token.charAt(tokenLen - 1) <= 'z') {
+		if (token.charAt(tokenLen - 1) >= 'A' && token.charAt(tokenLen - 1) <= 'Z'
+				|| token.charAt(tokenLen - 1) >= 'a' && token.charAt(tokenLen - 1) <= 'z') {
 			xmlTokenizer.createTokens(token);
 			returnValue = null;
 			return returnValue;
@@ -911,8 +865,7 @@ public class XMLTokenizer1 implements Constants {
 			char currentChar;
 			while (i > 0) {
 				currentChar = token.charAt(i);
-				if (!(currentChar >= 'A' && currentChar <= 'Z')
-						&& !(currentChar >= 'a' && currentChar <= 'z')) {
+				if (!(currentChar >= 'A' && currentChar <= 'Z') && !(currentChar >= 'a' && currentChar <= 'z')) {
 					i--;
 				} else {
 					break;
@@ -949,11 +902,9 @@ public class XMLTokenizer1 implements Constants {
 
 			// //////////////////
 			// אף-על-פי-כן
-			if (token.indexOf('-') != -1 || token.indexOf('(') != -1
-					|| token.indexOf('!') != -1 || token.indexOf('/') != -1
-					|| token.indexOf(')') != -1 || token.indexOf('[') != -1
-					|| token.indexOf(']') != -1 || token.indexOf(',') != -1
-					&& token.indexOf(',') != tokenLen - 1) {
+			if (token.indexOf('-') != -1 || token.indexOf('(') != -1 || token.indexOf('!') != -1
+					|| token.indexOf('/') != -1 || token.indexOf(')') != -1 || token.indexOf('[') != -1
+					|| token.indexOf(']') != -1 || token.indexOf(',') != -1 && token.indexOf(',') != tokenLen - 1) {
 				returnValue = splitToken(token);
 			} else if (token.indexOf("'") != -1 || token.indexOf("`") != -1) {
 				returnValue = apostropeeNotGimatriaHandling(token);
@@ -963,9 +914,8 @@ public class XMLTokenizer1 implements Constants {
 					currentChar = token.charAt(i);
 					if (currentChar >= 'א' && currentChar <= 'ת') {
 						i++;
-					} else if ((currentChar == '"' || currentChar == '\\')
-							&& i + 1 < tokenLen && token.charAt(i + 1) >= 'א'
-							&& token.charAt(i + 1) <= 'ת') {
+					} else if ((currentChar == '"' || currentChar == '\\') && i + 1 < tokenLen
+							&& token.charAt(i + 1) >= 'א' && token.charAt(i + 1) <= 'ת') {
 						i++;
 					} else {
 						found = true;
@@ -1019,15 +969,12 @@ public class XMLTokenizer1 implements Constants {
 	private void ioFileHandling(String inputFile) {
 		if (!inputFile.equals("")) {
 			try {
-				bi = new BufferedReader(new InputStreamReader(
-						new FileInputStream(inputFile), "UTF8"));
+				bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile), "UTF8"));
 			} catch (UnsupportedEncodingException e) {
-				System.err
-				.println("XMLTokenizer:ioFileHandling UnsupportedEncodingException happened");
+				System.err.println("XMLTokenizer:ioFileHandling UnsupportedEncodingException happened");
 				e.printStackTrace();
 			} catch (FileNotFoundException e) {
-				System.err
-				.println("XMLTokenizer:ioFileHandling File not find - please check "
+				System.err.println("XMLTokenizer:ioFileHandling File not find - please check "
 						+ "input/output file parameter. exiting...");
 				System.exit(-1);
 				e.printStackTrace();
@@ -1035,11 +982,9 @@ public class XMLTokenizer1 implements Constants {
 		} else {
 			try {
 				// Getting inputFile path+name from stdin
-				bi = new BufferedReader(
-						new InputStreamReader(System.in, "UTF8"));
+				bi = new BufferedReader(new InputStreamReader(System.in, "UTF8"));
 			} catch (UnsupportedEncodingException e) {
-				System.out
-				.println("XMLTokenizer:ioFileHandling UnsupportedEncodingException happened");
+				System.out.println("XMLTokenizer:ioFileHandling UnsupportedEncodingException happened");
 				e.printStackTrace();
 			}
 		}
@@ -1055,37 +1000,25 @@ public class XMLTokenizer1 implements Constants {
 		String returnValue = token;
 		if (token.indexOf(".") != -1) {
 			int tokenLen = token.length();
-			if (tokenLen == 2 && token.charAt(0) >= 'א'
-					&& token.charAt(0) <= 'ת') {
+			if (tokenLen == 2 && token.charAt(0) >= 'א' && token.charAt(0) <= 'ת') {
 				xmlTokenizer.createTokens(token);
 				returnValue = null;
 				return returnValue;
 			}
-			if (token.charAt(tokenLen - 1) == '.'
-					&& token.matches("[משהוכלב]" + ALEFBAIT + "\\." + ALEFBAIT
-							+ "\\.")) {
+			if (token.charAt(tokenLen - 1) == '.' && token.matches("[משהוכלב]" + ALEFBAIT + "\\." + ALEFBAIT + "\\.")) {
 				xmlTokenizer.createTokens(token);
 				returnValue = null;
 			} else {
-				if (token.charAt(tokenLen - 1) == '.'
-						&& token.matches(ALEFBAIT + "\\." + ALEFBAIT + "\\.")
-						|| token.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\."
-								+ ALEFBAIT + "+\\.")
-								|| tokenLen == 6
-						&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT
-								+ "{2}" + "\\.")
-										|| tokenLen == 3
-						&& token.matches(ALEFBAIT + "{2}" + "\\.")
-										// בי.ג'יי. ארמסטרונג
-										|| tokenLen == 8
-						&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT
-								+ "\\'" + ALEFBAIT + "{2}\\.")
-												|| tokenLen == 5
-						&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT
-								+ "{2}")
-														|| tokenLen == 8
-						&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT
-								+ "{2}" + "\\." + ALEFBAIT + "{2}\\.")) {
+				if (token.charAt(tokenLen - 1) == '.' && token.matches(ALEFBAIT + "\\." + ALEFBAIT + "\\.")
+						|| token.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\." + ALEFBAIT + "+\\.")
+						|| tokenLen == 6 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}" + "\\.")
+						|| tokenLen == 3 && token.matches(ALEFBAIT + "{2}" + "\\.")
+						// בי.ג'יי. ארמסטרונג
+						|| tokenLen == 8
+								&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "\\'" + ALEFBAIT + "{2}\\.")
+						|| tokenLen == 5 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}")
+						|| tokenLen == 8 && token
+								.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}\\.")) {
 					xmlTokenizer.createTokens(token);
 					returnValue = null;
 				} else {
@@ -1095,14 +1028,10 @@ public class XMLTokenizer1 implements Constants {
 					while (i > 0) {
 						i--;
 						endTokenChar = token.charAt(i);
-						if (!(endTokenChar >= 'א' && endTokenChar <= 'ת')
-								&& endTokenChar != '.') {
+						if (!(endTokenChar >= 'א' && endTokenChar <= 'ת') && endTokenChar != '.') {
 							subToken = token.substring(0, i);
-							if (subToken.matches(ALEFBAIT + "\\." + ALEFBAIT
-									+ "\\.")
-									|| subToken.matches(ALEFBAIT + "+\\."
-											+ ALEFBAIT + "+\\." + ALEFBAIT
-											+ "+\\.")) {
+							if (subToken.matches(ALEFBAIT + "\\." + ALEFBAIT + "\\.")
+									|| subToken.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\." + ALEFBAIT + "+\\.")) {
 								xmlTokenizer.createTokens(subToken);
 								returnValue = token.substring(i);
 								break;
@@ -1134,8 +1063,7 @@ public class XMLTokenizer1 implements Constants {
 			int tokenLen = token.length();
 			int i = tokenLen;
 			if (token.matches(ALEFBAIT + "\\." + ALEFBAIT + "+")
-					|| token.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\."
-							+ ALEFBAIT + "+")) {
+					|| token.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\." + ALEFBAIT + "+")) {
 				xmlTokenizer.createTokens(token);
 				returnValue = null;
 
@@ -1149,8 +1077,7 @@ public class XMLTokenizer1 implements Constants {
 					if (!(endTokenChar >= 'א' && endTokenChar <= 'ת')) {
 						subToken = token.substring(0, i);
 						if (subToken.matches(ALEFBAIT + "\\." + ALEFBAIT)
-								|| subToken.matches(ALEFBAIT + "+\\."
-										+ ALEFBAIT + "+\\." + ALEFBAIT + "+")) {
+								|| subToken.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\." + ALEFBAIT + "+")) {
 							xmlTokenizer.createTokens(subToken);
 							returnValue = token.substring(i);
 							break;
@@ -1178,7 +1105,6 @@ public class XMLTokenizer1 implements Constants {
 		return returnValue;
 	}
 
-
 	/**
 	 * We must recognize known acronym ends with ' because our default is to
 	 * separate the ' from the token In this specific case we need to leave it
@@ -1191,18 +1117,17 @@ public class XMLTokenizer1 implements Constants {
 		int tokenLen = token.length();
 		boolean returnValue = false;
 		int indexKitzur = 0;
-		for (String kitzur:kitzurim){
-			if ((indexKitzur = token.indexOf(kitzur)) != -1){
+		for (String kitzur : kitzurim) {
+			if ((indexKitzur = token.indexOf(kitzur)) != -1) {
 				break;
 			}
 		}
-		if (indexKitzur == -1){
+		if (indexKitzur == -1) {
 			return false;
 		}
-		if (indexKitzur == 0){ // is it at the begining of the token ?
+		if (indexKitzur == 0) { // is it at the begining of the token ?
 			if (token.endsWith("'") // if ends with ' or in range of letters
-					|| token.charAt(tokenLen - 1) >= 'א'
-					&& token.charAt(tokenLen - 1) <= 'ת') {
+					|| token.charAt(tokenLen - 1) >= 'א' && token.charAt(tokenLen - 1) <= 'ת') {
 				xmlTokenizer.createTokens(token);
 				returnValue = true;
 			} else {
@@ -1211,10 +1136,8 @@ public class XMLTokenizer1 implements Constants {
 
 				while (i > 0) {
 					currentChar = token.charAt(i);
-					if (!(currentChar >= 'א' && currentChar <= 'ת')
-							&& currentChar != '\''
-							&& token.charAt(i - 1) == '\'')
-					{
+					if (!(currentChar >= 'א' && currentChar <= 'ת') && currentChar != '\''
+							&& token.charAt(i - 1) == '\'') {
 						xmlTokenizer.createTokens(token.substring(0, i));
 						break;
 					} else {
@@ -1251,13 +1174,10 @@ public class XMLTokenizer1 implements Constants {
 	public void processDirectory(String inputDirectory, String outputDirectory) {
 		try {
 			File in = new File(inputDirectory);
-			int pos = in.isDirectory() ? in.getAbsolutePath().length() : in
-					.getParent().length();
+			int pos = in.isDirectory() ? in.getAbsolutePath().length() : in.getParent().length();
 			analyzeDirectory(in, outputDirectory, pos);
 		} catch (Exception e) {
-			System.err
-			.println("Please provide full path to input file/directory :"
-					+ inputDirectory + " exiting..");
+			System.err.println("Please provide full path to input file/directory :" + inputDirectory + " exiting..");
 			System.exit(-1);
 		}
 	}
@@ -1295,8 +1215,7 @@ public class XMLTokenizer1 implements Constants {
 	 * @param outputFile
 	 *            XML output file
 	 */
-	public void processSingleFile(final String inputFile,
-			final String outputFile) {
+	public void processSingleFile(final String inputFile, final String outputFile) {
 		if (outputFile.indexOf("xml") == -1) {
 			System.err.println("output file must have an xml suffix");
 		}
@@ -1320,22 +1239,14 @@ public class XMLTokenizer1 implements Constants {
 			currentChar = token.charAt(i);
 			if (currentChar >= 'א' && currentChar <= 'ת') {
 				i++;
-			} else if ((currentChar == '"' || currentChar == '\\'
-					|| currentChar == '-' || currentChar == '\'')
-					&& i + 1 < tokenLen
-					&& token.charAt(i + 1) >= 'א'
-					&& token.charAt(i + 1) <= 'ת') {
+			} else if ((currentChar == '"' || currentChar == '\\' || currentChar == '-' || currentChar == '\'')
+					&& i + 1 < tokenLen && token.charAt(i + 1) >= 'א' && token.charAt(i + 1) <= 'ת') {
 				i++;
-			} else if (currentChar == 'ּ' || currentChar == 'ֹ'
-					|| currentChar == 'ָ' || currentChar == 'ִ'
-					|| currentChar == 'ֶ' || currentChar == 'ֵ'
-					|| currentChar == 'ַ' || currentChar == 'ּ'
-					|| currentChar == 'ׂ' || currentChar == 'ֳ'
-					|| currentChar == 'ֲ' || currentChar == 'ׁ'
-					|| currentChar == 'ְ' || currentChar == 'ֱ'
-					|| currentChar == 'ֻ') {
-				token = token.toString().substring(0, i)
-						+ token.substring(i + 1);
+			} else if (currentChar == 'ּ' || currentChar == 'ֹ' || currentChar == 'ָ' || currentChar == 'ִ'
+					|| currentChar == 'ֶ' || currentChar == 'ֵ' || currentChar == 'ַ' || currentChar == 'ּ'
+					|| currentChar == 'ׂ' || currentChar == 'ֳ' || currentChar == 'ֲ' || currentChar == 'ׁ'
+					|| currentChar == 'ְ' || currentChar == 'ֱ' || currentChar == 'ֻ') {
+				token = token.toString().substring(0, i) + token.substring(i + 1);
 				tokenLen = token.length();
 			} else {
 				found = true;
@@ -1355,8 +1266,7 @@ public class XMLTokenizer1 implements Constants {
 	public String splitToken(String token) {
 		String returnValue = "";
 		int i = 0;
-		String[] result = token.trim().split(
-				"(?=[-)(\\[\\]{},!/])|(?<=[-)(\\[\\]{},!/])");
+		String[] result = token.trim().split("(?=[-)(\\[\\]{},!/])|(?<=[-)(\\[\\]{},!/])");
 		int resultLen = result.length;
 		for (i = 0; i < resultLen - 1; i++) {
 			String subToken = result[i];
@@ -1364,12 +1274,10 @@ public class XMLTokenizer1 implements Constants {
 			// avoid empty strings
 			if (subTokenLen > 1) {
 				if (subToken.charAt(subTokenLen - 1) == '"') {
-					xmlTokenizer.createTokens(subToken.substring(0,
-							subTokenLen - 1));
+					xmlTokenizer.createTokens(subToken.substring(0, subTokenLen - 1));
 					xmlTokenizer.createTokens("\"");
 				} else if (subToken.matches("\\.{2,3}")) {
-					String[] resultPoint = subToken.trim().split(
-							"(?=[\\.])|(?<=[\\.])");
+					String[] resultPoint = subToken.trim().split("(?=[\\.])|(?<=[\\.])");
 					int resultPointLen = resultPoint.length;
 					for (int j = 0; j < resultPointLen; j++) {
 						String pointToken = resultPoint[j];
@@ -1399,8 +1307,8 @@ public class XMLTokenizer1 implements Constants {
 	/**
 	 * ADDED 21.11.10 by yossi jacob. This method ensures that the output String
 	 * has only valid XML unicode characters as specified by the XML 1.0
-	 * standard. For reference, please see <a
-	 * href="http://www.w3.org/TR/2000/REC-xml-20001006#NT-Char">the
+	 * standard. For reference, please see
+	 * <a href="http://www.w3.org/TR/2000/REC-xml-20001006#NT-Char">the
 	 * standard</a>. This method will return an empty String if the input is
 	 * null or empty.
 	 *
@@ -1418,10 +1326,8 @@ public class XMLTokenizer1 implements Constants {
 		for (int i = 0; i < in.length(); i++) {
 			current = in.charAt(i); // NOTE: No IndexOutOfBoundsException caught
 			// here; it should not happen.
-			if (current == 0x9 || current == 0xA || current == 0xD
-					|| current >= 0x20 && current <= 0xD7FF
-					|| current >= 0xE000 && current <= 0xFFFD
-					|| current >= 0x10000 && current <= 0x10FFFF) {
+			if (current == 0x9 || current == 0xA || current == 0xD || current >= 0x20 && current <= 0xD7FF
+					|| current >= 0xE000 && current <= 0xFFFD || current >= 0x10000 && current <= 0x10FFFF) {
 				out.append(current);
 			}
 		}
@@ -1446,8 +1352,8 @@ public class XMLTokenizer1 implements Constants {
 			document = xmlTokenizer.getDocument();
 
 		} catch (Exception e) {
-			System.out
-			.println("XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
+			System.out.println(
+					"XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
 			e.printStackTrace();
 		}
 
@@ -1473,8 +1379,8 @@ public class XMLTokenizer1 implements Constants {
 			document = xmlTokenizer.getDocument();
 
 		} catch (Exception e) {
-			System.out
-			.println("XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
+			System.out.println(
+					"XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
 			e.printStackTrace();
 		}
 
@@ -1492,8 +1398,8 @@ public class XMLTokenizer1 implements Constants {
 	 * @param dprefixesFile
 	 * @param gimatriaFile
 	 */
-	public void tokenizeAndAnalyze(InputStream in, PrintWriter pw,
-			String dinflectionsFile, String dprefixesFile, String gimatriaFile) {
+	public void tokenizeAndAnalyze(InputStream in, PrintWriter pw, String dinflectionsFile, String dprefixesFile,
+			String gimatriaFile) {
 		// System.out.println("Starting XMLTokenizer");
 		Document document = null;
 		try {
@@ -1503,14 +1409,13 @@ public class XMLTokenizer1 implements Constants {
 			document = xmlTokenizer.getDocument();
 
 		} catch (Exception e) {
-			System.out
-			.println("XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
+			System.out.println(
+					"XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
 			e.printStackTrace();
 		}
 		String documentStr = document.asXML();
 		XMLMorphAnalyzer xmlMorphAnalyzer = new XMLMorphAnalyzer();
-		xmlMorphAnalyzer.morphologicalAnalyzer(documentStr, pw,
-				dinflectionsFile, dprefixesFile, gimatriaFile);
+		xmlMorphAnalyzer.morphologicalAnalyzer(documentStr, pw, dinflectionsFile, dprefixesFile, gimatriaFile);
 	}
 
 	/**
@@ -1525,8 +1430,7 @@ public class XMLTokenizer1 implements Constants {
 	 *            can be loaded only once
 	 * @return
 	 */
-	public int tokenizeAndAnalyze(InputStream in, PrintWriter pw,
-			XMLMorphAnalyzer xmlMorphAnalyzer) {
+	public int tokenizeAndAnalyze(InputStream in, PrintWriter pw, XMLMorphAnalyzer xmlMorphAnalyzer) {
 		// System.out.println("Starting XMLTokenizer");
 		Document document = null;
 		try {
@@ -1536,8 +1440,8 @@ public class XMLTokenizer1 implements Constants {
 			document = xmlTokenizer.getDocument();
 
 		} catch (Exception e) {
-			System.out
-			.println("XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
+			System.out.println(
+					"XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
 			e.printStackTrace();
 		}
 		String documentStr = document.asXML();
@@ -1557,8 +1461,8 @@ public class XMLTokenizer1 implements Constants {
 	 * @param gimartiasFile
 	 * @return String of the XML analysis of the input text
 	 */
-	public String tokenizeAndAnalyzeSingleToken(String inputText,
-			String dinflectionsFile, String dprefixesFile, String gimartiasFile) {
+	public String tokenizeAndAnalyzeSingleToken(String inputText, String dinflectionsFile, String dprefixesFile,
+			String gimartiasFile) {
 		InputStream inputStraem = null;
 		try {
 			inputStraem = new ByteArrayInputStream(inputText.getBytes("UTF8"));
@@ -1568,8 +1472,7 @@ public class XMLTokenizer1 implements Constants {
 		}
 		StringWriter sw = new StringWriter();
 		PrintWriter pw = new PrintWriter(sw);
-		tokenizeAndAnalyze(inputStraem, pw, dinflectionsFile, dprefixesFile,
-				gimartiasFile);
+		tokenizeAndAnalyze(inputStraem, pw, dinflectionsFile, dprefixesFile, gimartiasFile);
 		return sw.toString();
 	}
 
@@ -1591,8 +1494,7 @@ public class XMLTokenizer1 implements Constants {
 			// creating infrastructure for creating xml document
 			createTokenizedXML();
 		} catch (IOException e) {
-			System.out
-			.println("XMLTokenizer:process - Exception during createTokenizedXML");
+			System.out.println("XMLTokenizer:process - Exception during createTokenizedXML");
 			e.printStackTrace();
 		}
 		// create the first paragraph
@@ -1642,9 +1544,9 @@ public class XMLTokenizer1 implements Constants {
 				}
 
 				int prefixLen = findPrefix(token, result, i);
-				String tokenWithoutPrefixWithSuffix = token
-						.substring(prefixLen);
-				// System.out.println("(F) webProcess: tokenWithoutPrefixWithSuffix = "
+				String tokenWithoutPrefixWithSuffix = token.substring(prefixLen);
+				// System.out.println("(F) webProcess:
+				// tokenWithoutPrefixWithSuffix = "
 				// + tokenWithoutPrefixWithSuffix);
 
 				if (tokenWithoutPrefixWithSuffix.length() > 0) {
@@ -1657,20 +1559,16 @@ public class XMLTokenizer1 implements Constants {
 					tokenWithoutPrefixWithSuffix = returnToken;
 					int suffixLen = findSuffix(tokenWithoutPrefixWithSuffix);
 
-					int tokenWithoutPrefixWithSuffixLen = tokenWithoutPrefixWithSuffix
-							.length();
+					int tokenWithoutPrefixWithSuffixLen = tokenWithoutPrefixWithSuffix.length();
 
 					String tokenSuffix = tokenWithoutPrefixWithSuffix
-							.substring(tokenWithoutPrefixWithSuffixLen
-									- suffixLen);
+							.substring(tokenWithoutPrefixWithSuffixLen - suffixLen);
 
-					int suffixStartIndex = tokenWithoutPrefixWithSuffixLen
-							- suffixLen;
-					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix
-							.substring(0, suffixStartIndex);
+					int suffixStartIndex = tokenWithoutPrefixWithSuffixLen - suffixLen;
+					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix.substring(0,
+							suffixStartIndex);
 					if (tokenWithoutPrefixWithoutSuffix.length() > 0) {
-						xmlTokenizer
-						.createTokens(tokenWithoutPrefixWithoutSuffix);
+						xmlTokenizer.createTokens(tokenWithoutPrefixWithoutSuffix);
 					}
 					createSuffixTokens(tokenSuffix);
 

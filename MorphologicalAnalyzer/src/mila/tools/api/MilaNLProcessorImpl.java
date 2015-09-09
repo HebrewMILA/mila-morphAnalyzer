@@ -39,13 +39,11 @@ public class MilaNLProcessorImpl implements MilaNLProcessor {
 		this.settings = settings;
 	}
 
-	protected void tag(final InputStream in, final OutputStream out)
-			throws MilaException {
+	protected void tag(final InputStream in, final OutputStream out) throws MilaException {
 		final String tempPath;
 		try {
 			final File _tempDir;
-			_tempDir = File.createTempFile("MILANLP_temp", "", new File(
-					settings.tempDirectory));
+			_tempDir = File.createTempFile("MILANLP_temp", "", new File(settings.tempDirectory));
 			if (!_tempDir.delete())
 				throw new IOException();
 			if (!_tempDir.mkdir())
@@ -65,8 +63,7 @@ public class MilaNLProcessorImpl implements MilaNLProcessor {
 
 	}
 
-	private void doTagging(final InputStream in2, final OutputStream out2,
-			final String tempPath) throws MilaException {
+	private void doTagging(final InputStream in2, final OutputStream out2, final String tempPath) throws MilaException {
 		final PipedReader in = new PipedReader();
 		final PipedWriter out;
 		try {
@@ -96,8 +93,7 @@ public class MilaNLProcessorImpl implements MilaNLProcessor {
 		try {
 			p.process(new ReaderInputStream(in), ppPW);
 		} catch (Exception e) {
-			throw new MilaException(
-					"Post-processing barfed, giving up on tagging", e);
+			throw new MilaException("Post-processing barfed, giving up on tagging", e);
 		}
 		String pp = ppSW.toString().trim();
 
@@ -106,36 +102,29 @@ public class MilaNLProcessorImpl implements MilaNLProcessor {
 		try {
 			taggerFormat = mm.myMorp2Tagger(pp, tempPath);
 		} catch (Exception e) {
-			throw new MilaException(
-					"Failed converting to HMM format, giving up on tagging", e);
+			throw new MilaException("Failed converting to HMM format, giving up on tagging", e);
 		}
 		String taggerInputFile = tempPath + taggerFormat;
 
 		try {
-			String command = "perl -I" + settings.royTaggerPath + " "
-					+ settings.royTaggerPath + File.separator
-					+ "MTTest.pl -dir " + settings.royTaggerPath
-					+ File.separator + "workdir  -rmtmp " + taggerInputFile
-					+ " " + settings.taggerLearningOutputDir + File.separator
-					+ "corpus.lm " + settings.taggerLearningOutputDir
-					+ File.separator + "corpus.lex.prob";
+			String command = "perl -I" + settings.royTaggerPath + " " + settings.royTaggerPath + File.separator
+					+ "MTTest.pl -dir " + settings.royTaggerPath + File.separator + "workdir  -rmtmp " + taggerInputFile
+					+ " " + settings.taggerLearningOutputDir + File.separator + "corpus.lm "
+					+ settings.taggerLearningOutputDir + File.separator + "corpus.lex.prob";
 
 			Process process = Runtime.getRuntime().exec(command); // pearl
 			process.waitFor();
 		} catch (Exception e) {
-			throw new MilaException(
-					"Failed running tagger, giving up on tagging", e);
+			throw new MilaException("Failed running tagger, giving up on tagging", e);
 		}
 
-		String taggedFile = settings.royTaggerPath + "/workdir" + "/tagging-"
-				+ taggerFormat.substring(1);
+		String taggedFile = settings.royTaggerPath + "/workdir" + "/tagging-" + taggerFormat.substring(1);
 		HMM2Morph h = new HMM2Morph();
 		PrintWriter hmm2morphpw = new PrintWriter(out2);
 		try {
 			h.process(pp, taggedFile, hmm2morphpw);
 		} catch (Exception e) {
-			throw new MilaException("Failed converting back to tagger format",
-					e);
+			throw new MilaException("Failed converting back to tagger format", e);
 		}
 	}
 

@@ -21,8 +21,7 @@ import mila.lexicon.dbUtils.MWEinflectionsRecord;
  */
 public class MWData extends Data {
 
-	public static ArrayList<MWEinflectionsRecord> getMWEinflections(String key)
-			throws Exception {
+	public static ArrayList<MWEinflectionsRecord> getMWEinflections(String key) throws Exception {
 		ArrayList<MWEinflectionsRecord> mweList = new ArrayList<MWEinflectionsRecord>();
 		ArrayList<MWEinflectionsRecord> returnedMweList = new ArrayList<MWEinflectionsRecord>();
 		int mweListSize = 0;

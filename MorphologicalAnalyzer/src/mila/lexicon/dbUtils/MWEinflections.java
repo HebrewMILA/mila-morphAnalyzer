@@ -31,8 +31,7 @@ public class MWEinflections extends Connected {
 			// System.out.println("REPLACED \\ to \\\\ in " + input );
 		}
 		/***** UPDATE END */
-		String sql = "SELECT * FROM mweinflections where transliterated ='"
-				+ input + "'";
+		String sql = "SELECT * FROM mweinflections where transliterated ='" + input + "'";
 		// System.out.println("sql="+ sql);
 		ResultSet rs = null;
 		try {

@@ -29,9 +29,8 @@ public class PerformUniqeOutput {
 		PerformUniqeOutput r = new PerformUniqeOutput();
 		String inputFile = args[0];
 		String outputFile = args[1];
-		r.myUniqueOutput("</paragraph>\n" + "#\n" + "hhzdmnwt\n"
-				+ "\t(NOUN hzdmnwt)" + "U\n" + "(yyQUOT yyQUOT)\n" + ".\n"
-				+ "(yyDOT yyDOT)", outputFile);
+		r.myUniqueOutput("</paragraph>\n" + "#\n" + "hhzdmnwt\n" + "\t(NOUN hzdmnwt)" + "U\n" + "(yyQUOT yyQUOT)\n"
+				+ ".\n" + "(yyDOT yyDOT)", outputFile);
 	}
 
 	BufferedWriter bw = null;
@@ -40,11 +39,9 @@ public class PerformUniqeOutput {
 
 	StringBuffer outputString = new StringBuffer();
 
-	void ioHandling(String inputFile, String outputFile)
-			throws FileNotFoundException {
+	void ioHandling(String inputFile, String outputFile) throws FileNotFoundException {
 
-		bi = new BufferedReader(new InputStreamReader(new FileInputStream(
-				inputFile)));
+		bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
 		FileOutputStream out = null;
 		try {
 			out = new FileOutputStream(outputFile);
@@ -123,8 +120,7 @@ public class PerformUniqeOutput {
 					if (!hashmap.containsKey(line)) {
 						hashmap.put(line, line);
 					}
-					while ((line = bi.readLine()) != null
-							&& (line.startsWith("\t"))) {
+					while ((line = bi.readLine()) != null && (line.startsWith("\t"))) {
 						if (line.startsWith("\t(MWE")) {
 							token = line;
 							bw.write(token);

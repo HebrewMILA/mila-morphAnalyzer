@@ -1,4 +1,5 @@
 package mila.tools;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,8 +39,7 @@ public class Client {
 		} else if (!in.isDirectory() && !out.isDirectory()) {
 			client.process(input, output, socket, host);
 		} else {
-			System.out
-					.println("input parameters must include input & output file or input & output directory");
+			System.out.println("input parameters must include input & output file or input & output directory");
 		}
 		long elapsedTime = System.currentTimeMillis() - startTime;
 		// System.out.println("elapsedTime="+elapsedTime);
@@ -55,20 +55,17 @@ public class Client {
 
 	BufferedReader sin = null;
 
-	private void analyzeDirectory(File inputDirectory, String outputDirectory,
-			final int pos, int socket, String host) {
+	private void analyzeDirectory(File inputDirectory, String outputDirectory, final int pos, int socket, String host) {
 		if (inputDirectory.isDirectory()) {
 			// create correspond directory for xml
 
-			String out = outputDirectory
-					+ inputDirectory.getAbsolutePath().substring(pos);
+			String out = outputDirectory + inputDirectory.getAbsolutePath().substring(pos);
 			// System.out.println(out);
 			if (!(new File(out)).exists()) {
 				if ((new File(out)).mkdir())
 					System.out.println("Success creating directory: " + out);
 				else
-					System.out
-							.println("Error in creation of directory: " + out);
+					System.out.println("Error in creation of directory: " + out);
 			}
 			// call for analysis of each file/dir under the currect directory
 			File[] files = inputDirectory.listFiles();
@@ -109,8 +106,7 @@ public class Client {
 		String outputAnalysis = "";
 		String lineFromServer = "";
 		try {
-			sin = new BufferedReader(new InputStreamReader(
-					clientSocket.getInputStream(), "UTF8"));
+			sin = new BufferedReader(new InputStreamReader(clientSocket.getInputStream(), "UTF8"));
 			StringBuffer fromServer = new StringBuffer();
 			lineFromServer = sin.readLine();
 			while (lineFromServer == null) {
@@ -122,12 +118,10 @@ public class Client {
 					lineFromServer = sin.readLine();
 					if (lineFromServer != null)
 						fromServer.append(lineFromServer);
-				} while (lineFromServer != null
-						&& !lineFromServer.endsWith("#*"));
+				} while (lineFromServer != null && !lineFromServer.endsWith("#*"));
 
 			String fromServerStr = fromServer.toString();
-			outputAnalysis = (fromServerStr).substring(0,
-					fromServerStr.length() - 2);
+			outputAnalysis = (fromServerStr).substring(0, fromServerStr.length() - 2);
 		} catch (IOException e) {
 			System.err.println("Couldn't get I/O for the connection to: yeda.");
 			System.exit(1);
@@ -135,8 +129,7 @@ public class Client {
 		return outputAnalysis;
 	}
 
-	public void process(String inputFile, String outputFile, int socket,
-			String host) {
+	public void process(String inputFile, String outputFile, int socket, String host) {
 		// System.out.println("Client.java:process()");
 		try {
 			System.out.println("inputFile=" + inputFile);
@@ -183,11 +176,9 @@ public class Client {
 
 	}
 
-	public void processDirectoryNoDataLoad(String inputDirectory,
-			String outputDirectory, int socket, String host) {
+	public void processDirectoryNoDataLoad(String inputDirectory, String outputDirectory, int socket, String host) {
 		File in = new File(inputDirectory);
-		int pos = (in.isDirectory() ? in.getAbsolutePath().length() : in
-				.getParent().length());
+		int pos = (in.isDirectory() ? in.getAbsolutePath().length() : in.getParent().length());
 		analyzeDirectory(in, outputDirectory, pos, socket, host);
 	}
 

@@ -16,14 +16,15 @@ public class MWE1data extends Data {
 		MWE1record mwinfRec = null;
 		// get from databse
 
-		// System.out.println("(F) getMWEinflections()  get from inflection files !!!");
+		// System.out.println("(F) getMWEinflections() get from inflection files
+		// !!!");
 		// get from inflection files !!!
 		try {
 			mweList = mwe1.get(key);
 		} catch (Exception e1) {
-			System.err.println("MWE1data.java Exception in key "+key + ", proceeding...");
+			System.err.println("MWE1data.java Exception in key " + key + ", proceeding...");
 			return returnedMweList;
-			//e1.printStackTrace();
+			// e1.printStackTrace();
 		}
 
 		if (mweList != null) {

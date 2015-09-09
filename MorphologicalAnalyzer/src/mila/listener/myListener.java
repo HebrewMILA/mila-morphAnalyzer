@@ -23,8 +23,7 @@ public class myListener implements ServletContextListener {
 		try {
 			String s = null;
 
-			Process p = Runtime.getRuntime().exec(
-					" /home/daliabo/meni5/runServer.sh");
+			Process p = Runtime.getRuntime().exec(" /home/daliabo/meni5/runServer.sh");
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

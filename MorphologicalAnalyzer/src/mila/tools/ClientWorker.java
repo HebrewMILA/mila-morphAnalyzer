@@ -1,4 +1,5 @@
 package mila.tools;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -57,10 +58,8 @@ public class ClientWorker implements Runnable {
 		// Tokenize and Analyze
 		// //////////////////////////////////////////////////////////////////
 		try {
-			sin = new BufferedReader(new InputStreamReader(
-					client.getInputStream()));
-			sout = new PrintWriter(new OutputStreamWriter(
-					client.getOutputStream(), "UTF8"), true);
+			sin = new BufferedReader(new InputStreamReader(client.getInputStream()));
+			sout = new PrintWriter(new OutputStreamWriter(client.getOutputStream(), "UTF8"), true);
 
 			// analysisStr = readInputFile1(client.getInputStream());
 
@@ -78,7 +77,8 @@ public class ClientWorker implements Runnable {
 			}
 
 			analysisStr = analysis.toString();
-			// System.out.println("***********************ClientWorker: analysis="+analysisStr);
+			// System.out.println("***********************ClientWorker:
+			// analysis="+analysisStr);
 			java.io.InputStream in = null;
 			in = new java.io.ByteArrayInputStream(analysisStr.getBytes("UTF-8"));
 			StringWriter sw = new StringWriter();
@@ -94,7 +94,8 @@ public class ClientWorker implements Runnable {
 													// insted of the line above
 
 			// System.out.println("************************************************************");
-			// System.out.println("tokensNum \t tokenization&analysing \t morph2HMM \t tagger \tHMM2Morph \t total");
+			// System.out.println("tokensNum \t tokenization&analysing \t
+			// morph2HMM \t tagger \tHMM2Morph \t total");
 			// System.out.println();
 			// System.out.print("\t"+tokensNumber);
 
@@ -118,8 +119,7 @@ public class ClientWorker implements Runnable {
 			String result = sw.toString();
 
 			// System.out.println("(F) ClientWorker: post-processing...");
-			InputStream myin = new java.io.ByteArrayInputStream(
-					result.getBytes("UTF-8"));
+			InputStream myin = new java.io.ByteArrayInputStream(result.getBytes("UTF-8"));
 			StringWriter ppSW = new StringWriter();
 			PrintWriter ppPW = new PrintWriter(ppSW);
 			PostProcessor1 p = new PostProcessor1(true); // true uses the data
@@ -138,13 +138,11 @@ public class ClientWorker implements Runnable {
 			// int randomValue = generator.nextInt();
 			// String randomValStr = String.valueOf(randomValue);
 			File tempFile = null;
-			String path = File.separator + System.getProperty("user.dir")
-					+ File.separator + "/tmp";
+			String path = File.separator + System.getProperty("user.dir") + File.separator + "/tmp";
 			File tempDirectory = new File(path);
 			// File tempDirectory= new File("/tmp");
 			try {
-				tempFile = File.createTempFile("mydir",
-						"ClientServerHMMTagger", tempDirectory);
+				tempFile = File.createTempFile("mydir", "ClientServerHMMTagger", tempDirectory);
 				if (!tempFile.delete())
 					throw new IOException();
 				// tempFile.mkdir();
@@ -153,8 +151,7 @@ public class ClientWorker implements Runnable {
 				tempDirectoryPath = tempFile.getAbsolutePath();
 				// System.out.println("tempDirectoryPath="+ tempDirectoryPath);
 			} catch (IOException ex) {
-				System.err.println("Cannot create temp file: "
-						+ ex.getMessage());
+				System.err.println("Cannot create temp file: " + ex.getMessage());
 				ex.printStackTrace();
 				System.exit(-1);
 			}
@@ -172,9 +169,16 @@ public class ClientWorker implements Runnable {
 			String dprefixesFile = "dataFiles/dprefixes.data";
 			// String taggerFormat = mm.myMorp2Tagger(result,
 			// tempDirectoryPath); // convert to TAGGER format
-			String taggerFormat = mm.myMorp2Tagger(postProcessorResult,
-					tempDirectoryPath); // convert to TAGGER format NEW with
-										// post processor 27.7.11 -yossi
+			String taggerFormat = mm.myMorp2Tagger(postProcessorResult, tempDirectoryPath); // convert
+																							// to
+																							// TAGGER
+																							// format
+																							// NEW
+																							// with
+																							// post
+																							// processor
+																							// 27.7.11
+																							// -yossi
 			String taggerInputFile = tempDirectoryPath + taggerFormat;
 
 			// Added by Gennadi 03/11/2008
@@ -183,8 +187,7 @@ public class ClientWorker implements Runnable {
 			String TaggerLOFDir = null;
 			HMMTaggerDir = System.getProperty("user.dir") + File.separator;
 			RoyTaggerDir = HMMTaggerDir + File.separator + "royTagger";
-			TaggerLOFDir = HMMTaggerDir + File.separator
-					+ "taggerLearningOutputFile";
+			TaggerLOFDir = HMMTaggerDir + File.separator + "taggerLearningOutputFile";
 			// End Added by Gennadi 03/11/2008
 
 			long endHMMTagger = 0;
@@ -211,11 +214,9 @@ public class ClientWorker implements Runnable {
 				// in order to avoid tmp files creation - add the option -rmtmp
 				// before taggerInputFile
 
-				String command = "perl -I" + RoyTaggerDir + " " + RoyTaggerDir
-						+ File.separator + "MTTest.pl -dir " + RoyTaggerDir
-						+ File.separator + "workdir  -rmtmp " + taggerInputFile
-						+ " " + TaggerLOFDir + File.separator + "corpus.lm "
-						+ TaggerLOFDir + File.separator + "corpus.lex.prob";
+				String command = "perl -I" + RoyTaggerDir + " " + RoyTaggerDir + File.separator + "MTTest.pl -dir "
+						+ RoyTaggerDir + File.separator + "workdir  -rmtmp " + taggerInputFile + " " + TaggerLOFDir
+						+ File.separator + "corpus.lm " + TaggerLOFDir + File.separator + "corpus.lex.prob";
 
 				// End Added by Gennadi 03/11/2008
 
@@ -244,8 +245,7 @@ public class ClientWorker implements Runnable {
 			String homeDirectoy = new java.io.File(".").getCanonicalPath();
 			// System.out.println("My home directory=" + homeDirectoy);
 			// System.out.println("ClientWorker: file = " + fileName);
-			String taggedFile = homeDirectoy + "/royTagger/workdir"
-					+ "/tagging-" + fileName;
+			String taggedFile = homeDirectoy + "/royTagger/workdir" + "/tagging-" + fileName;
 
 			// sw = new StringWriter(); // this seems to be dead code not needed
 			// (07.04.11 commented by yossi)

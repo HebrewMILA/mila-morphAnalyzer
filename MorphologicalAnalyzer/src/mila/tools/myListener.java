@@ -1,4 +1,5 @@
 package mila.tools;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -22,8 +23,7 @@ public class myListener implements ServletContextListener {
 		try {
 			String s = null;
 
-			Process p = Runtime.getRuntime().exec(
-					" /home/gtabajah/mennyTagger/runServer.sh");
+			Process p = Runtime.getRuntime().exec(" /home/gtabajah/mennyTagger/runServer.sh");
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

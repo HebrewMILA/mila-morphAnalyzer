@@ -31,8 +31,7 @@ public class Inflections implements Serializable {
 
 	public void put(String key, String inflectRecord) {
 		if (inflectRecord == null)
-			throw new RuntimeException("Bad idea! You tried to insert "
-					+ "a null object into a Chain!");
+			throw new RuntimeException("Bad idea! You tried to insert " + "a null object into a Chain!");
 		// System.out.println("key=" + key);
 		// The first element on the chain
 		if (!map.containsKey(key)) {
@@ -59,8 +58,7 @@ public class Inflections implements Serializable {
 
 	public void sput(String key, ArrayList<String> inflectRecordChain) {
 		if (inflectRecordChain == null)
-			throw new RuntimeException("Bad idea! You tried to insert "
-					+ "a null object into a Chain!");
+			throw new RuntimeException("Bad idea! You tried to insert " + "a null object into a Chain!");
 		map.put(key, inflectRecordChain);
 	}
 

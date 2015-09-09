@@ -68,8 +68,7 @@ public class HMM2Morph {
 	double MWECounter = 0.0;
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public String analyzeHMMLine(final String hmmSentence,
-			ArrayList<String> hmmPrefixList) {
+	public String analyzeHMMLine(final String hmmSentence, ArrayList<String> hmmPrefixList) {
 		String hmmToken1 = "";
 		String hmmToken2 = "";
 		String hmmTranlsiteratedToken = "";
@@ -146,8 +145,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public int checkPos(final AnalysisType analysis, final String hmmPos,
-			int scoreCounter) throws Exception {
+	public int checkPos(final AnalysisType analysis, final String hmmPos, int scoreCounter) throws Exception {
 		BaseType base = analysis.getBase();
 		if (base.getPunctuation() != null) {
 			analysis.setScore(1.0);
@@ -277,8 +275,7 @@ public class HMM2Morph {
 				if (base.getVerb() != null) {
 					VerbType verb = base.getVerb();
 					String tense = verb.getTense();
-					if (tense != null && tense.charAt(0) == 'i'
-							&& tense.charAt(1) == 'n') {
+					if (tense != null && tense.charAt(0) == 'i' && tense.charAt(1) == 'n') {
 						analysis.setScore(1.0);
 						scoreCounter++;
 					}
@@ -296,8 +293,7 @@ public class HMM2Morph {
 					ParticipleType participle = base.getParticiple();
 					String participleTypeType = participle.getType();
 
-					if (participleTypeType != null
-							&& participleTypeType.charAt(0) == 'v') {
+					if (participleTypeType != null && participleTypeType.charAt(0) == 'v') {
 						analysis.setScore(1.0);
 						scoreCounter++;
 					}
@@ -332,8 +328,7 @@ public class HMM2Morph {
 						analysis.setScore(1.0);
 						scoreCounter++;
 					}
-				} else if (analysis.getSuffix() == null
-						&& base.getParticiple() != null) {
+				} else if (analysis.getSuffix() == null && base.getParticiple() != null) {
 					ParticipleType participle = base.getParticiple();
 					String participleType = participle.getType();
 					if (participleType.charAt(0) == 'n') {
@@ -353,14 +348,12 @@ public class HMM2Morph {
 						analysis.setScore(1.0);
 						scoreCounter++;
 					}
-				} else if (analysis.getSuffix() == null
-						&& base.getParticiple() != null) {
+				} else if (analysis.getSuffix() == null && base.getParticiple() != null) {
 					ParticipleType participle = base.getParticiple();
 					String participleType = participle.getType();
 					if (participleType.charAt(0) == 'n') {
 						String definiteness = participle.getDefiniteness();
-						if (definiteness != null
-								&& definiteness.charAt(0) == 't') {
+						if (definiteness != null && definiteness.charAt(0) == 't') {
 							analysis.setScore(1.0);
 							scoreCounter++;
 						}
@@ -372,8 +365,7 @@ public class HMM2Morph {
 					analysis.setScore(1.0);
 					scoreCounter++;
 
-				} else if (base.getParticiple() != null
-						&& analysis.getSuffix() != null) {
+				} else if (base.getParticiple() != null && analysis.getSuffix() != null) {
 					analysis.setScore(1.0);
 					scoreCounter++;
 				}
@@ -383,22 +375,18 @@ public class HMM2Morph {
 					GenderNumberStatusDefinitenessType noun = base.getNoun();
 					String status = noun.getStatus();
 					String definiteness = noun.getDefiniteness();
-					if (status != null && definiteness != null
-							&& status.charAt(0) == 'a'
-							&& definiteness.charAt(0) == 'f'
-							&& analysis.getSuffix() == null) {
+					if (status != null && definiteness != null && status.charAt(0) == 'a'
+							&& definiteness.charAt(0) == 'f' && analysis.getSuffix() == null) {
 						analysis.setScore(1.0);
 						scoreCounter++;
 					}
-				} else if (analysis.getSuffix() == null
-						&& base.getParticiple() != null) {
+				} else if (analysis.getSuffix() == null && base.getParticiple() != null) {
 					ParticipleType participle = base.getParticiple();
 					String participleType = participle.getType();
 					String status = participle.getStatus();
 					String definiteness = participle.getDefiniteness();
 					if (participleType.charAt(0) == 'n') {
-						if (status != null && definiteness != null
-								&& status.charAt(0) == 'a'
+						if (status != null && definiteness != null && status.charAt(0) == 'a'
 								&& definiteness.charAt(0) == 'f') {
 							analysis.setScore(1.0);
 							scoreCounter++;
@@ -410,8 +398,7 @@ public class HMM2Morph {
 				break;
 			case ADJECTIVEDEF:
 				if (base.getAdjective() != null) {
-					GenderNumberStatusDefinitenessType adjective = base
-							.getAdjective();
+					GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 					String definiteness = adjective.getDefiniteness();
 					if (definiteness != null && definiteness.charAt(0) == 't') {
 						analysis.setScore(1.0);
@@ -422,8 +409,7 @@ public class HMM2Morph {
 					String participleType = participle.getType();
 					if (participleType.charAt(0) == 'a') {
 						String definiteness = participle.getDefiniteness();
-						if (definiteness != null
-								&& definiteness.charAt(0) == 't') {
+						if (definiteness != null && definiteness.charAt(0) == 't') {
 							analysis.setScore(1.0);
 							scoreCounter++;
 						}
@@ -432,8 +418,7 @@ public class HMM2Morph {
 				break;
 			case ADJECTIVECONST:
 				if (base.getAdjective() != null) {
-					GenderNumberStatusDefinitenessType adjective = base
-							.getAdjective();
+					GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 					String status = adjective.getStatus();
 					if (status != null && status.charAt(0) == 'c') {
 						analysis.setScore(1.0);
@@ -454,12 +439,10 @@ public class HMM2Morph {
 				break;
 			case ADJECTIVE:
 				if (base.getAdjective() != null) {
-					GenderNumberStatusDefinitenessType adjective = base
-							.getAdjective();
+					GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 					String status = adjective.getStatus();
 					String definiteness = adjective.getDefiniteness();
-					if (status != null && definiteness != null
-							&& status.charAt(0) == 'a' // absolute
+					if (status != null && definiteness != null && status.charAt(0) == 'a' // absolute
 							&& definiteness.charAt(0) == 'f') {
 						analysis.setScore(1.0);
 						scoreCounter++;
@@ -470,8 +453,7 @@ public class HMM2Morph {
 					String status = participle.getStatus();
 					String definiteness = participle.getDefiniteness();
 					if (participleType.charAt(0) == 'a') {
-						if (status != null && definiteness != null
-								&& status.charAt(0) == 'a' // absolute
+						if (status != null && definiteness != null && status.charAt(0) == 'a' // absolute
 								&& definiteness.charAt(0) == 'f') {
 							analysis.setScore(1.0);
 							scoreCounter++;
@@ -482,8 +464,7 @@ public class HMM2Morph {
 				break;
 			case PARTICIPLEDEF:
 				String definiteness = "";
-				if (analysis.getSuffix() == null
-						&& base.getParticiple() != null
+				if (analysis.getSuffix() == null && base.getParticiple() != null
 						&& (base.getParticiple()).getType().charAt(0) != 'v') {
 					ParticipleType participle = base.getParticiple();
 					definiteness = participle.getDefiniteness();
@@ -491,8 +472,7 @@ public class HMM2Morph {
 						analysis.setScore(1.0);
 						scoreCounter++;
 					}
-				} else if (analysis.getSuffix() == null
-						&& base.getNoun() != null) {
+				} else if (analysis.getSuffix() == null && base.getNoun() != null) {
 					GenderNumberStatusDefinitenessType noun = base.getNoun();
 					definiteness = noun.getDefiniteness();
 					if (definiteness != null && definiteness.charAt(0) == 't') {
@@ -500,8 +480,7 @@ public class HMM2Morph {
 						scoreCounter++;
 					}
 				} else if (base.getAdjective() != null) {
-					GenderNumberStatusDefinitenessType adjective = base
-							.getAdjective();
+					GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 					definiteness = adjective.getDefiniteness();
 					if (definiteness != null && definiteness.charAt(0) == 't') {
 						analysis.setScore(1.0);
@@ -510,21 +489,17 @@ public class HMM2Morph {
 				}
 				break;
 			case PARTICIPLECONST:
-				if (analysis.getSuffix() == null
-						&& base.getParticiple() != null) {
+				if (analysis.getSuffix() == null && base.getParticiple() != null) {
 					ParticipleType participle = base.getParticiple();
 					String participleTypeType = participle.getType();
-					if (participleTypeType != null
-							&& participleTypeType.charAt(0) != 'v') {
+					if (participleTypeType != null && participleTypeType.charAt(0) != 'v') {
 						String status = participle.getStatus();
-						if (participleTypeType != null
-								&& status.charAt(0) == 'c') {
+						if (participleTypeType != null && status.charAt(0) == 'c') {
 							analysis.setScore(1.0);
 							scoreCounter++;
 						}
 					}
-				} else if (analysis.getSuffix() == null
-						&& base.getNoun() != null) {
+				} else if (analysis.getSuffix() == null && base.getNoun() != null) {
 					GenderNumberStatusDefinitenessType noun = base.getNoun();
 					String status = noun.getStatus();
 					if (status != null && status.charAt(0) == 'c') {
@@ -532,8 +507,7 @@ public class HMM2Morph {
 						scoreCounter++;
 					}
 				} else if (base.getAdjective() != null) {
-					GenderNumberStatusDefinitenessType adjective = base
-							.getAdjective();
+					GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 					String status = adjective.getStatus();
 					if (status != null && status.charAt(0) == 'c') {
 						analysis.setScore(1.0);
@@ -542,21 +516,17 @@ public class HMM2Morph {
 				}
 				break;
 			case PARTICIPLE:
-				if (analysis.getSuffix() == null
-						&& base.getParticiple() != null) {
+				if (analysis.getSuffix() == null && base.getParticiple() != null) {
 					ParticipleType participle = base.getParticiple();
 					String participleTypeType = participle.getType();
-					if (participleTypeType != null
-							&& participleTypeType.charAt(0) != 'v') {
+					if (participleTypeType != null && participleTypeType.charAt(0) != 'v') {
 						definiteness = participle.getDefiniteness();
-						if (participleTypeType != null
-								&& definiteness.charAt(0) == 'f') {
+						if (participleTypeType != null && definiteness.charAt(0) == 'f') {
 							analysis.setScore(1.0);
 							scoreCounter++;
 						}
 					}
-				} else if (analysis.getSuffix() == null
-						&& base.getNoun() != null) {
+				} else if (analysis.getSuffix() == null && base.getNoun() != null) {
 					GenderNumberStatusDefinitenessType noun = base.getNoun();
 					String status = noun.getStatus();
 					if (status != null && status.charAt(0) == 'a') {
@@ -564,8 +534,7 @@ public class HMM2Morph {
 						scoreCounter++;
 					}
 				} else if (base.getAdjective() != null) {
-					GenderNumberStatusDefinitenessType adjective = base
-							.getAdjective();
+					GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 					String status = adjective.getStatus();
 					if (status != null && status.charAt(0) == 'a') {
 						analysis.setScore(1.0);
@@ -579,8 +548,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private boolean checkPrefix(final AnalysisType analysis,
-			final ArrayList<String> hmmPrefixList) {
+	private boolean checkPrefix(final AnalysisType analysis, final ArrayList<String> hmmPrefixList) {
 		boolean rt = false;
 		int morphPrefixListSize = 0;
 		int hmmPrefixListSize = 0;
@@ -596,8 +564,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleAdjectiveAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleAdjectiveAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -623,8 +590,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleAdjectiveConstAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleAdjectiveConstAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -648,8 +614,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleAdjectiveDefAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleAdjectiveDefAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -698,8 +663,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleConjunctionAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleConjunctionAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -750,8 +714,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleExistentialAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleExistentialAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -778,8 +741,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleInterjectionAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleInterjectionAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -803,8 +765,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleInterrogativeAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleInterrogativeAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -930,8 +891,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNounConstAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleNounConstAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -981,8 +941,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNounPossessiveAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleNounPossessiveAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1041,8 +1000,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleParticipleAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleParticipleAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1067,8 +1025,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleParticipleDefAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleParticipleDefAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1093,16 +1050,14 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public void handlePrefixProperNameAnalysis(TokenType token,
-			String morphSurface, double score) {
+	public void handlePrefixProperNameAnalysis(TokenType token, String morphSurface, double score) {
 		AnalysisType analysis = null;
 		try {
 			int surfaceLen = morphSurface.length();
 			for (int i = 1; i < 6 && i < surfaceLen; i++) {
 				String properNamePrefix = morphSurface.substring(0, i);
 
-				String transliteratedproperNamePrefix = Translate
-						.Heb2Eng(properNamePrefix);
+				String transliteratedproperNamePrefix = Translate.Heb2Eng(properNamePrefix);
 				if (StringUtils.moshevkaleb(transliteratedproperNamePrefix)) {
 					ObjectFactory objFactory = null;
 					objFactory = new ObjectFactory();
@@ -1121,8 +1076,7 @@ public class HMM2Morph {
 
 					int prefixListSize = 0;
 					try {
-						prefixListSize = Data
-								.getPrefixes(transliteratedproperNamePrefix);
+						prefixListSize = Data.getPrefixes(transliteratedproperNamePrefix);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -1138,16 +1092,15 @@ public class HMM2Morph {
 							try {
 								list = Translate.analyzeMixedHebEng(description);
 							} catch (UnsupportedEncodingException e) {
-								System.out
-										.println("CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description="
+								System.out.println(
+										"CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description="
 												+ description);
 								e.printStackTrace();
 							}
 							int size = list.size();
 
 							for (int prefixesCounter = 0; prefixesCounter < size; prefixesCounter++) {
-								PrefixRec prefixRec = (PrefixRec) list
-										.get(prefixesCounter);
+								PrefixRec prefixRec = (PrefixRec) list.get(prefixesCounter);
 								String prefixSurface = prefixRec.getSurface();
 								String prefixFunction = prefixRec.getFunction();
 								PrefixType pref = objFactory.createPrefixType();
@@ -1173,8 +1126,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handlePrepositionAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handlePrepositionAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1221,8 +1173,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleProperNameAnalysis(String surface,
-			String analysisId, double score) {
+	public AnalysisType handleProperNameAnalysis(String surface, String analysisId, double score) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1248,8 +1199,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleProperNameDefAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleProperNameDefAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1275,8 +1225,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleQuantifierAnalysis(String surface,
-			String analysisId) {
+	public AnalysisType handleQuantifierAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1423,7 +1372,8 @@ public class HMM2Morph {
 
 	// -----------------------------------------------------------------------------------------------------------------
 	public void marshalAnalysis(JAXBContext jc, Corpus collection) {
-		// System.out.println("(F) HMM2Morph:marshalAnalysis(JAXBContext jc, Corpus collection)");
+		// System.out.println("(F) HMM2Morph:marshalAnalysis(JAXBContext jc,
+		// Corpus collection)");
 		FileOutputStream out = null;
 		OutputStreamWriter pOut = null;
 		try {
@@ -1459,9 +1409,9 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public void marshalAnalysis(JAXBContext jc, Corpus collection,
-			PrintWriter pw) {
-		// System.out.println("(F) HMM2Morph:marshalAnalysis(JAXBContext jc, Corpus collection,PrintWriter pw)");
+	public void marshalAnalysis(JAXBContext jc, Corpus collection, PrintWriter pw) {
+		// System.out.println("(F) HMM2Morph:marshalAnalysis(JAXBContext jc,
+		// Corpus collection,PrintWriter pw)");
 		Marshaller m = null;
 
 		try {
@@ -1486,43 +1436,31 @@ public class HMM2Morph {
 			List<ParagraphType> paragraphTypeList = article.getParagraph();
 			int paragraphTypeListSize = paragraphTypeList.size();
 			for (int paragraphIndex = 0; paragraphIndex < paragraphTypeListSize; paragraphIndex++) {
-				ParagraphType paragraph = (ParagraphType) paragraphTypeList
-						.get(paragraphIndex);
+				ParagraphType paragraph = (ParagraphType) paragraphTypeList.get(paragraphIndex);
 				List<SentenceType> sentenceTypeList = paragraph.getSentence();
 				int sentenceTypeListSize = sentenceTypeList.size();
 				for (int sentenceIndex = 0; sentenceIndex < sentenceTypeListSize; sentenceIndex++) {
-					SentenceType sentence = (SentenceType) sentenceTypeList
-							.get(sentenceIndex);
+					SentenceType sentence = (SentenceType) sentenceTypeList.get(sentenceIndex);
 					List<TokenType> tokenTypeList = sentence.getToken();
 					int tokenTypeListSize = tokenTypeList.size();
 					for (int tokenIndex = 0; tokenIndex < tokenTypeListSize; tokenIndex++) {
-						System.out
-								.println("Token #################################");
-						TokenType token = (TokenType) tokenTypeList
-								.get(tokenIndex);
+						System.out.println("Token #################################");
+						TokenType token = (TokenType) tokenTypeList.get(tokenIndex);
 						List<AnalysisType> analysisTypeList = token.getAnalysis();
 						int analysisTypeListSize = analysisTypeList.size();
 						for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-							AnalysisType analysis = (AnalysisType) analysisTypeList
-									.get(analysisIndex);
+							AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 							if (analysis != null) {
 
 								if (analysis.getBase() != null) {
-									System.out.println("LexiconItem = "
-											+ analysis.getBase()
-													.getLexiconItem());
-									System.out
-											.println("Dog Transliterated --> "
-													+ analysis
-															.getBase()
-															.getTransliteratedLexiconItem());
+									System.out.println("LexiconItem = " + analysis.getBase().getLexiconItem());
+									System.out.println("Dog Transliterated --> "
+											+ analysis.getBase().getTransliteratedLexiconItem());
 								} else {
-									System.out
-											.println("Fuck me analysis.getBase() is NULL dog !!");
+									System.out.println("Fuck me analysis.getBase() is NULL dog !!");
 								}
 							} else {
-								System.out
-										.println("Fuck me analysis is NULL dog !!");
+								System.out.println("Fuck me analysis is NULL dog !!");
 							}
 						}
 					}
@@ -1534,8 +1472,7 @@ public class HMM2Morph {
 			 */
 
 			m.marshal(collection, pw);
-			System.out
-					.println("==========================================================");
+			System.out.println("==========================================================");
 		} catch (JAXBException e3) {
 			e3.printStackTrace();
 		}
@@ -1577,8 +1514,7 @@ public class HMM2Morph {
 	// }
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public Corpus parseXML(final JAXBContext jc, final InputStream in)
-			throws Exception {
+	public Corpus parseXML(final JAXBContext jc, final InputStream in) throws Exception {
 		List<ArticleType> articleTypeList;
 		List<ParagraphType> paragraphTypeList;
 		List<SentenceType> sentenceTypeList;
@@ -1601,20 +1537,18 @@ public class HMM2Morph {
 		paragraphTypeList = (List<ParagraphType>) article.getParagraph();
 		int paragraphTypeListSize = paragraphTypeList.size();
 		for (int paragraphIndex = 0; paragraphIndex < paragraphTypeListSize; paragraphIndex++) {
-			ParagraphType paragraph = (ParagraphType) paragraphTypeList
-					.get(paragraphIndex);
-			sentenceTypeList = (List<SentenceType>)paragraph.getSentence();
+			ParagraphType paragraph = (ParagraphType) paragraphTypeList.get(paragraphIndex);
+			sentenceTypeList = (List<SentenceType>) paragraph.getSentence();
 			int sentenceTypeListSize = sentenceTypeList.size();
 			for (int sentenceIndex = 0; sentenceIndex < sentenceTypeListSize; sentenceIndex++) {
 				// ///////////////////////////////////////////
 				hmmSentence = bi.readLine();
 				// ///////////////////////////////////////////
-				SentenceType sentence = (SentenceType) sentenceTypeList
-						.get(sentenceIndex);
+				SentenceType sentence = (SentenceType) sentenceTypeList.get(sentenceIndex);
 				tokenTypeList = (List<TokenType>) sentence.getToken();
 				int tokenTypeListSize = tokenTypeList.size();
-				if (hmmSentence==null){
-					//System.out.println("1111111111 hmmSentence is null");
+				if (hmmSentence == null) {
+					// System.out.println("1111111111 hmmSentence is null");
 					continue;
 				}
 				StringTokenizer hmmstSentence = new StringTokenizer(hmmSentence, "][");
@@ -1640,43 +1574,34 @@ public class HMM2Morph {
 						boolean unknownFlag = false;
 						for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
 							unknownFlag = false;
-							AnalysisType analysis = (AnalysisType) analysisTypeList
-									.get(analysisIndex);
+							AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 							analysis.setScore(0.0);
 
-							if (analysis.getBase() == null
-									&& analysis.getPrefix() != null) {
-								if (prefixSpecialCases(tokenTypeList,
-										tokenTypeListSize, tokenIndex,
-										analysis, analysisIndex, hmmPrefixList,
-										hmmPos))
+							if (analysis.getBase() == null && analysis.getPrefix() != null) {
+								if (prefixSpecialCases(tokenTypeList, tokenTypeListSize, tokenIndex, analysis,
+										analysisIndex, hmmPrefixList, hmmPos))
 									scoreCounter++;
 
 							} else if (analysis.getBase().getForeign() != null) {
 								analysis.setScore(1.0);
 								scoreCounter = 1;
-							} else if (analysis.getBase() != null
-									&& analysis.getBase().getMWE() != null) {
-								scoreCounter = checkPos(analysis, hmmPos,
-										scoreCounter);
+							} else if (analysis.getBase() != null && analysis.getBase().getMWE() != null) {
+								scoreCounter = checkPos(analysis, hmmPos, scoreCounter);
 
 							} else if (analysis.getBase().getUnknown() != null) {
 								unknownFlag = true;
 								token.getAnalysis().remove(analysisIndex);
 								analysisTypeListSize--;
 
-							} else if (analysis.getBase() != null
-									&& checkPrefix(analysis, hmmPrefixList)) {
-								scoreCounter = checkPos(analysis, hmmPos,
-										scoreCounter);
+							} else if (analysis.getBase() != null && checkPrefix(analysis, hmmPrefixList)) {
+								scoreCounter = checkPos(analysis, hmmPos, scoreCounter);
 							}
 						}
 						double score = scoreCounter;
 						if (score > 1 && MWECounter == 0.0) {
 							score = 1.0 / scoreCounter;
 							for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-								AnalysisType analysis = (AnalysisType) analysisTypeList
-										.get(analysisIndex);
+								AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 								double scoreValue = analysis.getScore();
 								if (scoreValue != 0.0)
 									analysis.setScore(score);
@@ -1684,10 +1609,8 @@ public class HMM2Morph {
 						} else if (score > 1 && MWECounter > 0.0) {
 							score = 1.0 / MWECounter;
 							for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-								AnalysisType analysis = (AnalysisType) analysisTypeList
-										.get(analysisIndex);
-								if ((analysis.getBase() != null && analysis
-										.getBase().getMWE() == null)
+								AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
+								if ((analysis.getBase() != null && analysis.getBase().getMWE() == null)
 										|| analysis.getBase() == null) {
 									analysis.setScore(0.0);
 								} else
@@ -1697,161 +1620,125 @@ public class HMM2Morph {
 
 						} else if (scoreCounter == 0) {
 							AnalysisType newAnalysis = null;
-							ENUM_HMMPOS hmmPosi = Str2Num.str2numHMMPOS(hmmPos,
-									hmmPos, hmmPos);
-							String newAnalysisIndex = String
-									.valueOf(analysisTypeListSize + 1);
+							ENUM_HMMPOS hmmPosi = Str2Num.str2numHMMPOS(hmmPos, hmmPos, hmmPos);
+							String newAnalysisIndex = String.valueOf(analysisTypeListSize + 1);
 							switch (hmmPosi) {
 							case PRONOUN:
-								newAnalysis = handlePronounAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handlePronounAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PROPERNAME:
-								if (unknownFlag
-										&& morphSurface.charAt(0) == 'ה') {
-									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(
-											morphSurface, newAnalysisIndex);
+								if (unknownFlag && morphSurface.charAt(0) == 'ה') {
+									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface,
+											newAnalysisIndex);
 									token.getAnalysis().add(newAnalysis1);
 								} else if (unknownFlag) {
 									if (hmmPrefixListSize > 0)
 										score = 1.0;
 									else
 										score = 0.0;
-									handlePrefixProperNameAnalysis(token,
-											morphSurface, score);
+									handlePrefixProperNameAnalysis(token, morphSurface, score);
 								}
-								newAnalysis = handleProperNameAnalysis(
-										morphSurface, newAnalysisIndex, 1.0);
+								newAnalysis = handleProperNameAnalysis(morphSurface, newAnalysisIndex, 1.0);
 
 								break;
 
 							case PROPERNAMEDEF:
 								if (unknownFlag) {
-									AnalysisType newAnalysis1 = handleProperNameAnalysis(
-											morphSurface, newAnalysisIndex, 1.0);
+									AnalysisType newAnalysis1 = handleProperNameAnalysis(morphSurface, newAnalysisIndex,
+											1.0);
 									token.getAnalysis().add(newAnalysis1);
 								}
-								newAnalysis = handleProperNameDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleProperNameDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case QUANTIFIER:
-								newAnalysis = handleQuantifierAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleQuantifierAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case TITLE:
-								newAnalysis = handleTitleAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleTitleAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NUMERAL:
-								newAnalysis = handleNumeralAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNumeralAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case EXISTENTIAL:
-								newAnalysis = handleExistentialAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleExistentialAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case MODAL:
-								newAnalysis = handleModalAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleModalAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case COPULA:
-								newAnalysis = handleCopulaAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleCopulaAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case CONJUNCTION:
-								newAnalysis = handleConjunctionAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleConjunctionAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case INTERROGATIVE:
-								newAnalysis = handleInterrogativeAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleInterrogativeAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case INTERJECTION:
-								newAnalysis = handleInterjectionAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleInterjectionAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADJECTIVE:
-								newAnalysis = handleAdjectiveAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdjectiveAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADJECTIVEDEF:
-								newAnalysis = handleAdjectiveDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdjectiveDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADJECTIVECONST:
-								newAnalysis = handleAdjectiveConstAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdjectiveConstAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUN:
-								newAnalysis = handleNounAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleNounAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUNDEF:
-								newAnalysis = handleNounDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNounDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUNCONST:
-								newAnalysis = handleNounConstAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNounConstAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUNPOSSESSIVE:
-								newAnalysis = handleNounPossessiveAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNounPossessiveAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADVERB:
-								newAnalysis = handleAdverbAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdverbAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PREPOSITION:
-								newAnalysis = handlePrepositionAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handlePrepositionAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NEGATION:
-								newAnalysis = handleNegationAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNegationAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case WPREFIX:
-								newAnalysis = handleWprefixAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleWprefixAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PARTICIPLE:
-								newAnalysis = handleParticipleAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleParticipleAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PARTICIPLEDEF:
-								newAnalysis = handleParticipleDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleParticipleDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case VERB:
-								newAnalysis = handleVerbAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleVerbAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case VERBINF:
-								newAnalysis = handleVerbInfAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleVerbInfAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case MULTIWORD:
-								newAnalysis = handleMWEAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleMWEAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							default:
-								throw new RuntimeException(
-										"switch exc, hmmPosi is "
-												+ hmmPosi.toString());
+								throw new RuntimeException("switch exc, hmmPosi is " + hmmPosi.toString());
 							}
 
 							token.getAnalysis().add(newAnalysis);
 						}
 
 					} catch (Exception e) {
-						System.out
-								.println("%%% GO GO GADGET BLANKET EXCPETION CATCH %%%");
+						System.out.println("%%% GO GO GADGET BLANKET EXCPETION CATCH %%%");
 						e.printStackTrace(System.out);
-						System.out
-								.println("%%% END IGNORED ANALYSIS EXCEPTION");
+						System.out.println("%%% END IGNORED ANALYSIS EXCEPTION");
 						continue;
 					}
-				}// end token
+				} // end token
 			}
 			hmmSentence = bi.readLine();
 		}
@@ -1871,9 +1758,10 @@ public class HMM2Morph {
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public Corpus parseXML(final JAXBContext jc, final InputStream in,
-			final String dprefixesFile, String taggedFilePath) {
-		// System.out.println("(F) HMM2MORPH.parseXML Perl program output file "+
+	public Corpus parseXML(final JAXBContext jc, final InputStream in, final String dprefixesFile,
+			String taggedFilePath) {
+		// System.out.println("(F) HMM2MORPH.parseXML Perl program output file
+		// "+
 		// taggedFilePath);
 		String hmmSentence = "";
 		Corpus collection = null;
@@ -1902,42 +1790,39 @@ public class HMM2Morph {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		articleTypeList = (List<AnalysisType>)collection.getArticle();
+		articleTypeList = (List<AnalysisType>) collection.getArticle();
 		ArticleType article = (ArticleType) articleTypeList.get(0);
 		String morphSurface = "";
 		String hmmPos = "";
 		Data.init(dprefixesFile);
 
-		paragraphTypeList = (List<ParagraphType>)article.getParagraph();
+		paragraphTypeList = (List<ParagraphType>) article.getParagraph();
 		int paragraphTypeListSize = paragraphTypeList.size();
 		for (int paragraphIndex = 0; paragraphIndex < paragraphTypeListSize; paragraphIndex++) {
-			ParagraphType paragraph = (ParagraphType) paragraphTypeList
-					.get(paragraphIndex);
+			ParagraphType paragraph = (ParagraphType) paragraphTypeList.get(paragraphIndex);
 			sentenceTypeList = paragraph.getSentence();
 			int sentenceTypeListSize = sentenceTypeList.size();
 			for (int sentenceIndex = 0; sentenceIndex < sentenceTypeListSize; sentenceIndex++) {
 				// ///////////////////////////////////////////
 				try {
 					hmmSentence = bi.readLine();
-					// System.out.println("(F) HMM2Morph.parseXML() hmmSentence = "+
+					// System.out.println("(F) HMM2Morph.parseXML() hmmSentence
+					// = "+
 					// hmmSentence);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 				// ///////////////////////////////////////////
-				SentenceType sentence = (SentenceType) sentenceTypeList
-						.get(sentenceIndex);
+				SentenceType sentence = (SentenceType) sentenceTypeList.get(sentenceIndex);
 				tokenTypeList = sentence.getToken();
 				int tokenTypeListSize = tokenTypeList.size();
 				if (hmmSentence == null)
 					hmmSentence = "";// System.out.println("AURIKA DOG");
-				StringTokenizer hmmstSentence = new StringTokenizer(
-						hmmSentence, "][");
+				StringTokenizer hmmstSentence = new StringTokenizer(hmmSentence, "][");
 				for (int tokenIndex = 0; tokenIndex < tokenTypeListSize; tokenIndex++) {
 					try {
 						MWECounter = 0.0;
-						TokenType token = (TokenType) tokenTypeList
-								.get(tokenIndex);
+						TokenType token = (TokenType) tokenTypeList.get(tokenIndex);
 						// System.out.println(token);
 						morphSurface = token.getSurface();
 						// System.out.println("morphSurface=" + morphSurface);
@@ -1953,16 +1838,18 @@ public class HMM2Morph {
 
 						ArrayList<String> hmmPrefixList = new ArrayList<String>();
 						hmmPos = analyzeHMMLine(hmmToken, hmmPrefixList);
-						// System.out.println("(F) HMM2Morph.parseXML() hmmPos = "
+						// System.out.println("(F) HMM2Morph.parseXML() hmmPos =
+						// "
 						// + hmmPos);
 
-						// System.out.println("(F) HMM2Morph.parseXML() hmmToken = "
+						// System.out.println("(F) HMM2Morph.parseXML() hmmToken
+						// = "
 						// + hmmToken);
 						/*
-						 * if (hmmPos.equals("mw")) {
-						 * System.out.println("(F) HMM2Morph.parseXML() hmmPos = mw"
-						 * ); //hmmPos = "noun"; // <---- TEMP EDIT TO as
-						 * expected this solved the problem !!!!!! }
+						 * if (hmmPos.equals("mw")) { System.out.println(
+						 * "(F) HMM2Morph.parseXML() hmmPos = mw" ); //hmmPos =
+						 * "noun"; // <---- TEMP EDIT TO as expected this solved
+						 * the problem !!!!!! }
 						 */
 
 						int hmmPrefixListSize = hmmPrefixList.size();
@@ -1972,28 +1859,23 @@ public class HMM2Morph {
 						int scoreCounter = 0;
 						boolean unknownFlag = false;
 						for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-							// System.out.println("(F) HMM2Morph.parseXML() analysisIndex = "
+							// System.out.println("(F) HMM2Morph.parseXML()
+							// analysisIndex = "
 							// + analysisIndex);
 							unknownFlag = false;
-							AnalysisType analysis = (AnalysisType) analysisTypeList
-									.get(analysisIndex);
+							AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 							analysis.setScore(0.0);
 
-							if (analysis.getBase() == null
-									&& analysis.getPrefix() != null) {
-								if (prefixSpecialCases(tokenTypeList,
-										tokenTypeListSize, tokenIndex,
-										analysis, analysisIndex, hmmPrefixList,
-										hmmPos))
+							if (analysis.getBase() == null && analysis.getPrefix() != null) {
+								if (prefixSpecialCases(tokenTypeList, tokenTypeListSize, tokenIndex, analysis,
+										analysisIndex, hmmPrefixList, hmmPos))
 									scoreCounter++;
 							} else if (analysis.getBase().getForeign() != null) {
 								analysis.setScore(1.0);
 								scoreCounter = 1;
-							} else if (analysis.getBase() != null
-									&& analysis.getBase().getMWE() != null) {
+							} else if (analysis.getBase() != null && analysis.getBase().getMWE() != null) {
 								try {
-									scoreCounter = checkPos(analysis, hmmPos,
-											scoreCounter);
+									scoreCounter = checkPos(analysis, hmmPos, scoreCounter);
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
 									e.printStackTrace();
@@ -2002,16 +1884,12 @@ public class HMM2Morph {
 								unknownFlag = true;
 								token.getAnalysis().remove(analysisIndex);
 								analysisTypeListSize--;
-							} else if (analysis.getBase() != null
-									&& checkPrefix(analysis, hmmPrefixList)) {
+							} else if (analysis.getBase() != null && checkPrefix(analysis, hmmPrefixList)) {
 								try {
-									scoreCounter = checkPos(analysis, hmmPos,
-											scoreCounter);
+									scoreCounter = checkPos(analysis, hmmPos, scoreCounter);
 								} catch (Exception e) {
-									System.out
-											.println("An error occured for hmmSentence ="
-													+ hmmSentence
-													+ " just in case hmmSentence!=EOF");
+									System.out.println("An error occured for hmmSentence =" + hmmSentence
+											+ " just in case hmmSentence!=EOF");
 									e.printStackTrace();
 									// System.exit(1);
 								}
@@ -2021,8 +1899,7 @@ public class HMM2Morph {
 						if (score > 1 && MWECounter == 0.0) {
 							score = 1.0 / scoreCounter;
 							for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-								AnalysisType analysis = (AnalysisType) analysisTypeList
-										.get(analysisIndex);
+								AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 								double scoreValue = analysis.getScore();
 								if (scoreValue != 0.0)
 									analysis.setScore(score);
@@ -2030,10 +1907,8 @@ public class HMM2Morph {
 						} else if (score > 1 && MWECounter > 0.0) {
 							score = 1.0 / MWECounter;
 							for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-								AnalysisType analysis = (AnalysisType) analysisTypeList
-										.get(analysisIndex);
-								if ((analysis.getBase() != null && analysis
-										.getBase().getMWE() == null)
+								AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
+								if ((analysis.getBase() != null && analysis.getBase().getMWE() == null)
 										|| analysis.getBase() == null) {
 									analysis.setScore(0.0);
 								} else
@@ -2047,157 +1922,126 @@ public class HMM2Morph {
 							AnalysisType newAnalysis = null;
 							ENUM_HMMPOS hmmPosi = null;
 							try {
-								hmmPosi = Str2Num.str2numHMMPOS(hmmPos, hmmPos,
-										hmmPos);
-								// System.out.println("(F) HMM2Morph.parseXML() hmmPosi = "
+								hmmPosi = Str2Num.str2numHMMPOS(hmmPos, hmmPos, hmmPos);
+								// System.out.println("(F) HMM2Morph.parseXML()
+								// hmmPosi = "
 								// + hmmPosi);
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
-							String newAnalysisIndex = String
-									.valueOf(analysisTypeListSize + 1);
-							// System.out.println("(F) HMM2Morph.parseXML() hmmPosi = "+
+							String newAnalysisIndex = String.valueOf(analysisTypeListSize + 1);
+							// System.out.println("(F) HMM2Morph.parseXML()
+							// hmmPosi = "+
 							// hmmPosi);
 							switch (hmmPosi) {
 							case MULTIWORD:
-								newAnalysis = handleMWEAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleMWEAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PRONOUN:
-								newAnalysis = handlePronounAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handlePronounAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PROPERNAME:
-								if (unknownFlag
-										&& morphSurface.charAt(0) == 'ה') {
-									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(
-											morphSurface, newAnalysisIndex);
+								if (unknownFlag && morphSurface.charAt(0) == 'ה') {
+									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface,
+											newAnalysisIndex);
 									token.getAnalysis().add(newAnalysis1);
 								} else if (unknownFlag) {
 									if (hmmPrefixListSize > 0)
 										score = 1.0;
 									else
 										score = 0.0;
-									handlePrefixProperNameAnalysis(token,
-											morphSurface, score);
+									handlePrefixProperNameAnalysis(token, morphSurface, score);
 								}
-								newAnalysis = handleProperNameAnalysis(
-										morphSurface, newAnalysisIndex, 1.0);
+								newAnalysis = handleProperNameAnalysis(morphSurface, newAnalysisIndex, 1.0);
 								break;
 
 							case PROPERNAMEDEF:
 								if (unknownFlag) {
-									AnalysisType newAnalysis1 = handleProperNameAnalysis(
-											morphSurface, newAnalysisIndex, 1.0);
+									AnalysisType newAnalysis1 = handleProperNameAnalysis(morphSurface, newAnalysisIndex,
+											1.0);
 									token.getAnalysis().add(newAnalysis1);
 								}
-								newAnalysis = handleProperNameDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleProperNameDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case QUANTIFIER:
-								newAnalysis = handleQuantifierAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleQuantifierAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case TITLE:
-								newAnalysis = handleTitleAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleTitleAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NUMERAL:
-								newAnalysis = handleNumeralAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNumeralAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case EXISTENTIAL:
-								newAnalysis = handleExistentialAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleExistentialAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case MODAL:
-								newAnalysis = handleModalAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleModalAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case COPULA:
-								newAnalysis = handleCopulaAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleCopulaAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case CONJUNCTION:
-								newAnalysis = handleConjunctionAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleConjunctionAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case INTERROGATIVE:
-								newAnalysis = handleInterrogativeAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleInterrogativeAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case INTERJECTION:
-								newAnalysis = handleInterjectionAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleInterjectionAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADJECTIVE:
-								newAnalysis = handleAdjectiveAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdjectiveAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADJECTIVEDEF:
-								newAnalysis = handleAdjectiveDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdjectiveDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADJECTIVECONST:
-								newAnalysis = handleAdjectiveConstAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdjectiveConstAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUN:
-								newAnalysis = handleNounAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleNounAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUNDEF:
-								newAnalysis = handleNounDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNounDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUNCONST:
-								newAnalysis = handleNounConstAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNounConstAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NOUNPOSSESSIVE:
-								newAnalysis = handleNounPossessiveAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNounPossessiveAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case ADVERB:
-								newAnalysis = handleAdverbAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleAdverbAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PREPOSITION:
-								newAnalysis = handlePrepositionAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handlePrepositionAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case NEGATION:
-								newAnalysis = handleNegationAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleNegationAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case WPREFIX:
-								newAnalysis = handleWprefixAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleWprefixAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PARTICIPLE:
-								newAnalysis = handleParticipleAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleParticipleAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PARTICIPLEDEF:
-								newAnalysis = handleParticipleDefAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleParticipleDefAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case VERB:
-								newAnalysis = handleVerbAnalysis(morphSurface,
-										newAnalysisIndex);
+								newAnalysis = handleVerbAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case VERBINF:
-								newAnalysis = handleVerbInfAnalysis(
-										morphSurface, newAnalysisIndex);
+								newAnalysis = handleVerbInfAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							}
 							if (newAnalysis != null)
 								token.getAnalysis().add(newAnalysis);
 						}
 					} catch (Exception e) {
-						System.err.println("Error for file= " + taggedFilePath
-								+ " hmmSentence =" + hmmSentence);
+						System.err.println("Error for file= " + taggedFilePath + " hmmSentence =" + hmmSentence);
 						e.printStackTrace();
 						continue;
 					}
@@ -2215,31 +2059,26 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private boolean prefixSpecialCases(final List<TokenType> tokenList,
-			final int tokenTypeListSize, final int tokenIndex,
-			AnalysisType analysis, final int analysisIndex,
-			final ArrayList<String> hmmPrefixList, final String hmmPos) {
+	private boolean prefixSpecialCases(final List<TokenType> tokenList, final int tokenTypeListSize,
+			final int tokenIndex, AnalysisType analysis, final int analysisIndex, final ArrayList<String> hmmPrefixList,
+			final String hmmPos) {
 		boolean rt = false;
 		TokenType nextToken = null;
 		int nextTokenIndex = tokenIndex + 1;
 		if (nextTokenIndex < tokenTypeListSize) {
 			nextToken = (TokenType) tokenList.get(nextTokenIndex);
 			@SuppressWarnings("unchecked")
-			List<AnalysisType> nextTokenAnalysisTypeList = (List<AnalysisType>)nextToken.getAnalysis();
-			int nextTokenAnalysisTypeListSize = nextTokenAnalysisTypeList
-					.size();
+			List<AnalysisType> nextTokenAnalysisTypeList = (List<AnalysisType>) nextToken.getAnalysis();
+			int nextTokenAnalysisTypeListSize = nextTokenAnalysisTypeList.size();
 			for (int nextTokenAnalysisIndex = 0; nextTokenAnalysisIndex < nextTokenAnalysisTypeListSize; nextTokenAnalysisIndex++) {
-				AnalysisType nextTokenAnalysis = (AnalysisType) nextTokenAnalysisTypeList
-						.get(nextTokenAnalysisIndex);
+				AnalysisType nextTokenAnalysis = (AnalysisType) nextTokenAnalysisTypeList.get(nextTokenAnalysisIndex);
 				BaseType base = nextTokenAnalysis.getBase();
 				// literal number
 				if (base != null)
-					if ((base.getNumeral() != null && base.getNumeral()
-							.getType().charAt(0) == 'l')
-							|| (base.getPunctuation() != null && (nextToken
-									.getSurface().charAt(0) == '-'
-									|| nextToken.getSurface().charAt(0) == '"' || nextToken
-									.getSurface().charAt(0) == '\''))) {
+					if ((base.getNumeral() != null && base.getNumeral().getType().charAt(0) == 'l')
+							|| (base.getPunctuation() != null && (nextToken.getSurface().charAt(0) == '-'
+									|| nextToken.getSurface().charAt(0) == '"'
+									|| nextToken.getSurface().charAt(0) == '\''))) {
 						analysis.setScore(1.0);
 						rt = true;
 					}
@@ -2255,8 +2094,7 @@ public class HMM2Morph {
 
 	// -----------------------------------------------------------------------------------------------------------------
 	// used for the web
-	public void process(final String XMLMorphStr, final String taggedFilePath,
-			PrintWriter pw) throws Exception {
+	public void process(final String XMLMorphStr, final String taggedFilePath, PrintWriter pw) throws Exception {
 		InputStream in = null;
 		// System.out.println("XMLMorphStr="+XMLMorphStr);
 		try {
@@ -2277,16 +2115,18 @@ public class HMM2Morph {
 
 	// -----------------------------------------------------------------------------------------------------------------
 	// used for stand alone
-	public void process(final String XMLMorphStr, final String taggedFilePath,
-			PrintWriter pw, final String dprefixesFile) throws Exception {
+	public void process(final String XMLMorphStr, final String taggedFilePath, PrintWriter pw,
+			final String dprefixesFile) throws Exception {
 		InputStream in = null;
 		// System.out.println("XMLMorphStr="+XMLMorphStr);
 		try {
 			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
 			in = new ByteArrayInputStream(XMLMorphStr.getBytes("UTF-8"));
 			readFile(taggedFilePath); // read file into class variable bi
-			// System.out.println("(F) HMM2Morph:process reading file - "+taggedFilePath);
-			// System.out.println("(F) HMM2Morph:process XMLMorphStr - "+XMLMorphStr);
+			// System.out.println("(F) HMM2Morph:process reading file -
+			// "+taggedFilePath);
+			// System.out.println("(F) HMM2Morph:process XMLMorphStr -
+			// "+XMLMorphStr);
 			Corpus collection = parseXML(jc, in, dprefixesFile, taggedFilePath);
 			marshalAnalysis(jc, collection, pw); // put the output XML into pw
 			// parseXML(taggedFilePath);
@@ -2300,19 +2140,15 @@ public class HMM2Morph {
 
 	// -----------------------------------------------------------------------------------------------------------------
 	// used to test the web when developing
-	public void process(String inputXMLDir, String inputTaggedFileDir,
-			String outputFileDir, String xmlFile, String taggedFile,
-			String outputFile) throws Exception {
+	public void process(String inputXMLDir, String inputTaggedFileDir, String outputFileDir, String xmlFile,
+			String taggedFile, String outputFile) throws Exception {
 		try {
 			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
 			this.outputFile = outputFileDir + outputFile;
-			InputStream in = new FileInputStream(
-					new File(inputXMLDir + xmlFile));
+			InputStream in = new FileInputStream(new File(inputXMLDir + xmlFile));
 
 			readFile(inputTaggedFileDir + taggedFile);
-			Corpus collection = parseXML(
-					jc,
-					in,
+			Corpus collection = parseXML(jc, in,
 					"C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\dprefixes.data",
 					inputTaggedFileDir);
 			marshalAnalysis(jc, collection);
@@ -2332,11 +2168,10 @@ public class HMM2Morph {
 	 */
 	public void readFile(String inputFile) {
 		try {
-			bi = new BufferedReader(new InputStreamReader(new FileInputStream(
-					inputFile)));
+			bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		}catch (Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -2348,8 +2183,7 @@ public class HMM2Morph {
 		BufferedReader bi = null;
 
 		try {
-			bi = new BufferedReader(new InputStreamReader(new FileInputStream(
-					inputFile), "UTF8"));
+			bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile), "UTF8"));
 			while ((inputStr = bi.readLine()) != null)
 				morphAnalysis.append(inputStr);
 		} catch (UnsupportedEncodingException e) {
@@ -2358,10 +2192,10 @@ public class HMM2Morph {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
-			try{
+		} finally {
+			try {
 				bi.close();
-			}catch(IOException e){
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
@@ -2377,12 +2211,10 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private int setMWandZeroOtherAnalysis(List<AnalysisType> analysisTypeList,
-			int analysisTypeListSize) {
+	private int setMWandZeroOtherAnalysis(List<AnalysisType> analysisTypeList, int analysisTypeListSize) {
 		int scoreCounter = 0;
 		for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-			AnalysisType analysis = (AnalysisType) analysisTypeList
-					.get(analysisIndex);
+			AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 			if (analysis.getBase().getMWE() != null) {
 				analysis.setScore(1.0);
 				scoreCounter++;
@@ -2393,11 +2225,9 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private void setZeroToAllAnalysis(List<AnalysisType> analysisTypeList,
-			int analysisTypeListSize) {
+	private void setZeroToAllAnalysis(List<AnalysisType> analysisTypeList, int analysisTypeListSize) {
 		for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-			AnalysisType analysis = (AnalysisType) analysisTypeList
-					.get(analysisIndex);
+			AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 			analysis.setScore(0.0);
 		}
 	}

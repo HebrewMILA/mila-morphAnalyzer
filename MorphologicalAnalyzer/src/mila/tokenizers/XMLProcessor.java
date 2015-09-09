@@ -139,25 +139,21 @@ public class XMLProcessor {
 		document = DocumentHelper.createDocument();
 		root = document.addElement("corpus");
 		root.addAttribute("name", "Demo Hebrew tokenized text in XML");
-		root.addAttribute("version", "1.7.0")
-				.addAttribute("maintainer", "Slava Demender")
-				.addAttribute("email", "mila@cs.technion.ac.il");
+		root.addAttribute("version", "1.7.0").addAttribute("maintainer", "Slava Demender").addAttribute("email",
+				"mila@cs.technion.ac.il");
 		final Element metadata = root.addElement("metadata");
-		metadata.addElement("name")
-				.addText("Demo Hebrew tokenized text in XML");
+		metadata.addElement("name").addText("Demo Hebrew tokenized text in XML");
 		metadata.addElement("version").addText("1.0");
 		final Date now = new Date();
-		metadata.addElement("date").addText(
-				DateFormat.getDateTimeInstance(DateFormat.SHORT,
-						DateFormat.SHORT).format(now));
+		metadata.addElement("date")
+				.addText(DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT).format(now));
 		metadata.addElement("maintainer").addText("Slava Demender");
 		metadata.addElement("email").addText("mila@cs.technion.ac.il");
 		metadata.addElement("license")
-				.addText(
-						"Tokenization and XML representation: Copyright (C) 2009 Mila.\n"
-								+ "This resource is released to the public licensed under the GNU Free Documentation License\n."
-								+ "Note that all software, data files and documentation are licensed under the FDL.\n"
-								+ "There is no warranty of any kind for the contents of this distribution.");
+				.addText("Tokenization and XML representation: Copyright (C) 2009 Mila.\n"
+						+ "This resource is released to the public licensed under the GNU Free Documentation License\n."
+						+ "Note that all software, data files and documentation are licensed under the FDL.\n"
+						+ "There is no warranty of any kind for the contents of this distribution.");
 		/*
 		 * Element transliteration =
 		 * metadata.addElement("transliteration").addAttribute("from", "he");
@@ -243,9 +239,8 @@ public class XMLProcessor {
 		 * transliteration.addElement("string ").addAttribute("hebrew",
 		 * "ת").addAttribute("latin", "t");
 		 */
-		metadata.addElement("comment")
-				.addText(
-						"Tokenized corpuses and the segmentation program are available at http://mila.cs.technion.ac.il/");
+		metadata.addElement("comment").addText(
+				"Tokenized corpuses and the segmentation program are available at http://mila.cs.technion.ac.il/");
 	}
 
 	public void createParapraphes() {
@@ -278,8 +273,7 @@ public class XMLProcessor {
 		final String counttk = String.valueOf(countToken);
 		final String transliterated = translateHebEng(word);
 		try {
-			token = sentence.addElement("token").addAttribute("id", counttk)
-					.addAttribute("surface", word)
+			token = sentence.addElement("token").addAttribute("id", counttk).addAttribute("surface", word)
 					.addAttribute("transliterated", transliterated);
 			// System.out.println(word);
 		} catch (final Exception e) {
@@ -332,16 +326,14 @@ public class XMLProcessor {
 		try {
 			out = new FileOutputStream(outputFileName);
 		} catch (final FileNotFoundException e) {
-			System.err
-					.println("XMLProcessor: printDoc - FileNotFoundException");
+			System.err.println("XMLProcessor: printDoc - FileNotFoundException");
 			e.printStackTrace();
 		}
 		OutputStreamWriter pOut = null;
 		try {
 			pOut = new OutputStreamWriter(out, "UTF8");
 		} catch (final UnsupportedEncodingException e4) {
-			System.err
-					.println("XMLProcessor: printDoc - UnsupportedEncodingException");
+			System.err.println("XMLProcessor: printDoc - UnsupportedEncodingException");
 			e4.printStackTrace();
 		}
 
@@ -351,8 +343,7 @@ public class XMLProcessor {
 			bw.close();
 			pOut.close();
 		} catch (final IOException e3) {
-			System.err
-					.println("XMLProcessor: printDoc - Exception while writing/closing buffered writer");
+			System.err.println("XMLProcessor: printDoc - Exception while writing/closing buffered writer");
 			e3.printStackTrace();
 		}
 	}

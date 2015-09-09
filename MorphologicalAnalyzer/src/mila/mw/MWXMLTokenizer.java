@@ -17,7 +17,6 @@ import mila.tokenizers.XMLTokenizer1;
 
 import org.dom4j.Document;
 
-
 // Referenced classes of package mw:
 //            MWXMLMorphAnaslyzer
 
@@ -39,10 +38,8 @@ public class MWXMLTokenizer extends XMLTokenizer1 {
 		t.tokenizeAndAnalyze(inputStraem, pw);
 		String result = sw.toString();
 		System.out.println(result);
-		System.out
-				.println("******************************************************");
-		System.out
-				.println("******************************************************");
+		System.out.println("******************************************************");
+		System.out.println("******************************************************");
 		st = "\u05D6\u05D5\u05D4\u05D9 \u05D1\u05D3\u05D9\u05E7\u05D4 \u05E0\u05D5\u05E1\u05E4\u05EA";
 		try {
 			inputStraem = new ByteArrayInputStream(st.getBytes("UTF8"));
@@ -64,13 +61,16 @@ public class MWXMLTokenizer extends XMLTokenizer1 {
 		// webFlag = false;
 		Document document = null;
 		try {
-			bi = new BufferedReader(new InputStreamReader(in, "UTF8")); // read into buffer reader
+			bi = new BufferedReader(new InputStreamReader(in, "UTF8")); // read
+																		// into
+																		// buffer
+																		// reader
 			webProcess();
 			xmlTokenizer.finalizeDoc();
 			document = xmlTokenizer.getDocument();
 		} catch (Exception e) {
-			System.out
-					.println("XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
+			System.out.println(
+					"XMLTokenizer:tokenizeAndAnalyze -web interface - Exception in BufferedReader or process function");
 			e.printStackTrace();
 		}
 		String documentStr = document.asXML();

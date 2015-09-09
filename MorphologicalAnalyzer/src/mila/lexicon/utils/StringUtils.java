@@ -28,8 +28,7 @@ public class StringUtils implements Constants {
 		return hebrewSingleLetter;
 	}
 
-	public static ENUM_OUTPUT_PATTERN analyzeNumberExpression(String token)
-			throws Exception {
+	public static ENUM_OUTPUT_PATTERN analyzeNumberExpression(String token) throws Exception {
 		ENUM_OUTPUT_PATTERN outputPattern = null;
 		if (token.matches("[0-9]+\\.")) {
 			return ENUM_OUTPUT_PATTERN.NUMBERING;
@@ -55,8 +54,7 @@ public class StringUtils implements Constants {
 			char0 = token.charAt(0);
 			char1 = token.charAt(1);
 			char2 = token.charAt(2);
-			if (char1 == ':' && Character.isDigit(char0)
-					&& Character.isDigit(char2)) {
+			if (char1 == ':' && Character.isDigit(char0) && Character.isDigit(char2)) {
 				outputPattern = ENUM_OUTPUT_PATTERN.GAMESCORE;
 			}
 			break;
@@ -68,17 +66,11 @@ public class StringUtils implements Constants {
 			if (token.indexOf(":") != -1) {
 				int index = token.indexOf(":");
 				if (index == 1) {
-					if (Character.isDigit(char0) && Character.isDigit(char2)
-							&& Character.isDigit(char3)) {
-						int num1 = Integer.valueOf(token.substring(0, 1))
-								.intValue();
-						int num2 = Integer.valueOf(token.substring(2, 4))
-								.intValue();
-						if (num1 >= 0 && num1 <= 24 && num2 >= 0
-								&& num2 <= 59) {
-							if (char0 == '0'
-									|| char1 == '0' && char2 == '0'
-									|| char2 == '0') {
+					if (Character.isDigit(char0) && Character.isDigit(char2) && Character.isDigit(char3)) {
+						int num1 = Integer.valueOf(token.substring(0, 1)).intValue();
+						int num2 = Integer.valueOf(token.substring(2, 4)).intValue();
+						if (num1 >= 0 && num1 <= 24 && num2 >= 0 && num2 <= 59) {
+							if (char0 == '0' || char1 == '0' && char2 == '0' || char2 == '0') {
 								outputPattern = ENUM_OUTPUT_PATTERN.TIME;
 							} else {
 								outputPattern = ENUM_OUTPUT_PATTERN.TIMEGAMESCORE;
@@ -88,12 +80,9 @@ public class StringUtils implements Constants {
 						}
 					}
 				} else if (index == 2) {
-					if (Character.isDigit(char0) && Character.isDigit(char1)
-							&& Character.isDigit(char3)) {
-						int num1 = Integer.valueOf(token.substring(0, index))
-								.intValue();
-						int num2 = Integer.valueOf(token.substring(index + 1))
-								.intValue();
+					if (Character.isDigit(char0) && Character.isDigit(char1) && Character.isDigit(char3)) {
+						int num1 = Integer.valueOf(token.substring(0, index)).intValue();
+						int num2 = Integer.valueOf(token.substring(index + 1)).intValue();
 
 						outputPattern = ENUM_OUTPUT_PATTERN.GAMESCORE;
 
@@ -107,17 +96,14 @@ public class StringUtils implements Constants {
 			char2 = token.charAt(2);
 			char3 = token.charAt(3);
 			char4 = token.charAt(4);
-			if (char2 == ':' && Character.isDigit(char0)
-					&& Character.isDigit(char1) && Character.isDigit(char3)
+			if (char2 == ':' && Character.isDigit(char0) && Character.isDigit(char1) && Character.isDigit(char3)
 					&& Character.isDigit(char4)) {
 				int num1 = Integer.valueOf(token.substring(0, 1)).intValue();
 				int num2 = Integer.valueOf(token.substring(3)).intValue();
 
 				if (num1 >= 0 && num1 <= 24 && num2 >= 0 && num2 <= 59) {
 
-					if (char0 == '0' && char1 == '0'
-							|| char3 == '0' && char4 == '0'
-							|| char0 == '0' && char1 != '0'
+					if (char0 == '0' && char1 == '0' || char3 == '0' && char4 == '0' || char0 == '0' && char1 != '0'
 							|| char3 == '0' && char4 != '0') {
 						outputPattern = ENUM_OUTPUT_PATTERN.TIME;
 					} else {
@@ -126,8 +112,7 @@ public class StringUtils implements Constants {
 				} else {
 					outputPattern = ENUM_OUTPUT_PATTERN.GAMESCORE;
 				}
-			} else if (char2 == '/' && Character.isDigit(char0)
-					&& Character.isDigit(char1) && Character.isDigit(char3)
+			} else if (char2 == '/' && Character.isDigit(char0) && Character.isDigit(char1) && Character.isDigit(char3)
 					&& Character.isDigit(char4)) {
 				int num1 = Integer.valueOf(token.substring(0, 1)).intValue();
 				int num2 = Integer.valueOf(token.substring(3)).intValue();
@@ -170,53 +155,46 @@ public class StringUtils implements Constants {
 			if (index != -1) {
 				num1 = Integer.valueOf(token.substring(0, index)).intValue();
 				String subs = token.substring(index + 1);
-				if (subs.indexOf(".") != -1){ // point in second part like swimming time - 12:47.74 - for now i return a "UNSPECIFIED"
+				if (subs.indexOf(".") != -1) { // point in second part like
+												// swimming time - 12:47.74 -
+												// for now i return a
+												// "UNSPECIFIED"
 					return ENUM_OUTPUT_PATTERN.UNSPECIFIED;
-				} else if (subs.indexOf(":") != -1){
+				} else if (subs.indexOf(":") != -1) {
 					int index2 = subs.indexOf(":");
-					num2 = Integer.valueOf(subs.substring(0,index2)).intValue();
-					num3 = Integer.valueOf(subs.substring(index2+1)).intValue();
+					num2 = Integer.valueOf(subs.substring(0, index2)).intValue();
+					num3 = Integer.valueOf(subs.substring(index2 + 1)).intValue();
 					outputPattern = ENUM_OUTPUT_PATTERN.TIME;
-				}else{
-					num2 = Integer.valueOf(token.substring(index + 1))
-							.intValue();
+				} else {
+					num2 = Integer.valueOf(token.substring(index + 1)).intValue();
 					outputPattern = ENUM_OUTPUT_PATTERN.GAMESCORE;
 				}
 			} else {
 				if (char2 == '.' && char4 == '.'
-						|| char2 == '/' && char4 == '/'
-						&& Character.isDigit(char0) && Character.isDigit(char1)
-						&& Character.isDigit(char3) && Character.isDigit(char5)
-						&& Character.isDigit(char6)) {
+						|| char2 == '/' && char4 == '/' && Character.isDigit(char0) && Character.isDigit(char1)
+								&& Character.isDigit(char3) && Character.isDigit(char5) && Character.isDigit(char6)) {
 					num1 = Integer.valueOf(token.substring(0, 2)).intValue();
 					num2 = Integer.valueOf(token.substring(3, 4)).intValue();
-					if (num1 >= 1 && num1 <= 31 && num2 >= 1
-							&& num2 <= 12) {
+					if (num1 >= 1 && num1 <= 31 && num2 >= 1 && num2 <= 12) {
 
 						outputPattern = ENUM_OUTPUT_PATTERN.DATE;
 					}
 				} else if (char1 == '.' && char4 == '.'
-						|| char1 == '/' && char4 == '/'
-						&& Character.isDigit(char0) && Character.isDigit(char2)
-						&& Character.isDigit(char3) && Character.isDigit(char5)
-						&& Character.isDigit(char6)) {
+						|| char1 == '/' && char4 == '/' && Character.isDigit(char0) && Character.isDigit(char2)
+								&& Character.isDigit(char3) && Character.isDigit(char5) && Character.isDigit(char6)) {
 					num1 = Integer.valueOf(token.substring(0, 1)).intValue();
 					num2 = Integer.valueOf(token.substring(2, 4)).intValue();
 
-					if (num1 >= 1 && num1 <= 31 && num2 >= 1
-							&& num2 <= 12) {
+					if (num1 >= 1 && num1 <= 31 && num2 >= 1 && num2 <= 12) {
 
 						outputPattern = ENUM_OUTPUT_PATTERN.DATE;
 					}
-				} else if (char1 == ':' && char4 == ':'
-						&& Character.isDigit(char0) && Character.isDigit(char2)
-						&& Character.isDigit(char3) && Character.isDigit(char5)
-						&& Character.isDigit(char6)) {
+				} else if (char1 == ':' && char4 == ':' && Character.isDigit(char0) && Character.isDigit(char2)
+						&& Character.isDigit(char3) && Character.isDigit(char5) && Character.isDigit(char6)) {
 					num1 = Integer.valueOf(token.substring(0, 1)).intValue();
 					num2 = Integer.valueOf(token.substring(2, 4)).intValue();
 					num3 = Integer.valueOf(token.substring(5, 7)).intValue();
-					if (num1 >= 0 && num1 <= 24 && num2 >= 0
-							&& num2 <= 59 && num3 >= 0 && num3 <= 59) {
+					if (num1 >= 0 && num1 <= 24 && num2 >= 0 && num2 <= 59 && num3 >= 0 && num3 <= 59) {
 
 						outputPattern = ENUM_OUTPUT_PATTERN.TIME;
 					}
@@ -233,34 +211,26 @@ public class StringUtils implements Constants {
 			char5 = token.charAt(5);
 			char6 = token.charAt(6);
 			char7 = token.charAt(7);
-			if ((char2 == '.' && char5 == '.' || char2 == '/' && char5 == '/')
-					&& Character.isDigit(char0)
-					&& Character.isDigit(char1)
-					&& Character.isDigit(char3)
-					&& Character.isDigit(char4)
+			if ((char2 == '.' && char5 == '.' || char2 == '/' && char5 == '/') && Character.isDigit(char0)
+					&& Character.isDigit(char1) && Character.isDigit(char3) && Character.isDigit(char4)
 					&& Character.isDigit(char6) && Character.isDigit(char7)) {
 
 				outputPattern = ENUM_OUTPUT_PATTERN.DATE;
-			} else if ((char1 == '.' && char3 == '.' || char1 == '/' && char3 == '/')
-					&& Character.isDigit(char0)
-					&& Character.isDigit(char2)
-					&& Character.isDigit(char4)
-					&& Character.isDigit(char5)
+			} else if ((char1 == '.' && char3 == '.' || char1 == '/' && char3 == '/') && Character.isDigit(char0)
+					&& Character.isDigit(char2) && Character.isDigit(char4) && Character.isDigit(char5)
 					&& Character.isDigit(char6) && Character.isDigit(char7)) {
 				num1 = Integer.valueOf(token.substring(0, 1)).intValue();
 				num2 = Integer.valueOf(token.substring(2, 3)).intValue();
 				num3 = Integer.valueOf(token.substring(4)).intValue();
 				outputPattern = ENUM_OUTPUT_PATTERN.DATE;
-			} else if (char2 == ':' && char5 == ':'
-					&& Character.isDigit(char0) && Character.isDigit(char1)
-					&& Character.isDigit(char3) && Character.isDigit(char4)
-					&& Character.isDigit(char6) && Character.isDigit(char7)) {
+			} else if (char2 == ':' && char5 == ':' && Character.isDigit(char0) && Character.isDigit(char1)
+					&& Character.isDigit(char3) && Character.isDigit(char4) && Character.isDigit(char6)
+					&& Character.isDigit(char7)) {
 				num1 = Integer.valueOf(token.substring(0, 1)).intValue();
 				num2 = Integer.valueOf(token.substring(3, 4)).intValue();
 				num3 = Integer.valueOf(token.substring(6, 7)).intValue();
 
-				if (num1 >= 0 && num1 <= 24 && num2 >= 0 && num2 <= 59
-						&& num3 >= 0 && num3 <= 24) {
+				if (num1 >= 0 && num1 <= 24 && num2 >= 0 && num2 <= 59 && num3 >= 0 && num3 <= 24) {
 
 					outputPattern = ENUM_OUTPUT_PATTERN.TIME;
 				}
@@ -276,14 +246,9 @@ public class StringUtils implements Constants {
 			char6 = token.charAt(6);
 			char7 = token.charAt(7);
 			char8 = token.charAt(8);
-			if ((char1 == '.' && char4 == '.' || char1 == '/' && char4 == '/')
-					&& Character.isDigit(char0)
-					&& Character.isDigit(char2)
-					&& Character.isDigit(char3)
-					&& Character.isDigit(char5)
-					&& Character.isDigit(char6)
-					&& Character.isDigit(char7)
-					&& Character.isDigit(char8)) {
+			if ((char1 == '.' && char4 == '.' || char1 == '/' && char4 == '/') && Character.isDigit(char0)
+					&& Character.isDigit(char2) && Character.isDigit(char3) && Character.isDigit(char5)
+					&& Character.isDigit(char6) && Character.isDigit(char7) && Character.isDigit(char8)) {
 
 				outputPattern = ENUM_OUTPUT_PATTERN.DATE;
 			}
@@ -299,14 +264,10 @@ public class StringUtils implements Constants {
 			char7 = token.charAt(7);
 			char8 = token.charAt(8);
 			char9 = token.charAt(9);
-			if ((char2 == '.' && char5 == '.' || char2 == '/' && char5 == '/')
-					&& Character.isDigit(char0)
-					&& Character.isDigit(char1)
-					&& Character.isDigit(char3)
-					&& Character.isDigit(char4)
-					&& Character.isDigit(char6)
-					&& Character.isDigit(char7)
-					&& Character.isDigit(char8) && Character.isDigit(char9)) {
+			if ((char2 == '.' && char5 == '.' || char2 == '/' && char5 == '/') && Character.isDigit(char0)
+					&& Character.isDigit(char1) && Character.isDigit(char3) && Character.isDigit(char4)
+					&& Character.isDigit(char6) && Character.isDigit(char7) && Character.isDigit(char8)
+					&& Character.isDigit(char9)) {
 
 				outputPattern = ENUM_OUTPUT_PATTERN.DATE;
 			}
@@ -326,17 +287,14 @@ public class StringUtils implements Constants {
 		boolean isNumber = false;
 		if (!token.matches("[0-9]+\\.")) {
 			if (Character.isDigit(token.charAt(0))) {
-				if (token.length() >= 3 && token.indexOf("/") != -1
-						&& token.lastIndexOf("/") == token.indexOf("/")) {
+				if (token.length() >= 3 && token.indexOf("/") != -1 && token.lastIndexOf("/") == token.indexOf("/")) {
 					isNumber = true;
 				} else if (token.indexOf("/") == -1 && token.indexOf(":") == -1
 						&& token.lastIndexOf(".") == token.indexOf(".")) {
 
 					isNumber = true;
 				}
-			} else if (token.codePointAt(0) == 189
-					|| token.codePointAt(0) == 188
-					|| token.codePointAt(0) == 190) {
+			} else if (token.codePointAt(0) == 189 || token.codePointAt(0) == 188 || token.codePointAt(0) == 190) {
 				isNumber = true;
 			}
 		}
@@ -372,9 +330,8 @@ public class StringUtils implements Constants {
 
 	public static boolean analyzeURL(String token) {
 		boolean isURL = false;
-		if (token.indexOf("@") != -1 && token.indexOf(".") != -1
-				|| token.startsWith("http://") || token.startsWith("www.") || token
-						.startsWith("ftp://")) {
+		if (token.indexOf("@") != -1 && token.indexOf(".") != -1 || token.startsWith("http://")
+				|| token.startsWith("www.") || token.startsWith("ftp://")) {
 			isURL = true;
 		}
 		return isURL;
@@ -419,8 +376,7 @@ public class StringUtils implements Constants {
 	public static boolean gimatriaPossibility(String token) {
 		boolean rt = false;
 		int tokenLen = token.length();
-		if (tokenLen > 1 && token.indexOf("\"") == tokenLen - 2
-				|| token.endsWith("'")) {
+		if (tokenLen > 1 && token.indexOf("\"") == tokenLen - 2 || token.endsWith("'")) {
 			rt = true;
 		}
 		return rt;
@@ -451,11 +407,11 @@ public class StringUtils implements Constants {
 
 	}
 
-	public static void main(String args[]){
+	public static void main(String args[]) {
 		String token = "2:30:07";
-		try{
-			System.out.println("2:30:07 is:"+StringUtils.analyzeNumberExpression(token));
-		}catch (Exception e){
+		try {
+			System.out.println("2:30:07 is:" + StringUtils.analyzeNumberExpression(token));
+		} catch (Exception e) {
 			e.getStackTrace();
 		}
 	}

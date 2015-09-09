@@ -93,8 +93,7 @@ public class Load2memory {
 			boolean first = true;
 			String currentTransliterated = "";
 			while ((decodedInflectionRecord = in.readLine()) != null) {
-				StringTokenizer inflectionsFields = new StringTokenizer(
-						decodedInflectionRecord, "|");
+				StringTokenizer inflectionsFields = new StringTokenizer(decodedInflectionRecord, "|");
 				transliterated = inflectionsFields.nextToken();
 				counter++;
 
@@ -155,8 +154,7 @@ public class Load2memory {
 
 			while ((decodedMwe1Record = in.readLine()) != null) {
 				MWE1record mwe1Rec = new MWE1record();
-				StringTokenizer inflectionsFields = new StringTokenizer(
-						decodedMwe1Record, "|"); // tokenize
+				StringTokenizer inflectionsFields = new StringTokenizer(decodedMwe1Record, "|"); // tokenize
 
 				transliterated = inflectionsFields.nextToken(); // extract data
 				id = inflectionsFields.nextToken(); // extract data
@@ -180,9 +178,9 @@ public class Load2memory {
 				 * "(F) Load2memory:LoadMwe1Records(): transliterated = " +
 				 * transliterated); Iterator<MWE1record> itr =
 				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out.
-				 * println("(F) Load2memory:LoadMwe1Records():            pos = "
-				 * + ((MWE1record)itr.next()).getPos()); }
+				 * System.out. println(
+				 * "(F) Load2memory:LoadMwe1Records():            pos = " +
+				 * ((MWE1record)itr.next()).getPos()); }
 				 */
 			}
 
@@ -312,9 +310,9 @@ public class Load2memory {
 				 * "(F) Load2memory:LoadMweRecords(): transliterated = " +
 				 * transliterated); Iterator<MWErecord> itr =
 				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out.
-				 * println("(F) Load2memory:LoadMweRecords():            surface = "
-				 * + ((MWErecord)itr.next()).getSurface()); }
+				 * System.out. println(
+				 * "(F) Load2memory:LoadMweRecords():            surface = " +
+				 * ((MWErecord)itr.next()).getSurface()); }
 				 */
 			}
 
@@ -445,9 +443,9 @@ public class Load2memory {
 				 * "(F) Load2memory:LoadMweRecords(): transliterated = " +
 				 * transliterated); Iterator<MWErecord> itr =
 				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out.
-				 * println("(F) Load2memory:LoadMweRecords():            surface = "
-				 * + ((MWErecord)itr.next()).getSurface()); }
+				 * System.out. println(
+				 * "(F) Load2memory:LoadMweRecords():            surface = " +
+				 * ((MWErecord)itr.next()).getSurface()); }
 				 */
 			}
 
@@ -606,9 +604,9 @@ public class Load2memory {
 				 * "(F) Load2memory:LoadMwe2Records(): transliterated = " +
 				 * transliterated); Iterator<MWErecord> itr =
 				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out.
-				 * println("(F) Load2memory:LoadMweRecords():            surface = "
-				 * + ((MWErecord)itr.next()).getSurface()); }
+				 * System.out. println(
+				 * "(F) Load2memory:LoadMweRecords():            surface = " +
+				 * ((MWErecord)itr.next()).getSurface()); }
 				 */
 			}
 
@@ -654,17 +652,17 @@ public class Load2memory {
 
 			while ((decodedMwinflectionRecord = in.readLine()) != null) {
 				MWEinflectionsRecord mwInfRec = new MWEinflectionsRecord();
-				StringTokenizer inflectionsFields = new StringTokenizer(
-						decodedMwinflectionRecord, "|"); // tokenize
+				StringTokenizer inflectionsFields = new StringTokenizer(decodedMwinflectionRecord, "|"); // tokenize
 				transliterated = inflectionsFields.nextToken(); // extract data
-				// System.out.println("(F) Load2memory:LoadMwInflections(): transliterated = "
+				// System.out.println("(F) Load2memory:LoadMwInflections():
+				// transliterated = "
 				// + transliterated);
 				surface = inflectionsFields.nextToken(); // extract data
 				pos = inflectionsFields.nextToken(); // extract data
 				mweId = inflectionsFields.nextToken(); // extract data
 				type = inflectionsFields.nextToken(); // extract data
-				prefix = (inflectionsFields.nextToken()).equals("0") ? false
-						: true; // extract data
+				prefix = (inflectionsFields.nextToken()).equals("0") ? false : true; // extract
+																						// data
 
 				mwInfRec.setTransliterated(transliterated); // create record
 				mwInfRec.setSurface(surface);
@@ -715,8 +713,7 @@ public class Load2memory {
 			boolean first = true;
 			String currentPrefix = "";
 			while ((decodedPrefixesRecord = in.readLine()) != null) {
-				StringTokenizer inflectionsFields = new StringTokenizer(
-						decodedPrefixesRecord, "|");
+				StringTokenizer inflectionsFields = new StringTokenizer(decodedPrefixesRecord, "|");
 				prefix = inflectionsFields.nextToken();
 				counter++;
 				// System.out.println("counter = " + counter);

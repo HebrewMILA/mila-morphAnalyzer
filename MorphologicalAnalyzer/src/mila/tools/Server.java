@@ -1,4 +1,5 @@
 package mila.tools;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,8 +30,7 @@ public class Server {
 
 	public static void main(String[] args) {
 		if (args.length != 1) {
-			System.out
-					.println("Usage: java  -cp morphAnalyzer.jar Server <port Number>");
+			System.out.println("Usage: java  -cp morphAnalyzer.jar Server <port Number>");
 			System.exit(0);
 		}
 		int port = Integer.parseInt(args[0]);
@@ -49,9 +49,8 @@ public class Server {
 			MWXMLMorphAnalyzer a = new MWXMLMorphAnalyzer();
 			// a.dataLoad(dinflectionsFile,dprefixesFile, gimatriasFile); //
 			// EDIT 21.7.11 (yossi)
-			MWXMLMorphAnalyzer.dataLoad(dinflectionsFile, dprefixesFile,
-					gimatriasFile, dmwinflectionsFile, dmwe1File, dmwe2File,
-					dmwe3File, dmwe4File);
+			MWXMLMorphAnalyzer.dataLoad(dinflectionsFile, dprefixesFile, gimatriasFile, dmwinflectionsFile, dmwe1File,
+					dmwe2File, dmwe3File, dmwe4File);
 
 			try {
 				serverSocket = new ServerSocket(port);

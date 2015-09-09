@@ -37,10 +37,10 @@ public class Connected {
 	static String mysqlPassword = "";
 	static String myurl = "";
 	private static ConnectionPool pool = null;
+
 	static {
 		try {
-			Driver driver = (Driver) Class.forName("org.mariadb.jdbc.Driver")
-					.newInstance();
+			Driver driver = (Driver) Class.forName("org.mariadb.jdbc.Driver").newInstance();
 			DriverManager.registerDriver(driver);
 			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000, myurl,
 			// mysqlUser, mysqlPassword);
@@ -57,8 +57,7 @@ public class Connected {
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest",
 			// "tommy", "tammy2010!)");
 			pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
-					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest",
-					"morphuser", "qetu");
+					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest", "morphuser", "qetu");
 			pool.setCaching(false);
 			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/mwGenerator",
@@ -138,20 +137,20 @@ public class Connected {
 	 */
 	protected static Connection prepareConnection() throws SQLException {
 		/*
-		 * if (cpds == null) { Context ctx = null; try {
-		 * System.out.println("*****   Starting the DB connection!   ****"); ctx
-		 * = new InitialContext(); if(ctx == null )
-		 * System.out.println("Boom - no cotext"); Context envCtx = (Context)
+		 * if (cpds == null) { Context ctx = null; try { System.out.println(
+		 * "*****   Starting the DB connection!   ****"); ctx = new
+		 * InitialContext(); if(ctx == null ) System.out.println(
+		 * "Boom - no cotext"); Context envCtx = (Context)
 		 * ctx.lookup("java:comp/env"); DataSource ds = (DataSource)
 		 * envCtx.lookup("jdbc/mysqlDBlexicon"); Connected.setCPDS(ds);
 		 *
-		 * } catch (NamingException ne) {
-		 * System.out.println("Exception in creating the DataSource!");
-		 * ne.printStackTrace(); } } conn = getCPDS().getConnection();
+		 * } catch (NamingException ne) { System.out.println(
+		 * "Exception in creating the DataSource!"); ne.printStackTrace(); } }
+		 * conn = getCPDS().getConnection();
 		 */
 		long timeout = 2000; // 2 second timeout
 		Connection conn = pool.getConnection(timeout);
-		if (conn == null){
+		if (conn == null) {
 			throw new SQLException();
 		}
 		return conn;
@@ -199,11 +198,12 @@ public class Connected {
 		} catch (SQLException E) {
 			System.out.println("Lexicon Message: Content.getData Error" + sql);
 			E.printStackTrace();
-		}finally{
+		} finally {
 			releaseConnection();
 		}
 		return rs;
 	}
+
 	protected static ResultSet staticGetData(String query, String... params) {
 		ResultSet rs = null;
 		try {
@@ -216,15 +216,13 @@ public class Connected {
 			rs = stmt.getResultSet();
 		} catch (SQLException E) {
 			String paramsOut = "";
-			for (String param : params){
-				paramsOut += " "+param;
+			for (String param : params) {
+				paramsOut += " " + param;
 
 			}
-			System.err
-					.println("Lexicon Message: Content.getData Error trying to excute:\n"
-							+ query + paramsOut);
+			System.err.println("Lexicon Message: Content.getData Error trying to excute:\n" + query + paramsOut);
 			E.printStackTrace();
-		} finally{
+		} finally {
 			releaseConnection();
 		}
 		return rs;

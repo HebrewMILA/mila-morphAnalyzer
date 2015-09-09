@@ -4,7 +4,7 @@ public class MilaException extends Exception {
 	public MilaException(Throwable e) {
 		super(e);
 	}
-	
+
 	public MilaException(String s, Throwable e) {
 		super(s, e);
 	}

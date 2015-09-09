@@ -27,7 +27,7 @@ public class MilaSettings {
 
 	/** path to tagger */
 	protected String royTaggerPath = null;
-	
+
 	/** path to tagger model files */
 	protected String taggerLearningOutputDir = null;
 
@@ -37,9 +37,9 @@ public class MilaSettings {
 	/** Database mode? True is use the database. False is use data-files. */
 	protected boolean webFlag = true;
 
-	
 	/**
 	 * Generic constructor to use while working against data files.
+	 * 
 	 * @param webFlag
 	 * @param tempDirectory
 	 * @param royTaggerPath
@@ -53,9 +53,8 @@ public class MilaSettings {
 	 * @param dprefixesFile
 	 * @param gimatriaFile
 	 */
-	public MilaSettings(boolean webFlag, String tempDirectory,
-			String royTaggerPath, String taggerLearningOutputDir, String dinflectionsFile, String dmwe1File,
-			String dmwe2File, String dmwe3File, String dmwe4File,
+	public MilaSettings(boolean webFlag, String tempDirectory, String royTaggerPath, String taggerLearningOutputDir,
+			String dinflectionsFile, String dmwe1File, String dmwe2File, String dmwe3File, String dmwe4File,
 			String dmwinflectionsFile, String dprefixesFile, String gimatriaFile) {
 		super();
 		this.webFlag = webFlag;
@@ -74,6 +73,7 @@ public class MilaSettings {
 
 	/**
 	 * Constructor to use while working against local DB.
+	 * 
 	 * @param tempDirectory
 	 * @param royTaggerPath
 	 * @param taggerLearningOutputDir
