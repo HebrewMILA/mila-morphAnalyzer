@@ -16,7 +16,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.util.HashMap;
-import java.util.Vector;
 
 /**
  * @author daliabo
@@ -76,10 +75,8 @@ public class PerformUniqeOutput {
 
 	public String process(String input) throws IOException {
 		String line = "";
-		Vector<?> lineVec = new Vector<Object>();
 		HashMap<String, String> hashmap = null;
 		String token = "";
-		String pos = "";
 
 		StringReader reader = new StringReader(input);
 		bi = new BufferedReader(reader);

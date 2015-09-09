@@ -22,35 +22,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 
-import mila.generated.AnalysisType;
-import mila.generated.ArticleType;
-import mila.generated.BaseType;
-import mila.generated.ConjunctionType;
-import mila.generated.CopulaType;
-import mila.generated.Corpus;
-import mila.generated.ExistentialType;
-import mila.generated.GenderNumberPersonType;
-import mila.generated.GenderNumberStatusDefinitenessType;
-import mila.generated.InterjectionType;
-import mila.generated.InterrogativeType;
-import mila.generated.MWEType;
-import mila.generated.ModalType;
-import mila.generated.NegationType;
-import mila.generated.NumeralType;
-import mila.generated.ObjectFactory;
-import mila.generated.ParagraphType;
-import mila.generated.ParticipleType;
-import mila.generated.PrefixType;
-import mila.generated.PronounType;
-import mila.generated.ProperNameType;
-import mila.generated.QuantifierType;
-import mila.generated.SentenceType;
-import mila.generated.SuffixType;
-import mila.generated.TitleType;
-import mila.generated.TokenType;
-import mila.generated.VerbType;
-import mila.generated.WprefixType;
-import mila.generated.ZVLType;
+import mila.generated.*;
 import mila.lexicon.analyse.Data;
 import mila.lexicon.analyse.Str2Num;
 import mila.lexicon.analyse.Constants.ENUM_HMMPOS;
@@ -70,10 +42,7 @@ public class HMM2Morph {
 	// -----------------------------------------------------------------------------------------------------------------
 	public String analyzeHMMLine(final String hmmSentence, ArrayList<String> hmmPrefixList) {
 		String hmmToken1 = "";
-		String hmmToken2 = "";
-		String hmmTranlsiteratedToken = "";
 		String hmmPos = "";
-		int hmmPrefixNumber = -1;
 		StringTokenizer hmmSt1 = new StringTokenizer(hmmSentence, "[");
 
 		if (hmmSt1.hasMoreTokens()) {
@@ -102,7 +71,6 @@ public class HMM2Morph {
 					hmmTempPrefix2 = hmmTempPrefix1.replaceAll("]", "");
 					hmmPrefixList.add(Translate.Eng2Heb(hmmTempPrefix2));
 				}
-				hmmPrefixNumber = currTokenNum;
 
 			}
 			String hmmSubToken = "";
@@ -113,8 +81,6 @@ public class HMM2Morph {
 			String hmmTemp2 = "";
 			String hmmTemp3 = "";
 			String hmmTemp4 = "";
-			String hmmHebToken = "";
-
 			if (hmmSt2.hasMoreTokens()) {
 				hmmSubToken = hmmSt2.nextToken();
 				// System.out.println("hmmSubToken ="+ hmmSubToken );
@@ -128,9 +94,7 @@ public class HMM2Morph {
 						hmmTemp2 = hmmTemp1.replaceAll("]", "");
 						hmmTemp3 = hmmTemp2.replaceAll("A", "'");
 						hmmTemp4 = hmmTemp3.replaceAll("U", "\"");
-						hmmTranlsiteratedToken = hmmTemp4.replaceAll("O", "%");
-						// hmmHebToken = Translate.Eng2Heb(hmmTemp5);
-						// System.out.println(hebrewHebToken);
+						hmmTemp4.replaceAll("O", "%");
 					}
 				} else {
 					System.out.println("problem for: sentence= " + hmmSentence);
@@ -552,8 +516,7 @@ public class HMM2Morph {
 		boolean rt = false;
 		int morphPrefixListSize = 0;
 		int hmmPrefixListSize = 0;
-		@SuppressWarnings("unchecked")
-		List<PrefixType> morphPrefixList = (List<PrefixType>) analysis.getPrefix();
+		List<PrefixType> morphPrefixList = analysis.getPrefix();
 		if (morphPrefixList != null)
 			morphPrefixListSize = morphPrefixList.size();
 		if (hmmPrefixList != null)
@@ -953,14 +916,8 @@ public class HMM2Morph {
 			BaseType base = null;
 			base = objFactory.createBaseType();
 			setBase(base, surface);
-			GenderNumberStatusDefinitenessType noun = null;
-			noun = objFactory.createGenderNumberStatusDefinitenessType();
-			SuffixType suffix = null;
-			try {
-				suffix = objFactory.createSuffixType();
-			} catch (JAXBException e3) {
-				e3.printStackTrace();
-			}
+			objFactory.createGenderNumberStatusDefinitenessType();
+			SuffixType suffix = objFactory.createSuffixType();
 			suffix.setFunction("possessive");
 			analysis.setSuffix(suffix);
 
@@ -1757,7 +1714,6 @@ public class HMM2Morph {
 	 *            printing it
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	public Corpus parseXML(final JAXBContext jc, final InputStream in, final String dprefixesFile,
 			String taggedFilePath) {
 		// System.out.println("(F) HMM2MORPH.parseXML Perl program output file
@@ -2067,8 +2023,7 @@ public class HMM2Morph {
 		int nextTokenIndex = tokenIndex + 1;
 		if (nextTokenIndex < tokenTypeListSize) {
 			nextToken = (TokenType) tokenList.get(nextTokenIndex);
-			@SuppressWarnings("unchecked")
-			List<AnalysisType> nextTokenAnalysisTypeList = (List<AnalysisType>) nextToken.getAnalysis();
+			List<AnalysisType> nextTokenAnalysisTypeList = nextToken.getAnalysis();
 			int nextTokenAnalysisTypeListSize = nextTokenAnalysisTypeList.size();
 			for (int nextTokenAnalysisIndex = 0; nextTokenAnalysisIndex < nextTokenAnalysisTypeListSize; nextTokenAnalysisIndex++) {
 				AnalysisType nextTokenAnalysis = (AnalysisType) nextTokenAnalysisTypeList.get(nextTokenAnalysisIndex);

@@ -596,8 +596,6 @@ public class MorphMult2TaggerFormat implements Constants {
 	// This is the function that is actually used in HMM web GUI - the above
 	// function simukates it
 	public String myMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
-		// System.out.println("(F) MorphMult2TaggerFormat.myMorp2Tagger()");
-		String finalOutputString = "";
 		InputStream in = null;
 		FileOutputStream out = null;
 		try {
@@ -624,15 +622,11 @@ public class MorphMult2TaggerFormat implements Constants {
 		String outputFileName = "/outputFile" + randomNum + ".nf";
 
 		PerformUniqeOutput p = new PerformUniqeOutput();
-		finalOutputString = p.myUniqueOutput(outputString.toString(), outputDir + outputFileName);
 		// return finalOutputString;
 		return outputFileName;
 	}
 
 	public String myWEBMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
-		// System.out.println("(F) MorphMult2TaggerFormat.myWEBMorp2Tagger()");
-		// Data.webFlag = true;
-		String finalOutputString = "";
 		InputStream in = null;
 		FileOutputStream out = null;
 		try {
@@ -659,7 +653,6 @@ public class MorphMult2TaggerFormat implements Constants {
 		String outputFileName = "/outputFile" + randomNum + ".nf";
 
 		PerformUniqeOutput p = new PerformUniqeOutput();
-		finalOutputString = p.myUniqueOutput(outputString.toString(), outputDir + outputFileName);
 		// return finalOutputString;
 		return outputFileName;
 	}
