@@ -7,11 +7,11 @@ import java.util.HashMap;
  * underlying structure.
  */
 public class Gimatria {
-	static private HashMap map = null;
+	static private HashMap<String, String> map = null;
 
 	public Gimatria(int initialCapacity) {
 		// Define initial capacity improve performance
-		map = new HashMap(initialCapacity, 1);
+		map = new HashMap<String, String>(initialCapacity, 1);
 	}
 
 	public void clear() {

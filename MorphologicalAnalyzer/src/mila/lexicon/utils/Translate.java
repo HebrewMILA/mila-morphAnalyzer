@@ -18,17 +18,17 @@ import java.util.List;
  *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class Translate {
-	private static HashMap hebToEng;
-	private static HashMap engToHeb;
+	private static HashMap<String, String> hebToEng;
+	private static HashMap<String, String> engToHeb;
 
-	public static List analyzeMixedHebEng(String inStr)
+	public static List<PrefixRec> analyzeMixedHebEng(String inStr)
 			throws UnsupportedEncodingException {
 		PrefixRec prefixRec = null;
 		StringBuffer result = null;
 		StringBuffer tempStr = null;
 		char tempChar;
 		String encodedStr = "";
-		ArrayList prefixList = new ArrayList();
+		ArrayList<PrefixRec> prefixList = new ArrayList<PrefixRec>();
 		int i = 0;
 		int len = inStr.length();
 		while (i < len) {
@@ -171,7 +171,7 @@ public class Translate {
 	}
 
 	private static void initEngToHeb() {
-		engToHeb = new HashMap();
+		engToHeb = new HashMap<String, String>();
 		engToHeb.put("a", "%D7%90");
 		engToHeb.put("b", "%D7%91");
 		engToHeb.put("g", "%D7%92");
@@ -210,7 +210,7 @@ public class Translate {
 	}
 
 	private static void initHebToEng() {
-		hebToEng = new HashMap();
+		hebToEng = new HashMap<String, String>();
 		hebToEng.put("א", "a");
 		hebToEng.put("ב", "b");
 		hebToEng.put("ג", "g");

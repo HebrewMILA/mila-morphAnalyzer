@@ -18,8 +18,8 @@ import java.util.ArrayList;
  */
 public class MWEinflections extends Connected {
 
-	public static ArrayList get(String input) {
-		ArrayList result = new ArrayList();
+	public static ArrayList<MWEinflectionsRecord> get(String input) {
+		ArrayList<MWEinflectionsRecord> result = new ArrayList<MWEinflectionsRecord>();
 		input = input.replaceAll("'", "\\\\'");
 		/*****
 		 * UPDATE checking input does not contain "\" character so it will not

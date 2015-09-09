@@ -2,6 +2,45 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/jarsRepo"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-el.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-io-2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-io-2.4-sources.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-lang3-3.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/dbpool-6.0.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/el-api.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/javaee-api-6.0.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/javaee-api-7.0.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jax-qname.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jaxb-libs.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jsf-api.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jsf-impl.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/JspQueries.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jstl-api-1.2.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/jstl-impl.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/mariadb-java-client-1.1.7.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/mila-generated-jaxb.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/namespace.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/or124.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/serializer.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/standard.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/xalan.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/xml-apis.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/xsdlib-1.5.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/xsdlib-2.2.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/xsdlib.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/xsltc.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-cli-1.2/commons-cli-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-cli-1.2/commons-cli-1.2-sources.jar"/>
+	<classpathentry kind="lib" path="/jarsRepo/commons-cli-1.2/commons-cli-1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

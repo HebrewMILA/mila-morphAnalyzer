@@ -52,7 +52,7 @@ public class Data implements Constants {
 	 * for example wl consists of two sub prefixes w and l this arrayList holds
 	 * them
 	 */
-	static ArrayList prefixesList = null;
+	static ArrayList<?> prefixesList = null;
 
 	/** holds prefixes data when uploaded to memory */
 	public static mila.lexicon.utils.Prefixes prefixes = null;;
@@ -709,7 +709,7 @@ public class Data implements Constants {
 	/**
 	 * @return Returns the prefixesList.
 	 */
-	public ArrayList getPrefixesList() {
+	public ArrayList<?> getPrefixesList() {
 		return prefixesList;
 	}
 

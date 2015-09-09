@@ -1274,7 +1274,7 @@ public class CreateCorpusXML implements Constants {
 			pref.setSurface("ה");
 			analysis.getPrefix().add(pref);
 		} else {
-			List list = null;
+			List<PrefixRec> list = null;
 			try {
 				list = Translate.analyzeMixedHebEng(description);
 			} catch (final UnsupportedEncodingException e1) {
@@ -2229,7 +2229,7 @@ public class CreateCorpusXML implements Constants {
 		String prefixSurface = "";
 		int prefixesCounter = 0;
 		// System.out.println("function =" + function);
-		List list = null;
+		List<?> list = null;
 		try {
 			list = Translate.analyzeMixedHebEng(description);
 		} catch (final UnsupportedEncodingException e) {

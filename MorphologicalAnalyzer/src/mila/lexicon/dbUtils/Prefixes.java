@@ -20,8 +20,8 @@ import java.util.ArrayList;
 public class Prefixes extends Connected {
 	PrefixRecord pr = null;
 
-	public ArrayList get(String input) throws UnsupportedEncodingException {
-		ArrayList result = new ArrayList();
+	public ArrayList<PrefixRecord> get(String input) throws UnsupportedEncodingException {
+		ArrayList<PrefixRecord> result = new ArrayList<PrefixRecord>();
 		String sql = "SELECT * FROM prefixes where prefix =?";
 		// System.out.println("sql="+ sql);
 		ResultSet rs = null;

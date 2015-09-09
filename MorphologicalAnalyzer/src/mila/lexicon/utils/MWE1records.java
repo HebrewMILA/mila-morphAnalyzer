@@ -7,11 +7,11 @@ import java.util.HashMap;
 import mila.lexicon.dbUtils.MWE1record;
 
 public class MWE1records implements Serializable {
-	static private HashMap map = null;
+	static private HashMap<String, ArrayList<MWE1record>> map = null;
 
 	/** Constructs an empty HashChain. */
 	public MWE1records(int initialCapacity, int rathio) {
-		map = new HashMap(initialCapacity, rathio);
+		map = new HashMap<String, ArrayList<MWE1record>>(initialCapacity, rathio);
 	}
 
 	/** Erases the contents of the current HashChain. */
@@ -22,10 +22,9 @@ public class MWE1records implements Serializable {
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
-	public ArrayList get(String key) throws Exception {
-		ArrayList existingChain = null;
-		existingChain = new ArrayList();
-		existingChain = (ArrayList) map.get(key);
+	public ArrayList<MWE1record> get(String key) throws Exception {
+		ArrayList<MWE1record> existingChain = new ArrayList<>();
+		existingChain =  map.get(key);
 		return existingChain;
 	}
 
@@ -44,15 +43,15 @@ public class MWE1records implements Serializable {
 		// The first element on the chain
 		if (!map.containsKey(key)) {
 			// System.out.println("The first element on the chain");
-			ArrayList chain = new ArrayList();
+			ArrayList<MWE1record> chain = new ArrayList<MWE1record>();
 			chain.add(mw1Record);
 			// System.out.println("chain size=" + chain.size());
 			map.put(key, chain);
 			// Adding an element to an already existing chain
 		} else { // if entry already exist
 					// System.out.println("Adding an element to an already existing chain");
-			ArrayList existingChain = new ArrayList();
-			existingChain = (ArrayList) map.get(key);
+			ArrayList<MWE1record> existingChain = new ArrayList<MWE1record>();
+			existingChain = (ArrayList<MWE1record>) map.get(key);
 			// System.out.println("existingChain size="+ existingChain.size());
 			existingChain.add(mw1Record);
 			map.remove(key);
@@ -62,7 +61,7 @@ public class MWE1records implements Serializable {
 		// System.out.println("size="+ map.size());
 	}
 
-	public void sput(String key, ArrayList mwe1RecordChain) {
+	public void sput(String key, ArrayList<MWE1record> mwe1RecordChain) {
 		if (mwe1RecordChain == null)
 			throw new RuntimeException(
 					"Bad idea! You tried to insert a null object into a Chain!");

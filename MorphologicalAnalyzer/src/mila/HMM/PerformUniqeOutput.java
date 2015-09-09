@@ -79,7 +79,7 @@ public class PerformUniqeOutput {
 
 	public String process(String input) throws IOException {
 		String line = "";
-		Vector lineVec = new Vector();
+		Vector<?> lineVec = new Vector<Object>();
 		HashMap<String, String> hashmap = null;
 		String token = "";
 		String pos = "";
@@ -107,7 +107,7 @@ public class PerformUniqeOutput {
 
 			} else {
 				boolean MWFlag = false;
-				hashmap = new HashMap();
+				hashmap = new HashMap<String, String>();
 				if (line.startsWith("\t(MWE")) {
 					token = line;
 					bw.write(token);

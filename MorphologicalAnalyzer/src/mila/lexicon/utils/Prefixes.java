@@ -8,11 +8,11 @@ import java.util.HashMap;
  * underlying structure.
  */
 public class Prefixes {
-	static private HashMap map = null;
+	static private HashMap<String, ArrayList<String>> map = null;
 
 	public Prefixes(int initialCapacity) {
 		// Define initial capacity improve performance
-		map = new HashMap(initialCapacity, 1);
+		map = new HashMap<String, ArrayList<String>>(initialCapacity, 1);
 	}
 
 	public void clear() {
@@ -21,10 +21,10 @@ public class Prefixes {
 		}
 	}
 
-	public ArrayList get(String key) {
+	public ArrayList<?> get(String key) {
 		// System.out.println("(F) get("+key+")");
-		ArrayList existingChain = new ArrayList();
-		existingChain = (ArrayList) map.get(key);
+		ArrayList<?> existingChain = new ArrayList<Object>();
+		existingChain = (ArrayList<?>) map.get(key);
 		return existingChain;
 	}
 
@@ -34,14 +34,14 @@ public class Prefixes {
 					+ "a null object into a Chain!");
 		if (!map.containsKey(key)) {
 			// System.out.println("The first element on the chain");
-			ArrayList chain = new ArrayList();
+			ArrayList<String> chain = new ArrayList<String>();
 			chain.add(p);
 			// System.out.println("chain size=" + chain.size());
 			map.put(key, chain);
 		} else {
 			// System.out.println("Adding an element to an already existing chain");
-			ArrayList existingChain = new ArrayList();
-			existingChain = (ArrayList) map.get(key);
+			ArrayList<String> existingChain = new ArrayList<String>();
+			existingChain = (ArrayList<String>) map.get(key);
 			// System.out.println("existingChain size="+ existingChain.size());
 			existingChain.add(p);
 			map.remove(key);
@@ -49,7 +49,7 @@ public class Prefixes {
 		}
 	}
 
-	public void sput(String key, ArrayList prefixRecordChain) {
+	public void sput(String key, ArrayList<String> prefixRecordChain) {
 		if (prefixRecordChain == null)
 			throw new RuntimeException("Bad idea! You tried to insert "
 					+ "a null object into a Chain!");

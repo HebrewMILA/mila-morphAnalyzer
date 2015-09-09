@@ -283,7 +283,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		char prefixPerEntry = 'u';
 
 		int listSize = 0;
-		ArrayList inflectionsList = null;
+		ArrayList<?> inflectionsList = null;
 		DBInflectionsRecord inflectionsRecDB = null;
 		InflectedRecordNum inflectionsRecNum = null;
 		try {
@@ -423,7 +423,7 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 		prefixPerEntryExistFlag = false;
 		InflectedRecordNum inflectionsRecNum = null;
 		DBInflectionsRecord inflectionsRecDB = null;
-		ArrayList inflectionsList = null;
+		ArrayList<?> inflectionsList = null;
 
 		// handle cases where in tokenization stage we can't guess for sure that
 		// the token is whole prefix

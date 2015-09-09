@@ -125,11 +125,11 @@ public class MorphMult2TaggerFormat implements Constants {
 		bw.newLine();
 	}
 
-	public boolean handleHebWordAndPunctuation(String hebWord, List analysisList)
+	public boolean handleHebWordAndPunctuation(String hebWord, List<AnalysisType> analysisList)
 			throws IOException {
 		boolean punctuation = false;
 		if (analysisList.size() > 0) {
-			AnalysisType analysis = (AnalysisType) analysisList.get(0);
+			AnalysisType analysis = analysisList.get(0);
 			if (analysis.getBase() != null
 					&& analysis.getBase().getPunctuation() != null) {
 				if (hebWord.length() == 1) {
@@ -528,7 +528,7 @@ public class MorphMult2TaggerFormat implements Constants {
 
 	public String handlePrefix(AnalysisType analysis) throws IOException {
 		// System.out.println("(F) handlePrefix");
-		List prefixList = analysis.getPrefix();
+		List<?> prefixList = analysis.getPrefix();
 		int prefixListSize = prefixList.size();
 		StringBuilder prefixSurfaceSB = new StringBuilder();
 		for (int prefixIndex = 0; prefixIndex < prefixListSize; prefixIndex++) {
@@ -697,11 +697,11 @@ public class MorphMult2TaggerFormat implements Constants {
 		if (webFlag)
 			Data.webFlag = webFlag;
 
-		List articleTypeList;
-		List paragraphTypeList;
-		List sentenceTypeList;
-		List tokenTypeList;
-		List analysisTypeList;
+		List<ArticleType> articleTypeList;
+		List<ParagraphType> paragraphTypeList;
+		List<SentenceType> sentenceTypeList;
+		List<TokenType> tokenTypeList;
+		List<AnalysisType> analysisTypeList;
 		Corpus collection = null;
 		JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
 		Unmarshaller unmarshaller = jc.createUnmarshaller();
@@ -723,7 +723,7 @@ public class MorphMult2TaggerFormat implements Constants {
 			int sentenceTypeListSize = sentenceTypeList.size();
 			for (int sentenceIndex = 0; sentenceIndex < sentenceTypeListSize; sentenceIndex++) {
 
-				SentenceType sentence = (SentenceType) sentenceTypeList
+				SentenceType sentence = sentenceTypeList
 						.get(sentenceIndex);
 				tokenTypeList = sentence.getToken();
 				int tokenTypeListSize = tokenTypeList.size();
@@ -929,7 +929,7 @@ public class MorphMult2TaggerFormat implements Constants {
 														.analyzePrefixList(prefixIndex);
 												String description = pr
 														.getDescription();
-												List list = null;
+												List<?> list = null;
 												try {
 													list = Translate
 															.analyzeMixedHebEng(description);

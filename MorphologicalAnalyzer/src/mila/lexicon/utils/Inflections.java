@@ -9,11 +9,11 @@ import java.util.HashMap;
  * underlying structure.
  */
 public class Inflections implements Serializable {
-	static private HashMap map = null;
+	static private HashMap<String, ArrayList<String>> map = null;
 
 	/** Constructs an empty HashChain. */
 	public Inflections(int initialCapacity, int rathio) {
-		map = new HashMap(initialCapacity, rathio);
+		map = new HashMap<String, ArrayList<String>>(initialCapacity, rathio);
 	}
 
 	/** Erases the contents of the current HashChain. */
@@ -23,10 +23,9 @@ public class Inflections implements Serializable {
 		}
 	}
 
-	public ArrayList get(String key) throws Exception {
-		ArrayList existingChain = null;
-		existingChain = new ArrayList();
-		existingChain = (ArrayList) map.get(key);
+	public ArrayList<String> get(String key) throws Exception {
+		ArrayList<String> existingChain = new ArrayList<>();
+		existingChain = map.get(key);
 		return existingChain;
 	}
 
@@ -38,7 +37,7 @@ public class Inflections implements Serializable {
 		// The first element on the chain
 		if (!map.containsKey(key)) {
 			// System.out.println("The first element on the chain");
-			ArrayList chain = new ArrayList();
+			ArrayList<String> chain = new ArrayList<String>();
 			chain.add(inflectRecord);
 			// System.out.println("chain size=" + chain.size());
 			map.put(key, chain);
@@ -47,8 +46,8 @@ public class Inflections implements Serializable {
 					// System.out.println("Adding an element to an already
 					// existing
 					// chain");
-			ArrayList existingChain = new ArrayList();
-			existingChain = (ArrayList) map.get(key);
+			ArrayList<String> existingChain = new ArrayList<String>();
+			existingChain = (ArrayList<String>) map.get(key);
 			// System.out.println("existingChain size="+ existingChain.size());
 			existingChain.add(inflectRecord);
 			map.remove(key);
@@ -58,7 +57,7 @@ public class Inflections implements Serializable {
 		System.out.println("size=" + map.size());
 	}
 
-	public void sput(String key, ArrayList inflectRecordChain) {
+	public void sput(String key, ArrayList<String> inflectRecordChain) {
 		if (inflectRecordChain == null)
 			throw new RuntimeException("Bad idea! You tried to insert "
 					+ "a null object into a Chain!");

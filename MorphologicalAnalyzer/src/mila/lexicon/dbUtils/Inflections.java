@@ -118,8 +118,8 @@ public class Inflections extends Connected {
 	}
 
 	// ------------------------------------------------------------------------------------------------------------------------------
-	public ArrayList get(String input) throws UnsupportedEncodingException {
-		ArrayList result = new ArrayList();
+	public ArrayList<DBInflectionsRecord> get(String input) throws UnsupportedEncodingException {
+		ArrayList<DBInflectionsRecord> result = new ArrayList<DBInflectionsRecord>();
 		String sql = "SELECT * FROM inflections WHERE transliterated=?";
 		// System.out.println(sql);
 		ResultSet rs = null;

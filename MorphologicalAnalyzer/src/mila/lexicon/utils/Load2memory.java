@@ -711,7 +711,7 @@ public class Load2memory {
 			in = new BufferedReader(new InputStreamReader(fileInputStream));
 			String decodedPrefixesRecord = "";
 			String prefix = "";
-			ArrayList chain = null;
+			ArrayList<String> chain = null;
 			boolean first = true;
 			String currentPrefix = "";
 			while ((decodedPrefixesRecord = in.readLine()) != null) {
@@ -726,7 +726,7 @@ public class Load2memory {
 					prefixes.put(prefix, decodedPrefixesRecord);
 				else {
 					if (first) {
-						chain = new ArrayList();
+						chain = new ArrayList<String>();
 						first = false;
 						chain.add(decodedPrefixesRecord);
 						currentPrefix = prefix;
@@ -735,7 +735,7 @@ public class Load2memory {
 							chain.add(decodedPrefixesRecord);
 						else {
 							prefixes.sput(currentPrefix, chain);
-							chain = new ArrayList();
+							chain = new ArrayList<String>();
 							chain.add(decodedPrefixesRecord);
 							currentPrefix = prefix;
 						}

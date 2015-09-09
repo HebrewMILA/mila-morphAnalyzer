@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class OutputTokenRecord {
 	String surface = "";
-	ArrayList outputAnalysisList = new ArrayList();
+	ArrayList<OutputAnalysisRecord> outputAnalysisList = new ArrayList<OutputAnalysisRecord>();
 
 	public ArrayList<OutputAnalysisRecord> getOutputAnalysisList() {
 		return outputAnalysisList;

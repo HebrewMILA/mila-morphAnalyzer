@@ -3,11 +3,11 @@ package mila.lexicon.utils;
 import java.util.HashMap;
 
 public class MWEinflections {
-	static private HashMap map = null;
+	static private HashMap<String, String> map = null;
 
 	public MWEinflections(int initialCapacity) {
 		// Define initial capacity improve performance
-		map = new HashMap(initialCapacity, 1);
+		map = new HashMap<String, String>(initialCapacity, 1);
 	}
 
 	public void clear() {
