@@ -1231,7 +1231,6 @@ public class PostProcessor1 extends Connected {
 	}
 
 	// -------------------------------------------------------------------------------------------------------------
-	@SuppressWarnings("unchecked")
 	public void process(InputStream morphXMLanalysis, PrintWriter pw)
 			throws SQLException, UnsupportedEncodingException, JAXBException {
 		ArticleType article = null;

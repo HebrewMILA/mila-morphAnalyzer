@@ -28,7 +28,7 @@ import mila.lexicon.utils.PrefixRec;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
 
-public class HMM2Morph {
+public final class HMM2Morph {
 	final String JAXB_PACKAGE = "mila.generated";
 	final static String UNSPECIFED = "unspecified";
 	String outputFile = "";
@@ -1373,43 +1373,8 @@ public class HMM2Morph {
 		}
 	}
 
-	// private AnalysisType handlePassiveParticipleAnalysis(String surface,
-	// String analysisId) {
-	// AnalysisType analysis = null;
-	// try {
-	// ObjectFactory objFactory = null;
-	// objFactory = new ObjectFactory();
-	//
-	// analysis = objFactory.createAnalysisType();
-	//
-	// analysis.setId(analysisId);
-	// BaseType base = null;
-	// base = objFactory.createBaseType();
-	// setBase(base, surface);
-	// ParticipleType participle = null;
-	// participle = objFactory.createParticipleType();
-	// setBase(base, surface);
-	// participle.setRegister(UNSPECIFED);
-	// participle.setBinyan(UNSPECIFED);
-	// participle.setGender(UNSPECIFED);
-	// participle.setNumber(UNSPECIFED);
-	// participle.setPerson(UNSPECIFED);
-	// participle.setStatus(UNSPECIFED);
-	// participle.setRoot(UNSPECIFED);
-	// participle.setMood("passive");
-	// participle.setParticipleType(UNSPECIFED);
-	// participle.setDefiniteness(UNSPECIFED);
-	// base.setParticiple(participle);
-	// analysis.setBase(base);
-	// analysis.setScore(1.0);
-	// } catch (JAXBException e) {
-	// e.printStackTrace();
-	// }
-	// return analysis;
-	// }
-
 	// -----------------------------------------------------------------------------------------------------------------
-	private Corpus parseXML(final JAXBContext jc, final InputStream in) throws Exception {
+	private Corpus parseXML(final JAXBContext jc, final InputStream in) throws JAXBException, IOException {
 		List<ArticleType> articleTypeList;
 		List<ParagraphType> paragraphTypeList;
 		List<SentenceType> sentenceTypeList;
@@ -1424,10 +1389,6 @@ public class HMM2Morph {
 		ArticleType article = (ArticleType) articleTypeList.get(0);
 		String morphSurface = "";
 		String hmmPos = "";
-		// handle prefix + propername
-		// Data.init("C:\\Documents and Settings\\daliabo\\My
-		// Documents\\lexicon\\diffTests\\dprefixes.data");
-		// Data.webFlag = true;
 
 		paragraphTypeList = (List<ParagraphType>) article.getParagraph();
 		int paragraphTypeListSize = paragraphTypeList.size();
@@ -1957,21 +1918,17 @@ public class HMM2Morph {
 			final int tokenIndex, AnalysisType analysis, final int analysisIndex, final ArrayList<String> hmmPrefixList,
 			final String hmmPos) {
 		boolean rt = false;
-		TokenType nextToken = null;
 		int nextTokenIndex = tokenIndex + 1;
 		if (nextTokenIndex < tokenTypeListSize) {
-			nextToken = (TokenType) tokenList.get(nextTokenIndex);
-			List<AnalysisType> nextTokenAnalysisTypeList = nextToken.getAnalysis();
-			int nextTokenAnalysisTypeListSize = nextTokenAnalysisTypeList.size();
-			for (int nextTokenAnalysisIndex = 0; nextTokenAnalysisIndex < nextTokenAnalysisTypeListSize; nextTokenAnalysisIndex++) {
-				AnalysisType nextTokenAnalysis = (AnalysisType) nextTokenAnalysisTypeList.get(nextTokenAnalysisIndex);
+			TokenType nextToken = tokenList.get(nextTokenIndex);
+			List<AnalysisType> nextTokenAnalysisList = nextToken.getAnalysis();
+			for (AnalysisType nextTokenAnalysis : nextTokenAnalysisList) {
 				BaseType base = nextTokenAnalysis.getBase();
 				// literal number
-				if (base != null)
-					if ((base.getNumeral() != null && base.getNumeral().getType().charAt(0) == 'l')
-							|| (base.getPunctuation() != null && (nextToken.getSurface().charAt(0) == '-'
-									|| nextToken.getSurface().charAt(0) == '"'
-									|| nextToken.getSurface().charAt(0) == '\''))) {
+				if (base != null &&
+						(base.getNumeral() != null && base.getNumeral().getType().charAt(0) == 'l')
+				     || (base.getPunctuation() != null && "-\"'".contains(""+nextToken.getSurface().charAt(0)))
+				     ) {
 						analysis.setScore(1.0);
 						rt = true;
 					}
@@ -1987,20 +1944,14 @@ public class HMM2Morph {
 
 	// -----------------------------------------------------------------------------------------------------------------
 	// used for the web
-	public void process(final String XMLMorphStr, final String taggedFilePath, PrintWriter pw) throws Exception {
-		InputStream in = null;
-		// System.out.println("XMLMorphStr="+XMLMorphStr);
+	public void process(final String XMLMorphStr, final String taggedFilePath, PrintWriter pw) throws IOException, JAXBException {
 		try {
 			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
-			in = new ByteArrayInputStream(XMLMorphStr.getBytes("UTF-8"));
+			InputStream in = new ByteArrayInputStream(XMLMorphStr.getBytes("UTF-8"));
 			readFile(taggedFilePath);
 			Corpus collection = parseXML(jc, in);
 			marshalAnalysis(jc, collection, pw);
-			// parseXML(taggedFilePath);
-			// parse(in);
-			// setScore(XMLMorphStr, pw);
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -2009,24 +1960,17 @@ public class HMM2Morph {
 	// -----------------------------------------------------------------------------------------------------------------
 	// used for stand alone
 	public void process(final String XMLMorphStr, final String taggedFilePath, PrintWriter pw,
-			final String dprefixesFile) throws Exception {
-		InputStream in = null;
-		// System.out.println("XMLMorphStr="+XMLMorphStr);
+			final String dprefixesFile) throws JAXBException, FileNotFoundException {
 		try {
-			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
-			in = new ByteArrayInputStream(XMLMorphStr.getBytes("UTF-8"));
-			readFile(taggedFilePath); // read file into class variable bi
-			// System.out.println("(F) HMM2Morph:process reading file -
-			// "+taggedFilePath);
-			// System.out.println("(F) HMM2Morph:process XMLMorphStr -
-			// "+XMLMorphStr);
+			JAXBContext jc;
+				jc = JAXBContext.newInstance(JAXB_PACKAGE);
+			InputStream in = new ByteArrayInputStream(XMLMorphStr.getBytes("UTF-8"));
+			// read file into class variable bi
+			readFile(taggedFilePath); 
 			Corpus collection = parseXML(jc, in, dprefixesFile, taggedFilePath);
-			marshalAnalysis(jc, collection, pw); // put the output XML into pw
-			// parseXML(taggedFilePath);
-			// parse(in);
-			// setScore(XMLMorphStr, pw);
+			// put the output XML into pw
+			marshalAnalysis(jc, collection, pw); 
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -2036,15 +1980,10 @@ public class HMM2Morph {
 	 * read file into class variable bi
 	 * 
 	 * @param inputFile
+	 * @throws FileNotFoundException 
 	 */
-	private void readFile(String inputFile) {
-		try {
-			bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	private void readFile(String inputFile) throws FileNotFoundException {
+		bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------

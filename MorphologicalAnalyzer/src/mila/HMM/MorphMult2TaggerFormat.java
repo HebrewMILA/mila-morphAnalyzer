@@ -8,9 +8,6 @@ package mila.HMM;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -44,19 +41,8 @@ import mila.lexicon.utils.Translate;
 
 /**
  * @author daliabo
- * 
- *         TODO To change the template for this generated type comment go to
- *         Window - Preferences - Java - Code Style - Code Templates
  */
-public class MorphMult2TaggerFormat implements Constants {
-	// final String JAXB_PACKAGE = "mila.generated";
-
-	public static void main(String[] args) {
-		String inputFile = args[0];
-		String outputFile = args[1];
-		MorphMult2TaggerFormat m = new MorphMult2TaggerFormat();
-		m.process(inputFile, outputFile);
-	}
+public final class MorphMult2TaggerFormat implements Constants {
 
 	BufferedWriter bw = null;
 
@@ -93,8 +79,6 @@ public class MorphMult2TaggerFormat implements Constants {
 				outputString.append("(ADJECTIVE-CONST " + hebWord + ")" + "\n");
 			bw.write("(ADJECTIVE-CONST " + hebWord + ")");
 			bw.newLine();
-
-			// �� ������������ ���� ������ �status=absolute
 		} else if (status != null && status.equals("absolute") || status.equals("unspecified")) {
 			if (!prefixExistFlag) {
 				bw.write("\t");
@@ -362,42 +346,6 @@ public class MorphMult2TaggerFormat implements Constants {
 		return punctuation;
 	}
 
-	// public String myMorp2Tagger(String inStr, String outputDir) throws
-	// JAXBException,
-	// IOException {
-	// String finalOutputString = "";
-	// InputStream in = null;
-	// FileOutputStream out = null;
-	// try {
-	// out = new FileOutputStream(outputDir + "/myOutputFile.nf");
-	// } catch (FileNotFoundException e1) {
-	// // TODO Auto-generated catch block
-	// e1.printStackTrace();
-	// }
-	// OutputStreamWriter pOut = new OutputStreamWriter(out);
-	// bw = new BufferedWriter(pOut);
-	//
-	// try {
-	// in = new java.io.ByteArrayInputStream(inStr.getBytes("UTF-8"));
-	// } catch (UnsupportedEncodingException e1) {
-	// // TODO Auto-generated catch block
-	// e1.printStackTrace();
-	// }
-	// parseXML(in);
-	// bw.flush();
-	// bw.close();
-	//
-	// Random generator = new Random();
-	// String randomNum = String.valueOf(generator.nextInt());
-	// String outputFileName = "/outputFile" + randomNum + ".nf";
-	//
-	// PerformUniqeOutput p = new PerformUniqeOutput();
-	// finalOutputString = p.myUniqueOutput(outputString.toString(), outputDir
-	// + outputFileName);
-	// // return finalOutputString;
-	// return outputFileName;
-	// }
-
 	public void handleNoun(AnalysisType analysis, BaseType base, String hebWord, boolean prefixExistFlag)
 			throws IOException {
 		ParticipleType participle = base.getParticiple();
@@ -593,72 +541,20 @@ public class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	// This is the function that is actually used in HMM web GUI - the above
-	// function simukates it
+	private final static Random generator = new Random();
+
 	public String myMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
-		InputStream in = null;
-		FileOutputStream out = null;
-		try {
-			out = new FileOutputStream(outputDir + "/myOutputFile.nf");
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+		String outputFilename = outputDir + "/myOutputFile.nf";
+		try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFilename)));
+				InputStream in = new java.io.ByteArrayInputStream(inStr.getBytes("UTF-8"))) {
+			parseXML(in, false, bw);
 		}
-		OutputStreamWriter pOut = new OutputStreamWriter(out);
-		bw = new BufferedWriter(pOut);
-
-		try {
-			in = new java.io.ByteArrayInputStream(inStr.getBytes("UTF-8"));
-		} catch (UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		parseXML(in, false);
-		bw.flush();
-		bw.close();
-
-		Random generator = new Random();
 		String randomNum = String.valueOf(generator.nextInt());
 		String outputFileName = "/outputFile" + randomNum + ".nf";
-
-		PerformUniqeOutput p = new PerformUniqeOutput();
-		// return finalOutputString;
 		return outputFileName;
 	}
 
-	public String myWEBMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
-		InputStream in = null;
-		FileOutputStream out = null;
-		try {
-			out = new FileOutputStream(outputDir + "/myOutputFile.nf");
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		OutputStreamWriter pOut = new OutputStreamWriter(out);
-		bw = new BufferedWriter(pOut);
-
-		try {
-			in = new java.io.ByteArrayInputStream(inStr.getBytes("UTF-8"));
-		} catch (UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		parseXML(in, true);
-		bw.flush();
-		bw.close();
-
-		Random generator = new Random();
-		String randomNum = String.valueOf(generator.nextInt());
-		String outputFileName = "/outputFile" + randomNum + ".nf";
-
-		PerformUniqeOutput p = new PerformUniqeOutput();
-		// return finalOutputString;
-		return outputFileName;
-	}
-
-	public void parseXML(InputStream in, boolean webFlag) throws JAXBException, IOException {
-		// System.out.println("(F) parseXML");
+	public void parseXML(InputStream in, boolean webFlag, BufferedWriter bw2) throws JAXBException, IOException {
 		// for running in my PC with eclipse uncomment Data.webFlag = true;
 		if (webFlag)
 			Data.webFlag = webFlag;
@@ -697,20 +593,9 @@ public class MorphMult2TaggerFormat implements Constants {
 					int analysisTypeListSize = analysisTypeList.size();
 
 					String surface = token.getSurface();
-					// System.out.println("(F) parseXML surface " + surface);
 					if (surface.startsWith("#"))
 						continue; // if its '#' then skip to next token
-					/*
-					 * if (surface.startsWith(";")) continue; // if its ';' then
-					 * skip to next token if (surface.startsWith("&")) continue;
-					 * // if its '&' then skip to next token if
-					 * (surface.startsWith("-")) continue; // if its '-' then
-					 * skip to next token
-					 */
 					String hebWord = Translate.HMMHeb2Eng(surface);
-
-					// System.out.println("(F) parseXML hebWord " + hebWord);
-
 					String originalHebWord = hebWord;
 
 					boolean punctuatuionFlag = handleHebWordAndPunctuation(hebWord, analysisTypeList);
@@ -727,28 +612,10 @@ public class MorphMult2TaggerFormat implements Constants {
 
 							if (analysis.getPrefix().size() > 0) {
 								gatheredPrefixSurface = handlePrefix(analysis);
-								// System.out.println("(F) parseXML
-								// gatheredPrefixSurface "
-								// +
-								// Translate.HMMHeb2Eng(gatheredPrefixSurface));
-								// System.out.println("(F) parseXML
-								// originalHebWord "
-								// + originalHebWord);
 								int gatheredPrefixLen = gatheredPrefixSurface.length();
 								int originalHebWordLen = originalHebWord.length(); // added
-																					// 3.5.11
-								// gatheredPrefixLen = (gatheredPrefixLen >
-								// originalHebWordLen) ? (originalHebWordLen +
-								// 1) : gatheredPrefixLen; // added 3.5.11
-								// protection from
-								// StringIndexOutOfBoundsException
-								if (gatheredPrefixLen > originalHebWordLen) // if
-																			// its
-																			// longer
-																			// then
-																			// cant
-																			// read
-								{
+								// if its longer then cant read
+								if (gatheredPrefixLen > originalHebWordLen) {
 									hebWord = "";
 								} else {
 									hebWord = originalHebWord.substring(gatheredPrefixLen);
@@ -848,11 +715,8 @@ public class MorphMult2TaggerFormat implements Constants {
 										if (StringUtils.moshevkaleb(properNamePrefix)) {
 											int prefixListSize = 0;
 											try {
-
 												prefixListSize = Data.getPrefixes(properNamePrefix);
 											} catch (Exception e) {
-												// TODO Auto-generated catch
-												// block
 												e.printStackTrace();
 											}
 											for (int prefixIndex = 0; prefixIndex < prefixListSize; prefixIndex++) {
@@ -892,8 +756,6 @@ public class MorphMult2TaggerFormat implements Constants {
 									pos = "WPREFIX";
 									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								}
-
-								// ������ �� ������ ���� ��� �5-
 							} else {
 								bw.newLine();
 								outputString.append("\n");
@@ -911,41 +773,5 @@ public class MorphMult2TaggerFormat implements Constants {
 			bw.write("</paragraph>");
 			bw.newLine();
 		}
-	}
-
-	public void process(String inputFile, String outputFile) {
-		// System.out.println("(F) MorphMult2TaggerFormat.process()");
-		System.out.println(inputFile);
-		System.out.println(outputFile);
-		try {
-			readMorphFile(inputFile, outputFile);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	public void readMorphFile(String TaggedMorphFile, String outputFile) throws IOException, JAXBException {
-		// System.out.println("(F) MorphMult2TaggerFormat.readMorphFile()");
-		FileOutputStream out = null;
-		try {
-			out = new FileOutputStream(outputFile);
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		OutputStreamWriter pOut = new OutputStreamWriter(out);
-		bw = new BufferedWriter(pOut);
-		InputStream in = new FileInputStream(new File(TaggedMorphFile));
-		parseXML(in, true);
-		bw.flush();
-		bw.close();
-		// System.out.println("input to uniq"+outputString.toString());
-		PerformUniqeOutput p = new PerformUniqeOutput();
-		p.myUniqueOutput(outputString.toString(),
-				"C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy2.txt");
 	}
 }

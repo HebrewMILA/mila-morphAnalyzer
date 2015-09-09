@@ -56,7 +56,6 @@ public class CorpusAnalysisReader {
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------------------
-	@SuppressWarnings("unchecked")
 	public void parse(InputStream input) {
 		try {
 			jc = JAXBContext.newInstance(JAXB_PACKAGE);

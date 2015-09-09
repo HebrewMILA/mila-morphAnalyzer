@@ -23,7 +23,7 @@ import java.util.HashMap;
  *         TODO To change the template for this generated type comment go to
  *         Window - Preferences - Java - Code Style - Code Templates
  */
-public class PerformUniqeOutput {
+final class PerformUniqeOutput {
 	public static void main(String[] args) throws IOException {
 		PerformUniqeOutput r = new PerformUniqeOutput();
 		String inputFile = args[0];

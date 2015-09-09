@@ -1,6 +1,6 @@
 package mila.HMM;
 
-class ScoreRec {
+final class ScoreRec {
 	String scoresList = "";
 	String transliterated = "";
 	String posList = "";
