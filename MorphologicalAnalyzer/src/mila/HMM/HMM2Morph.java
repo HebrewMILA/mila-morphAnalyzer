@@ -2,14 +2,11 @@ package mila.HMM;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -40,7 +37,7 @@ public class HMM2Morph {
 	double MWECounter = 0.0;
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public String analyzeHMMLine(final String hmmSentence, ArrayList<String> hmmPrefixList) {
+	private String analyzeHMMLine(final String hmmSentence, ArrayList<String> hmmPrefixList) {
 		String hmmToken1 = "";
 		String hmmPos = "";
 		StringTokenizer hmmSt1 = new StringTokenizer(hmmSentence, "[");
@@ -109,7 +106,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public int checkPos(final AnalysisType analysis, final String hmmPos, int scoreCounter) throws Exception {
+	private int checkPos(final AnalysisType analysis, final String hmmPos, int scoreCounter) throws Exception {
 		BaseType base = analysis.getBase();
 		if (base.getPunctuation() != null) {
 			analysis.setScore(1.0);
@@ -527,7 +524,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleAdjectiveAnalysis(String surface, String analysisId) {
+	private AnalysisType handleAdjectiveAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -553,7 +550,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleAdjectiveConstAnalysis(String surface, String analysisId) {
+	private AnalysisType handleAdjectiveConstAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -577,7 +574,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleAdjectiveDefAnalysis(String surface, String analysisId) {
+	private AnalysisType handleAdjectiveDefAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -603,7 +600,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleAdverbAnalysis(String surface, String analysisId) {
+	private AnalysisType handleAdverbAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -626,7 +623,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleConjunctionAnalysis(String surface, String analysisId) {
+	private AnalysisType handleConjunctionAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -650,7 +647,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleCopulaAnalysis(String surface, String analysisId) {
+	private AnalysisType handleCopulaAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -677,7 +674,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleExistentialAnalysis(String surface, String analysisId) {
+	private AnalysisType handleExistentialAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -704,7 +701,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleInterjectionAnalysis(String surface, String analysisId) {
+	private AnalysisType handleInterjectionAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -728,7 +725,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleInterrogativeAnalysis(String surface, String analysisId) {
+	private AnalysisType handleInterrogativeAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -752,7 +749,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleModalAnalysis(String surface, String analysisId) {
+	private AnalysisType handleModalAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -785,7 +782,7 @@ public class HMM2Morph {
 	 * @param analysisId
 	 * @return
 	 */
-	public AnalysisType handleMWEAnalysis(String surface, String analysisId) {
+	private AnalysisType handleMWEAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -807,7 +804,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNegationAnalysis(String surface, String analysisId) {
+	private AnalysisType handleNegationAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -831,7 +828,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNounAnalysis(String surface, String analysisId) {
+	private AnalysisType handleNounAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -854,7 +851,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNounConstAnalysis(String surface, String analysisId) {
+	private AnalysisType handleNounConstAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -879,7 +876,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNounDefAnalysis(String surface, String analysisId) {
+	private AnalysisType handleNounDefAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -904,7 +901,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNounPossessiveAnalysis(String surface, String analysisId) {
+	private AnalysisType handleNounPossessiveAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -930,7 +927,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleNumeralAnalysis(String surface, String analysisId) {
+	private AnalysisType handleNumeralAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -957,7 +954,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleParticipleAnalysis(String surface, String analysisId) {
+	private AnalysisType handleParticipleAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -982,7 +979,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleParticipleDefAnalysis(String surface, String analysisId) {
+	private AnalysisType handleParticipleDefAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1007,7 +1004,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public void handlePrefixProperNameAnalysis(TokenType token, String morphSurface, double score) {
+	private void handlePrefixProperNameAnalysis(TokenType token, String morphSurface, double score) {
 		AnalysisType analysis = null;
 		try {
 			int surfaceLen = morphSurface.length();
@@ -1083,7 +1080,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handlePrepositionAnalysis(String surface, String analysisId) {
+	private AnalysisType handlePrepositionAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1107,7 +1104,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handlePronounAnalysis(String surface, String analysisId) {
+	private AnalysisType handlePronounAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1130,7 +1127,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleProperNameAnalysis(String surface, String analysisId, double score) {
+	private AnalysisType handleProperNameAnalysis(String surface, String analysisId, double score) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1156,7 +1153,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleProperNameDefAnalysis(String surface, String analysisId) {
+	private AnalysisType handleProperNameDefAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1182,7 +1179,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleQuantifierAnalysis(String surface, String analysisId) {
+	private AnalysisType handleQuantifierAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1209,7 +1206,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleTitleAnalysis(String surface, String analysisId) {
+	private AnalysisType handleTitleAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1234,7 +1231,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleVerbAnalysis(String surface, String analysisId) {
+	private AnalysisType handleVerbAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1258,7 +1255,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleVerbInfAnalysis(String surface, String analysisId) {
+	private AnalysisType handleVerbInfAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1283,7 +1280,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleWprefixAnalysis(String surface, String analysisId) {
+	private AnalysisType handleWprefixAnalysis(String surface, String analysisId) {
 		AnalysisType analysis = null;
 		try {
 			ObjectFactory objFactory = null;
@@ -1307,66 +1304,7 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public AnalysisType handleZevelAnalysis(String surface, String analysisId) {
-		AnalysisType analysis = null;
-		try {
-			ObjectFactory objFactory = null;
-			objFactory = new ObjectFactory();
-			analysis = objFactory.createAnalysisType();
-			analysis.setId(analysisId);
-			BaseType base = null;
-			base = objFactory.createBaseType();
-			ZVLType zevel = null;
-			zevel = objFactory.createZVLType();
-			base.setZevel(zevel);
-			analysis.setBase(base);
-			analysis.setScore(1.0);
-		} catch (JAXBException e) {
-			e.printStackTrace();
-		}
-		return analysis;
-	}
-
-	// -----------------------------------------------------------------------------------------------------------------
-	public void marshalAnalysis(JAXBContext jc, Corpus collection) {
-		// System.out.println("(F) HMM2Morph:marshalAnalysis(JAXBContext jc,
-		// Corpus collection)");
-		FileOutputStream out = null;
-		OutputStreamWriter pOut = null;
-		try {
-			out = new FileOutputStream(outputFile);
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		}
-		try {
-			pOut = new OutputStreamWriter(out, "UTF8");
-		} catch (UnsupportedEncodingException e2) {
-			// System.out
-			// .println("CreateCorpusXML:printDoc UnsupportedEncodingException
-			// while create OutputStreamWriter");
-			e2.printStackTrace();
-		}
-		Marshaller m = null;
-
-		try {
-			m = jc.createMarshaller();
-		} catch (JAXBException e1) {
-			e1.printStackTrace();
-		}
-		try {
-			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
-		} catch (PropertyException e2) {
-			e2.printStackTrace();
-		}
-		try {
-			m.marshal(collection, pOut);
-		} catch (JAXBException e3) {
-			e3.printStackTrace();
-		}
-	}
-
-	// -----------------------------------------------------------------------------------------------------------------
-	public void marshalAnalysis(JAXBContext jc, Corpus collection, PrintWriter pw) {
+	private void marshalAnalysis(JAXBContext jc, Corpus collection, PrintWriter pw) {
 		// System.out.println("(F) HMM2Morph:marshalAnalysis(JAXBContext jc,
 		// Corpus collection,PrintWriter pw)");
 		Marshaller m = null;
@@ -1435,7 +1373,7 @@ public class HMM2Morph {
 		}
 	}
 
-	// public AnalysisType handlePassiveParticipleAnalysis(String surface,
+	// private AnalysisType handlePassiveParticipleAnalysis(String surface,
 	// String analysisId) {
 	// AnalysisType analysis = null;
 	// try {
@@ -1471,7 +1409,7 @@ public class HMM2Morph {
 	// }
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public Corpus parseXML(final JAXBContext jc, final InputStream in) throws Exception {
+	private Corpus parseXML(final JAXBContext jc, final InputStream in) throws Exception {
 		List<ArticleType> articleTypeList;
 		List<ParagraphType> paragraphTypeList;
 		List<SentenceType> sentenceTypeList;
@@ -1714,7 +1652,7 @@ public class HMM2Morph {
 	 *            printing it
 	 * @return
 	 */
-	public Corpus parseXML(final JAXBContext jc, final InputStream in, final String dprefixesFile,
+	private Corpus parseXML(final JAXBContext jc, final InputStream in, final String dprefixesFile,
 			String taggedFilePath) {
 		// System.out.println("(F) HMM2MORPH.parseXML Perl program output file
 		// "+
@@ -2094,34 +2032,12 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	// used to test the web when developing
-	public void process(String inputXMLDir, String inputTaggedFileDir, String outputFileDir, String xmlFile,
-			String taggedFile, String outputFile) throws Exception {
-		try {
-			JAXBContext jc = JAXBContext.newInstance(JAXB_PACKAGE);
-			this.outputFile = outputFileDir + outputFile;
-			InputStream in = new FileInputStream(new File(inputXMLDir + xmlFile));
-
-			readFile(inputTaggedFileDir + taggedFile);
-			Corpus collection = parseXML(jc, in,
-					"C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\dprefixes.data",
-					inputTaggedFileDir);
-			marshalAnalysis(jc, collection);
-			// parse(in);
-			// setScore(inputXMLDir + xmlFile);
-			// System.exit(0);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
-
-	// -----------------------------------------------------------------------------------------------------------------
 	/**
 	 * read file into class variable bi
 	 * 
 	 * @param inputFile
 	 */
-	public void readFile(String inputFile) {
+	private void readFile(String inputFile) {
 		try {
 			bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
 		} catch (FileNotFoundException e) {
@@ -2132,58 +2048,10 @@ public class HMM2Morph {
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	public String readFileToString(String inputFile) {
-		String inputStr = "";
-		StringBuffer morphAnalysis = new StringBuffer();
-		BufferedReader bi = null;
-
-		try {
-			bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile), "UTF8"));
-			while ((inputStr = bi.readLine()) != null)
-				morphAnalysis.append(inputStr);
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				bi.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		return morphAnalysis.toString();
-	}
-
-	// -----------------------------------------------------------------------------------------------------------------
-	public void setBase(BaseType base, String surface) {
+	private void setBase(BaseType base, String surface) {
 		base.setLexiconPointer("0");
 		base.setLexiconItem(surface);
 		// base.setDottedLexiconItem(surface);
 		base.setTransliteratedLexiconItem(Translate.Heb2Eng(surface));
-	}
-
-	// -----------------------------------------------------------------------------------------------------------------
-	private int setMWandZeroOtherAnalysis(List<AnalysisType> analysisTypeList, int analysisTypeListSize) {
-		int scoreCounter = 0;
-		for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-			AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
-			if (analysis.getBase().getMWE() != null) {
-				analysis.setScore(1.0);
-				scoreCounter++;
-			} else
-				analysis.setScore(0.0);
-		}
-		return scoreCounter;
-	}
-
-	// -----------------------------------------------------------------------------------------------------------------
-	private void setZeroToAllAnalysis(List<AnalysisType> analysisTypeList, int analysisTypeListSize) {
-		for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-			AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
-			analysis.setScore(0.0);
-		}
 	}
 }

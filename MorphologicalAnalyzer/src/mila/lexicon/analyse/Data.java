@@ -696,15 +696,4 @@ public class Data implements Constants {
 		return webFlag;
 	}
 
-	/**
-	 * @param startTime
-	 * @return
-	 */
-	private long printTimesHandling(long startTime) {
-		long afterLoadTime = System.currentTimeMillis();
-		long load2MemoryElapsedTime = afterLoadTime - startTime;
-		System.out.println("Finshed loading data files into memory, Elapsed time = " + load2MemoryElapsedTime + " ms");
-		return afterLoadTime;
-	}
-
 }

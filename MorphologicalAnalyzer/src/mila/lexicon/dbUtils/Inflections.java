@@ -88,32 +88,6 @@ public class Inflections extends Connected {
 
 	PrintStream pInflections = null; // declare a print stream object
 
-	private String apostropheHandling(String strIn) {
-		String strOut = strIn;
-		// case of single apostrophe
-		int index1 = strIn.indexOf('\'');
-		if (index1 != -1) {
-			if (index1 == 1) {
-				strOut = strIn.charAt(0) + "\\" + strIn.substring(index1);
-				// System.out.println("strOut = " + strOut);
-			} else {
-				strOut = strIn.substring(0, index1) + "\\" + strIn.substring(index1);
-				// System.out.println("strOut1 = " + strOut);
-			}
-			// case of two apostrophe
-			int index2 = strIn.substring(index1 + 1).indexOf('\'');
-			if (index2 != -1) {
-				index2 = strOut.lastIndexOf('\'');
-				// System.out.println("index2 = " + index2);
-				strOut = strOut.substring(0, index2) + "\\" + strOut.substring(index2);
-				// System.out.println("strOut2 = " + strOut);
-			}
-		} else {
-			strOut = strIn;
-		}
-		return strOut;
-	}
-
 	// ------------------------------------------------------------------------------------------------------------------------------
 	public ArrayList<DBInflectionsRecord> get(String input) throws UnsupportedEncodingException {
 		ArrayList<DBInflectionsRecord> result = new ArrayList<DBInflectionsRecord>();
