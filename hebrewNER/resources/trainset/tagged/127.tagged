@@ -1,0 +1,50 @@
+1	1	1	דובר	דובר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	2	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	1	3	מסר	מסר	-	-	F	V	-	{verb}
+1	1	4	כי	כי	-	-	F	C	-	{conjunction} []
+1	1	5	שני	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	6	מטעני	מטען	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]
+1	1	7	חבלה	חבלה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	1	8	התגלו	התגלה	-	-	F	V	-	{verb}
+1	1	9	בציר	בציר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	10	העליה	עלייה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]
+1	1	11	להר	הר	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	12	עיבל	עיבל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	1	13	באזור	אזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	14	שכם	שכם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	15	.	.	-	-	F	PNCT	-	{punctuation} []
+1	2	1	המטענים	מטען	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]
+1	2	2	פוצצו	פוצץ	-	-	F	V	-	{verb}
+1	2	3	בצורה	צורה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	2	4	מבוקרת	בוקר	-	-	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]
+1	2	5	.	.	-	-	F	PNCT	-	{punctuation} []
+1	3	1	דווח	דיווח	-	-	F	V	-	{verb}
+1	3	2	כי	כי	-	-	F	C	-	{conjunction} []
+1	3	3	חייל	חייל	-	-	F	V	-	{verb}
+1	3	4	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	3	5	נפצע	נפצע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	3	6	קל	קל	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	3	7	מהפיצוץ	פיצוץ	מP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	3	8	.	.	-	-	F	PNCT	-	{punctuation} []
+1	4	1	כמו	כמו	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]
+1	4	2	כן	כמו כן	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]
+1	4	3	דווח	דיווח	-	-	F	V	-	{verb}
+1	4	4	כי	כי	-	-	F	C	-	{conjunction} []
+1	4	5	פלשתינים	פלסטיני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]
+1	4	6	פתחו	פיתח	-	-	F	V	-	{verb}
+1	4	7	באש	אש	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	4	8	לעבר	לעבר	-	-	F	P	-	{preposition} []
+1	4	9	מחסום	מחסום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	4	10	של	של	-	-	F	P	-	{preposition} []
+1	4	11	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	4	12	בסמוך	סמך	-	-	F	V	-	{verb}
+1	4	13	לשוויקה	לשוויקה	-	-	F	R	-	{properName} [(definiteness: false)]
+1	4	14	צפונית	צפוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]
+1	4	15	לטול	טול	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	4	16	כרם	כרם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	4	17	.	.	-	-	F	PNCT	-	{punctuation} []
+1	5	1	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]
+1	5	2	דווח	דיווח	-	-	F	V	-	{verb}
+1	5	3	על	על	-	-	F	P	-	{preposition} []
+1	5	4	נפגעים	נפגע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	5	5	.	.	-	-	F	PNCT	-	{punctuation} []

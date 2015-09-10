@@ -1,0 +1,129 @@
+1	1	1	בחברת	חברה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	2	אל	אל	-	-	F	MWE	organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	1	3	על	אל על	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	1	4	מאשרים	אישר	-	-	F	V	-	{verb}	O
+1	1	5	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	1	6	ייתכן	ייתכן	-	-	F	V	-	{verb}	O
+1	1	7	ועובדים	עבד	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	8	בחברה	חברה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	10	ביניהם	בין	-	-	F	P	-	{preposition} []	O
+1	1	11	עובדים	עבד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	12	בכירים	בכיר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	14	יידרשו	נדרש	-	-	F	V	-	{verb}	O
+1	1	15	לעבור	עבר	-	-	F	V	-	{verb}	O
+1	1	16	בדיקת	בדיקה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	17	פוליגרף	פוליגרף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	18	בשל	בשל	-	-	F	P	-	{preposition} []	O
+1	1	19	ההדלפות	הדלפה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	20	לתקשורת	תקשורת	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	כתב	כתב	-	-	F	V	-	{verb}	O
+1	2	2	עתי"ם	עתי"ם	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	2	3	אביב	אביב	-	-	F	MWE	-	{MWE} []	I_PERS
+1	2	4	קליין	קליין	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	5	מוסר	מסר	-	-	F	V	-	{verb}	O
+1	2	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	7	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	8	מנכ"ל	מנכ"ל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	9	אל	אל	-	-	F	MWE	organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	2	10	על	אל על	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	2	11	עמוס	עמוס	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	2	12	שפירא	שפירא	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	2	13	הביע	הביע	-	-	F	V	-	{verb}	O
+1	2	14	תרעומת	תרעומת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	15	על	על	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	2	16	כך	על כך	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	2	17	שמידע	יידע	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	18	על	על	-	-	F	P	-	{preposition} []	O
+1	2	19	חברה	חברה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	20	מועבר	הועבר	-	-	F	G	-	{adjective} [(binyan: Huf'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	2	21	לתקשורת	תקשורת	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	22	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	23	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	2	24	מישיבות	ישיבה	מP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	25	סגורות	סגר	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: feminine),(mood: passive),(number: plural),(person: any),(status: absolute)]	O
+1	2	26	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	בין	בין	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	3	2	היתר	בין היתר	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	3	3	התרעם	התרעם	-	-	F	V	-	{verb}	O
+1	3	4	מנכ"ל	מנכ"ל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	5	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	6	אל	אל	-	-	F	MWE	organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	7	על	אל על	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	9	על	על	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	3	10	כך	על כך	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	3	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	12	שמאזן	איזן	שC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	13	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	14	הודלף	הודלף	-	-	F	V	-	{verb}	O
+1	3	15	לתקשורת	תקשורת	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	16	וכן	כן	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	17	הודלפו	הודלף	-	-	F	V	-	{verb}	O
+1	3	18	פרטים	פרט	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	19	משיחות	השיח	-	-	F	G	-	{adjective} [(binyan: Hif'il),(definiteness: false),(gender: feminine),(number: plural),(person: any),(status: absolute)]	O
+1	3	20	שהיו	היה	שC	-	F	O	-	{existential} [(gender: masculine and feminine),(interrogative: false),(number: plural),(polarity: positive),(tense: past)]	O
+1	3	21	לאל	אל	לP	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	22	על	אל על	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	23	עם	עם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	24	יו"ר	יו"ר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	25	ועדת	ועדה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	3	26	הכספים	כסף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	I_ORG
+1	3	27	של	של	-	-	F	P	-	{preposition} []	O
+1	3	28	הכנסת	כנסת	-	D	F	R	organization	{properName} [(definiteness: true),(gender: feminine),(number: singular)]	I_ORG
+1	3	29	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	30	יצחק	יצחק	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	3	31	ליצמן	ליצמן	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	3	32	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	33	בנוגע	בנוגע	-	-	F	A	-	{adverb} []	O
+1	3	34	להתפרעות	התפרעות	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	35	של	של	-	-	F	P	-	{preposition} []	O
+1	3	36	נוסעת	נסע	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	37	חרדית	חרדי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	3	38	בטיסת	טיסה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	39	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	40	בשל	בשל	-	-	F	P	-	{preposition} []	O
+1	3	41	הקרנת	הקרנה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	42	סרט	סרט	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	43	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	44	שהיה	היה	שC	-	F	V	-	{verb}	O
+1	3	45	בלתי	בלתי	-	-	F	O	-	{wPrefix} [(definiteness: false),(polarity: negative)]	O
+1	3	46	ראוי	ראוי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	47	לצפיה	צפייה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	48	בעיניה	עין	בP	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	3	49	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	מנכ"ל	מנכ"ל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	2	אל	אל	-	-	F	MWE	organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	4	3	על	אל על	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	4	4	אמר	המר	-	-	F	V	-	{verb}	O
+1	4	5	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	4	6	פורום	פורום	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	7	המנהלים	ניהל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	8	הבכיר	בכיר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	9	של	של	-	-	F	P	-	{preposition} []	O
+1	4	10	אל	אל	-	-	F	MWE	organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	4	11	על	אל על	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	4	12	התכנס	התכנס	-	-	F	V	-	{verb}	O
+1	4	13	לדיון	דיון	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	14	מיוחד	יוחד	-	-	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	4	15	בנושא	נשא	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	16	ההדלפות	הדלפה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	17	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	18	וכל	כול	וC	-	T	O	-	{quantifier}	O
+1	4	19	חברי	חבר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	4	20	הפורום	פורום	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	21	הסכימו	הסכים	-	-	F	V	-	{verb}	O
+1	4	22	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	4	23	נושא	נשא	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	24	זה	זה	-	-	F	Q	-	{pronoun}	O
+1	4	25	הוא	הוא	-	-	F	V	-	{verb}	O
+1	4	26	חמור	חמור	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	27	ופוגע	פגע	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	28	קשות	קשה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	29	במוניטין	מוניטין	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	30	העסקי	עסקי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	31	של	של	-	-	F	P	-	{preposition} []	O
+1	4	32	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	33	.	.	-	-	F	PNCT	-	{punctuation} []	O

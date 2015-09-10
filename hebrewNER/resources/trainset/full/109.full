@@ -1,0 +1,164 @@
+1	1	1	מחקר	מחקר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	2	מדעי	מדע	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	3	שנעשה	עשה	שC	-	F	V	-	{verb}	O
+1	1	4	במרכז	ריכז	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	1	5	הרפואי	רפואי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	1	6	מיימונידס	מיימונידס	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	1	7	בברוקלין	ברוקלין	בP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	9	ניו	ניו	-	-	F	MWE	town|other	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	10	יורק	ניו יורק	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	12	מעלה	העלה	-	-	F	V	-	{verb}	O
+1	1	13	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	1	14	צעירים	צעיר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	15	חרדים	חרד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	1	16	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	17	בעיקר	בעיקר	-	-	F	A	-	{adverb} []	O
+1	1	18	תלמידי	תלמיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	19	ישיבות	ישיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	20	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	21	סובלים	סבל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	22	מחולשה	חולשה	מP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	23	בעצמות	עוצמה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	התברר	התברר	-	-	F	V	-	{verb}	O
+1	2	2	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	3	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	2	4	מרבע	ריבע	-	-	F	V	-	{verb}	O
+1	2	5	מן	מן	-	-	F	P	-	{preposition} []	O
+1	2	6	הנבדקים	נבדק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	7	סובלים	סבל	-	-	F	V	-	{verb}	O
+1	2	8	מצפיפות	צפיפות	מP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	9	נמוכה	נמוך	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	10	מאד	מאוד	-	-	F	A	-	{adverb} []	O
+1	2	11	של	של	-	-	F	P	-	{preposition} []	O
+1	2	12	העצמות	עצם	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	הדוקטור	דוקטור	-	D	F	N	-	{noun} [(definiteness: true),(foreign: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	2	משה	משה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	3	3	גלבר	גלבר	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	3	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	5	מנהל	ניהל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	6	המחלקה	מחלקה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	7	הפנימית	פנימי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	8	בבית	בית	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	3	9	החולים	בית חולים	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	3	10	לניאדו	לניאדו	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	3	11	בנתניה	נתניה	בP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	3	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	13	הסביר	הסביר	-	-	F	V	-	{verb}	O
+1	3	14	לערוץ	ערוץ	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	3	15	7	7	-	-	F	R	-	{numeral} []	I_ORG
+1	3	16	את	את	-	-	F	P	-	{preposition} []	O
+1	3	17	הסיבות	סיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	18	האפשריות	אפשרי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	19	לממצאים	ממצא	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	20	הללו	הללו	-	-	F	Q	-	{pronoun}	O
+1	3	21	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	3	22	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	23	ייתכן	ייתכן	-	-	F	V	-	{verb}	O
+1	3	24	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	3	25	סגנון	סגנון	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	26	החיים	חיים	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	27	של	של	-	-	F	P	-	{preposition} []	O
+1	3	28	אותם	אותו	-	-	F	Q	-	{pronoun}	O
+1	3	29	בחורים	בחור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	30	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	31	תלמידי	תלמיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	32	ישיבה	ישיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	33	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	34	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	3	35	הגורם	גרם	-	-	F	V	-	{verb}	O
+1	3	36	לתופעה	תופעה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	37	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	הבחורים	בחור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	2	אינם	אינו	-	-	F	V	-	{verb}	O
+1	4	3	חשופים	חשוף	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	4	דיים	דיים	-	-	F	R	other	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	4	5	לשמש	שימש	-	-	F	V	-	{verb}	O
+1	4	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	7	וגם	גם	וC	-	F	A	-	{adverb} []	O
+1	4	8	כאשר	כאשר	-	-	F	C	-	{conjunction} []	O
+1	4	9	שהם	שהם	-	-	F	R	location	{properName} [(definiteness: false)]	O
+1	4	10	יוצאים	יצא	-	-	F	V	-	{verb}	O
+1	4	11	מן	מן	-	-	F	P	-	{preposition} []	O
+1	4	12	הבית	בית	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	14	הם	הוא	-	-	F	V	-	{verb}	O
+1	4	15	לבושים	לבוש	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	16	בבגדים	בגד	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	17	המכסים	כיסה	-	-	F	V	-	{verb}	O
+1	4	18	את	את	-	-	F	P	-	{preposition} []	O
+1	4	19	גופם	גוף	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	4	20	מכף	כף	מP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	4	21	רגל	כף רגל	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	4	22	ועד	ועד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	23	ראש	ראש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	יש	יש	-	-	F	O	-	{verb}	O
+1	5	2	לזכור	זכר	-	-	F	V	-	{verb}	O
+1	5	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	5	4	אחד	אחד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	5	הגורמים	גרם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	6	החשובים	חשב	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(mood: passive),(number: plural),(person: any),(status: absolute)]	O
+1	5	7	בבניית	בנייה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	5	8	העצמות	עצם	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	5	9	הוא	הוא	-	-	F	V	-	{verb}	O
+1	5	10	יצירת	יצירה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	5	11	ויטמין	ויטמין	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	12	D	D	-	-	F	O	-	{foreign} []	O
+1	5	13	בעור	עיוור	-	-	F	V	-	{verb}	O
+1	5	14	באמצעות	באמצעות	-	-	F	P	-	{preposition} []	O
+1	5	15	חשיפה	חשיפה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	16	לשמש	שימש	-	-	F	V	-	{verb}	O
+1	5	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	ויטמין	ויטמין	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	2	זה	זה	-	-	F	Q	-	{pronoun}	O
+1	6	3	תורם	הורם	-	-	F	V	-	{verb}	O
+1	6	4	לספיגת	ספיגה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	6	5	הסידן	סידן	-	D	F	R	-	{properName} [(definiteness: true)]	O
+1	6	6	מן	מן	-	-	F	P	-	{preposition} []	O
+1	6	7	המזון	מזון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	8	לתוך	לתוך	-	-	F	P	-	{preposition} []	O
+1	6	9	הגוף	גוף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	11	ומסייע	סייע	וC	-	F	V	-	{verb}	O
+1	6	12	לשקיעתו	שקיעה	לP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	6	13	בעצמות	עוצמה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	6	14	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	6	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	ד"ר	ד"ר	-	-	F	O	-	{title} [(definiteness: false),(number: singular)]	O
+1	7	2	גלבר	גלבר	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	7	3	מציין	ציין	-	-	F	V	-	{verb}	O
+1	7	4	סיבה	סיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	5	אפשרית	אפשרי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	6	נוספת	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	7	7	לבעיה	בעיה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	7	9	והיא	הוא	וC	-	F	Q	-	{pronoun}	O
+1	7	10	חוסר	חוסר	-	-	F	MWE	-	{MWE} []	O
+1	7	11	בפעילות	פעיל	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	7	12	גופנית	גופני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	7	14	דבר	דבר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	15	הגורם	גרם	-	-	F	V	-	{verb}	O
+1	7	16	ירידה	ירידה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	17	בצפיפות	צפיפות	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	7	18	העצם	עצם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	8	1	תלמידי	תלמיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	8	2	ישיבות	ישיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	8	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	4	שימו	שם	-	-	F	V	-	{verb}	O
+1	8	5	לב	לב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	6	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	8	7	כדאי	כדאי	-	-	F	O	-	{verb}	O
+1	8	8	להרבות	הרבה	-	-	F	V	-	{verb}	O
+1	8	9	בפעילות	פעיל	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	8	10	גופנית	גופני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	12	ובחשיפת	חשיפה	וC-בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	8	13	הגוף	גוף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	14	לשמש	שימש	-	-	F	V	-	{verb}	O
+1	8	15	!	!	-	-	F	PNCT	-	{punctuation} []	O

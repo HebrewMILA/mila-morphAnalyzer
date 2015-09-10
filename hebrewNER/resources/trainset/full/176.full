@@ -1,0 +1,108 @@
+1	1	1	חברת	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	2	שאברב	שאברב	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	1	3	הודיעה	הודיע	-	-	F	V	-	{verb}	O
+1	1	4	היום	היום	-	-	F	A	-	{adverb} []	O
+1	1	5	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	1	6	אזלו	אזל	-	-	F	V	-	{verb}	O
+1	1	7	ערכות	ערכה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	1	8	המיגון	מיגון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	9	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	1	10	תיבת	תיבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	11	נוח	נוח	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	12	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	1	13	לסינון	סינון	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	14	גזים	גז	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	15	וחומרים	חומר	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	16	ביולוגיים	ביולוגי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	עפ"י	עפ"י	-	-	F	P	-	{preposition} []	O
+1	2	2	דיווחי	דיווח	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	3	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	4	בחודש	חודש	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	5	האחרון	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	6	הותקנו	הותקן	-	-	F	V	-	{verb}	O
+1	2	7	כ	כ	כP	-	F	-	-	[]	O
+1	2	8	400	400	-	-	F	R	-	{numeral} []	O
+1	2	9	מערכות	מערכת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	10	כאלו	אל	כP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	2	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	מערכות	מערכת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	2	אלו	אלו	-	-	F	Q	-	{pronoun}	O
+1	3	3	מותקנות	הותקן	-	-	F	V	-	{verb}	O
+1	3	4	בחדרי	חדר	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	5	ממ"ד	ממ"ד	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	3	6	ובמקלטים	מקלט	וC-בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	כך	כך	-	-	F	Q	-	{pronoun}	O
+1	4	2	דיווח	דיווח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	3	אתר	אתר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	4	NFC	NFC	-	-	F	O	-	{foreign} []	I_ORG
+1	4	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	2	הוסיפה	הוסיף	-	-	F	V	-	{verb}	O
+1	5	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	5	4	אספקה	אספקה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	5	נוספת	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	5	6	של	של	-	-	F	P	-	{preposition} []	O
+1	5	7	מערכות	מערכת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	5	8	אלו	אלו	-	-	F	Q	-	{pronoun}	O
+1	5	9	תהיה	היה	-	-	F	V	-	{verb}	O
+1	5	10	רק	רק	-	-	F	A	-	{adverb} []	O
+1	5	11	לקראת	לקראת	-	-	F	P	-	{preposition} []	O
+1	5	12	סוף	סוף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	5	13	נובמבר	נובמבר	-	-	F	R	dateTime	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	5	14	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	גיא	גיא	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	6	2	קוסובסקי	קוסובסקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	6	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	4	מנהל	ניהל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	6	5	השיווק	שיווק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	6	של	של	-	-	F	P	-	{preposition} []	O
+1	6	7	חברת	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	6	8	שאברב	שאברב	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	6	9	הסביר	הסביר	-	-	F	V	-	{verb}	O
+1	6	10	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	6	11	המפוח	מפוח	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	12	החשמלי	חשמלי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	13	המפעיל	הפעיל	-	-	F	V	-	{verb}	O
+1	6	14	את	את	-	-	F	P	-	{preposition} []	O
+1	6	15	המערכת	מערכת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	16	הוא	הוא	-	-	F	V	-	{verb}	O
+1	6	17	מרכיב	מרכיב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	18	המיובא	יובא	-	-	F	V	-	{verb}	O
+1	6	19	מחו"ל	חו"ל	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	20	ובשל	בשל	וC	-	F	P	-	{preposition} []	O
+1	6	21	הביקוש	ביקוש	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	22	הגדול	גדול	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	23	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	6	24	עמד	עימד	-	-	F	V	-	{verb}	O
+1	6	25	המפעל	מפעל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	26	המייצר	ייצר	-	-	F	V	-	{verb}	O
+1	6	27	את	את	-	-	F	P	-	{preposition} []	O
+1	6	28	המפוח	מפוח	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	29	בהיקף	היקף	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	6	30	ההזמנות	הזמנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	6	31	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	7	2	אף	אף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	3	ציין	ציין	-	-	F	V	-	{verb}	O
+1	7	4	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	7	5	עיקר	עיקר	-	-	T	O	-	{quantifier}	O
+1	7	6	התקנות	תקנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	7	7	המערכת	מערכת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	8	היו	היה	-	-	F	V	-	{verb}	O
+1	7	9	באזור	אזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	7	10	תל	תל	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	7	11	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	7	12	ורמת	רמת	וC	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	B_LOC
+1	7	13	גן	רמת גן	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	7	14	וכי	כי	וC	-	F	C	-	{conjunction} []	O
+1	7	15	בחודשים	חודש	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	16	האחרונים	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	17	הותקנו	הותקן	-	-	F	V	-	{verb}	O
+1	7	18	כ	כ	כP	-	F	-	-	[]	O
+1	7	19	3000	3000	-	-	F	R	-	{numeral} []	O
+1	7	20	אלפים	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	21	מערכות	מערכת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	7	22	כאלו	אל	כP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	7	23	.	.	-	-	F	PNCT	-	{punctuation} []	O

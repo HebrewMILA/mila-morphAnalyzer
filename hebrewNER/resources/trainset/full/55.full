@@ -1,0 +1,268 @@
+1	1	1	אורח	אורח	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	2	השבוע	שבוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	3	בתחזית	תחזית	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	4	הלאומית	לאומי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	5	הוא	הוא	-	-	F	V	-	{verb}	O
+1	1	6	קשר	קשר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	7	העבר	עבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	8	הבין	בין	-	D	F	O	-	{wPrefix} [(definiteness: true)]	O
+1	1	9	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	1	10	לאומי	לאומי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	11	של	של	-	-	F	P	-	{preposition} []	O
+1	1	12	מכבי	מכבי	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	1	13	תל	תל	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	1	14	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	1	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	16	ירון	ירון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	17	עוז	עוז	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	בן	בן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	2	38	38	-	-	F	R	-	{numeral} []	O
+1	2	3	וחצי	חצי	וC	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	4	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	היה	היה	-	-	F	O	-	{existential} [(gender: masculine),(interrogative: false),(number: singular),(polarity: positive),(tense: past)]	O
+1	3	2	שחקן	שחקן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	3	מפתח	פיתח	-	-	F	G	-	{adjective} [(binyan: Pi'el),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	3	4	במכבי	מכבי	בP	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	3	5	תל	תל	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	6	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	7	וזכה	זכה	וC	-	F	V	-	{verb}	O
+1	3	8	עמו	עם	-	-	F	P	-	{preposition} []	O
+1	3	9	בכמה	כמה	בP	-	F	Q	-	{pronoun}	O
+1	3	10	תוארי	הואר	-	-	F	V	-	{verb}	O
+1	3	11	אליפות	אליפות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	12	וגביע	גביע	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	היה	היה	-	-	F	V	-	{verb}	O
+1	4	2	אחד	אחד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	3	הבולטים	בלט	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	4	בנבחרת	נבחרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	5	ישראל	ישראל	-	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	4	6	שהופיעה	הופיע	שC	-	F	V	-	{verb}	O
+1	4	7	באולימפיאדת	אולימפיאדה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_MISC_EVENT
+1	4	8	מונטריאול	מונטריאול	-	-	F	R	location	{properName} [(definiteness: false)]	I_MISC_EVENT
+1	4	9	ב	ב	בP	-	F	-	-	[]	O
+1	4	10	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	4	11	1976	1976	-	-	F	R	-	{numeral} []	I_DATE
+1	4	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	13	בהדרכת	הדרכה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	14	המאמן	מאמן	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	15	דוד	דוד	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	16	שוייצר	שוייצר	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	4	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	אני	הוא	-	-	F	Q	-	{pronoun}	O
+1	5	2	צופה	צופה	-	-	F	V	-	{verb}	O
+1	5	3	ניצחון	ניצחון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	4	ביתי	ביתי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	5	למכבי	מכבי	לP	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	5	6	חיפה	חיפה	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	5	7	על	על	-	-	F	P	-	{preposition} []	O
+1	5	8	הפועל	פועל	-	D	F	R	organization	{properName} [(definiteness: true)]	I_ORG
+1	5	9	פתח	פתח	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	5	10	תקוה	פתח תקוה	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	5	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	5	12	במשחק	משחק	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	13	המרכזי	מרכזי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	14	שיחל	ייחל	שC	-	F	V	-	{verb}	O
+1	5	15	בקרית	בקרית	-	-	F	MWE	-	{MWE} []	I_LOC
+1	5	16	אליעזר	אליעזר	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	5	17	ב	ב	בP	-	F	-	-	[]	O
+1	5	18	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	5	19	1630	1630	-	-	F	R	-	{numeral} []	I_TIME
+1	5	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	חיפה	חיפה	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	6	2	בנויה	בנה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: feminine),(mood: passive),(number: singular),(person: any),(status: absolute)]	O
+1	6	3	טוב	טוב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	5	עומדת	עמד	-	-	F	V	-	{verb}	O
+1	6	6	נכון	נכון	-	-	F	A	-	{adverb} []	O
+1	6	7	במגרש	במגרש	-	-	F	MWE	-	{MWE} []	O
+1	6	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	9	יש	יש	-	-	F	O	-	{existential} [(interrogative: false),(polarity: positive)]	O
+1	6	10	לה	ל	-	-	F	P	-	{preposition} []	O
+1	6	11	חוליית	חוליה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	6	12	קישור	קישור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	13	מצויינת	צוין	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	6	14	ושני	שני	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	15	חלוצים	חלץ	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: masculine),(mood: passive),(number: plural),(person: any),(status: absolute)]	O
+1	6	16	שיודעים	ידע	שC	-	F	V	-	{verb}	O
+1	6	17	להבקיע	הבקיע	-	-	F	V	-	{verb}	O
+1	6	18	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	19	ומבקיעים	הבקיע	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	היא	הוא	-	-	F	Q	-	{pronoun}	O
+1	7	2	תרצה	רצה	-	-	F	V	-	{verb}	O
+1	7	3	לחזור	חזר	-	-	F	V	-	{verb}	O
+1	7	4	לעצמה	עצמו	לP	-	F	Q	-	{pronoun}	O
+1	7	5	אחרי	אחרי	-	-	F	P	-	{preposition} []	O
+1	7	6	הפסדה	פסדה	-	D	F	N	-	{noun} [(definiteness: true),(foreign: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	7	בימק"א	בימק"א	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	7	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	8	1	למרות	למרות	-	-	F	C	-	{conjunction} []	O
+1	8	2	שבית"ר	בית"ר	שC	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	8	3	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	8	4	ראשון	ראשון	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	8	5	בטבלה	טבלה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	7	אני	הוא	-	-	F	Q	-	{pronoun}	O
+1	8	8	מהמר	מהמר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	9	על	על	-	-	F	P	-	{preposition} []	O
+1	8	10	ניצחון	ניצחון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	11	של	של	-	-	F	P	-	{preposition} []	O
+1	8	12	באר	באר	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	8	13	שבע	באר שבע	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	8	14	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	8	15	בשעה	שעה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	16	הראשית	ראשית	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	17	1430	1430	-	-	F	R	-	{numeral} []	I_TIME
+1	8	18	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	8	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	20	בגלל	בגלל	-	-	F	P	-	{preposition} []	O
+1	8	21	הביתיות	ביתיות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	22	וגם	גם	וC	-	F	A	-	{adverb} []	O
+1	8	23	מפני	מפני	-	-	F	C	-	{conjunction} []	O
+1	8	24	שלשחקני	שחקן	שC-לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	8	25	באר	באר	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	8	26	שבע	באר שבע	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	8	27	תהיה	היה	-	-	F	V	-	{verb}	O
+1	8	28	שאפתנות	שאפתנות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	29	מיוחדת	יוחד	-	-	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	8	30	לנצח	ניצח	-	-	F	V	-	{verb}	O
+1	8	31	את	את	-	-	F	P	-	{preposition} []	O
+1	8	32	המוליך	מוליך	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	33	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	9	1	ראיתי	ראה	-	-	F	V	-	{verb}	O
+1	9	2	את	את	-	-	F	P	-	{preposition} []	O
+1	9	3	הפועל	הפועל	-	-	F	MWE	organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	9	4	תל	תל	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	9	5	אביב	תל אביב	-	-	F	MWE	town|organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	9	6	ולדעתי	דעה	וC-לP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	9	7	יש	יש	-	-	F	O	-	{existential} [(interrogative: false),(polarity: positive)]	O
+1	9	8	לו	ל	-	-	F	P	-	{preposition} []	O
+1	9	9	קבוצה	קבוצה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	9	10	טובה	טוב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	9	11	גם	גם	-	-	F	A	-	{adverb} []	O
+1	9	12	בלי	בלי	-	-	F	P	-	{preposition} []	O
+1	9	13	סיני	סיני	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	9	14	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	10	1	צפוי	צפוי	-	-	F	O	-	{verb}	O
+1	10	2	תיקו	תיקו	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	3	בדרבי	דרבי	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	4	הזה	זה	-	D	F	Q	-	{pronoun}	O
+1	10	5	עם	עם	-	-	F	P	-	{preposition} []	O
+1	10	6	בית"ר	בית"ר	-	-	F	R	organization	{properName} [(definiteness: false)]	O
+1	10	7	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	10	8	משחק	משחק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	10	9	המוקד	מוקד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	10	בבלומפילד	בלומפילד	בP	-	F	R	location	{properName} [(definiteness: false)]	I_LOC
+1	10	11	1630	1630	-	-	F	R	-	{numeral} []	I_TIME
+1	10	12	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	10	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	10	14	אלא	אלא	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	10	15	אם	אלא אם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	10	16	כן	אם כן	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	10	17	יכריע	הכריע	-	-	F	V	-	{verb}	O
+1	10	18	את	את	-	-	F	P	-	{preposition} []	O
+1	10	19	הכף	כף	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	10	20	הניסיון	ניסיון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	21	של	של	-	-	F	P	-	{preposition} []	O
+1	10	22	בית"ר	בית"ר	-	-	F	R	organization	{properName} [(definiteness: false)]	O
+1	10	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	11	1	הפועל	הפועל	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	11	2	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	11	3	ומכבי	מכבי	וC	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	B_ORG
+1	11	4	נתניה	נתניה	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	11	5	הם	הוא	-	-	F	V	-	{verb}	O
+1	11	6	פחות	פחות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	11	7	או	או	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 2),(multiWordPrefixExist: false)]	O
+1	11	8	יותר	פחות או יותר	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 3),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	11	9	ברמה	רמה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	11	10	שווה	שווה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	11	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	11	12	המשחק	משחק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	13	הראשון	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	14	בבלומפילד	בלומפילד	בP	-	F	R	location	{properName} [(definiteness: false)]	I_LOC
+1	11	15	1430	1430	-	-	F	R	-	{numeral} []	I_TIME
+1	11	16	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	11	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	12	1	אני	הוא	-	-	F	Q	-	{pronoun}	O
+1	12	2	מהמר	מהמר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	3	על	על	-	-	F	P	-	{preposition} []	O
+1	12	4	נתניה	נתניה	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	12	5	מפני	מפני	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: true),(pos: conjunction)]	O
+1	12	6	שיש	יש	שC	-	F	O	-	{existential} [(interrogative: false),(polarity: positive)]	O
+1	12	7	לה	ל	-	-	F	P	-	{preposition} []	O
+1	12	8	התקפה	התקפה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	12	9	שמסוגלת	מסוגל	שC	-	F	O	-	{verb}	O
+1	12	10	לנצח	ניצח	-	-	F	V	-	{verb}	O
+1	12	11	והמשחק	משחק	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	12	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	12	13	יהיה	היה	-	-	F	V	-	{verb}	O
+1	12	14	בימק"א	בימק"א	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	12	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	13	1	אני	הוא	-	-	F	Q	-	{pronoun}	O
+1	13	2	חושב	חושב	-	-	F	V	-	{verb}	O
+1	13	3	שמכבי	מכבי	שC	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	13	4	תל	תל	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	13	5	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	13	6	חייב	חייב	-	-	F	O	-	{verb}	O
+1	13	7	לנצח	ניצח	-	-	F	V	-	{verb}	O
+1	13	8	במשחק	משחק	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	13	9	החוץ	משחק חוץ	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	13	10	מול	מול	-	-	F	P	-	{preposition} []	O
+1	13	11	צפרירים	צפרירים	-	-	F	R	town	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	13	12	חולון	חולון	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	13	13	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	13	14	היחיד	יחיד	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	15	שיהיה	היה	שC	-	F	V	-	{verb}	O
+1	13	16	כבד	כבד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	17	היום	היום	-	-	F	A	-	{adverb} []	O
+1	13	18	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	13	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	14	1	מכבי	מכבי	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	14	2	טוב	טוב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	3	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	14	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	14	5	מסוגל	מסוגל	-	-	F	O	-	{verb}	O
+1	14	6	לנצח	ניצח	-	-	F	V	-	{verb}	O
+1	14	7	בחוץ	בחוץ	-	-	F	A	-	{adverb} []	O
+1	14	8	ואילו	אילו	וC	-	F	C	-	{conjunction} []	O
+1	14	9	בחולון	חולון	בP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	14	10	שחקני	שחקן	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	14	11	הרכש	רכש	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	12	עדיין	עדיין	-	-	F	A	-	{adverb} []	O
+1	14	13	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	14	14	התאקלמו	התאקלם	-	-	F	V	-	{verb}	O
+1	14	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	15	1	בני	בני	-	-	F	MWE	town|organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	15	2	יהודה	בני יהודה	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	15	3	ינצח	ניצח	-	-	F	V	-	{verb}	O
+1	15	4	בבית	בית	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	15	5	את	את	-	-	F	P	-	{preposition} []	O
+1	15	6	הפועל	פועל	-	D	F	R	organization	{properName} [(definiteness: true)]	I_ORG
+1	15	7	כפר	כפר	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	15	8	סבא	כפר סבא	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	15	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	16	1	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	16	2	טוב	טוב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	3	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	16	4	ויהנה	נהנה	וC	-	F	V	-	{verb}	O
+1	16	5	מיתרון	יתרון	מP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	16	6	הביתיות	ביתיות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	16	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	17	1	כיום	כיום	-	-	F	A	-	{adverb} []	O
+1	17	2	כפר	כפר	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	17	3	סבא	כפר סבא	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	17	4	היא	הוא	-	-	F	V	-	{verb}	O
+1	17	5	אחת	אחת	-	-	F	R	-	{numeral} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	6	משתי	שתיים	מP	-	T	R	-	{numeral} [(gender: feminine),(number: dual),(status: construct)]	O
+1	17	7	החלשות	היחלשות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	8	בליגה	ליגה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	18	1	אחת	אחת	-	-	F	R	-	{numeral} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	18	2	הבעיות	בעיה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	18	3	שלה	של	-	-	F	P	-	{preposition} []	O
+1	18	4	היא	הוא	-	-	F	V	-	{verb}	O
+1	18	5	הגנתה	הגנה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	18	6	החדירה	חדיר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	18	7	.	.	-	-	F	PNCT	-	{punctuation} []	O

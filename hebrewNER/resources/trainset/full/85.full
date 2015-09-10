@@ -1,0 +1,30 @@
+1	1	1	כוח	כוח	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	2	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	1	3	חשף	חשף	-	-	F	V	-	{verb}	O
+1	1	4	שני	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	5	מטעני	מטען	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	6	גחון	גחון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	7	במשקל	משקל	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	8	100	100	-	-	F	R	-	{numeral} []	O
+1	1	9	ק"ג	קילוגרם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	10	כל	כל	-	-	F	MWE	-	{MWE} []	O
+1	1	11	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	1	12	אחד	אחד	-	-	F	MWE	-	{MWE} []	O
+1	1	13	ליד	ליד	-	-	F	P	-	{preposition} []	O
+1	1	14	היישוב	יישוב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	15	דוגית	דוגית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	I_LOC
+1	1	16	בצפון	צפן	-	-	F	V	-	{verb}	O
+1	1	17	חבל	חבל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	1	18	עזה	עזה	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	כתבנו	כתב	-	-	F	V	-	{verb}	O
+1	2	2	קובי	קובי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	3	פינקלר	פינקלר	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	2	4	מוסר	מסר	-	-	F	V	-	{verb}	O
+1	2	5	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	6	חבלנים	חבלן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	7	מנסים	ניסה	-	-	F	G	-	{adjective} [(binyan: Pi'el),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	2	8	לנטרל	נטרל	-	-	F	V	-	{verb}	O
+1	2	9	את	את	-	-	F	P	-	{preposition} []	O
+1	2	10	המטענים	מטען	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	11	.	.	-	-	F	PNCT	-	{punctuation} []	O

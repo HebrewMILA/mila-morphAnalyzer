@@ -1,0 +1,108 @@
+1	1	1	רופאים	רופא	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	2	במחלקה	מחלקה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	3	הפסיכיאטרית	פסיכיאטר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	4	במרכז	ריכז	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	1	5	הרפואי	רפואי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	1	6	"	"	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	1	7	הדסה	הדסה	-	-	F	R	person|organization	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	1	8	"	"	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	1	9	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	10	זיהו	זיהה	-	-	F	V	-	{verb}	O
+1	1	11	לראשונה	לראשונה	-	-	F	A	-	{adverb} []	O
+1	1	12	גן	גן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	13	הקשור	קשר	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(mood: passive),(number: singular),(person: any),(status: absolute)]	O
+1	1	14	לתסמונת	תסמונת	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	15	פוסט	פוסט	-	-	F	O	-	{wPrefix} [(definiteness: false)]	O
+1	1	16	טראומטית	טראומתי	-	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	2	בגן	גן	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	3	Dat	Dat	-	-	F	O	-	{foreign} []	O
+1	2	4	האחראי	אחראי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	5	על	על	-	-	F	P	-	{preposition} []	O
+1	2	6	הולכת	הוליך	-	-	F	V	-	{verb}	O
+1	2	7	חומר	חומר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	8	הנקרא	נקרא	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	9	דופאמין	דופאמין	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	2	10	בתוך	בתוך	-	-	F	P	-	{preposition} []	O
+1	2	11	המערכת	מערכת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	12	העצבית	עצבי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	כתב	כתב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	2	עתי"ם	עתי"ם	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	3	3	מוסר	מסר	-	-	F	V	-	{verb}	O
+1	3	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	5	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	3	6	את	את	-	-	F	P	-	{preposition} []	O
+1	3	7	המחקר	מחקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	8	ניהלו	ניהל	-	-	F	V	-	{verb}	O
+1	3	9	מנהל	ניהל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	10	המחלקה	מחלקה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	11	הפסיכיאטרית	פסיכיאטר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	12	פרופ'	פרופסור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	13	אריה	אריה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	3	14	שלו	של	-	-	F	P	-	{preposition} []	I_PERS
+1	3	15	וד"ר	ד"ר	וC	-	F	O	-	{title} [(definiteness: false),(number: singular)]	O
+1	3	16	רונן	רונן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	3	17	סגמן	סגמן	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	3	18	רופא	רופא	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	19	בכיר	בכיר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	20	במחלקה	מחלקה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	הם	הוא	-	-	F	Q	-	{pronoun}	O
+1	4	2	בדקו	בדק	-	-	F	V	-	{verb}	O
+1	4	3	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	4	4	מ	מ	מP	-	F	-	-	[]	O
+1	4	5	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	4	6	200	200	-	-	F	R	-	{numeral} []	O
+1	4	7	נפגעי	נפגע	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	4	8	טראומה	טראומה	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	9	מאזור	אזר	-	-	F	V	-	{verb}	O
+1	4	10	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	4	11	שחוו	חווה	שC	-	F	V	-	{verb}	O
+1	4	12	אירוע	אירוע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	13	טראומטי	טראומטי	-	-	F	G	-	{adjective} [(definiteness: false),(status: absolute)]	O
+1	4	14	בפיגועים	פיגוע	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	16	תאונות	תאונות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	4	17	דרכים	תאונת דרכים	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	4	18	ותקיפות	תקיפה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	19	למיניהן	מין	לP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	4	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	החוקרים	חוקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	2	גילו	גילה	-	-	F	V	-	{verb}	O
+1	5	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	5	4	מוטציה	מוטציה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	5	בגן	גן	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	6	ה	ה	הD	-	F	-	-	[]	O
+1	5	7	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	5	8	DAT	DAT	-	-	F	O	-	{foreign} []	O
+1	5	9	מופיעה	הופיע	-	-	F	V	-	{verb}	O
+1	5	10	בשכיחות	שכיחות	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	11	גבוהה	גבוה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	12	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	5	13	אצל	אצל	-	-	F	P	-	{preposition} []	O
+1	5	14	חולים	חולי	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	5	15	הסובלים	סבל	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	5	16	מתסמונת	תסמונת	מP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	17	פוסט	פוסט	-	-	F	O	-	{wPrefix} [(definiteness: false)]	O
+1	5	18	טראומטית	טראומתי	-	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	בכוונת	כוונת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	6	2	החוקרים	חוקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	3	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	6	4	להגדיל	הגדיל	-	-	F	V	-	{verb}	O
+1	6	5	את	את	-	-	F	P	-	{preposition} []	O
+1	6	6	המידגם	מידגם	-	D	F	R	-	{properName} [(definiteness: true)]	O
+1	6	7	של	של	-	-	F	P	-	{preposition} []	O
+1	6	8	האנשים	איש	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	9	המשתתפים	השתתף	-	D	F	G	-	{adjective} [(binyan: Hitpa'el),(definiteness: true),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	6	10	במחקר	מחקר	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	11	ובאמצעותם	באמצעות	וC	-	F	P	-	{preposition} []	O
+1	6	12	להמשיך	המשיך	-	-	F	V	-	{verb}	O
+1	6	13	לחפש	חיפש	-	-	F	V	-	{verb}	O
+1	6	14	גנים	גן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	15	אחרים	אחר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	16	שקשורים	קשור	שC	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	17	לתסמונת	תסמונת	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	18	.	.	-	-	F	PNCT	-	{punctuation} []	O

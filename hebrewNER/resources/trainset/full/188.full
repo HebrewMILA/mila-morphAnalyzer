@@ -1,0 +1,1717 @@
+1	1	1	קופות	קופות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	1	2	הגמל	קופת גמל	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	1	3	פרסמו	פרסם	-	-	F	V	-	{verb}	O
+1	1	4	השבוע	השבוע	-	-	F	A	-	{adverb} []	O
+1	1	5	את	את	-	-	F	P	-	{preposition} []	O
+1	1	6	נתוני	נתון	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	7	התשואות	תשואה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	8	לאפריל	אפריל	לP	-	F	R	dateTime	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	1	9	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	1	10	והאמת	אמת	וC	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	11	היא	הוא	-	-	F	Q	-	{pronoun}	O
+1	1	12	שהן	הוא	שC	-	F	Q	-	{pronoun}	O
+1	1	13	הפתיעו	הפתיע	-	-	F	V	-	{verb}	O
+1	1	14	לטובה	טובה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	לפי	לפי	-	-	F	P	-	{preposition} []	O
+1	2	2	התנהגות	התנהגות	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	3	שערי	שער	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	4	המניות	מנייה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	5	ואיגרות	איגרות	וC	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	2	6	החוב	איגרת חוב	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	2	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	8	התשואות	תשואה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	9	אמורות	אמור	-	-	F	O	-	{verb}	O
+1	2	10	היו	היה	-	-	F	V	-	{verb}	O
+1	2	11	להסתכם	הסתכם	-	-	F	V	-	{verb}	O
+1	2	12	ב	ב	בP	-	F	-	-	[]	O
+1	2	13	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	2	14	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	2	15	1	1	-	-	F	R	-	{numeral} []	I_PERCENT
+1	2	16	נומינלית	נומינלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	17	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	18	ומכיוון	מכיוון	וC	-	F	C	-	{conjunction} []	O
+1	2	19	שמדד	מדד	שC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	20	מרס	מרס	-	-	F	R	dateTime|location|other	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	2	21	ירד	ירד	-	-	F	V	-	{verb}	O
+1	2	22	ב	ב	בP	-	F	-	-	[]	O
+1	2	23	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	2	24	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	2	25	0.2	0.2	-	-	F	R	-	{numeral} []	I_PERCENT
+1	2	26	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	27	התשואות	תשואה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	28	אמורות	אמור	-	-	F	O	-	{verb}	O
+1	2	29	היו	היה	-	-	F	V	-	{verb}	O
+1	2	30	לגדול	גדל	-	-	F	V	-	{verb}	O
+1	2	31	ל	ל	לP	-	F	-	-	[]	O
+1	2	32	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	2	33	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	2	34	1.2	1.2	-	-	F	R	-	{numeral} []	I_PERCENT
+1	2	35	במונחים	הונח	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	36	ריאליים	ריאלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	37	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	אז	אז	-	-	F	C	-	{conjunction} []	O
+1	3	2	איך	איך	-	-	F	O	-	{interrogative} []	O
+1	3	3	זה	זה	-	-	F	Q	-	{pronoun}	O
+1	3	4	שחלק	חלק	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	5	מהקופות	קופה	מP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	6	הניבו	הניב	-	-	F	V	-	{verb}	O
+1	3	7	תשואה	תשואה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	8	ריאלית	ריאלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	9	של	של	-	-	F	P	-	{preposition} []	O
+1	3	10	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	3	11	1.5	1.5	-	-	F	R	-	{numeral} []	I_PERCENT
+1	3	12	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	3	13	עוצמה	עוצמה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	14	של	של	-	-	F	P	-	{preposition} []	O
+1	3	15	לאומי	לאומי	-	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	3	16	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	3	17	או	או	-	-	F	C	-	{conjunction} []	O
+1	3	18	אפילו	אפילו	-	-	F	C	-	{conjunction} []	O
+1	3	19	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	3	20	1.65	1.65	-	-	F	R	-	{numeral} []	I_PERCENT
+1	3	21	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	3	22	תמר	תמר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	23	של	של	-	-	F	P	-	{preposition} []	O
+1	3	24	דיסקונט	דיסקונט	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	3	25	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	3	26	?	?	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	הסיבה	סיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	2	פשוטה	פשוט	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	3	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	4	4	קופות	קופות	-	-	F	MWE	-	{MWE} []	O
+1	4	5	אלה	אלה	-	-	F	Q	-	{pronoun}	O
+1	4	6	משקיעות	השקיע	-	-	F	V	-	{verb}	O
+1	4	7	בנכסים	נכס	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	8	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	4	9	סחירים	סחיר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	10	בשיעור	שיעור	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	11	גבוה	גבוה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	12	יחסית	יחסית	-	-	F	A	-	{adverb} []	O
+1	4	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	עד	עד	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	5	2	כה	עד כה	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	5	3	שוערכו	שוערך	-	-	F	V	-	{verb}	O
+1	5	4	הנכסים	נכס	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	5	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	5	6	לצורך	צורך	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	5	7	חישוב	חישוב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	5	8	התשואה	תשואה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	9	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	5	10	בהתעלם	התעלם	-	-	F	V	-	{verb}	O
+1	5	11	משוויים	משוויים	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	5	12	הריאלי	ריאלי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	לפי	לפי	-	-	F	P	-	{preposition} []	O
+1	6	2	הוראות	הוראה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	6	3	האוצר	אוצר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	6	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	5	חוייבו	חויב	-	-	F	V	-	{verb}	O
+1	6	6	הקופות	קופה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	6	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	8	החל	החיל	-	-	F	V	-	{verb}	O
+1	6	9	מאפריל	אפריל	מP	-	F	R	dateTime	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	6	10	2005	2005	-	-	F	R	-	{numeral} []	I_DATE
+1	6	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	12	לשערך	שיער	-	-	F	V	-	{verb}	O
+1	6	13	נכסים	נכס	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	14	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	6	15	סחירים	סחיר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	16	שנרכשו	נרכש	שC	-	F	V	-	{verb}	O
+1	6	17	מאוגוסט	אוגוסט	מP	-	F	R	dateTime	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	6	18	2003	2003	-	-	F	R	-	{numeral} []	I_DATE
+1	6	19	לפי	לפי	-	-	F	P	-	{preposition} []	O
+1	6	20	שיטה	שיטה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	21	המביאה	הביא	-	-	F	V	-	{verb}	O
+1	6	22	בחשבון	חשבון	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	23	גם	גם	-	-	F	A	-	{adverb} []	O
+1	6	24	את	את	-	-	F	P	-	{preposition} []	O
+1	6	25	שוויים	שוויים	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	6	26	הממשי	ממשי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	27	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	מובן	מובן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	2	שעקב	עקב	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	3	כך	כך	-	-	F	Q	-	{pronoun}	O
+1	7	4	גדל	גידל	-	-	F	V	-	{verb}	O
+1	7	5	שווי	שווי	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	7	6	נכסי	נכס	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	7	7	הקופות	קופה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	7	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	7	9	ותמר	המר	וC	-	F	V	-	{verb}	O
+1	7	10	ועוצמה	עוצמה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	11	הציגו	הציג	-	-	F	V	-	{verb}	O
+1	7	12	תוספת	תוספת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	13	חד	חד	-	-	F	O	-	{wPrefix} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	7	14	פעמית	פעמי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	15	לתשואה	תשואה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	8	1	אבל	אבל	-	-	F	C	-	{conjunction} []	O
+1	8	2	זה	זה	-	-	F	Q	-	{pronoun}	O
+1	8	3	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	8	4	הכל	כול	-	D	F	O	-	{quantifier}	O
+1	8	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	9	1	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	9	2	המכה	הכה	-	-	F	V	-	{verb}	O
+1	9	3	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	9	4	הגדולה	גדול	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	9	5	תהיה	היה	-	-	F	V	-	{verb}	O
+1	9	6	ביולי	יולי	בP	-	F	R	person|dateTime	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_DATE
+1	9	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	9	8	כשקופות	קופות	כשC	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	9	9	הגמל	קופת גמל	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	9	10	יצטרכו	הצטרך	-	-	F	V	-	{verb}	O
+1	9	11	לשערך	שיער	-	-	F	V	-	{verb}	O
+1	9	12	את	את	-	-	F	P	-	{preposition} []	O
+1	9	13	כל	כול	-	-	T	O	-	{quantifier}	O
+1	9	14	נכסיהן	נכס	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	9	15	לפי	לפי	-	-	F	P	-	{preposition} []	O
+1	9	16	השווי	שווי	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	17	הריאלי	ריאלי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	10	1	אין	אין	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adjective)]	O
+1	10	2	ספק	אין ספק	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adjective)]	O
+1	10	3	שתמר	תמר	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	4	ועוצמה	עוצמה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	10	5	יציגו	הציג	-	-	F	V	-	{verb}	O
+1	10	6	אז	אז	-	-	F	A	-	{adverb} []	O
+1	10	7	תוספת	תוספת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	10	8	משמעותית	משמעותי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	10	9	לתשואה	תשואה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	10	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	11	1	מה	מה	-	-	F	O	-	{interrogative} []	O
+1	11	2	משמעות	משמעות	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	11	3	הדבר	דבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	4	מבחינת	בחינה	מP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	11	5	עמיתי	עמית	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	11	6	קופות	קופות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	11	7	הגמל	קופת גמל	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	11	8	?	?	-	-	F	PNCT	-	{punctuation} []	O
+1	12	1	ראשית	ראשית	-	-	F	A	-	{adverb} []	O
+1	12	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	12	3	למי	מי	לP	-	F	O	-	{interrogative} []	O
+1	12	4	שמתכנן	תכנן	שC	-	F	V	-	{verb}	O
+1	12	5	למשוך	משך	-	-	F	V	-	{verb}	O
+1	12	6	את	את	-	-	F	P	-	{preposition} []	O
+1	12	7	הכסף	כסף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	8	מקופות	קופות	מP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	12	9	גמל	קופת גמל	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	12	10	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	12	11	במיוחד	במיוחד	-	-	F	A	-	{adverb} []	O
+1	12	12	תמר	המר	-	-	F	V	-	{verb}	O
+1	12	13	ועוצמה	עוצמה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	12	14	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	12	15	משתלם	השתלם	-	-	F	V	-	{verb}	O
+1	12	16	להמתין	המתין	-	-	F	V	-	{verb}	O
+1	12	17	עד	עד	-	-	F	P	-	{preposition} []	O
+1	12	18	יולי	יולי	-	-	F	R	person|dateTime	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_DATE
+1	12	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	12	20	ורק	רק	וC	-	F	A	-	{adverb} []	O
+1	12	21	אז	אז	-	-	F	C	-	{conjunction} []	O
+1	12	22	למשוך	משך	-	-	F	V	-	{verb}	O
+1	12	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	13	1	אז	אז	-	-	F	A	-	{adverb} []	O
+1	13	2	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	13	3	צפוי	צפוי	-	-	F	O	-	{verb}	O
+1	13	4	לקבל	קיבל	-	-	F	V	-	{verb}	O
+1	13	5	מתנת	תינה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	13	6	פרידה	פרידה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	13	7	פיננסית	פיננסי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	13	8	שאין	אין	שC	-	F	O	-	{negation} [(definiteness: false)]	O
+1	13	9	לזלזל	זלזל	-	-	F	V	-	{verb}	O
+1	13	10	בה	ב	-	-	F	P	-	{preposition} []	O
+1	13	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	14	1	שנית	שנית	-	-	F	A	-	{adverb} []	O
+1	14	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	14	3	למי	מי	לP	-	F	O	-	{interrogative} []	O
+1	14	4	שנמצא	נמצא	שC	-	F	V	-	{verb}	O
+1	14	5	היום	היום	-	-	F	A	-	{adverb} []	O
+1	14	6	בקופת	קופת	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	14	7	גמל	קופת גמל	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	14	8	אחרת	אחר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	14	9	שווה	שווה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	10	לשקול	שקל	-	-	F	V	-	{verb}	O
+1	14	11	את	את	-	-	F	P	-	{preposition} []	O
+1	14	12	האפשרות	אפשרות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	14	13	להעביר	העביר	-	-	F	V	-	{verb}	O
+1	14	14	את	את	-	-	F	P	-	{preposition} []	O
+1	14	15	כספו	כסף	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	14	16	לעוצמה	עצם	-	-	F	V	-	{verb}	O
+1	14	17	או	או	-	-	F	C	-	{conjunction} []	O
+1	14	18	לתמר	תמר	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	14	20	כדי	כדי	-	-	F	C	-	{conjunction} []	O
+1	14	21	ליהנות	נהנה	-	-	F	V	-	{verb}	O
+1	14	22	מהרווחים	רווח	מP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	14	23	החד	חד	-	D	F	O	-	{wPrefix} [(definiteness: true),(gender: masculine),(number: singular)]	O
+1	14	24	פעמיים	פעמי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	14	25	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	15	1	מי	מי	-	-	F	O	-	{interrogative} []	O
+1	15	2	יודע	נודע	-	-	F	V	-	{verb}	O
+1	15	3	מתי	מתי	-	-	F	O	-	{interrogative} []	O
+1	15	4	אלה	אלה	-	-	F	Q	-	{pronoun}	O
+1	15	5	יחזרו	חיזר	-	-	F	V	-	{verb}	O
+1	15	6	על	על	-	-	F	P	-	{preposition} []	O
+1	15	7	עצמם	עצמו	-	-	F	Q	-	{pronoun}	O
+1	15	8	?	?	-	-	F	PNCT	-	{punctuation} []	O
+1	16	1	השקעות	השקעה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	16	2	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	16	3	מבצעי	מבצע	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	16	4	עצמאות	עצמאות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	16	5	יום	יום	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	B_DATE
+1	16	6	העצמאות	עצמאות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_DATE
+1	16	7	ה	ה	הD	-	F	-	-	[]	O
+1	16	8	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	16	9	57	57	-	-	F	R	-	{numeral} []	O
+1	16	10	למדינה	מדינה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	16	11	מהווה	היווה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	12	הזדמנות	הזדמנות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	16	13	יוצאת	יוצאת	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adjective)]	O
+1	16	14	דופן	יוצא דופן	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: adjective)]	O
+1	16	15	למבצעי	מבצע	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	16	16	שיווק	שיווק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	17	של	של	-	-	F	P	-	{preposition} []	O
+1	16	18	הבנקים	בנק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	16	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	17	1	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	2	במבצעים	מבצע	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	17	3	מיוחדים	יוחד	-	-	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	17	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	17	5	שלא	לא	שC	-	F	O	-	{negation} [(definiteness: false)]	O
+1	17	6	קיימים	קיים	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	17	7	בימים	יום	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	17	8	רגילים	רגיל	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	17	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	18	1	מספר	מספר	-	-	T	O	-	{quantifier}	O
+1	18	2	דוגמאות	דוגמה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	18	3	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	18	4	*	*	-	-	F	PNCT	-	{punctuation} []	O
+1	18	5	בנק	בנק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	18	6	לאומי	לאומי	-	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	18	7	יעניק	העניק	-	-	F	V	-	{verb}	O
+1	18	8	תנאי	תנאי	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	18	9	השקעות	השקעה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	18	10	מיוחדים	יוחד	-	-	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	18	11	לסטודנטים	סטודנט	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	18	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	18	13	חיילים	חייל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	18	14	ותלמידי	תלמיד	וC	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	18	15	תיכון	תיכון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	19	1	מי	מי	-	-	F	O	-	{interrogative} []	O
+1	19	2	שיפתחו	פיתח	שC	-	F	V	-	{verb}	O
+1	19	3	חשבון	חשבון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	19	4	ויזמינו	הזמין	וC	-	F	V	-	{verb}	O
+1	19	5	כרטיס	כרטיס	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	19	6	אשראי	אשראי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	19	7	יקבלו	קבל	-	-	F	V	-	{verb}	O
+1	19	8	מנוי	מנוי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	19	9	לבלוקבסטר	לבלוקבסטר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	19	10	לשנה	שנה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	19	11	ל	ל	לP	-	F	-	-	[]	O
+1	19	12	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	19	13	28	28	-	-	F	R	-	{numeral} []	O
+1	19	14	סרטים	סרט	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	19	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	20	1	המבצע	ביצע	-	-	F	V	-	{verb}	O
+1	20	2	בתוקף	בתוקף	-	-	F	A	-	{adverb} []	O
+1	20	3	רק	רק	-	-	F	A	-	{adverb} []	O
+1	20	4	במאי	מאי	בP	-	F	R	person|dateTime	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_DATE
+1	20	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	21	1	*	*	-	-	F	PNCT	-	{punctuation} []	O
+1	21	2	לקוחות	לקוח	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	21	3	הבנקים	בנק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	21	4	שיקחו	לקח	שC	-	F	V	-	{verb}	O
+1	21	5	עד	עד	-	-	F	P	-	{preposition} []	O
+1	21	6	סוף	סוף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	21	7	החודש	החודש	-	-	F	A	-	{adverb} []	O
+1	21	8	משכנתה	משכנתא	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	21	9	בבנק	בנק	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	21	10	עצמאות	עצמאות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	21	11	יקבלו	קבל	-	-	F	V	-	{verb}	O
+1	21	12	החזר	החזר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	21	13	של	של	-	-	F	P	-	{preposition} []	O
+1	21	14	עד	עד	-	-	F	P	-	{preposition} []	O
+1	21	15	1,000	1,000	-	-	F	R	-	{numeral} []	I_MONEY
+1	21	16	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	21	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	22	1	הבנק	בנק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	22	2	ישתתף	השתתף	-	-	F	V	-	{verb}	O
+1	22	3	בהחזר	החזר	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	22	4	התשלום	תשלום	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	22	5	הראשון	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	22	6	על	על	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	22	7	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	22	8	ידי	על יד	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 2),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	22	9	מתן	מת	-	-	F	V	-	{verb}	O
+1	22	10	הנחה	הנחה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	22	11	של	של	שC-לP	-	F	-	-	[]	O
+1	22	12	500	500	-	-	F	R	-	{numeral} []	I_MONEY
+1	22	13	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	22	14	בדמי	דמי	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	22	15	פתיחת	פתיחה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	22	16	התיק	תיק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	22	17	וישתתף	השתתף	וC	-	F	V	-	{verb}	O
+1	22	18	בהחזר	החזר	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	22	19	של	של	שC-לP	-	F	-	-	[]	O
+1	22	20	500	500	-	-	F	R	-	{numeral} []	I_MONEY
+1	22	21	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	22	22	בגין	בגין	-	-	F	P	-	{preposition} []	O
+1	22	23	בטחונות	ביטחון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	22	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	23	1	*	*	-	-	F	PNCT	-	{punctuation} []	O
+1	23	2	בנק	בנק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	23	3	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	23	4	יוצא	יוצא	-	-	F	V	-	{verb}	O
+1	23	5	במבצעים	מבצע	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	23	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	23	7	בתוקף	בתוקף	-	-	F	A	-	{adverb} []	O
+1	23	8	עד	עד	-	-	F	P	-	{preposition} []	O
+1	23	9	ה	ה	הD	-	F	-	-	[]	O
+1	23	10	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	23	11	15	15	-	-	F	R	-	{numeral} []	I_DATE
+1	23	12	במאי	במאי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	23	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	23	14	הכוללים	כלל	-	-	F	V	-	{verb}	O
+1	23	15	אשראי	אשראי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	23	16	לרכישת	רכישה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	23	17	רכב	רכב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	23	18	ומשכנתאות	משכנתא	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	23	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	24	1	הלוואה	הלוואה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	24	2	של	של	שC-לP	-	F	-	-	[]	O
+1	24	3	57	57	-	-	F	R	-	{numeral} []	I_MONEY
+1	24	4	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	24	5	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	24	6	לרכישת	רכישה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	24	7	רכב	רכב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	8	ל	ל	לP	-	F	-	-	[]	O
+1	24	9	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	24	10	57	57	-	-	F	R	-	{numeral} []	O
+1	24	11	חודשים	חודש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	24	12	בריבית	ריבית	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	24	13	נומינלית	נומינלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	24	14	של	של	-	-	F	P	-	{preposition} []	O
+1	24	15	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	24	16	5.7	5.7	-	-	F	R	-	{numeral} []	I_PERCENT
+1	24	17	לשנה	שנה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	24	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	25	1	בנוסף	בנוסף	-	-	F	A	-	{adverb} []	O
+1	25	2	מציע	הציע	-	-	F	V	-	{verb}	O
+1	25	3	הבנק	בנק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	25	4	הלוואת	הלוואה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	25	5	משכנתה	משכנתא	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	6	של	של	שC-לP	-	F	-	-	[]	O
+1	25	7	171	171	-	-	F	R	-	{numeral} []	I_MONEY
+1	25	8	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	25	9	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	25	10	ב	ב	בP	-	F	-	-	[]	O
+1	25	11	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	25	12	3	3	-	-	F	R	-	{numeral} []	O
+1	25	13	חלקים	חלק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	25	14	של	של	שC-לP	-	F	-	-	[]	O
+1	25	15	57	57	-	-	F	R	-	{numeral} []	I_MONEY
+1	25	16	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	25	17	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	25	18	וב	וב	וC-בP	-	F	-	-	[]	O
+1	25	19	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	25	20	3	3	-	-	F	R	-	{numeral} []	O
+1	25	21	מסלולי	מסלול	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	25	22	ריבית	ריבית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	23	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	25	24	57	57	-	-	F	R	-	{numeral} []	I_MONEY
+1	25	25	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	25	26	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	25	27	בריבית	ריבית	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	28	קבועה	קבוע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	29	של	של	-	-	F	P	-	{preposition} []	O
+1	25	30	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	25	31	3.9	3.9	-	-	F	R	-	{numeral} []	I_PERCENT
+1	25	32	ל	ל	לP	-	F	-	-	[]	O
+1	25	33	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	25	34	9	9	-	-	F	R	-	{numeral} []	O
+1	25	35	שנים	שנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	25	36	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	25	37	57	57	-	-	F	R	-	{numeral} []	I_MONEY
+1	25	38	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	25	39	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	25	40	בריבית	ריבית	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	41	קבועה	קבוע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	42	של	של	-	-	F	P	-	{preposition} []	O
+1	25	43	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	25	44	4.6	4.6	-	-	F	R	-	{numeral} []	I_PERCENT
+1	25	45	ל	ל	לP	-	F	-	-	[]	O
+1	25	46	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	25	47	20	20	-	-	F	R	-	{numeral} []	O
+1	25	48	שנה	שנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	49	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	25	50	ו	ו	וC	-	F	-	-	[]	O
+1	25	51	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	25	52	57	57	-	-	F	R	-	{numeral} []	I_MONEY
+1	25	53	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	25	54	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	25	55	בריבית	ריבית	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	56	משתנה	משתנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	57	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	25	58	כל	כול	-	-	T	O	-	{quantifier}	O
+1	25	59	שנתיים	שנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: dual),(status: absolute)]	O
+1	25	60	וחצי	חצי	וC	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	25	61	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	25	62	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	25	63	העומדת	עמד	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	25	64	כעת	כעת	-	-	F	A	-	{adverb} []	O
+1	25	65	על	על	-	-	F	P	-	{preposition} []	O
+1	25	66	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	25	67	3.99	3.99	-	-	F	R	-	{numeral} []	I_PERCENT
+1	25	68	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	26	1	אוברדראפט	אוברדראפט	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	26	2	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	26	3	אשראי	אשראי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	4	וטוב	טוב	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	5	לי	ל	-	-	F	P	-	{preposition} []	O
+1	26	6	ההתעוררות	התעוררות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	26	7	במשק	משק	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	8	הביאה	הביא	-	-	F	V	-	{verb}	O
+1	26	9	במקביל	במקביל	-	-	F	A	-	{adverb} []	O
+1	26	10	להתעוררות	התעוררות	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	26	11	בתוכניות	תוכנית	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	26	12	האשראי	אשראי	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	13	של	של	-	-	F	P	-	{preposition} []	O
+1	26	14	הבנקים	בנק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	26	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	27	1	על	על	-	-	F	P	-	{preposition} []	O
+1	27	2	תוכניות	תוכנית	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	27	3	המימון	מימון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	27	4	של	של	-	-	F	P	-	{preposition} []	O
+1	27	5	הבנקים	בנק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	27	6	הגדולים	גדול	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	27	7	כבר	כבר	-	-	F	A	-	{adverb} []	O
+1	27	8	דיווחנו	דיווח	-	-	F	V	-	{verb}	O
+1	27	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	27	10	אך	אך	-	-	F	C	-	{conjunction} []	O
+1	27	11	כעת	כעת	-	-	F	A	-	{adverb} []	O
+1	27	12	מתברר	התברר	-	-	F	V	-	{verb}	O
+1	27	13	שגם	שגם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	27	14	בנקים	בנק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	27	15	בינוניים	בינוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	27	16	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	27	17	כמו	כמו	-	-	F	P	-	{preposition} []	O
+1	27	18	אגוד	אגוד	-	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	27	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	27	20	הבינלאומי	הבינלאומי	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	27	21	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	27	22	ו	ו	וC	-	F	-	-	[]	O
+1	27	23	המזרחי	מזרחי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	27	24	אינם	אינו	-	-	F	V	-	{verb}	O
+1	27	25	מזניחים	הזניח	-	-	F	V	-	{verb}	O
+1	27	26	אותנו	את	-	-	F	P	-	{preposition} []	O
+1	27	27	ומפתים	פיתה	וC	-	F	V	-	{verb}	O
+1	27	28	אותנו	את	-	-	F	P	-	{preposition} []	O
+1	27	29	בהצעות	הצעה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	27	30	מעניינות	עניין	-	-	F	G	-	{adjective} [(binyan: Pi'el),(definiteness: false),(gender: feminine),(number: plural),(person: any),(status: absolute)]	O
+1	27	31	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	28	1	המזרחי	מזרחי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	28	2	מציע	הציע	-	-	F	V	-	{verb}	O
+1	28	3	ללקוחות	לקוח	לP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	28	4	המועדפים	הועדף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	28	5	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	28	6	בעלי	בעלים	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	28	7	חיסכון	חיסכון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	28	8	של	של	שC-לP	-	F	-	-	[]	O
+1	28	9	100	100	-	-	F	R	-	{numeral} []	I_MONEY
+1	28	10	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	28	11	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	28	12	ומעלה	ומעלה	-	-	F	MWE	-	{MWE} []	O
+1	28	13	ולמעבירי	העביר	וC-לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	28	14	משכורת	משכורת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	28	15	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	28	16	או	או	-	-	F	C	-	{conjunction} []	O
+1	28	17	לבני	לבני	-	-	F	R	person	{properName} [(definiteness: false)]	O
+1	28	18	משפחותיהם	משפחה	-	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	28	19	עד	עד	-	-	F	P	-	{preposition} []	O
+1	28	20	50	50	-	-	F	R	-	{numeral} []	I_MONEY
+1	28	21	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	28	22	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	28	23	בריבית	ריבית	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	28	24	של	של	-	-	F	P	-	{preposition} []	O
+1	28	25	פריים	פריים	-	-	T	N	-	{noun} [(foreign: true),(gender: masculine),(number: singular),(status: construct)]	O
+1	28	26	מינוס	מינוס	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	28	27	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	28	28	0.1	0.1	-	-	F	R	-	{numeral} []	I_PERCENT
+1	28	29	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	29	1	ההלוואה	הלוואה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	29	2	עד	עד	-	-	F	P	-	{preposition} []	O
+1	29	3	36	36	-	-	F	R	-	{numeral} []	O
+1	29	4	חודשים	חודש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	29	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	30	1	הבינלאומי	הבינלאומי	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	30	2	מציע	הציע	-	-	F	V	-	{verb}	O
+1	30	3	אשראי	אשראי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	30	4	של	של	שC-לP	-	F	-	-	[]	O
+1	30	5	30	30	-	-	F	R	-	{numeral} []	I_MONEY
+1	30	6	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	30	7	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	30	8	בריבית	ריבית	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	30	9	קבועה	קבוע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	30	10	של	של	-	-	F	P	-	{preposition} []	O
+1	30	11	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	30	12	5.5	5.5	-	-	F	R	-	{numeral} []	I_PERCENT
+1	30	13	בשנה	שנה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	30	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	30	15	לכל	כול	לP	-	T	O	-	{quantifier}	O
+1	30	16	הלקוחות	לקוח	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	30	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	31	1	בנק	בנק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	31	2	אגוד	אגוד	-	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	31	3	מציע	הציע	-	-	F	V	-	{verb}	O
+1	31	4	הלוואה	הלוואה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	31	5	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	31	6	צמודה	צמוד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	31	7	של	של	שC-לP	-	F	-	-	[]	O
+1	31	8	5,000	5,000	-	-	F	R	-	{numeral} []	I_MONEY
+1	31	9	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	31	10	בהחזר	החזר	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	11	קבוע	קבוע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	12	של	של	שC-לP	-	F	-	-	[]	O
+1	31	13	99	99	-	-	F	R	-	{numeral} []	I_MONEY
+1	31	14	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	31	15	לחודש	חודש	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	32	1	לקוח	לקוח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	32	2	המעוניין	עונין	-	-	F	V	-	{verb}	O
+1	32	3	בהלוואה	הלוואה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	32	4	של	של	שC-לP	-	F	-	-	[]	O
+1	32	5	10,000	10,000	-	-	F	R	-	{numeral} []	I_MONEY
+1	32	6	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	32	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	32	8	יחזיר	החזיר	-	-	F	V	-	{verb}	O
+1	32	9	בהתאם	בהתאם	-	-	F	A	-	{adverb} []	O
+1	32	10	198	198	-	-	F	R	-	{numeral} []	I_MONEY
+1	32	11	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	32	12	לחודש	חודש	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	32	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	33	1	מי	מי	-	-	F	O	-	{interrogative} []	O
+1	33	2	שמלווה	לווה	שC	-	F	V	-	{verb}	O
+1	33	3	20	20	-	-	F	R	-	{numeral} []	I_MONEY
+1	33	4	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	33	5	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	33	6	ומעלה	מעלה	וC	-	F	A	-	{adverb} []	O
+1	33	7	יקבל	קיבל	-	-	F	V	-	{verb}	O
+1	33	8	בנוסף	בנוסף	-	-	F	A	-	{adverb} []	O
+1	33	9	מכשיר	הכשיר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	33	10	DVD	DVD	-	-	F	O	-	{foreign} []	O
+1	33	11	במתנה	תינה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	33	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	34	1	ההלוואות	הלוואה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	34	2	מוגבלות	הוגבל	-	-	F	V	-	{verb}	O
+1	34	3	ל	ל	לP	-	F	-	-	[]	O
+1	34	4	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	34	5	50	50	-	-	F	R	-	{numeral} []	I_MONEY
+1	34	6	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	34	7	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	34	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	35	1	ללקוח	לקוח	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	35	2	שיש	יש	שC	-	F	O	-	{existential} [(interrogative: false),(polarity: positive)]	O
+1	35	3	בטחונות	ביטחון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	35	4	טובים	טוב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	35	5	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	35	6	כמו	כמו	-	-	F	P	-	{preposition} []	O
+1	35	7	חשבון	חשבון	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	35	8	משכורת	משכורת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	35	9	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	35	10	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	35	11	בהטבה	הטבה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	35	12	של	של	-	-	F	P	-	{preposition} []	O
+1	35	13	ממש	ממש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	35	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	35	15	ששווה	שווה	שC	-	F	C	-	{conjunction} []	O
+1	35	16	לנצלה	ניצל	-	-	F	V	-	{verb}	O
+1	35	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	36	1	בנוסף	בנוסף	-	-	F	A	-	{adverb} []	O
+1	36	2	מציע	הציע	-	-	F	V	-	{verb}	O
+1	36	3	אגוד	אגוד	-	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	36	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	36	5	בשיתוף	שיתוף	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	36	6	חברת	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	36	7	אישי	אישי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	36	8	ישיר	ישיר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	36	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	36	10	משכנתה	משכנתא	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	36	11	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	36	12	צמודה	צמוד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	36	13	בהחזר	החזר	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	36	14	קבוע	קבוע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	36	15	של	של	שC-לP	-	F	-	-	[]	O
+1	36	16	999	999	-	-	F	R	-	{numeral} []	I_MONEY
+1	36	17	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	36	18	לחודש	חודש	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	36	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	37	1	המצטרפים	הצטרף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	37	2	יקבלו	קבל	-	-	F	V	-	{verb}	O
+1	37	3	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	37	4	ביטוח	ביטוח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	37	5	מקיף	הקיף	-	-	F	V	-	{verb}	O
+1	37	6	לרכב	רכב	-	-	F	V	-	{verb}	O
+1	37	7	חינם	חינם	-	-	F	A	-	{adverb} []	O
+1	37	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	37	9	פטור	פטר	-	-	F	V	-	{verb}	O
+1	37	10	מדמי	דימה	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	37	11	שמירה	שמירה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	37	12	בני"ע	בני"ע	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	37	13	לשנה	שנה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	37	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	37	15	ריבית	ריבית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	37	16	זכות	זכות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	37	17	אוטומטית	אוטומטי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	37	18	בשיעור	שיעור	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	37	19	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	37	20	4	4	-	-	F	R	-	{numeral} []	I_PERCENT
+1	37	21	לשנה	שנה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	37	22	בחשבון	חשבון	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	37	23	העו"ש	עו"ש	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	37	24	ופטור	פטר	וC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	37	25	מעמלת	עימל	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	37	26	שורה	שורה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	37	27	בחשבון	חשבון	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	37	28	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	38	1	עלות	עלות	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	38	2	תוכנית	תוכנית	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	38	3	הפרישה	פרישה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	38	4	של	של	שC-לP	-	F	-	-	[]	O
+1	38	5	260	260	-	-	F	R	-	{numeral} []	O
+1	38	6	עובדי	עבד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	38	7	מקורות	מקור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	38	8	מסתכמת	הסתכם	-	-	F	G	-	{adjective} [(binyan: Hitpa'el),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	38	9	בכ	בכ	בP-כP	-	F	-	-	[]	O
+1	38	10	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	38	11	360	360	-	-	F	R	-	{numeral} []	I_MONEY
+1	38	12	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	38	13	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	38	14	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	38	15	כ	כ	כP	-	F	-	-	[]	O
+1	38	16	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	38	17	1.4	1.4	-	-	F	R	-	{numeral} []	I_MONEY
+1	38	18	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	38	19	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	38	20	לעובד	עבד	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	38	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	39	1	עד	עד	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	39	2	כה	עד כה	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	39	3	פרשו	פרש	-	-	F	V	-	{verb}	O
+1	39	4	מהחברה	חברה	מP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	39	5	כ	כ	כP	-	F	-	-	[]	O
+1	39	6	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	39	7	120	120	-	-	F	R	-	{numeral} []	O
+1	39	8	עובדים	עבד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	39	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	39	10	לאחר	לאחר	-	-	F	C	-	{conjunction} []	O
+1	39	11	שבדצמבר	דצמבר	שC-בP	-	F	R	dateTime	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	39	12	2004	2004	-	-	F	R	-	{numeral} []	I_DATE
+1	39	13	נחתם	נחתם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	39	14	הסכם	הסכם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	39	15	קיבוצי	קיבוצי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	39	16	עם	עם	-	-	F	P	-	{preposition} []	O
+1	39	17	העובדים	עבד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	39	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	40	1	כך	כך	-	-	F	Q	-	{pronoun}	O
+1	40	2	עולה	עלה	-	-	F	V	-	{verb}	O
+1	40	3	מדוח	דיווח	-	-	F	V	-	{verb}	O
+1	40	4	שמפרסמת	פרסם	שC	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	40	5	חברת	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	40	6	הדירוג	דירוג	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	40	7	מעלות	העלה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	40	8	לקראת	לקראת	-	-	F	P	-	{preposition} []	O
+1	40	9	הנפקת	הנפקה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	40	10	אג"ח	אג"ח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	40	11	של	של	-	-	F	P	-	{preposition} []	O
+1	40	12	מקורות	מקור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_ORG
+1	40	13	בהיקף	היקף	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	40	14	של	של	שC-לP	-	F	-	-	[]	O
+1	40	15	700	700	-	-	F	R	-	{numeral} []	I_MONEY
+1	40	16	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	40	17	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	40	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	41	1	מעלות	העלה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	41	2	מעניקה	העניק	-	-	F	G	-	{adjective} [(binyan: Hif'il),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	41	3	למקורות	מקור	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	I_ORG
+1	41	4	דירוג	דירוג	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	41	5	AAA	AAA	-	-	F	O	-	{foreign} []	O
+1	41	6	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	42	1	תוכנית	תוכנית	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	42	2	ההתייעלות	התייעלות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	42	3	של	של	-	-	F	P	-	{preposition} []	O
+1	42	4	מקורות	מקור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_ORG
+1	42	5	כוללת	כלל	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	42	6	בין	בין	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	42	7	היתר	בין היתר	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	42	8	פיטורי	פיטורין	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	42	9	200	200	-	-	F	R	-	{numeral} []	O
+1	42	10	עובדים	עבד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	42	11	והחלפת	החליף	וC	-	F	V	-	{verb}	O
+1	42	12	60	60	-	-	F	R	-	{numeral} []	O
+1	42	13	עובדים	עבד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	42	14	ותיקים	ותיק	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	42	15	בעובדים	עבד	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	42	16	חדשים	חדש	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	42	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	43	1	מהלך	מהלך	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	43	2	הפיטורים	פיטורין	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	43	3	היה	היה	-	-	F	V	-	{verb}	O
+1	43	4	אמור	אמור	-	-	F	O	-	{verb}	O
+1	43	5	להסתיים	הסתיים	-	-	F	V	-	{verb}	O
+1	43	6	עד	עד	-	-	F	P	-	{preposition} []	O
+1	43	7	יולי	יולי	-	-	F	R	person|dateTime	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_DATE
+1	43	8	2003	2003	-	-	F	R	-	{numeral} []	I_DATE
+1	43	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	43	10	אולם	אולם	-	-	F	C	-	{conjunction} []	O
+1	43	11	רק	רק	-	-	F	A	-	{adverb} []	O
+1	43	12	כיום	כיום	-	-	F	A	-	{adverb} []	O
+1	43	13	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	43	14	יוצא	יוצא	-	-	F	V	-	{verb}	O
+1	43	15	לפועל	פועל	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	43	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	44	1	עלות	עלות	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	44	2	תוכנית	תוכנית	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	44	3	הפרישה	פרישה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	44	4	מסתכמת	הסתכם	-	-	F	V	-	{verb}	O
+1	44	5	להערכת	הערכה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	44	6	מקורות	מקור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_ORG
+1	44	7	ב	ב	בP	-	F	-	-	[]	O
+1	44	8	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	44	9	360	360	-	-	F	R	-	{numeral} []	I_MONEY
+1	44	10	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	44	11	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	44	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	44	13	כשמהם	מן	כשC	-	F	P	-	{preposition} []	O
+1	44	14	כ	כ	כP	-	F	-	-	[]	O
+1	44	15	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	44	16	100	100	-	-	F	R	-	{numeral} []	I_MONEY
+1	44	17	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	44	18	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	44	19	לתשלום	תשלום	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	44	20	פיצויים	פיצוי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	44	21	ומענק	מענק	וC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	44	22	פרישה	פרישה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	44	23	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	44	24	וכ	וכ	וC-כP	-	F	-	-	[]	O
+1	44	25	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	44	26	260	260	-	-	F	R	-	{numeral} []	I_MONEY
+1	44	27	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	44	28	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	44	29	תשלומי	תשלום	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	44	30	פנסיה	פנסיה	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	44	31	שוטפת	שוטף	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	44	32	לתקופה	תקופה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	44	33	של	של	שC-לP	-	F	-	-	[]	O
+1	44	34	11	11	-	-	F	R	-	{numeral} []	O
+1	44	35	שנים	שנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	44	36	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	45	1	המקורות	מקור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	45	2	למימון	מימון	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	45	3	הפרישה	פרישה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	45	4	הם	הוא	-	-	F	V	-	{verb}	O
+1	45	5	עתודות	עתודה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	45	6	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	45	7	וקרן	קרן	וC	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	45	8	פרישה	פרישה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	45	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	46	1	עם	עם	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	46	2	זאת	עם זאת	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	46	3	קיים	קיים	-	-	F	V	-	{verb}	O
+1	46	4	גירעון	גרעון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	46	5	של	של	שC-לP	-	F	-	-	[]	O
+1	46	6	44	44	-	-	F	R	-	{numeral} []	I_MONEY
+1	46	7	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	46	8	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	46	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	46	10	אשר	אשר	-	-	F	C	-	{conjunction} []	O
+1	46	11	ימומן	מומן	-	-	F	V	-	{verb}	O
+1	46	12	באמצעות	באמצעות	-	-	F	P	-	{preposition} []	O
+1	46	13	חוב	חוב	-	-	F	MWE	-	{MWE} []	O
+1	46	14	פיננסי	פיננסי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	46	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	47	1	בנוסף	בנוסף	-	-	F	A	-	{adverb} []	O
+1	47	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	47	3	במסגרת	מסגרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	47	4	הסכם	הסכם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	47	5	השינוי	שינוי	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	47	6	המבני	מבני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	47	7	בחברה	חברה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	47	8	נכלל	נכלל	-	-	F	V	-	{verb}	O
+1	47	9	מענק	מענק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	47	10	חד	חד	-	-	F	O	-	{wPrefix} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	47	11	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	47	12	פעמי	פעמי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	47	13	לעובדים	עבד	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	47	14	הנאמד	נאמד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	47	15	ב	ב	בP	-	F	-	-	[]	O
+1	47	16	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	47	17	37	37	-	-	F	R	-	{numeral} []	I_MONEY
+1	47	18	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	47	19	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	47	20	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	47	21	שמתוכו	מתוך	שC	-	F	P	-	{preposition} []	O
+1	47	22	28	28	-	-	F	R	-	{numeral} []	I_MONEY
+1	47	23	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	47	24	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	47	25	הם	הוא	-	-	F	Q	-	{pronoun}	O
+1	47	26	במימון	מימון	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	47	27	הממשלה	ממשלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	47	28	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	48	1	מקורות	מקור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_ORG
+1	48	2	מתכננת	תכנן	-	-	F	V	-	{verb}	O
+1	48	3	לגייס	גייס	-	-	F	V	-	{verb}	O
+1	48	4	כ	כ	כP	-	F	-	-	[]	O
+1	48	5	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	48	6	700	700	-	-	F	R	-	{numeral} []	I_MONEY
+1	48	7	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	48	8	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	48	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	48	10	אשר	אשר	-	-	F	C	-	{conjunction} []	O
+1	48	11	ישלימו	השלים	-	-	F	V	-	{verb}	O
+1	48	12	תוכנית	תוכנית	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	48	13	גיוס	גיוס	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	48	14	בהיקף	היקף	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	48	15	של	של	-	-	F	P	-	{preposition} []	O
+1	48	16	כ	כ	כP	-	F	-	-	[]	O
+1	48	17	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	48	18	1.5	1.5	-	-	F	R	-	{numeral} []	I_MONEY
+1	48	19	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	48	20	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	48	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	49	1	לדברי	דבר	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	49	2	רונן	רונן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	49	3	וולפמן	וולפמן	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	49	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	49	5	מנכ"ל	מנכ"ל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	49	6	מקורות	מקור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_ORG
+1	49	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	49	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	49	9	השקעות	השקעה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	49	10	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	49	11	בתוכנית	תוכנית	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	49	12	הפיתוח	פיתוח	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	49	13	במשק	משק	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	49	14	המים	משק המים	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: noun)]	O
+1	49	15	יתמקדו	התמקד	-	-	F	V	-	{verb}	O
+1	49	16	בהשבת	השבה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	49	17	קולחים	קלח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	49	18	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	49	19	חיבור	חיבור	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	49	20	מתקני	תיקן	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	49	21	התפלה	תפלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	49	22	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	49	23	התפלת	התפלה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	49	24	מים	מים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	49	25	מליחים	מליח	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	49	26	והשקעה	השקעה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	49	27	במרכיבי	מרכיב	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	49	28	בטחון	ביטחון	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	49	29	מים	מים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	49	30	ואיכות	איכות	וC	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	49	31	מים	מים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	49	32	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	49	33	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	50	1	חברת	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	50	2	כוח	כוח	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	50	3	האדם	כוח אדם	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	50	4	והסיעוד	סיעוד	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	50	5	דנאל	דנאל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	50	6	תגייס	גייס	-	-	F	V	-	{verb}	O
+1	50	7	35	35	-	-	F	R	-	{numeral} []	I_MONEY
+1	50	8	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	50	9	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	50	10	בהנפקת	הנפקה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	50	11	אג"ח	אג"ח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	50	12	ואופציות	אופציה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	50	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	51	1	את	את	-	-	F	P	-	{preposition} []	O
+1	51	2	הגיוס	גיוס	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	51	3	יובילו	הוביל	-	-	F	V	-	{verb}	O
+1	51	4	פועלים	פועלים	-	-	F	R	organization	{properName} [(definiteness: false)]	O
+1	51	5	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	51	6	אי.בי.אי	אי.בי.אי	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	51	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	51	8	כלל	כלל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	51	9	חיתום	חיתום	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	51	10	ורוסאריו	ורוסאריו	-	-	F	R	-	{properName} [(definiteness: false)]	B_ORG
+1	51	11	קפיטל	קפיטל	-	-	F	MWE	-	{MWE} []	I_ORG
+1	51	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	52	1	הגיוס	גיוס	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	52	2	אמור	אמור	-	-	F	O	-	{verb}	O
+1	52	3	לממן	מימן	-	-	F	V	-	{verb}	O
+1	52	4	את	את	-	-	F	P	-	{preposition} []	O
+1	52	5	ההלוואה	הלוואה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	52	6	שנטלה	ניטל	שC	-	F	V	-	{verb}	O
+1	52	7	דנאל	דנאל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	52	8	לשם	לשם	-	-	F	P	-	{preposition} []	O
+1	52	9	השקעה	השקעה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	52	10	בפרויקט	פרויקט	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	52	11	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	52	12	פאלאס	פאלאס	-	-	F	R	other	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	52	13	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	52	14	בתל	תל	בP	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	52	15	-	-	-	-	F	PNCT	-	{punctuation} []	I_LOC
+1	52	16	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	52	17	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	52	18	שבו	ב	שC	-	F	P	-	{preposition} []	O
+1	52	19	היא	הוא	-	-	F	Q	-	{pronoun}	O
+1	52	20	מחזיקה	החזיק	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	52	21	ב	ב	בP	-	F	-	-	[]	O
+1	52	22	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	52	23	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	52	24	50	50	-	-	F	R	-	{numeral} []	I_PERCENT
+1	52	25	והיתרה	יתרה	וC	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	52	26	שייכת	שייך	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	52	27	למשפחת	משפחה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	52	28	שחם	שחם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_PERS
+1	52	29	מארצות	ארצות	מP	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	52	30	הברית	ארצות הברית	-	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	52	31	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	53	1	סך	סך	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	53	2	ההשקעה	השקעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	53	3	של	של	-	-	F	P	-	{preposition} []	O
+1	53	4	דנאל	דנאל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	53	5	ושותפיה	שותף	וC	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	53	6	בפרויקט	פרויקט	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	53	7	הגיע	הגיע	-	-	F	V	-	{verb}	O
+1	53	8	ל	ל	לP	-	F	-	-	[]	O
+1	53	9	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	53	10	100	100	-	-	F	R	-	{numeral} []	I_MONEY
+1	53	11	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	53	12	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	53	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	53	14	כאשר	כאשר	-	-	F	C	-	{conjunction} []	O
+1	53	15	הרוב	רוב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	53	16	מומן	מומן	-	-	F	V	-	{verb}	O
+1	53	17	בהלוואות	הלוואה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	53	18	בנקאיות	בנקאי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	53	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	54	1	יונה	יונה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]	I_PERS
+1	54	2	אדיר	אדיר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_PERS
+1	54	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	54	4	מנכ"ל	מנכ"ל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	54	5	דנאל	דנאל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	54	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	54	7	ציינה	ציין	-	-	F	V	-	{verb}	O
+1	54	8	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	54	9	בנוסף	בנוסף	-	-	F	A	-	{adverb} []	O
+1	54	10	לפרויקט	פרויקט	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	54	11	פאלאס	פאלאס	-	-	F	R	other	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	54	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	54	13	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	54	14	מתכוונת	התכוון	-	-	F	V	-	{verb}	O
+1	54	15	להשתתף	השתתף	-	-	F	V	-	{verb}	O
+1	54	16	במכרזים	מכרז	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	54	17	הממשלתיים	ממשלתי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	54	18	להפרטת	הפרטה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	54	19	מעונות	עונה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	54	20	חוסים	חסה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	54	21	וכן	כן	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	54	22	להגדיל	הגדיל	-	-	F	V	-	{verb}	O
+1	54	23	את	את	-	-	F	P	-	{preposition} []	O
+1	54	24	פעילותה	פעילות	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	54	25	בתחום	תחם	-	-	F	V	-	{verb}	O
+1	54	26	כוח	כוח	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	54	27	האדם	כוח אדם	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	54	28	הטכני	טכני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	54	29	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	55	1	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	55	2	פולאר	פולאר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	55	3	השקעות	השקעה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	55	4	מתכוונת	התכוון	-	-	F	G	-	{adjective} [(binyan: Hitpa'el),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	55	5	לגייס	גייס	-	-	F	V	-	{verb}	O
+1	55	6	75	75	-	-	F	R	-	{numeral} []	I_MONEY
+1	55	7	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	55	8	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	55	9	בהנפקת	הנפקה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	55	10	אג"ח	אג"ח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	55	11	במסגרת	מסגרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	55	12	הרחבת	הרחבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	55	13	סדרה	סדרה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	55	14	קיימת	קיים	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	55	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	56	1	מעלות	העלה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	56	2	דירגה	דירג	-	-	F	V	-	{verb}	O
+1	56	3	את	את	-	-	F	P	-	{preposition} []	O
+1	56	4	האג"ח	אג"ח	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	56	5	בדירוג	דירוג	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	56	6	BBB	BBB	-	-	F	O	-	{foreign} []	O
+1	56	7	פלוס	פלוס	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	56	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	57	1	ההנפקה	הנפקה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	57	2	מיועדת	יועד	-	-	F	V	-	{verb}	O
+1	57	3	למיחזור	מחזור	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	57	4	חובות	חובה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	57	5	ולפירעון	פירעון	וC-לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	57	6	מוקדם	מוקדם	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	57	7	של	של	-	-	F	P	-	{preposition} []	O
+1	57	8	הלוואות	הלוואה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	57	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	58	1	במקביל	במקביל	-	-	F	A	-	{adverb} []	O
+1	58	2	לתוכניות	תוכנית	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	58	3	להנפקות	הנפקה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	58	4	חדשות	חדש	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	58	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	58	6	היו	היה	-	-	F	V	-	{verb}	O
+1	58	7	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	58	8	גם	גם	-	-	F	A	-	{adverb} []	O
+1	58	9	כמה	כמה	-	-	T	O	-	{quantifier}	O
+1	58	10	חברות	חברה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	58	11	שכבר	כבר	שC	-	F	A	-	{adverb} []	O
+1	58	12	השלימו	השלים	-	-	F	V	-	{verb}	O
+1	58	13	את	את	-	-	F	P	-	{preposition} []	O
+1	58	14	הגיוסים	גיוס	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	58	15	שלהן	של	-	-	F	P	-	{preposition} []	O
+1	58	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	59	1	אורדן	אורדן	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	59	2	גייסה	גייס	-	-	F	V	-	{verb}	O
+1	59	3	67	67	-	-	F	R	-	{numeral} []	I_MONEY
+1	59	4	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	59	5	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	59	6	מגופים	מגוף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	59	7	מוסדיים	מוסדי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	59	8	בהנפקה	הנפקה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	59	9	פרטית	פרטי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	59	10	של	של	-	-	F	P	-	{preposition} []	O
+1	59	11	אג"ח	אג"ח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	59	12	שקיבלו	קיבל	שC	-	F	V	-	{verb}	O
+1	59	13	דירוג	דירוג	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	59	14	A	A	-	-	F	O	-	{foreign} []	O
+1	59	15	ממעלות	העלה	מP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	59	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	60	1	האג"ח	אג"ח	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	60	2	צמודות	צמוד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	60	3	מדד	מדד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	60	4	לתקופה	תקופה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	60	5	של	של	שC-לP	-	F	-	-	[]	O
+1	60	6	6	6	-	-	F	R	-	{numeral} []	O
+1	60	7	שנים	שנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	60	8	ונושאות	נשא	וC	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	60	9	ריבית	ריבית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	60	10	של	של	-	-	F	P	-	{preposition} []	O
+1	60	11	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	60	12	5.3	5.3	-	-	F	R	-	{numeral} []	I_PERCENT
+1	60	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	61	1	בנוסף	בנוסף	-	-	F	A	-	{adverb} []	O
+1	61	2	לאג"ח	אג"ח	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	61	3	הנפיקה	הנפיק	-	-	F	V	-	{verb}	O
+1	61	4	אורדן	אורדן	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	61	5	גם	גם	-	-	F	A	-	{adverb} []	O
+1	61	6	3.3	3.3	-	-	F	R	-	{numeral} []	O
+1	61	7	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	61	8	אופציות	אופציה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	61	9	למניות	מנייה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	61	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	62	1	אורדן	אורדן	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	62	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	62	3	שבשליטת	שליטה	שC-בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	62	4	לידר	לידר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_PERS
+1	62	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	62	6	היא	הוא	-	-	F	V	-	{verb}	O
+1	62	7	זרוע	זרוע	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	62	8	התעשיה	תעשייה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	62	9	בקבוצת	קבוצה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	62	10	שרפ"ק	רפ"ק	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	62	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	63	1	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	63	2	חברת	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	63	3	רציו	רץ	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	I_ORG
+1	63	4	חיפושי	חיפוש	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	I_ORG
+1	63	5	נפט	נפט	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	63	6	השלימה	השלים	-	-	F	V	-	{verb}	O
+1	63	7	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	63	8	הנפקת	הנפקה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	63	9	זכויות	זכות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	63	10	בהיקף	היקף	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	63	11	של	של	שC-לP	-	F	-	-	[]	O
+1	63	12	12	12	-	-	F	R	-	{numeral} []	I_MONEY
+1	63	13	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	63	14	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	63	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	63	16	וחברת	חברה	וC	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	63	17	סינמה	סינמה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	63	18	גייסה	גייס	-	-	F	V	-	{verb}	O
+1	63	19	11.8	11.8	-	-	F	R	-	{numeral} []	I_MONEY
+1	63	20	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	63	21	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	63	22	בהנפקת	הנפקה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	63	23	זכויות	זכות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	63	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	64	1	הכסף	כסף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	64	2	מיועד	יועד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	64	3	בעיקר	בעיקר	-	-	F	A	-	{adverb} []	O
+1	64	4	למימון	מימון	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	64	5	הפקת	הפקה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	64	6	הסרט	סרט	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	64	7	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	64	8	הבורגנים	בורגנים	-	D	F	R	-	{properName} [(definiteness: true)]	I_MISC_ENT
+1	64	9	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	64	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	65	1	חברת	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	65	2	סטאר	סטאר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	65	3	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	65	4	נייט	נייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	65	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	65	6	יצרנית	יצרן	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	65	7	מערכות	מערכת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	65	8	ראיית	ראיה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	65	9	לילה	לילה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	65	10	לתעשיות	תעשייה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	65	11	הבטחוניות	בטחוני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	65	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	65	13	הנסחרת	נסחר	-	-	F	V	-	{verb}	O
+1	65	14	בבורסה	בורסה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	65	15	בתל	תל	בP	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	65	16	-	-	-	-	F	PNCT	-	{punctuation} []	I_LOC
+1	65	17	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	65	18	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	65	19	נמצאת	נמצא	-	-	F	V	-	{verb}	O
+1	65	20	בימים	יום	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	65	21	אלה	אלה	-	-	F	Q	-	{pronoun}	O
+1	65	22	במגעים	מגע	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	65	23	לרכישת	רכישה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	65	24	השליטה	שליטה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	65	25	בחברה	חברה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	65	26	בורסאית	בורסאית	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	65	27	אחרת	אחר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	65	28	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	65	29	העוסקת	עסק	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	65	30	באותו	אותו	בP	-	F	Q	-	{pronoun}	O
+1	65	31	תחום	תחום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	65	32	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	66	1	שווי	שווי	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	66	2	העיסקה	עסקה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	66	3	צפוי	צפוי	-	-	F	O	-	{verb}	O
+1	66	4	להסתכם	הסתכם	-	-	F	V	-	{verb}	O
+1	66	5	ב	ב	בP	-	F	-	-	[]	O
+1	66	6	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	66	7	200	200	-	-	F	R	-	{numeral} []	I_MONEY
+1	66	8	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	66	9	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	66	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	67	1	כך	כך	-	-	F	Q	-	{pronoun}	O
+1	67	2	נודע	נודע	-	-	F	V	-	{verb}	O
+1	67	3	ל	ל	לP	-	F	-	-	[]	O
+1	67	4	מעריב	מעריב	-	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	67	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	68	1	עוד	עוד	-	-	F	A	-	{adverb} []	O
+1	68	2	נודע	נודע	-	-	F	V	-	{verb}	O
+1	68	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	68	4	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	68	5	לצורך	צורך	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	68	6	העיסקה	עסקה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	68	7	צפויה	צפה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: feminine),(mood: passive),(number: singular),(person: any),(status: absolute)]	O
+1	68	8	סטאר	סטאר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	68	9	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	68	10	נייט	נייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	68	11	לבצע	ביצע	-	-	F	V	-	{verb}	O
+1	68	12	גיוס	גיוס	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	68	13	אג"ח	אג"ח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	68	14	בהיקף	היקף	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	68	15	של	של	שC-לP	-	F	-	-	[]	O
+1	68	16	60	60	-	-	F	R	-	{numeral} []	I_MONEY
+1	68	17	-	-	-	-	F	PNCT	-	{punctuation} []	I_MONEY
+1	68	18	50	50	-	-	F	R	-	{numeral} []	I_MONEY
+1	68	19	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	68	20	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	68	21	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	68	22	ובמסגרת	מסגרת	וC-בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	68	23	הרכישה	רכישה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	68	24	היא	הוא	-	-	F	V	-	{verb}	O
+1	68	25	צפויה	צפה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: feminine),(mood: passive),(number: singular),(person: any),(status: absolute)]	O
+1	68	26	להעביר	העביר	-	-	F	V	-	{verb}	O
+1	68	27	חלק	חלק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	68	28	מהפעילות	פעיל	מP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	68	29	שלה	של	-	-	F	P	-	{preposition} []	O
+1	68	30	אל	אל	-	-	F	P	-	{preposition} []	O
+1	68	31	תוך	תוך	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	68	32	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	68	33	הנרכשת	נרכש	-	D	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: true),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	68	34	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	69	1	היקף	היקף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	69	2	המכירות	הכיר	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	69	3	של	של	-	-	F	P	-	{preposition} []	O
+1	69	4	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	69	5	הממוזגת	מוזג	-	D	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: true),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	69	6	צפוי	צפוי	-	-	F	O	-	{verb}	O
+1	69	7	להגיע	הגיע	-	-	F	V	-	{verb}	O
+1	69	8	ל	ל	לP	-	F	-	-	[]	O
+1	69	9	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	69	10	100	100	-	-	F	R	-	{numeral} []	I_MONEY
+1	69	11	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	69	12	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	69	13	בשנה	שנה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	69	14	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	70	1	זהות	זהה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	70	2	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	70	3	הנרכשת	נרכש	-	D	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: true),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	70	4	אינה	אינו	-	-	F	V	-	{verb}	O
+1	70	5	ידועה	ידוע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	70	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	70	7	אולם	אולם	-	-	F	C	-	{conjunction} []	O
+1	70	8	נודע	נודע	-	-	F	V	-	{verb}	O
+1	70	9	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	70	10	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	70	11	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	70	12	בחברת	חברה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	70	13	איי	איי	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	70	14	.טי.אל	.טי.אל	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	70	15	מקבוצת	קבוצה	מP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	B_ORG
+1	70	16	סולתם	סולת	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	I_ORG
+1	70	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	71	1	בסטאר	בסטאר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	71	2	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	71	3	נייט	נייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	71	4	סירבו	סירב	-	-	F	V	-	{verb}	O
+1	71	5	להגיב	הגיב	-	-	F	V	-	{verb}	O
+1	71	6	לפרטי	לפרטי	-	-	F	MWE	-	{MWE} []	O
+1	71	7	הידיעה	ידיעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	71	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	72	1	סטאר	סטאר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	72	2	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	72	3	נייט	נייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	72	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	72	5	שבשליטת	שליטה	שC-בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	72	6	המנכ"ל	מנכ"ל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	72	7	מוטי	מוטי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	72	8	סלומון	סלומון	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	72	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	72	10	מסכמת	סיכם	-	-	F	V	-	{verb}	O
+1	72	11	שנת	שינה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	72	12	עסקים	עסק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	72	13	מוצלחת	מוצלח	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	72	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	72	15	שבה	ב	שC	-	F	P	-	{preposition} []	O
+1	72	16	הצליחה	הצליח	-	-	F	V	-	{verb}	O
+1	72	17	להכפיל	הכפיל	-	-	F	V	-	{verb}	O
+1	72	18	את	את	-	-	F	P	-	{preposition} []	O
+1	72	19	היקף	היקף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	72	20	המכירות	הכיר	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	72	21	שלה	של	-	-	F	P	-	{preposition} []	O
+1	72	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	73	1	בשנת	שינה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	73	2	2004	2004	-	-	F	R	-	{numeral} []	I_DATE
+1	73	3	הסתכמו	הסתכם	-	-	F	V	-	{verb}	O
+1	73	4	מכירות	הכיר	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	73	5	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	73	6	ב	ב	בP	-	F	-	-	[]	O
+1	73	7	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	73	8	26.8	26.8	-	-	F	R	-	{numeral} []	I_MONEY
+1	73	9	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	73	10	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	73	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	73	12	והרווח	רווח	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	73	13	הנקי	נקי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	73	14	הסתכם	הסתכם	-	-	F	V	-	{verb}	O
+1	73	15	ב	ב	בP	-	F	-	-	[]	O
+1	73	16	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	73	17	5.8	5.8	-	-	F	R	-	{numeral} []	I_MONEY
+1	73	18	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	73	19	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	73	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	74	1	לפני	לפני	-	-	F	P	-	{preposition} []	O
+1	74	2	כחודשיים	חודש	כP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: dual),(status: absolute)]	O
+1	74	3	השלימה	השלים	-	-	F	V	-	{verb}	O
+1	74	4	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	74	5	גיוס	גיוס	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	74	6	הון	הון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	7	בהיקף	היקף	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	8	של	של	-	-	F	P	-	{preposition} []	O
+1	74	9	כ	כ	כP	-	F	-	-	[]	O
+1	74	10	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	74	11	14	14	-	-	F	R	-	{numeral} []	I_MONEY
+1	74	12	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	74	13	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	74	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	74	15	מה	מה	-	-	F	O	-	{interrogative} []	O
+1	74	16	שהגדיל	הגדיל	שC	-	F	V	-	{verb}	O
+1	74	17	את	את	-	-	F	P	-	{preposition} []	O
+1	74	18	ההון	הון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	19	העצמי	עצמי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	20	של	של	-	-	F	P	-	{preposition} []	O
+1	74	21	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	74	22	לכ	לכ	לP-כA	-	F	-	-	[]	O
+1	74	23	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	74	24	12	12	-	-	F	R	-	{numeral} []	I_MONEY
+1	74	25	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	74	26	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	74	27	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	74	28	והוציא	הוציא	וC	-	F	V	-	{verb}	O
+1	74	29	אותה	את	-	-	F	P	-	{preposition} []	O
+1	74	30	מרשימת	הרשים	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	74	31	השימור	שימור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	32	של	של	-	-	F	P	-	{preposition} []	O
+1	74	33	הבורסה	בורסה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	74	34	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	74	35	שאליה	אל	שC	-	F	P	-	{preposition} []	O
+1	74	36	נכנסה	נכנס	-	-	F	V	-	{verb}	O
+1	74	37	בעקבות	בעקבות	-	-	F	P	-	{preposition} []	O
+1	74	38	הון	הון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	39	עצמי	עצמי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	40	שלילי	שלילי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	74	41	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	75	1	כפי	כפי	-	-	F	C	-	{conjunction} []	O
+1	75	2	שפורסם	פורסם	שC	-	F	V	-	{verb}	O
+1	75	3	במעריב	מעריב	בP	-	F	R	organization	{properName} [(definiteness: false)]	I_ORG
+1	75	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	75	5	סטאר	סטאר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	75	6	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	75	7	נייט	נייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	75	8	ממשיכה	המשיך	-	-	F	V	-	{verb}	O
+1	75	9	במקביל	במקביל	-	-	F	A	-	{adverb} []	O
+1	75	10	במגעים	מגע	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	75	11	להנפקת	הנפקה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	75	12	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	75	13	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	75	14	הבת	בת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	75	15	שלה	של	-	-	F	P	-	{preposition} []	O
+1	75	16	נוגה	נוגה	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	75	17	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	75	18	לייט	לייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	75	19	באמצעות	באמצעות	-	-	F	P	-	{preposition} []	O
+1	75	20	מיזוג	מיזוג	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	75	21	הפוך	פוך	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	75	22	לשלד	שלד	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	75	23	בורסאי	ורסאי	בP	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	O
+1	75	24	בוול	וול	בP	-	F	MWE	product|location	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	75	25	סטריט	וול סטריט	-	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	75	26	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	76	1	נוגה	נוגה	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	76	2	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	76	3	לייט	לייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	76	4	דיווחה	דיווח	-	-	F	V	-	{verb}	O
+1	76	5	באחרונה	באחרונה	-	-	F	A	-	{adverb} []	O
+1	76	6	על	על	-	-	F	P	-	{preposition} []	O
+1	76	7	הסכם	הסכם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	76	8	משמעותי	משמעותי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	76	9	עם	עם	-	-	F	P	-	{preposition} []	O
+1	76	10	התעשיה	תעשייה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	76	11	האווירית	אווירי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	76	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	76	13	לפיתוח	פיתוח	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	76	14	של	של	שC-לP	-	F	-	-	[]	O
+1	76	15	תצוגות	תצוגה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	76	16	חכמות	חכם	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	76	17	לקסדות	קסדה	לP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	76	18	טייסי	טייס	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	76	19	מסוקים	מסוק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	76	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	77	1	החברה	חברה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	77	2	מצפה	ציפה	-	-	F	V	-	{verb}	O
+1	77	3	להציג	הציג	-	-	F	V	-	{verb}	O
+1	77	4	אב	אב	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	77	5	טיפוס	אב טיפוס	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	77	6	לקסדה	קסדה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	77	7	עד	עד	-	-	F	P	-	{preposition} []	O
+1	77	8	סוף	סוף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	77	9	השנה	שנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	77	10	ולהתחיל	התחייל	וC	-	F	V	-	{verb}	O
+1	77	11	לייצר	ייצר	-	-	F	V	-	{verb}	O
+1	77	12	בשנה	שנה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	77	13	הבאה	בא	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	77	14	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	78	1	היתרון	יתרון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	78	2	העיקרי	עיקרי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	78	3	לעומת	לעומת	-	-	F	P	-	{preposition} []	O
+1	78	4	קסדות	קסדה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	78	5	דומות	דמה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: feminine),(number: plural),(person: any),(status: absolute)]	O
+1	78	6	בשוק	שוק	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	78	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	78	8	כדוגמת	דגם	כP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	78	9	אלה	אלה	-	-	F	Q	-	{pronoun}	O
+1	78	10	של	של	-	-	F	P	-	{preposition} []	O
+1	78	11	אלביט	אלביט	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	78	12	מערכות	מערכת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	78	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	78	14	יהיה	יהיה	-	-	F	O	-	{existential} [(gender: masculine),(interrogative: false),(number: singular),(polarity: positive),(tense: future)]	O
+1	78	15	במחירה	מחיר	בP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	78	16	הנמוך	נמוך	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	78	17	יחסית	יחסית	-	-	F	A	-	{adverb} []	O
+1	78	18	של	של	-	-	F	P	-	{preposition} []	O
+1	78	19	הקסדה	קסדה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	78	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	79	1	סטאר	סטאר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	79	2	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	79	3	נייט	נייט	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	79	4	נסחרת	נסחר	-	-	F	V	-	{verb}	O
+1	79	5	כיום	כיום	-	-	F	A	-	{adverb} []	O
+1	79	6	בבורסה	בורסה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	79	7	בתל	תל	בP	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	79	8	-	-	-	-	F	PNCT	-	{punctuation} []	I_LOC
+1	79	9	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	79	10	לפי	לפי	-	-	F	P	-	{preposition} []	O
+1	79	11	שווי	שווי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	79	12	של	של	שC-לP	-	F	-	-	[]	O
+1	79	13	110	110	-	-	F	R	-	{numeral} []	I_MONEY
+1	79	14	מיליון	מיליון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	79	15	שקל	שקל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	79	16	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	79	17	לאחר	לאחר	-	-	F	P	-	{preposition} []	O
+1	79	18	זינוק	זינוק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	79	19	של	של	-	-	F	P	-	{preposition} []	O
+1	79	20	פי	פה	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	79	21	6	6	-	-	F	R	-	{numeral} []	O
+1	79	22	במנייתה	מנייה	בP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	79	23	בשנה	שנה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	79	24	האחרונה	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	79	25	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	80	1	ירידה	ירידה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	80	2	בהשקעות	השקעה	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	80	3	ההון	הון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	80	4	סיכון	סיכון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	80	5	בארה"ב	ארה"ב	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	80	6	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	81	1	674	674	-	-	F	R	-	{numeral} []	O
+1	81	2	חברות	חברה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	81	3	גייסו	גייס	-	-	F	V	-	{verb}	O
+1	81	4	הון	הון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	81	5	בסך	בסך	-	-	F	A	-	{adverb} []	O
+1	81	6	4.6	4.6	-	-	F	R	-	{numeral} []	I_MONEY
+1	81	7	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	81	8	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	81	9	ברבעון	רבעון	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	81	10	הראשון	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	81	11	של	של	-	-	F	P	-	{preposition} []	I_DATE
+1	81	12	שנת	שינה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_DATE
+1	81	13	2005	2005	-	-	F	R	-	{numeral} []	I_DATE
+1	81	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	81	15	קיטון	קיטון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	81	16	לעומת	לעומת	-	-	F	P	-	{preposition} []	O
+1	81	17	הרבעון	רבעון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	81	18	הרביעי	רביעי	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	81	19	של	של	שC-לP	-	F	-	-	[]	I_DATE
+1	81	20	2004	2004	-	-	F	R	-	{numeral} []	I_DATE
+1	81	21	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	81	22	בו	ב	-	-	F	P	-	{preposition} []	O
+1	81	23	גוייסו	גויס	-	-	F	V	-	{verb}	O
+1	81	24	5.4	5.4	-	-	F	R	-	{numeral} []	I_MONEY
+1	81	25	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	81	26	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	81	27	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	81	28	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	81	29	אך	אך	-	-	F	C	-	{conjunction} []	O
+1	81	30	זהה	זיהה	-	-	F	V	-	{verb}	O
+1	81	31	לרמה	רמה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	81	32	שנצפתה	נצפה	שC	-	F	V	-	{verb}	O
+1	81	33	ברבעון	רבעון	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	81	34	השלישי	שלישי	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	81	35	של	של	שC-לP	-	F	-	-	[]	I_DATE
+1	81	36	2004	2004	-	-	F	R	-	{numeral} []	I_DATE
+1	81	37	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	82	1	בשנתיים	שנה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: dual),(status: absolute)]	O
+1	82	2	האחרונות	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	82	3	נעו	נע	-	-	F	V	-	{verb}	O
+1	82	4	השקעות	השקעה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	82	5	ההון	הון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	82	6	סיכון	סיכון	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	82	7	הרבעוניות	רבעוניות	-	D	F	R	-	{properName} [(definiteness: true)]	O
+1	82	8	בטווח	טיווח	-	-	F	V	-	{verb}	O
+1	82	9	של	של	שC-לP	-	F	-	-	[]	O
+1	82	10	4.4	4.4	-	-	F	R	-	{numeral} []	I_MONEY
+1	82	11	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	82	12	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	82	13	עד	עד	-	-	F	P	-	{preposition} []	O
+1	82	14	5.9	5.9	-	-	F	R	-	{numeral} []	I_MONEY
+1	82	15	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	82	16	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	82	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	83	1	כך	כך	-	-	F	Q	-	{pronoun}	O
+1	83	2	עולה	עלה	-	-	F	V	-	{verb}	O
+1	83	3	מסקר	סקר	מP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	83	4	המאני	מאני	-	D	F	R	-	{properName} [(definiteness: true)]	O
+1	83	5	טרי	טרי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	83	6	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	83	7	MoneyTree	MoneyTree	-	-	F	O	-	{foreign} []	O
+1	83	8	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	83	9	שנערך	נערך	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	83	10	בארה"ב	ארה"ב	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	83	11	ע"י	ע"י	-	-	F	P	-	{preposition} []	O
+1	83	12	פירמת	פירמה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	83	13	ראיית	ראיה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	83	14	החשבון	חשבון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	83	15	PwC	PwC	-	-	F	O	-	{foreign} []	I_ORG
+1	83	16	ו	ו	וC	-	F	-	-	[]	O
+1	83	17	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	83	18	Thomson	Thomson	-	-	F	O	-	{foreign} []	I_ORG
+1	83	19	Venture	Venture	-	-	F	O	-	{foreign} []	I_ORG
+1	83	20	Economics/National	Economics/National	-	-	F	O	-	{foreign} []	I_ORG
+1	83	21	Venture	Venture	-	-	F	O	-	{foreign} []	I_ORG
+1	83	22	Capital	Capital	-	-	F	O	-	{foreign} []	I_ORG
+1	83	23	Association	Association	-	-	F	O	-	{foreign} []	I_ORG
+1	83	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	84	1	מניתוח	ניתוח	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	84	2	לפי	לפי	-	-	F	P	-	{preposition} []	O
+1	84	3	מגזרים	מגזר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	84	4	טכנולוגיים	טכנולוגי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	84	5	עולה	עלה	-	-	F	V	-	{verb}	O
+1	84	6	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	84	7	ההשקעות	השקעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	84	8	במגזר	מגזר	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	84	9	מדעי	מדע	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	84	10	החיים	חיים	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	84	11	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	84	12	ביוטכנולוגיה	ביוטכנולוגיה	-	-	F	R	organization	{properName} [(definiteness: false)]	O
+1	84	13	ומכשור	מכשור	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	84	14	רפואי	רפואי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	84	15	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	84	16	צנחו	צנח	-	-	F	V	-	{verb}	O
+1	84	17	משמעותית	משמעותי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	84	18	ברבעון	רבעון	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	84	19	הראשון	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	84	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	85	1	129	129	-	-	F	R	-	{numeral} []	O
+1	85	2	חברות	חברה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	85	3	גייסו	גייס	-	-	F	V	-	{verb}	O
+1	85	4	1.08	1.08	-	-	F	R	-	{numeral} []	I_MONEY
+1	85	5	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	85	6	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	85	7	בהשוואה	השוואה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	85	8	ל	ל	לP	-	F	-	-	[]	O
+1	85	9	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	85	10	162	162	-	-	F	R	-	{numeral} []	O
+1	85	11	חברות	חברה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	85	12	שגייסו	גייס	שC	-	F	V	-	{verb}	O
+1	85	13	1.6	1.6	-	-	F	R	-	{numeral} []	I_MONEY
+1	85	14	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	85	15	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	85	16	ברבעון	רבעון	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	85	17	הקודם	קדם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	85	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	86	1	ההשקעות	השקעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	86	2	במגזר	מגזר	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	86	3	הגיעו	הגיע	-	-	F	V	-	{verb}	O
+1	86	4	לרמתן	רמה	לP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	86	5	הנמוכה	נמוך	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	86	6	ביותר	ביותר	-	-	F	A	-	{adverb} []	O
+1	86	7	מאז	מאז	-	-	F	A	-	{adverb} []	O
+1	86	8	הרבעון	רבעון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	86	9	הראשון	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	86	10	של	של	שC-לP	-	F	-	-	[]	I_DATE
+1	86	11	2003	2003	-	-	F	R	-	{numeral} []	I_DATE
+1	86	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	87	1	למרות	למרות	-	-	F	MWE	-	{MWE} []	O
+1	87	2	זאת	זאת	-	-	F	MWE	-	{MWE} []	O
+1	87	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	87	4	המגזר	מגזר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	87	5	ריכז	ריכז	-	-	F	V	-	{verb}	O
+1	87	6	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	87	7	19	19	-	-	F	R	-	{numeral} []	I_PERCENT
+1	87	8	ממספר	מספר	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	87	9	העסקאות	עסקה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	87	10	ו	ו	וC	-	F	-	-	[]	O
+1	87	11	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	87	12	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	87	13	23	23	-	-	F	R	-	{numeral} []	I_PERCENT
+1	87	14	מסך	מסך	-	-	F	V	-	{verb}	O
+1	87	15	ההשקעות	השקעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	87	16	במונחים	הונח	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	87	17	כספיים	כספי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	87	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	88	1	מגזר	מגזר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	88	2	התוכנה	תוכנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	88	3	שמר	שמר	-	-	F	V	-	{verb}	O
+1	88	4	על	על	-	-	F	P	-	{preposition} []	O
+1	88	5	מקומו	מקום	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	88	6	כקטגוריית	קטגוריה	כP	-	T	N	-	{noun} [(foreign: true),(gender: feminine),(number: singular),(status: construct)]	O
+1	88	7	התעשייה	תעשייה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	88	8	הטכנולוגית	טכנולוגי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	88	9	המובילה	הוביל	-	D	F	G	-	{adjective} [(binyan: Hif'il),(definiteness: true),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	88	10	עם	עם	-	-	F	P	-	{preposition} []	O
+1	88	11	1.1	1.1	-	-	F	R	-	{numeral} []	I_MONEY
+1	88	12	מיליארד	מיליארד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	88	13	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	88	14	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	88	15	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	88	16	24	24	-	-	F	R	-	{numeral} []	I_PERCENT
+1	88	17	מסך	מסך	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	88	18	ההשקעות	השקעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	88	19	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	88	20	שהושקעו	הושקע	שC	-	F	V	-	{verb}	O
+1	88	21	ב	ב	בP	-	F	-	-	[]	O
+1	88	22	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	88	23	198	198	-	-	F	R	-	{numeral} []	O
+1	88	24	חברות	חברה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	88	25	תוכנה	תוכנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	88	26	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	88	27	המהווים	היווה	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	88	28	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	88	29	29	29	-	-	F	R	-	{numeral} []	I_PERCENT
+1	88	30	ממספר	מספר	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	88	31	העסקאות	עסקה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	88	32	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	89	1	לדברי	דבר	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	89	2	טרייסי	טרייסי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	89	3	לפטרוף	לפטרוף	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	89	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	89	5	השותף	שותף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	89	6	המוביל	מוביל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	89	7	את	את	-	-	F	P	-	{preposition} []	O
+1	89	8	תחום	תחום	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	89	9	ההון	הון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	89	10	סיכון	סיכון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	89	11	העולמי	עולמי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	89	12	ב	ב	בP	-	F	-	-	[]	O
+1	89	13	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	89	14	PwC	PwC	-	-	F	O	-	{foreign} []	I_ORG
+1	89	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	89	16	אמר	המר	-	-	F	V	-	{verb}	O
+1	89	17	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	89	18	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	89	19	אנו	הוא	-	-	F	Q	-	{pronoun}	O
+1	89	20	חווים	חווה	-	-	F	V	-	{verb}	O
+1	89	21	גאות	גאות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	89	22	ושפל	שפל	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	89	23	טבעיים	טבעי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	89	24	ברמת	רמה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	89	25	ההשקעות	השקעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	89	26	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	90	1	ברבעון	רבעון	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	90	2	הנוכחי	נוכחי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	90	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	90	4	הפיזור	פיזור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	90	5	הרוחבי	רוחבי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	90	6	של	של	-	-	F	P	-	{preposition} []	O
+1	90	7	ההשקעות	השקעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	90	8	במגזרים	מגזר	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	90	9	שונים	שונה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	90	10	ובחברות	חברה	וC-בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	90	11	בשלבי	שלב	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	90	12	בשלות	בשלות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	90	13	שונים	שונה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	90	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	90	15	מצביע	הצביע	-	-	F	V	-	{verb}	O
+1	90	16	על	על	-	-	F	P	-	{preposition} []	O
+1	90	17	איזון	איזון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	90	18	בריא	בריא	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	90	19	בין	בין	-	-	F	P	-	{preposition} []	O
+1	90	20	הזדמנויות	הזדמנות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	90	21	קצרות	קצר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	90	22	וארוכות	ארוכות	וC	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: adjective)]	O
+1	90	23	טווח	ארוך טווח	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: adjective)]	O
+1	90	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	91	1	ההאטה	האטה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	91	2	במגזר	מגזר	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	91	3	מדעי	מדע	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	91	4	החיים	חיים	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	91	5	משקפת	משקפת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	91	6	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	91	7	היא	הוא	-	-	F	Q	-	{pronoun}	O
+1	91	8	את	את	-	-	F	P	-	{preposition} []	O
+1	91	9	אותו	אותו	-	-	F	Q	-	{pronoun}	O
+1	91	10	איזון	איזון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	91	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	91	12	ומצביעה	הצביע	וC	-	F	V	-	{verb}	O
+1	91	13	על	על	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	91	14	כך	על כך	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	91	15	שמשקיעי	השקיע	שC	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	91	16	הון	הון	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	91	17	סיכון	סיכון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	91	18	מקפידים	הקפיד	-	-	F	G	-	{adjective} [(binyan: Hif'il),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	91	19	באופן	אופן	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	91	20	מודע	מודע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	91	21	להימנע	נמנע	-	-	F	V	-	{verb}	O
+1	91	22	מהשקעות	השקעה	מP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	91	23	יתר	יתר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	91	24	במגזר	מגזר	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	91	25	מסוים	סוים	-	-	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	91	26	.	.	-	-	F	PNCT	-	{punctuation} []	O

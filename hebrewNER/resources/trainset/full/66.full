@@ -1,0 +1,56 @@
+1	1	1	אלפי	אלף	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	2	יהודים	יהודי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	1	3	מכל	כול	מP	-	T	O	-	{quantifier}	O
+1	1	4	חלקי	חלק	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	5	הארץ	ארץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	6	הגיעו	הגיע	-	-	F	V	-	{verb}	O
+1	1	7	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	1	8	אל	אל	-	-	F	P	-	{preposition} []	O
+1	1	9	היישוב	יישוב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	10	היהודי	יהודי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	1	11	בחברון	חברון	בP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	הם	הוא	-	-	F	Q	-	{pronoun}	O
+1	2	2	השתתפו	השתתף	-	-	F	V	-	{verb}	O
+1	2	3	בסיורים	סיור	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	4	מודרכים	הודרך	-	-	F	G	-	{adjective} [(binyan: Huf'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	2	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	6	צפו	צף	-	-	F	V	-	{verb}	O
+1	2	7	במופעי	מופע	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	8	זמר	זמר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	9	חסידיים	חסידי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	11	והתפללו	התפלל	וC	-	F	V	-	{verb}	O
+1	2	12	במערת	הערה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_LOC
+1	2	13	המכפלה	מכפלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_LOC
+1	2	14	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	קבריהם	קבר	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	3	2	של	של	-	-	F	P	-	{preposition} []	O
+1	3	3	אבות	אבות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	3	4	האומה	אבות האומה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	3	5	בחברון	חברון	בP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	3	6	היו	היה	-	-	F	V	-	{verb}	O
+1	3	7	פתוחים	פתוח	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	8	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	3	9	ליהודים	יהודי	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	3	10	בלבד	בלבד	-	-	F	A	-	{adverb} []	O
+1	3	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	4	2	היום	יום	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	3	ומחר	מחר	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	4	פתוחים	פתוח	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	5	האולמות	אולם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	6	במערת	הערה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_LOC
+1	4	7	המכפלה	מכפלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_LOC
+1	4	8	ליהודים	יהודי	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	4	9	בלבד	בלבד	-	-	F	A	-	{adverb} []	O
+1	4	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	בין	בין	-	-	F	P	-	{preposition} []	O
+1	5	2	המבקרים	מבקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	3	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	5	4	היה	היה	-	-	F	V	-	{verb}	O
+1	5	5	שר	שר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	5	6	התיירות	תיירות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	7	רחבעם	רחבעם	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	5	8	זאבי	זאבי	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	5	9	.	.	-	-	F	PNCT	-	{punctuation} []	O

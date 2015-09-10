@@ -1,0 +1,65 @@
+1	1	1	משרד	משרד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	1	2	הבריאות	בריאה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	1	3	של	של	-	-	F	P	-	{preposition} []	O
+1	1	4	דרום	דרום	-	-	F	R	person	{properName} [(definiteness: false)]	I_LOC
+1	1	5	קוריאה	קוריאה	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	6	דיווח	דיווח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	7	היום	יום	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	8	על	על	-	-	F	P	-	{preposition} []	O
+1	1	9	מקרה	קירה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	10	ראשון	ראשון	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	11	של	של	-	-	F	P	-	{preposition} []	O
+1	1	12	דלקת	דלקת	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	13	הריאות	ריאה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	14	הנגיפית	נגיפי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	15	SARS	SARS	-	-	F	O	-	{foreign} []	O
+1	1	16	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	17	שגרמה	גרם	שC	-	F	V	-	{verb}	O
+1	1	18	עד	עד	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	1	19	כה	עד כה	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	1	20	למותם	מוות	לP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	1	21	של	של	-	-	F	P	-	{preposition} []	O
+1	1	22	לפחות	לפחות	-	-	F	A	-	{adverb} []	O
+1	1	23	330	330	-	-	F	R	-	{numeral} []	O
+1	1	24	בני	בני	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	1	25	אדם	בן אדם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	1	26	ברחבי	רחב	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	27	העולם	עולם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	28	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	29	ושהדביקה	הדביק	וC-שC	-	F	V	-	{verb}	O
+1	1	30	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	1	31	מ	מ	מP	-	F	-	-	[]	O
+1	1	32	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	1	33	5,500	5,500	-	-	F	R	-	{numeral} []	O
+1	1	34	בכ	בכ	בP-כP	-	F	-	-	[]	O
+1	1	35	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	1	36	30	30	-	-	F	R	-	{numeral} []	O
+1	1	37	מדינות	מדינה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	38	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	יו"ר	יו"ר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	2	מכון	מכון	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	2	3	הבריאות	בריאה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	2	4	הלאומי	לאומי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	2	5	קים	קים	-	-	F	R	person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_PERS
+1	2	6	מון	מון	-	-	F	R	language	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	7	-	-	-	-	F	PNCT	-	{punctuation} []	I_PERS
+1	2	8	סיק	סיק	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	2	9	אמר	המר	-	-	F	V	-	{verb}	O
+1	2	10	במסיבת	מסיבת	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	2	11	עיתונאים	מסיבת עיתונאים	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	2	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	13	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	14	תסמינים	תסמין	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	15	של	של	-	-	F	P	-	{preposition} []	O
+1	2	16	המחלה	חילה	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	17	נתגלו	התגלה	-	-	F	V	-	{verb}	O
+1	2	18	בגבר	גבר	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	19	בשנות	שנה	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	2	20	ה	ה	הD	-	F	-	-	[]	O
+1	2	21	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	2	22	40	40	-	-	F	R	-	{numeral} []	O
+1	2	23	לחייו	חיים	לP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	2	24	ששב	שב	שC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	25	השבוע	שבוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	26	מסין	סין	מP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	2	27	.	.	-	-	F	PNCT	-	{punctuation} []	O

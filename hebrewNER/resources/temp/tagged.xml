@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<corpus comment="versions info: lexicon: 13/03/2013; morphologicalAnalyzer: 1.8 (13/03/2013); corpus schema 16/06/2009; lexicon schema 16/06/2009" email="mila@cs.technion.ac.il" maintainer="Slava Demender" name="Analysis Results (yeda) @ Thu Aug 20 22:49:13 IDT 2015">
+	<article id="1">
+		<paragraph id="1">
+			<sentence id="1">
+				<token id="1" surface="שלום">
+					<analysis id="1" score="0.0">
+						<base lexiconItem="שלום" lexiconPointer="10129" transliteratedLexiconItem="elwm">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<base dottedLexiconItem="שָׁלוֹם" lexiconItem="שלום" lexiconPointer="10180" transliteratedLexiconItem="elwm">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="1.0">
+						<base dottedLexiconItem="שָׁלוֹם" lexiconItem="שלום" lexiconPointer="10180" transliteratedLexiconItem="elwm">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.0">
+						<base dottedLexiconItem="שָׁלוֹם" lexiconItem="שלום" lexiconPointer="25406" transliteratedLexiconItem="elwm">
+							<interjection register="formal" spelling="standard"/>
+						</base>
+					</analysis>
+					<analysis id="5" score="0.0">
+						<prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+						<base dottedLexiconItem="לוֹם" lexiconItem="לום" lexiconPointer="10896" transliteratedLexiconItem="lwm">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="6" score="0.0">
+						<prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+						<base dottedLexiconItem="לוֹם" lexiconItem="לום" lexiconPointer="10896" transliteratedLexiconItem="lwm">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="2" surface="עולם">
+					<analysis id="1" score="0.0">
+						<base dottedLexiconItem="עֹל" lexiconItem="עול" lexiconPointer="17095" transliteratedLexiconItem="ywl">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+						</base>
+						<suffix function="possessive" gender="masculine" number="plural" person="3"/>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<base dottedLexiconItem="עָלָה" lexiconItem="עלה" lexiconPointer="18653" transliteratedLexiconItem="ylh">
+							<participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="עלה" spelling="standard" type="noun"/>
+						</base>
+						<suffix function="possessive" gender="masculine" number="plural" person="3"/>
+					</analysis>
+					<analysis id="3" score="1.0">
+						<base dottedLexiconItem="עוֹלָם" lexiconItem="עולם" lexiconPointer="19023" transliteratedLexiconItem="ywlm">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.0">
+						<base dottedLexiconItem="עוֹלָם" lexiconItem="עולם" lexiconPointer="19023" transliteratedLexiconItem="ywlm">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="3" surface=".">
+					<analysis id="1" score="1.0">
+						<base>
+							<punctuation/>
+						</base>
+					</analysis>
+				</token>
+			</sentence>
+			<sentence id="2">
+				<token id="1" surface="מה">
+					<analysis id="1" score="0.0">
+						<prefix function="preposition" id="1" surface="מ"/>
+						<prefix function="definiteArticle" id="2" surface="ה"/>
+					</analysis>
+					<analysis id="2" score="1.0">
+						<base dottedLexiconItem="מַה" lexiconItem="מה" lexiconPointer="24681" transliteratedLexiconItem="mh">
+							<interrogative register="formal" spelling="standard" type="pronoun"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="2" surface="שלום">
+					<analysis id="1" score="0.0">
+						<base lexiconItem="שלום" lexiconPointer="10129" transliteratedLexiconItem="elwm">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="1.0">
+						<base dottedLexiconItem="שָׁלוֹם" lexiconItem="שלום" lexiconPointer="10180" transliteratedLexiconItem="elwm">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="0.0">
+						<base dottedLexiconItem="שָׁלוֹם" lexiconItem="שלום" lexiconPointer="10180" transliteratedLexiconItem="elwm">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.0">
+						<base dottedLexiconItem="שָׁלוֹם" lexiconItem="שלום" lexiconPointer="25406" transliteratedLexiconItem="elwm">
+							<interjection register="formal" spelling="standard"/>
+						</base>
+					</analysis>
+					<analysis id="5" score="0.0">
+						<prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+						<base dottedLexiconItem="לוֹם" lexiconItem="לום" lexiconPointer="10896" transliteratedLexiconItem="lwm">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="6" score="0.0">
+						<prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+						<base dottedLexiconItem="לוֹם" lexiconItem="לום" lexiconPointer="10896" transliteratedLexiconItem="lwm">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="3" surface="כולם">
+					<analysis id="1" score="0.0">
+						<base dottedLexiconItem="כֹּל" lexiconItem="כול" lexiconPointer="9169" transliteratedLexiconItem="kwl">
+							<quantifier definiteness="false" register="formal" spelling="standard" type="partitive"/>
+						</base>
+						<suffix function="pronomial" gender="masculine" number="plural" person="3"/>
+					</analysis>
+					<analysis id="2" score="1.0">
+						<base dottedLexiconItem="כֻּלָּם" lexiconItem="כולם" lexiconPointer="28023" transliteratedLexiconItem="kwlm">
+							<pronoun definiteness="false" gender="masculine" number="plural" person="3" register="formal" spelling="standard" type="impersonal"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="4" surface="?">
+					<analysis id="1" score="1.0">
+						<base>
+							<punctuation/>
+						</base>
+					</analysis>
+				</token>
+			</sentence>
+			<sentence id="3">
+				<token id="1" surface="הכל">
+					<analysis id="1" score="1.0">
+						<base dottedLexiconItem="כֹּל" lexiconItem="כול" lexiconPointer="9169" transliteratedLexiconItem="kwl">
+							<quantifier definiteness="true" register="formal" spelling="irregular" type="partitive"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<base dottedLexiconItem="הֵכִיל" lexiconItem="הכיל" lexiconPointer="18933" transliteratedLexiconItem="hkil">
+							<verb binyan="Hif'il" gender="masculine" number="singular" person="2" register="formal" root="כול" spelling="standard" tense="imperative"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="2" surface="בסדר">
+					<analysis id="1" score="0.0">
+						<base dottedLexiconItem="בְּסֵדֶר" lexiconItem="בסדר" lexiconPointer="2960" transliteratedLexiconItem="bsdr">
+							<adverb register="formal" spelling="standard"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<base dottedLexiconItem="בְּסֵדֶר" lexiconItem="בסדר" lexiconPointer="10271" transliteratedLexiconItem="bsdr">
+							<interjection register="formal" spelling="standard"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="0.0">
+						<base dottedLexiconItem="בְּסֵדֶר" lexiconItem="בסדר" lexiconPointer="10972" transliteratedLexiconItem="bsdr">
+							<adverb register="formal" spelling="standard"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="1.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="סֵדֶר" lexiconItem="סדר" lexiconPointer="13858" transliteratedLexiconItem="sdr">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="5" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="סֵדֶר" lexiconItem="סדר" lexiconPointer="13858" transliteratedLexiconItem="sdr">
+							<noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="6" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="סֵדֶר" lexiconItem="סדר" lexiconPointer="13858" transliteratedLexiconItem="sdr">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+					<analysis id="7" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="סִדֵּר" lexiconItem="סידר" lexiconPointer="19075" transliteratedLexiconItem="sidr">
+							<verb binyan="Pi'el" register="formal" root="סדר" spelling="standard" tense="infinitive"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="3" surface="?">
+					<analysis id="1" score="1.0">
+						<base>
+							<punctuation/>
+						</base>
+					</analysis>
+				</token>
+			</sentence>
+		</paragraph>
+	</article>
+</corpus>
+

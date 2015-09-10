@@ -1,0 +1,111 @@
+1	1	1	תושבי	תושב	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	2	גבעת	גבעה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_LOC
+1	1	3	אחיה	אח	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	I_LOC
+1	1	4	שליד	ליד	שC	-	F	P	-	{preposition} []	O
+1	1	5	הישוב	יישוב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	6	שילה	שילה	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	7	פנו	פנה	-	-	F	V	-	{verb}	O
+1	1	8	היום	היום	-	-	F	A	-	{adverb} []	O
+1	1	9	למשטרה	משטרה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	10	שתגן	הגן	שC	-	F	V	-	{verb}	O
+1	1	11	עליהם	על	-	-	F	P	-	{preposition} []	O
+1	1	12	מפני	מפני	-	-	F	P	-	{preposition} []	O
+1	1	13	תושבים	תושב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	14	ערבים	ערבי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	1	15	שמתצפתים	תצפת	שC	-	F	V	-	{verb}	O
+1	1	16	על	על	-	-	F	P	-	{preposition} []	O
+1	1	17	הישוב	יישוב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	18	מזה	זה	מP	-	F	Q	-	{pronoun}	O
+1	1	19	ימים	יום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	20	אחדים	אחדים	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	המשטרה	משטרה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	2	נזעקה	נזעק	-	-	F	V	-	{verb}	O
+1	2	3	לעזור	עזר	-	-	F	V	-	{verb}	O
+1	2	4	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	2	5	לא	לא	-	-	F	MWE	-	{MWE} []	O
+1	2	6	יהודים	יהודי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	2	7	כי	כי	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	2	8	אם	כי אם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	2	9	לפלשתינים	פלסטיני	לP	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	2	10	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	2	11	כתב	כתב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	12	ערוץ	ערוץ	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	2	13	7	7	-	-	F	R	-	{numeral} []	I_ORG
+1	2	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	15	עוזי	עוזי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	16	ברוך	ברוך	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	17	מדווח	דיווח	-	-	F	V	-	{verb}	O
+1	2	18	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	19	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	20	פלשתיני	פלסטיני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	2	21	מהכפר	כפר	מP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	22	ג'לוד	ג'לוד	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	2	23	התקשר	התקשר	-	-	F	V	-	{verb}	O
+1	2	24	הבוקר	בוקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	25	למשטרה	משטרה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	26	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	27	וטען	טען	וC	-	F	V	-	{verb}	O
+1	2	28	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	29	תושב	תושב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	30	אחיה	אח	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	I_LOC
+1	2	31	איים	איים	-	-	F	V	-	{verb}	O
+1	2	32	עליו	על	-	-	F	P	-	{preposition} []	O
+1	2	33	או	או	-	-	F	C	-	{conjunction} []	O
+1	2	34	ניסה	ניסה	-	-	F	V	-	{verb}	O
+1	2	35	לפגוע	פגע	-	-	F	V	-	{verb}	O
+1	2	36	בו	ב	-	-	F	P	-	{preposition} []	O
+1	2	37	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	למשטרה	משטרה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	2	היתה	היה	-	-	F	V	-	{verb}	O
+1	3	3	דרך	דרך	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	4	מקורית	מקורי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	5	לחקור	חקר	-	-	F	V	-	{verb}	O
+1	3	6	את	את	-	-	F	P	-	{preposition} []	O
+1	3	7	תלונתו	תלונה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	3	8	של	של	-	-	F	P	-	{preposition} []	O
+1	3	9	הפלשתיני	פלסטיני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	3	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	הם	הוא	-	-	F	Q	-	{pronoun}	O
+1	4	2	הביאו	הביא	-	-	F	V	-	{verb}	O
+1	4	3	את	את	-	-	F	P	-	{preposition} []	O
+1	4	4	הפלשתיני	פלסטיני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	4	5	לתוך	לתוך	-	-	F	P	-	{preposition} []	O
+1	4	6	כל	כל	-	-	F	MWE	-	{MWE} []	O
+1	4	7	אחד	אחד	-	-	F	MWE	-	{MWE} []	O
+1	4	8	מהקראוונים	מהקראוונים	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	4	9	שבישוב	יישוב	שC-בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	10	'	'	-	-	F	PNCT	-	{punctuation} []	O
+1	4	11	למסדר	מסדר	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	12	זיהוי	זיהוי	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	14	'	'	-	-	F	PNCT	-	{punctuation} []	O
+1	4	15	מחאות	מחאה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	4	16	התושבים	תושב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	17	שהדבר	דבר	שC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	18	מסכן	סיכן	-	-	F	V	-	{verb}	O
+1	4	19	את	את	-	-	F	P	-	{preposition} []	O
+1	4	20	בטחונם	ביטחון	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	4	21	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	4	22	עזרו	עזר	-	-	F	V	-	{verb}	O
+1	4	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	לדבריהם	דבר	לP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	5	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	5	3	השוטרים	שוטר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	4	בטלו	ביטל	-	-	F	V	-	{verb}	O
+1	5	5	את	את	-	-	F	P	-	{preposition} []	O
+1	5	6	טענתם	טענה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	5	7	ואמרו	אמר	וC	-	F	V	-	{verb}	O
+1	5	8	כי	כי	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	5	9	אם	כי אם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	5	10	התושבים	תושב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	11	מעונינים	מעונינים	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	5	12	לשמור	שמר	-	-	F	V	-	{verb}	O
+1	5	13	על	על	-	-	F	P	-	{preposition} []	O
+1	5	14	בטחונם	ביטחון	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	5	15	הם	הוא	-	-	F	V	-	{verb}	O
+1	5	16	יכולים	יכול	-	-	F	O	-	{verb}	O
+1	5	17	לעזוב	עזב	-	-	F	V	-	{verb}	O
+1	5	18	את	את	-	-	F	P	-	{preposition} []	O
+1	5	19	המקום	מקום	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	20	.	.	-	-	F	PNCT	-	{punctuation} []	O

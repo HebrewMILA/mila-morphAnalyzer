@@ -1,0 +1,74 @@
+1	1	1	מונגוליה	מונגוליה	-	-	F	R	country	{properName} [(definiteness: false)]	I_LOC
+1	1	2	דיווחה	דיווח	-	-	F	V	-	{verb}	O
+1	1	3	היום	היום	-	-	F	A	-	{adverb} []	O
+1	1	4	על	על	-	-	F	P	-	{preposition} []	O
+1	1	5	שני	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	6	מקרים	הקרים	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	7	ראשונים	ראשונים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	8	של	של	-	-	F	P	-	{preposition} []	O
+1	1	9	SARS	SARS	-	-	F	O	-	{foreign} []	O
+1	1	10	בשטחה	שיטח	-	-	F	V	-	{verb}	O
+1	1	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	12	וציינה	ציין	וC	-	F	V	-	{verb}	O
+1	1	13	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	1	14	אפשר	אפשר	-	-	F	O	-	{verb}	O
+1	1	15	שארבעה	ארבעה	שC	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	16	אנשים	איש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	17	נוספים	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	1	18	נדבקו	נדבק	-	-	F	V	-	{verb}	O
+1	1	19	במחלה	חילה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	החולים	חלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	2	הושמו	הושם	-	-	F	V	-	{verb}	O
+1	2	3	בהסגר	נסגר	-	-	F	V	-	{verb}	O
+1	2	4	בבית	בית	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	2	5	חולים	בית חולים	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	2	6	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	בסוף	סוף	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	3	2	השבוע	סוף שבוע	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	3	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	4	האריכה	האריך	-	-	F	V	-	{verb}	O
+1	3	5	מונגוליה	מונגוליה	-	-	F	R	country	{properName} [(definiteness: false)]	I_LOC
+1	3	6	את	את	-	-	F	P	-	{preposition} []	O
+1	3	7	מצב	מצב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	8	הכוננות	כוננות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	9	בעקבות	בעקבות	-	-	F	P	-	{preposition} []	O
+1	3	10	מחלת	חילה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	11	ה	ה	הD	-	F	-	-	[]	O
+1	3	12	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	3	13	SARS	SARS	-	-	F	O	-	{foreign} []	O
+1	3	14	לשבועיים	שבוע	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: dual),(status: absolute)]	O
+1	3	15	נוספים	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	3	16	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	17	וסגרה	סגר	וC	-	F	V	-	{verb}	O
+1	3	18	את	את	-	-	F	P	-	{preposition} []	O
+1	3	19	כל	כול	-	-	T	O	-	{quantifier}	O
+1	3	20	מעברי	עיבר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	21	הגבול	גבול	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	22	עם	עם	-	-	F	P	-	{preposition} []	O
+1	3	23	סין	סין	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	3	24	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	25	מלבד	מלבד	-	-	F	P	-	{preposition} []	O
+1	3	26	המעבר	עיבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	27	הראשי	ראשי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	28	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	כן	כן	-	-	F	A	-	{adverb} []	O
+1	4	2	אסרה	אסר	-	-	F	V	-	{verb}	O
+1	4	3	ממשלת	ממשלה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	4	4	מונגוליה	מונגוליה	-	-	F	R	country	{properName} [(definiteness: false)]	I_ORG
+1	4	5	אירועים	אירוע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	6	ציבוריים	ציבורי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	8	קונצרטים	קונצרט	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	9	והופעות	הופעה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	11	אך	אך	-	-	F	C	-	{conjunction} []	O
+1	4	12	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	4	13	נמסר	נמסר	-	-	F	V	-	{verb}	O
+1	4	14	אם	אם	-	-	F	C	-	{conjunction} []	O
+1	4	15	הוטלו	הוטל	-	-	F	V	-	{verb}	O
+1	4	16	הגבלות	הגבלה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	17	על	על	-	-	F	P	-	{preposition} []	O
+1	4	18	כניסת	כניסה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	19	תיירים	תייר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	20	.	.	-	-	F	PNCT	-	{punctuation} []	O

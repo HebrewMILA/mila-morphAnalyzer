@@ -1,0 +1,769 @@
+1	1	1	ב	ב	בP	-	F	-	-	[]	O
+1	1	2	16	16	-	-	F	R	-	{numeral} []	I_DATE
+1	1	3	באוקטובר	אוקטובר	בP	-	F	R	dateTime	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	1	4	הגיע	הגיע	-	-	F	V	-	{verb}	O
+1	1	5	אל	אל	-	-	F	P	-	{preposition} []	O
+1	1	6	העיר	עיר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	7	דה	דה	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	8	מוין	דה מוין	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	10	במערב	מערב	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	11	התיכון	תיכון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	12	של	של	-	-	F	P	-	{preposition} []	O
+1	1	13	ארצות	ארצות	-	-	F	MWE	location	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	14	הברית	ארצות הברית	-	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	16	הנשיא	נשיא	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	17	גורג	גורג	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	1	18	בוש	בוש	-	-	F	R	person	{properName} [(definiteness: false),(number: singular)]	I_PERS
+1	1	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	כאן	כאן	-	-	F	A	-	{adverb} []	O
+1	2	2	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	2	3	גם	גם	-	-	F	A	-	{adverb} []	O
+1	2	4	נתקל	נתקל	-	-	F	V	-	{verb}	O
+1	2	5	בהפגנה	הפגנה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	6	הראשונה	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	7	נגד	נגד	-	-	F	P	-	{preposition} []	O
+1	2	8	מלחמה	מלחמה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	9	במפרץ	מפרץ	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	2	10	הפרסי	פרסי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	2	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	2	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	3	3	נשפוך	שפך	-	-	F	V	-	{verb}	O
+1	3	4	דם	דם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	5	למען	למען	-	-	F	P	-	{preposition} []	O
+1	3	6	נפט	נפט	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	7	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	9	קראו	קרא	-	-	F	V	-	{verb}	O
+1	3	10	לעברו	לעבר	-	-	F	P	-	{preposition} []	O
+1	3	11	כמה	כמה	-	-	T	O	-	{quantifier}	O
+1	3	12	צעירים	צעיר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	13	באסיפת	אסיפה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	14	בחירות	בחירות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	15	לטובת	טובה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	16	מועמד	מועמד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	17	רפובליקאי	רפובליקני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	4	2	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	4	3	נפט	נפט	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	4	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	4	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	6	כעס	כעס	-	-	F	V	-	{verb}	O
+1	4	7	הנשיא	נשיא	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	9	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	4	10	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	11	פה	פה	-	-	F	A	-	{adverb} []	O
+1	4	12	בתוקפנות	תוקפנות	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	13	גלויה	גלוי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	14	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	4	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	איובה	איובה	-	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	5	2	היא	הוא	-	-	F	V	-	{verb}	O
+1	5	3	מקום	מקום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	4	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	5	5	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	5	6	שגרתי	שגרתי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	אומרים	אמר	-	-	F	V	-	{verb}	O
+1	6	2	עליה	על	-	-	F	P	-	{preposition} []	O
+1	6	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	4	שיש	יש	שC	-	F	O	-	{existential} [(interrogative: false),(polarity: positive)]	O
+1	6	5	בה	ב	-	-	F	P	-	{preposition} []	O
+1	6	6	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	6	7	ארגונים	ארגון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	8	פציפיסטיים	פציפיסטי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	9	לקילומטר	קילומטר	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	10	מרובע	מרובע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	11	מאשר	מאשר	-	-	F	C	-	{conjunction} []	O
+1	6	12	בכל	כול	בP	-	T	O	-	{quantifier}	O
+1	6	13	מדינה	מדינה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	14	אחרת	אחר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	15	של	של	-	-	F	P	-	{preposition} []	O
+1	6	16	ארה"ב	ארה"ב	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	6	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	פציפיזם	פציפיזם	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	2	אינו	אינו	-	-	F	V	-	{verb}	O
+1	7	3	מוגבל	הוגבל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	4	באיובה	איובה	בP	-	F	R	town	{properName} [(definiteness: false)]	O
+1	7	5	לסטודנטים	סטודנט	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	6	רדיקליים	רדיקלי	-	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	7	8	אפשר	אפשר	-	-	F	O	-	{verb}	O
+1	7	9	למצוא	מצא	-	-	F	V	-	{verb}	O
+1	7	10	אותו	את	-	-	F	P	-	{preposition} []	O
+1	7	11	גם	גם	-	-	F	A	-	{adverb} []	O
+1	7	12	בין	בין	-	-	F	P	-	{preposition} []	O
+1	7	13	חקלאים	חקלאי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	14	ופועלי	פעל	וC	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	7	15	חרושת	חרושת	-	-	F	MWE	-	{MWE} []	O
+1	7	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	8	1	איובה	איובה	-	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	8	2	היא	הוא	-	-	F	V	-	{verb}	O
+1	8	3	מאסמי	אסם	מP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	8	4	הדגנים	דגן	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	8	5	של	של	-	-	F	P	-	{preposition} []	O
+1	8	6	ארה"ב	ארה"ב	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	8	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	8	ולפרנסתה	פרנסה	וC-לP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	8	9	היא	הוא	-	-	F	V	-	{verb}	O
+1	8	10	מייצאת	ייצא	-	-	F	V	-	{verb}	O
+1	8	11	אותם	את	-	-	F	P	-	{preposition} []	O
+1	8	12	למדינות	מדינה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	8	13	כברית	ברית	כP	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	8	14	המועצות	ברית המועצות	-	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	8	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	9	1	ב	ב	בP	-	F	-	-	[]	O
+1	9	2	1980	1980	-	-	F	R	-	{numeral} []	I_DATE
+1	9	3	נקלעה	נקלע	-	-	F	V	-	{verb}	O
+1	9	4	איובה	איובה	-	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	9	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	9	6	יחד	יחד	-	-	F	A	-	{adverb} []	O
+1	9	7	עם	עם	-	-	F	P	-	{preposition} []	O
+1	9	8	מדינות	מדינה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	9	9	חקלאיות	חקלאי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	9	10	אחרות	אחר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	9	11	במערב	מערב	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	9	12	התיכון	תיכון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	9	14	לסחרור	סחרור	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	15	קשה	קשה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	16	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	9	17	הנשיא	נשיא	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	18	גימי	גימי	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	9	19	קרטר	קרטר	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	9	20	החליט	החליט	-	-	F	V	-	{verb}	O
+1	9	21	להטיל	הטיל	-	-	F	V	-	{verb}	O
+1	9	22	חרם	חרם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	9	23	דגנים	דגן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	9	24	על	על	-	-	F	P	-	{preposition} []	O
+1	9	25	הסובייטים	סובייט	-	D	F	N	-	{noun} [(definiteness: true),(foreign: true),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	9	26	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	9	27	בגלל	בגלל	-	-	F	P	-	{preposition} []	O
+1	9	28	פלישתם	פלישה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	9	29	לאפגניסטן	אפגניסטן	לP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	9	30	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	10	1	איובה	איובה	-	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	10	2	שילמה	שילם	-	-	F	V	-	{verb}	O
+1	10	3	את	את	-	-	F	P	-	{preposition} []	O
+1	10	4	המחיר	מחיר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	5	עד	עד	-	-	F	P	-	{preposition} []	O
+1	10	6	אמצע	אמצע	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	10	7	שנות	שנה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	I_DATE
+1	10	8	ה	ה	הD	-	F	-	-	[]	I_DATE
+1	10	9	80	80	-	-	F	R	-	{numeral} []	I_DATE
+1	10	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	11	1	כלכלתה	כלכלה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	11	2	היתה	היה	-	-	F	V	-	{verb}	O
+1	11	3	שקועה	שקוע	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	11	4	במיתון	מיתון	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	5	קשה	קשה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	11	7	בשעה	שעה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	11	8	שרוב	רוב	שC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	11	9	המדינות	מדינה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	11	10	האחרות	אחר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	11	11	בארה"ב	ארה"ב	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	11	12	נהנו	נהנה	-	-	F	V	-	{verb}	O
+1	11	13	משגשוג	שגשוג	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	14	חסר	חסר	-	-	T	G	-	{adjective} [(function: adjective),(gender: masculine),(number: singular),(status: construct)]	O
+1	11	15	תקדים	תקדים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	12	1	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	12	2	רק	רק	-	-	F	A	-	{adverb} []	O
+1	12	3	מניעים	הניע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	12	4	אלטרואיסטיים	אלטרואיסטי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	12	5	מעוררים	עורר	-	-	F	V	-	{verb}	O
+1	12	6	איפוא	אפוא	-	-	F	A	-	{adverb} []	O
+1	12	7	באיובה	איובה	בP	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	12	8	התנגדות	התנגדות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	12	9	למלחמות	מלחמה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	12	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	12	11	אלא	אלא	-	-	F	C	-	{conjunction} []	O
+1	12	12	גם	גם	-	-	F	A	-	{adverb} []	O
+1	12	13	מניעים	הניע	-	-	F	V	-	{verb}	O
+1	12	14	תועלתניים	תועלתניים	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	12	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	13	1	כאן	כאן	-	-	F	A	-	{adverb} []	O
+1	13	2	אין	אין	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	13	3	אוהבים	אהב	-	-	F	V	-	{verb}	O
+1	13	4	ביותר	ביותר	-	-	F	A	-	{adverb} []	O
+1	13	5	את	את	-	-	F	P	-	{preposition} []	O
+1	13	6	הרעיון	רעיון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	7	של	של	-	-	F	P	-	{preposition} []	O
+1	13	8	מלחמה	מלחמה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	13	9	במפרץ	מפרץ	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	13	10	הפרסי	פרסי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	13	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	14	1	יום	יום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	2	אחד	אחד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	3	בשבוע	שבוע	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	4	שעבר	עבר	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	5	מרח	מרח	-	-	F	V	-	{verb}	O
+1	14	6	העיתון	עיתון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	7	המקומי	מקומי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	14	9	דה	דה	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	14	10	מוין	דה מוין	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	14	11	רגיסטר	רגיסטר	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	14	12	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	14	13	כותרת	כותרת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	14	14	ענקית	ענקי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	14	15	לרוחב	לרוחב	-	-	F	A	-	{adverb} []	O
+1	14	16	מלוא	מלוא	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	14	17	העמוד	עמוד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	18	הראשון	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	19	של	של	-	-	F	P	-	{preposition} []	O
+1	14	20	מוספו	מוסף	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	14	21	היומי	יומי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	15	1	אמרה	המרה	-	-	F	V	-	{verb}	O
+1	15	2	הכותרת	כותרת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	15	3	באנגלית	אנגלית	בP	-	F	R	language	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	O
+1	15	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	15	5	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	15	6	שלום	שלום	-	-	F	MWE	organization	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	O
+1	15	7	עכשיו	שלום עכשיו	-	-	F	MWE	organization	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	O
+1	15	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	15	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	16	1	לצד	לצד	-	-	F	P	-	{preposition} []	O
+1	16	2	האותיות	אות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	16	3	האדומות	אדום	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	16	4	הציב	הציב	-	-	F	V	-	{verb}	O
+1	16	5	העיתון	עיתון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	6	את	את	-	-	F	P	-	{preposition} []	O
+1	16	7	סמל	סמל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	16	8	תנועת	תנועה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	16	9	ההתנגדות	התנגדות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	16	10	למלחמת	למלחמת	-	-	F	MWE	-	{MWE} []	I_MISC_EVENT
+1	16	11	וייטנאם	וייטנאם	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_MISC_EVENT
+1	16	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	17	1	ביום	ביום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	2	אחר	אחר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	3	פירסם	פרסם	-	-	F	V	-	{verb}	O
+1	17	4	העיתון	עיתון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	5	בעמוד	עמוד	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	6	מאמרי	מאמר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	17	7	המערכת	מערכת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	8	שלו	של	-	-	F	P	-	{preposition} []	O
+1	17	9	קריקטורה	קריקטורה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	10	מקפיאת	הקפיא	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	17	11	דם	דם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	18	1	נראה	ראה	-	-	F	V	-	{verb}	O
+1	18	2	בה	ב	-	-	F	P	-	{preposition} []	O
+1	18	3	מלאך	מלאך	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	18	4	המוות	מוות	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	5	חבוש	חבש	-	-	F	V	-	{verb}	O
+1	18	6	כאפייה	כפייה	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	18	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	18	8	ומפיו	פה	וC-מP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	18	9	בוקעות	בקע	-	-	F	V	-	{verb}	O
+1	18	10	המלים	מל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	18	11	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	18	12	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	18	13	קרא	קרא	-	-	F	V	-	{verb}	O
+1	18	14	את	את	-	-	F	P	-	{preposition} []	O
+1	18	15	שפתיי	פת	שC	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	18	16	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	18	17	גורג	גורג	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	18	18	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	18	19	תהיה	היה	-	-	F	V	-	{verb}	O
+1	18	20	עוד	עוד	-	-	F	A	-	{adverb} []	O
+1	18	21	וייטנאם	וייטנאם	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	18	22	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	18	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	19	1	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	19	2	ג'ורג'	ג'ורג'	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	19	3	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	19	4	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	19	5	כמובן	כמובן	-	-	F	A	-	{adverb} []	O
+1	19	6	גורג	גורג	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	19	7	בוש	בוש	-	-	F	R	person	{properName} [(definiteness: false),(number: singular)]	I_PERS
+1	19	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	20	1	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	20	2	קרא	קרא	-	-	F	V	-	{verb}	O
+1	20	3	את	את	-	-	F	P	-	{preposition} []	O
+1	20	4	שפתיי	פת	שC	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	20	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	20	6	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	20	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	20	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	20	9	היא	הוא	-	-	F	V	-	{verb}	O
+1	20	10	פאראפראזה	פאראפראזה	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	20	11	על	על	-	-	F	P	-	{preposition} []	O
+1	20	12	סיסמת	סיסמה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	20	13	הבחירות	בחירות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	20	14	הכוזבת	כוזב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	20	15	של	של	-	-	F	P	-	{preposition} []	O
+1	20	16	הנשיא	נשיא	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	20	17	מ	מ	מP	-	F	-	-	[]	O
+1	20	18	1988	1988	-	-	F	R	-	{numeral} []	I_DATE
+1	20	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	20	20	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	20	21	קראו	קרא	-	-	F	V	-	{verb}	O
+1	20	22	את	את	-	-	F	P	-	{preposition} []	O
+1	20	23	שפתיי	פת	שC	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	20	24	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	20	25	יהיו	יהיה	-	-	F	O	-	{existential} [(gender: masculine and feminine),(interrogative: false),(number: plural),(polarity: positive),(tense: future)]	O
+1	20	26	מסים	סיים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	20	27	חדשים	חדש	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	20	28	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	20	29	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	21	1	במהלך	מהלך	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	21	2	נשף	נשף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	21	3	התרמה	התרמה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	21	4	לטום	טום	לP	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	21	5	הארקין	הארקין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	21	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	21	7	הסנאטור	סנטור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	21	8	הדמוקרטי	דמוקרטי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	21	9	שהעמיד	העמיד	שC	-	F	V	-	{verb}	O
+1	21	10	את	את	-	-	F	P	-	{preposition} []	O
+1	21	11	עצמו	עצמו	-	-	F	Q	-	{pronoun}	O
+1	21	12	השבוע	השבוע	-	-	F	A	-	{adverb} []	O
+1	21	13	לבחירה	בחיר	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	21	14	חוזרת	חוזר	-	-	F	V	-	{verb}	O
+1	21	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	21	16	הסביר	הסביר	-	-	F	V	-	{verb}	O
+1	21	17	לי	ל	-	-	F	P	-	{preposition} []	O
+1	21	18	באריכות	באריכות	-	-	F	A	-	{adverb} []	O
+1	21	19	אחד	אחד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	21	20	הנוכחים	נכח	-	-	F	V	-	{verb}	O
+1	21	21	כיצד	כיצד	-	-	F	O	-	{interrogative} []	O
+1	21	22	יכולה	יכול	-	-	F	O	-	{verb}	O
+1	21	23	ארה"ב	ארה"ב	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	21	24	ליישב	יישב	-	-	F	V	-	{verb}	O
+1	21	25	את	את	-	-	F	P	-	{preposition} []	O
+1	21	26	סכסוך	סכסוך	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	21	27	המפרץ	המפרץ	-	-	F	MWE	location	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	21	28	הפרסי	המפרץ הפרסי	-	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	21	29	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	21	30	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	21	31	אם	אם	-	-	F	C	-	{conjunction} []	O
+1	21	32	רק	רק	-	-	F	A	-	{adverb} []	O
+1	21	33	תביא	הביא	-	-	F	V	-	{verb}	O
+1	21	34	את	את	-	-	F	P	-	{preposition} []	O
+1	21	35	העניין	עניין	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	21	36	לפני	לפני	-	-	F	P	-	{preposition} []	O
+1	21	37	בית	בית	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	21	38	המשפט	בית משפט	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	21	39	הבין	בין	-	D	F	O	-	{wPrefix} [(definiteness: true)]	I_ORG
+1	21	40	-	-	-	-	F	PNCT	-	{punctuation} []	I_ORG
+1	21	41	לאומי	לאומי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	21	42	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	21	43	בהאג	האג	בP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	21	44	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	22	1	התבוננתי	התבונן	-	-	F	V	-	{verb}	O
+1	22	2	בבן	בן	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	22	3	שיחי	בן שיח	-	-	F	MWE	-	{MWE} [(consecutive: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	22	4	בהפתעה	הפתעה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	22	5	ניכרת	נכרת	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	22	6	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	23	1	טיעונים	טיעון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	23	2	כאלה	כאלה	-	-	F	Q	-	{pronoun}	O
+1	23	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	23	4	שפעם	שפע	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	23	5	היו	היה	-	-	F	V	-	{verb}	O
+1	23	6	מקובלים	מקובל	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	23	7	בין	בין	-	-	F	P	-	{preposition} []	O
+1	23	8	ליברלים	ליברל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	23	9	בארה"ב	ארה"ב	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	23	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	23	11	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	23	12	שמעתי	שמע	-	-	F	V	-	{verb}	O
+1	23	13	כבר	כבר	-	-	F	A	-	{adverb} []	O
+1	23	14	הרבה	הרבה	-	-	T	O	-	{quantifier}	O
+1	23	15	זמן	זמן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	23	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	24	1	במעמקי	מעמקים	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	24	2	המערב	מערב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	3	התיכון	תיכון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	4	של	של	-	-	F	P	-	{preposition} []	O
+1	24	5	ארה"ב	ארה"ב	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	24	6	קל	קל	-	-	F	O	-	{verb}	O
+1	24	7	להאמין	האמין	-	-	F	V	-	{verb}	O
+1	24	8	שהעולם	עולם	שC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	9	נברא	בירא	-	-	F	V	-	{verb}	O
+1	24	10	בצלם	בצלם	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	24	11	אמריקה	אמריקה	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	24	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	24	13	שהוא	הוא	שC	-	F	V	-	{verb}	O
+1	24	14	מלא	מלא	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	15	אנשים	איש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	24	16	הגיוניים	הגיוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	24	17	ופרגמטיים	פרגמטי	וC	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	24	18	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	24	19	ושהאותוריטה	אוטוריטה	וC-שC	D	F	N	-	{noun} [(definiteness: true),(foreign: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	24	20	המוסרית	מוסרי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	24	21	של	של	-	-	F	P	-	{preposition} []	O
+1	24	22	מוסד	מוסד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	23	שאיש	איש	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	24	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	24	25	כולל	כלל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	26	ארה"ב	ארה"ב	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	24	27	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	24	28	מעולם	מעולם	-	-	F	A	-	{adverb} []	O
+1	24	29	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	24	30	לקח	לקח	-	-	F	V	-	{verb}	O
+1	24	31	ברצינות	ברצינות	-	-	F	A	-	{adverb} []	O
+1	24	32	תעשה	עשה	-	-	F	V	-	{verb}	O
+1	24	33	רושם	רושם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	34	מיידי	מיידי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	24	35	על	על	-	-	F	P	-	{preposition} []	O
+1	24	36	סדאם	סדאם	-	-	F	MWE	person	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_PERS
+1	24	37	חוסיין	סדאם חוסיין	-	D	F	MWE	person	{MWE} [(consecutive: true),(definiteness: true),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_PERS
+1	24	38	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	25	1	המשבר	משבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	25	2	במפרץ	מפרץ	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	25	3	הפרסי	פרסי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	25	4	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	25	5	היה	היה	-	-	F	V	-	{verb}	O
+1	25	6	נושא	נשא	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	25	7	בחירות	בחירות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	25	8	מרכזי	מרכזי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	25	9	באיובה	איובה	בP	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	25	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	26	1	טום	טום	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	26	2	הארקין	הארקין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	26	3	הליברלי	ליברלי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	26	5	ויריבו	רב	וC	-	F	V	-	{verb}	O
+1	26	6	הרפובליקאי	רפובליקני	-	D	F	N	-	{noun} [(definiteness: true),(foreign: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	7	השמרן	שמרן	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	8	טום	טום	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	26	9	טקי	טקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	26	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	26	11	אמנם	אמנם	-	-	F	A	-	{adverb} []	O
+1	26	12	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	26	13	יכלו	יכול	-	-	F	O	-	{verb}	O
+1	26	14	להסכים	הסכים	-	-	F	V	-	{verb}	O
+1	26	15	על	על	-	-	F	P	-	{preposition} []	O
+1	26	16	שום	שום	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	26	17	עניין	עניין	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	26	18	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	26	19	אבל	אבל	-	-	F	C	-	{conjunction} []	O
+1	26	20	נטו	נטה	-	-	F	V	-	{verb}	O
+1	26	21	להסכים	הסכים	-	-	F	V	-	{verb}	O
+1	26	22	על	על	-	-	F	P	-	{preposition} []	O
+1	26	23	המפרץ	המפרץ	-	-	F	MWE	location	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	26	24	הפרסי	המפרץ הפרסי	-	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	26	25	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	27	1	שניהם	שניים	-	-	F	Q	-	{pronoun}	O
+1	27	2	תומכים	תמך	-	-	F	V	-	{verb}	O
+1	27	3	בנשיא	נשיא	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	27	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	27	5	ושניהם	שניים	וC	-	F	Q	-	{pronoun}	O
+1	27	6	מאמינים	האמין	-	-	F	V	-	{verb}	O
+1	27	7	בצורך	צר	-	-	F	V	-	{verb}	O
+1	27	8	בזהירות	זהירות	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	27	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	28	1	בימי	יום	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	28	2	המלחמה	מלחמה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_EVENT
+1	28	3	הקרה	קר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_EVENT
+1	28	4	היה	היה	-	-	F	V	-	{verb}	O
+1	28	5	טוקי	טוקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	28	6	אנטי	אנטי	-	-	F	O	-	{wPrefix} [(definiteness: false),(polarity: negative)]	O
+1	28	7	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	28	8	קומוניסט	קומוניסט	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	28	9	נלהב	נלהב	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	28	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	28	11	והארקין	הארקין	וC	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	28	12	היה	היה	-	-	F	V	-	{verb}	O
+1	28	13	יונה	יונה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]	O
+1	28	14	נלהבת	נלהב	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	28	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	29	1	טוקי	טוקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	29	2	תמך	תמך	-	-	F	V	-	{verb}	O
+1	29	3	בכל	כול	בP	-	T	O	-	{quantifier}	O
+1	29	4	סעיף	סעיף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	29	5	הוצאות	הוצאה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	29	6	צבאיות	צבאי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	29	7	אפשרי	אפשרי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	29	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	29	9	וחייב	חייב	וC	-	F	V	-	{verb}	O
+1	29	10	את	את	-	-	F	P	-	{preposition} []	O
+1	29	11	המאבק	איבק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	29	12	להפלת	הפלה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	29	13	ממשלת	ממשלה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	29	14	ניקרגואה	ניקרגוואה	-	-	F	R	country	{properName} [(definiteness: false)]	I_ORG
+1	29	15	;	;	-	-	F	PNCT	-	{punctuation} []	O
+1	29	16	הארקין	הארקין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	29	17	רצה	רצה	-	-	F	V	-	{verb}	O
+1	29	18	קיצוצים	קיצוץ	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	29	19	ניכרים	ניכר	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	29	20	בתקציב	תקציב	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	29	21	הביטחון	ביטחון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	29	22	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	29	23	ועמד	עימד	וC	-	F	V	-	{verb}	O
+1	29	24	בראש	ראש	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	29	25	המאבק	איבק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	29	26	בסנאט	סנאט	בP	D	F	N	-	{noun} [(definiteness: true),(foreign: true),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	29	27	נגד	נגד	-	-	F	P	-	{preposition} []	O
+1	29	28	הסיוע	סיוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	29	29	לקונטראס	קונטראס	לP	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	29	30	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	30	1	במפרץ	מפרץ	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	30	2	הפרסי	פרסי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	30	3	שניהם	שניים	-	-	F	Q	-	{pronoun}	O
+1	30	4	נצים	נץ	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	30	5	יוניים	יוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	30	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	30	7	או	או	-	-	F	C	-	{conjunction} []	O
+1	30	8	יונים	יון	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	30	9	נציות	ניצי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	30	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	30	11	במידה	יידה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	30	12	כמעט	כמעט	-	-	F	A	-	{adverb} []	O
+1	30	13	שווה	שווה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	30	14	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	31	1	בהעדר	העדר	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	31	2	קומוניזם	קומוניזם	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	3	יש	יש	-	-	F	O	-	{existential} [(interrogative: false),(polarity: positive)]	O
+1	31	4	פרגמטיזם	פרגמטיזם	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	5	ואל	ואל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	31	6	פני	פני	-	-	F	MWE	-	{MWE} []	O
+1	31	7	השטח	השטח	-	-	F	MWE	-	{MWE} []	O
+1	31	8	חוזרת	חוזר	-	-	F	V	-	{verb}	O
+1	31	9	גם	גם	-	-	F	A	-	{adverb} []	O
+1	31	10	מידה	יידה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	11	הגונה	הגון	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	31	12	של	של	-	-	F	P	-	{preposition} []	O
+1	31	13	בדלנות	בדלנות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	31	14	אינסטינקטיווית	אינסטינקטיבי	-	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	31	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	31	16	אפיון	אפיון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	17	היסטורי	היסטורי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	18	של	של	-	-	F	P	-	{preposition} []	O
+1	31	19	מדינות	מדינה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	31	20	המערב	מערב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	21	התיכון	תיכון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	31	22	האמריקאי	אמריקני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	31	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	32	1	במהלך	מהלך	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	32	2	מערכת	מערכת	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	32	3	הבחירות	מערכת בחירות	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	32	4	הקרין	הקרין	-	-	F	V	-	{verb}	O
+1	32	5	מטהו	מטה	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	32	6	של	של	-	-	F	P	-	{preposition} []	O
+1	32	7	טוקי	טוקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	32	8	תשדיר	תשדיר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	32	9	טלוויזיה	טלוויזיה	-	-	F	N	-	{noun} [(definiteness: false),(foreign: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	32	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	32	11	שאחד	אחד	שC	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	32	12	מסעיפיו	סעיף	מP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	32	13	היה	היה	-	-	F	V	-	{verb}	O
+1	32	14	התנגדות	התנגדות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	32	15	לסיוע	סיוע	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	32	16	חוץ	חוץ	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	32	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	33	1	בעיני	עין	בP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	33	2	השדולה	שדולה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	33	3	הפרו	פרו	-	D	F	O	-	{wPrefix} [(definiteness: true),(polarity: positive)]	O
+1	33	4	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	33	5	ישראלית	ישראלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	33	6	בוואשינגטון	ואשינגטון	בP	-	F	R	person|location	{properName} [(definiteness: false)]	I_LOC
+1	33	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	33	8	התנגדות	התנגדות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	33	9	לסיוע	סיוע	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	33	10	חוץ	חוץ	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	33	11	מעמידה	העמיד	-	-	F	V	-	{verb}	O
+1	33	12	את	את	-	-	F	P	-	{preposition} []	O
+1	33	13	המתנגד	מתנגד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	33	14	מחוץ	מחוץ	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: true),(pos: preposition)]	O
+1	33	15	למחנה	החנה	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	33	16	גם	גם	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	33	17	אם	גם אם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	33	18	אינה	אינו	-	-	F	V	-	{verb}	O
+1	33	19	מוסבת	הוסב	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	33	20	ספציפית	ספציפי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	33	21	על	על	-	-	F	P	-	{preposition} []	O
+1	33	22	ישראל	ישראל	-	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	33	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	34	1	פעילים	פעיל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	34	2	פרו	פרו	-	-	F	R	country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	34	3	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	34	4	ישראליים	ישראלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	34	5	עודדו	עודד	-	-	F	V	-	{verb}	O
+1	34	6	מאז	מאז	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	34	7	ומעולם	מאז ומעולם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	34	8	יהודים	יהודי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	34	9	לתרום	תרם	-	-	F	V	-	{verb}	O
+1	34	10	כספים	כסף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	34	11	למועמדים	מועמד	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	34	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	34	13	הנאבקים	נאבק	-	-	F	V	-	{verb}	O
+1	34	14	נגד	נגד	-	-	F	P	-	{preposition} []	O
+1	34	15	מתנגדי	מתנגד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	34	16	סיוע	סיוע	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	34	17	החוץ	חוץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	34	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	35	1	ממילא	ממילא	-	-	F	A	-	{adverb} []	O
+1	35	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	35	3	טום	טום	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	35	4	הארקין	הארקין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	35	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	35	6	תומך	תומך	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	35	7	עקיב	עקיב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	35	8	בסיוע	סיוע	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	35	9	החוץ	חוץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	35	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	35	11	היה	היה	-	-	F	V	-	{verb}	O
+1	35	12	אחד	אחד	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	35	13	המקבלים	מקבל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	35	14	הגדולים	גדול	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	35	15	ביותר	ביותר	-	-	F	A	-	{adverb} []	O
+1	35	16	של	של	-	-	F	P	-	{preposition} []	O
+1	35	17	תרומות	תרומה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	35	18	יהודיות	יהודי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	35	19	בשש	שש	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	35	20	השנים	שנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	35	21	האחרונות	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	35	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	36	1	לפי	לפי	-	-	F	P	-	{preposition} []	O
+1	36	2	מקור	מקור	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	36	3	יהודי	יהודי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	36	4	באיובה	איובה	בP	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	36	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	36	6	הארקין	הארקין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	36	7	קיבל	קיבל	-	-	F	V	-	{verb}	O
+1	36	8	200	200	-	-	F	R	-	{numeral} []	I_MONEY
+1	36	9	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	36	10	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_MONEY
+1	36	11	מוועדי	ועד	מP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	36	12	פעולה	פעולה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	36	13	פוליטיים	פוליטי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	36	14	פרו	פרו	-	-	F	R	country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	36	15	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	36	16	ישראליים	ישראלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	36	17	בכל	כול	בP	-	T	O	-	{quantifier}	O
+1	36	18	רחבי	רחב	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	36	19	ארה"ב	ארה"ב	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	36	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	37	1	טוקי	טוקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	37	2	קיבל	קיבל	-	-	F	V	-	{verb}	O
+1	37	3	רק	רק	-	-	F	A	-	{adverb} []	O
+1	37	4	25	25	-	-	F	R	-	{numeral} []	I_MONEY
+1	37	5	אלף	אלף	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MONEY
+1	37	6	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	38	1	ב	ב	בP	-	F	-	-	[]	O
+1	38	2	84	84	-	-	F	R	-	{numeral} []	I_DATE
+1	38	3	תיאר	תיאר	-	-	F	V	-	{verb}	O
+1	38	4	מנכ"ל	מנכ"ל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	38	5	אייפא"ק	אייפא"ק	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	38	6	טום	טום	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	38	7	דאיין	דאיין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	38	8	את	את	-	-	F	P	-	{preposition} []	O
+1	38	9	הארקין	הארקין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	38	10	כאחד	אחד	כP	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	38	11	מששה	מישש	-	-	F	V	-	{verb}	O
+1	38	12	או	או	-	-	F	C	-	{conjunction} []	O
+1	38	13	שבעה	שבעה	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	38	14	סנאטורים	סנטור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	38	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	38	16	שנבחרו	נבחר	שC	-	F	V	-	{verb}	O
+1	38	17	בזכות	בזכות	-	-	F	P	-	{preposition} []	O
+1	38	18	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	38	19	כסף	כסף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	38	20	יהודי	יהודי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	38	21	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	38	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	39	1	זו	זו	-	-	F	Q	-	{pronoun}	O
+1	39	2	היתה	היה	-	-	F	V	-	{verb}	O
+1	39	3	התרברבות	התרברבות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	39	4	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	39	5	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	39	6	דיסקרטית	דיסקרטי	-	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	39	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	39	8	ואין	אין	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	39	9	ספק	ספק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	39	10	שיימנע	נמנע	שC	-	F	V	-	{verb}	O
+1	39	11	ממנה	מן	-	-	F	P	-	{preposition} []	O
+1	39	12	השנה	שנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	39	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	40	1	אף	אף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	40	2	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	40	3	על	על	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	40	4	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	40	5	פי	אף על פי	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 3),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	40	6	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	40	7	כן	אף על פי כן	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 4),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	40	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	40	9	שתדלנים	שתדלן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	40	10	פרו	פרו	-	-	F	R	country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	40	11	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	40	12	ישראליים	ישראלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	40	13	בוואשינגטון	ואשינגטון	בP	-	F	R	person|location	{properName} [(definiteness: false)]	I_LOC
+1	40	14	חככו	חיכך	-	-	F	V	-	{verb}	O
+1	40	15	השבוע	השבוע	-	-	F	A	-	{adverb} []	O
+1	40	16	את	את	-	-	F	P	-	{preposition} []	O
+1	40	17	ידיהם	יד	-	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	40	18	בשביעות	שביעות	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	40	19	רצון	שביעות רצון	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	40	20	למשמע	משמע	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	40	21	הידיעה	ידיעה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	40	22	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	40	23	שהארקין	הארקין	שC	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	40	24	גבר	גבר	-	-	F	V	-	{verb}	O
+1	40	25	על	על	-	-	F	P	-	{preposition} []	O
+1	40	26	טוקי	טוקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	40	27	בהפרש	הפרש	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	40	28	משכנע	שכנע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	40	29	של	של	-	-	F	P	-	{preposition} []	O
+1	40	30	%	%	-	-	F	PNCT	-	{punctuation} []	I_PERCENT
+1	40	31	10	10	-	-	F	R	-	{numeral} []	I_PERCENT
+1	40	32	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	41	1	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	41	2	הסנאטור	סנטור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	41	3	הדמוקרטי	דמוקרטי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	41	4	הראשון	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	41	5	בתולדות	תולדה	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	41	6	איובה	איובה	-	-	F	R	town	{properName} [(definiteness: false)]	I_LOC
+1	41	7	הנבחר	נבחר	-	-	F	V	-	{verb}	O
+1	41	8	לתקופת	תקופה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	41	9	כהונה	כהונה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	41	10	שנייה	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	41	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	42	1	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	42	2	גם	גם	-	-	F	A	-	{adverb} []	O
+1	42	3	יודע	נודע	-	-	F	V	-	{verb}	O
+1	42	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	42	5	שבלי	שובל	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	42	6	תרומות	תרומה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	42	7	מחוץ	מחוץ	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: true),(pos: preposition)]	O
+1	42	8	לגבולות	גבול	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	42	9	מדינתו	מדינה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	42	10	הקטנה	קטן	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	42	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	42	12	יתקשה	התקשה	-	-	F	V	-	{verb}	O
+1	42	13	לאסוף	אסף	-	-	F	V	-	{verb}	O
+1	42	14	די	די	-	-	T	O	-	{quantifier}	O
+1	42	15	כסף	כסף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	42	16	לניהול	ניהול	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	42	17	מערכת	מערכת	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	42	18	הבחירות	מערכת בחירות	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	42	19	הטלוויזיונית	טלוויזיוני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	42	20	היקרה	יקר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	42	21	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	42	22	שבלעדיה	בלעדי	שC	-	F	P	-	{preposition} []	O
+1	42	23	אין	אין	-	-	F	O	-	{existential} [(interrogative: false),(polarity: negative)]	O
+1	42	24	פוליטיקאים	פוליטיקאי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	42	25	אמריקאיים	אמריקני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	42	26	מסוגלים	מסוגל	-	-	F	O	-	{verb}	O
+1	42	27	לנצח	ניצח	-	-	F	V	-	{verb}	O
+1	42	28	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	43	1	חזקה	חזק	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	43	2	על	על	-	-	F	P	-	{preposition} []	O
+1	43	3	הארקין	הארקין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	43	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	43	5	שיצביע	הצביע	שC	-	F	V	-	{verb}	O
+1	43	6	גם	גם	-	-	F	A	-	{adverb} []	O
+1	43	7	בעתיד	עתיד	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	43	8	בעד	בעד	-	-	F	P	-	{preposition} []	O
+1	43	9	חוק	חוק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	43	10	סיוע	סיוע	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	43	11	החוץ	חוץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	43	12	.	.	-	-	F	PNCT	-	{punctuation} []	O

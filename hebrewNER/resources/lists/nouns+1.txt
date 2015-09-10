@@ -1,0 +1,14 @@
+PERS	ז"ל
+PERS	זצ"ל
+PERS	זצוקלל"ה
+PERS	שליט"א
+PERS	הי"ד
+DATE	שעבר
+DATE	שעברה
+DATE	הבא
+DATE	הבאה
+DATE	הקרוב
+DATE	הקרובה
+DATE	האחרון
+DATE	האחרונה
+ORG	בע"מ

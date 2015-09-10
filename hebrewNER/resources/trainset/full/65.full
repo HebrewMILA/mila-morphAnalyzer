@@ -1,0 +1,56 @@
+1	1	1	בדרשה	דרשה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	2	שנשא	נשא	שC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	3	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	4	עובדיה	עובדיה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	5	יוסף	יוסף	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	6	לקראת	לקראת	-	-	F	P	-	{preposition} []	O
+1	1	7	חג	חג	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	8	הפסח	פסח	-	D	F	R	dateTime	{properName} [(definiteness: true),(gender: masculine),(number: singular)]	I_DATE
+1	1	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	10	ושפורסמה	פורסם	וC-שC	-	F	V	-	{verb}	O
+1	1	11	לראשונה	לראשונה	-	-	F	A	-	{adverb} []	O
+1	1	12	באתר	אתר	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	13	האינטרנט	אינטרנט	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	14	Ynet	Ynet	-	-	F	O	-	{foreign} []	I_ORG
+1	1	15	ביום	ביום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	16	שישי	שישי	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	17	שעבר	עבר	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	18	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	19	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	1	20	קרא	קרא	-	-	F	V	-	{verb}	O
+1	1	21	להשמיד	השמיד	-	-	F	V	-	{verb}	O
+1	1	22	את	את	-	-	F	P	-	{preposition} []	O
+1	1	23	שונאי	שנא	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	24	ישראל	ישראל	-	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	25	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	26	ודבריו	דבר	וC	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	1	27	עוררו	עורר	-	-	F	V	-	{verb}	O
+1	1	28	סערה	סערה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	29	בציבור	ציבור	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	30	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	31	אולם	אולם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	32	בפגישה	פגישה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	33	עם	עם	-	-	F	P	-	{preposition} []	O
+1	1	34	יו"ר	יו"ר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	35	הכנסת	הכנסה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	1	36	אברהם	אברהם	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	37	בורג	בורג	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	1	38	הבהיר	הבהיר	-	-	F	V	-	{verb}	O
+1	1	39	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	40	שבקריאתו	קריאה	שC-בP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	1	41	להשמיד	השמיד	-	-	F	V	-	{verb}	O
+1	1	42	את	את	-	-	F	P	-	{preposition} []	O
+1	1	43	הערבים	ערב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	1	44	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	1	45	התכוון	התכוון	-	-	F	V	-	{verb}	O
+1	1	46	למחבלים	חיבל	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	47	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	48	ולערבים	ערב	וC-לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	1	49	שפוגעים	פגע	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	50	בנו	בן	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	1	51	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	52	ולא	לא	וC	-	F	O	-	{negation} [(definiteness: false)]	O
+1	1	53	לכלל	כלל	לP	-	T	O	-	{quantifier}	O
+1	1	54	האוכלוסייה	אוכלוסייה	-	D	F	N	-	{noun} [(definiteness: true),(foreign: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	55	הערבית	ערבי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	1	56	.	.	-	-	F	PNCT	-	{punctuation} []	O

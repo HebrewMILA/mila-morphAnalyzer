@@ -1,0 +1,110 @@
+1	1	1	גלישה	גלישה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	2	נוספת	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	1	3	של	של	-	-	F	P	-	{preposition} []	O
+1	1	4	מי	מי	-	-	F	O	-	{interrogative} []	O
+1	1	5	קולחין	קולחים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	6	מטוהרים	טוהר	-	-	F	V	-	{verb}	O
+1	1	7	למימי	מימי	לP	-	F	R	person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	O
+1	1	8	מפרץ	מפרץ	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_LOC
+1	1	9	אילת	אילת	-	-	F	R	location|person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	10	גרמה	גרם	-	-	F	V	-	{verb}	O
+1	1	11	אמש	אמש	-	-	F	A	-	{adverb} []	O
+1	1	12	לזיהום	זיהום	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	13	המפרץ	מפרץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	14	וליצירת	יצירה	וC-לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	15	כתם	כתם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	16	בוצה	בוצה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	17	ענקי	ענקי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	18	סמוך	סמך	-	-	F	V	-	{verb}	O
+1	1	19	לגבול	גבל	-	-	F	V	-	{verb}	O
+1	1	20	היבשתי	יבשתי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	21	עם	עם	-	-	F	P	-	{preposition} []	O
+1	1	22	ירדן	ירדן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]	I_LOC
+1	1	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	הדבר	דבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	2	אירע	אירע	-	-	F	V	-	{verb}	O
+1	2	3	לאחר	לאחר	-	-	F	C	-	{conjunction} []	O
+1	2	4	שסוללות	סוללה	שC	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	2	5	העפר	עפר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	7	שהוקמו	הוקם	שC	-	F	V	-	{verb}	O
+1	2	8	יממה	יממה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	9	קודם	קודם	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	2	10	לכן	קודם לכן	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	2	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	12	בכדי	בכדי	-	-	F	C	-	{conjunction} []	O
+1	2	13	למנוע	מנע	-	-	F	V	-	{verb}	O
+1	2	14	את	את	-	-	F	P	-	{preposition} []	O
+1	2	15	גלישלת	גלישלת	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	2	16	מי	מי	-	-	F	O	-	{interrogative} []	O
+1	2	17	קולחין	קולחים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	18	המטוהרים	טוהר	-	-	F	V	-	{verb}	O
+1	2	19	לים	ים	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	20	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	21	קרסו	קרס	-	-	F	V	-	{verb}	O
+1	2	22	והביאו	הביא	וC	-	F	V	-	{verb}	O
+1	2	23	לגלישת	גלישה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	24	המים	מים	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	25	ממאגר	מאגר	מP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	26	אילת	אילת	-	-	F	R	location|person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	2	27	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	28	לשטחים	שטח	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	29	חקלאיים	חקלאי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	30	ולים	ים	וC-לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	31	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	ממשרד	משרד	מP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	3	2	הבריאות	בריאה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	3	3	נמסר	נמסר	-	-	F	V	-	{verb}	O
+1	3	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	5	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	3	6	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	7	במי	מי	בP	-	F	O	-	{interrogative} []	O
+1	3	8	קולחין	קולחים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	9	ברמת	רמה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	10	מליחות	מליחות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	11	גבוהה	גבוה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	13	שעברו	עיבר	שC	-	F	V	-	{verb}	O
+1	3	14	טיהור	טיהור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	15	ונמצא	נמצא	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	16	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	3	17	רמת	רמה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	18	חיידקי	חיידק	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	3	19	הקולי	קולי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	20	צואתי	צואה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	3	21	במים	מים	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	22	אלו	אלו	-	-	F	Q	-	{pronoun}	O
+1	3	23	נמוכה	נמוך	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	24	מהרגיל	רגיל	מP	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	25	ואינה	אינו	וC	-	F	V	-	{verb}	O
+1	3	26	מסכנת	סיכן	-	-	F	G	-	{adjective} [(binyan: Pi'el),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	3	27	בני	בני	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	3	28	אדם	בן אדם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	3	29	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	מיד	מייד	-	-	F	A	-	{adverb} []	O
+1	4	2	לאחר	לאחר	-	-	F	C	-	{conjunction} []	O
+1	4	3	שהתגלה	התגלה	שC	-	F	V	-	{verb}	O
+1	4	4	כתם	כתם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	5	הבוצה	בוצה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	7	הופסקה	הופסק	-	-	F	V	-	{verb}	O
+1	4	8	הזרמת	הזרמה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	9	מי	מים	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	4	10	הקולחין	קולחים	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	11	ממאגר	מאגר	מP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	12	אילת	אילת	-	-	F	R	location|person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	4	13	לים	ים	לP	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]	O
+1	4	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	15	והמים	מים	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	16	הוזרמו	הוזרם	-	-	F	V	-	{verb}	O
+1	4	17	לתעלת	תעלה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_LOC
+1	4	18	הקינט	קינט	-	D	F	R	-	{properName} [(definiteness: true)]	I_LOC
+1	4	19	ומשם	ומשם	וC-משC-מP	-	F	-	-	[]	O
+1	4	20	לבריכות	בריכה	לP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	4	21	השיקוע	שיקוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	22	של	של	-	-	F	P	-	{preposition} []	O
+1	4	23	עיריית	עירייה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	4	24	אילת	אילת	-	-	F	R	location|person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	4	25	הממוקמות	מוקם	-	-	F	V	-	{verb}	O
+1	4	26	בערבה	עירב	-	-	F	V	-	{verb}	I_LOC
+1	4	27	.	.	-	-	F	PNCT	-	{punctuation} []	O

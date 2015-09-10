@@ -1,0 +1,108 @@
+<?xml-stylesheet type="text/xsl" href="view.xsl"?>
+<corpus comment="versions info: lexicon: 13/03/2013; morphologicalAnalyzer: 1.8 (13/03/2013); corpus schema 16/06/2009; lexicon schema 16/06/2009" email="mila@cs.technion.ac.il" maintainer="Slava Demender" name="Analysis Results (yeda) @ Mon Mar 23 19:02:48 IST 2015">
+	<article id="1">
+		<paragraph id="1">
+			<sentence id="1">
+				<token id="1" surface="גבע">
+					<analysis id="1" score="0.0">
+						<base dottedLexiconItem="גֶּבַע" lexiconItem="גבע" lexiconPointer="5111" transliteratedLexiconItem="gby">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<base dottedLexiconItem="גֶּבַע" lexiconItem="גבע" lexiconPointer="5111" transliteratedLexiconItem="gby">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="0.5">
+						<base dottedLexiconItem="גֶּבַע" lexiconItem="גבע" lexiconPointer="17382" transliteratedLexiconItem="gby">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="location"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.5">
+						<base dottedLexiconItem="גֶּבַע" lexiconItem="גבע" lexiconPointer="21552" transliteratedLexiconItem="gby">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="2" surface="אלון">
+					<analysis id="1" score="1.0">
+						<base lexiconItem="אלון" lexiconPointer="2138" transliteratedLexiconItem="alwn">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<base dottedLexiconItem="לָן" lexiconItem="לן" lexiconPointer="4814" transliteratedLexiconItem="ln">
+							<verb binyan="Pa'al" gender="masculine and feminine" number="singular" person="1" register="formal" root="לון" spelling="standard" tense="future"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="0.0">
+						<base dottedLexiconItem="אַלּוֹן" lexiconItem="אלון" lexiconPointer="11582" transliteratedLexiconItem="alwn">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.0">
+						<base dottedLexiconItem="אַלּוֹן" lexiconItem="אלון" lexiconPointer="11582" transliteratedLexiconItem="alwn">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="3" surface="הופיע">
+					<analysis id="1" score="1.0">
+						<base dottedLexiconItem="הוֹפִיעַ" lexiconItem="הופיע" lexiconPointer="16035" transliteratedLexiconItem="hwpiy">
+							<verb binyan="Hif'il" gender="masculine" number="singular" person="3" register="formal" root="יפע" spelling="standard" tense="past"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="4" surface="בבית">
+					<analysis id="1" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="בַּיִת" lexiconItem="בית" lexiconPointer="35275" transliteratedLexiconItem="bit">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="בַּיִת" lexiconItem="בית" lexiconPointer="35275" transliteratedLexiconItem="bit">
+							<noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="1.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="בַּיִת" lexiconItem="בית" lexiconPointer="35275" transliteratedLexiconItem="bit">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="בֵּית" lexiconItem="בית" lexiconPointer="27940" transliteratedLexiconItem="bit">
+							<properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="symbol"/>
+						</base>
+					</analysis>
+					<analysis id="5" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="בֵּית" lexiconItem="בית" lexiconPointer="27940" transliteratedLexiconItem="bit">
+							<properName definiteness="true" gender="feminine" number="singular" register="formal" spelling="standard" type="symbol"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="5" surface="הסטודנט">
+					<analysis id="1" score="1.0">
+						<base dottedLexiconItem="סְטוּדֶנְט" lexiconItem="סטודנט" lexiconPointer="21260" transliteratedLexiconItem="svwdnv">
+							<noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="6" surface=".">
+					<analysis id="1" score="1.0">
+						<base>
+							<punctuation/>
+						</base>
+					</analysis>
+				</token>
+			</sentence>
+		</paragraph>
+	</article>
+</corpus>
+
+

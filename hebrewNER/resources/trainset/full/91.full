@@ -1,0 +1,122 @@
+1	1	1	המשטרה	משטרה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	2	חוקרת	חקר	-	-	F	V	-	{verb}	O
+1	1	3	אם	אם	-	-	F	C	-	{conjunction} []	O
+1	1	4	חברי	חבר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	5	כת	כת	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	6	מסיונרית	מסיונרית	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	1	7	ניסו	ניסה	-	-	F	V	-	{verb}	O
+1	1	8	לאלץ	אילץ	-	-	F	V	-	{verb}	O
+1	1	9	גבר	גבר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	10	שפרש	פרש	שC	-	F	V	-	{verb}	O
+1	1	11	מהם	מן	-	-	F	P	-	{preposition} []	O
+1	1	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	13	לשוב	שב	-	-	F	V	-	{verb}	O
+1	1	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	15	באמצעות	באמצעות	-	-	F	P	-	{preposition} []	O
+1	1	16	שימוש	שימוש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	17	באלימות	אלימות	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	תושב	תושב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	2	נצרת	נצרה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_LOC
+1	2	3	עילית	עילית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	I_LOC
+1	2	4	שנעצר	נעצר	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	5	בחשד	חשד	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	6	לאיומים	איום	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	7	על	על	-	-	F	P	-	{preposition} []	O
+1	2	8	אשתו	איש	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	2	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	10	התגלה	התגלה	-	-	F	V	-	{verb}	O
+1	2	11	במהלך	מהלך	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	12	חקירה	חקירה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	13	בתחנת	תחנה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	14	משטרה	משטרה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	15	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	16	למעשה	למעשה	-	-	F	A	-	{adverb} []	O
+1	2	17	הוא	הוא	-	-	F	V	-	{verb}	O
+1	2	18	קורבן	קורבן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	19	לאלימות	אלימות	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	מפקד	פיקד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	2	תחנת	תחנה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	3	3	נצרת	נצרה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	3	4	עילית	עילית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	3	5	רב	רב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	6	פקד	פיקד	-	-	F	V	-	{verb}	O
+1	3	7	רפי	רפי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	3	8	בן	בן	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_PERS
+1	3	9	דוד	בן דוד	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_PERS
+1	3	10	מסר	מסר	-	-	F	V	-	{verb}	O
+1	3	11	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	3	12	הגבר	גבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	13	והאשה	איש	וC	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	14	השתייכו	השתייך	-	-	F	V	-	{verb}	O
+1	3	15	לכת	לכת	-	-	F	MWE	-	{MWE} []	O
+1	3	16	מסיונרית	מסיונרית	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	3	17	וכשהחליט	החליט	וC-כשC	-	F	V	-	{verb}	O
+1	3	18	הגבר	גבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	19	לנטוש	נטש	-	-	F	V	-	{verb}	O
+1	3	20	את	את	-	-	F	P	-	{preposition} []	O
+1	3	21	הכת	כת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	22	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	23	הגיעו	הגיע	-	-	F	V	-	{verb}	O
+1	3	24	חברי	חבר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	25	הכת	כת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	26	בעידודה	עידוד	בP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	3	27	של	של	-	-	F	P	-	{preposition} []	O
+1	3	28	אשתו	איש	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	3	29	לדירתם	דירה	לP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	3	30	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	31	כדי	כדי	-	-	F	C	-	{conjunction} []	O
+1	3	32	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	33	לשכנעו	שכנע	-	-	F	V	-	{verb}	O
+1	3	34	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	35	לשוב	שב	-	-	F	V	-	{verb}	O
+1	3	36	ולהשתתף	השתתף	וC	-	F	V	-	{verb}	O
+1	3	37	במפגשיהם	מפגש	בP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	3	38	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	כיוון	כיוון	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: true),(pos: conjunction)]	O
+1	4	2	שסירב	סירב	שC	-	F	V	-	{verb}	O
+1	4	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	4	הוכה	הוכה	-	-	F	V	-	{verb}	O
+1	4	5	מכות	הכה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	6	נמרצות	נמרץ	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	בן	בן	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_PERS
+1	5	2	דוד	בן דוד	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_PERS
+1	5	3	ציין	ציין	-	-	F	V	-	{verb}	O
+1	5	4	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	5	5	האשה	איש	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	6	ניצלה	ניצל	-	-	F	V	-	{verb}	O
+1	5	7	את	את	-	-	F	P	-	{preposition} []	O
+1	5	8	התלונה	תלונה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	9	כדי	כדי	-	-	F	C	-	{conjunction} []	O
+1	5	10	להרחיק	הרחיק	-	-	F	V	-	{verb}	O
+1	5	11	את	את	-	-	F	P	-	{preposition} []	O
+1	5	12	בעלה	בעל	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	5	13	מדירתם	הדיר	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	5	14	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	בעקבות	בעקבות	-	-	F	P	-	{preposition} []	O
+1	6	2	הפרשה	פרשה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	4	נחקרה	נחקר	-	-	F	V	-	{verb}	O
+1	6	5	האישה	איש	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	6	וכן	כן	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	7	מעורבים	מעורב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	8	נוספים	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	6	9	ובכוונת	כוונת	וC-בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	6	10	חוקרי	חוקר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	6	11	תחנת	תחנה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	6	12	נצרת	נצרה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	6	13	עילית	עילית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	6	14	לבדוק	בדק	-	-	F	V	-	{verb}	O
+1	6	15	גם	גם	-	-	F	A	-	{adverb} []	O
+1	6	16	את	את	-	-	F	P	-	{preposition} []	O
+1	6	17	פעילות	פעיל	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	6	18	הכת	כת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	19	המסיונרית	מסיונרית	-	D	F	R	-	{properName} [(definiteness: true)]	O
+1	6	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	7	2	ר	ר	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	7	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	7	4	א	א	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	7	5	)	)	-	-	F	PNCT	-	{punctuation} []	O

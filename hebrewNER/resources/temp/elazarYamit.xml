@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus comment="versions info: lexicon: 13/03/2013; morphologicalAnalyzer: 1.8 (13/03/2013); corpus schema 16/06/2009; lexicon schema 16/06/2009" email="mila@cs.technion.ac.il" maintainer="Slava Demender" name="Analysis Results (yeda) @ Sun Aug 30 13:04:37 IDT 2015">
+	<article id="1">
+		<paragraph id="1">
+			<sentence id="1">
+				<token id="1" surface="אלעזר">
+					<analysis id="1" score="0.5">
+						<base lexiconItem="אלעזר" lexiconPointer="12919" transliteratedLexiconItem="alyzr">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.5">
+						<base lexiconItem="אלעזר" lexiconPointer="27163" transliteratedLexiconItem="alyzr">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="location"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="2" surface="גר">
+					<analysis id="1" score="0.5">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<verb binyan="Pa'al" gender="masculine" number="singular" person="3" register="formal" root="גור" spelling="standard" tense="past"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="גור" spelling="standard" status="absolute" type="noun"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="0.5">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="גור" spelling="standard" status="absolute" type="verb"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.0">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="גור" spelling="standard" status="absolute" type="adjective"/>
+						</base>
+					</analysis>
+					<analysis id="5" score="0.0">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="גור" spelling="standard" status="construct" type="noun"/>
+						</base>
+					</analysis>
+					<analysis id="6" score="0.0">
+						<base dottedLexiconItem="גֵּר" lexiconItem="גר" lexiconPointer="17178" transliteratedLexiconItem="gr">
+							<noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="7" score="0.0">
+						<base dottedLexiconItem="גֵּר" lexiconItem="גר" lexiconPointer="17178" transliteratedLexiconItem="gr">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="3" surface="באלעזר">
+					<analysis id="1" score="0.5">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base lexiconItem="אלעזר" lexiconPointer="12919" transliteratedLexiconItem="alyzr">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.5">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base lexiconItem="אלעזר" lexiconPointer="27163" transliteratedLexiconItem="alyzr">
+							<properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="location"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="4" surface="וימית">
+					<analysis id="1" score="0.0">
+						<prefix function="conjunction" id="1" surface="ו"/>
+						<base dottedLexiconItem="יַמִּי" lexiconItem="ימי" lexiconPointer="7267" transliteratedLexiconItem="imi">
+							<adjective definiteness="false" function="adjective" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<prefix function="conjunction" id="1" surface="ו"/>
+						<base dottedLexiconItem="הֵמִית" lexiconItem="המית" lexiconPointer="7728" transliteratedLexiconItem="hmit">
+							<verb binyan="Hif'il" gender="masculine" number="singular" person="3" register="formal" root="מות" spelling="standard" tense="future"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="1.0">
+						<prefix function="conjunction" id="1" surface="ו"/>
+						<base lexiconItem="ימית" lexiconPointer="11723" transliteratedLexiconItem="imit">
+							<properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="5" surface="גרה">
+					<analysis id="1" score="0.16666666666666666">
+						<base dottedLexiconItem="גֵּרָה" lexiconItem="גרה" lexiconPointer="8767" transliteratedLexiconItem="grh">
+							<verb binyan="Pi'el" gender="masculine" number="singular" person="3" register="formal" root="גרה" spelling="standard" tense="past"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.16666666666666666">
+						<base dottedLexiconItem="גֵּרָה" lexiconItem="גרה" lexiconPointer="8767" transliteratedLexiconItem="grh">
+							<verb binyan="Pi'el" gender="masculine" number="singular" person="2" register="formal" root="גרה" spelling="standard" tense="imperative"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="0.16666666666666666">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<verb binyan="Pa'al" gender="feminine" number="singular" person="3" register="formal" root="גור" spelling="standard" tense="past"/>
+						</base>
+					</analysis>
+					<analysis id="4" score="0.0">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="גור" spelling="standard" type="noun"/>
+						</base>
+						<suffix function="possessive" gender="feminine" number="singular" person="3"/>
+					</analysis>
+					<analysis id="5" score="0.0">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" definiteness="false" gender="feminine" number="singular" person="any" register="formal" root="גור" spelling="standard" status="absolute" type="noun"/>
+						</base>
+					</analysis>
+					<analysis id="6" score="0.16666666666666666">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" definiteness="false" gender="feminine" number="singular" person="any" register="formal" root="גור" spelling="standard" status="absolute" type="verb"/>
+						</base>
+					</analysis>
+					<analysis id="7" score="0.0">
+						<base dottedLexiconItem="גָּר" lexiconItem="גר" lexiconPointer="10514" transliteratedLexiconItem="gr">
+							<participle binyan="Pa'al" definiteness="false" gender="feminine" number="singular" person="any" register="formal" root="גור" spelling="standard" status="absolute" type="adjective"/>
+						</base>
+					</analysis>
+					<analysis id="8" score="0.0">
+						<base dottedLexiconItem="גֵּר" lexiconItem="גר" lexiconPointer="17178" transliteratedLexiconItem="gr">
+							<noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+						</base>
+						<suffix function="possessive" gender="feminine" number="singular" person="3"/>
+					</analysis>
+					<analysis id="9" score="0.16666666666666666">
+						<base dottedLexiconItem="גֵּרָה" lexiconItem="גירה" lexiconPointer="20550" transliteratedLexiconItem="girh">
+							<verb binyan="Pi'el" gender="masculine" number="singular" person="3" register="formal" root="גרה" spelling="standard" tense="past"/>
+						</base>
+					</analysis>
+					<analysis id="10" score="0.16666666666666666">
+						<base dottedLexiconItem="גֵּרָה" lexiconItem="גירה" lexiconPointer="20550" transliteratedLexiconItem="girh">
+							<verb binyan="Pi'el" gender="masculine" number="singular" person="2" register="formal" root="גרה" spelling="standard" tense="imperative"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="6" surface="בימית">
+					<analysis id="1" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="יַמִּי" lexiconItem="ימי" lexiconPointer="7267" transliteratedLexiconItem="imi">
+							<adjective definiteness="false" function="adjective" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="2" score="0.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base dottedLexiconItem="יַמִּי" lexiconItem="ימי" lexiconPointer="7267" transliteratedLexiconItem="imi">
+							<adjective definiteness="true" function="adjective" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+						</base>
+					</analysis>
+					<analysis id="3" score="1.0">
+						<prefix function="preposition" id="1" surface="ב"/>
+						<base lexiconItem="ימית" lexiconPointer="11723" transliteratedLexiconItem="imit">
+							<properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="person"/>
+						</base>
+					</analysis>
+				</token>
+				<token id="7" surface=".">
+					<analysis id="1" score="1.0">
+						<base>
+							<punctuation/>
+						</base>
+					</analysis>
+				</token>
+			</sentence>
+		</paragraph>
+	</article>
+</corpus>
+

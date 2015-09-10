@@ -1,0 +1,25 @@
+1	1	1	הלילה	לילה	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	2	הפציצו	הפציץ	-	-	F	V	-	{verb}	O
+1	1	3	מטוסי	מטוס	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	4	חיל	חיל	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	1	5	האוויר	חיל אוויר	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	1	6	מטרות	מטר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	7	של	של	-	-	F	P	-	{preposition} []	O
+1	1	8	המשטרה	משטרה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	9	הפלשתינית	פלסטיני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	10	ברפיח	רפיח	בP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	עוד	עוד	-	-	F	A	-	{adverb} []	O
+1	2	2	תקפו	תקף	-	-	F	V	-	{verb}	O
+1	2	3	מטוסינו	מטוס	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	2	4	מפקדות	פיקד	-	-	F	V	-	{verb}	O
+1	2	5	של	של	-	-	F	P	-	{preposition} []	O
+1	2	6	המשטרה	משטרה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	2	7	המיוחדת	יוחד	-	D	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: true),(gender: feminine),(number: singular),(person: any),(status: absolute)]	I_ORG
+1	2	8	ברמאללה	רמאללה	בP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	2	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	כך	כך	-	-	F	Q	-	{pronoun}	O
+1	3	2	נמסר	נמסר	-	-	F	V	-	{verb}	O
+1	3	3	ממקורות	מקור	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	4	בטחוניים	בטחוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	5	.	.	-	-	F	PNCT	-	{punctuation} []	O

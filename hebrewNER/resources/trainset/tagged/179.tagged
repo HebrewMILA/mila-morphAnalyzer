@@ -1,0 +1,35 @@
+1	1	1	במסגרת	מסגרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]
+1	1	2	תרגיל	תרגיל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	3	ההגנה	הגנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]
+1	1	4	האווירית	אווירי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]
+1	1	5	הוצבה	הוצב	-	-	F	V	-	{verb}
+1	1	6	הערב	הערב	-	-	F	A	-	{adverb} []
+1	1	7	סוללת	סלל	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	1	8	טילי	טייל	-	-	F	V	-	{verb}
+1	1	9	פטריוט	פטריוט	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	1	10	בדרום	דרום	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	11	תל	תל	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]
+1	1	12	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]
+1	1	13	.	.	-	-	F	PNCT	-	{punctuation} []
+1	2	1	כך	כך	-	-	F	Q	-	{pronoun}
+1	2	2	פורסם	פורסם	-	-	F	V	-	{verb}
+1	2	3	לפני	לפני	-	-	F	P	-	{preposition} []
+1	2	4	זמן	זמן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	2	5	קצר	קצר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	2	6	בערוץ	ערוץ	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	2	7	1.	1.	-	-	F	R	-	{numberExpression} []
+1	2	8	בעת	עת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]
+1	2	9	מתקפה	מתקפה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	2	10	על	על	-	-	F	P	-	{preposition} []
+1	2	11	עיראק	עיראק	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]
+1	2	12	תוכל	יכול	-	-	F	O	-	{verb}
+1	2	13	הסוללה	סוללה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]
+1	2	14	להגן	הגן	-	-	F	V	-	{verb}
+1	2	15	מפני	מפני	-	-	F	P	-	{preposition} []
+1	2	16	מטוסים	מטוס	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	2	17	הנושאים	נשא	-	-	F	V	-	{verb}
+1	2	18	חומרי	חומרי	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]
+1	2	19	נפץ	חומר נפץ	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]
+1	2	20	וטילים	טיל	וC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	2	21	בליסטיים	בליסטי	-	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]
+1	2	22	.	.	-	-	F	PNCT	-	{punctuation} []

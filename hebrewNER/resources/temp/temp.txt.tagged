@@ -1,0 +1,6 @@
+1	1	1	מתתיהו	מתתיהו	-	-	F	R	person|town	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	1	2	הוא	הוא	-	-	F	V	-	{verb}
+1	1	3	ילד	ילד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	4	מסכן	סיכן	-	-	F	G	-	{adjective} [(binyan: Pi'el),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]
+1	1	5	אומלל	אומלל	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	1	6	.	.	-	-	F	PNCT	-	{punctuation} []

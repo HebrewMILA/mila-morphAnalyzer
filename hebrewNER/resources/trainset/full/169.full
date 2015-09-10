@@ -1,0 +1,88 @@
+1	1	1	ארבעת	ארבעה	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	2	עצורי	עצר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	3	המחתרת	מחתרת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	4	היהודית	יהודי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	5	מבת	מבת	-	-	F	MWE	-	{MWE} []	I_LOC
+1	1	6	-	-	-	-	F	PNCT	-	{punctuation} []	I_LOC
+1	1	7	עין	בת עין	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: propername)]	I_LOC
+1	1	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	9	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	1	10	יורשו	הורשה	-	-	F	V	-	{verb}	O
+1	1	11	החל	החל	-	-	F	V	-	{verb}	O
+1	1	12	מיום	יום	מP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_DATE
+1	1	13	ה'	ה'	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	14	להיפגש	נפגש	-	-	F	V	-	{verb}	O
+1	1	15	עם	עם	-	-	F	P	-	{preposition} []	O
+1	1	16	ילדיהם	ילד	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	1	17	פנים	פנים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine and feminine),(number: plural),(status: absolute)]	O
+1	1	18	מול	מול	-	-	F	P	-	{preposition} []	O
+1	1	19	פנים	פנים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine and feminine),(number: plural),(status: absolute)]	O
+1	1	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	הארבעה	ארבעה	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	3	עופר	עופר	-	-	F	R	person|town	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	4	גמליאל	גמליאל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	6	יוסי	יוסי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	7	בן	בן	-	-	F	MWE	person	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_PERS
+1	2	8	-	-	-	-	F	PNCT	-	{punctuation} []	I_PERS
+1	2	9	ברוך	בן ברוך	-	-	F	MWE	person	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_PERS
+1	2	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	11	ירדן	ירדן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]	I_PERS
+1	2	12	מורג	מורג	-	-	F	R	person|town	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	13	ושלמה	שלמה	וC	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	B_PERS
+1	2	14	דביר	דביר	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	16	הודיעו	הודיע	-	-	F	V	-	{verb}	O
+1	2	17	בעקבות	בעקבות	-	-	F	P	-	{preposition} []	O
+1	2	18	כך	כך	-	-	F	R	organization	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	O
+1	2	19	שהם	שהם	-	-	F	R	location	{properName} [(definiteness: false)]	O
+1	2	20	מסרבים	סירב	-	-	F	V	-	{verb}	O
+1	2	21	לקבל	קיבל	-	-	F	V	-	{verb}	O
+1	2	22	את	את	-	-	F	P	-	{preposition} []	O
+1	2	23	משפחותיהם	משפחה	-	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	2	24	כצעד	צעד	כP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	25	מחאתי	מחאה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	2	26	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	27	ובמקביל	במקביל	וC	-	F	A	-	{adverb} []	O
+1	2	28	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	29	הם	הוא	-	-	F	Q	-	{pronoun}	O
+1	2	30	מבקשים	ביקש	-	-	F	V	-	{verb}	O
+1	2	31	להגיש	הגיש	-	-	F	V	-	{verb}	O
+1	2	32	ערעור	ערעור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	33	על	על	-	-	F	P	-	{preposition} []	O
+1	2	34	ההחלטה	החלטה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	35	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	עד	עד	-	-	F	P	-	{preposition} []	O
+1	3	2	היום	יום	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	3	הורשו	הורשה	-	-	F	V	-	{verb}	O
+1	3	4	הארבעה	ארבעה	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	5	להיפגש	נפגש	-	-	F	V	-	{verb}	O
+1	3	6	עם	עם	-	-	F	P	-	{preposition} []	O
+1	3	7	ילדיהם	ילד	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	3	8	ונשותיהם	איש	וC	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	3	9	באופן	אופן	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	10	אישי	אישי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	11	ללא	ללא	-	-	F	P	-	{preposition} []	O
+1	3	12	הפרעה	הפרעה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	הנהלת	הנהלה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	2	כלא	כלא	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	4	3	איילון	איילון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	4	4	הודיעה	הודיע	-	-	F	V	-	{verb}	O
+1	4	5	הבוקר	בוקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	6	להם	ל	-	-	F	P	-	{preposition} []	O
+1	4	7	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	4	8	בהוראת	הוראה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	9	השב"כ	שב"כ	-	D	F	R	organization	{properName} [(definiteness: true),(gender: masculine),(number: singular)]	I_ORG
+1	4	10	יורשו	הורשה	-	-	F	V	-	{verb}	O
+1	4	11	העצורים	עצר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	12	להיפגש	נפגש	-	-	F	V	-	{verb}	O
+1	4	13	עם	עם	-	-	F	P	-	{preposition} []	O
+1	4	14	עם	עם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	15	משפחותיהם	משפחה	-	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	4	16	רק	רק	-	-	F	A	-	{adverb} []	O
+1	4	17	דרך	דרך	-	-	F	V	-	{verb}	O
+1	4	18	מחיצות	מחיצה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	4	19	זכוכית	זכוכית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	20	.	.	-	-	F	PNCT	-	{punctuation} []	O

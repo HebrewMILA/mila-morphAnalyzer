@@ -1,0 +1,111 @@
+1	1	1	בקבוק	בקבוק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	2	תבערה	תבערה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	3	נזרק	נזרק	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	1	4	בלילה	לילה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	5	שבין	שבי	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	1	6	יום	יום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	7	שני	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	8	לשלישי	שליש	לP	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	B_DATE
+1	1	9	לבית	בית	לP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	1	10	הכנסת	בית כנסת	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	1	11	בעיר	עיר	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	12	קלישי	קלישי	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	1	13	סו	סו	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	1	14	בואה	בואה	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	1	15	צפונית	צפוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	16	לפריס	פריז	לP	-	F	R	location|person	{properName} [(definiteness: false)]	I_LOC
+1	1	17	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	18	וגרם	גרם	וC	-	T	N	-	{noun} [(foreign: true),(gender: masculine),(number: singular),(status: construct)]	O
+1	1	19	נזקים	ניזק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	20	כבדים	כבד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	סאמי	סאמי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	2	גוזלן	גוזל	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	I_PERS
+1	2	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	4	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	5	הקהילה	קהילה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	6	היהודית	יהודי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	2	7	בקלישי	בקלישי	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	2	8	סו	סו	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	2	9	בואה	בואה	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	2	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	11	אמר	המר	-	-	F	V	-	{verb}	O
+1	2	12	בשיחה	שח	-	-	F	V	-	{verb}	O
+1	2	13	טלפונית	טלפונית	-	-	F	A	-	{adverb} []	O
+1	2	14	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	15	לדעתו	ידע	-	-	F	V	-	{verb}	O
+1	2	16	נזרק	נזרק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	17	בקבוק	בקבוק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	18	התבערה	תבערה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	19	על	על	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	2	20	ידי	על יד	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 2),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	2	21	תומכי	תומך	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	22	המאבק	איבק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	23	הפלשתיני	פלסטיני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	2	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	משטרת	משטרה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	3	2	קלישי	קלישי	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	3	3	סו	סו	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	3	4	בואה	בואה	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	3	5	פתחה	פיתח	-	-	F	V	-	{verb}	O
+1	3	6	בחקירה	חקירה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	לדברי	דבר	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	4	2	גוזלן	גוזל	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	I_PERS
+1	4	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	4	אין	אין	-	-	F	O	-	{verb}	O
+1	4	5	זו	זו	-	-	F	Q	-	{pronoun}	O
+1	4	6	הפעם	פעם	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	7	הראשונה	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	8	שבית	בית	שC	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	4	9	הכנסת	בית כנסת	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	4	10	נפגע	נפגע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	לדבריו	דבר	לP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	5	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	5	3	בערב	ערב	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_DATE
+1	5	4	יום	יום	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_DATE
+1	5	5	כיפור	יום כיפור	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_DATE
+1	5	6	האחרון	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	7	נזרק	נזרק	-	-	F	V	-	{verb}	O
+1	5	8	בקבוק	בקבוק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	5	9	תבערה	תבערה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	5	10	למקום	מקום	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	5	12	והיה	היה	וC	-	F	V	-	{verb}	O
+1	5	13	צורך	צרך	-	-	F	V	-	{verb}	O
+1	5	14	לפנות	פנה	-	-	F	V	-	{verb}	O
+1	5	15	את	את	-	-	F	P	-	{preposition} []	O
+1	5	16	המתפללים	מתפלל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	כן	כן	-	-	F	A	-	{adverb} []	O
+1	6	2	ציין	ציין	-	-	F	V	-	{verb}	O
+1	6	3	גוזלן	גוזל	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	I_PERS
+1	6	4	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	6	5	מאז	מאז	-	-	F	A	-	{adverb} []	O
+1	6	6	פרצה	פרץ	-	-	F	V	-	{verb}	O
+1	6	7	האינתיפדה	אינתיפדה	-	D	F	R	-	{properName} [(definiteness: true)]	I_MISC_EVENT
+1	6	8	בישראל	ישראל	בP	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	6	9	נימנו	נים	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	6	10	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	6	11	מ	מ	מP	-	F	-	-	[]	O
+1	6	12	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	6	13	250	250	-	-	F	R	-	{numeral} []	O
+1	6	14	אירועים	אירוע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	15	אנטי	אנטי	-	-	F	O	-	{wPrefix} [(definiteness: false),(polarity: negative)]	O
+1	6	16	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	6	17	יהודים	יהודי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	6	18	באיזור	איזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	6	19	פריס	פריז	-	-	F	R	location|person	{properName} [(definiteness: false)]	I_LOC
+1	6	20	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	21	בעיקר	בעיקר	-	-	F	A	-	{adverb} []	O
+1	6	22	נסיונות	ניסיון	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	6	23	תקיפה	תקיפה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	24	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	6	25	מילולית	מילולי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	26	ופיסית	פיסי	וC	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	27	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	6	28	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	29	הצתות	הצתה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	6	30	וכדומה	וכדומה	-	-	F	A	-	{adverb} []	O
+1	6	31	.	.	-	-	F	PNCT	-	{punctuation} []	O

@@ -1,0 +1,81 @@
+1	1	1	אריאל	אריאל	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	2	רביב	רביב	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	4	חייל	חייל	-	-	F	V	-	{verb}	O
+1	1	5	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	1	6	שנהרג	נהרג	שC	-	F	V	-	{verb}	O
+1	1	7	בתאונת	בתאונת	-	-	F	MWE	-	{MWE} []	O
+1	1	8	אימונים	אימון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	9	לפני	לפני	-	-	F	P	-	{preposition} []	O
+1	1	10	כיומיים	יום	כP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: dual),(status: absolute)]	O
+1	1	11	יובא	הובא	-	-	F	V	-	{verb}	O
+1	1	12	היום	היום	-	-	F	A	-	{adverb} []	O
+1	1	13	למנוחות	מנוחה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	14	בשעה	שעה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	I_TIME
+1	1	15	:	:	-	-	F	PNCT	-	{punctuation} []	I_TIME
+1	1	16	13:00	13:00	-	-	F	R	-	{numberExpression} []	I_TIME
+1	1	17	בבית	בית	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	1	18	העלמין	בית עלמין	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	1	19	הצבאי	צבאי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	20	בהר	בהר	-	-	F	MWE	-	{MWE} []	I_LOC
+1	1	21	הרצל	הרצל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	22	בירושלים	ירושלים	בP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	B_LOC
+1	1	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	מחקירה	חקירה	מP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	2	ראשונית	ראשוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	3	מתאונת	תאונה	מP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	4	האימונים	אימון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	5	עולה	עלה	-	-	F	V	-	{verb}	O
+1	2	6	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	7	רביב	רביב	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	8	נפגע	נפגע	-	-	F	V	-	{verb}	O
+1	2	9	מכדור	כדור	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	10	תועה	תעה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	2	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	12	שירה	שיר	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	2	13	לוחם	לחם	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	2	14	אחר	אחר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	15	בכוח	בכוח	-	-	F	A	-	{adverb} []	O
+1	2	16	סמוך	סמך	-	-	F	V	-	{verb}	O
+1	2	17	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	18	במסגרת	מסגרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	19	התרגיל	תרגיל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	20	המשותף	שותף	-	D	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: true),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	2	21	שנערך	נערך	שC	-	F	V	-	{verb}	O
+1	2	22	בין	בין	-	-	F	P	-	{preposition} []	O
+1	2	23	הכוחות	כוח	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	ועדת	ועדת	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	3	2	החקירה	ועדת חקירה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	3	3	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	4	שמונתה	מונה	שC	-	F	V	-	{verb}	O
+1	3	5	לבדיקת	בדיקה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	6	נסיבות	נסיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	7	האירוע	אירוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	8	עדיין	עדיין	-	-	F	A	-	{adverb} []	O
+1	3	9	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	3	10	סיימה	סיים	-	-	F	V	-	{verb}	O
+1	3	11	את	את	-	-	F	P	-	{preposition} []	O
+1	3	12	חקירתה	חקירה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	3	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	שר	שר	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	4	2	הביטחון	שר ביטחון	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	4	3	והרמטכ"ל	רמטכ"ל	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	4	החליטו	החליט	-	-	F	V	-	{verb}	O
+1	4	5	על	על	-	-	F	P	-	{preposition} []	O
+1	4	6	מחר	מחר	-	-	F	A	-	{adverb} []	O
+1	4	7	כעל	על	כP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	4	9	יום	יום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	10	ללא	ללא	-	-	F	P	-	{preposition} []	O
+1	4	11	אימונים	אימון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	12	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	4	13	בצה"ל	צה"ל	בP	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	4	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	15	עקב	עקב	-	-	F	P	-	{preposition} []	O
+1	4	16	ריבוי	ריבוי	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	17	תאונות	תאונה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	4	18	האימונים	אימון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	19	בשבועות	שבועה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	4	20	האחרונים	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
