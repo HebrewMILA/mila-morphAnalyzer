@@ -9,6 +9,8 @@ import java.util.HashMap;
  * underlying structure.
  */
 public class Inflections implements Serializable {
+	private static final long serialVersionUID = -4324538517485162903L;
+	
 	static private HashMap<String, ArrayList<String>> map = null;
 
 	/** Constructs an empty HashChain. */

@@ -7,6 +7,8 @@ import java.util.HashMap;
 import mila.lexicon.dbUtils.MWE1record;
 
 public class MWE1records implements Serializable {
+	private static final long serialVersionUID = 3795100190993784553L;
+	
 	static private HashMap<String, ArrayList<MWE1record>> map = null;
 
 	/** Constructs an empty HashChain. */

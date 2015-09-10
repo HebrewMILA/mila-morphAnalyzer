@@ -2,7 +2,6 @@ package mila.lexicon.utils;
 
 import java.util.StringTokenizer;
 
-import mila.lexicon.analyse.Constants;
 import static mila.lexicon.analyse.Constants.*;
 
 public class StringUtils  {

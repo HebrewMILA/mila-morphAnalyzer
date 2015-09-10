@@ -167,6 +167,7 @@ final class Point<X, Y> implements Serializable {
 		return x.hashCode() * 31 + y.hashCode();
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public boolean equals(Object other) {
 		return !(other == null || !(other instanceof Point)) && equals((Point) other);
