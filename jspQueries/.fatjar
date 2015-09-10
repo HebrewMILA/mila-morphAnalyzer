@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sun Aug 02 10:38:31 IDT 2009
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=JspQueries.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|JspQueries>~gen/;<po|JspQueries>~lexicon/~GeneratorViewer.class;<po|JspQueries>~lexicon/~ShowLexiconStatistic.class;<po|JspQueries>~lexicon/~ShowNounInflections.class;<po|JspQueries>~lexicon/~ShowNumeralInflections.class;<po|JspQueries>~lexicon/~ShowPrepositionInflections.class;<po|JspQueries>~lexicon/~ShowVerbInflections.class;<po|JspQueries>~lexicon/~YahooSearch.class;<jar|servlet.jar>
+includes=
