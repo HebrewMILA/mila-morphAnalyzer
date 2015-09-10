@@ -8,9 +8,9 @@ package mila.dataStructures;
  * @author Dalia Bojan
  * @version     %G%
  */
-import mila.lexicon.analyse.Constants;
+import static mila.lexicon.analyse.Constants.*;
 
-public class InflectedRecordNum implements Constants {
+public class InflectedRecordNum {
 	/** lexicon id of the lexicon entry relevant to the inflected form */
 	int id = -1;
 	/** Hebrew form of the inflected form */

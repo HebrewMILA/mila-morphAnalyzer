@@ -1,5 +1,5 @@
 package mila.lexicon.analyse;
-
+import static mila.lexicon.analyse.Constants.*;
 /**
  * 
  * Num2Str.java Used when using data files to translate the digits values to
@@ -9,7 +9,7 @@ package mila.lexicon.analyse;
  * @version %G%
  */
 
-public class Num2Str implements Constants {
+public class Num2Str {
 	/**
 	 * This method translates data file codes for polarity to strings
 	 * 

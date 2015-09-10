@@ -13,7 +13,6 @@ import java.util.Arrays;
 import mila.corpus.CreateCorpusXML;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
-
 /**
  *
  * XMLMorphAnalyzer.java Purpose: interface to the morphological analyzer -
@@ -23,7 +22,7 @@ import mila.lexicon.utils.Translate;
  * @version %G%
  */
 
-public class XMLMorphAnalyzer implements Constants {
+public class XMLMorphAnalyzer  {
 	/**
 	 * boolean flag implies whether to print messages of upload data duration
 	 * during the run

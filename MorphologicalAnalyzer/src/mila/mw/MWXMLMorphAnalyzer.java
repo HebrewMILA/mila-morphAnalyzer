@@ -21,7 +21,7 @@ import mila.lexicon.analyse.Data;
 import mila.lexicon.analyse.XMLMorphAnalyzer;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
-
+import static mila.lexicon.analyse.Constants.*;
 /**
  *
  * <p>

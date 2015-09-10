@@ -13,21 +13,19 @@ import java.util.List;
 import java.util.Random;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 
-import mila.corpus.CreateCorpusXML;
 import mila.generated.*;
-import mila.lexicon.analyse.Constants;
 import mila.lexicon.analyse.Data;
 import mila.lexicon.dbUtils.PrefixRecord;
 import mila.lexicon.utils.PrefixRec;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
+import mila.mw.CorpusAnalysisReader;
 
 /**
  * @author daliabo
  */
-public final class MorphMult2TaggerFormat implements Constants {
+public final class MorphMult2TaggerFormat {
 	private BufferedWriter bw = null;
 	private StringBuffer outputString = new StringBuffer();
 	private final static Random generator = new Random();
@@ -542,10 +540,7 @@ public final class MorphMult2TaggerFormat implements Constants {
 		List<SentenceType> sentenceTypeList;
 		List<TokenType> tokenTypeList;
 		List<AnalysisType> analysisTypeList;
-		Corpus collection = null;
-		Unmarshaller unmarshaller = CreateCorpusXML.jc.createUnmarshaller();
-		unmarshaller.setValidating(false);
-		collection = (Corpus) unmarshaller.unmarshal(in);
+		Corpus collection = CorpusAnalysisReader.parse(in);
 		articleTypeList = collection.getArticle();
 		ArticleType article = (ArticleType) articleTypeList.get(0);
 		String gatheredPrefixSurface = "";

@@ -31,13 +31,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import mila.lexicon.analyse.Constants;
 import mila.lexicon.analyse.XMLMorphAnalyzer;
 import mila.lexicon.utils.StringUtils;
 
 import org.dom4j.Document;
 
-public class XMLTokenizer1 implements Constants {
+import static mila.lexicon.analyse.Constants.*;
+
+public class XMLTokenizer1 {
 	protected BufferedReader bi = null;
 	String line = "";
 	protected XMLProcessor xmlTokenizer = null;

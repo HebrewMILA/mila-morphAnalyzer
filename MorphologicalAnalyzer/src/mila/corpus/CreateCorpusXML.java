@@ -13,47 +13,15 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
-import javax.xml.bind.Validator;
 
-import mila.generated.AnalysisType;
-import mila.generated.ArticleType;
-import mila.generated.BaseType;
-import mila.generated.ConjunctionType;
-import mila.generated.CopulaType;
-import mila.generated.Corpus;
-import mila.generated.ExistentialType;
-import mila.generated.ForeignType;
-import mila.generated.GenderNumberPersonType;
-import mila.generated.GenderNumberStatusDefinitenessType;
-import mila.generated.InterjectionType;
-import mila.generated.InterrogativeType;
-import mila.generated.ModalType;
-import mila.generated.NegationType;
-import mila.generated.NumberExpressionType;
-import mila.generated.NumeralType;
-import mila.generated.ObjectFactory;
-import mila.generated.ParagraphType;
-import mila.generated.ParticipleType;
-import mila.generated.PrefixType;
-import mila.generated.PronounType;
-import mila.generated.ProperNameType;
-import mila.generated.PunctuationType;
-import mila.generated.QuantifierType;
-import mila.generated.SentenceType;
-import mila.generated.SuffixType;
-import mila.generated.TitleType;
-import mila.generated.TokenType;
-import mila.generated.URLType;
-import mila.generated.UnknownType;
-import mila.generated.VerbType;
-import mila.generated.WprefixType;
-import mila.lexicon.analyse.Constants;
+import mila.generated.*;
 import mila.lexicon.analyse.Str2Num;
 import mila.lexicon.utils.PrefixRec;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
 import mila.tools.api.MilaException;
 
+import static mila.lexicon.analyse.Constants.*;
 /**
  *
  * CreateCorpusXML.java Purpose: creates the XML output according to
@@ -65,7 +33,7 @@ import mila.tools.api.MilaException;
  * @version %G%
  */
 
-public class CreateCorpusXML implements Constants {
+public class CreateCorpusXML {
 
 	/** Types defined in the automatically generated code of jaxb */
 	public final static JAXBContext jc = acquireJAXBContext();
@@ -109,8 +77,6 @@ public class CreateCorpusXML implements Constants {
 	 * stream)
 	 */
 	protected OutputStreamWriter pOut = null;
-
-	protected Validator validator = null;
 
 	/**
 	 * Empty Constructor - when the output is stream and not file
@@ -1863,17 +1829,10 @@ public class CreateCorpusXML implements Constants {
 		}
 		corpus.setName("Analysis Results");
 		// corpus.setVersion((float) 1.0);
-		// corpus.setMaintainer("Dalia Bojan");
-		corpus.setMaintainer("Slava Demender");
+		corpus.setMaintainer("Yamit Barshatz");
 		corpus.setEmail("mila@cs.technion.ac.il");
 		corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
 				+ "corpus schema 16/06/2009; lexicon schema 16/06/2009");
-		try {
-			validator = jc.createValidator();
-		} catch (final JAXBException e2) {
-			System.err.println("CreateCorpusXML:createXMLdOC Exception while creating Validator");
-			e2.printStackTrace();
-		}
 	}
 
 	/**

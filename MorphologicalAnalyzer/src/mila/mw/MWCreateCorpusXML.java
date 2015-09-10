@@ -18,9 +18,6 @@ import mila.generated.ObjectFactory;
 
 /**
  * @author daliabo
- *
- *         TODO To change the template for this generated type comment go to
- *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class MWCreateCorpusXML extends CreateCorpusXML {
 	public MWCreateCorpusXML() {
@@ -101,12 +98,6 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 
 		corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
 				+ "corpus schema 16/06/2009; lexicon schema 16/06/2009");
-		try {
-			validator = jc.createValidator();
-		} catch (final JAXBException e2) {
-			System.out.println("CreateCorpusXML:createXMLdOC Exception while creating Validator");
-			e2.printStackTrace();
-		}
 	}
 
 	protected void setBase(BaseType base, String transliteratedLexiocnItem, String lexiconItem, String lexiconPointer,

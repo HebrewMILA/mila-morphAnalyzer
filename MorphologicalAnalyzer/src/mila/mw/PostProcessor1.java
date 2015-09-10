@@ -1253,7 +1253,7 @@ public class PostProcessor1 extends Connected {
 		 * "input to postProcessor is null - existing now"); return; }
 		 */
 
-		articles = reader.getArticle();
+		articles = reader.getCorpus().getArticle();
 
 		if (articles == null) {// UPDATE 21.11.10 (yossi) - insted of exiting
 			// return so it can move to next file
@@ -1473,7 +1473,7 @@ public class PostProcessor1 extends Connected {
 
 		final CorpusAnalysisReader reader = new CorpusAnalysisReader(inputFile);
 
-		articles = reader.getArticle();
+		articles = reader.getCorpus().getArticle();
 		if (articles == null) {
 			// return so it can move to next file
 			return;

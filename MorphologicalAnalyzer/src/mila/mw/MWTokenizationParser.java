@@ -24,7 +24,7 @@ import mila.lexicon.utils.Translate;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
-
+import static mila.lexicon.analyse.Constants.*;
 /**
  * @author daliabo
  *

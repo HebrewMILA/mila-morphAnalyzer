@@ -16,7 +16,6 @@ import java.util.StringTokenizer;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 
 import mila.generated.*;
 import mila.lexicon.analyse.Data;
@@ -26,6 +25,8 @@ import mila.lexicon.dbUtils.PrefixRecord;
 import mila.lexicon.utils.PrefixRec;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
+import mila.mw.CorpusAnalysisReader;
+
 import static mila.corpus.CreateCorpusXML.jc;
 
 public final class HMM2Morph {
@@ -1370,9 +1371,7 @@ public final class HMM2Morph {
 	private Corpus parseXML(BufferedReader bi, final InputStream in)
 			throws JAXBException, IOException {
 
-		Unmarshaller unmarshaller = jc.createUnmarshaller();
-		unmarshaller.setValidating(false);
-		Corpus collection = (Corpus) unmarshaller.unmarshal(in);
+		Corpus collection = CorpusAnalysisReader.parse(in);
 		List<ArticleType> articleList = collection.getArticle();
 		ArticleType article = articleList.get(0);
 		String morphSurface = "";
@@ -1614,9 +1613,7 @@ public final class HMM2Morph {
 		List<TokenType> tokenTypeList;
 		List<AnalysisType> analysisTypeList;
 
-		Unmarshaller unmarshaller = jc.createUnmarshaller();
-		unmarshaller.setValidating(false);
-		collection = (Corpus) unmarshaller.unmarshal(in);
+		collection = CorpusAnalysisReader.parse(in);
 		articleTypeList = (List<AnalysisType>) collection.getArticle();
 		ArticleType article = (ArticleType) articleTypeList.get(0);
 		String morphSurface = "";

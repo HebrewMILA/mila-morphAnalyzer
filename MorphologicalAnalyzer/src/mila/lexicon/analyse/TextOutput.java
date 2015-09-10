@@ -14,7 +14,7 @@ import mila.dataStructures.DBInflectionsRecord;
 import mila.dataStructures.InflectedRecordNum;
 import mila.lexicon.dbUtils.PrefixRecord;
 import mila.lexicon.utils.Translate;
-
+import static mila.lexicon.analyse.Constants.*;
 /**
  * @author daliabo
  * 
@@ -22,7 +22,7 @@ import mila.lexicon.utils.Translate;
  *         Window - Preferences - Java - Code Style - Code Templates
  */
 
-public class TextOutput implements Constants {
+public class TextOutput {
 
 	static public void buildSimpleXMLAnalysis(ENUM_OUTPUT_PATTERN outputPatterni, CreateCorpusXML createXML,
 			String baseHebWord, int value) throws Exception {

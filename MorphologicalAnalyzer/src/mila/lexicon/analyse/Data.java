@@ -9,7 +9,7 @@ import mila.dataStructures.InflectedRecordNum;
 import mila.lexicon.dbUtils.PrefixRecord;
 import mila.lexicon.utils.Load2memory;
 import mila.lexicon.utils.Translate;
-
+import static mila.lexicon.analyse.Constants.*;
 /**
  *
  * Data.java Purpose: interface to the databse
@@ -18,7 +18,7 @@ import mila.lexicon.utils.Translate;
  * @version %G%
  */
 
-public class Data implements Constants {
+public class Data  {
 
 	/** path to the inflections data file */
 	public static String dinflectionsFile = "";

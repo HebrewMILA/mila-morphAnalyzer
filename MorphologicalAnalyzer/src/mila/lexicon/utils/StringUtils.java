@@ -3,8 +3,9 @@ package mila.lexicon.utils;
 import java.util.StringTokenizer;
 
 import mila.lexicon.analyse.Constants;
+import static mila.lexicon.analyse.Constants.*;
 
-public class StringUtils implements Constants {
+public class StringUtils  {
 	public static boolean analyzeForeign(String token) {
 		if (token.length() == 0) {
 			return false;

@@ -22,7 +22,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
-
+import static mila.lexicon.analyse.Constants.*;
 /**
  * 
  * TokenizationParse.java Purpose: parse input XML file which contains
@@ -32,7 +32,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * @version %G%
  */
 
-public class TokenizationParser extends DefaultHandler implements Constants {
+public class TokenizationParser extends DefaultHandler  {
 	String outputFile = "";
 
 	/**

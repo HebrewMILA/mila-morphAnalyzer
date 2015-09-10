@@ -5,14 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import mila.generated.ArticleType;
 import mila.generated.Corpus;
 import mila.lexicon.analyse.Constants;
 import mila.tools.api.MilaException;
@@ -36,12 +34,8 @@ public class CorpusAnalysisReader {
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------------------
-	public List<ArticleType> getArticle() {
-		return collection.getArticle();
-	}
-
-	// -------------------------------------------------------------------------------------------------------------------------------
-	private static Corpus parse(InputStream input) {
+	@SuppressWarnings("deprecation")
+	public static Corpus parse(InputStream input) {
 		try {
 			Unmarshaller unmarshaller = jc.createUnmarshaller();
 			unmarshaller.setValidating(false);
@@ -49,6 +43,10 @@ public class CorpusAnalysisReader {
 		} catch (JAXBException e) {
 			throw new MilaException(e);
 		}
+	}
+
+	public Corpus getCorpus() {
+		return collection;
 	}
 
 	public void save(PrintWriter pw) {

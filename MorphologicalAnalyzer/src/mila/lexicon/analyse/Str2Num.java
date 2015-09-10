@@ -5,7 +5,7 @@
  * Window - Preferences - Java - Code Style - Code Templates
  */
 package mila.lexicon.analyse;
-
+import static mila.lexicon.analyse.Constants.*;
 /**
  * 
  * Str2Num.java Purpose: utility class for translating Strings to numbers - used
@@ -16,7 +16,7 @@ package mila.lexicon.analyse;
  * @version %G%
  */
 
-public class Str2Num implements Constants {
+public class Str2Num {
 
 	/**
 	 * This method is used to translate conjunction type strings to codes
