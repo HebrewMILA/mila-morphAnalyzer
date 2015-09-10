@@ -22,6 +22,7 @@ import mila.lexicon.utils.Translate;
 import mila.tools.api.MilaException;
 
 import static mila.lexicon.analyse.Constants.*;
+
 /**
  *
  * CreateCorpusXML.java Purpose: creates the XML output according to
@@ -38,30 +39,30 @@ public class CreateCorpusXML {
 	/** Types defined in the automatically generated code of jaxb */
 	public final static JAXBContext jc = acquireJAXBContext();
 
-	protected ArticleType article;
+	private ArticleType article;
 
 	protected ObjectFactory objFactory;
 
 	protected Corpus corpus;
 
-	protected ParagraphType paragraph;
+	private ParagraphType paragraph;
 
-	protected SentenceType sentence;
+	private SentenceType sentence;
 
 	protected TokenType token;
 
 	protected AnalysisType analysis;
 
-	protected PrefixType pref;
+	private PrefixType pref;
 
 	/** The current token number (id) in the current sentence */
-	protected int tokenCounter = 0;
+	private int tokenCounter = 0;
 
 	/** The current sentence number (id) in the current paragraph */
-	protected int sentenceCounter = 0;
+	private int sentenceCounter = 0;
 
 	/** The current paragraph number (id) in the current article */
-	protected int paragraphCounter = 0;
+	private int paragraphCounter = 0;
 
 	/** The current analysis number (id) in the analyses of the current token */
 	protected int analysisCounter = 0;
@@ -76,7 +77,7 @@ public class CreateCorpusXML {
 	 * used for XML analysis output (there are two output options (by file or by
 	 * stream)
 	 */
-	protected OutputStreamWriter pOut = null;
+	private OutputStreamWriter pOut = null;
 
 	/**
 	 * Empty Constructor - when the output is stream and not file
@@ -999,9 +1000,7 @@ public class CreateCorpusXML {
 		participle.setGender(gender);
 		participle.setNumber(number);
 		participle.setStatus(status);
-		// participle.setRoot(URLEncoder.encode(root,"UTF-8"));
 		participle.setRoot(root);
-		// participle.setTense(tense);
 		participle.setBinyan(binyan);
 		participle.setPerson(person);
 		// definiteness is not relevant for construct form
@@ -1076,63 +1075,44 @@ public class CreateCorpusXML {
 			final String lexiconPointer, final String root, final String binyan, final String definiteness,
 			final String hebWord, final String register, final String spelling, final String dottedLexiconItem,
 			String participleType) {
-		analysisCounter++;
 		try {
+			analysisCounter++;
 			analysis = objFactory.createAnalysisType();
-		} catch (final JAXBException e) {
-			System.err.println(
-					"CreateCorpusXML:createPassiveParticipleAnalysis Exception while create analysis for hebWord="
-							+ hebWord);
+			analysis.setId(String.valueOf(analysisCounter));
+			BaseType base = null;
+			base = objFactory.createBaseType();
+			// !description.equals("")
+			if (description.length() > 0) {
+				setPrefix(description);
+			}
+			setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
+			ParticipleType participle = null;
+			participle = objFactory.createParticipleType();
+			participle.setRegister(register);
+			participle.setSpelling(spelling);
+			participle.setGender(gender);
+			participle.setNumber(number);
+			participle.setStatus(status);
+			participle.setRoot(root);
+			participle.setBinyan(binyan);
+			participle.setPerson(person);
+			if (constructi != ENUM_STATUS.CONSTRUCT_TRUE) {
+				participle.setDefiniteness(definiteness);
+			}
+
+			if (hAttributei == ENUM_HATTRIBUTE.SUBCOORDINATING) {
+				participle.setSubcoordinating("true");
+				participle.setDefiniteness(null);
+			}
+
+			participle.setType(participleType);
+			participle.setMood("passive");
+			base.setParticiple(participle);
+			analysis.setBase(base);
+			token.getAnalysis().add(analysis);
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-		analysis.setId(String.valueOf(analysisCounter));
-		BaseType base = null;
-		try {
-			base = objFactory.createBaseType();
-		} catch (final JAXBException e1) {
-			System.err
-					.println("CreateCorpusXML:createPassiveParticipleAnalysis Exception while create base for hebWord="
-							+ hebWord);
-			e1.printStackTrace();
-		}
-		// !description.equals("")
-		if (description.length() > 0) {
-			setPrefix(description);
-		}
-		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
-		ParticipleType participle = null;
-		try {
-			participle = objFactory.createParticipleType();
-		} catch (final JAXBException e2) {
-			System.err.println(
-					"CreateCorpusXML:createPassiveParticipleAnalysis Exception while createPassiveParticipleType for hebWord="
-							+ hebWord);
-			e2.printStackTrace();
-		}
-		participle.setRegister(register);
-		participle.setSpelling(spelling);
-		participle.setGender(gender);
-		participle.setNumber(number);
-		participle.setStatus(status);
-		// participle.setRoot(URLEncoder.encode(root,"UTF-8"));
-		participle.setRoot(root);
-		participle.setBinyan(binyan);
-		participle.setPerson(person);
-		// !status.equals("construct")
-		if (constructi != ENUM_STATUS.CONSTRUCT_TRUE) {
-			participle.setDefiniteness(definiteness);
-		}
-
-		if (hAttributei == ENUM_HATTRIBUTE.SUBCOORDINATING) {
-			participle.setSubcoordinating("true");
-			participle.setDefiniteness(null);
-		}
-
-		participle.setType(participleType);
-		participle.setMood("passive");
-		base.setParticiple(participle);
-		analysis.setBase(base);
-		token.getAnalysis().add(analysis);
 	}
 
 	/**
@@ -1147,79 +1127,47 @@ public class CreateCorpusXML {
 	 * @param hAttributei
 	 */
 	public void createPrefixesAnalysis(final String description, ENUM_HATTRIBUTE hAttributei) {
-		analysisCounter++;
 		try {
+			analysisCounter++;
 			analysis = objFactory.createAnalysisType();
-		} catch (final JAXBException e) {
-			System.err
-					.println("CreateCorpusXML:createPrefixesAnalysis Exception while creating analysis for description="
-							+ description);
-			e.printStackTrace();
-		}
-		analysis.setId(String.valueOf(analysisCounter));
+			analysis.setId(String.valueOf(analysisCounter));
 
-		if (description.equals("definiteArticle")) {
-			try {
+			if (description.equals("definiteArticle")) {
 				pref = objFactory.createPrefixType();
-			} catch (final JAXBException e1) {
-				System.err.println(
-						"CreateCorpusXML:createPrefixesAnalysis Exception while creating PrefixType for description="
-								+ description);
-				e1.printStackTrace();
-			}
-			pref.setId("1");
-			pref.setFunction("definiteArticle");
-			pref.setSurface("ה");
-			analysis.getPrefix().add(pref);
-		} else {
-			List<PrefixRec> list = null;
-			try {
-				list = Translate.analyzeMixedHebEng(description);
-			} catch (final UnsupportedEncodingException e1) {
-				System.err.println(
-						"CreateCorpusXML:createPrefixesAnalysis Exception while analyzeMixedHebEng for description="
-								+ description);
-				e1.printStackTrace();
-			}
-			final int size = list.size();
-			PrefixRec prefixRec = new PrefixRec();
-			for (int i = 0; i < size; i++) {
-				prefixRec = (PrefixRec) list.get(i);
-				try {
-					pref = objFactory.createPrefixType();
-				} catch (final JAXBException e2) {
-					System.err.println(
-							"CreateCorpusXML:createPrefixesAnalysis Exception while createPrefixType for description="
-									+ description);
-					e2.printStackTrace();
-				}
-				pref.setId(String.valueOf(i + 1));
-				pref.setFunction(prefixRec.getFunction());
-				String prefixSurface = prefixRec.getSurface();
-				// for the case of definite article
-				if (prefixSurface.length() == 0) {
-					prefixSurface = "unspecified";
-				}
-				pref.setSurface(prefixSurface);
-				analysis.getPrefix().add(pref);
-			}
-			// h handling- the h is always at the end of the prefix
-			if (hAttributei == ENUM_HATTRIBUTE.PREFIX_STANDALONE_H) {
-				try {
-					pref = objFactory.createPrefixType();
-				} catch (final JAXBException e2) {
-					System.err.println(
-							"CreateCorpusXML:createPrefixesAnalysis Exception while createPrefixType for description="
-									+ description);
-					e2.printStackTrace();
-				}
-				pref.setId(String.valueOf(size + 1));
+				pref.setId("1");
 				pref.setFunction("definiteArticle");
 				pref.setSurface("ה");
 				analysis.getPrefix().add(pref);
+			} else {
+				List<PrefixRec> list = Translate.analyzeMixedHebEng(description);
+				final int size = list.size();
+				PrefixRec prefixRec = new PrefixRec();
+				for (int i = 0; i < size; i++) {
+					prefixRec = list.get(i);
+					pref = objFactory.createPrefixType();
+					pref.setId(String.valueOf(i + 1));
+					pref.setFunction(prefixRec.getFunction());
+					String prefixSurface = prefixRec.getSurface();
+					// for the case of definite article
+					if (prefixSurface.length() == 0) {
+						prefixSurface = "unspecified";
+					}
+					pref.setSurface(prefixSurface);
+					analysis.getPrefix().add(pref);
+				}
+				// h handling- the h is always at the end of the prefix
+				if (hAttributei == ENUM_HATTRIBUTE.PREFIX_STANDALONE_H) {
+					pref = objFactory.createPrefixType();
+					pref.setId(String.valueOf(size + 1));
+					pref.setFunction("definiteArticle");
+					pref.setSurface("ה");
+					analysis.getPrefix().add(pref);
+				}
 			}
+			token.getAnalysis().add(analysis);
+		} catch (JAXBException e) {
+			e.printStackTrace();
 		}
-		token.getAnalysis().add(analysis);
 	}
 
 	/**
@@ -1245,13 +1193,9 @@ public class CreateCorpusXML {
 			final String lexiconPointer, final String hebWord, final String register, final String spelling,
 			final String dottedLexiconItem, final String PGN) throws JAXBException {
 		analysisCounter++;
-
 		analysis = objFactory.createAnalysisType();
-
 		analysis.setId(String.valueOf(analysisCounter));
-		BaseType base = null;
-
-		base = objFactory.createBaseType();
+		BaseType base = objFactory.createBaseType();
 
 		if (description.length() > 0) {
 			setPrefix(description);
@@ -1308,22 +1252,14 @@ public class CreateCorpusXML {
 		analysis = objFactory.createAnalysisType();
 
 		analysis.setId(String.valueOf(analysisCounter));
-		BaseType base = null;
-
-		base = objFactory.createBaseType();
+		BaseType base = objFactory.createBaseType();
 
 		if (description.length() > 0) {
 			setPrefix(description);
 		}
 		setBase(base, transliteratedLexiocnItem, lexiconItem, lexiconPointer, dottedLexiconItem);
 		PronounType pronoun = null;
-		try {
-			pronoun = objFactory.createPronounType();
-		} catch (final JAXBException e2) {
-			System.err.println(
-					"CreateCorpusXML:createPronounAnalysis Exception while createPronounType for hebWord=" + hebWord);
-			e2.printStackTrace();
-		}
+		pronoun = objFactory.createPronounType();
 		pronoun.setRegister(register);
 		pronoun.setSpelling(spelling);
 		final ENUM_GENDER genderi = Str2Num.str2NumGender(gender, lexiconItem, hebWord);
@@ -1599,15 +1535,14 @@ public class CreateCorpusXML {
 	 *            attribute
 	 */
 	public void createToken(String surface) {
-		tokenCounter++;
 		try {
+			tokenCounter++;
 			token = objFactory.createTokenType();
-		} catch (final JAXBException e) {
-			System.err.println("CreateCorpusXML:createToken Exception while creating token=" + surface);
+			token.setSurface(surface);
+			token.setId(String.valueOf(tokenCounter));
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-		token.setSurface(surface);
-		token.setId(String.valueOf(tokenCounter));
 	}
 
 	/**
@@ -1622,23 +1557,13 @@ public class CreateCorpusXML {
 	 */
 	public void createUnknownAnalysis(final String hebWord, final String transliterated) throws JAXBException {
 		analysisCounter++;
-
 		analysis = objFactory.createAnalysisType();
-
 		analysis.setId(String.valueOf(analysisCounter));
-		BaseType base = null;
-
-		base = objFactory.createBaseType();
-
-		UnknownType unknown = null;
-
-		unknown = objFactory.createUnknownType();
-
+		BaseType base = objFactory.createBaseType();
+		UnknownType unknown = objFactory.createUnknownType();
 		setBase(base, transliterated, hebWord, "0", "");
-
 		base.setUnknown(unknown);
 		analysis.setBase(base);
-
 		token.getAnalysis().add(analysis);
 	}
 
@@ -1820,19 +1745,18 @@ public class CreateCorpusXML {
 	 * This method creates the header of the XML document
 	 */
 	public void createXMLDoc() {
-		objFactory = new ObjectFactory();
 		try {
+			objFactory = new ObjectFactory();
 			corpus = objFactory.createCorpus();
-		} catch (final JAXBException e1) {
-			System.err.println("CreateCorpusXML:createXMLdOC Exception while creating corpus");
-			e1.printStackTrace();
+			corpus.setName("Analysis Results");
+			corpus.setMaintainer("Yamit Barshatz");
+			corpus.setEmail("mila@cs.technion.ac.il");
+			corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
+					+ "corpus schema 16/06/2009; lexicon schema 16/06/2009");
+		} catch (JAXBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		corpus.setName("Analysis Results");
-		// corpus.setVersion((float) 1.0);
-		corpus.setMaintainer("Yamit Barshatz");
-		corpus.setEmail("mila@cs.technion.ac.il");
-		corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
-				+ "corpus schema 16/06/2009; lexicon schema 16/06/2009");
 	}
 
 	/**
@@ -2021,42 +1945,31 @@ public class CreateCorpusXML {
 	 *         (and to the home) -> w+l -> 2
 	 */
 	protected int setPrefix(String description) {
-		String prefixSurface = "";
 		int prefixesCounter = 0;
-		// System.out.println("function =" + function);
-		List<?> list = null;
 		try {
-			list = Translate.analyzeMixedHebEng(description);
-		} catch (final UnsupportedEncodingException e) {
-			System.err.println(
-					"CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description=" + description);
+			String prefixSurface = "";
+			List<PrefixRec> list = Translate.analyzeMixedHebEng(description);
+			final int size = list.size();
+			PrefixRec prefixRec = new PrefixRec();
+			// each prefix contained in the prefix part of the tokenizer apeares
+			// in
+			// separate - we break it
+			for (prefixesCounter = 0; prefixesCounter < size; prefixesCounter++) {
+				prefixRec = list.get(prefixesCounter);
+				pref = objFactory.createPrefixType();
+				pref.setId(String.valueOf(prefixesCounter + 1));
+				pref.setFunction(prefixRec.getFunction());
+				prefixSurface = prefixRec.getSurface();
+				// for the case of definite article
+				// if (prefixSurface.equals(""))
+				// prefixSurface = "unspecified";
+				pref.setSurface(prefixSurface);
+				analysis.getPrefix().add(pref);
+			}
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-		final int size = list.size();
-		// System.out.println("size=" + size);
-		PrefixRec prefixRec = new PrefixRec();
-		// each prefix contained in the prefix part of the tokenizer apeares in
-		// separate - we break it
-		for (prefixesCounter = 0; prefixesCounter < size; prefixesCounter++) {
-			prefixRec = (PrefixRec) list.get(prefixesCounter);
-			try {
-				pref = objFactory.createPrefixType();
-			} catch (final JAXBException e1) {
-				System.err.println(
-						"CreateCorpusXML:setPrefix Exception while createPrefixType for description=" + description);
-				e1.printStackTrace();
-			}
-			pref.setId(String.valueOf(prefixesCounter + 1));
-			pref.setFunction(prefixRec.getFunction());
-			prefixSurface = prefixRec.getSurface();
-			// for the case of definite article
-			// if (prefixSurface.equals(""))
-			// prefixSurface = "unspecified";
-			pref.setSurface(prefixSurface);
-			analysis.getPrefix().add(pref);
-		}
 		return prefixesCounter;
-
 	}
 
 	/**
@@ -2076,37 +1989,17 @@ public class CreateCorpusXML {
 		SuffixType suffix = null;
 		try {
 			suffix = objFactory.createSuffixType();
-		} catch (final JAXBException e3) {
-			e3.printStackTrace();
+			suffix.setFunction(function);
+			suffix.setPerson(StringUtils.getPersonPGN(PGN));
+			suffix.setGender(StringUtils.getGenderPGN(PGN));
+			suffix.setNumber(StringUtils.getNumberPGN(PGN));
+		} catch (JAXBException e) {
+			e.printStackTrace();
 		}
-		suffix.setFunction(function);
-		suffix.setPerson(StringUtils.getPersonPGN(PGN));
-		suffix.setGender(StringUtils.getGenderPGN(PGN));
-		suffix.setNumber(StringUtils.getNumberPGN(PGN));
 		return suffix;
 	}
 
-	// public void createXMLOutputHandling() {
-	// createXMLdOC();
-	// createArticle();
-	// createParagraph();
-	// createSentence();
-	// }
-
-	// public static void main(String[] args) throws Exception {
-	//
-	// // CreateCorpusXML c = new CreateCorpusXML();
-	// // c.createXMLdOC();
-	// // c.createArticle();
-	// // c.createParagraph();
-	// // c.createSentence();
-	// // //c.createToken("dalia");
-	// // c.finalizeSentence();
-	// // c.printDoc();
-	// }
-	
-
-	private static JAXBContext acquireJAXBContext(){
+	private static JAXBContext acquireJAXBContext() {
 		try {
 			return JAXBContext.newInstance(JAXB_PACKAGE);
 		} catch (JAXBException e) {

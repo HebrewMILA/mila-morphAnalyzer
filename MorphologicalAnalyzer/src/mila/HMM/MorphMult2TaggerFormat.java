@@ -8,7 +8,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Random;
 
@@ -449,17 +448,11 @@ public final class MorphMult2TaggerFormat {
 
 	private String handlePrefix(AnalysisType analysis) throws IOException {
 		// System.out.println("(F) handlePrefix");
-		List<?> prefixList = analysis.getPrefix();
-		int prefixListSize = prefixList.size();
+		List<PrefixType> prefixList = analysis.getPrefix();
 		StringBuilder prefixSurfaceSB = new StringBuilder();
-		for (int prefixIndex = 0; prefixIndex < prefixListSize; prefixIndex++) {
-			PrefixType prefix = (PrefixType) prefixList.get(prefixIndex);
+		for (PrefixType prefix : prefixList) {
 			String prefixSurface = prefix.getSurface();
-			// System.out.println("(F) handlePrefix prefixSurface " +
-			// prefixSurface);
 			String transliteratedPrefix = Translate.Heb2Eng(prefixSurface);
-			// System.out.println("(F) handlePrefix transliteratedPrefix " +
-			// transliteratedPrefix);
 			prefixSurfaceSB.append(prefixSurface);
 			bw.write("\t");
 			bw.write("(PREFIX " + transliteratedPrefix + ")");
@@ -694,18 +687,8 @@ public final class MorphMult2TaggerFormat {
 											for (int prefixIndex = 0; prefixIndex < prefixListSize; prefixIndex++) {
 												PrefixRecord pr = Data.analyzePrefixList(prefixIndex);
 												String description = pr.getDescription();
-												List<?> list = null;
-												try {
-													list = Translate.analyzeMixedHebEng(description);
-												} catch (UnsupportedEncodingException e) {
-													System.out.println(
-															"CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description="
-																	+ description);
-													e.printStackTrace();
-												}
-												int size = list.size();
-												for (int prefixesCounter = 0; prefixesCounter < size; prefixesCounter++) {
-													PrefixRec prefixRec = (PrefixRec) list.get(prefixesCounter);
+												List<PrefixRec> list = Translate.analyzeMixedHebEng(description);
+												for (PrefixRec prefixRec : list) {
 													String prefixSurface = prefixRec.getSurface();
 													String transliteratedPrefix = Translate.Heb2Eng(prefixSurface);
 													bw.write("\t");

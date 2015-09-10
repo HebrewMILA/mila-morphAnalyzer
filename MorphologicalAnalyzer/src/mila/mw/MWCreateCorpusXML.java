@@ -14,13 +14,13 @@ import javax.xml.bind.JAXBException;
 import mila.corpus.CreateCorpusXML;
 import mila.generated.BaseType;
 import mila.generated.MWEType;
-import mila.generated.ObjectFactory;
 
 /**
  * @author daliabo
  */
 public class MWCreateCorpusXML extends CreateCorpusXML {
 	public MWCreateCorpusXML() {
+		super();
 	}
 
 	public MWCreateCorpusXML(String outputFile) {
@@ -29,75 +29,52 @@ public class MWCreateCorpusXML extends CreateCorpusXML {
 
 	public void createMWEAnalysis(String description, String transliteratedLexiocnItem, String hebWord,
 			String lexiconPointer, String pos, String mweid, String type, boolean prefix, String definiteness) {
-		analysisCounter++;
 		try {
+			analysisCounter++;
 			analysis = objFactory.createAnalysisType();
-		} catch (final JAXBException e) {
-			System.out.println("CreateCorpusXML:createImpersonalAnalysis Exception while creating analysis for hebWord="
-					+ hebWord);
+			analysis.setId(String.valueOf(analysisCounter));
+			BaseType base = objFactory.createBaseType();
+			if (!description.equals("")) {
+				setPrefix(description);
+			}
+
+			setBase(base, transliteratedLexiocnItem, hebWord, "", hebWord);
+			MWEType mwe1 = objFactory.createMWEType();
+			mwe1.setConsecutive("true");
+			if (mweid.length() == 1 && mweid.charAt(0) == '1') {
+				mwe1.setPos(pos);
+			}
+			mwe1.setId(mweid);
+			if (!definiteness.equals("unspecified")) {
+				mwe1.setDefiniteness(definiteness);
+			}
+			mwe1.setMultiWordPrefixExist(prefix);
+			if (pos.equalsIgnoreCase("propername") && type.charAt(0) != 'u') {
+				mwe1.setType(type);
+			}
+			base.setMWE(mwe1);
+			analysis.setBase(base);
+			token.getAnalysis().add(analysis);
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-		analysis.setId(String.valueOf(analysisCounter));
-		BaseType base = null;
-		try {
-			base = objFactory.createBaseType();
-		} catch (final JAXBException e1) {
-			System.out.println(
-					"CreateCorpusXML:createImpersonalAnalysis Exception while creating base for hebWord=" + hebWord);
-			e1.printStackTrace();
-		}
-		if (!description.equals("")) {
-			setPrefix(description);
-		}
 
-		setBase(base, transliteratedLexiocnItem, hebWord, "", hebWord);
-		MWEType mwe1 = null;
-		try {
-			mwe1 = objFactory.createMWEType();
-		} catch (final JAXBException e2) {
-			System.out.println(
-					"CreateCorpusXML:createImpersonalAnalysis Exception while creating ImpersonalType for hebWord="
-							+ hebWord);
-			e2.printStackTrace();
-		}
-		mwe1.setConsecutive("true");
-		if (mweid.length() == 1 && mweid.charAt(0) == '1') {
-			mwe1.setPos(pos);
-		}
-		mwe1.setId(mweid);
-		if (!definiteness.equals("unspecified")) {
-			mwe1.setDefiniteness(definiteness);
-		}
-		mwe1.setMultiWordPrefixExist(prefix);
-		if (pos.equalsIgnoreCase("propername") && type.charAt(0) != 'u') {
-			mwe1.setType(type);
-		}
-		base.setMWE(mwe1);
-		analysis.setBase(base);
-		token.getAnalysis().add(analysis);
 	}
 
 	@Override
 	public void createXMLDoc() {
-		objFactory = new ObjectFactory();
-		try {
-			corpus = objFactory.createCorpus();
-		} catch (final JAXBException e1) {
-			System.out.println("CreateCorpusXML:createXMLdOC Exception while creating corpus");
-			e1.printStackTrace();
-		}
+		super.createXMLDoc();
+		corpus.setName("Analysis Results (" + getHostname() + ") @ " + Calendar.getInstance().getTime());
+	}
+
+	private static String getHostname() {
 		String hostname = "unknown.unknown";
 		try {
 			hostname = InetAddress.getLocalHost().getHostName();
 		} catch (final Throwable t) {
 
 		}
-		corpus.setName("Analysis Results (" + hostname + ") @ " + Calendar.getInstance().getTime());
-		corpus.setMaintainer("Yamit Barshatz");
-		corpus.setEmail("mila@cs.technion.ac.il");
-
-		corpus.setComment("versions info: lexicon: 13/03/2013;  morphologicalAnalyzer: 1.8 (13/03/2013); "
-				+ "corpus schema 16/06/2009; lexicon schema 16/06/2009");
+		return hostname;
 	}
 
 	protected void setBase(BaseType base, String transliteratedLexiocnItem, String lexiconItem, String lexiconPointer,

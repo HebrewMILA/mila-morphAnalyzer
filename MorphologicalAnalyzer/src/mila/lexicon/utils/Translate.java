@@ -21,7 +21,7 @@ public class Translate {
 	private static HashMap<String, String> hebToEng;
 	private static HashMap<String, String> engToHeb;
 
-	public static List<PrefixRec> analyzeMixedHebEng(String inStr) throws UnsupportedEncodingException {
+	public static List<PrefixRec> analyzeMixedHebEng(String inStr) {
 		PrefixRec prefixRec = null;
 		StringBuffer result = null;
 		StringBuffer tempStr = null;
@@ -47,7 +47,11 @@ public class Translate {
 				tempStr.append(String.valueOf(curChar));
 				i++;
 			}
-			encodedStr = URLDecoder.decode(tempStr.toString(), "UTF-8");
+			try {
+				encodedStr = URLDecoder.decode(tempStr.toString(), "UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
 			prefixRec.setSurface(encodedStr);
 			prefixList.add(prefixRec);
 		}

@@ -1066,15 +1066,7 @@ public final class HMM2Morph {
 						else {
 							String description = pr.getDescription();
 
-							List<PrefixRec> list = null;
-							try {
-								list = Translate.analyzeMixedHebEng(description);
-							} catch (UnsupportedEncodingException e) {
-								System.out.println(
-										"CreateCorpusXML:setPrefix Exception while analyzeMixedHebEng for description="
-												+ description);
-								e.printStackTrace();
-							}
+							List<PrefixRec> list = Translate.analyzeMixedHebEng(description);
 							int size = list.size();
 
 							for (int prefixesCounter = 0; prefixesCounter < size; prefixesCounter++) {
