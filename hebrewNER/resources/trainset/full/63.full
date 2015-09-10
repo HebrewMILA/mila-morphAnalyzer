@@ -1,0 +1,46 @@
+1	1	1	במבצע	מבצע	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	2	מקיף	הקיף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	3	שערכו	ערך	שC	-	F	V	-	{verb}	O
+1	1	4	כוחות	כוח	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	5	הביטחון	ביטחון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	6	לאורך	לאורך	-	-	F	A	-	{adverb} []	O
+1	1	7	קו	קו	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_LOC
+1	1	8	התפר	תפר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	1	9	נתפסו	נתפס	-	-	F	V	-	{verb}	O
+1	1	10	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	1	11	מ	מ	מP	-	F	-	-	[]	O
+1	1	12	3000	3000	-	-	F	R	-	{numeral} []	O
+1	1	13	פלשתינים	פלסטיני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	1	14	שניסו	ניסה	שC	-	F	V	-	{verb}	O
+1	1	15	להסתנן	הסתנן	-	-	F	V	-	{verb}	O
+1	1	16	באופן	אופן	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	17	בלתי	בלתי	-	-	F	O	-	{wPrefix} [(definiteness: false),(polarity: negative)]	O
+1	1	18	חוקי	חוקי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	19	לתחומי	תחום	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	20	מדינת	מדינה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	1	21	ישראל	ישראל	-	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	1	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	במסגרת	מסגרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	2	המבצע	מבצע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	3	נבדקו	נבדק	-	-	F	V	-	{verb}	O
+1	2	4	אלפי	אלף	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	5	פלשתינים	פלסטיני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	2	6	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	פעילות	פעיל	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	2	זו	זו	-	-	F	Q	-	{pronoun}	O
+1	3	3	היא	הוא	-	-	F	V	-	{verb}	O
+1	3	4	במסגרת	מסגרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	5	הכוננות	כוננות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	6	הגבוהה	גבוה	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	7	למניעת	הניע	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	8	פיגועים	פיגוע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	10	שבה	ב	שC	-	F	P	-	{preposition} []	O
+1	3	11	נמצאת	נמצא	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	12	משטרת	משטרה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	3	13	ישראל	ישראל	-	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	3	14	במהלך	מהלך	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	15	חול	חול	-	-	F	MWE	-	{MWE} []	I_DATE
+1	3	16	המועד	הועד	-	-	F	V	-	{verb}	I_DATE
+1	3	17	פסח	פסח	-	-	F	R	dateTime|person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_DATE
+1	3	18	.	.	-	-	F	PNCT	-	{punctuation} []	O

@@ -1,0 +1,40 @@
+1	1	1	רשויות	רשות	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	1	2	הבריאות	בריאה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	3	בסין	סין	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	4	דיווחו	דיווח	-	-	F	V	-	{verb}	O
+1	1	5	על	על	-	-	F	P	-	{preposition} []	O
+1	1	6	9	9	-	-	F	R	-	{numeral} []	O
+1	1	7	מקרי	קירה	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	8	מוות	מוות	-	-	F	MWE	-	{MWE} []	O
+1	1	9	נוספים	נוסף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	10	של	של	-	-	F	P	-	{preposition} []	O
+1	1	11	חולי	חולי	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	12	סארס	סארס	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	14	7	7	-	-	F	R	-	{numeral} []	O
+1	1	15	מהם	מן	-	-	F	P	-	{preposition} []	O
+1	1	16	תושבי	תושב	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	17	בייג'ינג	בייג'ינג	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	נמסר	נמסר	-	-	F	V	-	{verb}	O
+1	2	2	עוד	עוד	-	-	F	A	-	{adverb} []	O
+1	2	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	4	202	202	-	-	F	R	-	{numeral} []	O
+1	2	5	אנשים	איש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	6	אותרו	אותר	-	-	F	V	-	{verb}	O
+1	2	7	כחולים	כחול	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	8	במגיפה	מגפה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	9	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	עד	עד	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	3	2	כה	עד כה	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	3	3	מתו	מת	-	-	F	V	-	{verb}	O
+1	3	4	במגיפה	מגפה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	5	אנשים	איש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	6	148	148	-	-	F	R	-	{numeral} []	O
+1	3	7	ו	ו	וC	-	F	-	-	[]	O
+1	3	8	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	3	9	3,300	3,300	-	-	F	R	-	{numeral} []	O
+1	3	10	נוספים	נוסף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	11	אותרו	אותר	-	-	F	V	-	{verb}	O
+1	3	12	כחולים	כחול	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	13	.	.	-	-	F	PNCT	-	{punctuation} []	O

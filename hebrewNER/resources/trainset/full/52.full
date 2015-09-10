@@ -1,0 +1,81 @@
+1	1	1	המשלחת	משלחת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	2	הישראלית	ישראלי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	1	3	לאליפות	אליפות	לP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_MISC_EVENT
+1	1	4	העולם	אליפות עולם	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_MISC_EVENT
+1	1	5	בהרמת	הרמה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_MISC_EVENT
+1	1	6	משקולות	משקולת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	I_MISC_EVENT
+1	1	7	יצאה	ייצא	-	-	F	V	-	{verb}	O
+1	1	8	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	1	9	לבודאפשט	בודפשט	לP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	11	שם	שם	שC-מP	-	F	-	-	[]	O
+1	1	12	יחלו	חילה	-	-	F	V	-	{verb}	O
+1	1	13	מחר	מחר	-	-	F	A	-	{adverb} []	O
+1	1	14	התחרויות	תחרות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	המשלחת	משלחת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	2	כוללת	כלל	-	-	F	V	-	{verb}	O
+1	2	3	שלושה	שלושה	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	4	משקולאים	משקולאים	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	2	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	שניים	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	2	מהם	מן	-	-	F	P	-	{preposition} []	O
+1	3	3	יצאו	ייצא	-	-	F	V	-	{verb}	O
+1	3	4	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	3	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	6	ראובן	ראובן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	3	7	חדינטוב	חדינטוב	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	3	8	ופליקס	פליקס	וC	-	F	R	person	{properName} [(definiteness: false)]	B_PERS
+1	3	9	תומרין	תומרין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	3	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	11	שיתחרו	התחרה	שC	-	F	V	-	{verb}	O
+1	3	12	במשקל	משקל	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	13	עד	עד	-	-	F	P	-	{preposition} []	O
+1	3	14	60	60	-	-	F	R	-	{numeral} []	O
+1	3	15	ק"ג	קילוגרם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	אליהם	אל	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	4	2	יצטרף	הצטרף	-	-	F	V	-	{verb}	O
+1	4	3	בתחילת	תחילה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	4	השבוע	שבוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	5	הבא	בא	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	4	6	איגור	איגור	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine)]	I_PERS
+1	4	7	דנדיק	דנדיק	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	4	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	9	הנחשב	נחשב	-	-	F	V	-	{verb}	O
+1	4	10	בין	בין	-	-	F	P	-	{preposition} []	O
+1	4	11	הטובים	טוב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	12	בעולם	עולם	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	13	במשקל	משקל	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	14	עד	עד	-	-	F	P	-	{preposition} []	O
+1	4	15	100	100	-	-	F	R	-	{numeral} []	O
+1	4	16	ק"ג	קילוגרם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	המאמן	מאמן	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	2	הוא	הוא	-	-	F	V	-	{verb}	O
+1	5	3	בוריס	בוריס	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	5	4	קודשביץ	קודשביץ	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	5	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	זו	זו	-	-	F	Q	-	{pronoun}	O
+1	6	2	הפעם	פעם	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	3	הראשונה	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	4	שבאליפות	אליפות	שC-בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	5	זו	זו	-	-	F	Q	-	{pronoun}	O
+1	6	6	תהיה	היה	-	-	F	V	-	{verb}	O
+1	6	7	בדיקת	בדיקה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	6	8	סמים	סם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	9	רטרואקטיווית	רטרואקטיבי	-	-	F	G	-	{adjective} [(definiteness: false),(foreign: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	11	לחצי	חצי	לP	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	12	שנה	שנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	13	האחרונה	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	15	כך	כך	-	-	F	R	organization	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	O
+1	6	16	שסביר	סביר	שC	-	F	R	person	{properName} [(definiteness: false)]	O
+1	6	17	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	6	18	ההישגים	הישג	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	19	יהיו	היה	-	-	F	V	-	{verb}	O
+1	6	20	הפעם	הפעים	-	-	F	V	-	{verb}	O
+1	6	21	פחות	פחות	-	-	T	O	-	{quantifier}	O
+1	6	22	טובים	טוב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	23	.	.	-	-	F	PNCT	-	{punctuation} []	O

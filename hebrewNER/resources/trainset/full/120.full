@@ -1,0 +1,74 @@
+1	1	1	בעקבות	בעקבות	-	-	F	P	-	{preposition} []	O
+1	1	2	ירידת	ירידה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	3	הגשמים	גשם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	4	אתמוך	תמך	-	-	F	V	-	{verb}	O
+1	1	5	הציפו	הציף	-	-	F	V	-	{verb}	O
+1	1	6	מים	מים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	7	בגובה	גבה	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	8	של	של	שC-לP	-	F	-	-	[]	O
+1	1	9	מטר	מטר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	10	וחצי	חצי	וC	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	11	את	את	-	-	F	P	-	{preposition} []	O
+1	1	12	צפון	צפן	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	13	בני	בני	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	14	ברק	בני ברק	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	16	ואת	את	וC	-	F	P	-	{preposition} []	O
+1	1	17	אזור	אזור	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	18	פרדס	פרדס	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_LOC
+1	1	19	כץ	כץ	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	20	הסמוך	סמך	-	-	F	V	-	{verb}	O
+1	1	21	לקניון	קניון	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_LOC
+1	1	22	איילון	איילון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	23	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	טפסר	טפסר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	2	מוטי	מוטי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	3	גוז	גז	-	-	F	V	-	{verb}	I_PERS
+1	2	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	5	מפקד	פיקד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	6	שירותי	שירותים	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	I_ORG
+1	2	7	הכבאות	כבאות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	2	8	וההצלה	הצלה	וC	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	2	9	של	של	-	-	F	P	-	{preposition} []	O
+1	2	10	בני	בני	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	2	11	ברק	בני ברק	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	2	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	13	סיפר	סיפר	-	-	F	V	-	{verb}	O
+1	2	14	על	על	-	-	F	P	-	{preposition} []	O
+1	2	15	פעולות	פעולה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	2	16	ההצלה	הצלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	17	שביצעו	ביצע	שC	-	F	V	-	{verb}	O
+1	2	18	אנשיו	איש	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	2	19	עקב	עקב	-	-	F	P	-	{preposition} []	O
+1	2	20	השטפונות	שיטפון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	21	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	2	22	הם	הוא	-	-	F	Q	-	{pronoun}	O
+1	2	23	סייעו	סייע	-	-	F	V	-	{verb}	O
+1	2	24	לתלמידים	תלמיד	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	25	שביקשו	ביקש	שC	-	F	V	-	{verb}	O
+1	2	26	לחזור	חזר	-	-	F	V	-	{verb}	O
+1	2	27	מבית	בית	מP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	2	28	הספר	בית ספר	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	2	29	לחצות	חצה	-	-	F	V	-	{verb}	O
+1	2	30	את	את	-	-	F	P	-	{preposition} []	O
+1	2	31	האזור	אזור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	32	שבו	ב	שC	-	F	P	-	{preposition} []	O
+1	2	33	היה	היה	-	-	F	V	-	{verb}	O
+1	2	34	השיטפון	שיטפון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	35	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	36	שאבו	שאב	-	-	F	V	-	{verb}	O
+1	2	37	מים	מים	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	38	משתי	שתיים	מP	-	T	R	-	{numeral} [(gender: feminine),(number: dual),(status: construct)]	O
+1	2	39	דירות	דירה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	40	שהוצפו	הוצף	שC	-	F	V	-	{verb}	O
+1	2	41	ושלא	לא	וC-שC	-	F	O	-	{negation} [(definiteness: false)]	O
+1	2	42	היו	היה	-	-	F	O	-	{existential} [(gender: masculine and feminine),(interrogative: false),(number: plural),(polarity: positive),(tense: past)]	O
+1	2	43	בהם	ב	-	-	F	P	-	{preposition} []	O
+1	2	44	דיירים	דייר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	45	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	46	וחילצו	חילץ	וC	-	F	V	-	{verb}	O
+1	2	47	שלוש	שלוש	-	-	F	R	-	{numeral} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	48	מכוניות	מכונית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	49	ששקעו	שקע	שC	-	F	V	-	{verb}	O
+1	2	50	במים	מים	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	51	.	.	-	-	F	PNCT	-	{punctuation} []	O

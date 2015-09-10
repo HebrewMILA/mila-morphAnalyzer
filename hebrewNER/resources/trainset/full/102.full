@@ -1,0 +1,65 @@
+1	1	1	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	1	2	תגבר	תגבר	-	-	F	V	-	{verb}	O
+1	1	3	את	את	-	-	F	P	-	{preposition} []	O
+1	1	4	כוחותיו	כוח	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	1	5	ביש"ע	יש"ע	בP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	6	תגבור	תגבור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	7	ניכר	ניכר	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	1	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	9	והידק	הידק	וC	-	F	V	-	{verb}	O
+1	1	10	את	את	-	-	F	P	-	{preposition} []	O
+1	1	11	הסגר	סגר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	12	סביב	סביב	-	-	F	P	-	{preposition} []	O
+1	1	13	רמאללה	רמאללה	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	1	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	15	וסביב	סביב	וC	-	F	P	-	{preposition} []	O
+1	1	16	כפרים	כפר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	17	באזור	אזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	18	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	הוצבו	הוצב	-	-	F	V	-	{verb}	O
+1	2	2	עשרות	עשר	-	-	T	R	-	{numeral} [(gender: feminine),(number: plural),(status: construct)]	O
+1	2	3	מחסומים	מחסום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	5	הוצבו	הוצב	-	-	F	V	-	{verb}	O
+1	2	6	נגמ"שים	נגמ"שים	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	2	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	8	וחוליות	חוליה	וC	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	9	של	של	-	-	F	P	-	{preposition} []	O
+1	2	10	חיילים	חייל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	11	מתגברים	התגבר	-	-	F	G	-	{adjective} [(binyan: Hitpa'el),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	2	12	את	את	-	-	F	P	-	{preposition} []	O
+1	2	13	האזורים	אזור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	14	הסמוכים	סמוך	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	15	לכניסות	כניסה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	16	אל	אל	-	-	F	P	-	{preposition} []	O
+1	2	17	הכפרים	כפר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	תגבור	תגבור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	2	דומה	דמה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	3	3	נראה	ראה	-	-	F	V	-	{verb}	O
+1	3	4	בימים	יום	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	5	האחרונים	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	6	גם	גם	-	-	F	A	-	{adverb} []	O
+1	3	7	בכביש	כביש	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_LOC
+1	3	8	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	3	9	גוש	גוש	-	-	F	MWE	-	{MWE} []	I_LOC
+1	3	10	עציון	עציון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	3	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	הערבים	ערב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	4	2	טוענים	טען	-	-	F	V	-	{verb}	O
+1	4	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	4	4	מאז	מאז	-	-	F	A	-	{adverb} []	O
+1	4	5	מלחמת	מלחמה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_MISC_EVENT
+1	4	6	ששת	שש	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_MISC_EVENT
+1	4	7	הימים	יום	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_EVENT
+1	4	8	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	4	9	נראתה	נראה	-	-	F	V	-	{verb}	O
+1	4	10	רמה	רמה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	11	כזו	כזו	-	-	F	Q	-	{pronoun}	O
+1	4	12	של	של	-	-	F	P	-	{preposition} []	O
+1	4	13	כיתור	כיתור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	14	בשטחי	שטח	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	4	15	יהודה	יהודה	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	4	16	ושומרון	שומרון	וC	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	4	17	.	.	-	-	F	PNCT	-	{punctuation} []	O

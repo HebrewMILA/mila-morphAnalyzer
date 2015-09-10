@@ -1,0 +1,71 @@
+1	1	1	ערבי	ערבי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	2	ישראלי	ישראלי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	1	3	תושב	תושב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	4	טייבה	טייבה	-	-	F	R	town	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	1	5	,	,	-	-	F	PNCT	-	{punctuation} []
+1	1	6	נרצח	רצח	-	-	F	V	-	{verb}
+1	1	7	בפיגוע	פיגוע	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	8	ירי	ירי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	9	בעלייה	עלייה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	1	10	ליישוב	יישוב	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	11	צופים	צפה	-	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: masculine),(number: plural),(person: any),(status: absolute)]
+1	1	12	,	,	-	-	F	PNCT	-	{punctuation} []
+1	1	13	שבמערב	מערב	שC-בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	14	השומרון	שומרון	-	D	F	R	location	{properName} [(definiteness: true),(gender: masculine),(number: singular)]
+1	1	15	.	.	-	-	F	PNCT	-	{punctuation} []
+1	2	1	מדיווח	דיווח	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	2	2	ראשוני	ראשוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	2	3	שמעביר	העביר	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	2	4	כתבנו	כתב	-	-	F	V	-	{verb}
+1	2	5	קובי	קובי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	2	6	פינקלר	פינקלר	-	-	F	R	-	{properName} [(definiteness: false)]
+1	2	7	עולה	עלה	-	-	F	V	-	{verb}
+1	2	8	ששלושה	שלושה	שC	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	2	9	מחבלים	חיבל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	2	10	ארבו	ארב	-	-	F	V	-	{verb}
+1	2	11	לו	ל	-	-	F	P	-	{preposition} []
+1	2	12	לצד	לצד	-	-	F	P	-	{preposition} []
+1	2	13	הדרך	דרך	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]
+1	2	14	ופתחו	פיתח	וC	-	F	V	-	{verb}
+1	2	15	אליו	אל	-	-	F	P	-	{preposition} []
+1	2	16	באש	אש	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	2	17	מנשק	נישק	-	-	F	V	-	{verb}
+1	2	18	אוטומאטי	אוטומאטי	-	-	F	R	-	{properName} [(definiteness: false)]
+1	2	19	,	,	-	-	F	PNCT	-	{punctuation} []
+1	2	20	הוא	הוא	-	-	F	V	-	{verb}
+1	2	21	נפצע	נפצע	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	2	22	אנושות	אנושות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	2	23	ממספר	מספר	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	2	24	קליעים	קליע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	2	25	בראש	ראש	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	2	26	בבטן	ביטן	-	-	F	V	-	{verb}
+1	2	27	ובחזה	חזה	וC-בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	2	28	,	,	-	-	F	PNCT	-	{punctuation} []
+1	2	29	וכל	כול	וC	-	T	O	-	{quantifier}
+1	2	30	המאמצים	אימץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]
+1	2	31	להחיותו	החיה	-	-	F	V	-	{verb}
+1	2	32	עלו	עלה	-	-	F	V	-	{verb}
+1	2	33	בתוהו	תוהו	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	2	34	.	.	-	-	F	PNCT	-	{punctuation} []
+1	3	1	המחבלים	חיבל	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]
+1	3	2	נמלטו	נמלט	-	-	F	V	-	{verb}
+1	3	3	לכיוון	כיוון	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	3	4	קלקיליה	קלקיליה	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	3	5	.	.	-	-	F	PNCT	-	{punctuation} []
+1	4	1	מקום	מקום	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	4	2	הפיגוע	פיגוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	4	3	ליד	ליד	-	-	F	P	-	{preposition} []
+1	4	4	צופים	צוף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	4	5	סמוך	סמוך	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	4	6	מאוד	מאוד	-	-	F	A	-	{adverb} []
+1	4	7	למקום	מקום	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	4	8	שבו	ב	שC	-	F	P	-	{preposition} []
+1	4	9	נרצחה	נרצח	-	-	F	V	-	{verb}
+1	4	10	שלשום	שלשום	-	-	F	A	-	{adverb} []
+1	4	11	תושבת	תושב	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	4	12	קרני	קרן	-	-	F	V	-	{verb}
+1	4	13	שומרון	שומרון	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	4	14	תחיה	תחיה	-	-	F	R	-	{properName} [(definiteness: false)]
+1	4	15	בלומברג	בלומברג	-	-	F	R	-	{properName} [(definiteness: false)]
+1	4	16	הי"ד	הי"ד	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(status: absolute)]
+1	4	17	.	.	-	-	F	PNCT	-	{punctuation} []

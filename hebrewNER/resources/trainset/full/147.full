@@ -1,0 +1,88 @@
+1	1	1	בעקבות	בעקבות	-	-	F	P	-	{preposition} []	O
+1	1	2	סופות	סופה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	1	3	הגשמים	גשם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	4	שפקדו	פיקד	שC	-	F	V	-	{verb}	O
+1	1	5	את	את	-	-	F	P	-	{preposition} []	O
+1	1	6	דרום	דרום	-	-	F	R	person	{properName} [(definiteness: false)]	O
+1	1	7	רוסיה	רוסיה	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	9	באזור	אזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	10	הים	ים	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	1	11	השחור	שחור	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	1	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	13	נהרגו	נהרג	-	-	F	V	-	{verb}	O
+1	1	14	למעלה	למעלה	-	-	F	A	-	{adverb} []	O
+1	1	15	מ	מ	מP	-	F	-	-	[]	O
+1	1	16	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	1	17	44	44	-	-	F	R	-	{numeral} []	O
+1	1	18	אנשים	איש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	19	ועשרות	עשר	וC	-	T	R	-	{numeral} [(gender: feminine),(number: plural),(status: construct)]	O
+1	1	20	נעדרים	נעדר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	21	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	נשיא	נשיא	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	2	רוסיה	רוסיה	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	2	3	פוטין	פוטין	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	2	4	נזף	נזף	-	-	F	V	-	{verb}	O
+1	2	5	במשרדי	משרד	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	6	הממשלה	ממשלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	7	על	על	-	-	F	P	-	{preposition} []	O
+1	2	8	שלא	לא	שC	-	F	O	-	{negation} [(definiteness: false)]	O
+1	2	9	הושיטו	הושיט	-	-	F	V	-	{verb}	O
+1	2	10	סיוע	סיוע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	11	לכוחות	כוח	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	12	החילוץ	חילוץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	13	וההצלה	הצלה	וC	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	15	וקרא	קרא	וC	-	F	V	-	{verb}	O
+1	2	16	להם	ל	-	-	F	P	-	{preposition} []	O
+1	2	17	להתגייס	התגייס	-	-	F	V	-	{verb}	O
+1	2	18	לשיקום	שיקום	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	19	אזורי	אזור	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	20	הקיט	קיט	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	21	שלחוף	חוף	שC-לP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	2	22	הים	חוף ים	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_LOC
+1	2	23	השחור	שחור	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	2	24	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	בסין	סין	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	3	2	גם	גם	-	-	F	A	-	{adverb} []	O
+1	3	3	נהרגו	נהרג	-	-	F	V	-	{verb}	O
+1	3	4	עשרות	עשר	-	-	T	R	-	{numeral} [(gender: feminine),(number: plural),(status: construct)]	O
+1	3	5	אנשים	איש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	6	בשטפונות	שיטפון	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	7	כבדים	כבד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	8	בכמה	כמה	בP	-	F	Q	-	{pronoun}	O
+1	3	9	מחוזות	מחוז	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	ברשת	רשת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	4	2	ב'	ב'	-	-	F	R	-	{numeral} []	I_ORG
+1	4	3	דווח	דיווח	-	-	F	V	-	{verb}	O
+1	4	4	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	4	5	בדרום	דרום	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_LOC
+1	4	6	קוריאה	קוריאה	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	4	7	נספו	נספה	-	-	F	V	-	{verb}	O
+1	4	8	14	14	-	-	F	R	-	{numeral} []	O
+1	4	9	בני	בני	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	4	10	אדם	בן אדם	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	4	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	בין	בין	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	5	2	השאר	בין השאר	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: conjunction)]	O
+1	5	3	התמוטט	התמוטט	-	-	F	V	-	{verb}	O
+1	5	4	בעיר	עיר	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	5	פוסאן	פוסאן	-	-	F	R	-	{properName} [(definiteness: false)]	I_LOC
+1	5	6	מבנה	מבנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	7	ובו	ב	וC	-	F	P	-	{preposition} []	O
+1	5	8	כ	כ	כP	-	F	-	-	[]	O
+1	5	9	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	5	10	250	250	-	-	F	R	-	{numeral} []	O
+1	5	11	נכים	נכה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	5	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	ממשלת	ממשלה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	6	2	דרום	דרום	-	-	F	R	person	{properName} [(definiteness: false)]	I_ORG
+1	6	3	קוריאה	קוריאה	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	6	4	שיגרה	שיגרה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	5	אלפי	אלף	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	O
+1	6	6	חיילים	חייל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	7	לאזורים	אזור	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	8	שנפגעו	נפגע	שC	-	F	V	-	{verb}	O
+1	6	9	קשה	קשה	-	-	F	A	-	{adverb} []	O
+1	6	10	.	.	-	-	F	PNCT	-	{punctuation} []	O

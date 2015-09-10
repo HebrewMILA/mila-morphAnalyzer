@@ -1,0 +1,417 @@
+1	1	1	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	2	ישיבה	ישיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	3	חדש	חדש	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	4	מונה	מונה	-	-	F	V	-	{verb}	O
+1	1	5	לישיבת	ישיבה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	1	6	פוניבז'	פוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	1	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	2	חיים	חי	-	-	F	V	-	{verb}	I_PERS
+1	2	3	פרץ	פרץ	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	4	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	2	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	6	בנו	בן	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	2	7	של	של	-	-	F	P	-	{preposition} []	O
+1	2	8	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	9	שלמה	שלמה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	10	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	2	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	12	מראשי	ראש	מP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	13	ישיבת	ישיבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	2	14	פוניבז	פוניבז	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	2	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	16	שנפטר	פיטר	שC	-	F	V	-	{verb}	O
+1	2	17	בשבוע	שבוע	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	18	שעבר	עבר	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	20	מונה	מונה	-	-	F	V	-	{verb}	O
+1	2	21	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	2	22	לתפקיד	תפקיד	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	23	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	24	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	25	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	3	2	נאספו	נאסף	-	-	F	V	-	{verb}	O
+1	3	3	בהיכל	היכל	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	4	ישיבת	ישיבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	3	5	פוניבז'	פוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	3	6	אלפי	אלף	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	7	תלמידי	תלמיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	8	ובוגרי	בגר	וC	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	9	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	10	למעמד	מעמד	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	11	הספדים	הספד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	12	במלאת	הלאה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	13	שבעה	שבעה	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	14	לפטירת	פטירה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	15	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	16	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	3	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	במעמד	מעמד	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	2	חשובי	חשב	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	4	3	הרבנים	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	4	הליטאיים	ליטאי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	4	5	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	6	אהרון	אהרון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	7	לייב	לייב	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	8	שטיינמן	שטיינמן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	9	והרב	רב	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	10	חיים	חיים	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	11	קנייבסקי	קנייבסקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	4	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	13	הכריז	הכריז	-	-	F	V	-	{verb}	O
+1	4	14	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	15	נסים	נסים	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	4	16	קרליץ	קרליץ	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	4	17	מגדולי	גדול	מP	-	T	G	-	{adjective} [(function: adjective),(gender: masculine),(number: plural),(status: construct)]	O
+1	4	18	הפוסקים	פסק	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	4	19	החרדים	חרד	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	4	20	על	על	-	-	F	P	-	{preposition} []	O
+1	4	21	מינויו	מינוי	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	4	22	של	של	-	-	F	P	-	{preposition} []	O
+1	4	23	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	24	חיים	חי	-	-	F	V	-	{verb}	I_PERS
+1	4	25	פרץ	פרץ	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	26	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	4	27	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	28	בוגר	בגר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	29	פוניבז'	פוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	4	30	וראש	ראש	וC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	31	ישיבת	ישיבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	4	32	סדיגורא	סדיגורא	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	4	33	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	34	לתפקיד	תפקיד	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	35	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	36	ישיבה	ישיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	37	נוסף	נוסף	-	-	F	V	-	{verb}	O
+1	4	38	בפוניבז'	בפוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	4	39	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	5	2	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	3	מיכל	מיכל	-	-	F	R	person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_PERS
+1	5	4	יהודה	יהודה	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	5	5	לפקוביץ'	לפקוביץ'	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	5	6	בירך	בירך	-	-	F	V	-	{verb}	O
+1	5	7	אמש	אמש	-	-	F	A	-	{adverb} []	O
+1	5	8	על	על	-	-	F	P	-	{preposition} []	O
+1	5	9	המינוי	מינוי	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	5	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	2	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	6	3	יצטרף	הצטרף	-	-	F	V	-	{verb}	O
+1	6	4	לשלושת	שלושה	לP	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	O
+1	6	5	ראשי	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	6	6	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	6	7	הנוכחיים	נוכחי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	8	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	9	גרשון	גרשון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	6	10	אדלשטיין	אדלשטיין	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	6	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	6	12	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	13	ברל	ברל	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	6	14	פוברסקי	פוברסקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	6	15	ויריבם	יריב	וC	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	6	16	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	6	17	שמואל	שמואל	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	6	18	מרקוביץ'	מרקוביץ'	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	6	19	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	היריבות	יריבות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	2	המרה	מר	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	7	3	בין	בין	-	-	F	P	-	{preposition} []	O
+1	7	4	שני	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	5	הרבנים	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	6	הראשונים	ראשון	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	7	ותומכיהם	תומך	וC	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	7	8	לבין	לבין	-	-	F	P	-	{preposition} []	O
+1	7	9	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	10	מרקוביץ'	מרקוביץ'	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	7	11	הובילה	הוביל	-	-	F	V	-	{verb}	O
+1	7	12	את	את	-	-	F	P	-	{preposition} []	O
+1	7	13	פוניבז'	פוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	7	14	לסכנת	סכנה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	7	15	פילוג	פילוג	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	16	והמינוי	מינוי	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	17	נתפס	נתפס	-	-	F	V	-	{verb}	O
+1	7	18	כחלק	חילק	-	-	F	V	-	{verb}	O
+1	7	19	מהמאבק	איבק	מP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	7	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	8	1	אביו	אב	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	8	2	של	של	-	-	F	P	-	{preposition} []	O
+1	8	3	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	4	חיים	חי	-	-	F	V	-	{verb}	I_PERS
+1	8	5	פרץ	פרץ	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	8	6	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	8	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	8	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	9	שלמה	שלמה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	8	10	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	8	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	12	שהצטרף	הצטרף	שC	-	F	V	-	{verb}	O
+1	8	13	לפוניבז'	לפוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	8	14	בשנות	שנה	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	I_DATE
+1	8	15	החמישים	חמישים	-	D	F	R	-	{numeral} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	I_DATE
+1	8	16	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	17	נחשב	חישב	-	-	F	V	-	{verb}	O
+1	8	18	לאחד	אחד	לP	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	19	מראשי	ראש	מP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	8	20	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	21	עד	עד	-	-	F	P	-	{preposition} []	O
+1	8	22	שלקה	שלק	-	-	F	V	-	{verb}	O
+1	8	23	לפני	לפני	-	-	F	P	-	{preposition} []	O
+1	8	24	כעשרים	עשרים	כP	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine and feminine),(number: plural),(status: absolute)]	O
+1	8	25	שנה	שנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	26	במחלה	חילה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	8	27	שמנעה	מנע	שC	-	F	V	-	{verb}	O
+1	8	28	ממנו	מן	-	-	F	P	-	{preposition} []	O
+1	8	29	להמשיך	המשיך	-	-	F	V	-	{verb}	O
+1	8	30	לתפקד	תפקד	-	-	F	V	-	{verb}	O
+1	8	31	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	9	1	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	2	קרליץ	קרליץ	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	9	3	הסביר	הסביר	-	-	F	V	-	{verb}	O
+1	9	4	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	9	5	למרות	למרות	-	-	F	P	-	{preposition} []	O
+1	9	6	הזמן	זמן	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	7	שחלף	חלף	שC	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	9	9	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	10	במינוי	מינוי	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	9	11	על	על	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	9	12	פי	על פי	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 2),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	9	13	דיני	דין	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	9	14	ירושה	ירושה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	9	15	של	של	-	-	F	P	-	{preposition} []	O
+1	9	16	מועמד	מועמד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	17	ראוי	ראוי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	9	18	לתפקיד	תפקיד	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	9	19	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	9	20	ישיבת	ישיבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	9	21	פוניבז'	פוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	9	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	10	1	ייחוסו	ייחוס	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	10	2	המשפחתי	משפחתי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	3	של	של	-	-	F	P	-	{preposition} []	O
+1	10	4	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	5	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	10	6	כולל	כלל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	7	גם	גם	-	-	F	C	-	{conjunction} []	O
+1	10	8	הנתונים	נתון	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	10	9	הבאים	בא	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	10	10	:	:	-	-	F	PNCT	-	{punctuation} []	O
+1	10	11	נכד	נכד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	12	של	של	-	-	F	P	-	{preposition} []	O
+1	10	13	הסטייפלער	סטייפלער	-	D	F	R	-	{properName} [(definiteness: true)]	I_PERS
+1	10	14	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	10	15	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	16	יעקב	יעקב	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	10	17	ישראל	ישראל	-	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	10	18	קנייבסקי	קנייבסקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	10	19	וממילא	ממילא	וC	-	F	A	-	{adverb} []	O
+1	10	20	אחיינו	אחיין	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	10	21	של	של	-	-	F	P	-	{preposition} []	O
+1	10	22	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	23	חיים	חיים	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	10	24	קנייבסקי	קנייבסקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	10	25	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	11	1	חתנו	חת	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	11	2	של	של	-	-	F	P	-	{preposition} []	O
+1	11	3	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	11	4	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	11	5	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	6	ברל	ברל	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	11	7	פוברסקי	פוברסקי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	11	8	וגיסו	גייס	וC	-	F	V	-	{verb}	O
+1	11	9	של	של	-	-	F	P	-	{preposition} []	O
+1	11	10	נשיא	נשיא	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	11	11	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	11	12	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	11	13	אליעזר	אליעזר	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	11	14	כהנמן	כהנמן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	11	15	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	12	1	תומכיו	תומך	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	12	2	אמרו	אמר	-	-	F	V	-	{verb}	O
+1	12	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	12	4	כבר	כבר	-	-	F	A	-	{adverb} []	O
+1	12	5	באירוסיו	אירוס	בP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	12	6	של	של	-	-	F	P	-	{preposition} []	O
+1	12	7	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	8	חיים	חי	-	-	F	V	-	{verb}	I_PERS
+1	12	9	פרץ	פרץ	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	12	10	ברמן	ברמן	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	12	11	הכריז	הכריז	-	-	F	V	-	{verb}	O
+1	12	12	עליו	על	-	-	F	P	-	{preposition} []	O
+1	12	13	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	14	שך	שך	שC-כP	-	F	-	-	[]	I_PERS
+1	12	15	כעל	על	כP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	16	מי	מי	-	-	F	O	-	{interrogative} []	O
+1	12	17	שעוד	עוד	שC	-	F	A	-	{adverb} []	O
+1	12	18	יהיה	היה	-	-	F	V	-	{verb}	O
+1	12	19	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	12	20	ישיבת	ישיבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	12	21	פוניבז'	פוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	12	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	13	1	בסיום	סיום	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	13	2	מעמד	מעמד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	13	3	ההספדים	הספד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	13	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	13	5	התרחש	התרחש	-	-	F	V	-	{verb}	O
+1	13	6	במקום	במקום	-	-	F	P	-	{preposition} []	O
+1	13	7	אירוע	אירוע	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	8	בעל	בעל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	13	9	ניחוח	ניחוח	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	13	10	חסידי	חסיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	13	11	חזק	חזק	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	13	13	של	של	-	-	F	P	-	{preposition} []	O
+1	13	14	מינוי	מינוי	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	13	15	אדמו"ר	אדמו"ר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	16	חדש	חדש	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	17	לאחר	לאחר	-	-	F	P	-	{preposition} []	O
+1	13	18	פטירת	פטירה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	13	19	הקודם	קדם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	20	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	14	1	המתכנסים	התכנס	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	14	2	במקום	במקום	-	-	F	P	-	{preposition} []	O
+1	14	3	חלפו	חלף	-	-	F	V	-	{verb}	O
+1	14	4	על	על	-	-	F	P	-	{preposition} []	O
+1	14	5	פניו	פנים	-	-	F	N	-	{noun} [(gender: masculine and feminine),(number: plural)]	O
+1	14	6	של	של	-	-	F	P	-	{preposition} []	O
+1	14	7	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	14	8	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	14	9	החדש	חדש	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	10	ואיחלו	איחל	וC	-	F	V	-	{verb}	O
+1	14	11	לו	ל	-	-	F	P	-	{preposition} []	O
+1	14	12	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	14	13	מזל	מזל	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: interjection)]	O
+1	14	14	טוב	מזל טוב	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: interjection)]	O
+1	14	15	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	14	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	15	1	בפוניבז'	בפוניבז'	-	-	F	R	-	{properName} [(definiteness: false)]	I_ORG
+1	15	2	אמרו	אמר	-	-	F	V	-	{verb}	O
+1	15	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	15	4	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	15	5	ב	ב	בP	-	F	-	-	[]	O
+1	15	6	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	15	7	תרגיל	תרגיל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	15	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	15	9	של	של	-	-	F	P	-	{preposition} []	O
+1	15	10	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	15	11	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	15	12	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	15	13	גרשון	גרשון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	15	14	אדלשטיין	אדלשטיין	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	15	15	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	15	16	שנועד	נועד	שC	-	F	V	-	{verb}	O
+1	15	17	לדחוק	דחק	-	-	F	V	-	{verb}	O
+1	15	18	את	את	-	-	F	P	-	{preposition} []	O
+1	15	19	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	15	20	מרקוביץ'	מרקוביץ'	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	15	21	מהישיבה	ישיבה	מP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	15	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	16	1	מקורביו	מקורב	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	16	2	אמרו	אמר	-	-	F	V	-	{verb}	O
+1	16	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	16	4	מדובר	דובר	-	-	F	V	-	{verb}	O
+1	16	5	בעוד	בעוד	-	-	F	P	-	{preposition} []	O
+1	16	6	אקט	אקט	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	16	7	מנהיגותי	מנהיגה	-	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	16	8	של	של	-	-	F	P	-	{preposition} []	O
+1	16	9	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	10	אדלשטיין	אדלשטיין	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	16	11	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	16	12	שכבר	כבר	שC	-	F	A	-	{adverb} []	O
+1	16	13	פילג	פילג	-	-	F	V	-	{verb}	O
+1	16	14	את	את	-	-	F	P	-	{preposition} []	O
+1	16	15	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	16	16	בחג	חג	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	16	17	"	"	-	-	F	PNCT	-	{punctuation} []	I_DATE
+1	16	18	שמחת	שמחת	-	-	F	MWE	dateTime	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_DATE
+1	16	19	תורה	שמחת תורה	-	-	F	MWE	dateTime	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_DATE
+1	16	20	"	"	-	-	F	PNCT	-	{punctuation} []	I_DATE
+1	16	21	האחרון	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	22	וארגן	ארגן	וC	-	F	V	-	{verb}	O
+1	16	23	עצומת	עצם	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	16	24	תלמידים	תלמיד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	16	25	התומכים	תמך	-	-	F	V	-	{verb}	O
+1	16	26	בפילוג	פילוג	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	27	סופי	סופי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	28	של	של	-	-	F	P	-	{preposition} []	O
+1	16	29	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	16	30	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	17	1	מאידך	מאידך	-	-	F	A	-	{adverb} []	O
+1	17	2	טענו	טען	-	-	F	V	-	{verb}	O
+1	17	3	תומכי	תומך	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	17	4	מרקוביץ'	מרקוביץ'	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	17	5	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	17	6	המהלך	הילך	-	-	F	V	-	{verb}	O
+1	17	7	דווקא	דווקא	-	-	F	A	-	{adverb} []	O
+1	17	8	מחזק	חיזק	-	-	F	V	-	{verb}	O
+1	17	9	את	את	-	-	F	P	-	{preposition} []	O
+1	17	10	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	11	מרקוביץ'	מרקוביץ'	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	17	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	17	13	שדרישתו	דרישה	שC	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	17	14	להתמנות	התמנה	-	-	F	V	-	{verb}	O
+1	17	15	כראש	ראש	כP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	17	16	ישיבה	ישיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	17	הסתמכה	הסתמך	-	-	F	V	-	{verb}	O
+1	17	18	אף	אף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	19	היא	הוא	-	-	F	Q	-	{pronoun}	O
+1	17	20	על	על	-	-	F	P	-	{preposition} []	O
+1	17	21	דיני	דין	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	17	22	הירושה	ירושה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	23	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	17	24	מתוקף	תוקף	מP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	17	25	נישואיו	נישואין	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	17	26	לבתו	לבה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	17	27	של	של	-	-	F	P	-	{preposition} []	O
+1	17	28	נשיא	נשיא	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	17	29	הישיבה	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	17	30	הקודם	קדם	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	17	31	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	17	32	אברהם	אברהם	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	17	33	כהנמן	כהנמן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	17	34	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	18	1	חיזוק	חיזוק	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	18	2	ענק	ענק	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	3	נוסף	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: masculine),(number: singular),(person: any),(status: absolute)]	O
+1	18	4	קיבלו	קיבל	-	-	F	V	-	{verb}	O
+1	18	5	הבוקר	בוקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	6	תומכי	תומך	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	18	7	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	8	מרקוביץ'	מרקוביץ'	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	18	9	כשביטאון	ביטאון	כשC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	18	10	הציבור	ציבור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	11	הליטאי	ליטאי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	18	12	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	18	13	יתד	יתד	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	18	14	נאמן	נאמן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	18	15	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	18	16	בחר	בחר	-	-	F	V	-	{verb}	O
+1	18	17	להתעלם	התעלם	-	-	F	V	-	{verb}	O
+1	18	18	מהמינוי	מינוי	מP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	19	החדש	חדש	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	20	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	18	21	דבר	דבר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	18	22	המעיד	העיד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	23	על	על	-	-	F	P	-	{preposition} []	O
+1	18	24	מחלוקת	מחלוקת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	18	25	בעניין	עניין	-	-	F	V	-	{verb}	O
+1	18	26	זה	זה	-	-	F	Q	-	{pronoun}	O
+1	18	27	בין	בין	-	-	F	P	-	{preposition} []	O
+1	18	28	מנהיג	מנהיג	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	18	29	הציבור	ציבור	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	30	הליטאי	ליטאי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	18	31	הרב	רב	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	32	יוסף	נוסף	-	-	F	V	-	{verb}	I_PERS
+1	18	33	שלום	שלום	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	18	34	אלישיב	אלישיב	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	18	35	לבין	לבין	-	-	F	P	-	{preposition} []	O
+1	18	36	צמרת	צמרת	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	18	37	הרבנים	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	18	38	הליטאים	ליטאי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	18	39	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	18	40	שתמכו	תמך	שC	-	F	V	-	{verb}	O
+1	18	41	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	18	42	במהלך	מהלך	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	18	43	.	.	-	-	F	PNCT	-	{punctuation} []	O

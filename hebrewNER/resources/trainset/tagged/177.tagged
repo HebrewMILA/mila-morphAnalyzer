@@ -1,0 +1,62 @@
+1	1	1	אלוף	אלוף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	2	פיקוד	פיקוד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	1	3	העורף	ערף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	1	4	,	,	-	-	F	PNCT	-	{punctuation} []
+1	1	5	האלוף	אלוף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	1	6	יוסף	יוסף	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	1	7	משלב	שילב	-	-	F	V	-	{verb}
+1	1	8	,	,	-	-	F	PNCT	-	{punctuation} []
+1	1	9	העניק	העניק	-	-	F	V	-	{verb}
+1	1	10	תעודת	תעודה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]
+1	1	11	הוקרה	הוקרה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	1	12	לחיילות	חייל	לP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]
+1	1	13	נועה	נועה	-	-	F	R	person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]
+1	1	14	ברנט	ברנט	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	1	15	ושרון	שרון	וC	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]
+1	1	16	מדי	מדי	-	-	F	A	-	{adverb} []
+1	1	17	שמצאו	מצא	שC	-	F	V	-	{verb}
+1	1	18	כ	כ	כP	-	F	-	-	[]
+1	1	19	-	-	-	-	F	PNCT	-	{punctuation} []
+1	1	20	2200	2200	-	-	F	R	-	{numeral} []
+1	1	21	דולר	דולר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	22	בתוך	בתוך	-	-	F	P	-	{preposition} []
+1	1	23	ערכת	ערכה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]
+1	1	24	מגן	הגן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	1	25	ודאגו	דאג	וC	-	F	V	-	{verb}
+1	1	26	להשיב	השיב	-	-	F	V	-	{verb}
+1	1	27	את	את	-	-	F	P	-	{preposition} []
+1	1	28	הכסף	כסף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	1	29	לבעליו	בעלים	לP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]
+1	1	30	.	.	-	-	F	PNCT	-	{punctuation} []
+1	2	1	האלוף	אלוף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	2	2	ציין	ציין	-	-	F	V	-	{verb}
+1	2	3	את	את	-	-	F	P	-	{preposition} []
+1	2	4	יושרן	יושר	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]
+1	2	5	של	של	-	-	F	P	-	{preposition} []
+1	2	6	החיילות	חייל	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]
+1	2	7	ואת	את	וC	-	F	P	-	{preposition} []
+1	2	8	תושייתן	תושייה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]
+1	2	9	ושיבח	שיבח	וC	-	F	V	-	{verb}
+1	2	10	אותן	את	-	-	F	P	-	{preposition} []
+1	2	11	על	על	-	-	F	P	-	{preposition} []
+1	2	12	גילוי	גילוי	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	2	13	אזרחות	אזרחות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	2	14	טובה	טוב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]
+1	2	15	.	.	-	-	F	PNCT	-	{punctuation} []
+1	3	1	בהזדמנות	הזדמנות	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]
+1	3	2	זו	זו	-	-	F	Q	-	{pronoun}
+1	3	3	הודה	הודה	-	-	F	V	-	{verb}
+1	3	4	האלוף	אלוף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	3	5	למתנדבי	התנדב	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]
+1	3	6	"	"	-	-	F	PNCT	-	{punctuation} []
+1	3	7	שראל	שראל	-	-	F	R	-	{properName} [(definiteness: false)]
+1	3	8	"	"	-	-	F	PNCT	-	{punctuation} []
+1	3	9	הבאים	בא	-	-	F	V	-	{verb}
+1	3	10	במיוחד	במיוחד	-	-	F	A	-	{adverb} []
+1	3	11	מחו"ל	חו"ל	מP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	3	12	כדי	כדי	-	-	F	C	-	{conjunction} []
+1	3	13	להתנדב	התנדב	-	-	F	V	-	{verb}
+1	3	14	במחסני	מחסן	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]
+1	3	15	פיקוד	פיקוד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	3	16	העורף	ערף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	3	17	.	.	-	-	F	PNCT	-	{punctuation} []

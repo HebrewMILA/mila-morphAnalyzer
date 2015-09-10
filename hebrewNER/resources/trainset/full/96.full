@@ -1,0 +1,93 @@
+1	1	1	בית	בית	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	1	2	משפט	בית משפט	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	1	3	השלום	בית משפט השלום	-	-	F	MWE	-	{MWE} [(consecutive: true),(gender: masculine),(id: 3),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	1	4	בתל	תל	בP	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	5	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	6	פסק	פסק	-	-	F	MWE	-	{MWE} []	O
+1	1	7	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	1	8	יעקב	יעקב	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	9	נמרודי	נמרודי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	1	10	יוכל	יכול	-	-	F	O	-	{verb}	O
+1	1	11	להגיש	הגיש	-	-	F	V	-	{verb}	O
+1	1	12	קובלנה	קובלנה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	13	פלילית	פלילי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	14	פרטית	פרטי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	15	על	על	-	-	F	P	-	{preposition} []	O
+1	1	16	הוצאת	הוצאה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	17	לשון	לשון	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	1	18	הרע	לשון רע	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	1	19	נגד	נגד	-	-	F	P	-	{preposition} []	O
+1	1	20	ניצב	ניצב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	21	משה	משה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	22	מזרחי	מזרחי	-	-	F	R	person|organization	{properName} [(definiteness: false)]	I_PERS
+1	1	23	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	24	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	25	אגף	אגף	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	26	החקירות	חקירה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	1	27	במשטרה	משטרה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	28	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	29	שחקר	חקר	שC	-	F	V	-	{verb}	O
+1	1	30	את	את	-	-	F	P	-	{preposition} []	O
+1	1	31	בנו	בן	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	1	32	עופר	עופר	-	-	F	R	person|town	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	33	נמרודי	נמרודי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	1	34	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	2	בהתבטאות	התבטאות	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	3	של	של	-	-	F	P	-	{preposition} []	O
+1	2	4	מזרחי	מזרחי	-	-	F	R	person|organization	{properName} [(definiteness: false)]	I_PERS
+1	2	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	6	שהיה	היה	שC	-	F	V	-	{verb}	O
+1	2	7	אז	אז	-	-	F	A	-	{adverb} []	O
+1	2	8	ראש	ראש	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	9	היחידה	יחידה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	2	10	הבינלאומית	בינלאומי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	2	11	לחקירות	חקירה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	I_ORG
+1	2	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	13	כלפי	כלפי	-	-	F	P	-	{preposition} []	O
+1	2	14	משפחת	משפחה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	15	נמרודי	נמרודי	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	2	16	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	3	2	השווה	השווה	-	-	F	V	-	{verb}	O
+1	3	3	אותה	את	-	-	F	P	-	{preposition} []	O
+1	3	4	למשפחה	משפחה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	5	במאפיה	מאפייה	בP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	6	האיטלקית	איטלקי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	3	7	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	השופטת	שפט	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	2	נורית	נורית	-	-	F	R	person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_PERS
+1	4	3	רביב	רביב	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	4	קבעה	קיבע	-	-	F	V	-	{verb}	O
+1	4	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	6	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	4	7	ההתבטאות	התבטאות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	8	של	של	-	-	F	P	-	{preposition} []	O
+1	4	9	מזרחי	מזרחי	-	-	F	R	person|organization	{properName} [(definiteness: false)]	I_PERS
+1	4	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	11	שבעטיה	עט	שC-בP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	4	12	הוגשה	הוגש	-	-	F	V	-	{verb}	O
+1	4	13	הקובלנה	קובלנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	15	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	4	16	הייתה	היה	-	-	F	V	-	{verb}	O
+1	4	17	במסגרת	מסגרת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	4	18	תפקידו	תפקיד	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	4	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	20	ולכן	ל	וC	-	F	P	-	{preposition} []	O
+1	4	21	אין	אין	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	22	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	23	בקובלנה	קובלנה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	24	נגד	נגד	-	-	F	P	-	{preposition} []	O
+1	4	25	עובד	עבד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	26	ציבור	ציבור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	27	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	28	שיש	יש	שC	-	F	O	-	{existential} [(interrogative: false),(polarity: positive)]	O
+1	4	29	צורך	צורך	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	30	באישור	אישור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	4	31	היועץ	יעץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	32	המשפטי	משפטי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	4	33	לממשלה	ממשלה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	4	34	כדי	כדי	-	-	F	C	-	{conjunction} []	O
+1	4	35	להגישה	הגיש	-	-	F	V	-	{verb}	O
+1	4	36	.	.	-	-	F	PNCT	-	{punctuation} []	O

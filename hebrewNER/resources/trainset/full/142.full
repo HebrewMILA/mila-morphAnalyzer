@@ -1,0 +1,95 @@
+1	1	1	ח"כ	ח"כ	-	-	F	O	-	{title} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	1	2	זבולון	זבולון	-	-	F	R	person|location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	3	אורלב	אורלב	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	1	4	התיחס	התייחס	-	-	F	V	-	{verb}	O
+1	1	5	לגילויו	גילוי	לP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	1	6	של	של	-	-	F	P	-	{preposition} []	O
+1	1	7	העיתונאי	עיתונאי	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	8	יואב	יואב	-	-	F	MWE	-	{MWE} []	I_PERS
+1	1	9	יצחק	יצחק	-	-	F	MWE	-	{MWE} []	I_PERS
+1	1	10	לפיו	לפי	-	-	F	P	-	{preposition} []	O
+1	1	11	משרד	משרד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	1	12	האוצר	אוצר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	1	13	הקפיא	הקפיא	-	-	F	V	-	{verb}	O
+1	1	14	את	את	-	-	F	P	-	{preposition} []	O
+1	1	15	הכספים	כסף	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	16	לכל	כול	לP	-	T	O	-	{quantifier}	O
+1	1	17	מוסדות	מוסד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	18	התורה	תורה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	19	בשל	בשל	-	-	F	P	-	{preposition} []	O
+1	1	20	מחלוקת	מחלוקת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	21	על	על	-	-	F	P	-	{preposition} []	O
+1	1	22	תלמידים	תלמיד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	23	המקבלים	קיבל	-	-	F	V	-	{verb}	O
+1	1	24	כפל	כפל	-	-	F	MWE	-	{MWE} []	O
+1	1	25	קצבאות	קצבה	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	1	26	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	בשיחה	שח	-	-	F	V	-	{verb}	O
+1	2	2	עם	עם	-	-	F	P	-	{preposition} []	O
+1	2	3	כתבת	כתבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	4	ערוץ	ערוץ	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	2	5	7	7	-	-	F	R	-	{numeral} []	I_ORG
+1	2	6	רותי	רותי	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	7	אברהם	אברהם	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	9	אמר	המר	-	-	F	V	-	{verb}	O
+1	2	10	ח"כ	ח"כ	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	11	אורלב	אורלב	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	2	12	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	13	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	14	משרד	משרד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	2	15	האוצר	אוצר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	2	16	עשה	עשה	-	-	F	V	-	{verb}	O
+1	2	17	מעשה	מעשה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	18	שלא	לא	שC	-	F	O	-	{negation} [(definiteness: false)]	O
+1	2	19	יעשה	עשה	-	-	F	V	-	{verb}	O
+1	2	20	בהחזיקו	החזיק	-	-	F	V	-	{verb}	O
+1	2	21	את	את	-	-	F	P	-	{preposition} []	O
+1	2	22	תלמידי	תלמיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	23	הישיבות	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	24	כבני	בני	כP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	2	25	ערובה	בן ערובה	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	2	26	ובכך	בכך	וC	-	F	A	-	{adverb} []	O
+1	2	27	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	2	28	מעניש	העניש	-	-	F	V	-	{verb}	O
+1	2	29	ענישה	ענישה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	30	קולקטיבית	קולקטיבי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	31	את	את	-	-	F	P	-	{preposition} []	O
+1	2	32	כל	כול	-	-	T	O	-	{quantifier}	O
+1	2	33	עולם	עולם	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	34	התורה	תורה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	35	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	36	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	לדבריו	דבר	לP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	3	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	3	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	4	אמנם	אמנם	-	-	F	A	-	{adverb} []	O
+1	3	5	צריך	צריך	-	-	F	O	-	{verb}	O
+1	3	6	לחשוף	חשף	-	-	F	V	-	{verb}	O
+1	3	7	את	את	-	-	F	P	-	{preposition} []	O
+1	3	8	החריגים	חריג	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	9	אבל	אבל	-	-	F	C	-	{conjunction} []	O
+1	3	10	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	3	11	יעלה	העלה	-	-	F	V	-	{verb}	O
+1	3	12	על	על	-	-	F	P	-	{preposition} []	O
+1	3	13	הדעת	דעת	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	14	שהיו	היה	שC	-	F	V	-	{verb}	O
+1	3	15	מעכבים	עיכב	-	-	F	V	-	{verb}	O
+1	3	16	כספים	כסף	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	17	לכל	כול	לP	-	T	O	-	{quantifier}	O
+1	3	18	תלמידי	תלמיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	19	האוניברסיטאות	אוניברסיטה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	20	המונים	מנה	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(number: plural),(person: any),(status: absolute)]	O
+1	3	21	כמאתיים	מאתיים	כP	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine and feminine),(number: dual),(status: absolute)]	O
+1	3	22	אלף	אילף	-	-	F	V	-	{verb}	O
+1	3	23	בגלל	בגלל	-	-	F	P	-	{preposition} []	O
+1	3	24	גירעון	גרעון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	25	של	של	-	-	F	P	-	{preposition} []	O
+1	3	26	אוניברסיטת	אוניברסיטה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	3	27	תל	תל	-	-	F	MWE	town	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	28	אביב	תל אביב	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_ORG
+1	3	29	המצויה	מצא	-	-	F	V	-	{verb}	O
+1	3	30	בגירעון	גרעון	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	31	תקציבי	תקציבי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	32	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	33	.	.	-	-	F	PNCT	-	{punctuation} []	O

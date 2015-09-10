@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="UTF-8"?><corpus comment="versions info: lexicon: 13/03/2013; morphologicalAnalyzer: 1.8 (13/03/2013); corpus schema 16/06/2009; lexicon schema 16/06/2009" email="mila@cs.technion.ac.il" maintainer="Slava Demender" name="Analysis Results (yeda) @ Tue Aug 18 17:39:17 IDT 2015">
+    <article id="1">
+        <paragraph id="1">
+            <sentence id="1">
+                <token id="1" surface="נתיב">
+                    <analysis id="1" score="0.0">
+                        <base lexiconItem="נתיב" lexiconPointer="4796" transliteratedLexiconItem="ntib">
+                            <properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="נָתִיב" lexiconItem="נתיב" lexiconPointer="4922" transliteratedLexiconItem="ntib">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="1.0">
+                        <base dottedLexiconItem="נָתִיב" lexiconItem="נתיב" lexiconPointer="4922" transliteratedLexiconItem="ntib">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="2" surface="התחבורה">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="תַּחְבּוּרָה" lexiconItem="תחבורה" lexiconPointer="146" transliteratedLexiconItem="txbwrh">
+                            <noun definiteness="true" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="3" surface="הציבורי">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="צִבּוּרִי" lexiconItem="ציבורי" lexiconPointer="18632" transliteratedLexiconItem="cibwri">
+                            <adjective definiteness="true" function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="4" surface="נחנך">
+                    <analysis id="1" score="0.3333333333333333">
+                        <base dottedLexiconItem="נֶחְנַךְ" lexiconItem="נחנך" lexiconPointer="20641" transliteratedLexiconItem="nxnk">
+                            <verb binyan="Nif'al" gender="masculine" number="singular" person="3" register="formal" root="חנך" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="נֶחְנַךְ" lexiconItem="נחנך" lexiconPointer="20641" transliteratedLexiconItem="nxnk">
+                            <participle binyan="Nif'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="חנך" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.3333333333333333">
+                        <base dottedLexiconItem="נֶחְנַךְ" lexiconItem="נחנך" lexiconPointer="20641" transliteratedLexiconItem="nxnk">
+                            <participle binyan="Nif'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="חנך" spelling="standard" status="absolute" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="נֶחְנַךְ" lexiconItem="נחנך" lexiconPointer="20641" transliteratedLexiconItem="nxnk">
+                            <participle binyan="Nif'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="חנך" spelling="standard" status="absolute" type="adjective"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="נֶחְנַךְ" lexiconItem="נחנך" lexiconPointer="20641" transliteratedLexiconItem="nxnk">
+                            <participle binyan="Nif'al" gender="masculine" number="singular" person="any" register="formal" root="חנך" spelling="standard" status="construct" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="0.3333333333333333">
+                        <base dottedLexiconItem="חִנֵּךְ" lexiconItem="חינך" lexiconPointer="20906" transliteratedLexiconItem="xink">
+                            <verb binyan="Pi'el" gender="masculine and feminine" number="plural" person="1" register="formal" root="חנך" spelling="standard" tense="future"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="5" surface="כאמור">
+                    <analysis id="1" score="0.0">
+                        <prefix function="preposition" id="1" surface="כ"/>
+                        <base dottedLexiconItem="אָמוּר" lexiconItem="אמור" lexiconPointer="5500" transliteratedLexiconItem="amwr">
+                            <adjective definiteness="false" function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="1.0">
+                        <prefix function="preposition" id="1" surface="כ"/>
+                        <base dottedLexiconItem="אָמוּר" lexiconItem="אמור" lexiconPointer="5500" transliteratedLexiconItem="amwr">
+                            <adjective definiteness="true" function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="preposition" id="1" surface="כ"/>
+                        <base dottedLexiconItem="אָמַר" lexiconItem="אמר" lexiconPointer="18802" transliteratedLexiconItem="amr">
+                            <verb binyan="Pa'al" register="formal" root="אמר" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="adverb" id="1" surface="כ"/>
+                        <base dottedLexiconItem="אָמוּר" lexiconItem="אמור" lexiconPointer="24929" transliteratedLexiconItem="amwr">
+                            <modal gender="masculine" number="singular" person="any" register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="6" surface="בקיץ">
+                    <analysis id="1" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="קַיִץ" lexiconItem="קיץ" lexiconPointer="13062" transliteratedLexiconItem="qic">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="קַיִץ" lexiconItem="קיץ" lexiconPointer="13062" transliteratedLexiconItem="qic">
+                            <noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="1.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="קַיִץ" lexiconItem="קיץ" lexiconPointer="13062" transliteratedLexiconItem="qic">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="7" surface="2013">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <numeral type="literal number" value="2013"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="8" surface=",">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="9" surface="ושר">
+                    <analysis id="1" score="0.0">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="שַׂר" lexiconItem="שר" lexiconPointer="6272" transliteratedLexiconItem="er">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="שַׂר" lexiconItem="שר" lexiconPointer="6272" transliteratedLexiconItem="er">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <verb binyan="Pa'al" gender="masculine" number="singular" person="3" register="formal" root="שיר" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" type="adjective"/>
+                        </base>
+                    </analysis>
+                    <analysis id="7" score="0.5">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="construct" type="noun"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="10" surface="התחבורה">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="תַּחְבּוּרָה" lexiconItem="תחבורה" lexiconPointer="146" transliteratedLexiconItem="txbwrh">
+                            <noun definiteness="true" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="11" surface="גם">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="גַּם" lexiconItem="גם" lexiconPointer="2174" transliteratedLexiconItem="gm">
+                            <adverb register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="1.0">
+                        <base dottedLexiconItem="גַּם" lexiconItem="גם" lexiconPointer="24750" transliteratedLexiconItem="gm">
+                            <conjunction register="formal" spelling="standard" type="coordinating"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="12" surface="אז">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="אָז" lexiconItem="אז" lexiconPointer="4398" transliteratedLexiconItem="az">
+                            <adverb register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="אָז" lexiconItem="אז" lexiconPointer="24708" transliteratedLexiconItem="az">
+                            <conjunction register="formal" spelling="standard" type="coordinating"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="13" surface=",">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="14" surface="ישראל">
+                    <analysis id="1" score="0.6">
+                        <base dottedLexiconItem="יִשְׂרָאֵל" lexiconItem="ישראל" lexiconPointer="14265" transliteratedLexiconItem="ieral">
+                            <properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.4">
+                        <base dottedLexiconItem="יִשְׂרָאֵל" lexiconItem="ישראל" lexiconPointer="18124" transliteratedLexiconItem="ieral">
+                            <properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="country"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="15" surface="כץ">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="כַּץ" lexiconItem="כץ" lexiconPointer="5436" transliteratedLexiconItem="kc">
+                            <properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="16" surface=",">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="17" surface="התייחס">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="הִתְיַחֵס" lexiconItem="התייחס" lexiconPointer="15330" transliteratedLexiconItem="htiixs">
+                            <verb binyan="Hitpa'el" register="formal" root="יחס" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="הִתְיַחֵס" lexiconItem="התייחס" lexiconPointer="15330" transliteratedLexiconItem="htiixs">
+                            <verb binyan="Hitpa'el" gender="masculine" number="singular" person="3" register="formal" root="יחס" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.5">
+                        <base dottedLexiconItem="הִתְיַחֵס" lexiconItem="התייחס" lexiconPointer="15330" transliteratedLexiconItem="htiixs">
+                            <verb binyan="Hitpa'el" gender="masculine" number="singular" person="2" register="formal" root="יחס" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="18" surface="השר">
+                    <analysis id="1" score="0.5">
+                        <base dottedLexiconItem="שַׂר" lexiconItem="שר" lexiconPointer="6272" transliteratedLexiconItem="er">
+                            <noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" definiteness="true" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" definiteness="true" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" type="adjective"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" subcoordinating="true" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base lexiconItem="השיר" lexiconPointer="21187" transliteratedLexiconItem="heir">
+                            <verb binyan="Hif'il" gender="masculine" number="singular" person="2" register="formal" root="נשר" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <base dottedLexiconItem="הַשַּׂר" lexiconItem="השר" lexiconPointer="25736" transliteratedLexiconItem="her">
+                            <title definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="19" surface="כץ">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="כַּץ" lexiconItem="כץ" lexiconPointer="5436" transliteratedLexiconItem="kc">
+                            <properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="20" surface="אליו">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="אֶל" lexiconItem="אל" lexiconPointer="1473" transliteratedLexiconItem="al">
+                            <preposition register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="אֵל" lexiconItem="אל" lexiconPointer="15176" transliteratedLexiconItem="al">
+                            <noun gender="masculine" number="plural" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine" number="singular" person="3"/>
+                    </analysis>
+                </token>
+                <token id="21" surface="בעמוד">
+                    <analysis id="1" score="1.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="עַמּוּד" lexiconItem="עמוד" lexiconPointer="8404" transliteratedLexiconItem="ymwd">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="עַמּוּד" lexiconItem="עמוד" lexiconPointer="8404" transliteratedLexiconItem="ymwd">
+                            <noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="עַמּוּד" lexiconItem="עמוד" lexiconPointer="8404" transliteratedLexiconItem="ymwd">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="עָמַד" lexiconItem="עמד" lexiconPointer="19724" transliteratedLexiconItem="ymd">
+                            <verb binyan="Pa'al" register="formal" root="עמד" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="22" surface="הפייסבוק">
+                    <analysis id="1" score="1.0">
+                        <base lexiconItem="פייסבוק" lexiconPointer="0" transliteratedLexiconItem="piisbwq">
+                            <properName definiteness="true"/>
+                        </base>
+                    </analysis>
+                    <analysis id="1" score="0.0">
+                        <base lexiconItem="הפייסבוק" lexiconPointer="0" transliteratedLexiconItem="hpiisbwq">
+                            <properName definiteness="false"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="23" surface="שלו">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="שְׂלָו" lexiconItem="שליו" lexiconPointer="837" transliteratedLexiconItem="eliw">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="irregular" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="שְׂלָו" lexiconItem="שליו" lexiconPointer="837" transliteratedLexiconItem="eliw">
+                            <noun gender="masculine" number="singular" register="formal" spelling="irregular" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="נָשַׁל" lexiconItem="נשל" lexiconPointer="2851" transliteratedLexiconItem="nel">
+                            <verb binyan="Pa'al" gender="masculine and feminine" number="plural" person="2" register="formal" root="נשל" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="שָׁלָה" lexiconItem="שלה" lexiconPointer="8890" transliteratedLexiconItem="elh">
+                            <verb binyan="Pa'al" gender="masculine and feminine" number="plural" person="3" register="formal" root="שלה" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="שָׁלָה" lexiconItem="שלה" lexiconPointer="8890" transliteratedLexiconItem="elh">
+                            <verb binyan="Pa'al" gender="masculine and feminine" number="plural" person="2" register="formal" root="שלה" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="1.0">
+                        <base dottedLexiconItem="שֶׁל" lexiconItem="של" lexiconPointer="16910" transliteratedLexiconItem="el">
+                            <preposition register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="7" score="0.0">
+                        <base dottedLexiconItem="שָׁל" lexiconItem="של" lexiconPointer="18070" transliteratedLexiconItem="el">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="8" score="0.0">
+                        <base dottedLexiconItem="שָׁלֵו" lexiconItem="שלו" lexiconPointer="22043" transliteratedLexiconItem="elw">
+                            <adjective definiteness="false" function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="9" score="0.0">
+                        <base dottedLexiconItem="שָׁלֵו" lexiconItem="שלו" lexiconPointer="22043" transliteratedLexiconItem="elw">
+                            <adjective function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="10" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base dottedLexiconItem="לוּ" lexiconItem="לו" lexiconPointer="20836" transliteratedLexiconItem="lw">
+                            <conjunction register="formal" spelling="standard" type="coordinating"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="24" surface=":">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="25" surface="&quot;">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="26" surface="בדיון">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="בִּדְיוֹן" lexiconItem="בדיון" lexiconPointer="9761" transliteratedLexiconItem="bdiwn">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="בִּדְיוֹן" lexiconItem="בדיון" lexiconPointer="9761" transliteratedLexiconItem="bdiwn">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="דִּיּוּן" lexiconItem="דיון" lexiconPointer="2945" transliteratedLexiconItem="diwn">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="דִּיּוּן" lexiconItem="דיון" lexiconPointer="2945" transliteratedLexiconItem="diwn">
+                            <noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <prefix function="preposition" id="1" surface="ב"/>
+                        <base dottedLexiconItem="דִּיּוּן" lexiconItem="דיון" lexiconPointer="2945" transliteratedLexiconItem="diwn">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="27" surface="שקיימתי">
+                    <analysis id="1" score="1.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base dottedLexiconItem="קִיֵּם" lexiconItem="קיים" lexiconPointer="17127" transliteratedLexiconItem="qiim">
+                            <verb binyan="Pi'el" gender="masculine and feminine" number="singular" person="1" register="formal" root="קום" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="28" surface="לפני">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="לִפְנֵי" lexiconItem="לפני" lexiconPointer="14224" transliteratedLexiconItem="lpni">
+                            <preposition register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פָּנִים" lexiconItem="פנים" lexiconPointer="5433" transliteratedLexiconItem="pnim">
+                            <noun gender="masculine and feminine" number="plural" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פָּנִים" lexiconItem="פנים" lexiconPointer="5433" transliteratedLexiconItem="pnim">
+                            <noun gender="masculine and feminine" number="plural" register="formal" spelling="irregular"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine and feminine" number="singular" person="1"/>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פֶּנִי" lexiconItem="פני" lexiconPointer="17139" transliteratedLexiconItem="pni">
+                            <noun definiteness="false" foreign="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פֶּנִי" lexiconItem="פני" lexiconPointer="17139" transliteratedLexiconItem="pni">
+                            <noun definiteness="true" foreign="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="29" surface="10">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <numeral type="literal number" value="10"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="30" surface="חודשים">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="חֹדֶשׁ" lexiconItem="חודש" lexiconPointer="15983" transliteratedLexiconItem="xwde">
+                            <noun definiteness="false" gender="masculine" number="plural" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="31" surface="גיליתי">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="גִּלָּה" lexiconItem="גילה" lexiconPointer="500" transliteratedLexiconItem="gilh">
+                            <verb binyan="Pi'el" gender="masculine and feminine" number="singular" person="1" register="formal" root="גלה" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="32" surface="להפתעתי">
+                    <analysis id="1" score="1.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="הַפְתָּעָה" lexiconItem="הפתעה" lexiconPointer="5927" transliteratedLexiconItem="hptyh">
+                            <noun gender="feminine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine and feminine" number="singular" person="1"/>
+                    </analysis>
+                </token>
+                <token id="33" surface="שמדינת">
+                    <analysis id="1" score="1.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base dottedLexiconItem="מְדִינָה" lexiconItem="מדינה" lexiconPointer="17667" transliteratedLexiconItem="mdinh">
+                            <noun gender="feminine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="34" surface="ישראל">
+                    <analysis id="1" score="0.5">
+                        <base dottedLexiconItem="יִשְׂרָאֵל" lexiconItem="ישראל" lexiconPointer="14265" transliteratedLexiconItem="ieral">
+                            <properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="יִשְׂרָאֵל" lexiconItem="ישראל" lexiconPointer="18124" transliteratedLexiconItem="ieral">
+                            <properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="country"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="35" surface="הקימה">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="קִימָה" lexiconItem="קימה" lexiconPointer="6872" transliteratedLexiconItem="qimh">
+                            <noun definiteness="true" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="הֵקִים" lexiconItem="הקים" lexiconPointer="8067" transliteratedLexiconItem="hqim">
+                            <verb binyan="Hif'il" register="formal" root="קום" spelling="standard" tense="infinitive"/>
+                        </base>
+                        <suffix function="accusative or nominative" gender="feminine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="3" score="1.0">
+                        <base dottedLexiconItem="הֵקִים" lexiconItem="הקים" lexiconPointer="8067" transliteratedLexiconItem="hqim">
+                            <verb binyan="Hif'il" gender="feminine" number="singular" person="3" register="formal" root="קום" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="36" surface="לפני">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="לִפְנֵי" lexiconItem="לפני" lexiconPointer="14224" transliteratedLexiconItem="lpni">
+                            <preposition register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פָּנִים" lexiconItem="פנים" lexiconPointer="5433" transliteratedLexiconItem="pnim">
+                            <noun gender="masculine and feminine" number="plural" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פָּנִים" lexiconItem="פנים" lexiconPointer="5433" transliteratedLexiconItem="pnim">
+                            <noun gender="masculine and feminine" number="plural" register="formal" spelling="irregular"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine and feminine" number="singular" person="1"/>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פֶּנִי" lexiconItem="פני" lexiconPointer="17139" transliteratedLexiconItem="pni">
+                            <noun definiteness="false" foreign="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="פֶּנִי" lexiconItem="פני" lexiconPointer="17139" transliteratedLexiconItem="pni">
+                            <noun definiteness="true" foreign="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="37" surface="שנים">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="שָׁנָה" lexiconItem="שנה" lexiconPointer="16710" transliteratedLexiconItem="enh">
+                            <noun definiteness="false" gender="feminine" number="plural" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base dottedLexiconItem="נִים" lexiconItem="נים" lexiconPointer="11773" transliteratedLexiconItem="nim">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base dottedLexiconItem="נִים" lexiconItem="נים" lexiconPointer="11773" transliteratedLexiconItem="nim">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="38" surface="שני">
+                    <analysis id="1" score="0.5">
+                        <base dottedLexiconItem="שֵׁנִי" lexiconItem="שני" lexiconPointer="3561" transliteratedLexiconItem="eni">
+                            <numeral definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute" type="numeral ordinal" value="2"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="יָשַׁן" lexiconItem="ישן" lexiconPointer="9044" transliteratedLexiconItem="ien">
+                            <verb binyan="Pa'al" gender="feminine" number="singular" person="2" register="formal" root="ישן" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="שִׁנָּה" lexiconItem="שינה" lexiconPointer="12708" transliteratedLexiconItem="einh">
+                            <verb binyan="Pi'el" gender="feminine" number="singular" person="2" register="formal" root="שנה" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.5">
+                        <base dottedLexiconItem="שְׁנַיִם" lexiconItem="שניים" lexiconPointer="15747" transliteratedLexiconItem="eniim">
+                            <numeral gender="masculine" number="dual" register="formal" spelling="standard" status="construct" type="numeral cardinal" value="2"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="שֵׁן" lexiconItem="שן" lexiconPointer="16197" transliteratedLexiconItem="en">
+                            <noun gender="feminine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine and feminine" number="singular" person="1"/>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <base dottedLexiconItem="שָׁנִי" lexiconItem="שני" lexiconPointer="16923" transliteratedLexiconItem="eni">
+                            <properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                    <analysis id="7" score="0.0">
+                        <base dottedLexiconItem="שָׁנִי" lexiconItem="שני" lexiconPointer="18592" transliteratedLexiconItem="eni">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="8" score="0.0">
+                        <base dottedLexiconItem="שָׁנִי" lexiconItem="שני" lexiconPointer="18592" transliteratedLexiconItem="eni">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="9" score="0.0">
+                        <base dottedLexiconItem="שָׁנָה" lexiconItem="שנה" lexiconPointer="19337" transliteratedLexiconItem="enh">
+                            <verb binyan="Pa'al" gender="feminine" number="singular" person="2" register="formal" root="שנה" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="10" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base dottedLexiconItem="נִי" lexiconItem="ני" lexiconPointer="34922" transliteratedLexiconItem="ni">
+                            <properName definiteness="false" gender="masculine and feminine" number="singular" register="formal" spelling="standard" type="symbol"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="39" surface="נתיבים">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="נָתִיב" lexiconItem="נתיב" lexiconPointer="4922" transliteratedLexiconItem="ntib">
+                            <noun definiteness="false" gender="masculine" number="plural" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="40" surface="חדשים">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="חָדָשׁ" lexiconItem="חדש" lexiconPointer="4530" transliteratedLexiconItem="xde">
+                            <adjective definiteness="false" function="adjective" gender="masculine" number="plural" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="41" surface="לאורך">
+                    <analysis id="1" score="1.0">
+                        <base lexiconItem="לאורך" lexiconPointer="36175" transliteratedLexiconItem="lawrk">
+                            <adverb register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אָרַךְ" lexiconItem="ארך" lexiconPointer="4182" transliteratedLexiconItem="ark">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="ארך" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אָרַךְ" lexiconItem="ארך" lexiconPointer="4182" transliteratedLexiconItem="ark">
+                            <participle binyan="Pa'al" definiteness="true" gender="masculine" number="singular" person="any" register="formal" root="ארך" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אָרַךְ" lexiconItem="ארך" lexiconPointer="4182" transliteratedLexiconItem="ark">
+                            <participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="ארך" spelling="standard" status="construct" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אוֹר" lexiconItem="אור" lexiconPointer="10740" transliteratedLexiconItem="awr">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine" number="singular" person="2"/>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אוֹר" lexiconItem="אור" lexiconPointer="10740" transliteratedLexiconItem="awr">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="feminine" number="singular" person="2"/>
+                    </analysis>
+                    <analysis id="7" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אֹרֶךְ" lexiconItem="אורך" lexiconPointer="19520" transliteratedLexiconItem="awrk">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="8" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אֹרֶךְ" lexiconItem="אורך" lexiconPointer="19520" transliteratedLexiconItem="awrk">
+                            <noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="9" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אֹרֶךְ" lexiconItem="אורך" lexiconPointer="19520" transliteratedLexiconItem="awrk">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="10" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אָרָה" lexiconItem="ארה" lexiconPointer="25038" transliteratedLexiconItem="arh">
+                            <participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="ארי" spelling="standard" type="noun"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine" number="singular" person="2"/>
+                    </analysis>
+                    <analysis id="11" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="אָרָה" lexiconItem="ארה" lexiconPointer="25038" transliteratedLexiconItem="arh">
+                            <participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="ארי" spelling="standard" type="noun"/>
+                        </base>
+                        <suffix function="possessive" gender="feminine" number="singular" person="2"/>
+                    </analysis>
+                </token>
+                <token id="42" surface="ציר">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="צִיר" lexiconItem="ציר" lexiconPointer="11323" transliteratedLexiconItem="cir">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="צִיר" lexiconItem="ציר" lexiconPointer="11323" transliteratedLexiconItem="cir">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="צִיֵּר" lexiconItem="צייר" lexiconPointer="13269" transliteratedLexiconItem="ciir">
+                            <verb binyan="Pi'el" register="formal" root="ציר" spelling="irregular" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="צִיֵּר" lexiconItem="צייר" lexiconPointer="13269" transliteratedLexiconItem="ciir">
+                            <verb binyan="Pi'el" gender="masculine" number="singular" person="3" register="formal" root="ציר" spelling="irregular" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="צִיֵּר" lexiconItem="צייר" lexiconPointer="13269" transliteratedLexiconItem="ciir">
+                            <verb binyan="Pi'el" gender="masculine" number="singular" person="2" register="formal" root="ציר" spelling="irregular" tense="imperative"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="43" surface="איילון">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="אַיָּלוֹן" lexiconItem="איילון" lexiconPointer="6930" transliteratedLexiconItem="aiilwn">
+                            <properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="44" surface="דרום">
+                    <analysis id="1" score="1.0">
+                        <base lexiconItem="דרום" lexiconPointer="8314" transliteratedLexiconItem="drwm">
+                            <properName definiteness="false" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="דָּרוֹם" lexiconItem="דרום" lexiconPointer="19880" transliteratedLexiconItem="drwm">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="דָּרוֹם" lexiconItem="דרום" lexiconPointer="19880" transliteratedLexiconItem="drwm">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="45" surface=",">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="46" surface="אבל">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="אֲבָל" lexiconItem="אבל" lexiconPointer="6331" transliteratedLexiconItem="abl">
+                            <conjunction register="formal" spelling="standard" type="coordinating"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="אֵבֶל" lexiconItem="אבל" lexiconPointer="11825" transliteratedLexiconItem="abl">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="אֵבֶל" lexiconItem="אבל" lexiconPointer="11825" transliteratedLexiconItem="abl">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="אָבַל" lexiconItem="אבל" lexiconPointer="16319" transliteratedLexiconItem="abl">
+                            <verb binyan="Pa'al" gender="masculine" number="singular" person="3" register="formal" root="אבל" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="אָבֵל" lexiconItem="אבל" lexiconPointer="24703" transliteratedLexiconItem="abl">
+                            <adjective definiteness="false" function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <base dottedLexiconItem="אָבֵל" lexiconItem="אבל" lexiconPointer="24703" transliteratedLexiconItem="abl">
+                            <adjective function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="47" surface="השאירו">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="הִשְאִיר" lexiconItem="השאיר" lexiconPointer="16312" transliteratedLexiconItem="heair">
+                            <verb binyan="Hif'il" register="formal" root="שאר" spelling="standard" tense="infinitive"/>
+                        </base>
+                        <suffix function="accusative or nominative" gender="masculine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="הִשְאִיר" lexiconItem="השאיר" lexiconPointer="16312" transliteratedLexiconItem="heair">
+                            <verb binyan="Hif'il" gender="masculine and feminine" number="plural" person="3" register="formal" root="שאר" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.5">
+                        <base dottedLexiconItem="הִשְאִיר" lexiconItem="השאיר" lexiconPointer="16312" transliteratedLexiconItem="heair">
+                            <verb binyan="Hif'il" gender="masculine and feminine" number="plural" person="2" register="formal" root="שאר" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="48" surface="אותם">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="אֶת" lexiconItem="את" lexiconPointer="3382" transliteratedLexiconItem="at">
+                            <preposition register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine" number="plural" person="3"/>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base lexiconItem="אותו" lexiconPointer="30512" transliteratedLexiconItem="awtw">
+                            <pronoun register="formal" spelling="standard" type="demonstrative"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine" number="plural" person="3"/>
+                    </analysis>
+                </token>
+                <token id="49" surface="סגורים">
+                    <analysis id="1" score="0.5">
+                        <base dottedLexiconItem="סָגַר" lexiconItem="סגר" lexiconPointer="8135" transliteratedLexiconItem="sgr">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" mood="passive" number="plural" person="any" register="formal" root="סגר" spelling="standard" status="absolute" type="adjective"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="סָגוּר" lexiconItem="סגור" lexiconPointer="15046" transliteratedLexiconItem="sgwr">
+                            <adjective definiteness="false" function="adjective" gender="masculine" number="plural" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="50" surface="כי">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="כִּי" lexiconItem="כי" lexiconPointer="9105" transliteratedLexiconItem="ki">
+                            <conjunction register="formal" spelling="standard" type="subordinating"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="כִי" lexiconItem="כי" lexiconPointer="34931" transliteratedLexiconItem="ki">
+                            <properName definiteness="false" gender="masculine and feminine" number="singular" register="formal" spelling="standard" type="symbol"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="51" surface="לא">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="לֹא" lexiconItem="לא" lexiconPointer="21544" transliteratedLexiconItem="la">
+                            <negation definiteness="false" register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="52" surface="החליטו">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="הֶחְלִיט" lexiconItem="החליט" lexiconPointer="943" transliteratedLexiconItem="hxliv">
+                            <verb binyan="Hif'il" register="formal" root="חלט" spelling="standard" tense="infinitive"/>
+                        </base>
+                        <suffix function="accusative or nominative" gender="masculine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="הֶחְלִיט" lexiconItem="החליט" lexiconPointer="943" transliteratedLexiconItem="hxliv">
+                            <verb binyan="Hif'il" gender="masculine and feminine" number="plural" person="3" register="formal" root="חלט" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.5">
+                        <base dottedLexiconItem="הֶחְלִיט" lexiconItem="החליט" lexiconPointer="943" transliteratedLexiconItem="hxliv">
+                            <verb binyan="Hif'il" gender="masculine and feminine" number="plural" person="2" register="formal" root="חלט" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="53" surface="איך">
+                    <analysis id="1" score="1.0">
+                        <base lexiconItem="איך" lexiconPointer="2765" transliteratedLexiconItem="aik">
+                            <adverb register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="אֵיךְ" lexiconItem="איך" lexiconPointer="24716" transliteratedLexiconItem="aik">
+                            <interrogative register="formal" spelling="standard" type="proadverb"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="54" surface="להפעיל">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="הִפְעִיל" lexiconItem="הפעיל" lexiconPointer="19089" transliteratedLexiconItem="hpyil">
+                            <verb binyan="Hif'il" register="formal" root="פעל" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="הִפְעִיל" lexiconItem="הפעיל" lexiconPointer="19089" transliteratedLexiconItem="hpyil">
+                            <verb binyan="Hif'il" register="formal" root="פעל" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="55" surface="אותם">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="אֶת" lexiconItem="את" lexiconPointer="3382" transliteratedLexiconItem="at">
+                            <preposition register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine" number="plural" person="3"/>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base lexiconItem="אותו" lexiconPointer="30512" transliteratedLexiconItem="awtw">
+                            <pronoun register="formal" spelling="standard" type="demonstrative"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine" number="plural" person="3"/>
+                    </analysis>
+                </token>
+                <token id="56" surface="&quot;">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="57" surface=",">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="58" surface="סיפר">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="סִפֵּר" lexiconItem="סיפר" lexiconPointer="9542" transliteratedLexiconItem="sipr">
+                            <verb binyan="Pi'el" gender="masculine" number="singular" person="3" register="formal" root="ספר" spelling="irregular" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="סִפֵּר" lexiconItem="סיפר" lexiconPointer="17041" transliteratedLexiconItem="sipr">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="סִפֵּר" lexiconItem="סיפר" lexiconPointer="17041" transliteratedLexiconItem="sipr">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="59" surface="השר">
+                    <analysis id="1" score="0.5">
+                        <base dottedLexiconItem="שַׂר" lexiconItem="שר" lexiconPointer="6272" transliteratedLexiconItem="er">
+                            <noun definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" definiteness="true" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" definiteness="true" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" type="adjective"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="שָׁר" lexiconItem="שר" lexiconPointer="15165" transliteratedLexiconItem="er">
+                            <participle binyan="Pa'al" gender="masculine" number="singular" person="any" register="formal" root="שיר" spelling="standard" status="absolute" subcoordinating="true" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base lexiconItem="השיר" lexiconPointer="21187" transliteratedLexiconItem="heir">
+                            <verb binyan="Hif'il" gender="masculine" number="singular" person="2" register="formal" root="נשר" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <base dottedLexiconItem="הַשַּׂר" lexiconItem="השר" lexiconPointer="25736" transliteratedLexiconItem="her">
+                            <title definiteness="true" gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="60" surface=".">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+            </sentence>
+            <sentence id="2">
+                <token id="1" surface="&quot;">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="2" surface="אתם">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="הוּא" lexiconItem="הוא" lexiconPointer="7044" transliteratedLexiconItem="hwa">
+                            <pronoun definiteness="false" gender="masculine" number="plural" person="2" register="formal" spelling="standard" type="personal"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="אֵת" lexiconItem="את" lexiconPointer="10215" transliteratedLexiconItem="at">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine" number="plural" person="3"/>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="אֶת" lexiconItem="את" lexiconPointer="24130" transliteratedLexiconItem="at">
+                            <preposition register="formal" spelling="irregular"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine" number="plural" person="3"/>
+                    </analysis>
+                </token>
+                <token id="3" surface="ודאי">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="וִדֵּא" lexiconItem="וידא" lexiconPointer="3809" transliteratedLexiconItem="wida">
+                            <verb binyan="Pi'el" gender="feminine" number="singular" person="2" register="formal" root="ודא" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="1.0">
+                        <base dottedLexiconItem="וַדַּאי" lexiconItem="ודאי" lexiconPointer="19150" transliteratedLexiconItem="wdai">
+                            <adverb register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="וַדָּאִי" lexiconItem="ודאי" lexiconPointer="22161" transliteratedLexiconItem="wdai">
+                            <adjective definiteness="false" function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="דָּאָה" lexiconItem="דאה" lexiconPointer="5197" transliteratedLexiconItem="dah">
+                            <verb binyan="Pa'al" gender="feminine" number="singular" person="2" register="formal" root="דאה" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="4" surface="שואלים">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="שָׁאַל" lexiconItem="שאל" lexiconPointer="2974" transliteratedLexiconItem="eal">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="plural" person="any" register="formal" root="שאל" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="1.0">
+                        <base dottedLexiconItem="שָׁאַל" lexiconItem="שאל" lexiconPointer="2974" transliteratedLexiconItem="eal">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="plural" person="any" register="formal" root="שאל" spelling="standard" status="absolute" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base dottedLexiconItem="שָׁאַל" lexiconItem="שאל" lexiconPointer="2974" transliteratedLexiconItem="eal">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="plural" person="any" register="formal" root="שאל" spelling="standard" status="absolute" type="adjective"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base lexiconItem="שואל" lexiconPointer="23903" transliteratedLexiconItem="ewal">
+                            <noun definiteness="false" gender="masculine" number="plural" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="5" surface=",">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="6" surface="איך">
+                    <analysis id="1" score="1.0">
+                        <base lexiconItem="איך" lexiconPointer="2765" transliteratedLexiconItem="aik">
+                            <adverb register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="אֵיךְ" lexiconItem="איך" lexiconPointer="24716" transliteratedLexiconItem="aik">
+                            <interrogative register="formal" spelling="standard" type="proadverb"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="7" surface="זה">
+                    <analysis id="1" score="0.5">
+                        <base dottedLexiconItem="זֶה" lexiconItem="זה" lexiconPointer="3333" transliteratedLexiconItem="zh">
+                            <pronoun definiteness="false" gender="masculine" number="singular" person="3" register="formal" spelling="standard" type="personal"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.5">
+                        <base dottedLexiconItem="זֶה" lexiconItem="זה" lexiconPointer="15812" transliteratedLexiconItem="zh">
+                            <pronoun definiteness="false" gender="masculine" number="singular" person="3" register="formal" spelling="standard" type="demonstrative"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="8" surface="קורה">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="קֹר" lexiconItem="קור" lexiconPointer="4385" transliteratedLexiconItem="qwr">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="feminine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="קָרָה" lexiconItem="קרה" lexiconPointer="14728" transliteratedLexiconItem="qrh">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="קרה" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="1.0">
+                        <base dottedLexiconItem="קָרָה" lexiconItem="קרה" lexiconPointer="14728" transliteratedLexiconItem="qrh">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="קרה" spelling="standard" status="absolute" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="קָרָה" lexiconItem="קרה" lexiconPointer="14728" transliteratedLexiconItem="qrh">
+                            <participle binyan="Pa'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="קרה" spelling="standard" status="absolute" type="adjective"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="קוּר" lexiconItem="קור" lexiconPointer="18392" transliteratedLexiconItem="qwr">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="feminine" number="singular" person="3"/>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <base dottedLexiconItem="קוֹרָה" lexiconItem="קורה" lexiconPointer="19970" transliteratedLexiconItem="qwrh">
+                            <noun definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="9" surface="?">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+            </sentence>
+            <sentence id="3">
+                <token id="1" surface="התשובה">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="תְּשׁוּבָה" lexiconItem="תשובה" lexiconPointer="8745" transliteratedLexiconItem="tewbh">
+                            <noun definiteness="true" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="2" surface="שלי">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="נָשַׁל" lexiconItem="נשל" lexiconPointer="2851" transliteratedLexiconItem="nel">
+                            <verb binyan="Pa'al" gender="feminine" number="singular" person="2" register="formal" root="נשל" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="שָׁלָה" lexiconItem="שלה" lexiconPointer="8890" transliteratedLexiconItem="elh">
+                            <verb binyan="Pa'al" gender="feminine" number="singular" person="2" register="formal" root="שלה" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base lexiconItem="שלי" lexiconPointer="14323" transliteratedLexiconItem="eli">
+                            <properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="1.0">
+                        <base dottedLexiconItem="שֶׁל" lexiconItem="של" lexiconPointer="16910" transliteratedLexiconItem="el">
+                            <preposition register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="pronomial" gender="masculine and feminine" number="singular" person="1"/>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="שָׁל" lexiconItem="של" lexiconPointer="18070" transliteratedLexiconItem="el">
+                            <noun gender="masculine" number="singular" register="formal" spelling="standard"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine and feminine" number="singular" person="1"/>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <base dottedLexiconItem="שָׁל" lexiconItem="של" lexiconPointer="18070" transliteratedLexiconItem="el">
+                            <noun gender="masculine" number="plural" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="7" score="0.0">
+                        <base dottedLexiconItem="שָׁל" lexiconItem="של" lexiconPointer="18070" transliteratedLexiconItem="el">
+                            <noun gender="masculine" number="plural" register="formal" spelling="irregular"/>
+                        </base>
+                        <suffix function="possessive" gender="masculine and feminine" number="singular" person="1"/>
+                    </analysis>
+                    <analysis id="8" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base lexiconItem="לי" lexiconPointer="8662" transliteratedLexiconItem="li">
+                            <properName definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="3" surface="היא">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="הוּא" lexiconItem="הוא" lexiconPointer="7044" transliteratedLexiconItem="hwa">
+                            <pronoun definiteness="false" gender="feminine" number="singular" person="3" register="formal" spelling="standard" type="personal"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="הוּא" lexiconItem="הוא" lexiconPointer="25303" transliteratedLexiconItem="hwa">
+                            <copula gender="feminine" number="singular" person="3" polarity="positive" register="formal" spelling="standard" tense="beinoni"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="4" surface="שכנראה">
+                    <analysis id="1" score="1.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <base lexiconItem="כנראה" lexiconPointer="8668" transliteratedLexiconItem="knrah">
+                            <adverb register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <prefix function="preposition" id="2" surface="כ"/>
+                        <base dottedLexiconItem="נִרְאָה" lexiconItem="נראה" lexiconPointer="21178" transliteratedLexiconItem="nrah">
+                            <participle binyan="Nif'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="ראה" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <prefix function="preposition" id="2" surface="כ"/>
+                        <base dottedLexiconItem="נִרְאָה" lexiconItem="נראה" lexiconPointer="21178" transliteratedLexiconItem="nrah">
+                            <participle binyan="Nif'al" definiteness="true" gender="masculine" number="singular" person="any" register="formal" root="ראה" spelling="standard" status="absolute" type="noun"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <prefix function="preposition" id="2" surface="כ"/>
+                        <base dottedLexiconItem="נִרְאָה" lexiconItem="נראה" lexiconPointer="21178" transliteratedLexiconItem="nrah">
+                            <participle binyan="Nif'al" definiteness="false" gender="masculine" number="singular" person="any" register="formal" root="ראה" spelling="standard" status="absolute" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <prefix function="preposition" id="2" surface="כ"/>
+                        <base dottedLexiconItem="נִרְאָה" lexiconItem="נראה" lexiconPointer="21178" transliteratedLexiconItem="nrah">
+                            <participle binyan="Nif'al" definiteness="true" gender="masculine" number="singular" person="any" register="formal" root="ראה" spelling="standard" status="absolute" type="verb"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <prefix function="relativizer/subordinatingConjunction" id="1" surface="ש"/>
+                        <prefix function="preposition" id="2" surface="כ"/>
+                        <base dottedLexiconItem="נִרְאָה" lexiconItem="נראה" lexiconPointer="21178" transliteratedLexiconItem="nrah">
+                            <participle binyan="Nif'al" gender="masculine" number="singular" person="any" register="formal" root="ראה" spelling="standard" status="construct" type="noun"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="5" surface="נוח">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="נוֹחַ" lexiconItem="נוח" lexiconPointer="4382" transliteratedLexiconItem="nwx">
+                            <adjective definiteness="false" function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="נוֹחַ" lexiconItem="נוח" lexiconPointer="4382" transliteratedLexiconItem="nwx">
+                            <adjective function="adjective" gender="masculine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.0">
+                        <base lexiconItem="נוח" lexiconPointer="5260" transliteratedLexiconItem="nwx">
+                            <properName definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" type="person"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="נָח" lexiconItem="נח" lexiconPointer="9342" transliteratedLexiconItem="nx">
+                            <verb binyan="Pa'al" register="formal" root="נוח" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                    <analysis id="5" score="0.0">
+                        <base dottedLexiconItem="נָח" lexiconItem="נח" lexiconPointer="9342" transliteratedLexiconItem="nx">
+                            <verb binyan="Pa'al" gender="masculine" number="singular" person="2" register="formal" root="נוח" spelling="standard" tense="imperative"/>
+                        </base>
+                    </analysis>
+                    <analysis id="6" score="0.0">
+                        <base dottedLexiconItem="נוֹחַ" lexiconItem="נוח" lexiconPointer="11247" transliteratedLexiconItem="nwx">
+                            <noun definiteness="false" gender="masculine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="6" surface="לא">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="לֹא" lexiconItem="לא" lexiconPointer="21544" transliteratedLexiconItem="la">
+                            <negation definiteness="false" register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="7" surface="להחליט">
+                    <analysis id="1" score="1.0">
+                        <base dottedLexiconItem="הֶחְלִיט" lexiconItem="החליט" lexiconPointer="943" transliteratedLexiconItem="hxliv">
+                            <verb binyan="Hif'il" register="formal" root="חלט" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <prefix function="preposition" id="1" surface="ל"/>
+                        <base dottedLexiconItem="הֶחְלִיט" lexiconItem="החליט" lexiconPointer="943" transliteratedLexiconItem="hxliv">
+                            <verb binyan="Hif'il" register="formal" root="חלט" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="8" surface="ולא">
+                    <analysis id="1" score="1.0">
+                        <prefix function="conjunction" id="1" surface="ו"/>
+                        <base dottedLexiconItem="לֹא" lexiconItem="לא" lexiconPointer="21544" transliteratedLexiconItem="la">
+                            <negation definiteness="false" register="formal" spelling="standard"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="9" surface="לקחת">
+                    <analysis id="1" score="0.0">
+                        <base dottedLexiconItem="לָקַח" lexiconItem="לקח" lexiconPointer="20168" transliteratedLexiconItem="lqx">
+                            <verb binyan="Pa'al" gender="masculine" number="singular" person="2" register="formal" root="לקח" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="לָקַח" lexiconItem="לקח" lexiconPointer="20168" transliteratedLexiconItem="lqx">
+                            <verb binyan="Pa'al" gender="feminine" number="singular" person="2" register="formal" root="לקח" spelling="standard" tense="past"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="1.0">
+                        <base dottedLexiconItem="לָקַח" lexiconItem="לקח" lexiconPointer="20168" transliteratedLexiconItem="lqx">
+                            <verb binyan="Pa'al" register="formal" root="לקח" spelling="standard" tense="infinitive"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="10" surface="אחריות">
+                    <analysis id="1" score="0.5">
+                        <base dottedLexiconItem="אַחְרָיוּת" lexiconItem="אחריות" lexiconPointer="2998" transliteratedLexiconItem="axriwt">
+                            <noun definiteness="false" gender="feminine" number="singular" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="2" score="0.0">
+                        <base dottedLexiconItem="אַחְרָיוּת" lexiconItem="אחריות" lexiconPointer="2998" transliteratedLexiconItem="axriwt">
+                            <noun gender="feminine" number="singular" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                    <analysis id="3" score="0.5">
+                        <base dottedLexiconItem="אַחֲרִית" lexiconItem="אחרית" lexiconPointer="4142" transliteratedLexiconItem="axrit">
+                            <noun definiteness="false" gender="feminine" number="plural" register="formal" spelling="standard" status="absolute"/>
+                        </base>
+                    </analysis>
+                    <analysis id="4" score="0.0">
+                        <base dottedLexiconItem="אַחֲרִית" lexiconItem="אחרית" lexiconPointer="4142" transliteratedLexiconItem="axrit">
+                            <noun gender="feminine" number="plural" register="formal" spelling="standard" status="construct"/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="11" surface="&quot;">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+                <token id="12" surface=".">
+                    <analysis id="1" score="1.0">
+                        <base>
+                            <punctuation/>
+                        </base>
+                    </analysis>
+                </token>
+            </sentence>
+        </paragraph>
+    </article>
+</corpus>

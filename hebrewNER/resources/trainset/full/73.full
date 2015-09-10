@@ -1,0 +1,52 @@
+1	1	1	כוחות	כוח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	2	של	של	-	-	F	P	-	{preposition} []	O
+1	1	3	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	1	4	עלו	עלה	-	-	F	V	-	{verb}	O
+1	1	5	לפני	לפני	-	-	F	P	-	{preposition} []	O
+1	1	6	כשעה	שעה	כP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	7	עם	עם	-	-	F	P	-	{preposition} []	O
+1	1	8	כלים	כלי	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	9	כבדים	כבד	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	10	לגבעה	גבעה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_LOC
+1	1	11	26	26	-	-	F	R	-	{numeral} []	I_LOC
+1	1	12	בקרית	בקרית	-	-	F	MWE	-	{MWE} []	B_LOC
+1	1	13	ארבע	ארבע	-	-	F	MWE	-	{MWE} []	I_LOC
+1	1	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	15	ועסוקים	עסוק	וC	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	16	בפינוי	פינוי	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	17	חפצים	חפץ	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	18	אישיים	אישי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	19	של	של	-	-	F	P	-	{preposition} []	O
+1	1	20	האלמנה	אלמן	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	21	והיתומים	יתום	וC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	(	(	-	-	F	PNCT	-	{punctuation} []	O
+1	2	2	החפצים	חפץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	3	נשארו	נשאר	-	-	F	V	-	{verb}	O
+1	2	4	במקום	במקום	-	-	F	P	-	{preposition} []	O
+1	2	5	בעת	עת	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	6	הפינוי	פינוי	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	7	הקודם.	קודם.	-	D	F	R	-	{properName} [(definiteness: true)]	O
+1	2	8	)	)	-	-	F	PNCT	-	{punctuation} []	O
+1	2	9	לבנת	לבנת	-	-	F	R	person	{properName} [(definiteness: false)]	I_PERS
+1	2	10	עוזרי	עוזר	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	I_PERS
+1	2	11	אמרה	אמרה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	12	בתגובה	תגובה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	13	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	14	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	15	מצערת	ציער	-	-	F	V	-	{verb}	O
+1	2	16	מאוד	מאוד	-	-	F	A	-	{adverb} []	O
+1	2	17	העובדה	עובדה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	18	שביום	ביום	שC	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	19	שכולנו	שכול	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	2	20	מתאבלים	התאבל	-	-	F	V	-	{verb}	O
+1	2	21	בו	ב	-	-	F	P	-	{preposition} []	O
+1	2	22	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	23	כוחות	כוח	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	24	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	2	25	עסוקים	עסוק	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	26	לפגוע	פגע	-	-	F	V	-	{verb}	O
+1	2	27	בי	ב	-	-	F	P	-	{preposition} []	O
+1	2	28	ובילדיי	ילד	וC-בP	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	2	29	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	30	.	.	-	-	F	PNCT	-	{punctuation} []	O

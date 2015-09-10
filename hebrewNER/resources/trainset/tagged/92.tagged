@@ -1,0 +1,63 @@
+1	1	1	באשדוד	אשדוד	בP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	1	2	הפגינו	הפגין	-	-	F	V	-	{verb}
+1	1	3	בצהריים	צהריים	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]
+1	1	4	אלפי	אלף	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]
+1	1	5	תלמידי	תלמיד	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]
+1	1	6	חרדיים	חרדי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]
+1	1	7	נגד	נגד	-	-	F	P	-	{preposition} []
+1	1	8	הקיצוצים	קיצוץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]
+1	1	9	הצפויים	צפה	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(mood: passive),(number: plural),(person: any),(status: absolute)]
+1	1	10	בתקציבי	תקציב	בP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]
+1	1	11	הישיבות	ישיבה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]
+1	1	12	והרווחה	רווחה	וC	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]
+1	1	13	.	.	-	-	F	PNCT	-	{punctuation} []
+1	2	1	הם	הוא	-	-	F	Q	-	{pronoun}
+1	2	2	השמיעו	השמיע	-	-	F	V	-	{verb}
+1	2	3	קריאות	קריאה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]
+1	2	4	בגנות	גינה	-	-	F	V	-	{verb}
+1	2	5	הממשלה	ממשלה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]
+1	2	6	.	.	-	-	F	PNCT	-	{punctuation} []
+1	3	1	היום	היום	-	-	F	A	-	{adverb} []
+1	3	2	התקשר	התקשר	-	-	F	V	-	{verb}
+1	3	3	רה"מ	ר"מ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine and feminine),(number: singular),(status: absolute)]
+1	3	4	שרון	שרון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]
+1	3	5	לח"כ	ח"כ	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]
+1	3	6	מאיר	מאיר	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]
+1	3	7	פורוש	פורוש	-	-	F	R	person	{properName} [(definiteness: false)]
+1	3	8	מיהדות	ייהד	-	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]
+1	3	9	התורה	תורה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]
+1	3	10	,	,	-	-	F	PNCT	-	{punctuation} []
+1	3	11	השובת	שבת	-	-	F	V	-	{verb}
+1	3	12	רעב	רעב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	3	13	מול	מול	-	-	F	P	-	{preposition} []
+1	3	14	לשכתו	לשכה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]
+1	3	15	,	,	-	-	F	PNCT	-	{punctuation} []
+1	3	16	והתעניין	התעניין	וC	-	F	V	-	{verb}
+1	3	17	בשלומו	שלום	בP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]
+1	3	18	.	.	-	-	F	PNCT	-	{punctuation} []
+1	4	1	פורוש	פורוש	-	-	F	R	person	{properName} [(definiteness: false)]
+1	4	2	קבל	קבל	-	-	F	V	-	{verb}
+1	4	3	באוזני	אוזן	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]
+1	4	4	שרון	שרון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]
+1	4	5	על	על	-	-	F	P	-	{preposition} []
+1	4	6	הקיצוץ	קיצוץ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	4	7	הגדול	גדול	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]
+1	4	8	הצפוי	צפה	-	D	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: true),(gender: masculine),(mood: passive),(number: singular),(person: any),(status: absolute)]
+1	4	9	בקצבות	קצבות	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]
+1	4	10	הילדים	ילד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]
+1	4	11	,	,	-	-	F	PNCT	-	{punctuation} []
+1	4	12	ואמר	המר	וC	-	F	V	-	{verb}
+1	4	13	לו	ל	-	-	F	P	-	{preposition} []
+1	4	14	כי	כי	-	-	F	C	-	{conjunction} []
+1	4	15	הדבר	דבר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]
+1	4	16	יביא	הביא	-	-	F	V	-	{verb}
+1	4	17	לסף	סף	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]
+1	4	18	רעב	רעב	-	-	F	V	-	{verb}
+1	4	19	אלפי	אלף	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]
+1	4	20	משפחות	משפחה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]
+1	4	21	.	.	-	-	F	PNCT	-	{punctuation} []
+1	5	1	(	(	-	-	F	PNCT	-	{punctuation} []
+1	5	2	ר	ר	-	-	F	R	-	{properName} [(definiteness: false)]
+1	5	3	,	,	-	-	F	PNCT	-	{punctuation} []
+1	5	4	א	א	-	-	F	R	-	{properName} [(definiteness: false)]
+1	5	5	)	)	-	-	F	PNCT	-	{punctuation} []

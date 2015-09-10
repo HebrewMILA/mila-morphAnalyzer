@@ -1,0 +1,55 @@
+1	1	1	ח"כ	ח"כ	-	-	F	O	-	{title} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	1	2	אליהו	אליהו	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	3	סוויסה	סוויסה	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	1	4	החליט	החליט	-	-	F	V	-	{verb} [(binyan: Hif'il),(gender: masculine),(number: singular),(person: 3),(tense: past)]	O
+1	1	5	לקבל	קיבל	-	-	F	V	-	{verb} [(binyan: Pi'el),(tense: infinitive)]	O
+1	1	6	עליו	על	-	-	F	P	-	{preposition} []	O
+1	1	7	את	את	-	-	F	P	-	{preposition} []	O
+1	1	8	החלטתה	החלטה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	1	9	של	של	-	-	F	P	-	{preposition} []	O
+1	1	10	מועצת	מועצה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	1	11	חכמי	חכם	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	I_ORG
+1	1	12	ש"ס	ש"ס	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	1	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	14	ולהתמנות	התמנה	וC	-	F	V	-	{verb} [(binyan: Hitpa'el),(tense: infinitive)]	O
+1	1	15	לשר	שר	לP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	16	לענייני	עניין	לP	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	17	ירושלים	ירושלים	-	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	בשעות	שעה	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	2	2	הבוקר	בוקר	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	3	שלח	שלח	-	-	F	V	-	{verb} [(binyan: Pa'al),(gender: masculine),(number: singular),(person: 3),(tense: past)]	O
+1	2	4	סוויסה	סוויסה	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	2	5	מכתב	מכתב	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	6	לרב	רב	לP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	7	עובדיה	עובדיה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	8	יוסף	יוסף	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	2	9	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	10	ובו	ב	וC	-	F	P	-	{preposition} []	O
+1	2	11	ביקש	ביקש	-	-	F	V	-	{verb} [(binyan: Pi'el),(gender: masculine),(number: singular),(person: 3),(tense: past)]	O
+1	2	12	ממנו	מן	-	-	F	P	-	{preposition} []	O
+1	2	13	לאפשר	אפשר	-	-	F	V	-	{verb} [(binyan: Pi'el),(tense: infinitive)]	O
+1	2	14	לו	לו	-	-	F	C	-	{conjunction} []	O
+1	2	15	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	2	16	לקבל	קיבל	-	-	F	V	-	{verb} [(binyan: Pi'el),(tense: infinitive)]	O
+1	2	17	את	את	-	-	F	P	-	{preposition} []	O
+1	2	18	התפקיד	תפקיד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	19	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	20	ולסלוח	סלח	וC	-	F	V	-	{verb} [(binyan: Pa'al),(tense: infinitive)]	O
+1	2	21	לו	ל	-	-	F	P	-	{preposition} []	O
+1	2	22	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	הרב	רב	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	2	עובדיה	עובדיה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	3	3	זימן	זימן	-	-	F	V	-	{verb} [(binyan: Pi'el),(gender: masculine),(number: singular),(person: 3),(tense: past)]	O
+1	3	4	את	את	-	-	F	P	-	{preposition} []	O
+1	3	5	סוויסה	סוויסה	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	3	6	לפגישה	פגישה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	8	ובמהלכה	מהלך	וC-בP	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	3	9	הורה	הורה	-	-	F	V	-	{verb} [(binyan: Hif'il),(gender: masculine),(number: singular),(person: 3),(tense: past)]	O
+1	3	10	לו	ל	-	-	F	P	-	{preposition} []	O
+1	3	11	לקבל	קיבל	-	-	F	V	-	{verb} [(binyan: Pi'el),(tense: infinitive)]	O
+1	3	12	עליו	על	-	-	F	P	-	{preposition} []	O
+1	3	13	את	את	-	-	F	P	-	{preposition} []	O
+1	3	14	התפקיד	תפקיד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	15	.	.	-	-	F	PNCT	-	{punctuation} []	O

@@ -1,0 +1,93 @@
+1	1	1	בכירים	בכיר	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	2	במשרד	משרד	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	1	3	ההגנה	הגנה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	4	האמריקני	אמריקני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	1	5	הודיעו	הודיע	-	-	F	V	-	{verb}	O
+1	1	6	היום	היום	-	-	F	A	-	{adverb} []	O
+1	1	7	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	1	8	הרשות	רשות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	9	האמריקנית	אמריקני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	10	למודיעין	מודיעין	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	1	11	בטחוני	בטחוני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	1	12	העלתה	העלה	-	-	F	V	-	{verb}	O
+1	1	13	את	את	-	-	F	P	-	{preposition} []	O
+1	1	14	רמת	רמה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	15	הכוננות	כוננות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	16	לקראת	לקראת	-	-	F	P	-	{preposition} []	O
+1	1	17	התקפת	התקפה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	1	18	טרור	טרור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	19	אפשרית	אפשרי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	20	במתקנים	תיקן	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	21	ובבסיסים	בסיס	וC-בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	22	צבאיים	צבאי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	23	בתוך	בתוך	-	-	F	P	-	{preposition} []	O
+1	1	24	ארה"ב	ארה"ב	-	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	1	25	לרמה	רמה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	26	הגבוהה	גבוה	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	27	ביותר	ביותר	-	-	F	A	-	{adverb} []	O
+1	1	28	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	עקב	עקב	-	-	F	P	-	{preposition} []	O
+1	2	2	השינוי	שינוי	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	3	ברמת	רמה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	4	הכוננות	כוננות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	5	מ	מ	מP	-	F	-	-	[]	O
+1	2	6	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	7	משמעותית	משמעותי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	8	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	9	ל	ל	לP	-	F	-	-	[]	O
+1	2	10	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	11	גבוהה	גבוה	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	12	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	2	13	החליט	החליט	-	-	F	V	-	{verb}	O
+1	2	14	הצבא	צבא	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	15	האמריקני	אמריקני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	I_MISC_AFF
+1	2	16	לפרוס	פרס	-	-	F	V	-	{verb}	O
+1	2	17	מערכות	מערכת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	18	טילי	טייל	-	-	F	V	-	{verb}	O
+1	2	19	נ"מ	נ"מ	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	20	נוספות	נוסף	-	-	F	G	-	{adjective} [(binyan: Nif'al),(definiteness: false),(gender: feminine),(number: plural),(person: any),(status: absolute)]	O
+1	2	21	ולהגדיל	הגדיל	וC	-	F	V	-	{verb}	O
+1	2	22	את	את	-	-	F	P	-	{preposition} []	O
+1	2	23	מספר	מספר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	24	סיורי	סיור	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	2	25	המטוסים	מטוס	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	26	באזור	אזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	27	וושינגטון	ואשינגטון	-	-	F	R	person|location|country	{properName} [(definiteness: false)]	I_LOC
+1	2	28	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	אזהרת	אזהרה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	2	הרשות	רשות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	3	התפרסמה	התפרסם	-	-	F	V	-	{verb}	O
+1	3	4	ביום	ביום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	3	5	שלישי	שליש	-	-	T	R	-	{numeral} [(gender: masculine),(number: plural),(status: construct)]	I_DATE
+1	3	6	בשעת	שעה	בP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	7	לילה	לילה	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	8	מאוחרת	אוחר	-	-	F	G	-	{adjective} [(binyan: Pu'al),(definiteness: false),(gender: feminine),(number: singular),(person: any),(status: absolute)]	O
+1	3	9	כשהממשל	ממשל	כשC	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	10	העלה	העלה	-	-	F	V	-	{verb}	O
+1	3	11	במקביל	במקביל	-	-	F	A	-	{adverb} []	O
+1	3	12	את	את	-	-	F	P	-	{preposition} []	O
+1	3	13	מצב	מצב	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	3	14	הכוננות	כוננות	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	15	הכללית	כללי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	16	שלו	של	-	-	F	P	-	{preposition} []	O
+1	3	17	לדרגת	דרגה	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	3	18	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	19	כתום	כתום	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	20	"	"	-	-	F	PNCT	-	{punctuation} []	O
+1	3	21	מחשש	חישש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	22	להתקפות	התקפה	לP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	23	על	על	-	-	F	P	-	{preposition} []	O
+1	3	24	יעדים	יעד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	25	אמריקניים	אמריקני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	3	26	בארה"ב	ארה"ב	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	3	27	ומחוצה	מחץ	וC	-	F	G	-	{adjective} [(binyan: Pa'al),(definiteness: false),(gender: feminine),(mood: passive),(number: singular),(person: any),(status: absolute)]	O
+1	3	28	לה	ל	-	-	F	P	-	{preposition} []	O
+1	3	29	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	30	בעקבות	בעקבות	-	-	F	P	-	{preposition} []	O
+1	3	31	פיגועי	פיגוע	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	32	התאבדות	התאבדות	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	33	האחרונים	אחרון	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	34	בערב	ערב	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	3	35	הסעודית	סעודי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_LOC
+1	3	36	ובמרוקו	מרוקו	וC-בP	-	F	R	country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	B_LOC
+1	3	37	.	.	-	-	F	PNCT	-	{punctuation} []	O

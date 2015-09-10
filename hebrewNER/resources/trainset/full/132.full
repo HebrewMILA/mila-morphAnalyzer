@@ -1,0 +1,19 @@
+1	1	1	הלילה	לילה	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	2	עצר	עצר	-	-	F	V	-	{verb}	O
+1	1	3	צה"ל	צה"ל	-	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	1	4	ארבעה	ארבעה	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	5	פלשתינים	פלסטיני	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	I_MISC_AFF
+1	1	6	החשודים	חשוד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	7	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	1	8	היו	היה	-	-	F	V	-	{verb}	O
+1	1	9	מעורבים	מעורב	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	10	בפעילות	פעיל	בP	-	T	N	-	{noun} [(gender: feminine),(number: plural),(status: construct)]	O
+1	1	11	חבלנית	חבלן	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	החשודים	חשוד	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	2	2	נעצרו	נעצר	-	-	F	V	-	{verb}	O
+1	2	3	באזור	אזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	4	ג'נין	ג'נין	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	2	5	רמאללה	רמאללה	-	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	B_LOC
+1	2	6	וירושלים	ירושלים	וC	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	B_LOC
+1	2	7	.	.	-	-	F	PNCT	-	{punctuation} []	O

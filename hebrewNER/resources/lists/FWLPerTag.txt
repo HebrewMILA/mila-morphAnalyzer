@@ -1,0 +1,382 @@
+DATE	15.5.05
+DATE	1958
+DATE	1984
+DATE	1988
+DATE	1990DATE	2003
+DATE	2004
+DATE	2005
+DATE	2006
+DATE	31 בדצמבר 2004
+DATE	31 במרס 2004
+DATE	31 במרס 2005
+DATE	אפריל
+DATE	אפריל 2005
+DATE	ב'
+DATE	באפריל
+DATE	ביום ראשון
+DATE	ביום שישי
+DATE	ביום שלישי
+DATE	ביום שני
+DATE	ביוני
+DATE	בינואר
+DATE	בשבת
+DATE	חג הפסח
+DATE	יולי
+DATE	מרס
+LOC	אורנית
+LOC	איובה
+LOC	איראן
+LOC	אירופה
+LOC	אלכסנדריה
+LOC	אמריקה
+LOC	אסואן
+LOC	ארה"ב
+LOC	ארץ ישראל
+LOC	ארצות הברית
+LOC	באיובה
+LOC	באירופה
+LOC	באמריקה
+LOC	באר שבע
+LOC	בארה"ב
+LOC	בארץ ישראל
+LOC	בארצות הברית
+LOC	באשדוד
+LOC	בבגדאד
+LOC	בבלומפילד
+LOC	בהר הבית
+LOC	בוואשינגטון
+LOC	בוורשה
+LOC	בחברון
+LOC	בירדן
+LOC	בירושלים
+LOC	ביש"ע
+LOC	בישראל
+LOC	בית חנון
+LOC	במוסקווה
+LOC	במזרח התיכון
+LOC	במינכן
+LOC	במינסוטה
+LOC	במפרץ הפרסי
+LOC	בנהריה
+LOC	בניו - יורק
+LOC	בניו יורק
+LOC	בסוריה
+LOC	בסין
+LOC	בעיראק
+LOC	בעכו
+LOC	בפולין
+LOC	בצרפת
+LOC	ברוסיה
+LOC	ברמאללה
+LOC	ברפיח
+LOC	ברצועה
+LOC	ברצועת עזה
+LOC	בשטחים
+LOC	בשכם
+LOC	בתל - אביב
+LOC	בתל אביב
+LOC	גרמניה
+LOC	הים השחור
+LOC	הירדן
+LOC	הנילוס
+LOC	הר הבית
+LOC	וושינגטון
+LOC	וירושלים
+LOC	חבל עזה
+LOC	טקסס
+LOC	יהודה
+LOC	ירושלים
+LOC	יש"ע
+LOC	ישראל
+LOC	לבית לחם
+LOC	לבנון
+LOC	לירדן
+LOC	לירושלים
+LOC	לישראל
+LOC	לפולין
+LOC	מאנגליה
+LOC	מישראל
+LOC	מכורה
+LOC	מסצוסטס
+LOC	מפולין
+LOC	מצרים
+LOC	מקהיר
+LOC	מתאילנד
+LOC	ניו זילנד
+LOC	עזה
+LOC	עיראק
+LOC	פולין
+LOC	צופים
+LOC	צרפת
+LOC	קנדה
+LOC	קרקוב
+LOC	רוסיה
+LOC	רמאללה
+LOC	שארה"ב
+LOC	שבישראל
+LOC	שומרון
+LOC	שישראל
+LOC	תל - אביב
+LOC	תל אביב
+MISC_AFF	אמריקאי
+MISC_AFF	אמריקאיות
+MISC_AFF	אמריקאים
+MISC_AFF	אמריקאית
+MISC_AFF	אמריקנים
+MISC_AFF	ביהודים
+MISC_AFF	בערבים
+MISC_AFF	האמריקאי
+MISC_AFF	האמריקאים
+MISC_AFF	האמריקאית
+MISC_AFF	האמריקני
+MISC_AFF	הבריטי
+MISC_AFF	הגרמני
+MISC_AFF	היהודי
+MISC_AFF	היהודים
+MISC_AFF	היהודית
+MISC_AFF	הישראלי
+MISC_AFF	הישראלים
+MISC_AFF	הישראלית
+MISC_AFF	הלטינו
+MISC_AFF	המוסלמי
+MISC_AFF	המוסלמים
+MISC_AFF	המוסלמית
+MISC_AFF	הנאצים
+MISC_AFF	הנאצית
+MISC_AFF	הערבי
+MISC_AFF	הערבים
+MISC_AFF	הערבית
+MISC_AFF	הפולני
+MISC_AFF	הפולנים
+MISC_AFF	הפולנית
+MISC_AFF	הפלשתינאים
+MISC_AFF	הפלשתיני
+MISC_AFF	הפלשתיניים
+MISC_AFF	הפלשתינים
+MISC_AFF	הפלשתינית
+MISC_AFF	הצרפתי
+MISC_AFF	הצרפתים
+MISC_AFF	הצרפתית
+MISC_AFF	הקומוניסטית
+MISC_AFF	ויהודים
+MISC_AFF	חרדים
+MISC_AFF	יהודי
+MISC_AFF	יהודים
+MISC_AFF	ישראלי
+MISC_AFF	ישראליות
+MISC_AFF	ישראליים
+MISC_AFF	ישראלים
+MISC_AFF	ישראלית
+MISC_AFF	ליהודים
+MISC_AFF	לערבים
+MISC_AFF	לפלשתינאים
+MISC_AFF	ערב
+MISC_AFF	ערבי
+MISC_AFF	ערביי
+MISC_AFF	ערביים
+MISC_AFF	ערבים
+MISC_AFF	פולני
+MISC_AFF	פולנים
+MISC_AFF	פלשתינאים
+MISC_AFF	פלשתיני
+MISC_AFF	פלשתיניים
+MISC_AFF	פלשתינים
+MISC_AFF	שהאמריקאים
+MISC_AFF	שוודים
+MISC_ENT	היום השמיני של השבוע
+MISC_ENT	להרוג את הכלב השני
+MISC_ENT	צופן דה וינצ'י
+MISC_EVENT	האינתיפאדה
+MISC_EVENT	השואה
+MONEY	100 מיליון דולר
+MONEY	57 אלף שקל
+MONEY	האירו
+MONEY	הדולר
+MONEY	השקל
+ORG	C.I.A.
+ORG	F5
+ORG	אורדן
+ORG	איגוד הפועלים החקלאיים
+ORG	אל על
+ORG	אש"ף
+ORG	בג"צ
+ORG	בוסטון גלוב
+ORG	בז"ן
+ORG	בזק
+ORG	בית הדין הצבאי
+ORG	בית המשפט העליון
+ORG	בית הרב
+ORG	בכנסת
+ORG	בנק ישראל
+ORG	בסנאט
+ORG	בצה"ל
+ORG	ברש"פ
+ORG	גשרי תרבות
+ORG	דובר צה"ל
+ORG	דנאל
+ORG	האו"ם
+ORG	האוצר
+ORG	האיחוד האירופי
+ORG	הארץ
+ORG	הבית הלבן
+ORG	ההתאחדות לספורט
+ORG	החברה קדישא
+ORG	החמאס
+ORG	הכנסייה הקתולית
+ORG	הכנסת
+ORG	הליכוד
+ORG	המחתרת היהודית
+ORG	המפלגה הדמוקרטית
+ORG	העבודה
+ORG	הפתח'
+ORG	הציונות
+ORG	הרש"פ
+ORG	הרשות הפלשתינית
+ORG	השב"כ
+ORG	התאחדות התעשיינים
+ORG	וושינגטון פוסט
+ORG	ויקטורי
+ORG	חיל האוויר
+ORG	טמבור
+ORG	ישיבת פוניבז'
+ORG	כך
+ORG	כנסת
+ORG	לכנסת
+ORG	לסנאט
+ORG	לערוץ 7
+ORG	מדינת ישראל
+ORG	מועצת יש"ע
+ORG	ממשלת ישראל
+ORG	ממשרד הבריאות
+ORG	מסדר ציון
+ORG	מעלות
+ORG	מעריב
+ORG	מקורות
+ORG	משטרת ישראל
+ORG	משמר הגבול
+ORG	משרד האוצר
+ORG	משרד הבריאות
+ORG	משרד החוץ
+ORG	משרד המשטרה
+ORG	סטאר-נייט
+ORG	סנקטום
+ORG	סרגון
+ORG	עם ישראל
+ORG	עתי"ם
+ORG	פיקוד המרכז
+ORG	צ'ק פוינט
+ORG	צה"ל
+ORG	קבוצת עזריאלי
+ORG	קוקה קולה
+ORG	קוקה קולה ישראל
+ORG	קרן מקארתור
+ORG	רשות הדואר
+ORG	רשות המסים
+ORG	רשות שדות התעופה
+ORG	שופרסל
+ORG	שירות התעסוקה
+ORG	תחנת נהריה
+ORG	תנועת המושבים
+PERCENT	12%
+PERCENT	23%
+PERCENT	30%
+PERCENT	4.6%
+PERCENT	4.7%
+PERCENT	5%
+PERCENT	5.4%
+PERCENT	7%
+PERS	א - שרע
+PERS	אבו מאזן
+PERS	אבו-ג'וייד
+PERS	אביטל
+PERS	אברבוך
+PERS	אוריאל לין
+PERS	אליקים העצני
+PERS	אסתר שטיינבך
+PERS	אריאל שרון
+PERS	ארנון
+PERS	באקוולד
+PERS	בוסקה
+PERS	בורחס
+PERS	בוש
+PERS	בושוויץ
+PERS	בכהנא
+PERS	בלדה
+PERS	בלומה
+PERS	בן דוד
+PERS	בנימין נתניהו
+PERS	בראון
+PERS	ברוש
+PERS	ברמן
+PERS	ברק
+PERS	ברש
+PERS	ג'ורג' בוש
+PERS	ג'ורג' טנט
+PERS	גולדשטיין
+PERS	גורג
+PERS	גורג בוש
+PERS	גינוסר
+PERS	גרוסבורד
+PERS	גרינברג
+PERS	דפנה שפרוך
+PERS	הארקין
+PERS	היטלר
+PERS	הנגבי
+PERS	הראל
+PERS	וגרינברג
+PERS	וולסטון
+PERS	וכהנא
+PERS	ורטהיים
+PERS	זמאן
+PERS	חיים פרץ ברמן
+PERS	חלאסקו
+PERS	טובייה
+PERS	טוקי
+PERS	טירן פולק
+PERS	יורק פרס
+PERS	יחיא
+PERS	ישוע
+PERS	כהנא
+PERS	כספי
+PERS	ללקין
+PERS	מאיר כהנא
+PERS	מאיר שטרית
+PERS	מארק
+PERS	מארק חלאסקו
+PERS	מובארק
+PERS	מוחמד דיף
+PERS	מילר
+PERS	מצא
+PERS	מרקוביץ'
+PERS	נאית
+PERS	ניסים דהן
+PERS	נתניהו
+PERS	סאלם איסמעיל מובארק
+PERS	סדאם חוסיין
+PERS	סוניה
+PERS	סילבר
+PERS	עבדל ראזק יחיא
+PERS	עוז
+PERS	עופר
+PERS	ערפאת
+PERS	פאפון
+PERS	פנקייביץ
+PERS	פרס
+PERS	קובי פינקלר
+PERS	קולק
+PERS	קוצ'מה
+PERS	קשטן
+PERS	רוזנפלדר
+PERS	רז
+PERS	ריצארדס
+PERS	שגב
+PERS	שוויד
+PERS	שטייף
+PERS	שייט
+PERS	שמיר
+PERS	שמעון פרס
+PERS	שערפאת
+PERS	שרגא ברוש
+PERS	שרדר
+PERS	שרון
+TIME	1430

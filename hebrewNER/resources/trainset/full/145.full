@@ -1,0 +1,46 @@
+1	1	1	טירון	טירון	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	2	מיחידת	יחידה	מP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	1	3	דובדבן	דובדבן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	1	4	מת	מת	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	1	5	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	1	6	במתקן	תיקן	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_LOC
+1	1	7	אדם	אדם	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_LOC
+1	1	8	במהלך	מהלך	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	9	ריצה	ריצה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	1	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	חבריו	חבר	-	-	F	N	-	{noun} [(gender: masculine),(number: plural)]	O
+1	2	2	סיפרו	סיפר	-	-	F	V	-	{verb}	O
+1	2	3	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	4	יום	יום	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	5	קודם	קודם	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	2	6	לכן	קודם לכן	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: adverb)]	O
+1	2	7	הוא	הוא	-	-	F	Q	-	{pronoun}	O
+1	2	8	התלונן	התלונן	-	-	F	V	-	{verb}	O
+1	2	9	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	2	10	אינו	אינו	-	-	F	V	-	{verb}	O
+1	2	11	חש	חש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	12	בטוב	טוב	בP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	14	וכעונש	ענש	וC-כP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	15	נצטווה	הצטווה	-	-	F	V	-	{verb}	O
+1	2	16	לקיים	קיים	-	-	F	V	-	{verb}	O
+1	2	17	למחרת	למחרת	-	-	F	A	-	{adverb} []	O
+1	2	18	את	את	-	-	F	P	-	{preposition} []	O
+1	2	19	הפעילות	פעיל	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: plural),(status: absolute)]	O
+1	2	20	כשכל	שכל	כP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	2	21	ציודו	ציוד	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	2	22	עליו	על	-	-	F	P	-	{preposition} []	O
+1	2	23	.כך	.כך	-	-	F	R	-	{properName} [(definiteness: false)]	O
+1	2	24	דווחה	דווח	-	-	F	V	-	{verb}	O
+1	2	25	כתבת	כתבה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	O
+1	2	26	רשת	רשת	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	2	27	ב'	ב'	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_ORG
+1	2	28	כרמלה	כרמלה	-	-	F	R	person	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_PERS
+1	2	29	מנשה	מנשה	-	-	F	R	location|person	{properName} [(definiteness: false)]	I_PERS
+1	2	30	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	בצה"ל	צה"ל	בP	-	F	R	organization	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_ORG
+1	3	2	בודקים	בדק	-	-	F	V	-	{verb}	O
+1	3	3	את	את	-	-	F	P	-	{preposition} []	O
+1	3	4	נסיבות	נסיבה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	3	5	הארוע	אירוע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	6	.	.	-	-	F	PNCT	-	{punctuation} []	O

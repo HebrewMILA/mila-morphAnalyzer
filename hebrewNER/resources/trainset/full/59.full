@@ -1,0 +1,205 @@
+1	1	1	יו"ר	יו"ר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	2	רשות	רשות	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	1	3	שדות	שדות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	1	4	התעופה	שדה תעופה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	I_ORG
+1	1	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	6	אריה	אריה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	1	7	גרוסבורד	גרוסבורד	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	1	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	1	9	נהרג	נהרג	-	-	F	V	-	{verb}	O
+1	1	10	ביום	ביום	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	11	שני	שני	-	-	F	R	-	{numeral} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	I_DATE
+1	1	12	בתאונת	תאונת	בP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	1	13	דרכים	תאונת דרכים	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	1	14	בארצות	ארצות	בP	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	15	-	-	-	-	F	PNCT	-	{punctuation} []	I_LOC
+1	1	16	הברית	ארצות הברית	-	-	F	MWE	location	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	1	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	גרוסבורד	גרוסבורד	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	2	2	נהג	נהג	-	-	F	V	-	{verb}	O
+1	2	3	לבדו	לבד	-	-	F	A	-	{adverb} []	O
+1	2	4	במכונית	כונה	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	2	5	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	2	6	בדרכו	דרך	בP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	2	7	מהעיר	עיר	מP	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	2	8	מיניאפוליס	מיניאפוליס	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	2	9	באינדיאנה	אינדיאנה	בP	-	F	R	country	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	B_LOC
+1	2	10	לנמל	נמל	לP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	2	11	התעופה	נמל תעופה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	O
+1	2	12	שלה	של	-	-	F	P	-	{preposition} []	O
+1	2	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	משאית	משאית	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	3	2	פגעה	פגע	-	-	F	V	-	{verb}	O
+1	3	3	במכוניתו	מכונית	בP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	3	4	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	3	5	והוא	הוא	וC	-	F	Q	-	{pronoun}	O
+1	3	6	נהרג	נהרג	-	-	F	V	-	{verb}	O
+1	3	7	במקום	במקום	-	-	F	P	-	{preposition} []	O
+1	3	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	4	1	אריה	אריה	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_PERS
+1	4	2	גרוסבורד	גרוסבורד	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	4	3	אמור	אמור	-	-	F	O	-	{verb}	O
+1	4	4	היה	היה	-	-	F	V	-	{verb}	O
+1	4	5	לטוס	טס	-	-	F	V	-	{verb}	O
+1	4	6	ממיניאפוליס	מיניאפוליס	מP	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	4	7	לשיקאגו	שיקאגו	לP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	B_LOC
+1	4	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	4	9	וממנה	מן	וC	-	F	P	-	{preposition} []	O
+1	4	10	לניו	ניו	לP	-	F	MWE	town|other	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	4	11	-	-	-	-	F	PNCT	-	{punctuation} []	I_LOC
+1	4	12	יורק	ניו יורק	-	-	F	MWE	town	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: propername)]	I_LOC
+1	4	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	5	1	שם	שם	שC-מP	-	F	-	-	[]	O
+1	5	2	היה	היה	-	-	F	V	-	{verb}	O
+1	5	3	אמור	אמור	-	-	F	O	-	{verb}	O
+1	5	4	להיפגש	נפגש	-	-	F	V	-	{verb}	O
+1	5	5	עם	עם	-	-	F	P	-	{preposition} []	O
+1	5	6	אשתו	איש	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	5	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	5	8	שעשתה	עשה	שC	-	F	V	-	{verb}	O
+1	5	9	בבוסטון	בוסטון	בP	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	5	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	6	1	בני	בני	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	6	2	הזוג	בן זוג	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	6	3	גרוסבורד	גרוסבורד	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	6	4	תוכננו	תוכנן	-	-	F	V	-	{verb}	O
+1	6	5	לשוב	שב	-	-	F	V	-	{verb}	O
+1	6	6	היום	היום	-	-	F	A	-	{adverb} []	O
+1	6	7	אחרי	אחרי	-	-	F	P	-	{preposition} []	O
+1	6	8	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	6	9	הצהריים	צהריים	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	6	10	לישראל	ישראל	לP	-	F	R	person|country	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	6	11	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	7	1	דבר	דבר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	7	2	מותו	מוות	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	7	3	של	של	-	-	F	P	-	{preposition} []	O
+1	7	4	גרוסבורד	גרוסבורד	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	7	5	נודע	נודע	-	-	F	V	-	{verb}	O
+1	7	6	רק	רק	-	-	F	A	-	{adverb} []	O
+1	7	7	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	7	8	בצהריים	צהריים	בP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: plural),(status: absolute)]	O
+1	7	9	לרשות	רשות	לP	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	7	10	שדות	שדות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	7	11	התעופה	שדה תעופה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	I_ORG
+1	7	12	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	8	1	הגורמים	גרם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	8	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	3	שטיפלו	טיפל	שC	-	F	V	-	{verb}	O
+1	8	4	בדבר	בדבר	-	-	F	P	-	{preposition} []	O
+1	8	5	בארץ	ארץ	בP	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	8	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	8	7	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	8	8	קישרו	קישר	-	-	F	V	-	{verb}	O
+1	8	9	את	את	-	-	F	P	-	{preposition} []	O
+1	8	10	שמו	שם	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	8	11	עם	עם	-	-	F	P	-	{preposition} []	O
+1	8	12	תפקידו	תפקיד	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	8	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	9	1	משטרת	משטרה	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	9	2	מיניאפוליס	מיניאפוליס	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_ORG
+1	9	3	מצאה	מצא	-	-	F	V	-	{verb}	O
+1	9	4	במכוניתו	מכונית	בP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	9	5	את	את	-	-	F	P	-	{preposition} []	O
+1	9	6	מזוודותיו	מזוודה	-	-	F	N	-	{noun} [(gender: feminine),(number: plural)]	O
+1	9	7	עם	עם	-	-	F	P	-	{preposition} []	O
+1	9	8	תגי	תג	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	9	9	הזיהוי	זיהוי	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	9	10	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	10	1	המשטרה	משטרה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	10	2	דיווחה	דיווח	-	-	F	V	-	{verb}	O
+1	10	3	למחלקת	מחלקת	לP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	10	4	המדינה	מחלקת המדינה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: feminine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	10	5	האמריקאית	אמריקני	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	10	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	10	7	שהעבירה	העביר	שC	-	F	V	-	{verb}	O
+1	10	8	את	את	-	-	F	P	-	{preposition} []	O
+1	10	9	המידע	יידע	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	10	10	לקונסוליה	קונסוליה	לP	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	10	11	הישראלית	ישראלי	-	D	F	G	-	{adjective} [(definiteness: true),(function: adjective),(gender: feminine),(number: singular),(status: absolute)]	I_ORG
+1	10	12	בשיקאגו	שיקאגו	בP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	10	13	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	10	14	המטפלת	טיפל	-	-	F	V	-	{verb}	O
+1	10	15	באזור	אזור	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	10	16	מיניאפוליס	מיניאפוליס	-	-	F	R	location	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	10	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	11	1	הקונסוליה	קונסוליה	-	D	F	N	-	{noun} [(definiteness: true),(gender: feminine),(number: singular),(status: absolute)]	O
+1	11	2	בשיקאגו	שיקאגו	בP	-	F	R	location	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	I_LOC
+1	11	3	הבריקה	הבריק	-	-	F	V	-	{verb}	O
+1	11	4	לירושלים	ירושלים	לP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	11	5	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	12	1	ממשרד	משרד	מP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	12	2	החוץ	משרד חוץ	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	12	3	בירושלים	ירושלים	בP	-	F	R	town	{properName} [(definiteness: false),(gender: feminine),(number: singular)]	I_LOC
+1	12	4	נשלח	שלח	-	-	F	V	-	{verb}	O
+1	12	5	שליח	שליח	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	6	להודיע	הודיע	-	-	F	V	-	{verb}	O
+1	12	7	על	על	-	-	F	P	-	{preposition} []	O
+1	12	8	דבר	דבר	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	12	9	המוות	מוות	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	10	לבני	בני	לP	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	O
+1	12	11	המשפחה	בן משפחה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	O
+1	12	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	12	13	אולם	אולם	-	-	F	C	-	{conjunction} []	O
+1	12	14	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	12	15	היה	היה	-	-	F	V	-	{verb}	O
+1	12	16	איש	איש	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	12	17	בדירתו	דירה	בP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	12	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	13	1	רק	רק	-	-	F	A	-	{adverb} []	O
+1	13	2	אחר	אחר	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	13	3	-	-	-	-	F	PNCT	-	{punctuation} []	O
+1	13	4	כך	אחר כך	-	-	F	MWE	-	{MWE} [(consecutive: true),(definiteness: false),(id: 2),(multiWordPrefixExist: false),(pos: preposition)]	O
+1	13	5	נמצא	נמצא	-	-	F	V	-	{verb}	O
+1	13	6	כרטיס	כרטיס	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	13	7	ביקור	ביקור	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	8	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	13	9	ובו	ב	וC	-	F	P	-	{preposition} []	O
+1	13	10	שמו	שם	-	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	13	11	ותוארו	תואר	וC	-	F	N	-	{noun} [(gender: masculine),(number: singular)]	O
+1	13	12	של	של	-	-	F	P	-	{preposition} []	O
+1	13	13	גרוסבורד	גרוסבורד	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	13	14	כמנהל	ניהל	כP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	13	15	מפעל	מפעל	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	16	פרטי	פרטי	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	13	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	14	1	אנשי	איש	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	14	2	משרד	משרד	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	14	3	החוץ	משרד חוץ	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: singular),(pos: noun)]	I_ORG
+1	14	4	התקשרו	התקשר	-	-	F	V	-	{verb}	O
+1	14	5	אתמול	אתמול	-	-	F	A	-	{adverb} []	O
+1	14	6	למפעל	מפעל	לP	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	7	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	14	8	ורק	רק	וC	-	F	A	-	{adverb} []	O
+1	14	9	אז	אז	-	-	F	A	-	{adverb} []	O
+1	14	10	התברר	התברר	-	-	F	V	-	{verb}	O
+1	14	11	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	14	12	מדובר	מדובר	-	-	F	G	-	{adjective} [(definiteness: false),(function: adjective),(gender: masculine),(number: singular),(status: absolute)]	O
+1	14	13	ביו"ר	יו"ר	בP	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	14	14	רשות	רשות	-	-	T	N	-	{noun} [(gender: feminine),(number: singular),(status: construct)]	I_ORG
+1	14	15	שדות	שדות	-	-	F	MWE	-	{MWE} [(consecutive: true),(id: 1),(multiWordPrefixExist: false),(pos: noun)]	I_ORG
+1	14	16	התעופה	שדה תעופה	-	D	F	MWE	-	{MWE} [(consecutive: true),(definiteness: true),(gender: masculine),(id: 2),(multiWordPrefixExist: false),(number: plural),(pos: noun)]	I_ORG
+1	14	17	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	15	1	גרוסבורד	גרוסבורד	-	-	F	R	-	{properName} [(definiteness: false)]	I_PERS
+1	15	2	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	15	3	בן	בן	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine),(number: singular)]	O
+1	15	4	59	59	-	-	F	R	-	{numeral} []	O
+1	15	5	במותו	מת	-	-	F	V	-	{verb}	O
+1	15	6	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	15	7	השאיר	השאיר	-	-	F	V	-	{verb}	O
+1	15	8	אחריו	אחרי	-	-	F	P	-	{preposition} []	O
+1	15	9	אם	אם	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	15	10	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	15	11	אחות	אח	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	15	12	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	15	13	רעיה	רעיה	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: singular),(status: absolute)]	O
+1	15	14	,	,	-	-	F	PNCT	-	{punctuation} []	O
+1	15	15	בן	בן	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	15	16	ושתי	שתיים	וC	-	T	R	-	{numeral} [(gender: feminine),(number: dual),(status: construct)]	O
+1	15	17	בנות	בת	-	-	F	N	-	{noun} [(definiteness: false),(gender: feminine),(number: plural),(status: absolute)]	O
+1	15	18	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	16	1	עדיין	עדיין	-	-	F	A	-	{adverb} []	O
+1	16	2	לא	לא	-	-	F	O	-	{negation} [(definiteness: false)]	O
+1	16	3	נקבע	קיבע	-	-	F	V	-	{verb}	O
+1	16	4	מועד	הועד	-	-	F	N	-	{noun} [(definiteness: false),(gender: masculine),(number: singular),(status: absolute)]	O
+1	16	5	להלווייתו	הלוויה	לP	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	16	6	.	.	-	-	F	PNCT	-	{punctuation} []	O

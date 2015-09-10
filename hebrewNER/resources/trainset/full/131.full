@@ -1,0 +1,29 @@
+1	1	1	נציגי	נציג	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	1	2	הנכים	נכה	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	1	3	ייפגשו	נפגש	-	-	F	V	-	{verb}	O
+1	1	4	עם	עם	-	-	F	P	-	{preposition} []	O
+1	1	5	מנכ"ל	מנכ"ל	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	O
+1	1	6	משרד	משרד	-	-	T	N	-	{noun} [(gender: masculine),(number: singular),(status: construct)]	I_ORG
+1	1	7	רה"מ	ר"מ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine and feminine),(number: singular),(status: absolute)]	I_ORG
+1	1	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	2	1	מאוחר	מאוחר	-	-	F	A	-	{adverb} []	O
+1	2	2	יותר	יותר	-	-	F	A	-	{adverb} []	O
+1	2	3	הם	הוא	-	-	F	Q	-	{pronoun}	O
+1	2	4	ייפגשו	נפגש	-	-	F	V	-	{verb}	O
+1	2	5	עם	עם	-	-	F	P	-	{preposition} []	O
+1	2	6	רה"מ	ר"מ	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine and feminine),(number: singular),(status: absolute)]	O
+1	2	7	שרון	שרון	-	-	F	R	person	{properName} [(definiteness: false),(gender: masculine and feminine),(number: singular)]	I_PERS
+1	2	8	.	.	-	-	F	PNCT	-	{punctuation} []	O
+1	3	1	נציגי	נציג	-	-	T	N	-	{noun} [(gender: masculine),(number: plural),(status: construct)]	O
+1	3	2	הנכים	נכה	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: plural),(status: absolute)]	O
+1	3	3	אמרו	אמר	-	-	F	V	-	{verb}	O
+1	3	4	כי	כי	-	-	F	C	-	{conjunction} []	O
+1	3	5	יפסיקו	הפסיק	-	-	F	V	-	{verb}	O
+1	3	6	את	את	-	-	F	P	-	{preposition} []	O
+1	3	7	שביתתם	שביתה	-	-	F	N	-	{noun} [(gender: feminine),(number: singular)]	O
+1	3	8	רק	רק	-	-	F	A	-	{adverb} []	O
+1	3	9	כאשר	כאשר	-	-	F	C	-	{conjunction} []	O
+1	3	10	ייחתם	נחתם	-	-	F	V	-	{verb}	O
+1	3	11	עמם	עם	-	-	F	P	-	{preposition} []	O
+1	3	12	הסכם	סכם	-	D	F	N	-	{noun} [(definiteness: true),(gender: masculine),(number: singular),(status: absolute)]	O
+1	3	13	.	.	-	-	F	PNCT	-	{punctuation} []	O
