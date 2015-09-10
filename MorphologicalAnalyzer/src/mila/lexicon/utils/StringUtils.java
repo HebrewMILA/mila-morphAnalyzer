@@ -81,8 +81,8 @@ public class StringUtils implements Constants {
 					}
 				} else if (index == 2) {
 					if (Character.isDigit(char0) && Character.isDigit(char1) && Character.isDigit(char3)) {
-						int num1 = Integer.valueOf(token.substring(0, index)).intValue();
-						int num2 = Integer.valueOf(token.substring(index + 1)).intValue();
+						Integer.parseInt(token.substring(0, index));
+						Integer.parseInt(token.substring(index + 1));
 
 						outputPattern = ENUM_OUTPUT_PATTERN.GAMESCORE;
 
@@ -125,19 +125,17 @@ public class StringUtils implements Constants {
 			break;
 		case 6:
 			if (token.indexOf(":") != -1) {
-				int num1, num2;
 				int index = token.indexOf(":");
-				num1 = Integer.valueOf(token.substring(0, index)).intValue();
 				// ************************************** EDIT 21.11.10 (yossi)
 				String subs = token.substring(index + 1);
-				if (subs.indexOf(".") != -1) // point in second part like
-												// swiming time - 12:47.7 - for
-												// now i return a "UNSPECIFIED"
-				{
+				// point in second part like swiming time - 12:47.7 - for now i
+				// return a "UNSPECIFIED"
+				if (subs.indexOf(".") != -1) {
 					return ENUM_OUTPUT_PATTERN.UNSPECIFIED;
-				} else // there is no point in second part - 75:787
+				} else 
 				{
-					num2 = Integer.valueOf(subs).intValue();
+					// there is no point in second part - 75:787
+					Integer.parseInt(subs);
 				}
 				outputPattern = ENUM_OUTPUT_PATTERN.GAMESCORE;
 			}

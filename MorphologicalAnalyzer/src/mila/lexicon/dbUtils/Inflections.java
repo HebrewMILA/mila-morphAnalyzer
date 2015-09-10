@@ -16,10 +16,9 @@ import mila.dataStructures.DBInflectionsRecord;
 
 /**
  * @author daliabo
- *
- *         TODO To change the template for this generated type comment go to
- *         Window - Preferences - Java - Code Style - Code Templates
  */
+
+@SuppressWarnings("unused")
 public class Inflections extends Connected {
 
 	private String surface;

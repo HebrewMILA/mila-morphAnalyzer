@@ -230,11 +230,6 @@ public class Connected {
 	}
 
 	/**
-	 * A flag indicating if the properties were loaded or not.
-	 */
-	private boolean isLoaded = false;
-
-	/**
 	 * Commit a SELECT statement and returns a <code>ResultSet</code> containing
 	 * the query output. Calls <code>connect()</code> in order to connect with
 	 * the DB and commit the statement using <code>Statement.executeQuery</code>

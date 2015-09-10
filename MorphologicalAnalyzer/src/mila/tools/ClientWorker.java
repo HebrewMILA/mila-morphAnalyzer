@@ -33,13 +33,9 @@ public class ClientWorker implements Runnable {
 
 	private Socket client;
 
-	// private XMLMorphAnalyzer analyzer;
-	private MWXMLMorphAnalyzer analyzer;
-
 	// ClientWorker(Socket client, XMLMorphAnalyzer analyzer)
 	ClientWorker(Socket client, MWXMLMorphAnalyzer analyzer) {
 		this.client = client;
-		this.analyzer = analyzer;
 	}
 
 	@Override
@@ -190,7 +186,6 @@ public class ClientWorker implements Runnable {
 			TaggerLOFDir = HMMTaggerDir + File.separator + "taggerLearningOutputFile";
 			// End Added by Gennadi 03/11/2008
 
-			long endHMMTagger = 0;
 			try {
 				// long afterFormatTime = System.currentTimeMillis();
 				// long changeFormatTime = afterFormatTime -

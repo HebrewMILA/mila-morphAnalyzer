@@ -16,23 +16,17 @@ import java.util.Scanner;
 
 public class Client {
 	public static void main(String[] args) throws IOException {
-		// System.out.println("Client.java:main()");
-		long startTime = System.currentTimeMillis();
 		Client client = new Client();
 		String input = args[0];
 		String output = args[1];
 		String mySocket = args[2];
 		String host = args[3];
-		// String outputFile= args[3];
-		// client.process(input, Integer.parseInt(mySocket),host);
-		// client.socket = Integer.parseInt(mySocket);
-		// client.host= host;
 
 		int socket = Integer.parseInt(mySocket);
 		File in = new File(input);
 		File out = new File(output);
 		if (in.isDirectory() && out.isDirectory()) {
-			// if we want to process a directory recursivly - process a full
+			// if we want to process a directory recursively - process a full
 			// corpus
 			client.processDirectoryNoDataLoad(input, output, socket, host);
 			// if we want to process a single input file, output file
@@ -41,18 +35,10 @@ public class Client {
 		} else {
 			System.out.println("input parameters must include input & output file or input & output directory");
 		}
-		long elapsedTime = System.currentTimeMillis() - startTime;
-		// System.out.println("elapsedTime="+elapsedTime);
 		System.exit(0);
 	}
 
 	PrintWriter out = null;
-
-	// int socket;
-	// String host="";
-
-	// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 	BufferedReader sin = null;
 
 	private void analyzeDirectory(File inputDirectory, String outputDirectory, final int pos, int socket, String host) {
@@ -78,7 +64,6 @@ public class Client {
 			String outputFile = outputDirectory + inputFile.substring(pos);
 			outputFile = outputFile.replaceAll(".txt", ".xml");
 			try {
-				// System.out.println(outputFile);
 				process(inputFile, outputFile, socket, host);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -130,7 +115,6 @@ public class Client {
 	}
 
 	public void process(String inputFile, String outputFile, int socket, String host) {
-		// System.out.println("Client.java:process()");
 		try {
 			System.out.println("inputFile=" + inputFile);
 			System.out.println("outputFile=" + outputFile);
@@ -164,8 +148,6 @@ public class Client {
 			out.close();
 			sin.close();
 			clientSocket.close();
-			// System.exit(0);
-
 		} catch (UnknownHostException e) {
 			System.err.println("Don't know about host:yeda.");
 			System.exit(1);
@@ -187,7 +169,7 @@ public class Client {
 		try {
 			File file = new File(inputFile);
 			Scanner scanner = new Scanner(file, "UTF-8");
-			scanner.useDelimiter(System.getProperty("line.separator"));
+			scanner.useDelimiter(System.lineSeparator());
 			String line = "";
 			while (scanner.hasNext()) {
 				line = scanner.next();
@@ -196,8 +178,6 @@ public class Client {
 					line = line.substring(1);
 				}
 				out.println(line);
-				// out.println(System.getProperty("line.separator"));
-				// System.out.println("line="+line);
 			}
 			scanner.close();
 		} catch (FileNotFoundException e) {

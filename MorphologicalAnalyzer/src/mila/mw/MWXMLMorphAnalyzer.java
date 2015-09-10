@@ -633,6 +633,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		} catch (final JAXBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -668,6 +671,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (final JAXBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

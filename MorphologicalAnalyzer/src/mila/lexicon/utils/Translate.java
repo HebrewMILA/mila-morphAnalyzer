@@ -59,7 +59,6 @@ public class Translate {
 		StringBuffer result = new StringBuffer();
 		String hebString = "";
 		String encodedHeb = "";
-		int index = 0;
 
 		for (int i = 0; i < engString.length(); i++) {
 

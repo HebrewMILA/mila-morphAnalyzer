@@ -181,7 +181,6 @@ public class XMLTokenizer1 implements Constants {
 	 */
 	public int analyzeTokens(String outputFile) throws Exception {
 		String token = "";
-		int len = 0;
 		String returnToken = "";
 
 		// handling empty lines at the begining of the file
@@ -523,7 +522,7 @@ public class XMLTokenizer1 implements Constants {
 		int tokenLen = token.length();
 
 		String returnValue = token;
-		int afterPrefixTokenAndSeparatorLen = token.length();
+		token.length();
 		char afterSeparatorChar = token.charAt(0);
 
 		// digits/date/hour
@@ -1194,12 +1193,9 @@ public class XMLTokenizer1 implements Constants {
 		int index = outputFile.lastIndexOf(".");
 		String newOutputFile = outputFile.substring(0, index);
 		newOutputFile = newOutputFile + ".xml";
-		// System.out.println(newOutputFile);
-		int count = 0;
 		ioFileHandling(inputFile);
 		try {
-			count = analyzeTokens(newOutputFile);
-			// System.out.println(count);
+			analyzeTokens(newOutputFile);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -1485,7 +1481,6 @@ public class XMLTokenizer1 implements Constants {
 	public String webProcess() throws Exception {
 		// System.out.println("(F) XMLTokenizer: webProcess()");
 		String token = "";
-		int len = 0;
 		String returnToken = "";
 		String rt = "";
 		// handling empty lines at the begining of the file

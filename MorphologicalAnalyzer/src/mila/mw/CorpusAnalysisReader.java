@@ -25,39 +25,23 @@ import mila.tools.api.MilaException;
 public class CorpusAnalysisReader {
 	/** Types defined in the automatically generated code of jaxb */
 	public final static JAXBContext jc = acquireJAXBContext();
-	private List<ArticleType> articleTypeList;
-	private String xmlFile;
 	private Corpus collection;
 
-	// -------------------------------------------------------------------------------------------------------------------------------
-	public CorpusAnalysisReader() {
+	public CorpusAnalysisReader(String xmlFile) throws FileNotFoundException {
+		collection = parse(new FileInputStream(xmlFile));
 	}
 
-	// -------------------------------------------------------------------------------------------------------------------------------
-	public CorpusAnalysisReader(String xmlFile) {
-		this.xmlFile = xmlFile;
-		parse();
+	public CorpusAnalysisReader(InputStream input) {
+		collection = parse(input);
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------------------
 	public List<ArticleType> getArticle() {
-		if (articleTypeList == null) {
-			System.out.println("The articleType list is NULL :(");
-			// System.exit(-1); // UPDATE 21.11.10 (yossi)
-		}
-		return articleTypeList;
+		return collection.getArticle();
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------------------
-	public void parse() {
-		try {
-			parse(new FileInputStream(xmlFile));
-		} catch (FileNotFoundException fnfe) {
-		}
-	}
-
-	// -------------------------------------------------------------------------------------------------------------------------------
-	public static Corpus parse(InputStream input) {
+	private static Corpus parse(InputStream input) {
 		try {
 			Unmarshaller unmarshaller = jc.createUnmarshaller();
 			unmarshaller.setValidating(false);
@@ -71,8 +55,7 @@ public class CorpusAnalysisReader {
 		try {
 			Marshaller marshaller = jc.createMarshaller();
 			marshaller.marshal(collection, pw);
-
-		} catch (Exception e) {
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
 
@@ -89,7 +72,7 @@ public class CorpusAnalysisReader {
 		return "";
 	}
 
-	private static JAXBContext acquireJAXBContext(){
+	private static JAXBContext acquireJAXBContext() {
 		try {
 			return JAXBContext.newInstance(Constants.JAXB_PACKAGE);
 		} catch (JAXBException e) {

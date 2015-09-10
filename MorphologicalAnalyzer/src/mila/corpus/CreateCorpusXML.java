@@ -1984,43 +1984,17 @@ public class CreateCorpusXML implements Constants {
 	 */
 	public void printDoc(OutputStream outputStream) {
 		try {
-			// System.err.println("printDoc");
 			pOut = new OutputStreamWriter(outputStream, "UTF-8");
-		} catch (final UnsupportedEncodingException e) {
-			System.err.println("CreateCorpusXML:printDoc UnsupportedEncodingException while create OutputStreamWriter");
-			e.printStackTrace();
-		}
-		// pOut = new OutputStreamWriter(outputStream);
-		Marshaller m = null;
-		try {
-			m = jc.createMarshaller();
-		} catch (final JAXBException e1) {
-			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
-			e1.printStackTrace();
-		}
-		try {
+			Marshaller m = jc.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
-		} catch (final PropertyException e2) {
-			System.err.println("CreateCorpusXML:printDoc PropertyException while create Marshaller");
-			e2.printStackTrace();
-		}
-		try {
-			m.marshal(corpus, outputStream);
+			m.marshal(corpus, pOut);
 		} catch (final JAXBException e3) {
 			System.err.println("CreateCorpusXML:printDoc JAXBException while create Marshaller");
 			e3.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		try {
-			final Validator validator = jc.createValidator();
-			// if (!validator.validate(corpus)) {
-			// System.err.println("Corpus Not valid !!!");
-			// }
-			// pOut.close();
-		} catch (final JAXBException e4) {
-			System.err.println("CreateCorpusXML:printDoc JAXBException while create Validator");
-			e4.printStackTrace();
-		}
-
 	}
 
 	/**

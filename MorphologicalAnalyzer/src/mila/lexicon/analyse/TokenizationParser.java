@@ -938,8 +938,6 @@ public class TokenizationParser extends DefaultHandler implements Constants {
 					pr = new PrefixRecord();
 					pr = Data.analyzePrefixList(j);
 					boolean isDefiniteArticle = pr.isDefiniteArticleTag();
-					boolean isAdverbKAF = pr.isAdverbKAF();
-					boolean prepBET = pr.isPrepBET();
 					boolean prepKAF = pr.isPrepKAF();
 					boolean prepLAMED = pr.isPrepLAMED();
 					boolean prepMEM = pr.isPrepMEM();

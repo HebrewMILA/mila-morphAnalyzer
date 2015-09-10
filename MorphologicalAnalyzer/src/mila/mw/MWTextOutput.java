@@ -27,8 +27,6 @@ public class MWTextOutput extends TextOutput {
 		String pos = mweinflectionsRec.getPos();
 		String type = mweinflectionsRec.getType();
 		boolean prefix = mweinflectionsRec.isPrefix();
-		String outputPattern = "MWE" + mweId;
-
 		createXML.createMWEAnalysis("", transliterated, surface, mweBaseFormId, pos, mweId, type, prefix,
 				"unspecified");
 	}
@@ -47,7 +45,6 @@ public class MWTextOutput extends TextOutput {
 			definiteness = "true";
 		else
 			definiteness = "false";
-		String outputPattern = "MWE" + mweId;
 		String description = pr.getDescription();
 		createXML.createMWEAnalysis(description, transliterated, surface, mweBaseFormId, pos, mweId, type, prefix,
 				definiteness);

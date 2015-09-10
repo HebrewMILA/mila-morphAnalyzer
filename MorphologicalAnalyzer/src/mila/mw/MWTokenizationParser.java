@@ -877,7 +877,6 @@ public class MWTokenizationParser extends TokenizationParser {
 					pr = new PrefixRecord();
 					pr = Data.analyzePrefixList(j);
 					final boolean isDefiniteArticle = pr.isDefiniteArticleTag();
-					final boolean prepBET = pr.isPrepBET();
 					final boolean prepKAF = pr.isPrepKAF();
 					final boolean prepLAMED = pr.isPrepLAMED();
 					final boolean prepMEM = pr.isPrepMEM();

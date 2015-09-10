@@ -3,7 +3,6 @@
  */
 package mila.HMM;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -412,8 +411,6 @@ public final class MorphMult2TaggerFormat implements Constants {
 			} else {
 				String status = base.getParticiple().getStatus();
 				String definiteness = base.getParticiple().getDefiniteness();
-				String gender = base.getParticiple().getGender();
-				String number = base.getParticiple().getNumber();
 				// type=noun or type=adjective
 				if (status != null && status.equals("construct")) {
 					bw.write("\t");

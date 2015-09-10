@@ -28,9 +28,8 @@ public class MWData extends Data {
 		MWEinflectionsRecord mwinfRec = null;
 		// get from databse
 		if (webFlag) {
-			mila.lexicon.dbUtils.MWEinflections mweInf = new mila.lexicon.dbUtils.MWEinflections();
-			mweList = MWEinflections.get(key);
 			// get from lists
+			mweList = MWEinflections.get(key);
 		} else {
 			// get from inflection files !!!
 			mweList = mwinflections.get(key);

@@ -34,7 +34,6 @@ public class Load2memory {
 
 	private static MWE1records mwe1 = null;
 
-	private static MWErecords mwe = null;
 	private static MWErecords mwe2 = null;
 	private static MWErecords mwe3 = null;
 	private static MWErecords mwe4 = null;
@@ -47,8 +46,6 @@ public class Load2memory {
 
 	// ---------------------------------------------------------------------------------
 	public static Gimatria loadGimatria(String gimatriaFile) {
-		// System.out.println("(F) Load2memory:loadGimatria");
-		int counter = 0;
 		// we already know the number of gimatria entries - improves performance
 		gimatria = new Gimatria(1044);
 		FileInputStream fileInputStream = null;
@@ -64,7 +61,6 @@ public class Load2memory {
 				transliterated = gimatriaFields.nextToken();
 				transliterated = transliterated.replaceAll("%22", "\"");
 				val = gimatriaFields.nextToken();
-				counter++;
 				gimatria.put(transliterated, val);
 			}
 			in.close();
@@ -82,8 +78,6 @@ public class Load2memory {
 		inflections = new Inflections(840000, 1);
 		FileInputStream fileInputStream = null;
 		BufferedReader in = null;
-		int counter = 0;
-
 		try {
 			fileInputStream = new FileInputStream(dinflectionsFile);
 			in = new BufferedReader(new InputStreamReader(fileInputStream));
@@ -95,8 +89,6 @@ public class Load2memory {
 			while ((decodedInflectionRecord = in.readLine()) != null) {
 				StringTokenizer inflectionsFields = new StringTokenizer(decodedInflectionRecord, "|");
 				transliterated = inflectionsFields.nextToken();
-				counter++;
-
 				// System.out.println("counter = " + counter);
 				// System.out.println("transliterated =" + transliterated);
 				if (!sortFile)
@@ -699,8 +691,6 @@ public class Load2memory {
 
 	// ---------------------------------------------------------------------------------
 	public static Prefixes loadPrefixes(String dprefixesFile) {
-		// System.out.println("(F) Load2memory:loadPrefixes");
-		int counter = 0;
 		prefixes = new Prefixes(174);
 		FileInputStream fileInputStream = null;
 		BufferedReader in = null;
@@ -715,10 +705,6 @@ public class Load2memory {
 			while ((decodedPrefixesRecord = in.readLine()) != null) {
 				StringTokenizer inflectionsFields = new StringTokenizer(decodedPrefixesRecord, "|");
 				prefix = inflectionsFields.nextToken();
-				counter++;
-				// System.out.println("counter = " + counter);
-				// System.out.println("prefix =" + prefix);
-
 				if (!sortFile)
 					prefixes.put(prefix, decodedPrefixesRecord);
 				else {

@@ -15,16 +15,10 @@ public class myListener implements ServletContextListener {
 	/* Application Startup Event */
 	@Override
 	public void contextInitialized(ServletContextEvent ce) {
-
 		String command2 = "/home/daliabo/meni5/runServer.sh";
-
 		System.out.println("*********************************" + command2);
-
 		try {
-			String s = null;
-
-			Process p = Runtime.getRuntime().exec(" /home/daliabo/meni5/runServer.sh");
-
+			Runtime.getRuntime().exec(" /home/daliabo/meni5/runServer.sh");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
