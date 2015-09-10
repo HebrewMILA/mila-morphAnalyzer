@@ -12,19 +12,15 @@ import mila.lexicon.dbUtils.MWErecord;
 
 /*
  * Created on 28/11/2005
- *
- * TODO To change the template for this generated file go to
- * Window - Preferences - Java - Code Style - Code Templates
  */
 
 /**
  * @author daliabo
  * 
- *         use sort of unix to create dindlections.data and dprefixes.data sort
- *         inflections.data > dinflections.data sort prefixes.data >
- *         dprefixes.data TODO To change the template for this generated type
- *         comment go to Window - Preferences - Java - Code Style - Code
- *         Templates
+ * use sort of unix to create files "dindlections.data" and "dprefixes.data" 
+ *         
+ * sort inflections.data > dinflections.data
+ * sort prefixes.data > dprefixes.data 
  */
 public class Load2memory {
 
@@ -75,7 +71,7 @@ public class Load2memory {
 	// -------------------------------------------------------------------------------------------------------
 	public static Inflections loadInflections(String dinflectionsFile) {
 		// System.out.println("(F) Load2memory:loadInflections()");
-		inflections = new Inflections(840000, 1);
+		inflections = new Inflections(840000);
 		FileInputStream fileInputStream = null;
 		BufferedReader in = null;
 		try {
@@ -89,8 +85,6 @@ public class Load2memory {
 			while ((decodedInflectionRecord = in.readLine()) != null) {
 				StringTokenizer inflectionsFields = new StringTokenizer(decodedInflectionRecord, "|");
 				transliterated = inflectionsFields.nextToken();
-				// System.out.println("counter = " + counter);
-				// System.out.println("transliterated =" + transliterated);
 				if (!sortFile)
 					inflections.put(transliterated, decodedInflectionRecord);
 				else {
@@ -113,7 +107,6 @@ public class Load2memory {
 			}
 			// for the last one
 			inflections.sput(currentTransliterated, chain);
-			// System.out.println("load: End Loading Inflections file ");
 			in.close();
 		} catch (Exception e) {
 			// e.printStackTrace();
@@ -126,8 +119,7 @@ public class Load2memory {
 
 	// -------------------------------------------------------------------------------------------------------
 	public static MWE1records LoadMwe1Records(String dmwe1File) {
-		// System.out.println("(F) Load2memory:LoadMwe1Records()");
-		mwe1 = new MWE1records(5000, 1);
+		mwe1 = new MWE1records(5000);
 		FileInputStream fileInputStream = null;
 		BufferedReader in = null;
 
@@ -148,12 +140,12 @@ public class Load2memory {
 				MWE1record mwe1Rec = new MWE1record();
 				StringTokenizer inflectionsFields = new StringTokenizer(decodedMwe1Record, "|"); // tokenize
 
-				transliterated = inflectionsFields.nextToken(); // extract data
-				id = inflectionsFields.nextToken(); // extract data
-				surface = inflectionsFields.nextToken(); // extract data
-				pos = inflectionsFields.nextToken(); // extract data
-				consecutive = inflectionsFields.nextToken(); // extract data
-				type = inflectionsFields.nextToken(); // extract data
+				transliterated = inflectionsFields.nextToken(); 
+				id = inflectionsFields.nextToken(); 
+				surface = inflectionsFields.nextToken(); 
+				pos = inflectionsFields.nextToken(); 
+				consecutive = inflectionsFields.nextToken(); 
+				type = inflectionsFields.nextToken(); 
 
 				mwe1Rec.setTransliterated(transliterated); // create record
 				mwe1Rec.setSurface(surface);
@@ -162,18 +154,7 @@ public class Load2memory {
 				mwe1Rec.setType(type);
 				mwe1Rec.setConsecutive(consecutive);
 
-				mwe1.put(transliterated, mwe1Rec); // add record to hashmap
-
-				/*
-				 * // checking the insertion went well ArrayList mweRecordChain
-				 * = mwe1.get(transliterated); System.out.println(
-				 * "(F) Load2memory:LoadMwe1Records(): transliterated = " +
-				 * transliterated); Iterator<MWE1record> itr =
-				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out. println(
-				 * "(F) Load2memory:LoadMwe1Records():            pos = " +
-				 * ((MWE1record)itr.next()).getPos()); }
-				 */
+				mwe1.put(transliterated, mwe1Rec);
 			}
 
 			in.close();
@@ -194,7 +175,7 @@ public class Load2memory {
 	 * @return
 	 */
 	public static MWErecords LoadMwe3Records(String dmweFile) {
-		MWErecords mwe3 = new MWErecords(5000, 1);
+		MWErecords mwe3 = new MWErecords(5000);
 		// mwe3 = new MWErecords(5000, 1);
 		FileInputStream fileInputStream = null;
 		BufferedReader in = null;
@@ -226,55 +207,28 @@ public class Load2memory {
 
 			while ((decodedMweRecord = in.readLine()) != null) {
 				MWErecord mweRec = new MWErecord();
-				// StringTokenizer inflectionsFields = new
-				// StringTokenizer(decodedMweRecord, "|"); // tokenize
-				String[] array = decodedMweRecord.split("\\|", -1); // cause
-																	// stringtokenizer
-																	// cant get
-																	// empty
-																	// tokens
+				String[] array = decodedMweRecord.split("\\|", -1); 
+				// cause stringtokenizer cant get empty tokens
 				int index = 0;
 
-				transliterated = array[index++]; // extract data
-				aid = array[index++]; // extract data
-				id = array[index++]; // extract data
-				formerItemId = array[index++]; // extract data
-				surface = array[index++]; // extract data
-				consecutive = array[index++]; // extract data
-				lexiconId = array[index++]; // extract data
-				transliteratedLexiconItem = array[index++]; // extract data
-				dottedLexiconItem = array[index++]; // extract data
-				undottedLexiconItem = array[index++]; // extract data
-				mwTransliterated = array[index++]; // extract data
-				mwUndotted = array[index++]; // extract data
-				PGN = array[index++]; // extract data
-				spelling = array[index++]; // extract data
-				register = array[index++]; // extract data
-				gender = array[index++]; // extract data
-				number = array[index++]; // extract data
-				definiteness = array[index++]; // extract data
-				/*
-				 * transliterated = inflectionsFields.nextToken(); // extract
-				 * data aid = inflectionsFields.nextToken(); // extract data id
-				 * = inflectionsFields.nextToken(); // extract data formerItemId
-				 * = inflectionsFields.nextToken(); // extract data surface =
-				 * inflectionsFields.nextToken(); // extract data consecutive =
-				 * inflectionsFields.nextToken(); // extract data lexiconId =
-				 * inflectionsFields.nextToken(); // extract data
-				 * transliteratedLexiconItem = inflectionsFields.nextToken(); //
-				 * extract data dottedLexiconItem =
-				 * inflectionsFields.nextToken(); // extract data
-				 * undottedLexiconItem = inflectionsFields.nextToken(); //
-				 * extract data mwTransliterated =
-				 * inflectionsFields.nextToken(); // extract data mwUndotted =
-				 * inflectionsFields.nextToken(); // extract data PGN =
-				 * inflectionsFields.nextToken(); // extract data spelling =
-				 * inflectionsFields.nextToken(); // extract data register =
-				 * inflectionsFields.nextToken(); // extract data gender =
-				 * inflectionsFields.nextToken(); // extract data number =
-				 * inflectionsFields.nextToken(); // extract data definiteness =
-				 * inflectionsFields.nextToken(); // extract data
-				 */
+				transliterated = array[index++]; 
+				aid = array[index++]; 
+				id = array[index++]; 
+				formerItemId = array[index++]; 
+				surface = array[index++]; 
+				consecutive = array[index++]; 
+				lexiconId = array[index++]; 
+				transliteratedLexiconItem = array[index++]; 
+				dottedLexiconItem = array[index++]; 
+				undottedLexiconItem = array[index++]; 
+				mwTransliterated = array[index++]; 
+				mwUndotted = array[index++]; 
+				PGN = array[index++]; 
+				spelling = array[index++]; 
+				register = array[index++]; 
+				gender = array[index++]; 
+				number = array[index++]; 
+				definiteness = array[index++];
 				mweRec.setTransliterated(transliterated); // create record
 				mweRec.setAid(aid);
 				mweRec.setId(id);
@@ -294,18 +248,7 @@ public class Load2memory {
 				mweRec.setNumber(number);
 				mweRec.setDefiniteness(definiteness);
 
-				mwe3.put(transliterated, mweRec); // add record to hashmap
-
-				/*
-				 * // checking the insertion went well ArrayList mweRecordChain
-				 * = mwe.get(transliterated); System.out.println(
-				 * "(F) Load2memory:LoadMweRecords(): transliterated = " +
-				 * transliterated); Iterator<MWErecord> itr =
-				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out. println(
-				 * "(F) Load2memory:LoadMweRecords():            surface = " +
-				 * ((MWErecord)itr.next()).getSurface()); }
-				 */
+				mwe3.put(transliterated, mweRec);
 			}
 
 			in.close();
@@ -327,8 +270,7 @@ public class Load2memory {
 	 * @return
 	 */
 	public static MWErecords LoadMwe4Records(String dmweFile) {
-		// MWErecords mwe = new MWErecords(5000, 1);
-		mwe4 = new MWErecords(5000, 1);
+		mwe4 = new MWErecords(5000);
 		FileInputStream fileInputStream = null;
 		BufferedReader in = null;
 
@@ -359,55 +301,28 @@ public class Load2memory {
 
 			while ((decodedMweRecord = in.readLine()) != null) {
 				MWErecord mweRec = new MWErecord();
-				// StringTokenizer inflectionsFields = new
-				// StringTokenizer(decodedMweRecord, "|"); // tokenize
-				String[] array = decodedMweRecord.split("\\|", -1); // cause
-																	// stringtokenizer
-																	// cant get
-																	// empty
-																	// tokens
+				String[] array = decodedMweRecord.split("\\|", -1); 
+				// cause string tokenizer cant get empty tokens
 				int index = 0;
 
-				transliterated = array[index++]; // extract data
-				aid = array[index++]; // extract data
-				id = array[index++]; // extract data
-				formerItemId = array[index++]; // extract data
-				surface = array[index++]; // extract data
-				consecutive = array[index++]; // extract data
-				lexiconId = array[index++]; // extract data
-				transliteratedLexiconItem = array[index++]; // extract data
-				dottedLexiconItem = array[index++]; // extract data
-				undottedLexiconItem = array[index++]; // extract data
-				mwTransliterated = array[index++]; // extract data
-				mwUndotted = array[index++]; // extract data
-				PGN = array[index++]; // extract data
-				spelling = array[index++]; // extract data
-				register = array[index++]; // extract data
-				gender = array[index++]; // extract data
-				number = array[index++]; // extract data
-				definiteness = array[index++]; // extract data
-				/*
-				 * transliterated = inflectionsFields.nextToken(); // extract
-				 * data aid = inflectionsFields.nextToken(); // extract data id
-				 * = inflectionsFields.nextToken(); // extract data formerItemId
-				 * = inflectionsFields.nextToken(); // extract data surface =
-				 * inflectionsFields.nextToken(); // extract data consecutive =
-				 * inflectionsFields.nextToken(); // extract data lexiconId =
-				 * inflectionsFields.nextToken(); // extract data
-				 * transliteratedLexiconItem = inflectionsFields.nextToken(); //
-				 * extract data dottedLexiconItem =
-				 * inflectionsFields.nextToken(); // extract data
-				 * undottedLexiconItem = inflectionsFields.nextToken(); //
-				 * extract data mwTransliterated =
-				 * inflectionsFields.nextToken(); // extract data mwUndotted =
-				 * inflectionsFields.nextToken(); // extract data PGN =
-				 * inflectionsFields.nextToken(); // extract data spelling =
-				 * inflectionsFields.nextToken(); // extract data register =
-				 * inflectionsFields.nextToken(); // extract data gender =
-				 * inflectionsFields.nextToken(); // extract data number =
-				 * inflectionsFields.nextToken(); // extract data definiteness =
-				 * inflectionsFields.nextToken(); // extract data
-				 */
+				transliterated = array[index++]; 
+				aid = array[index++]; 
+				id = array[index++]; 
+				formerItemId = array[index++]; 
+				surface = array[index++]; 
+				consecutive = array[index++]; 
+				lexiconId = array[index++]; 
+				transliteratedLexiconItem = array[index++]; 
+				dottedLexiconItem = array[index++]; 
+				undottedLexiconItem = array[index++]; 
+				mwTransliterated = array[index++]; 
+				mwUndotted = array[index++]; 
+				PGN = array[index++]; 
+				spelling = array[index++]; 
+				register = array[index++]; 
+				gender = array[index++]; 
+				number = array[index++]; 
+				definiteness = array[index++]; 
 				mweRec.setTransliterated(transliterated); // create record
 				mweRec.setAid(aid);
 				mweRec.setId(id);
@@ -427,18 +342,7 @@ public class Load2memory {
 				mweRec.setNumber(number);
 				mweRec.setDefiniteness(definiteness);
 
-				mwe4.put(transliterated, mweRec); // add record to hashmap
-
-				/*
-				 * // checking the insertion went well ArrayList mweRecordChain
-				 * = mwe.get(transliterated); System.out.println(
-				 * "(F) Load2memory:LoadMweRecords(): transliterated = " +
-				 * transliterated); Iterator<MWErecord> itr =
-				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out. println(
-				 * "(F) Load2memory:LoadMweRecords():            surface = " +
-				 * ((MWErecord)itr.next()).getSurface()); }
-				 */
+				mwe4.put(transliterated, mweRec);
 			}
 
 			in.close();
@@ -460,19 +364,17 @@ public class Load2memory {
 	 * @return
 	 */
 	public static MWErecords LoadMweRecords(String dmweFile, int tableNum) {
-		// System.out.println("(F) Load2memory:LoadMwe2Records()");
-		// MWErecords mwe = new MWErecords(5000, 1);
 		switch (tableNum) {
 		case 2: {
-			mwe2 = new MWErecords(5000, 1);
+			mwe2 = new MWErecords(5000);
 			break;
 		}
 		case 3: {
-			mwe3 = new MWErecords(5000, 1);
+			mwe3 = new MWErecords(5000);
 			break;
 		}
 		case 4: {
-			mwe4 = new MWErecords(5000, 1);
+			mwe4 = new MWErecords(5000);
 			break;
 		}
 		}
@@ -507,55 +409,28 @@ public class Load2memory {
 
 			while ((decodedMweRecord = in.readLine()) != null) {
 				MWErecord mweRec = new MWErecord();
-				// StringTokenizer inflectionsFields = new
-				// StringTokenizer(decodedMweRecord, "|"); // tokenize
-				String[] array = decodedMweRecord.split("\\|", -1); // cause
-																	// stringtokenizer
-																	// cant get
-																	// empty
-																	// tokens
+				String[] array = decodedMweRecord.split("\\|", -1);
 				int index = 0;
 
-				transliterated = array[index++]; // extract data
-				aid = array[index++]; // extract data
-				id = array[index++]; // extract data
-				formerItemId = array[index++]; // extract data
-				surface = array[index++]; // extract data
-				consecutive = array[index++]; // extract data
-				lexiconId = array[index++]; // extract data
-				transliteratedLexiconItem = array[index++]; // extract data
-				dottedLexiconItem = array[index++]; // extract data
-				undottedLexiconItem = array[index++]; // extract data
-				mwTransliterated = array[index++]; // extract data
-				mwUndotted = array[index++]; // extract data
-				PGN = array[index++]; // extract data
-				spelling = array[index++]; // extract data
-				register = array[index++]; // extract data
-				gender = array[index++]; // extract data
-				number = array[index++]; // extract data
-				definiteness = array[index++]; // extract data
-				/*
-				 * transliterated = inflectionsFields.nextToken(); // extract
-				 * data aid = inflectionsFields.nextToken(); // extract data id
-				 * = inflectionsFields.nextToken(); // extract data formerItemId
-				 * = inflectionsFields.nextToken(); // extract data surface =
-				 * inflectionsFields.nextToken(); // extract data consecutive =
-				 * inflectionsFields.nextToken(); // extract data lexiconId =
-				 * inflectionsFields.nextToken(); // extract data
-				 * transliteratedLexiconItem = inflectionsFields.nextToken(); //
-				 * extract data dottedLexiconItem =
-				 * inflectionsFields.nextToken(); // extract data
-				 * undottedLexiconItem = inflectionsFields.nextToken(); //
-				 * extract data mwTransliterated =
-				 * inflectionsFields.nextToken(); // extract data mwUndotted =
-				 * inflectionsFields.nextToken(); // extract data PGN =
-				 * inflectionsFields.nextToken(); // extract data spelling =
-				 * inflectionsFields.nextToken(); // extract data register =
-				 * inflectionsFields.nextToken(); // extract data gender =
-				 * inflectionsFields.nextToken(); // extract data number =
-				 * inflectionsFields.nextToken(); // extract data definiteness =
-				 * inflectionsFields.nextToken(); // extract data
-				 */
+				transliterated = array[index++]; 
+				aid = array[index++]; 
+				id = array[index++]; 
+				formerItemId = array[index++]; 
+				surface = array[index++]; 
+				consecutive = array[index++]; 
+				lexiconId = array[index++]; 
+				transliteratedLexiconItem = array[index++]; 
+				dottedLexiconItem = array[index++]; 
+				undottedLexiconItem = array[index++]; 
+				mwTransliterated = array[index++]; 
+				mwUndotted = array[index++]; 
+				PGN = array[index++]; 
+				spelling = array[index++]; 
+				register = array[index++]; 
+				gender = array[index++]; 
+				number = array[index++]; 
+				definiteness = array[index++]; 
+				
 				mweRec.setTransliterated(transliterated); // create record
 				mweRec.setAid(aid);
 				mweRec.setId(id);
@@ -577,29 +452,19 @@ public class Load2memory {
 
 				switch (tableNum) {
 				case 2: {
-					mwe2.put(transliterated, mweRec); // add record to hashmap
+					mwe2.put(transliterated, mweRec); 
 					break;
 				}
 				case 3: {
-					mwe3.put(transliterated, mweRec); // add record to hashmap
+					mwe3.put(transliterated, mweRec); 
 					break;
 				}
 				case 4: {
-					mwe4.put(transliterated, mweRec); // add record to hashmap
+					mwe4.put(transliterated, mweRec); 
 					break;
 				}
 				}
 
-				/*
-				 * // checking the insertion went well ArrayList mweRecordChain
-				 * = mwe2.get(transliterated); System.out.println(
-				 * "(F) Load2memory:LoadMwe2Records(): transliterated = " +
-				 * transliterated); Iterator<MWErecord> itr =
-				 * mweRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out. println(
-				 * "(F) Load2memory:LoadMweRecords():            surface = " +
-				 * ((MWErecord)itr.next()).getSurface()); }
-				 */
 			}
 
 			in.close();
@@ -627,7 +492,7 @@ public class Load2memory {
 	// -------------------------------------------------------------------------------------------------------
 	public static MWinflections LoadMwInflections(String dmwinflectionsFile) {
 		// System.out.println("(F) Load2memory:LoadMwInflections()");
-		mwinflections = new MWinflections(5000, 1);
+		mwinflections = new MWinflections(5000);
 		FileInputStream fileInputStream = null;
 		BufferedReader in = null;
 
@@ -645,17 +510,13 @@ public class Load2memory {
 			while ((decodedMwinflectionRecord = in.readLine()) != null) {
 				MWEinflectionsRecord mwInfRec = new MWEinflectionsRecord();
 				StringTokenizer inflectionsFields = new StringTokenizer(decodedMwinflectionRecord, "|"); // tokenize
-				transliterated = inflectionsFields.nextToken(); // extract data
-				// System.out.println("(F) Load2memory:LoadMwInflections():
-				// transliterated = "
-				// + transliterated);
-				surface = inflectionsFields.nextToken(); // extract data
-				pos = inflectionsFields.nextToken(); // extract data
-				mweId = inflectionsFields.nextToken(); // extract data
-				type = inflectionsFields.nextToken(); // extract data
-				prefix = (inflectionsFields.nextToken()).equals("0") ? false : true; // extract
-																						// data
-
+				transliterated = inflectionsFields.nextToken(); 
+				surface = inflectionsFields.nextToken(); 
+				pos = inflectionsFields.nextToken(); 
+				mweId = inflectionsFields.nextToken(); 
+				type = inflectionsFields.nextToken(); 
+				prefix = (inflectionsFields.nextToken()).equals("0") ? false : true;
+				
 				mwInfRec.setTransliterated(transliterated); // create record
 				mwInfRec.setSurface(surface);
 				mwInfRec.setPos(pos);
@@ -663,20 +524,7 @@ public class Load2memory {
 				mwInfRec.setType(type);
 				mwInfRec.setPrefix(prefix);
 
-				mwinflections.put(transliterated, mwInfRec); // add record to
-																// hashmap
-
-				/*
-				 * // checking the insertion went well ArrayList
-				 * mwinflectRecordChain = mwinflections.get(transliterated);
-				 * System.out.println(
-				 * "(F) Load2memory:LoadMwInflections(): transliterated = " +
-				 * transliterated); Iterator<MWEinflectionsRecord> itr =
-				 * mwinflectRecordChain.iterator(); while (itr.hasNext()) {
-				 * System.out.println(
-				 * "(F) Load2memory:LoadMwInflections():            pos = " +
-				 * ((MWEinflectionsRecord)itr.next()).getPos()); }
-				 */
+				mwinflections.put(transliterated, mwInfRec); 
 			}
 
 			in.close();
@@ -727,7 +575,6 @@ public class Load2memory {
 			}
 			// for the last one
 			prefixes.sput(currentPrefix, chain);
-			// System.out.println("load: End Loading Prefixes file ");
 			in.close();
 		} catch (Exception e) {
 			System.err.println("dprefixes file not found");

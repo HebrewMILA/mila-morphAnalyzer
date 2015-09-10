@@ -32,7 +32,7 @@ public final class Config {
 
 
 	public static void debug(String string) {
-		System.out.println("Elazar: " + string);
+		System.out.println("hebrewNER: " + string);
 	}
 	
 	public static void log(String string) {
