@@ -22,14 +22,18 @@ public class Token {
 				  String definiteness, String cons, String pos, String type,
 				  String hMMPos) {
 		this.id = id;
-		this.surface = surface;
-		this.lemma = lemma;
-		this.prefix = prefix;
-		this.definiteness = definiteness;
-		this.construct = cons;
-		this.pos = pos;
-		this.entity = type;
-		this.HMMPos = hMMPos;
+		this.surface = clean(surface);
+		this.lemma = clean(lemma);
+		this.prefix = clean(prefix);
+		this.definiteness = clean(definiteness);
+		this.construct = clean(cons);
+		this.pos = clean(pos);
+		this.entity = clean(type);
+		this.HMMPos = clean(hMMPos);
+	}
+
+	private String clean(String lemma) {
+		return lemma == null ? "" : lemma;
 	}
 
 	Token(Token t) {

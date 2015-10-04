@@ -39,8 +39,9 @@ class BaselineTrainer extends ModelTrainer {
 					continue;
 				}
 				// a new expression
-				if (prevEntity != Entity.O && !prevExp.isEmpty())
-					vocabulary.add(prevEntity + Dictionary.KEY_VALUE_SEPERATOR
+				if (prevEntity != Entity.O)
+					if (!prevExp.isEmpty())
+						vocabulary.add(prevEntity + Dictionary.KEY_VALUE_SEPERATOR
 							+ prevExp);
 				prevExp = (entity == Entity.O) ? "" : te.lemma;
 				prevEntity = entity;

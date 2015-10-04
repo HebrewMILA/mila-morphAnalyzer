@@ -1,9 +1,12 @@
 package ner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.xml.bind.UnmarshalException;
 
 import tagging.Token;
 import tagging.TokenEntity;
@@ -58,7 +61,8 @@ public abstract class ModelTrainer {
 				.filter(x->x.indexOf('\t')>-1)
 				.map(x->x.split("\t")[1]).iterator();
 		List<Token> tokens = new ArrayList<>();
-		CorpusAdapter.read(xmlFile).iterSentences().forEach(s->tokens.addAll(s.getTokens()));
+		CorpusAdapter f = CorpusAdapter.read(xmlFile);
+		f.iterSentences().forEach(s->tokens.addAll(s.getTokens()));
 		Iterator<Token> a = tokens.iterator();
 		List<TokenEntity> res = new ArrayList<>();
 		while (a.hasNext() && b.hasNext())
@@ -75,6 +79,6 @@ public abstract class ModelTrainer {
 	private static void train(String[] args) throws Exception {
 		BaselineEntityFinder.train(args);
 		MaxentEntityFinder.train(args);
-		HmmEntityFinder.train(args);
+		//HmmEntityFinder.train(args);
 	}
 }
