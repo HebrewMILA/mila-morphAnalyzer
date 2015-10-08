@@ -1,9 +1,11 @@
 package ner;
 
+import java.io.File;
 
 public final class Config {
-	private static final String SERVER_BASE = true?"":"../webapps/MWEplay/";
-	private static final String RESOURCES_DIR = SERVER_BASE + "resources/";
+	static final String SERVER_BASE = path(".");
+	
+	private static final String RESOURCES_DIR = SERVER_BASE + "/";
 
 	// "Examples" is *not* part of the API
 	// public static final String EXAMPLES_DIR = RESOURCES_DIR + "examples/";
@@ -38,4 +40,8 @@ public final class Config {
 	public static void log(String string) {
 		System.out.println("LOG (hebrewNER): " + string);
 	}
+	private static String path(String resource) {
+		return (new File(Config.class.getClassLoader().getResource(resource).getFile())).getAbsolutePath();
+	}
 }
+

@@ -1,12 +1,9 @@
 package ner;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.xml.bind.UnmarshalException;
 
 import tagging.Token;
 import tagging.TokenEntity;
@@ -46,7 +43,6 @@ public abstract class ModelTrainer {
 	private static Iterable<Collection<TokenEntity>> chainFilesInDirectory(String dirname) {
 		List<Collection<TokenEntity>> res = new ArrayList<>();
 		IO.listDir(dirname).forEach(path -> 
-			//res.add(TokenEntity.readFromFile(path))
 			res.add(xmlToFull(
 					path.getParent().resolveSibling("xml").resolve(path.getFileName()).toString(),
 					path.getParent().resolveSibling("entities").resolve(path.getFileName()).toString()))
