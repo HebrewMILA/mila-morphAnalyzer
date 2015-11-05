@@ -3,6 +3,7 @@
 	<name>Generator</name>
 	<comment></comment>
 	<projects>
+		<project>jarsRepo</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
