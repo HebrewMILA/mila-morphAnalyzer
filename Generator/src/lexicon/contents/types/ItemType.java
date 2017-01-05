@@ -1444,4 +1444,14 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 	{
 		item.setMultiWordNounAdjective(value);
 	}
+
+	@Override
+	public String getAlternateId() {
+		return item.getAlternateId();
+	}
+
+	@Override
+	public void setAlternateId(String value) {
+		item.setAlternateId(value);
+	}
 }

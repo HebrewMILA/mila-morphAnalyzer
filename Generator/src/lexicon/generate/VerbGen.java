@@ -6,6 +6,8 @@
  */
 package lexicon.generate;
 
+import java.util.ArrayList;
+
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
 
@@ -124,9 +126,9 @@ public class VerbGen extends ItemGen
 	private void inflectPattern2() throws Exception 
 	{
 		setGenInflection();
-		//		ע הפועל גרונית שורה- 13
-		// ל גרונית שורות 14 15
-		// פ גרונית שורה 16
+		//		׳¢ ׳”׳₪׳•׳¢׳� ׳’׳¨׳•׳ ׳™׳× ׳©׳•׳¨׳”- 13
+		// ׳� ׳’׳¨׳•׳ ׳™׳× ׳©׳•׳¨׳•׳× 14 15
+		// ׳₪ ׳’׳¨׳•׳ ׳™׳× ׳©׳•׳¨׳” 16
 		if (root.charAt(1) == 'w') 
 		{
 			vgIP.generateBareInfinitive("", "w", 0, 2, 2, 3, "");
@@ -176,7 +178,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateImperative("", "-,i,w,nh", "-,-,-,-", 0, 2, 2, 3);
 		}
 		//if ends with a - two alternatives
-		//עבור אלה שמסתיימים בא - מייצרים את הצורה עם סיומת י' ע"י humth supi
+		//׳¢׳‘׳•׳¨ ׳�׳�׳” ׳©׳�׳¡׳×׳™׳™׳�׳™׳� ׳‘׳� - ׳�׳™׳™׳¦׳¨׳™׳� ׳�׳× ׳”׳¦׳•׳¨׳” ׳¢׳� ׳¡׳™׳•׳�׳× ׳™' ׳¢"׳™ humth supi
 		// ckexheui
 		if (root.charAt(2) != 'a') 
 		{
@@ -491,7 +493,7 @@ public class VerbGen extends ItemGen
 		int index;
 		setGenInflection();
 		int len = root.length();
-		//   יש להכפיל את הי' כאשר היא מופיעה בפ' הפועל למשל: יישב
+		//   ׳™׳© ׳�׳”׳›׳₪׳™׳� ׳�׳× ׳”׳™' ׳›׳�׳©׳¨ ׳”׳™׳� ׳�׳•׳₪׳™׳¢׳” ׳‘׳₪' ׳”׳₪׳•׳¢׳� ׳�׳�׳©׳�: ׳™׳™׳©׳‘
 		if (root.charAt(0) == 'i') 
 		{
 			vgIP.generateBareInfinitive("i", "", 0, len, len, len, "");
@@ -604,7 +606,7 @@ public class VerbGen extends ItemGen
 			else
 				vgIP.generateImperative("", "-,i,w,nh", "", 0, index + 1,index + 1, len);
 
-			//מילים שמתחילות ב-ו כמו וידא
+			//׳�׳™׳�׳™׳� ׳©׳�׳×׳—׳™׳�׳•׳× ׳‘-׳• ׳›׳�׳• ׳•׳™׳“׳�
 		} 
 		else if (root.charAt(0) == 'w') 
 		{
@@ -653,7 +655,7 @@ public class VerbGen extends ItemGen
 
 			vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t", "-,-,i,-,-,-,w,nh,w,nh","", 0, len, len, len);
 			vgIP.generateImperative("", "-,i,w,nh", "", 0, len, len, len);
-			//וויתר-ויתר ווידא-וידא
+			//׳•׳•׳™׳×׳¨-׳•׳™׳×׳¨ ׳•׳•׳™׳“׳�-׳•׳™׳“׳�
 		}
 	}
 
@@ -760,7 +762,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//הפועל מיאן
+	//׳”׳₪׳•׳¢׳� ׳�׳™׳�׳�
 	private void inflectPattern28() throws Exception 
 	{
 		setGenInflection();
@@ -798,7 +800,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//שרת
+	//׳©׳¨׳×
 	private void inflectPattern30() throws Exception 
 	{
 		setGenInflection();
@@ -813,101 +815,102 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("", "-,i,w,nh", "", 0, 3, 3, 3);
 	}
 
-	//	 לקומם - קום
+	//	 ׳�׳§׳•׳�׳� - ׳§׳•׳�
 	private void inflectPattern31() throws Exception 
 	{
-		setGenInflection();
-		//כפולים
-		if (root.charAt(1) == root.charAt(2)) 
-		{
-			vgIP.generateBareInfinitive("", "w", 0, 1, 2, 3, String.valueOf(root.charAt(2)));
-			vgIP.generateInfinitive("", "w", 0, 1, 2, 3, String.valueOf(root.charAt(2)));
-		} 
-		else 
-		{
-			if (root.charAt(1) == 'i') 
+			setGenInflection();
+			//׳›׳₪׳•׳�׳™׳�
+			if (root.charAt(1) == root.charAt(2)) 
 			{
-				root = root.charAt(0) + "w" + root.substring(2);
-			}
-			String inside = root + String.valueOf(root.charAt(2));
-			vgIP.generateBareInfinitive("", "", 0, 0, 0, 0, inside);
-			vgIP.generateInfinitive("", "", 0, 0, 0, 0, inside);
-		}
-		String suffix1 = root.substring(2);
-		String suffix2 = "";
-		if (root.charAt(2) == 't') 
-		{
-			suffix2 = suffix1 + "i," + suffix1 + "," + suffix1 + "," + suffix1
-					+ "," + suffix1 + "h," + suffix1 + "nw," + suffix1 + "m,"
-					+ suffix1 + "n," + suffix1 + "w";
-			vgIP.generatePast("", suffix2, "w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
-		} 
-		else if (root.charAt(2) == 'n') 
-		{
-			suffix2 = suffix1 + "ti," + suffix1 + "t," + suffix1 + "t,"
-					+ suffix1 + "," + suffix1 + "h," + suffix1 + "w," + suffix1
-					+ "tm," + suffix1 + "tn," + suffix1 + "w";
-			vgIP.generatePast("", suffix2, "w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
-		} 
-		else 
-		{
-			suffix2 = suffix1 + "ti," + suffix1 + "t," + suffix1 + "t,"
-					+ suffix1 + "," + suffix1 + "h," + suffix1 + "nw,"
-					+ suffix1 + "tm," + suffix1 + "tn," + suffix1 + "w";
-			vgIP.generatePast("", suffix2, "w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
-		}
-		//כפולים
-		if (root.charAt(1) == root.charAt(2)) 
-		{
-			if (root.charAt(2) == 'n') 
-			{
-				vgIP.generatePresent("m,m,m,m", "-,t,im,wt", "w,w,w,w", 0, 1,1, 3);
-				vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,h,w,h", "w,w,w,w,w,w,w,w,w,w", 0, 1, 1,3);
-				vgIP.generateImperative("", "-,i,w,h", "w,w,w,w", 0, 1, 1, 3);
+				vgIP.generateBareInfinitive("", "w", 0, 1, 2, 3, String.valueOf(root.charAt(2)));
+				vgIP.generateInfinitive("", "w", 0, 1, 2, 3, String.valueOf(root.charAt(2)));
 			} 
 			else 
 			{
-				vgIP.generatePresent("m,m,m,m", "-,t,im,wt", "w,w,w,w", 0, 1,1, 3);
-				vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,nh,w,nh", "w,w,w,w,w,w,w,w,w,w", 0, 1,1, 3);
-				vgIP.generateImperative("", "-,i,w,nh", "w,w,w,w", 0, 1, 1, 3);
-			}
-			//לא כפולים
-		} 
-		else 
-		{
-			if (root.charAt(2) == 't') 
-			{
-				vgIP.generatePresent("m,m,m,m", "t,tt,tim,twt", "w,w,w,w", 0,1, 2, 3);
-				vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","t,t,ti,t,t,t,tw,tnh,tw,tnh", "w,w,w,w,w,w,w,w,w,w", 0,1, 2, 3);
-				vgIP.generateImperative("", "t,ti,tw,tnh", "w,w,w,w", 0, 1, 2,3);
-			} 
-			else if (root.charAt(2) == 'n') 
-			{
-				vgIP.generatePresent("m,m,m,m", "n,nt,nim,nwt", "w,w,w,w", 0,1, 2, 3);
-				vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","n,n,ni,n,n,n,nw,nh,nw,nh", "w,w,w,w,w,w,w,w,w,w", 0,1, 2, 3);
-				vgIP.generateImperative("", "n,ni,nw,nh", "w,w,w,w", 0, 1,2, 3);
-			} 
-			else 
-			{
-				// עבור המקרה של שורר - שהשורש שלו הוא שיר
 				if (root.charAt(1) == 'i') 
 				{
 					root = root.charAt(0) + "w" + root.substring(2);
 				}
-
-				String inside = root + root.charAt(2) + ",";
-				String inside1 = inside + inside + inside + root+ root.charAt(2);
-				vgIP.generatePresent("m,m,m,m", "-,t,im,wt", inside1, 0, 0, 0,0);
-
-				String inside2 = inside + inside + inside + inside + inside+ inside + inside + inside + inside + inside;
-				vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,nh,w,nh", inside2, 0, 0, 0, 0);
-
-				vgIP.generateImperative("", "-,i,w,nh", inside1, 0, 0, 0, 0);
+				String inside = root + String.valueOf(root.charAt(2));
+				vgIP.generateBareInfinitive("", "", 0, 0, 0, 0, inside);
+				vgIP.generateInfinitive("", "", 0, 0, 0, 0, inside);
 			}
-		}
+			String suffix1 = root.substring(2);
+			String suffix2 = "";
+			if (root.charAt(2) == 't') 
+			{
+				suffix2 = suffix1 + "i," + suffix1 + "," + suffix1 + "," + suffix1
+						+ "," + suffix1 + "h," + suffix1 + "nw," + suffix1 + "m,"
+						+ suffix1 + "n," + suffix1 + "w";
+				vgIP.generatePast("", suffix2, "w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
+			} 
+			else if (root.charAt(2) == 'n') 
+			{
+				suffix2 = suffix1 + "ti," + suffix1 + "t," + suffix1 + "t,"
+						+ suffix1 + "," + suffix1 + "h," + suffix1 + "w," + suffix1
+						+ "tm," + suffix1 + "tn," + suffix1 + "w";
+				vgIP.generatePast("", suffix2, "w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
+			} 
+			else 
+			{
+				suffix2 = suffix1 + "ti," + suffix1 + "t," + suffix1 + "t,"
+						+ suffix1 + "," + suffix1 + "h," + suffix1 + "nw,"
+						+ suffix1 + "tm," + suffix1 + "tn," + suffix1 + "w";
+				vgIP.generatePast("", suffix2, "w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
+			}
+			//׳›׳₪׳•׳�׳™׳�
+			if (root.charAt(1) == root.charAt(2)) 
+			{
+				if (root.charAt(2) == 'n') 
+				{
+					vgIP.generatePresent("m,m,m,m", "-,t,im,wt", "w,w,w,w", 0, 1,1, 3);
+					vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,h,w,h", "w,w,w,w,w,w,w,w,w,w", 0, 1, 1,3);
+					vgIP.generateImperative("", "-,i,w,h", "w,w,w,w", 0, 1, 1, 3);
+				} 
+				else 
+				{
+					vgIP.generatePresent("m,m,m,m", "-,t,im,wt", "w,w,w,w", 0, 1,1, 3);
+					vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,nh,w,nh", "w,w,w,w,w,w,w,w,w,w", 0, 1,1, 3);
+					vgIP.generateImperative("", "-,i,w,nh", "w,w,w,w", 0, 1, 1, 3);
+				}
+				//׳�׳� ׳›׳₪׳•׳�׳™׳�
+			} 
+			else 
+			{
+				if (root.charAt(2) == 't') 
+				{
+					vgIP.generatePresent("m,m,m,m", "t,tt,tim,twt", "w,w,w,w", 0,1, 2, 3);
+					vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","t,t,ti,t,t,t,tw,tnh,tw,tnh", "w,w,w,w,w,w,w,w,w,w", 0,1, 2, 3);
+					vgIP.generateImperative("", "t,ti,tw,tnh", "w,w,w,w", 0, 1, 2,3);
+				}
+				else if (root.charAt(2) == 'n') 
+				{
+					vgIP.generatePresent("m,m,m,m", "n,nt,nim,nwt", "w,w,w,w", 0,1, 2, 3);
+					vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","n,n,ni,n,n,n,nw,nh,nw,nh", "w,w,w,w,w,w,w,w,w,w", 0,1, 2, 3);
+					vgIP.generateImperative("", "n,ni,nw,nh", "w,w,w,w", 0, 1,2, 3);
+				} 
+				else 
+				{
+					// ׳¢׳‘׳•׳¨ ׳”׳�׳§׳¨׳” ׳©׳� ׳©׳•׳¨׳¨ - ׳©׳”׳©׳•׳¨׳© ׳©׳�׳• ׳”׳•׳� ׳©׳™׳¨
+					if (root.charAt(1) == 'i') 
+					{
+						root = root.charAt(0) + "w" + root.substring(2);
+					}
+
+					String inside = root + root.charAt(2) + ",";
+					String inside1 = inside + inside + inside + root+ root.charAt(2);
+					vgIP.generatePresent("m,m,m,m", "-,t,im,wt", inside1, 0, 0, 0,0);
+
+					String inside2 = inside + inside + inside + inside + inside+ inside + inside + inside + inside + inside;
+					vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,nh,w,nh", inside2, 0, 0, 0, 0);
+
+					vgIP.generateImperative("", "-,i,w,nh", inside1, 0, 0, 0, 0);
+				}
+			}
+		
 	}
 
-	//	 לקים - קום
+	//	 ׳�׳§׳™׳� - ׳§׳•׳�
 	private void inflectPattern32() throws Exception 
 	{
 		setGenInflection();
@@ -923,7 +926,7 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("", "-,i,w,nh", "ii,ii,ii,ii", 0, 1, 2, 3);
 	}
 
-	//	לכוון - כון
+	//	׳�׳›׳•׳•׳� - ׳›׳•׳�
 	private void inflectPattern33() throws Exception 
 	{
 		setGenInflection();
@@ -947,7 +950,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//לצחצח-צחח
+	//׳�׳¦׳—׳¦׳—-׳¦׳—׳—
 	private void inflectPattern34() throws Exception 
 	{
 		setGenInflection();
@@ -959,7 +962,7 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("", "-,i,w,nh", "", 0, 2, 0, 2);
 	}
 
-	//לענין-ענין
+	//׳�׳¢׳ ׳™׳�-׳¢׳ ׳™׳�
 	private void inflectPattern35() throws Exception 
 	{
 		setGenInflection();
@@ -1003,8 +1006,8 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//לכבד-כבד
-	//שוחרר-שחרר
+	//׳�׳›׳‘׳“-׳›׳‘׳“
+	//׳©׳•׳—׳¨׳¨-׳©׳—׳¨׳¨
 	private void inflectPattern36() throws Exception 
 	{
 		setGenInflection();
@@ -1099,7 +1102,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//קויימתי-קום
+	//׳§׳•׳™׳™׳�׳×׳™-׳§׳•׳�
 	//id = 8364
 	private void inflectPattern38() throws Exception 
 	{
@@ -1114,7 +1117,7 @@ public class VerbGen extends ItemGen
 		vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t", "-,-,i,-,-,-,w,nh,w,nh","wi,wi,wi,wi,wi,wi,wi,wi,wi,wi", 0, 1, 2, 3);
 	}
 
-	//גולגלתי-גלל
+	//׳’׳•׳�׳’׳�׳×׳™-׳’׳�׳�
 	//id = 9270
 	private void inflectPattern39() throws Exception 
 	{
@@ -1153,9 +1156,9 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//עוניינתי-ענה
+	//׳¢׳•׳ ׳™׳™׳ ׳×׳™-׳¢׳ ׳”
 	//id = 18339
-	//ברב מילים מופיעים כשורשים מרובעים - יצא מכתב לשירה לנוון
+	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳�׳•׳₪׳™׳¢׳™׳� ׳›׳©׳•׳¨׳©׳™׳� ׳�׳¨׳•׳‘׳¢׳™׳� - ׳™׳¦׳� ׳�׳›׳×׳‘ ׳�׳©׳™׳¨׳” ׳�׳ ׳•׳•׳�
 	//	private void inflectPattern41() {
 	//		String newRoot = root.substring(0,2) + "i" ;
 	//		VerbGenIP vgIP = new VerbGenIP(newRoot);
@@ -1181,7 +1184,7 @@ public class VerbGen extends ItemGen
 	///Hitpa'el
 	/////////////////////////////////////////////////////////////////////////
 
-	//התקשר-קשר
+	//׳”׳×׳§׳©׳¨-׳§׳©׳¨
 	//id = 11204
 	private void inflectPattern42() throws Exception 
 	{
@@ -1192,7 +1195,7 @@ public class VerbGen extends ItemGen
 		if (len<3){
 			int i=0;
 		}
-		//הפועל התרוקן הוא יצא דופן - צריך להטות אותו כמקרה פרטי
+		//׳”׳₪׳•׳¢׳� ׳”׳×׳¨׳•׳§׳� ׳”׳•׳� ׳™׳¦׳� ׳“׳•׳₪׳� - ׳¦׳¨׳™׳� ׳�׳”׳˜׳•׳× ׳�׳•׳×׳• ׳›׳�׳§׳¨׳” ׳₪׳¨׳˜׳™
 		if (root.equals("rqn")) 
 		{
 			vgIP.generateBareInfinitive("ht", "w", 0, 1, 1, len, "");
@@ -1202,8 +1205,8 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("at,tt,tt,it,tt,nt,tt,tt,it,tt","-,-,i,-,-,-,w,h,w,h", "w,w,w,w,w,w,w,w,w,w", 0, 0, 1, len);
 			vgIP.generateImperative("ht", "-,i,w,h", "w,w,w,w", 0, 1, 1, len);
 		}
-		//שורות 33-39
-		//ז שורקת - ז
+		//׳©׳•׳¨׳•׳× 33-39
+		//׳– ׳©׳•׳¨׳§׳× - ׳–
 		else if (root.charAt(0) == 'z' && root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("hzd", "", 0, 0, 1, len, "");
@@ -1214,7 +1217,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateImperative("hzd", "-,i,w,h", "-,-,-,-", 0, 0, 1, len);
 
 			//43
-			//ז שורקת - ז + ל'נ
+			//׳– ׳©׳•׳¨׳§׳× - ׳– + ׳�'׳ 
 		} 
 		else if (root.charAt(0) == 'z') 
 		{
@@ -1244,8 +1247,8 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("acv,tcv,tcv,icv,tcv,ncv,tcv,tcv,icv,tcv","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 			vgIP.generateImperative("hcv", "-,i,w,nh", "-,-,-,-", 0, 0, 1, len);
 		}
-		//ס
-		//38 ל'נ + ס שורקת
+		//׳¡
+		//38 ׳�'׳  + ׳¡ ׳©׳•׳¨׳§׳×
 		else if (root.charAt(0) == 's' && root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("hst", "", 0, 0, 1, len, "");
@@ -1264,8 +1267,8 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("ast,tst,tst,ist,tst,nst,tst,tst,ist,tst","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 			vgIP.generateImperative("hst", "-,i,w,nh", "-,-,-,-", 0, 0, 1, len);
 		}
-		//ש
-		//39 ל'נ + ש שורקת
+		//׳©
+		//39 ׳�'׳  + ׳© ׳©׳•׳¨׳§׳×
 		else if (root.charAt(0) == 'e' && root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("het", "", 0, 0, 1, len, "");
@@ -1285,7 +1288,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("aet,tet,tet,iet,tet,net,tet,tet,iet,tet","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 			vgIP.generateImperative("het", "-,i,w,nh", "-,-,-,-", 0, 0, 1, len);
 		}
-		//		 ט ת - פ הפועל
+		//		 ׳˜ ׳× - ׳₪ ׳”׳₪׳•׳¢׳�
 		//40
 		else if (root.charAt(0) == 'v' || root.charAt(0) == 't') 
 		{
@@ -1305,7 +1308,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t", "-,-,i,-,-,-,w,nh,w,nh","i,i,i,i,i,i,i,i,i,i", 0, 0, 0, len);
 			vgIP.generateImperative("hi", "-,i,w,nh", "-,-,-,-", 0, 0, 0, len);
 		}
-		//43 26 ל'נ
+		//43 26 ׳�'׳ 
 		else if (root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1315,7 +1318,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("at,tt,tt,it,tt,nt,tt,tt,it,tt","-,-,i,-,-,-,w,h,w,h", "", 0, 2, 2, len);
 			vgIP.generateImperative("ht", "-,i,w,h", "-,-,-,-", 0, 2, 2, len);
 		}
-		//		27 ל'ת
+		//		27 ׳�'׳×
 		else if (root.charAt(len - 1) == 't') 
 		{
 			vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1344,14 +1347,14 @@ public class VerbGen extends ItemGen
 			vgIP.generateImperative("ht", "-,i,w,nh", "-,-,-,-", 0, 2, 2, len);
 		}
 
-		//הכפלת י אם השורש מכיל י'
+		//׳”׳›׳₪׳�׳× ׳™ ׳�׳� ׳”׳©׳•׳¨׳© ׳�׳›׳™׳� ׳™'
 		if (root.indexOf("i") != -1) 
 		{
 			root = root.replaceAll("i", "ii");
 			setGenInflection();
 			len = root.length();
-			//שורות 33-39
-			//ז שורקת - ז
+			//׳©׳•׳¨׳•׳× 33-39
+			//׳– ׳©׳•׳¨׳§׳× - ׳–
 			if (root.charAt(0) == 'z' && root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("hzd", "", 0, 0, 1, len, "");
@@ -1362,7 +1365,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateImperative("hzd", "-,i,w,h", "-,-,-,-", 0, 0, 1,len);
 
 				//43
-				//ז שורקת - ז + ל'נ
+				//׳– ׳©׳•׳¨׳§׳× - ׳– + ׳�'׳ 
 			} 
 			else if (root.charAt(0) == 'z') 
 			{
@@ -1392,8 +1395,8 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("acv,tcv,tcv,icv,tcv,ncv,tcv,tcv,icv,tcv","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 				vgIP.generateImperative("hcv", "-,i,w,nh", "-,-,-,-", 0, 0, 1,len);
 			}
-			//ס
-			//38 ל'נ + ס שורקת
+			//׳¡
+			//38 ׳�'׳  + ׳¡ ׳©׳•׳¨׳§׳×
 			else if (root.charAt(0) == 's' && root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("hst", "", 0, 0, 1, len, "");
@@ -1412,8 +1415,8 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("ast,tst,tst,ist,tst,nst,tst,tst,ist,tst","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 				vgIP.generateImperative("hst", "-,i,w,nh", "-,-,-,-", 0, 0, 1,len);
 			}
-			//ש
-			//39 ל'נ + ש שורקת
+			//׳©
+			//39 ׳�'׳  + ׳© ׳©׳•׳¨׳§׳×
 			else if (root.charAt(0) == 'e' && root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("het", "", 0, 0, 1, len, "");
@@ -1433,7 +1436,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("aet,tet,tet,iet,tet,net,tet,tet,iet,tet","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 				vgIP.generateImperative("het", "-,i,w,nh", "-,-,-,-", 0, 0, 1,len);
 			}
-			//		 ט ת - פ הפועל
+			//		 ׳˜ ׳× - ׳₪ ׳”׳₪׳•׳¢׳�
 			//40
 			else if (root.charAt(0) == 'v' || root.charAt(0) == 't') 
 			{
@@ -1444,7 +1447,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 0, len);
 				vgIP.generateImperative("h", "-,i,w,nh", "-,-,-,-", 0, 0, 0,len);
 			}
-			//43 26 ל'נ
+			//43 26 ׳�'׳ 
 			else if (root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1454,7 +1457,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("at,tt,tt,it,tt,nt,tt,tt,it,tt","-,-,i,-,-,-,w,h,w,h", "", 0, 2, 2, len);
 				vgIP.generateImperative("ht", "-,i,w,h", "-,-,-,-", 0, 2, 2,len);
 			}
-			//		27 ל'ת
+			//		27 ׳�'׳×
 			else if (root.charAt(len - 1) == 't') 
 			{
 				vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1477,9 +1480,9 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//ברב מילים שורש וכח בברקלי ובלקסיקון שורש יכח - לברר
-	//עפ"י רב מילים כתיב מלא תיקני וו
-	//התוכח-יכח
+	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳•׳›׳— ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳™׳›׳— - ׳�׳‘׳¨׳¨
+	//׳¢׳₪"׳™ ׳¨׳‘ ׳�׳™׳�׳™׳� ׳›׳×׳™׳‘ ׳�׳�׳� ׳×׳™׳§׳ ׳™ ׳•׳•
+	//׳”׳×׳•׳›׳—-׳™׳›׳—
 	//id = 3725
 	private void inflectPattern43() throws Exception 
 	{
@@ -1504,8 +1507,8 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("htww", "-,i,w,nh", "-,-,-,-", 1, 3, 3, 3);
 	}
 
-	//ברב מילים שורש גלי בברקלי ובלקסיקון שורש גלה - לברר
-	//התגליתי-גלה
+	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳’׳�׳™ ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳’׳�׳” - ׳�׳‘׳¨׳¨
+	//׳”׳×׳’׳�׳™׳×׳™-׳’׳�׳”
 	//id = 9086
 private void inflectPattern44() throws Exception {
 		setGenInflection();
@@ -1662,8 +1665,8 @@ private void inflectPattern44() throws Exception {
 			vgIP.generateImperative("ht", "h,i,w,inh", "-,-,-,-", 0, 2, 3, 3);
 		}
 	}
-	//ברב מילים שורש גלי בברקלי ובלקסיקון שורש גלה - לברר
-	//קום - התקומם
+	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳’׳�׳™ ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳’׳�׳” - ׳�׳‘׳¨׳¨
+	//׳§׳•׳� - ׳”׳×׳§׳•׳�׳�
 	//id = 12323
 	private void inflectPattern45() throws Exception {
 		setGenInflection();
@@ -1771,7 +1774,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//קום - התקיים
+	//׳§׳•׳� - ׳”׳×׳§׳™׳™׳�
 	//id = 14695
 	private void inflectPattern46() throws Exception {
 		setGenInflection();
@@ -1820,7 +1823,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//כון - התכוון
+	//׳›׳•׳� - ׳”׳×׳›׳•׳•׳�
 	//id = 12910
 	private void inflectPattern47() throws Exception {
 		setGenInflection();
@@ -1851,7 +1854,7 @@ private void inflectPattern44() throws Exception {
 	///Hif'il
 	/////////////////////////////////////////////////////////////////////////
 
-	//הפקיד-פקד
+	//׳”׳₪׳§׳™׳“-׳₪׳§׳“
 	//id = 11820
 	private void inflectPattern48() throws Exception {
 		setGenInflection();
@@ -1939,7 +1942,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//הוריד-ירד
+	//׳”׳•׳¨׳™׳“-׳™׳¨׳“
 	//id = 8852
 	private void inflectPattern49() throws Exception {
 		setGenInflection();
@@ -1953,7 +1956,7 @@ private void inflectPattern44() throws Exception {
 		vgIP.generateImperative("hw", "-,i,w,nh", "-,i,i,-", 1, 2, 2, 3);
 	}
 
-	//הפיל-נפל
+	//׳”׳₪׳™׳�-׳ ׳₪׳�
 	//id = 13106
 	private void inflectPattern50() throws Exception {
 		setGenInflection();
@@ -1967,8 +1970,8 @@ private void inflectPattern44() throws Exception {
 		vgIP.generateImperative("h", "-,i,w,nh", "-,i,i,-", 1, 2, 2, 3);
 	}
 
-	//ברב מילים שורש קני בברקלי ובלקסיקון שורש קנה - לברר
-	//הקנה-קנה
+	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳§׳ ׳™ ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳§׳ ׳” - ׳�׳‘׳¨׳¨
+	//׳”׳§׳ ׳”-׳§׳ ׳”
 	//id = 289
 	private void inflectPattern51() throws Exception {
 		setGenInflection();
@@ -1999,7 +2002,7 @@ private void inflectPattern44() throws Exception {
 					"h,h,i,h,h,h,w,inh,w,inh", "-,-,-,-,-,-,-,-,-,-", 1, 2, 3,
 					3);
 			vgIP.generateImperative("hw", "h,i,w,inh", "", 1, 2, 3, 3);
-			//עבור הנחה
+			//׳¢׳‘׳•׳¨ ׳”׳ ׳—׳”
 		} else if (root.equals("nxh")) {
 			vgIP.generateBareInfinitive("h", "w", 0, 2, 3, 3, "t");
 			vgIP.generateInfinitive("h", "w", 0, 1, 3, 3, "t");
@@ -2015,7 +2018,7 @@ private void inflectPattern44() throws Exception {
 					3);
 			vgIP.generateImperative("h", "h,i,w,inh", "", 0, 2, 3, 3);
 
-			//			הכה - השורש נכההכה - השורש נכה
+			//			׳”׳›׳” - ׳”׳©׳•׳¨׳© ׳ ׳›׳”׳”׳›׳” - ׳”׳©׳•׳¨׳© ׳ ׳›׳”
 		} else if (root.charAt(0) == 'n') {
 			vgIP.generateBareInfinitive("h", "w", 1, 2, 3, 3, "t");
 			vgIP.generateInfinitive("h", "w", 1, 1, 3, 3, "t");
@@ -2048,7 +2051,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//הקים-קום
+	//׳”׳§׳™׳�-׳§׳•׳�
 	//id = 8067
 	private void inflectPattern52() throws Exception {
 		setGenInflection();
@@ -2073,7 +2076,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//הסב-סבב
+	//׳”׳¡׳‘-׳¡׳‘׳‘
 	//id = 10616
 	private void inflectPattern53() throws Exception {
 		setGenInflection();
@@ -2091,7 +2094,7 @@ private void inflectPattern44() throws Exception {
 	///Huf'al
 	/////////////////////////////////////////////////////////////////////////
 
-	//הוזכר-זכר
+	//׳”׳•׳–׳›׳¨-׳–׳›׳¨
 	//id = 2770
 	private void inflectPattern54() throws Exception {
 		setGenInflection();
@@ -2137,7 +2140,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//הונחל-נחל
+	//׳”׳•׳ ׳—׳�-׳ ׳—׳�
 	//id = 7328
 	private void inflectPattern55() throws Exception {
 		setGenInflection();
@@ -2148,7 +2151,7 @@ private void inflectPattern44() throws Exception {
 				"-,-,i,-,-,-,w,nh,w,nh", "", 0, 2, 2, 3);
 	}
 
-	//הוגלה-גלה
+	//׳”׳•׳’׳�׳”-׳’׳�׳”
 	//id = 4251
 	private void inflectPattern56() throws Exception {
 		setGenInflection();
@@ -2169,7 +2172,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//הוקם-קום
+	//׳”׳•׳§׳�-׳§׳•׳�
 	//id = 12844
 	private void inflectPattern57() throws Exception {
 		setGenInflection();
@@ -2192,11 +2195,11 @@ private void inflectPattern44() throws Exception {
 	///Nif'al
 	/////////////////////////////////////////////////////////////////////////
 
-	//נשמר-שמר
+	//׳ ׳©׳�׳¨-׳©׳�׳¨
 	//id = 17811
-	//בגזרה זו יש בעייה עם שורשים עם פ"י לפעמים יש להחליף לו' בנטייה ולפעמים לא
-	// ואין לי דרך לדעת
-	//אני תמיד יהפוך ל--ו במקרים שלא נכון יש לייצר יוצאי דופן
+	//׳‘׳’׳–׳¨׳” ׳–׳• ׳™׳© ׳‘׳¢׳™׳™׳” ׳¢׳� ׳©׳•׳¨׳©׳™׳� ׳¢׳� ׳₪"׳™ ׳�׳₪׳¢׳�׳™׳� ׳™׳© ׳�׳”׳—׳�׳™׳£ ׳�׳•' ׳‘׳ ׳˜׳™׳™׳” ׳•׳�׳₪׳¢׳�׳™׳� ׳�׳�
+	// ׳•׳�׳™׳� ׳�׳™ ׳“׳¨׳� ׳�׳“׳¢׳×
+	//׳�׳ ׳™ ׳×׳�׳™׳“ ׳™׳”׳₪׳•׳� ׳�--׳• ׳‘׳�׳§׳¨׳™׳� ׳©׳�׳� ׳ ׳›׳•׳� ׳™׳© ׳�׳™׳™׳¦׳¨ ׳™׳•׳¦׳�׳™ ׳“׳•׳₪׳�
 	private void inflectPattern58() throws Exception {
 		setGenInflection();
 		if (root.charAt(0) == 'i') {
@@ -2233,11 +2236,11 @@ private void inflectPattern44() throws Exception {
 			// exceptions
 			// (remove/replace)
 			setGenInflection();
-			//עבור פ"י שנוטים עם י ולא עם ו' נוסיף את כל הנטייה כיוצאי דופן
-			// יש למנוע עודף יצירה כי השורות הבאות נכונות רק לנוטים עם ו
+			//׳¢׳‘׳•׳¨ ׳₪"׳™ ׳©׳ ׳•׳˜׳™׳� ׳¢׳� ׳™ ׳•׳�׳� ׳¢׳� ׳•' ׳ ׳•׳¡׳™׳£ ׳�׳× ׳›׳� ׳”׳ ׳˜׳™׳™׳” ׳›׳™׳•׳¦׳�׳™ ׳“׳•׳₪׳�
+			// ׳™׳© ׳�׳�׳ ׳•׳¢ ׳¢׳•׳“׳£ ׳™׳¦׳™׳¨׳” ׳›׳™ ׳”׳©׳•׳¨׳•׳× ׳”׳‘׳�׳•׳× ׳ ׳›׳•׳ ׳•׳× ׳¨׳§ ׳�׳ ׳•׳˜׳™׳� ׳¢׳� ׳•
 			int newReplaceExceptionListSize = vgIP.replaceExceptionList.size();
 			if (!(newReplaceExceptionListSize > 10)) {
-				//ו בודדת באמצע מילה במקום 2 ווים
+				//׳• ׳‘׳•׳“׳“׳× ׳‘׳�׳�׳¦׳¢ ׳�׳™׳�׳” ׳‘׳�׳§׳•׳� 2 ׳•׳•׳™׳�
 				vgIP.generateBareInfinitive("hiw", "", 1, 2, 3, 3, String
 						.valueOf(root.charAt(root.length() - 1)));
 				vgIP.generateInfinitive("hiw", "", 1, 1, 3, 3, String
@@ -2246,8 +2249,8 @@ private void inflectPattern44() throws Exception {
 						"-,-,i,-,-,-,w,nh,w,nh", "", 1, 2, 2, 3);
 				vgIP.generateImperative("hiw", "-,i,w,nh", "", 1, 2, 2, 3);
 			}
-			//פ' הפועל וע' הפועל לא מיוחדים - אבל צריך לבדוק את ל' הפועל (מקרים
-			// מיוחדים נ ו-ת
+			//׳₪' ׳”׳₪׳•׳¢׳� ׳•׳¢' ׳”׳₪׳•׳¢׳� ׳�׳� ׳�׳™׳•׳—׳“׳™׳� - ׳�׳‘׳� ׳¦׳¨׳™׳� ׳�׳‘׳“׳•׳§ ׳�׳× ׳�' ׳”׳₪׳•׳¢׳� (׳�׳§׳¨׳™׳�
+			// ׳�׳™׳•׳—׳“׳™׳� ׳  ׳•-׳×
 		} else {
 			vgIP.generateBareInfinitive("hi", "", 0, 2, 3, 3, String
 					.valueOf(root.charAt(root.length() - 1)));
@@ -2303,7 +2306,7 @@ private void inflectPattern44() throws Exception {
 
 	}
 
-	//ניגף-נגף
+	//׳ ׳™׳’׳£-׳ ׳’׳£
 	//id = 13137
 	private void inflectPattern59() throws Exception {
 		setGenInflection();
@@ -2351,7 +2354,7 @@ private void inflectPattern44() throws Exception {
 		} else {
 			vgIP.generateBareInfinitive("hi", "", 0, 2, 2, 3, "");
 			vgIP.generateInfinitive("hi", "", 0, 2, 2, 3, "");
-			//נוצרות כניסות מיותרות במקרה של יוצא דופן לשם פועל למשל ניגש
+			//׳ ׳•׳¦׳¨׳•׳× ׳›׳ ׳™׳¡׳•׳× ׳�׳™׳•׳×׳¨׳•׳× ׳‘׳�׳§׳¨׳” ׳©׳� ׳™׳•׳¦׳� ׳“׳•׳₪׳� ׳�׳©׳� ׳₪׳•׳¢׳� ׳�׳�׳©׳� ׳ ׳™׳’׳©
 			//vgIP.setSpelling(STANDARD_SPELLING);
 			//vgIP.generateBareInfinitive("h", "", 0, 2, 2, 3, "");
 			//vgIP.generateInfinitive("h", "", 0, 2, 2, 3, "");
@@ -2376,7 +2379,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//נגלה-גלה
+	//׳ ׳’׳�׳”-׳’׳�׳”
 	//id = 4052
 	private void inflectPattern60() throws Exception {
 		setGenInflection();
@@ -2416,15 +2419,15 @@ private void inflectPattern44() throws Exception {
 
 	}
 
-	//נפעל נחי ע"ו ע"י
-	//נסוג
+	//׳ ׳₪׳¢׳� ׳ ׳—׳™ ׳¢"׳• ׳¢"׳™
+	//׳ ׳¡׳•׳’
 	private void inflectPattern61() throws Exception {
 		setGenInflection();
 		String pastPrefix = "";
 		String presentPrefix = "";
 
 		vgIP.generateBareInfinitive("hi", "w", 0, 1, 2, 3, "");
-		//			ברב מילים להידון ואילו אצל שלמה להדון
+		//			׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳�׳”׳™׳“׳•׳� ׳•׳�׳™׳�׳• ׳�׳¦׳� ׳©׳�׳�׳” ׳�׳”׳“׳•׳�
 		vgIP.generateInfinitive("hi", "w", 0, 1, 2, 3, "");
 
 		//			if (transliterated.charAt(1) != 'i') {
@@ -2457,8 +2460,8 @@ private void inflectPattern44() throws Exception {
 
 	}
 
-	//		נפעל נחי ע"ו ע"י
-	//נצוד
+	//		׳ ׳₪׳¢׳� ׳ ׳—׳™ ׳¢"׳• ׳¢"׳™
+	//׳ ׳¦׳•׳“
 	private void inflectPattern62() throws Exception {
 		setGenInflection();
 		String pastPrefix = "";
@@ -2497,7 +2500,7 @@ private void inflectPattern44() throws Exception {
 		String htBase = "ht" + transliterated.substring(2);
 		vgIP.setBaseTransliterated(htBase);
 		vgIP.setBaseUndot(Translate.Eng2Heb(htBase));
-		String newDottedItem = dottedLexiconItem.replaceFirst("נִ", "הִ");
+		String newDottedItem = dottedLexiconItem.replaceFirst("׳ ײ´", "׳”ײ´");
 		vgIP.setDottedLexiconItem(newDottedItem);
 		if (transliterated.endsWith("h")) {
 			String baseForm = transliterated.substring(0, transliterated
@@ -2518,11 +2521,13 @@ private void inflectPattern44() throws Exception {
 
 	protected void inflect() throws Exception 
 	{
-
+		ArrayList<String> badVerbs = new ArrayList<String>(); //TODO delete
+		try{
 		analyseVerb();
 		getException("replace");
 		getException("remove");
-
+		if(this.root.equals("") && !badVerbs.contains(this.id)) badVerbs.add(this.id); //TODO delete
+		if(badVerbs.contains(this.id)) return; //TODO delete
 		switch (intInflectedPattern) 
 		{
 		case 1:
@@ -2780,6 +2785,12 @@ private void inflectPattern44() throws Exception {
 		}
 		AddException(); // handle verb exception type action = add
 		//System.out.println("Done Inflecting Verb");
+		}catch(Exception e){
+			System.out.println("Id: "+ this.id);
+			System.out.println(badVerbs);
+			throw e;
+		}
+		System.out.println("The following items failed to generate (Id's): " + badVerbs);
 	}
 
 	public static void main(String[] args) {

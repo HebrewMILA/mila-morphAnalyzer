@@ -43,6 +43,7 @@ public class ItemTypeImpl implements lexicon.jaxb.ItemType, com.sun.xml.bind.JAX
     protected java.lang.String _Undotted;
     protected lexicon.jaxb.TitleLexiconType _Title;
     protected java.lang.String _Id;
+    protected java.lang.String _AlternateId;
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
@@ -6843,5 +6844,15 @@ public class ItemTypeImpl implements lexicon.jaxb.ItemType, com.sun.xml.bind.JAX
         }
 
     }
+
+	@Override
+	public String getAlternateId() {
+		return _AlternateId;
+	}
+
+	@Override
+	public void setAlternateId(String value) {
+		_AlternateId = value;		
+	}
 
 }

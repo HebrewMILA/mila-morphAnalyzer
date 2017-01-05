@@ -652,5 +652,23 @@ public interface ItemType {
      *     {@link java.lang.String}
      */
     void setId(java.lang.String value);
+    
+    /**
+     * Gets the value of the alternate id property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link java.lang.String}
+     */
+    java.lang.String getAlternateId();
+
+    /**
+     * Sets the value of the alternate id property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link java.lang.String}
+     */
+    void setAlternateId(java.lang.String value);
 
 }

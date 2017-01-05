@@ -11,7 +11,7 @@ public class EmptyContent  extends Content {
 	 * sets the id to 0, and creates a new <code>info</code> HashMap, ready
 	 * to store the Content's record fields.
 	 * If the static <code>basicConfiguration</code> attribute was not initialize
-	 * yet, then the method loades it using <code>loadBasicConfiguration</code>.
+	 * yet, then the method loads it using <code>loadBasicConfiguration</code>.
 	 * @see  #info
 	 * @see  #loadBasicConfiguration
 	 */

@@ -1,16 +1,9 @@
 package gen;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-
 import lexicon.contents.Connected;
-import lexicon.contents.ConnectedGenerator;
 import lexicon.dbUtils.Inflections;
-import lexicon.generate.ItemGen;
 
 public class InflectionEntry {
     String dataBaseUrl = "jdbc:mariadb://yeda.cs.technion.ac.il:3306/";

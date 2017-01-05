@@ -30,6 +30,7 @@ public abstract class ItemGen implements ItemInterface {
 	protected String number = "";
 	protected String feminine = "";
 	protected String id = "";
+	protected String alternateId = "";
 	protected String basePos = "";
 	protected int pluralSuffixMaxLength;
 	protected List list = null;
@@ -149,6 +150,14 @@ public abstract class ItemGen implements ItemInterface {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String geAlternatetId() {
+		return alternateId;
+	}
+
+	public void setAlternateId(String alternateId) {
+		this.alternateId = alternateId;
 	}
 
 	public String getBasePos() {
@@ -520,7 +529,8 @@ public abstract class ItemGen implements ItemInterface {
 		transliterated = transliterated.replaceAll("&#60;", "`");
 		baseTransliteratedItem = transliterated;
 		// System.out.println("transliterated = " + transliterated);
-		id = item.getId();
+		//TODO I DID THIS
+		id = item.getAlternateId() != null ? item.getAlternateId() : item.getId();
 		register = item.getRegister();
 		spelling = item.getSpelling();
 		basePos = item.getPos();
