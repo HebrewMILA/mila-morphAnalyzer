@@ -66,7 +66,7 @@ public class Connected {
 		}
 
 		pool = new ConnectionPool("mysqlLexiocn", 20, 50, 18000,
-				"jdbc:mariadb://yeda.cs.technion.ac.il:3306/lexiconP",
+				"jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_lexiconP",
 		  		"lexiconUser", "!adgj?");
 		pool.setCaching(false);
 	}

@@ -19,6 +19,7 @@ public class InflectionEntry {
     private String value;
     private String hebForeign;
     private String baseLexiconPointer;
+    private String baseAlternatePointer;
     private String transliterated;
     private String baseNumber;
     private String baseGender;
@@ -113,6 +114,14 @@ public class InflectionEntry {
 
     public void setBaseLexiconPointer(String baseLexiconPointer) {
 	this.baseLexiconPointer = baseLexiconPointer;
+    }
+    
+    public String getBaseAlternatePointer() {
+    	return baseAlternatePointer;
+    }
+
+    public void setBaseAlternatePointer(String baseAlternatePointer) {
+    	this.baseAlternatePointer = baseAlternatePointer;
     }
 
     public String getTransliterated() {
@@ -291,6 +300,7 @@ public class InflectionEntry {
 	value = inflection.getValue();
 	hebForeign = inflection.getHebForeign();
 	baseLexiconPointer = inflection.getBaseLexiconPointer();
+	baseAlternatePointer = inflection.getBaseAlternatePointer();
 	transliterated = inflection.getTransliterated();
 	baseNumber = inflection.getBaseNumber();
 	baseGender = inflection.getBaseGender();
@@ -365,10 +375,9 @@ public class InflectionEntry {
 	    // PreparedStatement statement = connection.prepareStatement(query);
 	    // ResultSet rs = statement.executeQuery();
 	    ResultSet rs = Connected.staticGetData(query);
-	    if (rs.next()) // check if entry exist if it doesnt then return
-			   // false
-	    {
-		return true;
+	    if (rs.next()){ // check if entry exist if it doesnt then return false
+	    
+	    	return true;
 	    }
 	} catch (Exception e) {
 	    e.printStackTrace();

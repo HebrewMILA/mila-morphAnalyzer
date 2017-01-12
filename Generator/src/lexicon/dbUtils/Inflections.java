@@ -36,6 +36,7 @@ public class Inflections extends ConnectedGenerator
 	private String baseTransliteratedLItem;
 	private String baseUndottedLItem;
 	private String baseLexiconPointer;
+	private String baseAlternatePointer;
 	private String binyan = "";
 	private String root = "";
 	private String tense = "";
@@ -960,6 +961,21 @@ public void getWholeNouns() {
 	public void setBaseLexiconPointer(String baseLexiconPointer) 
 	{
 		this.baseLexiconPointer = baseLexiconPointer;
+	}
+	
+	/**
+	 * @return Returns the baseAlternatePointer.
+	 */
+	public String getBaseAlternatePointer(){
+		return baseAlternatePointer;
+	}
+
+	/**
+	 * @param baseAlternatePointer
+	 *            The baseAlternatePointer to set.
+	 */
+	public void setBaseAlternatePointer(String baseAlternatePointer){
+		this.baseAlternatePointer = baseAlternatePointer;
 	}
 
 	/**
