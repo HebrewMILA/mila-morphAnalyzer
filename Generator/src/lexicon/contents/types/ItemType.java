@@ -159,6 +159,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType
 		setRegister(getString("register"));
 		setSpelling(getString("spelling"));
 		setDotted(getString("dotted"));
+		setAlternateId(getString("alternateId"));
 		String pos = getString("pos");
 		if (pos.equals("adjective")) 
 		{

@@ -340,7 +340,7 @@ public abstract class Content extends Connected
 	public String getString(String key) {
 		String output = "";
 		try {
-			output = (String) info.get(key);
+			output = info.get(key).toString();
 			if (output == null) {
 				output = "";
 			}

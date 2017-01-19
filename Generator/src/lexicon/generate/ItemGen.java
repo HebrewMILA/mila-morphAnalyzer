@@ -530,7 +530,8 @@ public abstract class ItemGen implements ItemInterface {
 		baseTransliteratedItem = transliterated;
 		// System.out.println("transliterated = " + transliterated);
 		//TODO I DID THIS
-		id = item.getAlternateId() != null ? item.getAlternateId() : item.getId();
+		id = item.getId();
+		alternateId = item.getAlternateId();
 		register = item.getRegister();
 		spelling = item.getSpelling();
 		basePos = item.getPos();
@@ -576,6 +577,7 @@ public abstract class ItemGen implements ItemInterface {
 		inf.setHebForeign(String.valueOf((hebForeign) ? 1 : 0));
 		inf.setValue(value);
 		inf.setPrefix(prefix);
+		inf.setBaseAlternatePointer(this.alternateId);
 		inf.insertItem();
 	}
 
