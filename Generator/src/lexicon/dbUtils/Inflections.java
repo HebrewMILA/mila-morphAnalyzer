@@ -272,7 +272,7 @@ public class Inflections extends ConnectedGenerator
 					+ "type,basePerson,suffixStatus"
 					+ ",suffixFunction, "
 					+ "binyan,tense,"
-					+ "root, dottedLexiconItem,polarity,value, hebForeign, prefix"
+					+ "root, dottedLexiconItem,polarity,value, hebForeign, prefix, baseAlternatePointer"
 					+
 					//", consecutive,subId" +
 					") VALUES (" + "'" + surface + "','" + transliterated
@@ -284,7 +284,7 @@ public class Inflections extends ConnectedGenerator
 					+ suffixFunction +  "','"
 					+ binyan + "','" + tense + "','" + root + "','"
 					+ dottedLexiconItem + "','" + polarity + "','" + value
-					+ "','" + hebForeign + "','" + prefix + "'" +
+					+ "','" + hebForeign + "','" + prefix + "','" + baseAlternatePointer + "'" +
 					//"," + consecutive+ "," + subId+
 					")";
 			//System.out.println("sql=" + sql);
@@ -404,6 +404,8 @@ public class Inflections extends ConnectedGenerator
 					InflectRecord infRec = new InflectRecord();
 					infRec.setBaseLexiconPointer(rs
 							.getString("baseLexiconPointer"));
+					infRec.setBaseLexiconPointer(rs
+									.getString("baseAlternatePointer"));
 					infRec.setBasePos(rs.getString("basePos"));
 					infRec.setBaseTransliteratedLItem(rs
 							.getString("baseTransliteratedLItem"));

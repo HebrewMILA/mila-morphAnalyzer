@@ -17,6 +17,7 @@ public class InflectRecord {
 	String surface ="";
 	String basePos = "";
 	String baseLexiconPointer ="";
+	String baseAlternatePointer = "";
 	String baseUndottedLItem ="";
 	String baseTransliteratedLItem ="";
 	String suffixPerson="";
@@ -94,12 +95,25 @@ public class InflectRecord {
 	public String getBaseLexiconPointer() {
 		return baseLexiconPointer;
 	}
+	
+	
+	public void setBaseAlternatePointer(String baseAlternatePointer) {
+		this.baseAlternatePointer = baseAlternatePointer;
+	}
+	
+	public String BaseAlternatePointer() {
+		return baseAlternatePointer;
+	}
+	
+	
 	/**
 	 * @param baseLexiconPointer The baseLexiconPointer to set.
 	 */
 	public void setBaseLexiconPointer(String baseLexiconPointer) {
 		this.baseLexiconPointer = baseLexiconPointer;
 	}
+	
+	
 	/**
 	 * @return Returns the basePos.
 	 */
