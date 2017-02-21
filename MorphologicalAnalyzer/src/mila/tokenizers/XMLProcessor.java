@@ -70,7 +70,7 @@ public class XMLProcessor {
 		char transChar;
 		for (int i = 0; i < hebStr.length(); i++) {
 			curChar = hebStr.charAt(i);
-			if (curChar >= '×' && curChar <= '×ª') {
+			if (curChar >= 'à' && curChar <= 'ú') {
 				final String charStr = new Character(curChar).toString();
 				transChar = getHebToEng(charStr).charAt(0);
 				transliterated.append(transChar);
@@ -96,33 +96,33 @@ public class XMLProcessor {
 
 	private static void initHebToEng() {
 		hebToEng = new HashMap<>();
-		hebToEng.put("×", "a");
-		hebToEng.put("×‘", "b");
-		hebToEng.put("×’", "g");
-		hebToEng.put("×“", "d");
-		hebToEng.put("×”", "h");
-		hebToEng.put("×•", "w");
-		hebToEng.put("×–", "z");
-		hebToEng.put("×—", "x");
-		hebToEng.put("×˜", "v");
-		hebToEng.put("×™", "i");
-		hebToEng.put("×›", "k");
-		hebToEng.put("×š", "k");
-		hebToEng.put("×œ", "l");
-		hebToEng.put("×", "m");
-		hebToEng.put("×", "m");
-		hebToEng.put("× ", "n");
-		hebToEng.put("×Ÿ", "n");
-		hebToEng.put("×¡", "s");
-		hebToEng.put("×¢", "y");
-		hebToEng.put("×¤", "p");
-		hebToEng.put("×£", "p");
-		hebToEng.put("×¦", "c");
-		hebToEng.put("×¥", "c");
-		hebToEng.put("×§", "q");
-		hebToEng.put("×¨", "r");
-		hebToEng.put("×©", "e");
-		hebToEng.put("×ª", "t");
+		hebToEng.put("à", "a");
+		hebToEng.put("á", "b");
+		hebToEng.put("â", "g");
+		hebToEng.put("ã", "d");
+		hebToEng.put("ä", "h");
+		hebToEng.put("å", "w");
+		hebToEng.put("æ", "z");
+		hebToEng.put("ç", "x");
+		hebToEng.put("è", "v");
+		hebToEng.put("é", "i");
+		hebToEng.put("ë", "k");
+		hebToEng.put("ê", "k");
+		hebToEng.put("ì", "l");
+		hebToEng.put("î", "m");
+		hebToEng.put("í", "m");
+		hebToEng.put("ğ", "n");
+		hebToEng.put("ï", "n");
+		hebToEng.put("ñ", "s");
+		hebToEng.put("ò", "y");
+		hebToEng.put("ô", "p");
+		hebToEng.put("ó", "p");
+		hebToEng.put("ö", "c");
+		hebToEng.put("õ", "c");
+		hebToEng.put("÷", "q");
+		hebToEng.put("ø", "r");
+		hebToEng.put("ù", "e");
+		hebToEng.put("ú", "t");
 	}
 
 	public void createArticle() {
@@ -159,85 +159,85 @@ public class XMLProcessor {
 		 * metadata.addElement("transliteration").addAttribute("from", "he");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×").addAttribute("latin", "a");
+		 * "à").addAttribute("latin", "a");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×‘").addAttribute("latin", "b");
+		 * "á").addAttribute("latin", "b");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×’").addAttribute("latin", "g");
+		 * "â").addAttribute("latin", "g");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×“").addAttribute("latin", "d");
+		 * "ã").addAttribute("latin", "d");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×”").addAttribute("latin", "h");
+		 * "ä").addAttribute("latin", "h");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×•").addAttribute("latin", "w");
+		 * "å").addAttribute("latin", "w");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×–").addAttribute("latin", "z");
+		 * "æ").addAttribute("latin", "z");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×—").addAttribute("latin", "x");
+		 * "ç").addAttribute("latin", "x");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×˜").addAttribute("latin", "v");
+		 * "è").addAttribute("latin", "v");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×™").addAttribute("latin", "i");
+		 * "é").addAttribute("latin", "i");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×›").addAttribute("latin", "k");
+		 * "ë").addAttribute("latin", "k");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×š").addAttribute("latin", "k");
+		 * "ê").addAttribute("latin", "k");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×œ").addAttribute("latin", "l");
+		 * "ì").addAttribute("latin", "l");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×").addAttribute("latin", "m");
+		 * "î").addAttribute("latin", "m");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×").addAttribute("latin", "m");
+		 * "í").addAttribute("latin", "m");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "× ").addAttribute("latin", "n");
+		 * "ğ").addAttribute("latin", "n");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×Ÿ").addAttribute("latin", "n");
+		 * "ï").addAttribute("latin", "n");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×¡").addAttribute("latin", "s");
+		 * "ñ").addAttribute("latin", "s");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×¢").addAttribute("latin", "y");
+		 * "ò").addAttribute("latin", "y");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×¤").addAttribute("latin", "p");
+		 * "ô").addAttribute("latin", "p");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×£").addAttribute("latin", "p");
+		 * "ó").addAttribute("latin", "p");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×¦").addAttribute("latin", "c");
+		 * "ö").addAttribute("latin", "c");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×¥").addAttribute("latin", "c");
+		 * "õ").addAttribute("latin", "c");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×§").addAttribute("latin", "q");
+		 * "÷").addAttribute("latin", "q");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×¨").addAttribute("latin", "r");
+		 * "ø").addAttribute("latin", "r");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×©").addAttribute("latin", "e");
+		 * "ù").addAttribute("latin", "e");
 		 * 
 		 * transliteration.addElement("string ").addAttribute("hebrew",
-		 * "×ª").addAttribute("latin", "t");
+		 * "ú").addAttribute("latin", "t");
 		 */
 		metadata.addElement("comment").addText(
 				"Tokenized corpuses and the segmentation program are available at http://mila.cs.technion.ac.il/");

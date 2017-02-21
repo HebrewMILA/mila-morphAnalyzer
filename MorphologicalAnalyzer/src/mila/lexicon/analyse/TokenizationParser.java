@@ -90,7 +90,7 @@ public class TokenizationParser extends DefaultHandler  {
 		for (int i = 1; i < 6 && i < transliteratedLen && transliterated.charAt(i) != '"'
 				&& transliterated.charAt(i) != '\''; i++) {
 			String prefix = transliterated.substring(0, i);
-			// ×œ× ×ª×™×ª×›×Ÿ ×ª×—×™×œ×™×ª ×©××™× ×” ×ž×©×”×•×›×œ×‘
+			// ìà úéúëï úçéìéú ùàéðä îùäåëìá
 			if (StringUtils.moshevkaleb(prefix)) {
 				String base = transliterated.substring(i);
 				rt = analyzePrefixGimatriaAndInvertedCommas(base, prefix);
@@ -304,7 +304,7 @@ public class TokenizationParser extends DefaultHandler  {
 					for (int k = 1; k < 6 && k < transliterated.length(); k++) {
 						String prefix = transliterated.substring(0, k);
 
-						// ×œ× ×ª×™×ª×›×Ÿ ×ª×—×™×œ×™×ª ×©××™× ×” ×ž×©×”×•×›×œ×‘
+						// ìà úéúëï úçéìéú ùàéðä îùäåëìá
 						if (StringUtils.moshevkaleb(prefix)) {
 							// we need to redefine the prefix - to take the
 							// prefixPerEntry from the base and to move it to
@@ -373,7 +373,7 @@ public class TokenizationParser extends DefaultHandler  {
 		for (int j = 1; j < 6 && j < transliterated.length(); j++) {
 			String prefix = transliterated.substring(0, j);
 
-			// ×œ× ×ª×™×ª×›×Ÿ ×ª×—×™×œ×™×ª ×©××™× ×” ×ž×©×”×•×›×œ×‘
+			// ìà úéúëï úçéìéú ùàéðä îùäåëìá
 			if (StringUtils.moshevkaleb(prefix)) {
 				String base = transliterated.substring(j);
 				currentFoundAnalysis = analyzeBase(base, prefix, transliterated, hebWord);
@@ -748,7 +748,7 @@ public class TokenizationParser extends DefaultHandler  {
 	/**
 	 * This method handling tokens containg ' or "
 	 * 
-	 * ×ž×˜×¤×œ ×‘×§×™×¦×•×¨×™× ×•×¨××©×™ ×ª×™×‘×•×ª ×›×ž×• ×’'×•×¨×’' ×•×’'×•×¨×’' ×‘×©×ª×œ"×— ×‘×ª×©×œ"×—
+	 * îèôì á÷éöåøéí åøàùé úéáåú ëîå â'åøâ' åâ'åøâ' áùúì"ç áúùì"ç
 	 * 
 	 * @param hebWord
 	 */
@@ -760,9 +760,9 @@ public class TokenizationParser extends DefaultHandler  {
 		if (transliterated.indexOf("\'") != -1 && transliterated.indexOf("\"") != -1)
 			return foundAnalysis;
 		// ///////////////////////////////////////////////////////////
-		// ×˜×™×¤×•×œ ×‘×’×¨×©
+		// èéôåì áâøù
 		// //////////////////////////////////////////////////////////
-		// handle ×’'×•×¨×’' ×•×’'×•×¨×’'
+		// handle â'åøâ' åâ'åøâ'
 		if (transliterated.endsWith("\'")) {
 			// analyze the whole token
 			try {
@@ -780,7 +780,7 @@ public class TokenizationParser extends DefaultHandler  {
 					// Non Gimatria analysis
 					// /////////////////////////////////////////////
 				}
-				// ×™×™×ª×Ÿ ×œ×‘' × ×™×ª×•×— ×©×œ ×’×™×ž×˜×¨×™× ×•×’× ×©×œ ×™×•× ×‘'
+				// ééúï ìá' ðéúåç ùì âéîèøéà åâí ùì éåí á'
 				// else {
 				foundAnalysis = analyzeBaseNoPrefix(hebWord, transliterated)
 						| analyzeBaseAndPrefix(hebWord, transliterated) | analyzeAcronymsBaseAndPrefix(transliterated);
@@ -791,9 +791,9 @@ public class TokenizationParser extends DefaultHandler  {
 			}
 
 			// ///////////////////////////////////////////////////////////
-			// ×˜×™×¤×•×œ ×‘×’×¨×©×™×™×
+			// èéôåì áâøùééí
 			// //////////////////////////////////////////////////////////
-			// handle ×ª×©×œ"×— ×‘×ª×©"×œ"×—
+			// handle úùì"ç áúù"ì"ç
 		} else if (transliterated.indexOf("\"") == (transliterated.length() - 2)) {
 			try {
 				gimatriaVal = Data.getGimatrias(transliterated);
@@ -813,11 +813,11 @@ public class TokenizationParser extends DefaultHandler  {
 					foundAnalysis = foundAnalysis || analyzeAcronymsBaseAndPrefix(transliterated);
 				}
 
-				// ×”×•×¡×¤×ª×™ ××ª 2 ×”×¤×•× ×§×¦×™×•×ª ×”×‘××•×ª ×›×“×™ ×©× ×§×‘×œ ×’× × ×™×ª×•×— ×’×™×ž×˜×¨×™× ×•×’× ×œ×
-				// ×’×™×ž×˜×¨×™× ×œ×ž×©×œ
-				// ×¢×‘×•×¨ ×©"×—
-				// ×‘×¤×•× ×§×¦×™×•×ª ××œ×• ×œ× ×ž×ª×‘×¦×¢ ×—×™×¤×•×© ×‘×˜×‘×œ×ª ×’×™×ž×˜×¨×™× ××œ× ×¨×§ ×‘×˜×‘×œ××•×ª
-				// ×”×ª×—×™×œ×™×ª ×•×”× ×˜×™×•×ª
+				// äåñôúé àú 2 äôåð÷öéåú äáàåú ëãé ùð÷áì âí ðéúåç âéîèøéà åâí ìà
+				// âéîèøéà ìîùì
+				// òáåø ù"ç
+				// áôåð÷öéåú àìå ìà îúáöò çéôåù áèáìú âéîèøéà àìà ø÷ áèáìàåú
+				// äúçéìéú åäðèéåú
 				// check if the whole token is in the inflections table
 				// check if it a combination of prefix + inflection
 				// need to keep | and not || because we want all options to be
@@ -837,7 +837,7 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * handle cases like ×¨×¦ ×¡×™×¨×•×¤ where the letter at the end of the word can be
+	 * handle cases like øö ñéøåô where the letter at the end of the word can be
 	 * sofit or not sofit and we want to keep it as it is originally written
 	 * This problem occures because we don't differentiate between sofit and not
 	 * sofit in the transliteration
@@ -941,7 +941,7 @@ public class TokenizationParser extends DefaultHandler  {
 					boolean prepKAF = pr.isPrepKAF();
 					boolean prepLAMED = pr.isPrepLAMED();
 					boolean prepMEM = pr.isPrepMEM();
-					// ×œ-100 ×œ× ×¨×•×¦×™× ×¤×¢×ž×™×™× ×× ×œ×™×–×” ×©×œ ×œ
+					// ì-100 ìà øåöéí ôòîééí àðìéæä ùì ì
 					if ((!isDefiniteArticle) && ((!prepKAF) || (!prepMEM) || (!prepLAMED)))
 						try {
 							TextOutput.buildXMLPrefixOutput(pr, inflectionRecDB, inflectionRecNum, createXML, "");
@@ -995,7 +995,7 @@ public class TokenizationParser extends DefaultHandler  {
 	 * @throws Exception
 	 */
 	public void readInput(String hebWord) throws IOException, Exception {
-		// if (hebWord.equals("×”×™×•×¡×“×”"))
+		// if (hebWord.equals("äéåñãä"))
 		// System.out.println(hebWord);
 		if (!analyzeURL(hebWord))
 			if (!analyzeForeign(hebWord)) {
@@ -1052,7 +1052,7 @@ public class TokenizationParser extends DefaultHandler  {
 			// tokensCount++;
 			String hebWord = attributes.getValue("surface");
 			// System.out.println(hebWord);
-			// ×˜×™×¤×•×œ ×‘×¡×™×ž×•× ×™× - ×©×ž×•×¡×¨×™× ×œ× ×• ××™× ×¤×•×¨×ž×¦×™×” ×©× ××¡×¤×” ×‘×–×ž×Ÿ ×˜×•×§× ×™×–×¦×™×”
+			// èéôåì áñéîåðéí - ùîåñøéí ìðå àéðôåøîöéä ùðàñôä áæîï èå÷ðéæöéä
 			if (hebWord.startsWith("prefix=")) {
 				if (hebWord.indexOf("token=") != -1) {
 					boolean returnValue = false;
@@ -1061,11 +1061,11 @@ public class TokenizationParser extends DefaultHandler  {
 					int spaceIndex = hebWord.lastIndexOf(" ");
 					String hebPrefix = hebWord.substring(prefixEquallIndex + 1, spaceIndex);
 					String hebBase = hebWord.substring(tokenEqualIndex + 1);
-					// ×˜×¤×•×œ ×‘×ž×§×¨×” ×©×œ ×™×™×“×•×¢ - ×™×© ×œ×”×¢×‘×™×¨ ××ª ×”×”' ×œ×ª×ž× ×™×ª
-					// ×ž×”×ª×—×™×œ×™×ª
-					if (hebPrefix.endsWith("×”")) {
-						hebPrefix = (hebPrefix.replace('×”', ' ')).trim();
-						hebBase = "×”" + hebBase;
+					// èôåì áî÷øä ùì ééãåò - éù ìäòáéø àú ää' ìúîðéú
+					// îäúçéìéú
+					if (hebPrefix.endsWith("ä")) {
+						hebPrefix = (hebPrefix.replace('ä', ' ')).trim();
+						hebBase = "ä" + hebBase;
 					}
 					String hebTokenWithoutSigning = hebPrefix + hebBase;
 					createXML.createToken(hebTokenWithoutSigning);
@@ -1087,8 +1087,8 @@ public class TokenizationParser extends DefaultHandler  {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-					// ×˜×™×¤×•×œ ×‘×ž×§×¨×” ×©×œ ×ª×—×™×œ×™×ª + ×‘×¡×™×¡ ×ž×—×•×‘×¨×™× - ×ž×–×•×”×” ×¢×•×“ ×‘×©×œ×‘
-					// ×˜×•×§× ×™×–×¦×™×” ×•×ž×¢×‘×™×¨×™× ×¨×ž×–×™×
+					// èéôåì áî÷øä ùì úçéìéú + áñéñ îçåáøéí - îæåää òåã áùìá
+					// èå÷ðéæöéä åîòáéøéí øîæéí
 				} else {
 					int equallIndex = hebWord.indexOf("=");
 					String hebPrefix = hebWord.substring(equallIndex + 1);
@@ -1097,7 +1097,7 @@ public class TokenizationParser extends DefaultHandler  {
 				}
 				// //////////////////////////////////////////////////////////////
 				// there is not prefix= in the surface attribute
-				// ×˜×™×¤×•×œ ×‘×ž×§×¨×™× ×”×¨×’×™×œ×™× - ××™×Ÿ ×¨×ž×–×™× ×ž×©×œ×‘ ×˜×•×§× ×™×–×¦×™×”
+				// èéôåì áî÷øéí äøâéìéí - àéï øîæéí îùìá èå÷ðéæöéä
 				// //////////////////////////////////////////////////////////////
 			} else { //
 				createXML.createToken(hebWord);
@@ -1160,14 +1160,14 @@ public class TokenizationParser extends DefaultHandler  {
 		boolean conjunctionTag = pr.isConjunctionTag();
 
 		// /////////////////////////////////////////////////////////////////////////////////////////
-		// // ×—×•×§×™× ×ž× ×•×•× ×™×
+		// // çå÷éí îðååðéí
 		// /////////////////////////////////////////////////////////////////////////////////////////
 		if (definiteArticleTag) {
-			// ×”' ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢ ×œ×¤× ×™ ×¦×•×¨×ª × ×¡×ž×š - ×‘×™×œ×“×ª
+			// ä' äéãéòä ìà úåôéò ìôðé öåøú ðñîê - áéìãú
 			if ((constructi == ENUM_STATUS.CONSTRUCT_TRUE)
-					// '×”' ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢ ×œ×¤× ×™ ×¦×™×¨×•×£ ×§× ×™×™× ×™ - ×—×•×§ ×–×” ×—×©×•×‘ ×¢×‘×•×¨
-					// ×”'
-					// ×—×‘×•×™×” ×œ×ž×©×œ ×›×™×œ×“×™×™×š
+					// 'ä' äéãéòä ìà úåôéò ìôðé öéøåó ÷ðééðé - çå÷ æä çùåá òáåø
+					// ä'
+					// çáåéä ìîùì ëéìãééê
 					|| (suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_POSSESSIVE)
 					|| (suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL)) {
 				return false;
@@ -1175,31 +1175,31 @@ public class TokenizationParser extends DefaultHandler  {
 		}
 
 		// ///////////////////////////////////////////////////////////////////////////////
-		// ////// ×¡×•×£ ×—×•×§×™× ×ž× ×•×•× ×™×
+		// ////// ñåó çå÷éí îðååðéí
 		// ////////////////////////////////////////////////////////////////////////////
 
-		// ××¨×’×•×Ÿ ×”×©×•×ž×¨ ×—×™×™×‘ ×œ×”×™×•×ª ×ž×™×•×“×¢ - ××¡×•×¨ ×©×™×•×¤×™×¢ ×‘×©×•×ž×¨ ×œ×œ× ×™×™×“×•×¢ ×¨×§
-		// ×‘(×”)×©×•×ž×¨
+		// àøâåï äùåîø çééá ìäéåú îéåãò - àñåø ùéåôéò áùåîø ììà ééãåò ø÷
+		// á(ä)ùåîø
 		if (!definiteArticleTag && (posi == ENUM_POS.PROPERNAME)
 				&& (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)) {
 			return false;
 		}
 
-		// ×ª×—×™×œ×™×ª ×•×× ×œ××œ×”×§×™× - ×™×© ×©× ×¤×¨×˜×™ ×§×™× - ××¡×•×¨ ×©×™×•×¤×™×¢ ×ž×™×•×“×¢ ×× ×ž×¦×˜×¨×£ ××œ×™×•
-		// ×ª×—×™×œ×™×ª ×•×× ×œ×
+		// úçéìéú åàí ìàìä÷éí - éù ùí ôøèé ÷éí - àñåø ùéåôéò îéåãò àí îöèøó àìéå
+		// úçéìéú åàí ìà
 		if (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE) {
 			return false;
 		}
 
 		// /////////////////////////////////////////////////////////////////////////////////
-		// ////// ×”' ×—×‘×•×™×”
+		// ////// ä' çáåéä
 		// ///////////////////////////////////////////////////////////////////////
-		// ×›×“×™ ×œ×ž× ×•×¢ ×”×•×¤×¢×ª ×× ×œ×™×–×” ×œ-×‘×”×™×œ×“ ×›×”×™×œ×“ ×œ×”×™×œ×“
+		// ëãé ìîðåò äåôòú àðìéæä ì-áäéìã ëäéìã ìäéìã
 		if ((prepBET || prepKAF || prepLAMED) && hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE) {
 			return false;
 		}
-		// ×œ×ž× ×•×¢ ×”×•×¤×¢×” ×›×¤×•×œ×” ×¢×‘×•×¨ ×ª×—×™×œ×™×•×ª ×©×ž×•×¤×™×¢×•×ª ×¢× ×” ×•×‘×œ×™ ×” - ×œ×ž×©×œ ×©
-		// ×•×©×” ×›××©×¨ ×ž×¦×˜×¨×¤×™× ×œ×©"×¢ ××• ×©× ×¤×¨×˜×™ ×ž×™×•×“×¢
+		// ìîðåò äåôòä ëôåìä òáåø úçéìéåú ùîåôéòåú òí ä åáìé ä - ìîùì ù
+		// åùä ëàùø îöèøôéí ìù"ò àå ùí ôøèé îéåãò
 
 		if (prefPartUnit && hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_FALSE && definiteArticleTag) {
 			return false;
@@ -1207,7 +1207,7 @@ public class TokenizationParser extends DefaultHandler  {
 
 		if (adverbKAF && (posi == ENUM_POS.PROPERNAME
 				// || posi == ENUM_POS.VERB
-				// ×•×©×œ×›×©×¢×”, ×•×©×‘×›×©×¢×”
+				// åùìëùòä, åùáëùòä
 				|| posi == ENUM_POS.ADJECTIVE
 				// || posi == ENUM_POS.PRONOUN
 				|| posi == ENUM_POS.PREPOSITION || posi == ENUM_POS.ADVERB
@@ -1222,7 +1222,7 @@ public class TokenizationParser extends DefaultHandler  {
 		// /////////////////////////////////////////////////////////////////////////
 		// Existential
 		// /////////////////////////////////////////////////////////////////////////
-		// ×›×ž×ª ×™×©×™×™ ×™×•×¤×™×¢ ×¨×§ ×¢× ×ª×—×™×œ×™×•×ª ×•' ×•×©
+		// ëîú éùéé éåôéò ø÷ òí úçéìéåú å' åù
 		case EXISTENTIAL: {
 			if (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE) {
 				return false;
@@ -1233,9 +1233,9 @@ public class TokenizationParser extends DefaultHandler  {
 			return false;
 		}
 			// ///////////////////////////////////////////////////////////////////////
-			// ×œ×ž× ×•×¢ ×œ+×œ×’×‘×™×š
-			// - × ×—×œ×™×£ ××ª ×”×—×•×§ ×”×‘× ×‘×—×•×§×™× ×™×•×ª×¨ ×ž×¢×•×“× ×™×
-			// ×¦×¨×™×š ×¢×•×“ ×œ×‘×“×•×§ ××¤×©×¨×•×ª ×–××ª
+			// ìîðåò ì+ìâáéê
+			// - ðçìéó àú äçå÷ äáà áçå÷éí éåúø îòåãðéí
+			// öøéê òåã ìáãå÷ àôùøåú æàú
 			/***************************************************************
 			 * case PREPOSITION: //if (posi == ENUM_POS.PREPOSITION) {
 			 * if(prepositionTag || adverbKAF) { return false; } return true; }
@@ -1245,16 +1245,16 @@ public class TokenizationParser extends DefaultHandler  {
 			// Pronoun
 			// /////////////////////////////////////////////////////////////////////////
 
-			// ×œ×ž× ×•×¢ ×”×•×¤×¢×ª × ×™×ª×•×— ×›×™× ×•×™ ×’×•×£ ×œ- ×‘×”×, ×œ×”× - ×”× ×™×ª×•×— ×¦×¨×™×š ×œ×”×™×•×ª
-			// ×©×œ ×ž×™×œ×ª ×™×—×¡
-			// ××‘×œ ×× ×—× ×• ×¨×•×¦×™× ×œ××¤×©×¨ ×‘×›×œ"× ×¢× ×ž×¡×¤×¨×™× × ×˜×•×™×™× - ×‘×©×œ×•×©×ª× ×•
-			// ×‘××¨×‘×¢×ª× ×•
+			// ìîðåò äåôòú ðéúåç ëéðåé âåó ì- áäí, ìäí - äðéúåç öøéê ìäéåú
+			// ùì îéìú éçñ
+			// àáì àðçðå øåöéí ìàôùø áëì"í òí îñôøéí ðèåééí - áùìåùúðå
+			// áàøáòúðå
 
-			// ×œ×¤×™ ×¨×©×™×ž×” ×©×œ × ×•×¢× - ×›×–×” ×”×œ×–×• ×–×”×• ×œ× ×™×§×‘×œ×• ×‘×›×œ×
-			// ×›×™× ×•×™×™ ×’×•×£ ×ž×¡×•×’ ×©××œ×” ×ž×§×‘×œ×™× ×‘×›×œ"× ×¢×œ×¤"×™ ×”×¢×™×•×œ ×”×¡×¤×¦×™×¤×™ - ×œ×›×Ÿ
-			// × ×›×œ×™×œ ×©×œ× ×•×¢×‘×•× ×¢×™×•×œ×™× ×ž×¡×•×™×™×ž×™× × ×©×ª×ž×© ×‘×©×“×”
-			// ×ª×—×™×œ×™×ª ×‘×˜×‘×œ×ª inflections
-			// ×œ×¡×ž×Ÿ ×× ×ž×§×‘×œ ×ª×—×™×œ×™×ª ×‘×›×œ"× ××• ×œ×
+			// ìôé øùéîä ùì ðåòí - ëæä äìæå æäå ìà é÷áìå áëìí
+			// ëéðåéé âåó îñåâ ùàìä î÷áìéí áëì"í òìô"é äòéåì äñôöéôé - ìëï
+			// ðëìéì ùìà åòáåà òéåìéí îñåééîéí ðùúîù áùãä
+			// úçéìéú áèáìú inflections
+			// ìñîï àí î÷áì úçéìéú áëì"í àå ìà
 		case PRONOUN:
 		// if(posi == ENUM_POS.PRONOUN)
 		{
@@ -1293,8 +1293,8 @@ public class TokenizationParser extends DefaultHandler  {
 			// /////////////////////////////////////////////////////////////////////////
 			// / verbs
 			// /////////////////////////////////////////////////////////////////////////
-			// ×× ×• ×ž×¢×•× ×™×™× ×™× ×œ×ž× ×•×¢ ×”×•×¤×¢×” ×©×œ ×‘\×›\×œ\×ž\×©\×œ×›×©\ ×•×¢×•×“ ×›×ª×—×™×œ×™×ª ×¢×
-			// ×¦×™×•×•×™ ××‘×œ ×›×Ÿ × ××¤×©×¨ ×”×•×¤×¢×ª ×•+ ×¦×™×•×•×™ - ×•×œ×›×™
+			// àðå îòåðééðéí ìîðåò äåôòä ùì á\ë\ì\î\ù\ìëù\ åòåã ëúçéìéú òí
+			// öéååé àáì ëï ðàôùø äåôòú å+ öéååé - åìëé
 		case VERB:
 		// if(posi == ENUM_POS.VERB)
 		{
@@ -1304,20 +1304,20 @@ public class TokenizationParser extends DefaultHandler  {
 							|| tempSubConBETSHIN || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN)) {
 				return false;
 			}
-			// ×œ× ×™×•×¤×™×¢×• ×‘×›×œ"× ×œ×¤× ×™ ×¤×¢×œ×™× ×‘×¢×‘×¨ ×•×¢×ª×™×“
+			// ìà éåôéòå áëì"í ìôðé ôòìéí áòáø åòúéã
 			if (prepositionTag && (tensei == ENUM_TENSE.PAST || tensei == ENUM_TENSE.FUTURE)) {
 				return false;
 			}
-			// ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ ×›+×ž×œ××š ×ž+×ž×œ××š ×œ+×ž×œ××š ×‘+×ž×œ××š ××‘×œ ×œ××¤×©×¨ × ×™×ª×•×— ×©×œ
-			// ×œ×ž×œ××š ×‘×ž×œ××š ×›×œ×•×ž×¨ ×ª×—×™×œ×™×•×ª ×‘ ×•×œ ×™×•×¤×™×¢×•
-			// ×›×—×œ×§ ×ž×”×¦×•×¨×” ×•×œ× ×›×ª×—×™×œ×™×•×ª ×›×™ ×ž×™×™×¦×¨×™× ××•×ª×Ÿ
-			// ×œ××¤×©×¨ × ×™×ª×•×— ×©×œ ×‘×œ×”×œ×‘×™×© ×•×‘×œ×©×ž×•×¨
+			// ìîðåò ðéúåç ùì ë+îìàê î+îìàê ì+îìàê á+îìàê àáì ìàôùø ðéúåç ùì
+			// ìîìàê áîìàê ëìåîø úçéìéåú á åì éåôéòå
+			// ëçì÷ îäöåøä åìà ëúçéìéåú ëé îééöøéí àåúï
+			// ìàôùø ðéúåç ùì áìäìáéù åáìùîåø
 			if (prepositionTag && tensei == ENUM_TENSE.INFINITIVE
 					&& suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_ACCUSATIVE_OR_NOMINATIVE
 					&& base.charAt(0) != 'l' && base.charAt(0) != 'b') {
 				return false;
 			}
-			// ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ ×‘×‘×©×ž×•×¨ ×ž×ž×©×ž×•×¨ ×œ×œ×©×ž×•×¨ ×›×›×©×ž×•×¨
+			// ìîðåò ðéúåç ùì ááùîåø îîùîåø ììùîåø ëëùîåø
 			if (tensei == ENUM_TENSE.INFINITIVE) {
 				if ((prepBET && base.charAt(0) == 'b') || (prepKAF && base.charAt(0) == 'k')
 						|| (prepMEM && base.charAt(0) == 'm') || (prepLAMED && base.charAt(0) == 'l')) {
@@ -1330,7 +1330,7 @@ public class TokenizationParser extends DefaultHandler  {
 			}
 			return true;
 		}
-			// ×ž×§×•×¨ ×ž×•×—×œ×˜ ×œ× ×ž×§×‘×œ ×ž×™×œ×•×ª ×™×—×¡
+			// î÷åø îåçìè ìà î÷áì îéìåú éçñ
 		case INDEPENDENTINFINITIVE:
 		// if(posi == ENUM_POS.INDEPENDENTINFINITIVE)
 		{
@@ -1341,7 +1341,7 @@ public class TokenizationParser extends DefaultHandler  {
 		}
 
 			// //////////////////////////////////////////////////////////////////////
-			// / (conjunction) ×ž×™×œ×ª ×—×™×•×‘×¨
+			// / (conjunction) îéìú çéåáø
 			// /////////////////////////////////////////////////////////////////////
 
 		case CONJUNCTION:
@@ -1356,7 +1356,7 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 			// //////////////////////////////////////////////////////////////////////
-			// / (interjection) ×ž×™×œ×ª ×§×¨×™××”
+			// / (interjection) îéìú ÷øéàä
 			// /////////////////////////////////////////////////////////////////////
 		case INTERJECTION:
 		// if(posi == ENUM_POS.INTERJECTION)
@@ -1379,7 +1379,7 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 			// //////////////////////////////////////////////////////////////////////
-			// / (interogative) ×ž×™×œ×ª ×©××œ×”
+			// / (interogative) îéìú ùàìä
 			// /////////////////////////////////////////////////////////////////////
 		case INTERROGATIVE:
 		// if((posi == ENUM_POS.INTERROGATIVE) && (type !=
@@ -1401,9 +1401,9 @@ public class TokenizationParser extends DefaultHandler  {
 		}
 
 			// /////////////////////////////////////////////////////////////////////////////
-			// ///////////// ×©× ×¤×¨×˜×™
+			// ///////////// ùí ôøèé
 			// ////////////////////////////////////////////////////////////////////////////
-			// ×œ×ž× ×•×¢ ×”×•×¤×¢×” ×©×œ ×©× ×¤×¨×˜×™ ×¢× ×ª×—×™×œ×™×ª ×‘×© - ×›×ž×• ×‘×©×“×œ×™×”
+			// ìîðåò äåôòä ùì ùí ôøèé òí úçéìéú áù - ëîå áùãìéä
 		case PROPERNAME:
 		// if(posi == ENUM_POS.PROPERNAME)
 		{
@@ -1414,7 +1414,7 @@ public class TokenizationParser extends DefaultHandler  {
 		}
 
 			// //////////////////////////////////////////////////////////////////////////////
-			// ×ª×•××¨ ×”×¤×•×¢×œ
+			// úåàø äôåòì
 			// ///////////////////////////////////////////////////////////////////////////////
 		case ADVERB:
 		// if(posi == ENUM_POS.ADVERB)
@@ -1427,7 +1427,7 @@ public class TokenizationParser extends DefaultHandler  {
 
 			// /////////////////////////////////////////////////////////////////////
 
-			// ×œ×ž× ×•×¢ ×›+××œ ×‘+×™×©
+			// ìîðåò ë+àì á+éù
 		case MODAL:
 		// if(posi == ENUM_POS.MODAL)
 		{
@@ -1437,7 +1437,7 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// ×œ×¤×™ ×‘×§×©×ª ×ž× ×™, ××œ×•×Ÿ ×œ× ×ž×¡×›×™× - × ×ª×•×•×›×— ××—"×›
+			// ìôé á÷ùú îðé, àìåï ìà îñëéí - ðúååëç àç"ë
 		case COPULA:
 		// if(posi == ENUM_POS.COPULA)
 		{
@@ -1464,17 +1464,17 @@ public class TokenizationParser extends DefaultHandler  {
 			// /////////////////////////////////////////////////////////////////
 			// ///////////PREPOSITION
 			// //////////////////////////////////////////////////////////
-			// ×œ× ×œ××¤×©×¨ ×©+×œ×™ - ×ž×•×ª×¨ ×¨×§ ×©×œ×™
-			// ×›×Ÿ ×œ××¤×©×¨ ×©+×‘×™ - ×œ×›×Ÿ ××™ ××¤×©×¨ ×—×•×§ ×›×œ×œ×™ ×•×¦×¨×™×š ×œ×‘×“×•×§ ×©×ž×“×•×‘×¨ ×‘×¢×™×•×œ
-			// ×¡×¤×¦×™×¤×™
+			// ìà ìàôùø ù+ìé - îåúø ø÷ ùìé
+			// ëï ìàôùø ù+áé - ìëï àé àôùø çå÷ ëììé åöøéê ìáãå÷ ùîãåáø áòéåì
+			// ñôöéôé
 		case PREPOSITION:
 		// if(posi == ENUM_POS.PREPOSITION
 		// && suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL)
 		{
 			// ///////////////////////////////////////////////////////////////////////
-			// ×œ×ž× ×•×¢ ×œ+×œ×’×‘×™×š
-			// - × ×—×œ×™×£ ××ª ×”×—×•×§ ×”×‘× ×‘×—×•×§×™× ×™×•×ª×¨ ×ž×¢×•×“× ×™×
-			// ×¦×¨×™×š ×¢×•×“ ×œ×‘×“×•×§ ××¤×©×¨×•×ª ×–××ª
+			// ìîðåò ì+ìâáéê
+			// - ðçìéó àú äçå÷ äáà áçå÷éí éåúø îòåãðéí
+			// öøéê òåã ìáãå÷ àôùøåú æàú
 			if (prepositionTag || adverbKAF) {
 				return false;
 			}
@@ -1541,44 +1541,44 @@ public class TokenizationParser extends DefaultHandler  {
 	 * 
 	 * //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * ////////////////// // // ×—×•×§×™× ×ž× ×•×•× ×™× //
+	 * ////////////////// // // çå÷éí îðååðéí //
 	 * ////////////////////////////////
-	 * ///////////////////////////////////////////////////////// // ×›×œ ×”×—×•×§×™×
-	 * ×”×‘××™× ×ž× ×•×˜×¨×œ×™× - ×œ××•×¨ ×”×¢×•×‘×“×” ×©×¢×‘×•×¨ ×¦×•×¨×•×ª ×ž×™×•×“×¢×•×ª - ×× ×• // ×ž×™×™×¦×¨×™× ××ª
-	 * ×”×¦×•×¨×” ×”×ž×™×•×“×¢×ª // ×•×˜×‘×œ×ª ×”×ª×—×™×œ×™×•×ª ×œ× ×›×•×œ×œ×ª ××ª ×”' ×”×™×“×™×¢×” // ×‘×ž×§×¨×™× ×‘×”× ×™×© ×”'
-	 * ×—×‘×•×™×” ×œ×ž×©×œ ×‘(×”)×‘×™×ª - ×™×© ×¢×“×™×™×Ÿ ×œ×”×©×ª×ž×© // ×‘×—×•×§×™×!!!!!!!!!!!!!!!!!!!!!!!! //
+	 * ///////////////////////////////////////////////////////// // ëì äçå÷éí
+	 * äáàéí îðåèøìéí - ìàåø äòåáãä ùòáåø öåøåú îéåãòåú - àðå // îééöøéí àú
+	 * äöåøä äîéåãòú // åèáìú äúçéìéåú ìà ëåììú àú ä' äéãéòä // áî÷øéí áäí éù ä'
+	 * çáåéä ìîùì á(ä)áéú - éù òãééï ìäùúîù // áçå÷éí!!!!!!!!!!!!!!!!!!!!!!!! //
 	 * /
 	 * /////////////////////////////////////////////////////////////////////////
 	 * ////////////// // !((definiteArticleTag || defArtHE || relHE) && (posi ==
-	 * // INTERROGATIVE)) // ×”' ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢ ×œ×¤× ×™ ×ž×™×œ×ª ×©××œ×”
+	 * // INTERROGATIVE)) // ä' äéãéòä ìà úåôéò ìôðé îéìú ùàìä
 	 * 
-	 * // && !((definiteArticleTag || defArtHE) && (posi == CONJUNCTION))// ×”'
-	 * // ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢ ×œ×¤× ×™ ×ž×™×œ×ª ×—×™×‘×•×¨
+	 * // && !((definiteArticleTag || defArtHE) && (posi == CONJUNCTION))// ä'
+	 * // äéãéòä ìà úåôéò ìôðé îéìú çéáåø
 	 * 
-	 * // && !(definiteArticleTag && posi == INTERJECTION) //×”' ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢
-	 * // ×œ×¤× ×™ ×ž×™×œ×ª ×§×¨×™××”
+	 * // && !(definiteArticleTag && posi == INTERJECTION) //ä' äéãéòä ìà úåôéò
+	 * // ìôðé îéìú ÷øéàä
 	 * 
-	 * // && // ×”' ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢ ×œ×¤× ×™ ×¦×•×¨×ª × ×¡×ž×š - ×‘×™×œ×“×ª !(definiteArticleTag
-	 * && constructi == ENUM_STATUS.CONSTRUCT_TRUE) // ×—×•×§ // ×–×” // ×—×©×•×‘ // ×¢×‘×•×¨
-	 * ×”' ×—×‘×•×™×” // ×œ×ž×©×œ ×›×™×œ×“×™×™×š
+	 * // && // ä' äéãéòä ìà úåôéò ìôðé öåøú ðñîê - áéìãú !(definiteArticleTag
+	 * && constructi == ENUM_STATUS.CONSTRUCT_TRUE) // çå÷ // æä // çùåá // òáåø
+	 * ä' çáåéä // ìîùì ëéìãééê
 	 * 
 	 * // && !(definiteArticleTag && posi != VERB && suffixFunctioni == //
 	 * SUFFIX_FUNCTION_POSSESSIVE)
 	 * 
-	 * // ×”' ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢ ×œ×¤× ×™ ×¦×™×¨×•×£ ×§× ×™×™× ×™ - ×—×•×§ ×–×” ×—×©×•×‘ ×¢×‘×•×¨ ×”' // ×—×‘×•×™×”
-	 * ×œ×ž×©×œ ×›×™×œ×“×™×™×š && !(definiteArticleTag && suffixFunctioni ==
+	 * // ä' äéãéòä ìà úåôéò ìôðé öéøåó ÷ðééðé - çå÷ æä çùåá òáåø ä' // çáåéä
+	 * ìîùì ëéìãééê && !(definiteArticleTag && suffixFunctioni ==
 	 * ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_POSSESSIVE)
 	 * 
 	 * && !(definiteArticleTag && suffixFunctioni ==
 	 * ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL)
 	 * 
-	 * // ×”' ×”×™×“×™×¢×” ×œ× ×ª×•×¤×™×¢ ×œ×¤× ×™ ×¤×•×¢×œ - ××œ× ×¨×§ ×¢×‘×•×¨ ×¦×•×¨×•×ª ×©× ×¤×•×¢×œ // && //
+	 * // ä' äéãéòä ìà úåôéò ìôðé ôåòì - àìà ø÷ òáåø öåøåú ùí ôåòì // && //
 	 * !(definiteArticleTag && posi == VERB && (tensei != // TENSE_INFINITIVE))
 	 * 
-	 * // ×›×™× ×•×™×™ ×’×•×£ ×œ× ×ž×§×‘×œ×™× ×”' ×”×™×“×™×¢×” // && !(definiteArticleTag && posi ==
+	 * // ëéðåéé âåó ìà î÷áìéí ä' äéãéòä // && !(definiteArticleTag && posi ==
 	 * PRONOUN)
 	 * 
-	 * // ×œ×¤×™ ×‘×§×©×ª ×ž× ×™, ××œ×•×Ÿ ×œ× ×ž×¡×›×™× - × ×ª×•×•×›×— ××—"×› // && //
+	 * // ìôé á÷ùú îðé, àìåï ìà îñëéí - ðúååëç àç"ë // && //
 	 * !(definiteArticleTag && posi == COPULA) // && // !(definiteArticleTag &&
 	 * basePronounTypei == // BASE_PRONOUN_TYPE_INTERROGATIVE) // && //
 	 * !(definiteArticleTag && basePronounTypei == //
@@ -1587,25 +1587,25 @@ public class TokenizationParser extends DefaultHandler  {
 	 * 
 	 * //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * //////// // ////// ×¡×•×£ ×—×•×§×™× ×ž× ×•×•× ×™× //
+	 * //////// // ////// ñåó çå÷éí îðååðéí //
 	 * //////////////////////////////////
 	 * //////////////////////////////////////////
 	 * 
-	 * // ××¨×’×•×Ÿ ×”×©×•×ž×¨ ×—×™×™×‘ ×œ×”×™×•×ª ×ž×™×•×“×¢ - ××¡×•×¨ ×©×™×•×¤×™×¢ ×‘×©×•×ž×¨ ×œ×œ× ×™×™×“×•×¢ ×¨×§ //
-	 * ×‘(×”)×©×•×ž×¨ && !(!definiteArticleTag && (posi == ENUM_POS.PROPERNAME) &&
+	 * // àøâåï äùåîø çééá ìäéåú îéåãò - àñåø ùéåôéò áùåîø ììà ééãåò ø÷ //
+	 * á(ä)ùåîø && !(!definiteArticleTag && (posi == ENUM_POS.PROPERNAME) &&
 	 * (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE))
 	 * 
-	 * // ×œ×”×§×™× - ×™×© ×©× ×¤×¨×˜×™ ×§×™× - ××¡×•×¨ ×©×™×•×¤×™×¢ ×ž×™×•×“×¢ ×× ×ž×¦×˜×¨×£ ××œ×™×• // ×ª×—×™×œ×™×ª ×•××
-	 * ×œ× && !(hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE)
+	 * // ìä÷éí - éù ùí ôøèé ÷éí - àñåø ùéåôéò îéåãò àí îöèøó àìéå // úçéìéú åàí
+	 * ìà && !(hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE)
 	 * 
 	 * //
 	 * /////////////////////////////////////////////////////////////////////////
 	 * // Existential //
 	 * /////////////////////////////////////////////////////////////////////////
-	 * // ×›×ž×ª ×™×©×™×™ ×™×•×¤×™×¢ ×¨×§ ×¢× ×ª×—×™×œ×™×•×ª ×•' ×•×© && !(posi == ENUM_POS.EXISTENTIAL
+	 * // ëîú éùéé éåôéò ø÷ òí úçéìéåú å' åù && !(posi == ENUM_POS.EXISTENTIAL
 	 * && !((subordinatingConjunctionTag && relativizerTag) || conjunctionTag))
 	 * 
-	 * // ×œ×ž× ×•×¢ ×”×•×¤×¢×ª ×•×”×™×© ×©×”×™×© && !(hAttributei ==
+	 * // ìîðåò äåôòú åäéù ùäéù && !(hAttributei ==
 	 * ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE && posi ==
 	 * ENUM_POS.EXISTENTIAL)
 	 * 
@@ -1614,15 +1614,15 @@ public class TokenizationParser extends DefaultHandler  {
 	 * // Pronoun //
 	 * /////////////////////////////////////////////////////////////////////////
 	 * 
-	 * // ×œ×ž× ×•×¢ ×”×•×¤×¢×ª × ×™×ª×•×— ×›×™× ×•×™ ×’×•×£ ×œ- ×‘×”×, ×œ×”× - ×”× ×™×ª×•×— ×¦×¨×™×š ×œ×”×™×•×ª // ×©×œ ×ž×™×œ×ª
-	 * ×™×—×¡ // ××‘×œ ×× ×—× ×• ×¨×•×¦×™× ×œ××¤×©×¨ ×‘×›×œ"× ×¢× ×ž×¡×¤×¨×™× × ×˜×•×™×™× - ×‘×©×œ×•×©×ª× ×• //
-	 * ×‘××¨×‘×¢×ª× ×• // && !(prepositionTag // && basePronounTypei ==
+	 * // ìîðåò äåôòú ðéúåç ëéðåé âåó ì- áäí, ìäí - äðéúåç öøéê ìäéåú // ùì îéìú
+	 * éçñ // àáì àðçðå øåöéí ìàôùø áëì"í òí îñôøéí ðèåééí - áùìåùúðå //
+	 * áàøáòúðå // && !(prepositionTag // && basePronounTypei ==
 	 * BASE_PRONOUN_TYPE_PERSONAL && // suffixFunctioni !=
-	 * SUFFIX_FUNCTION_PRONOMIAL) // ×œ×¤×™ ×¨×©×™×ž×” ×©×œ × ×•×¢× - ×›×–×” ×”×œ×–×• ×–×”×• ×œ× ×™×§×‘×œ×•
-	 * ×‘×›×œ× // && !(prepositionTag && basePronounTypei == //
-	 * BASE_PRONOUN_TYPE_DEMONSTRATIVE) // ×›×™× ×•×™×™ ×’×•×£ ×ž×¡×•×’ ×©××œ×” ×ž×§×‘×œ×™× ×‘×›×œ
-	 * "× ×¢×œ×¤"×™ ×”×¢×™×•×œ ×”×¡×¤×¦×™×¤×™ - ×œ×›×Ÿ // × ×›×œ×™×œ ×©×œ× ×•×¢×‘×•× ×¢×™×•×œ×™× ×ž×¡×•×™×™×ž×™× × ×©×ª×ž×©
-	 * ×‘×©×“×” // ×ª×—×™×œ×™×ª ×‘×˜×‘×œ×ª inflections // ×œ×¡×ž×Ÿ ×× ×ž×§×‘×œ ×ª×—×™×œ×™×ª ×‘×›×œ"× ××• ×œ× &&
+	 * SUFFIX_FUNCTION_PRONOMIAL) // ìôé øùéîä ùì ðåòí - ëæä äìæå æäå ìà é÷áìå
+	 * áëìí // && !(prepositionTag && basePronounTypei == //
+	 * BASE_PRONOUN_TYPE_DEMONSTRATIVE) // ëéðåéé âåó îñåâ ùàìä î÷áìéí áëì
+	 * "í òìô"é äòéåì äñôöéôé - ìëï // ðëìéì ùìà åòáåà òéåìéí îñåééîéí ðùúîù
+	 * áùãä // úçéìéú áèáìú inflections // ìñîï àí î÷áì úçéìéú áëì"í àå ìà &&
 	 * !((prepLAMED || prepBET || prepMEM || prepKAF || adverbKAF) && posi ==
 	 * ENUM_POS.PRONOUN && prefixPerEntry == 'u')
 	 * 
@@ -1630,8 +1630,8 @@ public class TokenizationParser extends DefaultHandler  {
 	 * ENUM_POS.PRONOUN && hAttributei == ENUM_HATTRIBUTE.UNSPECIFIED &&
 	 * definiteArticleTag) // && !(prefixPerEntry.equals("unspecified") && posi
 	 * == PRONOUN) // && !(prefix.endsWith(prefixPerEntry) && prepositionTag &&
-	 * // basePronounTypei == BASE_PRONOUN_TYPE_INTERROGATIVE) // ×ž×ª× ×”×’×™× ×›×ž×•
-	 * ×›×™× ×•×™×™ ×’×•×£ ×©××œ×” // && !(prefix.endsWith(prefixPerEntry) && prepositionTag
+	 * // basePronounTypei == BASE_PRONOUN_TYPE_INTERROGATIVE) // îúðäâéí ëîå
+	 * ëéðåéé âåó ùàìä // && !(prefix.endsWith(prefixPerEntry) && prepositionTag
 	 * && // basePronounTypei == BASE_PRONOUN_TYPE_PERSONAL) //
 	 * ///////////////Quantifier//////////////////////////////////////// &&
 	 * !(definiteArticleTag && posi == ENUM_POS.QUANTIFIER && type !=
@@ -1641,42 +1641,42 @@ public class TokenizationParser extends DefaultHandler  {
 	 * /////////////////////////////////////////////////////////////////////////
 	 * // / verbs //
 	 * /////////////////////////////////////////////////////////////////////////
-	 * // ×× ×• ×ž×¢×•× ×™×™× ×™× ×œ×ž× ×•×¢ ×”×•×¤×¢×” ×©×œ ×‘\×›\×œ\×ž\×©\×œ×›×©\ ×•×¢×•×“ ×›×ª×—×™×œ×™×ª ×¢× // ×¦×™×•×•×™
-	 * ××‘×œ ×›×Ÿ × ××¤×©×¨ ×”×•×¤×¢×ª ×•+ ×¦×™×•×•×™ - ×•×œ×›×™ && !(posi == ENUM_POS.VERB && tensei
+	 * // àðå îòåðééðéí ìîðåò äåôòä ùì á\ë\ì\î\ù\ìëù\ åòåã ëúçéìéú òí // öéååé
+	 * àáì ëï ðàôùø äåôòú å+ öéååé - åìëé && !(posi == ENUM_POS.VERB && tensei
 	 * == ENUM_TENSE.IMPERATIVE && (prepLAMED || prepBET || prepMEM || prepKAF
 	 * || adverbKAF || subConOrRelSHIN || tempSubConKAFSHIN || tempSubConBETSHIN
 	 * || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN))
 	 * 
-	 * // ×œ× ×™×•×¤×™×¢×• ×‘×›×œ"× ×œ×¤× ×™ ×¤×¢×œ×™× ×‘×¢×‘×¨ ×•×¢×ª×™×“ && !(prepositionTag && (posi ==
+	 * // ìà éåôéòå áëì"í ìôðé ôòìéí áòáø åòúéã && !(prepositionTag && (posi ==
 	 * ENUM_POS.VERB && (tensei == ENUM_TENSE.PAST || tensei ==
 	 * ENUM_TENSE.FUTURE)))
 	 * 
-	 * // ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ ×›+×ž×œ××š ×ž+×ž×œ××š ×œ+×ž×œ××š ×‘+×ž×œ××š ××‘×œ ×œ××¤×©×¨ × ×™×ª×•×— ×©×œ // ×œ×ž×œ××š
-	 * ×‘×ž×œ××š ×›×œ×•×ž×¨ ×ª×—×™×œ×™×•×ª ×‘ ×•×œ ×™×•×¤×™×¢×• // ×›×—×œ×§ ×ž×”×¦×•×¨×” ×•×œ× ×›×ª×—×™×œ×™×•×ª ×›×™ ×ž×™×™×¦×¨×™×
-	 * ××•×ª×Ÿ // ×œ××¤×©×¨ × ×™×ª×•×— ×©×œ ×‘×œ×”×œ×‘×™×© ×•×‘×œ×©×ž×•×¨ && !(prepositionTag && tensei ==
+	 * // ìîðåò ðéúåç ùì ë+îìàê î+îìàê ì+îìàê á+îìàê àáì ìàôùø ðéúåç ùì // ìîìàê
+	 * áîìàê ëìåîø úçéìéåú á åì éåôéòå // ëçì÷ îäöåøä åìà ëúçéìéåú ëé îééöøéí
+	 * àåúï // ìàôùø ðéúåç ùì áìäìáéù åáìùîåø && !(prepositionTag && tensei ==
 	 * ENUM_TENSE.INFINITIVE && suffixFunctioni ==
 	 * ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_ACCUSATIVE_OR_NOMINATIVE &&
 	 * base.charAt(0) != 'l' && base.charAt(0) != 'b')
 	 * 
-	 * // ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ ×‘×‘×©×ž×•×¨ && !(prepBET && posi == ENUM_POS.VERB && tensei
+	 * // ìîðåò ðéúåç ùì ááùîåø && !(prepBET && posi == ENUM_POS.VERB && tensei
 	 * == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'b')
 	 * 
-	 * // ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ ×›×›×©×ž×•×¨ && !(prepKAF && posi == ENUM_POS.VERB && tensei
+	 * // ìîðåò ðéúåç ùì ëëùîåø && !(prepKAF && posi == ENUM_POS.VERB && tensei
 	 * == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'k')
 	 * 
-	 * // ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ ×ž×ž×©×ž×•×¨ && !(prepMEM && posi == ENUM_POS.VERB && tensei
+	 * // ìîðåò ðéúåç ùì îîùîåø && !(prepMEM && posi == ENUM_POS.VERB && tensei
 	 * == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'm')
 	 * 
-	 * // ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ ×œ×œ×©×ž×•×¨ && !(prepLAMED && posi == ENUM_POS.VERB &&
+	 * // ìîðåò ðéúåç ùì ììùîåø && !(prepLAMED && posi == ENUM_POS.VERB &&
 	 * tensei == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'l')
 	 * 
 	 * && !(prepositionTag && (posi == ENUM_POS.INDEPENDENTINFINITIVE))
 	 * 
 	 * // //////////////////////////////////////////////////////////////////////
-	 * // / (interjection) ×ž×™×œ×ª ×©××œ×” ,(interrogative) ×ž×™×œ×ª ×§×¨×™××” //
+	 * // / (interjection) îéìú ùàìä ,(interrogative) îéìú ÷øéàä //
 	 * ///////////////////////////////////////////////////////////////////// &&
 	 * !((subConOrRelSHIN || tempSubConKAFSHIN || tempSubConMEMSHIN ||
-	 * tempSubConLAMEDKAFSHIN) && ( // ×›×™×›×‘×ª×™ ×›×™ ×œ× × ×•×ª×Ÿ ×œ× ×ª×— ×©+×”×¨×™ // (posi ==
+	 * tempSubConLAMEDKAFSHIN) && ( // ëéëáúé ëé ìà ðåúï ìðúç ù+äøé // (posi ==
 	 * CONJUNCTION)|| posi == ENUM_POS.INTERJECTION || (posi ==
 	 * ENUM_POS.INTERROGATIVE && type != INTERROGATIVE_TYPE_PRONOUN)))
 	 * 
@@ -1690,49 +1690,49 @@ public class TokenizationParser extends DefaultHandler  {
 	 * 
 	 * //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * ///////////// // /////////// ×ž×™×œ×ª ×—×™×‘×•×¨ //
+	 * ///////////// // /////////// îéìú çéáåø //
 	 * ///////////////////////////////
-	 * ////////////////////////////////////////////////////// // ×›×™×›×‘×ª×™ ×›×™ ×œ×
-	 * × ×•×ª×Ÿ ×œ× ×ª×— ×©+×”×¨×™ // && !((relativizerTag || subordinatingConjunctionTag ||
+	 * ////////////////////////////////////////////////////// // ëéëáúé ëé ìà
+	 * ðåúï ìðúç ù+äøé // && !((relativizerTag || subordinatingConjunctionTag ||
 	 * // temporalSubConjTag) && posi == CONJUNCTION) && !(prepositionTag &&
 	 * posi == ENUM_POS.CONJUNCTION)
 	 * 
 	 * //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * ////// // ///////////// ×©× ×¤×¨×˜×™ //
+	 * ////// // ///////////// ùí ôøèé //
 	 * ///////////////////////////////////////
 	 * /////////////////////////////////////
 	 * 
-	 * // ×œ×ž× ×•×¢ ×”×•×¤×¢×” ×©×œ ×©× ×¤×¨×˜×™ ×¢× ×ª×—×™×œ×™×ª ×‘×© - ×›×ž×• ×‘×©×“×œ×™×” &&
+	 * // ìîðåò äåôòä ùì ùí ôøèé òí úçéìéú áù - ëîå áùãìéä &&
 	 * !(tempSubConBETSHIN && posi == ENUM_POS.PROPERNAME)
 	 * 
 	 * //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * ////////// // ////// ×”' ×—×‘×•×™×” //
+	 * ////////// // ////// ä' çáåéä //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * // ×›×“×™ ×œ×ž× ×•×¢ ×”×•×¤×¢×ª ×× ×œ×™×–×” ×œ-×‘×”×™×œ×“ ×›×”×™×œ×“ ×œ×”×™×œ×“ && !((prepBET || prepKAF ||
+	 * // ëãé ìîðåò äåôòú àðìéæä ì-áäéìã ëäéìã ìäéìã && !((prepBET || prepKAF ||
 	 * prepLAMED) && hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE)
 	 * 
 	 * //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * /////// // ×ª×•××¨ ×”×¤×•×¢×œ //
+	 * /////// // úåàø äôåòì //
 	 * /////////////////////////////////////////////////
 	 * //////////////////////////////
 	 * 
 	 * && !(prepositionTag && posi == ENUM_POS.ADVERB)
 	 * 
 	 * && !(adverbKAF && (posi == ENUM_POS.PROPERNAME || posi == ENUM_POS.VERB
-	 * // ×•×©×œ×›×©×¢×”, ×•×©×‘×›×©×¢×” // || posi == NOUN || posi == ENUM_POS.ADJECTIVE ||
+	 * // åùìëùòä, åùáëùòä // || posi == NOUN || posi == ENUM_POS.ADJECTIVE ||
 	 * posi == ENUM_POS.PRONOUN || posi == ENUM_POS.PREPOSITION || posi ==
 	 * ENUM_POS.ADVERB || posi == ENUM_POS.CONJUNCTION || posi ==
 	 * ENUM_POS.INTERJECTION || posi == ENUM_POS.INTERROGATIVE || posi ==
 	 * ENUM_POS.NEGATION || posi == ENUM_POS.PARTICIPLE))
 	 * 
-	 * // ×œ×ž× ×•×¢ ×”×•×¤×¢×” ×›×¤×•×œ×” ×¢×‘×•×¨ ×ª×—×™×œ×™×•×ª ×©×ž×•×¤×™×¢×•×ª ×¢× ×” ×•×‘×œ×™ ×” - ×œ×ž×©×œ ×© // ×•×©×”
-	 * ×›××©×¨ ×ž×¦×˜×¨×¤×™× ×œ×©"×¢ ××• ×©× ×¤×¨×˜×™ ×ž×™×•×“×¢ // && !((prepMEM || subConOrRelSHIN ||
+	 * // ìîðåò äåôòä ëôåìä òáåø úçéìéåú ùîåôéòåú òí ä åáìé ä - ìîùì ù // åùä
+	 * ëàùø îöèøôéí ìù"ò àå ùí ôøèé îéåãò // && !((prepMEM || subConOrRelSHIN ||
 	 * tempSubConKAFSHIN // || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN) //
 	 * && definiteArticleTag && baseDefinitnessi == //
-	 * BASE_DEFINITNESS_TRUE_TRUE) // ×¨×¦×™× × ×™×ª×•×— ×©+×‘+×™×™×“×•×¢ +×©"×¢ ×©×”×•× ×œ× × ×¡×ž×š //
+	 * BASE_DEFINITNESS_TRUE_TRUE) // øöéí ðéúåç ù+á+ééãåò +ù"ò ùäåà ìà ðñîê //
 	 * && !((prepLAMED ||prepBET||prepMEM || subConOrRelSHIN || //
 	 * tempSubConKAFSHIN // || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN) &&
 	 * // definiteArticleTag && constructi == CONSTRUCT_TRUE)
@@ -1742,16 +1742,16 @@ public class TokenizationParser extends DefaultHandler  {
 	 * 
 	 * //
 	 * ///////////////////////////////////////////////////////////////////////
-	 * // ×œ×ž× ×•×¢ ×œ+×œ×’×‘×™×š // - × ×—×œ×™×£ ××ª ×”×—×•×§ ×”×‘× ×‘×—×•×§×™× ×™×•×ª×¨ ×ž×¢×•×“× ×™× // ×¦×¨×™×š ×¢×•×“
-	 * ×œ×‘×“×•×§ ××¤×©×¨×•×ª ×–××ª && !(prepositionTag && posi == ENUM_POS.PREPOSITION) //
+	 * // ìîðåò ì+ìâáéê // - ðçìéó àú äçå÷ äáà áçå÷éí éåúø îòåãðéí // öøéê òåã
+	 * ìáãå÷ àôùøåú æàú && !(prepositionTag && posi == ENUM_POS.PREPOSITION) //
 	 * && !(subConOrRelSHIN && posi ==PREPOSITION) // && !(prefix.endsWith("k")
 	 * && base.startsWith("k") && posi == // PREPOSITION) // &&
 	 * !(prefix.endsWith("l") && base.startsWith("l") && posi == // PREPOSITION)
 	 * // /////////////////////////////////////////////////////////////////////
 	 * 
-	 * // ×œ×ž× ×•×¢ ×›+××œ ×‘+×™×© && !(prepositionTag && posi == ENUM_POS.MODAL)
+	 * // ìîðåò ë+àì á+éù && !(prepositionTag && posi == ENUM_POS.MODAL)
 	 * 
-	 * // ×œ×¤×™ ×‘×§×©×ª ×ž× ×™, ××œ×•×Ÿ ×œ× ×ž×¡×›×™× - × ×ª×•×•×›×— ××—"×› && !(prepositionTag && posi
+	 * // ìôé á÷ùú îðé, àìåï ìà îñëéí - ðúååëç àç"ë && !(prepositionTag && posi
 	 * == ENUM_POS.COPULA)
 	 * 
 	 * // participleType handling && !((posi == ENUM_POS.PARTICIPLE || posi ==
@@ -1770,9 +1770,9 @@ public class TokenizationParser extends DefaultHandler  {
 	 * && posi == VERB && tensei == TENSE_INFINITIVE) //
 	 * ///////////////////////////////////////////////////////////////// //
 	 * ///////////PREPOSITION //
-	 * ////////////////////////////////////////////////////////// // ×œ× ×œ××¤×©×¨
-	 * ×©+×œ×™ - ×ž×•×ª×¨ ×¨×§ ×©×œ×™ // ×›×Ÿ ×œ××¤×©×¨ ×©+×‘×™ - ×œ×›×Ÿ ××™ ××¤×©×¨ ×—×•×§ ×›×œ×œ×™ ×•×¦×¨×™×š ×œ×‘×“×•×§
-	 * ×©×ž×“×•×‘×¨ ×‘×¢×™×•×œ // ×¡×¤×¦×™×¤×™ && !((base.equals("li") || base.equals("lk") ||
+	 * ////////////////////////////////////////////////////////// // ìà ìàôùø
+	 * ù+ìé - îåúø ø÷ ùìé // ëï ìàôùø ù+áé - ìëï àé àôùø çå÷ ëììé åöøéê ìáãå÷
+	 * ùîãåáø áòéåì // ñôöéôé && !((base.equals("li") || base.equals("lk") ||
 	 * base.equals("lw") || base.equals("lh") || base.equals("lnw") ||
 	 * base.equals("lkm") || base.equals("lkn") || base.equals("lhm") || base
 	 * .equals("lhn")) && prefix.equals("e") && posi == ENUM_POS.PREPOSITION &&
@@ -1796,15 +1796,15 @@ public class TokenizationParser extends DefaultHandler  {
 	 */
 	protected boolean validateByRulesWithoutPrefixes(String transliterated, InflectedRecordNum inflectedRecordNum) {
 		boolean validate = false;
-		// ×ž×§×•×¨ ×™×•×¤×™×¢ ××œ× ×× × ×ž× ×¢
-		// ×©× ×¤×•×¢×œ ×ž×•×˜×” ×œ× ×™×•×¤×™×¢ ×›×¢×•×ž×“ ×‘×¤× ×™ ×¢×¦×ž×• ×¨×§ ×‘×¦×™×¨×•×£ ×ª×—×™×œ×™×ª
-		// ×©× ×¤×•×¢×œ ×ž×•×˜×” ×¢× ×ª×—×™×œ×™×ª ×› - ×œ× ×™×•×¤×™×¢ ××œ× ×›×™×•×¦× ×“×•×¤×Ÿ
-		// ×©× ×¤×•×¢×œ ×ž×•×˜×” ×¢× ×ª×—×™×œ×™×ª ×ž ×œ× ×™×•×¤×™×¢ ××œ× ×›×™×•×¦× ×“×•×¤×Ÿ
-		// ×©× ×¤×•×¢×œ ×¢× ×ª×—×™×œ×™×ª ×‘ - ×™×•×¤×™×¢ ××œ× ×× ×ž×•× ×¢×™×
-		// ×©× ×¤×•×¢×œ ×¢× ×ª×—×™×œ×™×ª ×œ - ×™×•×¤×™×¢ ××œ× ×× ×ž×•× ×¢×™×
-		// ×™×© ×©×ž×•×ª ×¤×¨×˜×™×™× ×©×œ× ×™×•×¤×™×¢×• ×œ×¢×•×œ× ×¢× ×”' ×•×¨×•×¦×™× ×œ×ž× ×•×¢ × ×™×ª×•×— ×©×œ×”×
-		// ×›×ž×™×•×“×¢×™× ×›×ž×• ×”×§×•×œ×•×¨×“×• ×”××©×“×•×“
-		// ×™×© ×©×ž×•×ª ×¤×¨×˜×™×™× ×©×¨×•×¦×™× ×œ×ž× ×•×¢ ×”×•×¤×¢×” ×©×œ×”× ×›×œ× ×ž×™×•×“×¢×™×
+		// î÷åø éåôéò àìà àí ðîðò
+		// ùí ôåòì îåèä ìà éåôéò ëòåîã áôðé òöîå ø÷ áöéøåó úçéìéú
+		// ùí ôåòì îåèä òí úçéìéú ë - ìà éåôéò àìà ëéåöà ãåôï
+		// ùí ôåòì îåèä òí úçéìéú î ìà éåôéò àìà ëéåöà ãåôï
+		// ùí ôåòì òí úçéìéú á - éåôéò àìà àí îåðòéí
+		// ùí ôåòì òí úçéìéú ì - éåôéò àìà àí îåðòéí
+		// éù ùîåú ôøèééí ùìà éåôéòå ìòåìí òí ä' åøåöéí ìîðåò ðéúåç ùìäí
+		// ëîéåãòéí ëîå ä÷åìåøãå äàùãåã
+		// éù ùîåú ôøèééí ùøåöéí ìîðåò äåôòä ùìäí ëìà îéåãòéí
 		ENUM_TENSE tensei = inflectedRecordNum.getTense();
 		ENUM_HATTRIBUTE haaributei = inflectedRecordNum.getHAttribute();
 		ENUM_POS posi = inflectedRecordNum.getPos();
@@ -1814,7 +1814,7 @@ public class TokenizationParser extends DefaultHandler  {
 		if (!(haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE)
 				&& !(posi == ENUM_POS.QUANTIFIER && haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_FALSE
 						&& constructi == ENUM_STATUS.CONSTRUCT_FALSE)
-						// ×©×•× ×” ×‘×’×œ×œ ×œ×™×¦×•××Ÿ
+						// ùåðä áâìì ìéöåàï
 						// && !((posi != ENUM_POS.PRONOUN )&& haaributei ==
 						// ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
 				&& !((posi != ENUM_POS.PRONOUN && posi != ENUM_POS.PROPERNAME)

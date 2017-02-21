@@ -1460,7 +1460,7 @@ public final class HMM2Morph {
 								newAnalysis = handlePronounAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PROPERNAME:
-								if (unknownFlag && morphSurface.charAt(0) == '×”') {
+								if (unknownFlag && morphSurface.charAt(0) == 'ä') {
 									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface,
 											newAnalysisIndex);
 									token.getAnalysis().add(newAnalysis1);
@@ -1692,7 +1692,7 @@ public final class HMM2Morph {
 								newAnalysis = handlePronounAnalysis(morphSurface, newAnalysisIndex);
 								break;
 							case PROPERNAME:
-								if (unknownFlag && morphSurface.charAt(0) == '×”') {
+								if (unknownFlag && morphSurface.charAt(0) == 'ä') {
 									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface,
 											newAnalysisIndex);
 									token.getAnalysis().add(newAnalysis1);

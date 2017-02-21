@@ -204,7 +204,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		// 2) working with input single token via web
 		// StringWriter sw = new StringWriter();
 		// PrintWriter pw = new PrintWriter(sw);
-		// String inputString = "×™×œ×“";
+		// String inputString = "éìã";
 		//
 		// dataLoad();
 		// a.analyzeSingleToken(pw, inputString);
@@ -218,7 +218,7 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		// 2) working with input single token via files
 		// StringWriter sw = new StringWriter();
 		// PrintWriter pw = new PrintWriter(sw);
-		// String inputString = "×’×Ÿ";
+		// String inputString = "âï";
 		//
 		// boolean webFlag = (new Boolean(args[0]).booleanValue());
 		// System.out.println("webFlag=" + webFlag);
@@ -378,23 +378,23 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			// System.out.println("analyzeStringInput : hebWord=" + hebWord);
 			// token length
 			int indexKitzur = 0;
-			if ((indexKitzur = hebWord.indexOf("×•×›×“'")) != -1 || (indexKitzur = hebWord.indexOf("×ž×¡'")) != -1
-					|| (indexKitzur = hebWord.indexOf("×ž×¢'")) != -1 || (indexKitzur = hebWord.indexOf("×ž×—'")) != -1
-					|| (indexKitzur = hebWord.indexOf("×•×›×•'")) != -1 || (indexKitzur = hebWord.indexOf("×¨×—'")) != -1
-					|| (indexKitzur = hebWord.indexOf("×˜×œ'")) != -1 || (indexKitzur = hebWord.indexOf("×©×›'")) != -1
-					|| (indexKitzur = hebWord.indexOf("×©×“'")) != -1 || (indexKitzur = hebWord.indexOf("×¤×¨×•×¤'")) != -1
-					|| (indexKitzur = hebWord.indexOf("×¢×ž'")) != -1 || (indexKitzur = hebWord.indexOf("××•× '")) != -1
-					|| (indexKitzur = hebWord.indexOf("×•×’×•'")) != -1 || (indexKitzur = hebWord.indexOf("×’×‘'")) != -1
-					|| (indexKitzur = hebWord.indexOf("×©\"×¡")) != -1 || (indexKitzur = hebWord.indexOf("×©''×¡")) != -1
-					|| (indexKitzur = hebWord.indexOf("×§\"×’")) != -1) {
+			if ((indexKitzur = hebWord.indexOf("åëã'")) != -1 || (indexKitzur = hebWord.indexOf("îñ'")) != -1
+					|| (indexKitzur = hebWord.indexOf("îò'")) != -1 || (indexKitzur = hebWord.indexOf("îç'")) != -1
+					|| (indexKitzur = hebWord.indexOf("åëå'")) != -1 || (indexKitzur = hebWord.indexOf("øç'")) != -1
+					|| (indexKitzur = hebWord.indexOf("èì'")) != -1 || (indexKitzur = hebWord.indexOf("ùë'")) != -1
+					|| (indexKitzur = hebWord.indexOf("ùã'")) != -1 || (indexKitzur = hebWord.indexOf("ôøåô'")) != -1
+					|| (indexKitzur = hebWord.indexOf("òî'")) != -1 || (indexKitzur = hebWord.indexOf("àåð'")) != -1
+					|| (indexKitzur = hebWord.indexOf("åâå'")) != -1 || (indexKitzur = hebWord.indexOf("âá'")) != -1
+					|| (indexKitzur = hebWord.indexOf("ù\"ñ")) != -1 || (indexKitzur = hebWord.indexOf("ù''ñ")) != -1
+					|| (indexKitzur = hebWord.indexOf("÷\"â")) != -1) {
 				if (indexKitzur > 0) {
 					isKitzur = true;
 
 					String checkedPrefix = hebWord.substring(0, indexKitzur);
 					String hebBase = hebWord.substring(indexKitzur);
-					if (checkedPrefix.endsWith("×”")) {
-						checkedPrefix = checkedPrefix.replace('×”', ' ').trim();
-						hebBase = "×”" + hebBase;
+					if (checkedPrefix.endsWith("ä")) {
+						checkedPrefix = checkedPrefix.replace('ä', ' ').trim();
+						hebBase = "ä" + hebBase;
 					}
 					if (StringUtils.moshevkaleb(Translate.Heb2Eng(checkedPrefix))) {
 						mwtokenizationParser.analyzeBase(Translate.Heb2Eng(hebBase), Translate.Heb2Eng(checkedPrefix),

@@ -93,8 +93,8 @@ public class MWTokenizationParser extends TokenizationParser {
 			final String hebWord) {
 		// System.out.println("(F) analyzeBase (base,prefix) (" + base + "," +
 		// prefix +")" );
-		boolean foundAnalysis = false; // Χ”ΧΧ ΧΧ¦ΧΧ Χ• Χ Χ™ΧªΧ•Χ— Χ”ΧΧ‘Χ•Χ΅Χ΅ ΧΆΧ ΧªΧ—Χ™ΧΧ™Χª +
-		// Χ‘Χ΅Χ™Χ΅
+		boolean foundAnalysis = false; // δΰν ξφΰπε πιϊεη δξαερρ ςμ ϊηιμιϊ +
+		// αριρ
 		PrefixRecord pr = null;
 		int baseListSize = 0;
 		ArrayList<DBInflectionsRecord> inflectionsList = null;
@@ -120,9 +120,9 @@ public class MWTokenizationParser extends TokenizationParser {
 				}
 
 				final char prefixPerEntry = inflectionsRecDB.getPrefixPerEntry();
-				// ΧΧΧ¤Χ Χ‘ΧΧ§Χ¨Χ” Χ©Χ -Χ•ΧΧΧ™ - Χ Χ”Χ™Χ Χ”ΧªΧ—Χ™ΧΧ™Χª ΧΧΧ™ ΧΧ•Χ¤Χ™ΧΆ Χ›ΧªΧΧ Χ™Χª Χ‘Χ§Χ•Χ‘Χ¥
-				// Χ”Χ”ΧΧ™Χ•Χª
-				// ΧΧ‘Χ Χ•ΧΧΧ™ ΧΧ ΧΧ•Χ¤Χ™ΧΆ Χ‘Χ§Χ•Χ‘Χ¥ Χ”Χ”ΧΧ™Χ•Χª
+				// ξθτμ αξχψδ ωμ -εμξι - μ διΰ δϊηιμιϊ μξι ξετις λϊξπιϊ αχεαυ
+				// δδθιεϊ
+				// ΰαμ εμξι μΰ ξετις αχεαυ δδθιεϊ
 				String combinedPrefix = prefix;
 				if (prefixPerEntry != 'u') {
 					// System.out.println("(F) analyzeBase prefixPerEntry !=
@@ -253,7 +253,7 @@ public class MWTokenizationParser extends TokenizationParser {
 					for (int k = 1; k < 6 && k < transliterated.length(); k++) {
 						String prefix = transliterated.substring(0, k);
 
-						// ΧΧ ΧªΧ™ΧªΧ›Χ ΧªΧ—Χ™ΧΧ™Χª Χ©ΧΧ™Χ Χ” ΧΧ©Χ”Χ•Χ›ΧΧ‘
+						// μΰ ϊιϊλο ϊηιμιϊ ωΰιπδ ξωδελμα
 						if (StringUtils.moshevkaleb(prefix)) {
 							if (prefix.length() == 1 && prefixPerEntry == prefix.charAt(0)) {
 								base = transliterated;
@@ -330,7 +330,7 @@ public class MWTokenizationParser extends TokenizationParser {
 			// System.out.println("(F) analyzeBaseAndPrefixNoPrefixPreEntry
 			// prfix "
 			// + prefix);
-			// ΧΧ ΧªΧ™ΧªΧ›Χ ΧªΧ—Χ™ΧΧ™Χª Χ©ΧΧ™Χ Χ” ΧΧ©Χ”Χ•Χ›ΧΧ‘
+			// μΰ ϊιϊλο ϊηιμιϊ ωΰιπδ ξωδελμα
 			if (StringUtils.moshevkaleb(prefix)) {
 				final String base = transliterated.substring(j);
 				// System.out.println("(F) analyzeBaseAndPrefixNoPrefixPreEntry
@@ -361,11 +361,11 @@ public class MWTokenizationParser extends TokenizationParser {
 
 		// handle cases where in tokenization stage we can't guess for sure that
 		// the token is whole prefix
-		// for exampe Χ‘ 20
+		// for exampe α 20
 		if (StringUtils.moshevkaleb(hebWord)) {
 			// System.out.println("(F) analyzeBaseNoPrefix moshevkaleb");
 			handlePrefix(hebWord);
-			// ΧΆΧ‘Χ•Χ¨ Χ‘ - Χ©ΧΧ Χ™Χ™Χ¦Χ¨ ΧΧ Χ• Χ Χ™ΧªΧ•Χ— Χ©Χ Χ©Χ Χ¤Χ¨ΧΧ™ Χ›Χ™ ΧΧ™Χ ΧΧ ΧΧ™Χ–Χ”
+			// ςαεψ α - ωμΰ ιιφψ μπε πιϊεη ωμ ων τψθι λι ΰιο ΰπμιζδ
 			foundAnalysis = true;
 		}
 		try {
@@ -491,8 +491,8 @@ public class MWTokenizationParser extends TokenizationParser {
 		// System.out.println("(F) analyzeMWBase (base,prefix) (" + base + "," +
 		// prefix +")" );
 		ArrayList<MWEinflectionsRecord> mweInflectionsList = null;
-		boolean foundAnalysis = false; // Χ”ΧΧ ΧΧ¦ΧΧ Χ• Χ Χ™ΧªΧ•Χ— Χ”ΧΧ‘Χ•Χ΅Χ΅ ΧΆΧ ΧªΧ—Χ™ΧΧ™Χª +
-		// Χ‘Χ΅Χ™Χ΅
+		boolean foundAnalysis = false; // δΰν ξφΰπε πιϊεη δξαερρ ςμ ϊηιμιϊ +
+		// αριρ
 		PrefixRecord pr = null;
 		InflectedRecordNum inflectionsRecNum = null;
 
@@ -727,7 +727,7 @@ public class MWTokenizationParser extends TokenizationParser {
 	/**
 	 * This method handling tokens containg ' or ''
 	 *
-	 * ΧΧΧ¤Χ Χ‘Χ§Χ™Χ¦Χ•Χ¨Χ™Χ Χ•Χ¨ΧΧ©Χ™ ΧªΧ™Χ‘Χ•Χª Χ›ΧΧ• Χ’'Χ•Χ¨Χ’' Χ•Χ’'Χ•Χ¨Χ’' Χ‘Χ©ΧªΧ"Χ— Χ‘ΧªΧ©Χ"Χ—
+	 * ξθτμ αχιφεψιν εψΰωι ϊιαεϊ λξε β'εψβ' εβ'εψβ' αωϊμ"η αϊωμ"η
 	 *
 	 * @param hebWord
 	 */
@@ -741,9 +741,9 @@ public class MWTokenizationParser extends TokenizationParser {
 			return foundAnalysis;
 		}
 		// ///////////////////////////////////////////////////////////
-		// ΧΧ™Χ¤Χ•Χ Χ‘Χ’Χ¨Χ©
+		// θιτεμ αβψω
 		// //////////////////////////////////////////////////////////
-		// handle Χ’'Χ•Χ¨Χ’' Χ•Χ’'Χ•Χ¨Χ’'
+		// handle β'εψβ' εβ'εψβ'
 		if (transliterated.endsWith("\'")) {
 			// analyze the whole token
 			try {
@@ -761,7 +761,7 @@ public class MWTokenizationParser extends TokenizationParser {
 					// Non Gimatria analysis
 					// /////////////////////////////////////////////
 				}
-				// Χ™Χ™ΧªΧ ΧΧ‘' Χ Χ™ΧªΧ•Χ— Χ©Χ Χ’Χ™ΧΧΧ¨Χ™Χ Χ•Χ’Χ Χ©Χ Χ™Χ•Χ Χ‘'
+				// ιιϊο μα' πιϊεη ωμ βιξθψιΰ εβν ωμ ιεν α'
 				// else {
 				foundAnalysis = analyzeBaseNoPrefix(hebWord, transliterated)
 						| analyzeBaseAndPrefix(hebWord, transliterated) | analyzeAcronymsBaseAndPrefix(transliterated);
@@ -772,9 +772,9 @@ public class MWTokenizationParser extends TokenizationParser {
 			}
 
 			// ///////////////////////////////////////////////////////////
-			// ΧΧ™Χ¤Χ•Χ Χ‘Χ’Χ¨Χ©Χ™Χ™Χ
+			// θιτεμ αβψωιιν
 			// //////////////////////////////////////////////////////////
-			// handle ΧªΧ©Χ"Χ— Χ‘ΧªΧ©"Χ"Χ—
+			// handle ϊωμ"η αϊω"μ"η
 		} else if (transliterated.indexOf("\"") == transliterated.length() - 2) {
 			try {
 				gimatriaVal = Data.getGimatrias(transliterated);
@@ -794,11 +794,11 @@ public class MWTokenizationParser extends TokenizationParser {
 					analyzeAcronymsBaseAndPrefix(transliterated);
 				}
 
-				// Χ”Χ•Χ΅Χ¤ΧªΧ™ ΧΧª 2 Χ”Χ¤Χ•Χ Χ§Χ¦Χ™Χ•Χª Χ”Χ‘ΧΧ•Χª Χ›Χ“Χ™ Χ©Χ Χ§Χ‘Χ Χ’Χ Χ Χ™ΧªΧ•Χ— Χ’Χ™ΧΧΧ¨Χ™Χ Χ•Χ’Χ ΧΧ
-				// Χ’Χ™ΧΧΧ¨Χ™Χ ΧΧΧ©Χ
-				// ΧΆΧ‘Χ•Χ¨ Χ©"Χ—
-				// Χ‘Χ¤Χ•Χ Χ§Χ¦Χ™Χ•Χª ΧΧΧ• ΧΧ ΧΧªΧ‘Χ¦ΧΆ Χ—Χ™Χ¤Χ•Χ© Χ‘ΧΧ‘ΧΧª Χ’Χ™ΧΧΧ¨Χ™Χ ΧΧΧ Χ¨Χ§ Χ‘ΧΧ‘ΧΧΧ•Χª
-				// Χ”ΧªΧ—Χ™ΧΧ™Χª Χ•Χ”Χ ΧΧ™Χ•Χª
+				// δερτϊι ΰϊ 2 δτεπχφιεϊ δαΰεϊ λγι ωπχαμ βν πιϊεη βιξθψιΰ εβν μΰ
+				// βιξθψιΰ μξωμ
+				// ςαεψ ω"η
+				// ατεπχφιεϊ ΰμε μΰ ξϊαφς ηιτεω αθαμϊ βιξθψιΰ ΰμΰ ψχ αθαμΰεϊ
+				// δϊηιμιϊ εδπθιεϊ
 				// check if the whole token is in the inflections table
 				foundAnalysis = foundAnalysis | analyzeBaseNoPrefix(hebWord, transliterated)
 						| analyzeBaseAndPrefix(hebWord, transliterated);
@@ -880,7 +880,7 @@ public class MWTokenizationParser extends TokenizationParser {
 					final boolean prepKAF = pr.isPrepKAF();
 					final boolean prepLAMED = pr.isPrepLAMED();
 					final boolean prepMEM = pr.isPrepMEM();
-					// Χ-100 ΧΧ Χ¨Χ•Χ¦Χ™Χ Χ¤ΧΆΧΧ™Χ™Χ ΧΧ ΧΧ™Χ–Χ” Χ©Χ Χ
+					// μ-100 μΰ ψεφιν τςξιιν ΰπμιζδ ωμ μ
 					if (!isDefiniteArticle && (!prepKAF || !prepMEM || !prepLAMED)) {
 						try {
 							// System.out.println("(F) handlePrefix B");
@@ -940,7 +940,7 @@ public class MWTokenizationParser extends TokenizationParser {
 	public void readInput(String hebWord) throws IOException, Exception {
 		// System.out.println("(F) readInput("+ hebWord+")");
 		// System.out.println(hebWord);
-		// if(hebWord.equals("Χ”Χ™Χ•Χ΅Χ“Χ”"))
+		// if(hebWord.equals("διεργδ"))
 		// System.out.println();
 		// System.out.println("(F) readInput A");
 		if (!analyzeURL(hebWord)) {
@@ -999,7 +999,7 @@ public class MWTokenizationParser extends TokenizationParser {
 			// System.out.println("======================================");
 			// System.out.println("(F) startElement hebWord: " + hebWord);
 			// System.out.println(hebWord);
-			// ΧΧ™Χ¤Χ•Χ Χ‘Χ΅Χ™ΧΧ•Χ Χ™Χ - Χ©ΧΧ•Χ΅Χ¨Χ™Χ ΧΧ Χ• ΧΧ™Χ Χ¤Χ•Χ¨ΧΧ¦Χ™Χ” Χ©Χ ΧΧ΅Χ¤Χ” Χ‘Χ–ΧΧ ΧΧ•Χ§Χ Χ™Χ–Χ¦Χ™Χ”
+			// θιτεμ αριξεπιν - ωξερψιν μπε ΰιπτεψξφιδ ωπΰρτδ αζξο θεχπιζφιδ
 			if (hebWord.startsWith("prefix=")) {
 				// System.out.println("(F) MWTokenizationParser.startElement()
 				// hebWord.startsWith(prefix=)");
@@ -1009,19 +1009,19 @@ public class MWTokenizationParser extends TokenizationParser {
 					final int spaceIndex = hebWord.lastIndexOf(" ");
 					String hebPrefix = hebWord.substring(prefixEquallIndex + 1, spaceIndex);
 					String hebBase = hebWord.substring(tokenEqualIndex + 1);
-					// ΧΧ¤Χ•Χ Χ‘ΧΧ§Χ¨Χ” Χ©Χ Χ™Χ™Χ“Χ•ΧΆ - Χ™Χ© ΧΧ”ΧΆΧ‘Χ™Χ¨ ΧΧª Χ”Χ”' ΧΧªΧΧ Χ™Χª
-					// ΧΧ”ΧªΧ—Χ™ΧΧ™Χª
-					if (hebPrefix.endsWith("Χ”")) {
-						hebPrefix = hebPrefix.replace('Χ”', ' ').trim();
-						hebBase = "Χ”" + hebBase;
+					// θτεμ αξχψδ ωμ ιιγες - ιω μδςαιψ ΰϊ δδ' μϊξπιϊ
+					// ξδϊηιμιϊ
+					if (hebPrefix.endsWith("δ")) {
+						hebPrefix = hebPrefix.replace('δ', ' ').trim();
+						hebBase = "δ" + hebBase;
 					}
 					final String hebTokenWithoutSigning = hebPrefix + hebBase;
 					mwcreateXML.createToken(hebTokenWithoutSigning);
 					analyzeBase(Translate.Heb2Eng(hebBase), Translate.Heb2Eng(hebPrefix),
 							Translate.Heb2Eng(hebTokenWithoutSigning), hebWord);
 
-					// ΧΧ™Χ¤Χ•Χ Χ‘ΧΧ§Χ¨Χ” Χ©Χ ΧªΧ—Χ™ΧΧ™Χª + Χ‘Χ΅Χ™Χ΅ ΧΧ—Χ•Χ‘Χ¨Χ™Χ - ΧΧ–Χ•Χ”Χ” ΧΆΧ•Χ“ Χ‘Χ©ΧΧ‘
-					// ΧΧ•Χ§Χ Χ™Χ–Χ¦Χ™Χ” Χ•ΧΧΆΧ‘Χ™Χ¨Χ™Χ Χ¨ΧΧ–Χ™Χ
+					// θιτεμ αξχψδ ωμ ϊηιμιϊ + αριρ ξηεαψιν - ξζεδδ ςεγ αωμα
+					// θεχπιζφιδ εξςαιψιν ψξζιν
 				} else {
 					final int equallIndex = hebWord.indexOf("=");
 					final String hebPrefix = hebWord.substring(equallIndex + 1);
@@ -1030,7 +1030,7 @@ public class MWTokenizationParser extends TokenizationParser {
 				}
 				// //////////////////////////////////////////////////////////////
 				// there is not prefix= in the surface attribute
-				// ΧΧ™Χ¤Χ•Χ Χ‘ΧΧ§Χ¨Χ™Χ Χ”Χ¨Χ’Χ™ΧΧ™Χ - ΧΧ™Χ Χ¨ΧΧ–Χ™Χ ΧΧ©ΧΧ‘ ΧΧ•Χ§Χ Χ™Χ–Χ¦Χ™Χ”
+				// θιτεμ αξχψιν δψβιμιν - ΰιο ψξζιν ξωμα θεχπιζφιδ
 				// //////////////////////////////////////////////////////////////
 			} else // hebWord Dont startsWith("prefix=")
 			{
