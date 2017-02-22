@@ -13,6 +13,7 @@ import static mila.lexicon.analyse.Constants.*;
 public class InflectedRecordNum {
 	/** lexicon id of the lexicon entry relevant to the inflected form */
 	int id = -1;
+	int alternateId = -1;
 	/** Hebrew form of the inflected form */
 	String surface = "";
 	/** transliterated form of the inflected form */
@@ -78,6 +79,10 @@ public class InflectedRecordNum {
 
 	public int getId() {
 		return id;
+	}
+	
+	public int getAlternateId() {
+		return alternateId;
 	}
 
 	public int getLexiconPointer() {
@@ -182,6 +187,10 @@ public class InflectedRecordNum {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public void setAlternateId(int alternateId) {
+		this.alternateId = alternateId;
 	}
 
 	public void setLexiconPointer(int lexiconPointer) {

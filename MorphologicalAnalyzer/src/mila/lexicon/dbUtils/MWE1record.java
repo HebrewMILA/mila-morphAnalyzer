@@ -2,6 +2,7 @@ package mila.lexicon.dbUtils;
 
 public class MWE1record {
 	private String id;
+	private String alternateId;
 	private String surface;
 	private String transliterated;
 	private String consecutive;
@@ -31,6 +32,17 @@ public class MWE1record {
 	public String getType() {
 		return type;
 	}
+	
+	
+	public String getAlternateId() {
+		return alternateId;
+	}
+
+	public void setAlternateId(String alternateId) {
+		this.alternateId = alternateId;
+	}
+	
+	
 
 	public void setConsecutive(String consecutive) {
 		this.consecutive = consecutive;
