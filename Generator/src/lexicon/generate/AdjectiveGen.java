@@ -436,6 +436,15 @@ public class AdjectiveGen extends ItemGen {
 		inflectAddExceptions();
 		insertToDB();
 	}
+	
+	@Override
+	public void generateInflects() throws Exception{
+			analyzeAdjective();
+			getException("replace");
+			getException("remove");
+			handleDoublingVavForAdjectivesStartsWithVav();
+			inflectAddExceptions();
+	}
 
 	/**
 	 * This is a service method which is called before every generation

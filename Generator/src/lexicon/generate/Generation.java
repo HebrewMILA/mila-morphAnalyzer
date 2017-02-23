@@ -69,6 +69,24 @@ public class Generation {
 				itemArgsConstructor = genClassDef.getConstructor(itemArgsClass);
 				itemGen = (ItemGen) createObject(itemArgsConstructor, itemArgs);
 				itemGen.inflect();
+				String alternateId = item.getAlternateId();
+				if(!alternateId.equals("")){
+					String oldId = item.getId();
+					item.open(Integer.parseInt(alternateId));
+					itemArgs = new Object[] { item };
+					pos = item.getPos();
+					className = new StringBuffer()
+							.append("lexicon.generate.")
+							.append(pos.substring(0, 1).toUpperCase())
+							.append(pos.substring(1)).append("Gen");
+					itemArgs = new Object[] { item };
+					classNameStr = className.toString();
+					genClassDef = Class.forName(classNameStr);
+					itemArgsConstructor = genClassDef.getConstructor(itemArgsClass);
+					itemGen = (ItemGen) createObject(itemArgsConstructor, itemArgs);
+					itemGen.generateInflects();
+					itemGen.switchBaseLexicalPointerAndInsert(oldId);
+				}
 				// }
 			}
 			System.out.println("finished generating");
