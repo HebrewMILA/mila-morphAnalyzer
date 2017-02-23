@@ -70,7 +70,7 @@ public class Generation {
 				itemGen = (ItemGen) createObject(itemArgsConstructor, itemArgs);
 				itemGen.inflect();
 				String alternateId = item.getAlternateId();
-				if(!alternateId.equals("")){
+				if(!alternateId.equals("0")){
 					String oldId = item.getId();
 					item.open(Integer.parseInt(alternateId));
 					itemArgs = new Object[] { item };
