@@ -119,7 +119,7 @@ public class AdjectiveGen extends ItemGen {
 			if (exceptionBase.startsWith("w")
 					&& !exceptionBase.startsWith("ww")) {
 				exceptionBase = "w" + exceptionBase;
-				surface = "ו" + nounExceptionType.getUndotted();
+				surface = "׳•" + nounExceptionType.getUndotted();
 				inflectAddException("add", exceptionBase);
 			}
 
@@ -368,7 +368,7 @@ public class AdjectiveGen extends ItemGen {
 						|| gender.equals("masculine and feminine"))
 					findRule(inflectedItem, "", "constructFeminineSingular"
 							+ basePos, 2);
-				//deny problems of translation for אמ"נ and אמ"ן פילטרופ סירופ
+				//deny problems of translation for ׳�׳�"׳  and ׳�׳�"׳� ׳₪׳™׳�׳˜׳¨׳•׳₪ ׳¡׳™׳¨׳•׳₪
 				if (inflectedItem.endsWith("n") || inflectedItem.endsWith("p") || inflectedItem.endsWith("c")
 						&&  
 						inflectedItem.equals(transliterated))
@@ -434,6 +434,7 @@ public class AdjectiveGen extends ItemGen {
 
 		//inflect exception type items of action add - if exist
 		inflectAddExceptions();
+		insertToDB();
 	}
 
 	/**
@@ -496,7 +497,7 @@ public class AdjectiveGen extends ItemGen {
 			spelling = STANDARD_SPELLING;
 		//////////////////////////////////////////////////////////////////
 		inflectedItem = "h" + inflectedItem;
-		surface = "ה" + surface;
+		surface = "׳”" + surface;
 
 	
 		populateDatabase();

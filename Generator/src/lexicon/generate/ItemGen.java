@@ -11,6 +11,7 @@ package lexicon.generate;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 import lexicon.contents.EmptyContent;
@@ -70,6 +71,9 @@ public abstract class ItemGen implements ItemInterface {
 	protected boolean hebForeign = false;
 	protected String value = "";
 	protected String prefix = "unspecified";
+	
+	//TODO changes
+	protected List<Inflections> infList;
 
 	// ----------------------------------------------------------------------------------
 	public ItemType getItem() {
@@ -431,6 +435,7 @@ public abstract class ItemGen implements ItemInterface {
 	// ----------------------------------------------------------------------------------
 	public ItemGen(ItemType item) {
 		this.item = item;
+		infList = new ArrayList<Inflections>();
 	}
 
 	protected String buildSql(String action, String table) {
@@ -578,7 +583,13 @@ public abstract class ItemGen implements ItemInterface {
 		inf.setValue(value);
 		inf.setPrefix(prefix);
 		inf.setBaseAlternatePointer(this.alternateId);
-		inf.insertItem();
+		//TODO inf.insertItem();
+		infList.add(inf);
+	}
+	
+	protected void insertToDB(){
+		for(Inflections inf : infList)
+			inf.insertItem();
 	}
 
 	// ----------------------------------------------------------------------------------------------
