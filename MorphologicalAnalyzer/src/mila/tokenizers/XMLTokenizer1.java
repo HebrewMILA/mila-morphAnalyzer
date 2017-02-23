@@ -54,25 +54,25 @@ public class XMLTokenizer1 {
 	}
 
 	static private void populateKitzurim() {
-		kitzurim.add("åëã'");
-		kitzurim.add("åëãå'");
-		kitzurim.add("îñ'");
-		kitzurim.add("ð÷'");
-		kitzurim.add("îò'");
-		kitzurim.add("îç'");
-		kitzurim.add("åëå'");
-		kitzurim.add("øç'");
-		kitzurim.add("èì'");
-		kitzurim.add("ùë'");
-		kitzurim.add("ùã'");
-		kitzurim.add("âø'");
-		kitzurim.add("ôøåô'");
-		kitzurim.add("àåð'");
-		kitzurim.add("åâå'");
-		kitzurim.add("âá'");
-		kitzurim.add("ìäéú'");
-		kitzurim.add("ìäú'");
-		kitzurim.add("é-í");
+		kitzurim.add("ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½ï¿½ï¿½'");
+		kitzurim.add("ï¿½-ï¿½");
 	}
 
 	public static void main(String[] args) {
@@ -104,7 +104,7 @@ public class XMLTokenizer1 {
 			// break;
 
 			// case 3:
-			// String st = "ùåîø";
+			// String st = "ï¿½ï¿½ï¿½ï¿½";
 			// String dinflectionsFile = args[0];
 			// String dprefixesFile = args[1];
 			// String gimartiasFile = args[2];
@@ -199,7 +199,7 @@ public class XMLTokenizer1 {
 			line = line.trim();
 			line = stripNonValidXMLCharacters(line); // remove invalid XML
 			// characters
-			line = line.replace('–', '-'); // replace width dash with small dash
+			line = line.replace('ï¿½', '-'); // replace width dash with small dash
 
 			// handling the case of empty lines at the middle of the file - they
 			// signify a
@@ -225,7 +225,7 @@ public class XMLTokenizer1 {
 				token = result[i];
 				returnToken = "";
 				// System.out.println(token);
-				if (token.indexOf("ä25/11") != -1) {
+				if (token.indexOf("ï¿½25/11") != -1) {
 					System.out.println();
 				}
 
@@ -297,17 +297,17 @@ public class XMLTokenizer1 {
 		if (beforeApostropeIndex >= 0) {
 			char beforeApostropheeChar = token.charAt(beforeApostropeIndex);
 			switch (beforeApostropheeChar) {
-			case 'â':
-			case 'ã':
-			case 'æ':
-			case 'ö':
-			case 'õ':
-			case 'ú':
-			case 'ò':
+			case '×’':
+			case '×“':
+			case '×–':
+			case '×¦':
+			case '×¥':
+			case '×ª':
+			case '×¢': 
 				int afterApostropeeIndex = apostropeIndex + 1;
 				if (afterApostropeeIndex < tokenLen) {
 					char afterApostropheeChar = token.charAt(afterApostropeeIndex);
-					if (!(afterApostropheeChar >= 'à' && afterApostropheeChar <= 'ú')) {
+					if (!(afterApostropheeChar >= 'ï¿½' && afterApostropheeChar <= 'ï¿½')) {
 						String subTokenWithApostropee = token.substring(0, apostropeIndex + 1);
 						xmlTokenizer.createTokens(subTokenWithApostropee);
 						returnValue = token.substring(apostropeIndex + 1);
@@ -458,7 +458,7 @@ public class XMLTokenizer1 {
 
 		while (tokenIndex < tokenLen) {
 			currentChar = token.charAt(tokenIndex);
-			if ((currentChar < 'à' || currentChar > 'ú') && !Character.isDigit(currentChar)
+			if ((currentChar < 'ï¿½' || currentChar > 'ï¿½') && !Character.isDigit(currentChar)
 					&& !Character.isLetter(currentChar)) {
 				xmlTokenizer.createTokens(String.valueOf(currentChar));
 				if (currentChar == '.' && token.indexOf("...") == -1 || currentChar == '!' || currentChar == '?') {
@@ -503,7 +503,7 @@ public class XMLTokenizer1 {
 		char currentChar;
 		while (tokenIndex >= 0) {
 			currentChar = token.charAt(tokenIndex);
-			if ((currentChar < 'à' || currentChar > 'ú') && !Character.isDigit(currentChar)
+			if ((currentChar < 'ï¿½' || currentChar > 'ï¿½') && !Character.isDigit(currentChar)
 					&& !Character.isLetter(currentChar)) {
 
 				tokenIndex--;
@@ -540,7 +540,7 @@ public class XMLTokenizer1 {
 
 		// handle simple hebrew token
 
-		else if (afterSeparatorChar >= 'à' && afterSeparatorChar <= 'ú') {
+		else if (afterSeparatorChar >= 'ï¿½' && afterSeparatorChar <= 'ï¿½') {
 			int i = 0;
 			char currentChar;
 			while (i < tokenLen) {
@@ -550,7 +550,7 @@ public class XMLTokenizer1 {
 				}
 				i++;
 			}
-			// á1,000,000
+			// ï¿½1,000,000
 			String possiblePrefix = token.substring(0, i);
 			if (StringUtils.moshevkaleb(possiblePrefix)) {
 				xmlTokenizer.createTokens(String.valueOf(possiblePrefix));
@@ -618,7 +618,7 @@ public class XMLTokenizer1 {
 			}
 			returnValue = null;
 
-			// date ä25/11
+			// date ï¿½25/11
 		} else if (token.indexOf("/") != -1) {
 			if (token.matches("[0-9]{2}/[0-9]{2}")) {
 				xmlTokenizer.createTokens(token);
@@ -712,8 +712,8 @@ public class XMLTokenizer1 {
 					break;
 				}
 			}
-			// úìåé àí øõ îéîéï ìùîàì àå ùîàì ìéîéï ä÷åîáéðöéä ùì îñôøéí åúåéí
-			// àçøéí îùôéòä
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if (j + 1 == lastTokenLen) {
 				token = lastToken;
 			} else if (Character.isDigit(lastToken.charAt(0))) {
@@ -735,7 +735,7 @@ public class XMLTokenizer1 {
 			} else if (currentChar == '.' || currentChar == ',') {
 				if (i + 1 < tokenLen && Character.isDigit(token.charAt(i + 1))) {
 					i++;
-				} else if (i + 1 < tokenLen && token.charAt(i + 1) >= 'à' && token.charAt(i + 1) <= 'ú') {
+				} else if (i + 1 < tokenLen && token.charAt(i + 1) >= 'ï¿½' && token.charAt(i + 1) <= 'ï¿½') {
 					if (i > 0) {
 						xmlTokenizer.createTokens(token.substring(0, i));
 					}
@@ -804,10 +804,10 @@ public class XMLTokenizer1 {
 		int i = 0;
 
 		// find a possible prefix
-		if (!(token.charAt(0) >= 'à' && token.charAt(0) <= 'ú')) {
+		if (!(token.charAt(0) >= 'ï¿½' && token.charAt(0) <= 'ï¿½')) {
 			returnValue = handleAfterPrefixSeparator(token);
 		} else if (token.indexOf("'") != -1 || token.indexOf("-") != -1 || token.indexOf("\"") != -1) {
-			while (i < tokenLen && token.charAt(i) >= 'à' && token.charAt(i) <= 'ú') {
+			while (i < tokenLen && token.charAt(i) >= 'ï¿½' && token.charAt(i) <= 'ï¿½') {
 				i++;
 			}
 
@@ -817,7 +817,7 @@ public class XMLTokenizer1 {
 
 			String afterAfterPrefixString = token.substring(i + 1);
 
-			// ìë"ë
+			// ï¿½ï¿½"ï¿½
 			int afterAfterPrefixStringLen = afterAfterPrefixString.length();
 			if (StringUtils.moshevkaleb(possiblePrefix)
 					&& (afterPrefixChar == '-' || afterPrefixChar == '\'' || afterPrefixChar == '"')
@@ -828,7 +828,7 @@ public class XMLTokenizer1 {
 				if (i < tokenLen - 1) {
 					i++;
 					String afterPrefixTokenAndSeparator = token.substring(i);
-					// á-ö.ä.ì.
+					// ï¿½-ï¿½.ï¿½.ï¿½.
 					returnValue = isDotAcronymWithDotEnding(afterPrefixTokenAndSeparator);
 					if (returnValue != null && returnValue.equals(afterPrefixTokenAndSeparator)) {
 						returnValue = handleAfterPrefixSeparator(afterPrefixTokenAndSeparator);
@@ -901,7 +901,7 @@ public class XMLTokenizer1 {
 			// Check if contains number
 
 			// //////////////////
-			// àó-òì-ôé-ëï
+			// ï¿½ï¿½-ï¿½ï¿½-ï¿½ï¿½-ï¿½ï¿½
 			if (token.indexOf('-') != -1 || token.indexOf('(') != -1 || token.indexOf('!') != -1
 					|| token.indexOf('/') != -1 || token.indexOf(')') != -1 || token.indexOf('[') != -1
 					|| token.indexOf(']') != -1 || token.indexOf(',') != -1 && token.indexOf(',') != tokenLen - 1) {
@@ -912,10 +912,10 @@ public class XMLTokenizer1 {
 				boolean found = false;
 				while (!found && i < tokenLen) {
 					currentChar = token.charAt(i);
-					if (currentChar >= 'à' && currentChar <= 'ú') {
+					if (currentChar >= 'ï¿½' && currentChar <= 'ï¿½') {
 						i++;
 					} else if ((currentChar == '"' || currentChar == '\\') && i + 1 < tokenLen
-							&& token.charAt(i + 1) >= 'à' && token.charAt(i + 1) <= 'ú') {
+							&& token.charAt(i + 1) >= 'ï¿½' && token.charAt(i + 1) <= 'ï¿½') {
 						i++;
 					} else {
 						found = true;
@@ -991,7 +991,7 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * identify ú.æ. àé.ãé.áé.
+	 * identify ï¿½.ï¿½. ï¿½ï¿½.ï¿½ï¿½.ï¿½ï¿½.
 	 *
 	 * @param token
 	 * @return
@@ -1000,12 +1000,12 @@ public class XMLTokenizer1 {
 		String returnValue = token;
 		if (token.indexOf(".") != -1) {
 			int tokenLen = token.length();
-			if (tokenLen == 2 && token.charAt(0) >= 'à' && token.charAt(0) <= 'ú') {
+			if (tokenLen == 2 && token.charAt(0) >= 'ï¿½' && token.charAt(0) <= 'ï¿½') {
 				xmlTokenizer.createTokens(token);
 				returnValue = null;
 				return returnValue;
 			}
-			if (token.charAt(tokenLen - 1) == '.' && token.matches("[îùäåëìá]" + ALEFBAIT + "\\." + ALEFBAIT + "\\.")) {
+			if (token.charAt(tokenLen - 1) == '.' && token.matches("[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]" + ALEFBAIT + "\\." + ALEFBAIT + "\\.")) {
 				xmlTokenizer.createTokens(token);
 				returnValue = null;
 			} else {
@@ -1013,7 +1013,7 @@ public class XMLTokenizer1 {
 						|| token.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\." + ALEFBAIT + "+\\.")
 						|| tokenLen == 6 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}" + "\\.")
 						|| tokenLen == 3 && token.matches(ALEFBAIT + "{2}" + "\\.")
-						// áé.â'éé. àøîñèøåðâ
+						// ï¿½ï¿½.ï¿½'ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						|| tokenLen == 8
 								&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "\\'" + ALEFBAIT + "{2}\\.")
 						|| tokenLen == 5 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}")
@@ -1028,7 +1028,7 @@ public class XMLTokenizer1 {
 					while (i > 0) {
 						i--;
 						endTokenChar = token.charAt(i);
-						if (!(endTokenChar >= 'à' && endTokenChar <= 'ú') && endTokenChar != '.') {
+						if (!(endTokenChar >= 'ï¿½' && endTokenChar <= 'ï¿½') && endTokenChar != '.') {
 							subToken = token.substring(0, i);
 							if (subToken.matches(ALEFBAIT + "\\." + ALEFBAIT + "\\.")
 									|| subToken.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\." + ALEFBAIT + "+\\.")) {
@@ -1052,7 +1052,7 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * identify ú.æ àé.ãé.áé
+	 * identify ï¿½.ï¿½ ï¿½ï¿½.ï¿½ï¿½.ï¿½ï¿½
 	 *
 	 * @param token
 	 * @return
@@ -1074,7 +1074,7 @@ public class XMLTokenizer1 {
 				while (i > 0) {
 					i--;
 					endTokenChar = token.charAt(i);
-					if (!(endTokenChar >= 'à' && endTokenChar <= 'ú')) {
+					if (!(endTokenChar >= 'ï¿½' && endTokenChar <= 'ï¿½')) {
 						subToken = token.substring(0, i);
 						if (subToken.matches(ALEFBAIT + "\\." + ALEFBAIT)
 								|| subToken.matches(ALEFBAIT + "+\\." + ALEFBAIT + "+\\." + ALEFBAIT + "+")) {
@@ -1127,7 +1127,7 @@ public class XMLTokenizer1 {
 		}
 		if (indexKitzur == 0) { // is it at the begining of the token ?
 			if (token.endsWith("'") // if ends with ' or in range of letters
-					|| token.charAt(tokenLen - 1) >= 'à' && token.charAt(tokenLen - 1) <= 'ú') {
+					|| token.charAt(tokenLen - 1) >= 'ï¿½' && token.charAt(tokenLen - 1) <= 'ï¿½') {
 				xmlTokenizer.createTokens(token);
 				returnValue = true;
 			} else {
@@ -1136,7 +1136,7 @@ public class XMLTokenizer1 {
 
 				while (i > 0) {
 					currentChar = token.charAt(i);
-					if (!(currentChar >= 'à' && currentChar <= 'ú') && currentChar != '\''
+					if (!(currentChar >= 'ï¿½' && currentChar <= 'ï¿½') && currentChar != '\''
 							&& token.charAt(i - 1) == '\'') {
 						xmlTokenizer.createTokens(token.substring(0, i));
 						break;
@@ -1234,15 +1234,15 @@ public class XMLTokenizer1 {
 
 		while (!found && i < tokenLen) {
 			currentChar = token.charAt(i);
-			if (currentChar >= 'à' && currentChar <= 'ú') {
+			if (currentChar >= 'ï¿½' && currentChar <= 'ï¿½') {
 				i++;
 			} else if ((currentChar == '"' || currentChar == '\\' || currentChar == '-' || currentChar == '\'')
-					&& i + 1 < tokenLen && token.charAt(i + 1) >= 'à' && token.charAt(i + 1) <= 'ú') {
+					&& i + 1 < tokenLen && token.charAt(i + 1) >= 'ï¿½' && token.charAt(i + 1) <= 'ï¿½') {
 				i++;
-			} else if (currentChar == 'Ì' || currentChar == 'É' || currentChar == 'È' || currentChar == 'Ä'
-					|| currentChar == 'Æ' || currentChar == 'Å' || currentChar == 'Ç' || currentChar == 'Ì'
-					|| currentChar == 'Ò' || currentChar == 'Ã' || currentChar == 'Â' || currentChar == 'Ñ'
-					|| currentChar == 'À' || currentChar == 'Á' || currentChar == 'Ë') {
+			} else if (currentChar == 'ï¿½' || currentChar == 'ï¿½' || currentChar == 'ï¿½' || currentChar == 'ï¿½'
+					|| currentChar == 'ï¿½' || currentChar == 'ï¿½' || currentChar == 'ï¿½' || currentChar == 'ï¿½'
+					|| currentChar == 'ï¿½' || currentChar == 'ï¿½' || currentChar == 'ï¿½' || currentChar == 'ï¿½'
+					|| currentChar == 'ï¿½' || currentChar == 'ï¿½' || currentChar == 'ï¿½') {
 				token = token.toString().substring(0, i) + token.substring(i + 1);
 				tokenLen = token.length();
 			} else {
@@ -1505,7 +1505,7 @@ public class XMLTokenizer1 {
 			line = line.trim();
 			line = stripNonValidXMLCharacters(line); // remove invalid XML
 			// characters
-			line = line.replace('–', '-'); // replace width dash with small dash
+			line = line.replace('ï¿½', '-'); // replace width dash with small dash
 			// handling the case of empty lines at the middle of the file - they
 			// signify a
 			// begining of a new paragraph
