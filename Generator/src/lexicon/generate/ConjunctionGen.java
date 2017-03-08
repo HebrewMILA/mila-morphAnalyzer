@@ -28,12 +28,13 @@ public class ConjunctionGen extends ItemGen {
 		suffixFunction = "unspecified";
 	}
 
-	public void inflect() throws Exception {
+	@Override
+	public void generateInflects() throws Exception {
 		analyse();
 		inflectedItem = transliterated;
 		surface = undot;
 		populateDatabase();
+		
 	}
-
 
 }

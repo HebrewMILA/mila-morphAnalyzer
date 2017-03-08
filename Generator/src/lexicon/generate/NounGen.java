@@ -224,7 +224,7 @@ public class NounGen extends ItemGen
 				inflectedItem = "w" + nounExceptionType.getTransliterated();
 				//inflectedItem = inflectedItem.replaceAll("&#39;", "'");
 				inflectedItem = inflectedItem.replaceAll("&#60;", "`");
-				surface = "ו" + nounExceptionType.getUndotted();
+				surface = "׳•" + nounExceptionType.getUndotted();
 				spelling = IRREGULAR_SPELLING;
 				addExceptionListHandling(nounExceptionType);
 			}
@@ -279,7 +279,7 @@ public class NounGen extends ItemGen
 		// generate
 		// the possessive forms
 
-		//צורת הבסיס לקניין היא צורת הנסמך
+		//׳¦׳•׳¨׳× ׳”׳‘׳¡׳™׳¡ ׳�׳§׳ ׳™׳™׳� ׳”׳™׳� ׳¦׳•׳¨׳× ׳”׳ ׳¡׳�׳�
 		if (inflectExceptionConstructS && inflectExceptionPossessiveS && lexiconNumber.equals("singular")) 
 		{
 			setAttributes(lexiconGender, lexiconNumber, "false", "tf",inflectedItem, "unspecified", "possessive");
@@ -305,7 +305,7 @@ public class NounGen extends ItemGen
 			//returnVal = generatePlural(plural);
 			generatePlural(plural);
 			exceptionPluralBase = inflectedItem;
-			//לא ייצר מידע ליוצא דופן רבים למשל יכטה
+			//׳�׳� ׳™׳™׳¦׳¨ ׳�׳™׳“׳¢ ׳�׳™׳•׳¦׳� ׳“׳•׳₪׳� ׳¨׳‘׳™׳� ׳�׳�׳©׳� ׳™׳›׳˜׳”
 			addH();
 		}
 		/////////////////////////////////////////////////////////////
@@ -347,14 +347,14 @@ public class NounGen extends ItemGen
 				generatePossessive();
 			}
 		}
-		//     עיולים לבדיקה כשמשנים - יכטה, נוסחה
-		// צוות , שדרוג
+		//     ׳¢׳™׳•׳�׳™׳� ׳�׳‘׳“׳™׳§׳” ׳›׳©׳�׳©׳ ׳™׳� - ׳™׳›׳˜׳”, ׳ ׳•׳¡׳—׳”
+		// ׳¦׳•׳•׳× , ׳©׳“׳¨׳•׳’
 		////////////////////////////////////////////////////////////
 		//pluralBase inflections: construct, plural
 		///////////////////////////////////////////////////////////
 		if (!exceptionPluralBase.equals("")) 
 		{
-			//אם הצורה שהוכנסה ביוצאי הדופן אינה רבים ואנחנו ייצרנו אותה
+			//׳�׳� ׳”׳¦׳•׳¨׳” ׳©׳”׳•׳›׳ ׳¡׳” ׳‘׳™׳•׳¦׳�׳™ ׳”׳“׳•׳₪׳� ׳�׳™׳ ׳” ׳¨׳‘׳™׳� ׳•׳�׳ ׳—׳ ׳• ׳™׳™׳¦׳¨׳ ׳• ׳�׳•׳×׳”
 			if (plural.equals("unspecifed")) 
 			{
 				setAttributes(lexiconGender, "plural", "false", "tt",exceptionPluralBase, "unspecified", "unspecified");
@@ -510,16 +510,16 @@ public class NounGen extends ItemGen
 			//System.out.println(gender);
 			if (inflectConstructP && (number.equals("plural") || number.equals("dual") || number.equals("dual and plural"))) 
 			{
-				// טיפול בגדי,חי,חיים,שה
-				//					//טיפול ביד
+				// ׳˜׳™׳₪׳•׳� ׳‘׳’׳“׳™,׳—׳™,׳—׳™׳™׳�,׳©׳”
+				//					//׳˜׳™׳₪׳•׳� ׳‘׳™׳“
 				//					
 				//System.out.println("(F) generateConstruct() trying to find a rule");
 				findRule(inflectedItem, "", "constructMasculinePlural" + basePos, 2);
-				//						handle גדי
+				//						handle ׳’׳“׳™
 				if (gender.equals("masculine")
 						&& baseTransliteratedItem.endsWith("i")
 						&& !baseTransliteratedItem.endsWith("ai")
-						//handle שה
+						//handle ׳©׳”
 						|| (baseTransliteratedItem.endsWith("h") && baseTransliteratedItem.length() == 2))
 					inflectedItem = inflectedItem + "i";
 				if (inflectedItem.equals(transliterated))
@@ -534,8 +534,8 @@ public class NounGen extends ItemGen
 			else if (inflectConstructS && (gender.equals("feminine") || gender.equals("masculine and feminine"))) 
 			{
 				findRule(inflectedItem, "", "constructFeminineSingular" + basePos, 2);
-				//				//deny problems of translation for אמ"נ and אמ"ן פילטרופ
-				// סירופ
+				//				//deny problems of translation for ׳�׳�"׳  and ׳�׳�"׳� ׳₪׳™׳�׳˜׳¨׳•׳₪
+				// ׳¡׳™׳¨׳•׳₪
 				if (inflectedItem.endsWith("n") || inflectedItem.endsWith("p")
 						|| inflectedItem.endsWith("c")
 						&& inflectedItem.equals(transliterated))
@@ -543,7 +543,7 @@ public class NounGen extends ItemGen
 				else
 					{surface = Translate.Eng2Heb(inflectedItem);}
 				
-				// טיפול בקריה יש צורך ליצור קריית
+				// ׳˜׳™׳₪׳•׳� ׳‘׳§׳¨׳™׳” ׳™׳© ׳¦׳•׳¨׳� ׳�׳™׳¦׳•׳¨ ׳§׳¨׳™׳™׳×
 				if (inflectedItem.endsWith("ih"))
 				{
 					//System.out.println("(F) generateConstruct() : GOING TO CREATE DOUBLE i");
@@ -555,8 +555,8 @@ public class NounGen extends ItemGen
 			} 
 			else if (inflectConstructS && gender.equals("masculine") && number.equals("singular")) 
 			{
-				//				//deny problems of translation for אמ"נ and אמ"ן פילטרופ
-				// סירופ
+				//				//deny problems of translation for ׳�׳�"׳  and ׳�׳�"׳� ׳₪׳™׳�׳˜׳¨׳•׳₪
+				// ׳¡׳™׳¨׳•׳₪
 				if ((inflectedItem.endsWith("n") || inflectedItem.endsWith("p") || inflectedItem.endsWith("c"))
 						&& inflectedItem.equals(transliterated))
 					{surface = undot;}
@@ -567,7 +567,7 @@ public class NounGen extends ItemGen
 				populateDatabase();
 			}
 			else if (gender.equals("feminine"))
-			{	// טיפול בקריה יש צורך ליצור קריית
+			{	// ׳˜׳™׳₪׳•׳� ׳‘׳§׳¨׳™׳” ׳™׳© ׳¦׳•׳¨׳� ׳�׳™׳¦׳•׳¨ ׳§׳¨׳™׳™׳×
 				if (inflectedItem.endsWith("ih"))
 				{
 					//System.out.println("(F) generateConstruct() : GOING TO CREATE DOUBLE i");
@@ -692,8 +692,8 @@ public class NounGen extends ItemGen
 			if (!action.equals("")) 
 			{
 				//System.out.println("plural base = " + inflectedItem);
-				//comment because of משתה - משתאות
-				//צריך לוודא שכפיתה לא מתקלקל - מתנהגים שונה כי המין שונה
+				//comment because of ׳�׳©׳×׳” - ׳�׳©׳×׳�׳•׳×
+				//׳¦׳¨׳™׳� ׳�׳•׳•׳“׳� ׳©׳›׳₪׳™׳×׳” ׳�׳� ׳�׳×׳§׳�׳§׳� - ׳�׳×׳ ׳”׳’׳™׳� ׳©׳•׳ ׳” ׳›׳™ ׳”׳�׳™׳� ׳©׳•׳ ׳”
 				if (inflectedItem.endsWith("th") && (gender.equals("feminine")))
 					findRule(inflectedItem, "th", action, pluralSuffixMaxLength);
 				else
@@ -738,7 +738,7 @@ public class NounGen extends ItemGen
 		}
 	}
 	//--------------------------------------------------------------------
-	public void inflect() throws Exception 
+	public void generateInflects() throws Exception 
 	{
 		//Get lexicon Item (for which pos = noun ) attributes
 		//The lexicon item can have any attributes for example
@@ -822,7 +822,7 @@ public class NounGen extends ItemGen
 			transliterated = "w" + transliterated;
 			surface = Translate.Eng2Heb(transliterated);
 			inflectedItem = transliterated;
-			//ווילון - הכפלת וו ללו ת
+			//׳•׳•׳™׳�׳•׳� - ׳”׳›׳₪׳�׳× ׳•׳• ׳�׳�׳• ׳×
 			spelling = IRREGULAR_SPELLING;
 			pluralBase = "";
 			doebleVavHandling = true;
@@ -852,7 +852,7 @@ public class NounGen extends ItemGen
 			spelling = STANDARD_SPELLING;
 		//////////////////////////////////////////////////////////////////
 		inflectedItem = "h" + inflectedItem;
-		surface = "ה" + surface;
+		surface = "׳”" + surface;
 
 		populateDatabase();
 
@@ -863,8 +863,8 @@ public class NounGen extends ItemGen
 	private void inflectLexiconItem() throws Exception 
 	{
 		//Populate database with the original lexicon Item
-		//מנגנון שמאפשר לאכלס בצורת הנסמך ללא צורת הבסיס עבור צורות שיופיעו רק
-		// בנמך למשל שאט
+		//׳�׳ ׳’׳ ׳•׳� ׳©׳�׳�׳₪׳©׳¨ ׳�׳�׳›׳�׳¡ ׳‘׳¦׳•׳¨׳× ׳”׳ ׳¡׳�׳� ׳�׳�׳� ׳¦׳•׳¨׳× ׳”׳‘׳¡׳™׳¡ ׳¢׳‘׳•׳¨ ׳¦׳•׳¨׳•׳× ׳©׳™׳•׳₪׳™׳¢׳• ׳¨׳§
+		// ׳‘׳ ׳�׳� ׳�׳�׳©׳� ׳©׳�׳˜
 		if (!replaceRemoveException("unspecified", lexiconGender,lexiconNumber, "false", removeExceptionList, "remove")) 
 		{
 			populateDatabase();

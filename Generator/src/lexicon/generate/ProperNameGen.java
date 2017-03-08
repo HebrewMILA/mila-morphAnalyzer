@@ -28,7 +28,7 @@ public class ProperNameGen extends ItemGen
 	{
 		analyseItem();
 
-		//fix a bug in the lexicon for propername with period like אי.סי.אי
+		//fix a bug in the lexicon for propername with period like ׳�׳™.׳¡׳™.׳�׳™
 		//remove after fixing lexicon code
 		//transliterated = Translate.Heb2Eng(undot);
 		//transliterated = transliterated.replaceAll("&#39;", "'");
@@ -74,7 +74,7 @@ public class ProperNameGen extends ItemGen
 			{
 				inflectedItem = "w"+ properNameExceptionType.getTransliterated();
 				//inflectedItem = inflectedItem.replaceAll("&#39;", "'");
-				surface = "ו" + properNameExceptionType.getUndotted();
+				surface = "׳•" + properNameExceptionType.getUndotted();
 				addExceptionListHandling(properNameExceptionType);
 			}
 			else
@@ -128,7 +128,7 @@ public class ProperNameGen extends ItemGen
     			System.out.println("surface =" + surface);
     			System.out.println();
     			populateDatabase();
-    			//שמות פרטיים שאסור שיהיו מיודעים  כמו קולורדו
+    			//׳©׳�׳•׳× ׳₪׳¨׳˜׳™׳™׳� ׳©׳�׳¡׳•׳¨ ׳©׳™׳”׳™׳• ׳�׳™׳•׳“׳¢׳™׳�  ׳›׳�׳• ׳§׳•׳�׳•׳¨׳“׳•
     		} 
     		else 
     		{
@@ -148,11 +148,11 @@ public class ProperNameGen extends ItemGen
 		}
 	}
 
-	public void inflect() throws Exception 
+	public void generateInflects() throws Exception 
 	{
 		analyse();
 		handleDefiniteness(inflectedItem);
-		//טיפול בשמות שמתחילים ב-ו כמו וינה שיזהה גם בווינה
+		//׳˜׳™׳₪׳•׳� ׳‘׳©׳�׳•׳× ׳©׳�׳×׳—׳™׳�׳™׳� ׳‘-׳• ׳›׳�׳• ׳•׳™׳ ׳” ׳©׳™׳–׳”׳” ׳’׳� ׳‘׳•׳•׳™׳ ׳”
 		if (transliterated.startsWith("w") && !transliterated.startsWith("ww")) 
 		{
 			inflectedItem = "w" + transliterated;

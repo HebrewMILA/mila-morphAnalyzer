@@ -26,7 +26,7 @@ public class NegationGen extends ItemGen {
 		analyseItem();
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		analyse();
 		definitnessVal = "tf";
 		inflectedItem = transliterated;

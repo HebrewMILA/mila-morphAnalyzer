@@ -187,7 +187,7 @@ public class MultiWordNounGen extends ItemGen {
 		
 			if (type.equals("NNA") &&  gender.equals("masculine")) {
 				restTransliterated += "im";
-				restSurface += "ים";
+				restSurface += "׳™׳�";
 			}
 			
 			if (!plural.equals("unspecified") && lexiconNumber.equals("singular")) {
@@ -245,7 +245,7 @@ public class MultiWordNounGen extends ItemGen {
 				inflectedItem = "w" + nounExceptionType.getTransliterated();
 				inflectedItem = inflectedItem.replaceAll("&#39;", "'");
 				inflectedItem = inflectedItem.replaceAll("&#60;", "`");
-				surface = "ו" + nounExceptionType.getUndotted();
+				surface = "׳•" + nounExceptionType.getUndotted();
 				spelling = IRREGULAR_SPELLING;
 				addExceptionListHandling(MultiWordNounExceptionType);
 			}
@@ -351,8 +351,8 @@ public class MultiWordNounGen extends ItemGen {
 			action = action.replace("multiWord","");
 			if (!action.equals("")) {
 				//System.out.println("plural base = " + inflectedItem);
-				//comment because of משתה - משתאות
-				//צריך לוודא שכפיתה לא מתקלקל - מתנהגים שונה כי המין שונה
+				//comment because of ׳�׳©׳×׳” - ׳�׳©׳×׳�׳•׳×
+				//׳¦׳¨׳™׳� ׳�׳•׳•׳“׳� ׳©׳›׳₪׳™׳×׳” ׳�׳� ׳�׳×׳§׳�׳§׳� - ׳�׳×׳ ׳”׳’׳™׳� ׳©׳•׳ ׳” ׳›׳™ ׳”׳�׳™׳� ׳©׳•׳ ׳”
 				if (inflectedItem.endsWith("th") && (gender.equals("feminine")))
 					findRule(inflectedItem, "th", action, pluralSuffixMaxLength);
 				else
@@ -467,11 +467,11 @@ public class MultiWordNounGen extends ItemGen {
 					findRule(inflectedItem, "", "constructMasculinePlural"
 							+ mwPos, 2);
 					
-					//handle גדי
+					//handle ׳’׳“׳™
 					if (gender.equals("masculine")
 							&& baseTransliteratedItem1.endsWith("i")
 							&& !baseTransliteratedItem1.endsWith("ai")
-							//handle שה
+							//handle ׳©׳”
 							|| (baseTransliteratedItem1.endsWith("h") && baseTransliteratedItem1
 									.length() == 2))
 						inflectedItem = inflectedItem + "i";
@@ -685,8 +685,8 @@ public class MultiWordNounGen extends ItemGen {
 //---------------------------------------------------------------------------------------------------------
 	protected void generateInternalDefiniteness(String inflectedItem,String restTransliterated, String restSurface) throws Exception 
 	{
-		String mwUndotted = Translate.Eng2Heb(inflectedItem) + " ה"
-				+ restSurface.replaceFirst(" ", " ה");
+		String mwUndotted = Translate.Eng2Heb(inflectedItem) + " ׳”"
+				+ restSurface.replaceFirst(" ", " ׳”");
 		String mwTransliterated = inflectedItem + " h"
 				+ restTransliterated.replaceFirst(" ", " h");
 		popualteMWE.popualteMWETables(baseTransliteratedItem,
@@ -698,7 +698,7 @@ public class MultiWordNounGen extends ItemGen {
 
 	protected void generateExternalDefiniteness(String inflectedItem,String restTransliterated, String restSurface) throws Exception 
 	{
-		String mwUndotted = " ה" + Translate.Eng2Heb(inflectedItem) + " " + restSurface;
+		String mwUndotted = " ׳”" + Translate.Eng2Heb(inflectedItem) + " " + restSurface;
 		String mwTransliterated = "h" + inflectedItem + " " + restTransliterated;				
 		
 		popualteMWE.popualteMWETables(baseTransliteratedItem,
@@ -795,7 +795,7 @@ public class MultiWordNounGen extends ItemGen {
 		this.transliterated = this.baseTransliteratedItem = transliterated;
 	}	
 	
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 
 		try{
 			analyse();
@@ -866,7 +866,7 @@ public class MultiWordNounGen extends ItemGen {
 			
 			if (type.equals("NNA") &&  gender.equals("masculine")) {
 				restTransliterated += "im";
-				restSurface += "ים";
+				restSurface += "׳™׳�";
 			}
 			
 			if (!plural.equals("unspecified") && lexiconNumber.equals("singular")) {

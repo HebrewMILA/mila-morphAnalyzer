@@ -72,7 +72,7 @@ public class MultiWordFrozenGen extends ItemGen {
 	// inflectedItem = transliterated;
     }
 
-    public void inflect() throws Exception {
+    public void generateInflects() throws Exception {
 	System.out.println("MultiWordFrozenGen:inflect()");
 	analyse();
 	PopulateMWE popualteMWE = new PopulateMWE();

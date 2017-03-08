@@ -108,7 +108,7 @@ public class ModalGen extends ItemGen {
 		definitnessVal = "unspecified";
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		analyse();
 		replaceException();
 		inflectedItem = transliterated;

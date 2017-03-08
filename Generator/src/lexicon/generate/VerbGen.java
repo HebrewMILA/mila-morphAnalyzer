@@ -126,9 +126,9 @@ public class VerbGen extends ItemGen
 	private void inflectPattern2() throws Exception 
 	{
 		setGenInflection();
-		//		׳¢ ׳”׳₪׳•׳¢׳� ׳’׳¨׳•׳ ׳™׳× ׳©׳•׳¨׳”- 13
-		// ׳� ׳’׳¨׳•׳ ׳™׳× ׳©׳•׳¨׳•׳× 14 15
-		// ׳₪ ׳’׳¨׳•׳ ׳™׳× ׳©׳•׳¨׳” 16
+		//		׳³ֲ¢ ׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ ׳³ג€™׳³ֲ¨׳³ג€¢׳³ֲ ׳³ג„¢׳³ֳ— ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ג€�- 13
+		// ׳³ן¿½ ׳³ג€™׳³ֲ¨׳³ג€¢׳³ֲ ׳³ג„¢׳³ֳ— ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ג€¢׳³ֳ— 14 15
+		// ׳³ג‚× ׳³ג€™׳³ֲ¨׳³ג€¢׳³ֲ ׳³ג„¢׳³ֳ— ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ג€� 16
 		if (root.charAt(1) == 'w') 
 		{
 			vgIP.generateBareInfinitive("", "w", 0, 2, 2, 3, "");
@@ -178,7 +178,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateImperative("", "-,i,w,nh", "-,-,-,-", 0, 2, 2, 3);
 		}
 		//if ends with a - two alternatives
-		//׳¢׳‘׳•׳¨ ׳�׳�׳” ׳©׳�׳¡׳×׳™׳™׳�׳™׳� ׳‘׳� - ׳�׳™׳™׳¦׳¨׳™׳� ׳�׳× ׳”׳¦׳•׳¨׳” ׳¢׳� ׳¡׳™׳•׳�׳× ׳™' ׳¢"׳™ humth supi
+		//׳³ֲ¢׳³ג€˜׳³ג€¢׳³ֲ¨ ׳³ן¿½׳³ן¿½׳³ג€� ׳³ֲ©׳³ן¿½׳³ֲ¡׳³ֳ—׳³ג„¢׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ג€˜׳³ן¿½ - ׳³ן¿½׳³ג„¢׳³ג„¢׳³ֲ¦׳³ֲ¨׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ֳ— ׳³ג€�׳³ֲ¦׳³ג€¢׳³ֲ¨׳³ג€� ׳³ֲ¢׳³ן¿½ ׳³ֲ¡׳³ג„¢׳³ג€¢׳³ן¿½׳³ֳ— ׳³ג„¢' ׳³ֲ¢"׳³ג„¢ humth supi
 		// ckexheui
 		if (root.charAt(2) != 'a') 
 		{
@@ -493,7 +493,7 @@ public class VerbGen extends ItemGen
 		int index;
 		setGenInflection();
 		int len = root.length();
-		//   ׳™׳© ׳�׳”׳›׳₪׳™׳� ׳�׳× ׳”׳™' ׳›׳�׳©׳¨ ׳”׳™׳� ׳�׳•׳₪׳™׳¢׳” ׳‘׳₪' ׳”׳₪׳•׳¢׳� ׳�׳�׳©׳�: ׳™׳™׳©׳‘
+		//   ׳³ג„¢׳³ֲ© ׳³ן¿½׳³ג€�׳³ג€÷׳³ג‚×׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ֳ— ׳³ג€�׳³ג„¢' ׳³ג€÷׳³ן¿½׳³ֲ©׳³ֲ¨ ׳³ג€�׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ג€¢׳³ג‚×׳³ג„¢׳³ֲ¢׳³ג€� ׳³ג€˜׳³ג‚×' ׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ ׳³ן¿½׳³ן¿½׳³ֲ©׳³ן¿½: ׳³ג„¢׳³ג„¢׳³ֲ©׳³ג€˜
 		if (root.charAt(0) == 'i') 
 		{
 			vgIP.generateBareInfinitive("i", "", 0, len, len, len, "");
@@ -606,7 +606,7 @@ public class VerbGen extends ItemGen
 			else
 				vgIP.generateImperative("", "-,i,w,nh", "", 0, index + 1,index + 1, len);
 
-			//׳�׳™׳�׳™׳� ׳©׳�׳×׳—׳™׳�׳•׳× ׳‘-׳• ׳›׳�׳• ׳•׳™׳“׳�
+			//׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ֲ©׳³ן¿½׳³ֳ—׳³ג€”׳³ג„¢׳³ן¿½׳³ג€¢׳³ֳ— ׳³ג€˜-׳³ג€¢ ׳³ג€÷׳³ן¿½׳³ג€¢ ׳³ג€¢׳³ג„¢׳³ג€�׳³ן¿½
 		} 
 		else if (root.charAt(0) == 'w') 
 		{
@@ -655,7 +655,7 @@ public class VerbGen extends ItemGen
 
 			vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t", "-,-,i,-,-,-,w,nh,w,nh","", 0, len, len, len);
 			vgIP.generateImperative("", "-,i,w,nh", "", 0, len, len, len);
-			//׳•׳•׳™׳×׳¨-׳•׳™׳×׳¨ ׳•׳•׳™׳“׳�-׳•׳™׳“׳�
+			//׳³ג€¢׳³ג€¢׳³ג„¢׳³ֳ—׳³ֲ¨-׳³ג€¢׳³ג„¢׳³ֳ—׳³ֲ¨ ׳³ג€¢׳³ג€¢׳³ג„¢׳³ג€�׳³ן¿½-׳³ג€¢׳³ג„¢׳³ג€�׳³ן¿½
 		}
 	}
 
@@ -762,7 +762,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//׳”׳₪׳•׳¢׳� ׳�׳™׳�׳�
+	//׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ן¿½
 	private void inflectPattern28() throws Exception 
 	{
 		setGenInflection();
@@ -800,7 +800,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//׳©׳¨׳×
+	//׳³ֲ©׳³ֲ¨׳³ֳ—
 	private void inflectPattern30() throws Exception 
 	{
 		setGenInflection();
@@ -815,11 +815,11 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("", "-,i,w,nh", "", 0, 3, 3, 3);
 	}
 
-	//	 ׳�׳§׳•׳�׳� - ׳§׳•׳�
+	//	 ׳³ן¿½׳³ֲ§׳³ג€¢׳³ן¿½׳³ן¿½ - ׳³ֲ§׳³ג€¢׳³ן¿½
 	private void inflectPattern31() throws Exception 
 	{
 			setGenInflection();
-			//׳›׳₪׳•׳�׳™׳�
+			//׳³ג€÷׳³ג‚×׳³ג€¢׳³ן¿½׳³ג„¢׳³ן¿½
 			if (root.charAt(1) == root.charAt(2)) 
 			{
 				vgIP.generateBareInfinitive("", "w", 0, 1, 2, 3, String.valueOf(root.charAt(2)));
@@ -858,7 +858,7 @@ public class VerbGen extends ItemGen
 						+ suffix1 + "tm," + suffix1 + "tn," + suffix1 + "w";
 				vgIP.generatePast("", suffix2, "w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
 			}
-			//׳›׳₪׳•׳�׳™׳�
+			//׳³ג€÷׳³ג‚×׳³ג€¢׳³ן¿½׳³ג„¢׳³ן¿½
 			if (root.charAt(1) == root.charAt(2)) 
 			{
 				if (root.charAt(2) == 'n') 
@@ -873,7 +873,7 @@ public class VerbGen extends ItemGen
 					vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,nh,w,nh", "w,w,w,w,w,w,w,w,w,w", 0, 1,1, 3);
 					vgIP.generateImperative("", "-,i,w,nh", "w,w,w,w", 0, 1, 1, 3);
 				}
-				//׳�׳� ׳›׳₪׳•׳�׳™׳�
+				//׳³ן¿½׳³ן¿½ ׳³ג€÷׳³ג‚×׳³ג€¢׳³ן¿½׳³ג„¢׳³ן¿½
 			} 
 			else 
 			{
@@ -891,7 +891,7 @@ public class VerbGen extends ItemGen
 				} 
 				else 
 				{
-					// ׳¢׳‘׳•׳¨ ׳”׳�׳§׳¨׳” ׳©׳� ׳©׳•׳¨׳¨ - ׳©׳”׳©׳•׳¨׳© ׳©׳�׳• ׳”׳•׳� ׳©׳™׳¨
+					// ׳³ֲ¢׳³ג€˜׳³ג€¢׳³ֲ¨ ׳³ג€�׳³ן¿½׳³ֲ§׳³ֲ¨׳³ג€� ׳³ֲ©׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ¨ - ׳³ֲ©׳³ג€�׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ֲ©׳³ן¿½׳³ג€¢ ׳³ג€�׳³ג€¢׳³ן¿½ ׳³ֲ©׳³ג„¢׳³ֲ¨
 					if (root.charAt(1) == 'i') 
 					{
 						root = root.charAt(0) + "w" + root.substring(2);
@@ -910,7 +910,7 @@ public class VerbGen extends ItemGen
 		
 	}
 
-	//	 ׳�׳§׳™׳� - ׳§׳•׳�
+	//	 ׳³ן¿½׳³ֲ§׳³ג„¢׳³ן¿½ - ׳³ֲ§׳³ג€¢׳³ן¿½
 	private void inflectPattern32() throws Exception 
 	{
 		setGenInflection();
@@ -926,7 +926,7 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("", "-,i,w,nh", "ii,ii,ii,ii", 0, 1, 2, 3);
 	}
 
-	//	׳�׳›׳•׳•׳� - ׳›׳•׳�
+	//	׳³ן¿½׳³ג€÷׳³ג€¢׳³ג€¢׳³ן¿½ - ׳³ג€÷׳³ג€¢׳³ן¿½
 	private void inflectPattern33() throws Exception 
 	{
 		setGenInflection();
@@ -950,7 +950,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//׳�׳¦׳—׳¦׳—-׳¦׳—׳—
+	//׳³ן¿½׳³ֲ¦׳³ג€”׳³ֲ¦׳³ג€”-׳³ֲ¦׳³ג€”׳³ג€”
 	private void inflectPattern34() throws Exception 
 	{
 		setGenInflection();
@@ -962,7 +962,7 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("", "-,i,w,nh", "", 0, 2, 0, 2);
 	}
 
-	//׳�׳¢׳ ׳™׳�-׳¢׳ ׳™׳�
+	//׳³ן¿½׳³ֲ¢׳³ֲ ׳³ג„¢׳³ן¿½-׳³ֲ¢׳³ֲ ׳³ג„¢׳³ן¿½
 	private void inflectPattern35() throws Exception 
 	{
 		setGenInflection();
@@ -1006,8 +1006,8 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//׳�׳›׳‘׳“-׳›׳‘׳“
-	//׳©׳•׳—׳¨׳¨-׳©׳—׳¨׳¨
+	//׳³ן¿½׳³ג€÷׳³ג€˜׳³ג€�-׳³ג€÷׳³ג€˜׳³ג€�
+	//׳³ֲ©׳³ג€¢׳³ג€”׳³ֲ¨׳³ֲ¨-׳³ֲ©׳³ג€”׳³ֲ¨׳³ֲ¨
 	private void inflectPattern36() throws Exception 
 	{
 		setGenInflection();
@@ -1102,7 +1102,7 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//׳§׳•׳™׳™׳�׳×׳™-׳§׳•׳�
+	//׳³ֲ§׳³ג€¢׳³ג„¢׳³ג„¢׳³ן¿½׳³ֳ—׳³ג„¢-׳³ֲ§׳³ג€¢׳³ן¿½
 	//id = 8364
 	private void inflectPattern38() throws Exception 
 	{
@@ -1117,7 +1117,7 @@ public class VerbGen extends ItemGen
 		vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t", "-,-,i,-,-,-,w,nh,w,nh","wi,wi,wi,wi,wi,wi,wi,wi,wi,wi", 0, 1, 2, 3);
 	}
 
-	//׳’׳•׳�׳’׳�׳×׳™-׳’׳�׳�
+	//׳³ג€™׳³ג€¢׳³ן¿½׳³ג€™׳³ן¿½׳³ֳ—׳³ג„¢-׳³ג€™׳³ן¿½׳³ן¿½
 	//id = 9270
 	private void inflectPattern39() throws Exception 
 	{
@@ -1156,9 +1156,9 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//׳¢׳•׳ ׳™׳™׳ ׳×׳™-׳¢׳ ׳”
+	//׳³ֲ¢׳³ג€¢׳³ֲ ׳³ג„¢׳³ג„¢׳³ֲ ׳³ֳ—׳³ג„¢-׳³ֲ¢׳³ֲ ׳³ג€�
 	//id = 18339
-	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳�׳•׳₪׳™׳¢׳™׳� ׳›׳©׳•׳¨׳©׳™׳� ׳�׳¨׳•׳‘׳¢׳™׳� - ׳™׳¦׳� ׳�׳›׳×׳‘ ׳�׳©׳™׳¨׳” ׳�׳ ׳•׳•׳�
+	//׳³ג€˜׳³ֲ¨׳³ג€˜ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ג€¢׳³ג‚×׳³ג„¢׳³ֲ¢׳³ג„¢׳³ן¿½ ׳³ג€÷׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ©׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ֲ¨׳³ג€¢׳³ג€˜׳³ֲ¢׳³ג„¢׳³ן¿½ - ׳³ג„¢׳³ֲ¦׳³ן¿½ ׳³ן¿½׳³ג€÷׳³ֳ—׳³ג€˜ ׳³ן¿½׳³ֲ©׳³ג„¢׳³ֲ¨׳³ג€� ׳³ן¿½׳³ֲ ׳³ג€¢׳³ג€¢׳³ן¿½
 	//	private void inflectPattern41() {
 	//		String newRoot = root.substring(0,2) + "i" ;
 	//		VerbGenIP vgIP = new VerbGenIP(newRoot);
@@ -1184,7 +1184,7 @@ public class VerbGen extends ItemGen
 	///Hitpa'el
 	/////////////////////////////////////////////////////////////////////////
 
-	//׳”׳×׳§׳©׳¨-׳§׳©׳¨
+	//׳³ג€�׳³ֳ—׳³ֲ§׳³ֲ©׳³ֲ¨-׳³ֲ§׳³ֲ©׳³ֲ¨
 	//id = 11204
 	private void inflectPattern42() throws Exception 
 	{
@@ -1195,7 +1195,7 @@ public class VerbGen extends ItemGen
 		if (len<3){
 			int i=0;
 		}
-		//׳”׳₪׳•׳¢׳� ׳”׳×׳¨׳•׳§׳� ׳”׳•׳� ׳™׳¦׳� ׳“׳•׳₪׳� - ׳¦׳¨׳™׳� ׳�׳”׳˜׳•׳× ׳�׳•׳×׳• ׳›׳�׳§׳¨׳” ׳₪׳¨׳˜׳™
+		//׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ ׳³ג€�׳³ֳ—׳³ֲ¨׳³ג€¢׳³ֲ§׳³ן¿½ ׳³ג€�׳³ג€¢׳³ן¿½ ׳³ג„¢׳³ֲ¦׳³ן¿½ ׳³ג€�׳³ג€¢׳³ג‚×׳³ן¿½ - ׳³ֲ¦׳³ֲ¨׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ג€�׳³ֻ�׳³ג€¢׳³ֳ— ׳³ן¿½׳³ג€¢׳³ֳ—׳³ג€¢ ׳³ג€÷׳³ן¿½׳³ֲ§׳³ֲ¨׳³ג€� ׳³ג‚×׳³ֲ¨׳³ֻ�׳³ג„¢
 		if (root.equals("rqn")) 
 		{
 			vgIP.generateBareInfinitive("ht", "w", 0, 1, 1, len, "");
@@ -1205,8 +1205,8 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("at,tt,tt,it,tt,nt,tt,tt,it,tt","-,-,i,-,-,-,w,h,w,h", "w,w,w,w,w,w,w,w,w,w", 0, 0, 1, len);
 			vgIP.generateImperative("ht", "-,i,w,h", "w,w,w,w", 0, 1, 1, len);
 		}
-		//׳©׳•׳¨׳•׳× 33-39
-		//׳– ׳©׳•׳¨׳§׳× - ׳–
+		//׳³ֲ©׳³ג€¢׳³ֲ¨׳³ג€¢׳³ֳ— 33-39
+		//׳³ג€“ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ— - ׳³ג€“
 		else if (root.charAt(0) == 'z' && root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("hzd", "", 0, 0, 1, len, "");
@@ -1217,7 +1217,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateImperative("hzd", "-,i,w,h", "-,-,-,-", 0, 0, 1, len);
 
 			//43
-			//׳– ׳©׳•׳¨׳§׳× - ׳– + ׳�'׳ 
+			//׳³ג€“ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ— - ׳³ג€“ + ׳³ן¿½'׳³ֲ 
 		} 
 		else if (root.charAt(0) == 'z') 
 		{
@@ -1247,8 +1247,8 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("acv,tcv,tcv,icv,tcv,ncv,tcv,tcv,icv,tcv","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 			vgIP.generateImperative("hcv", "-,i,w,nh", "-,-,-,-", 0, 0, 1, len);
 		}
-		//׳¡
-		//38 ׳�'׳  + ׳¡ ׳©׳•׳¨׳§׳×
+		//׳³ֲ¡
+		//38 ׳³ן¿½'׳³ֲ  + ׳³ֲ¡ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ—
 		else if (root.charAt(0) == 's' && root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("hst", "", 0, 0, 1, len, "");
@@ -1267,8 +1267,8 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("ast,tst,tst,ist,tst,nst,tst,tst,ist,tst","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 			vgIP.generateImperative("hst", "-,i,w,nh", "-,-,-,-", 0, 0, 1, len);
 		}
-		//׳©
-		//39 ׳�'׳  + ׳© ׳©׳•׳¨׳§׳×
+		//׳³ֲ©
+		//39 ׳³ן¿½'׳³ֲ  + ׳³ֲ© ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ—
 		else if (root.charAt(0) == 'e' && root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("het", "", 0, 0, 1, len, "");
@@ -1288,7 +1288,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("aet,tet,tet,iet,tet,net,tet,tet,iet,tet","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 			vgIP.generateImperative("het", "-,i,w,nh", "-,-,-,-", 0, 0, 1, len);
 		}
-		//		 ׳˜ ׳× - ׳₪ ׳”׳₪׳•׳¢׳�
+		//		 ׳³ֻ� ׳³ֳ— - ׳³ג‚× ׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½
 		//40
 		else if (root.charAt(0) == 'v' || root.charAt(0) == 't') 
 		{
@@ -1308,7 +1308,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t", "-,-,i,-,-,-,w,nh,w,nh","i,i,i,i,i,i,i,i,i,i", 0, 0, 0, len);
 			vgIP.generateImperative("hi", "-,i,w,nh", "-,-,-,-", 0, 0, 0, len);
 		}
-		//43 26 ׳�'׳ 
+		//43 26 ׳³ן¿½'׳³ֲ 
 		else if (root.charAt(len - 1) == 'n') 
 		{
 			vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1318,7 +1318,7 @@ public class VerbGen extends ItemGen
 			vgIP.generateFuture("at,tt,tt,it,tt,nt,tt,tt,it,tt","-,-,i,-,-,-,w,h,w,h", "", 0, 2, 2, len);
 			vgIP.generateImperative("ht", "-,i,w,h", "-,-,-,-", 0, 2, 2, len);
 		}
-		//		27 ׳�'׳×
+		//		27 ׳³ן¿½'׳³ֳ—
 		else if (root.charAt(len - 1) == 't') 
 		{
 			vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1347,14 +1347,14 @@ public class VerbGen extends ItemGen
 			vgIP.generateImperative("ht", "-,i,w,nh", "-,-,-,-", 0, 2, 2, len);
 		}
 
-		//׳”׳›׳₪׳�׳× ׳™ ׳�׳� ׳”׳©׳•׳¨׳© ׳�׳›׳™׳� ׳™'
+		//׳³ג€�׳³ג€÷׳³ג‚×׳³ן¿½׳³ֳ— ׳³ג„¢ ׳³ן¿½׳³ן¿½ ׳³ג€�׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ן¿½׳³ג€÷׳³ג„¢׳³ן¿½ ׳³ג„¢'
 		if (root.indexOf("i") != -1) 
 		{
 			root = root.replaceAll("i", "ii");
 			setGenInflection();
 			len = root.length();
-			//׳©׳•׳¨׳•׳× 33-39
-			//׳– ׳©׳•׳¨׳§׳× - ׳–
+			//׳³ֲ©׳³ג€¢׳³ֲ¨׳³ג€¢׳³ֳ— 33-39
+			//׳³ג€“ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ— - ׳³ג€“
 			if (root.charAt(0) == 'z' && root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("hzd", "", 0, 0, 1, len, "");
@@ -1365,7 +1365,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateImperative("hzd", "-,i,w,h", "-,-,-,-", 0, 0, 1,len);
 
 				//43
-				//׳– ׳©׳•׳¨׳§׳× - ׳– + ׳�'׳ 
+				//׳³ג€“ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ— - ׳³ג€“ + ׳³ן¿½'׳³ֲ 
 			} 
 			else if (root.charAt(0) == 'z') 
 			{
@@ -1395,8 +1395,8 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("acv,tcv,tcv,icv,tcv,ncv,tcv,tcv,icv,tcv","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 				vgIP.generateImperative("hcv", "-,i,w,nh", "-,-,-,-", 0, 0, 1,len);
 			}
-			//׳¡
-			//38 ׳�'׳  + ׳¡ ׳©׳•׳¨׳§׳×
+			//׳³ֲ¡
+			//38 ׳³ן¿½'׳³ֲ  + ׳³ֲ¡ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ—
 			else if (root.charAt(0) == 's' && root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("hst", "", 0, 0, 1, len, "");
@@ -1415,8 +1415,8 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("ast,tst,tst,ist,tst,nst,tst,tst,ist,tst","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 				vgIP.generateImperative("hst", "-,i,w,nh", "-,-,-,-", 0, 0, 1,len);
 			}
-			//׳©
-			//39 ׳�'׳  + ׳© ׳©׳•׳¨׳§׳×
+			//׳³ֲ©
+			//39 ׳³ן¿½'׳³ֲ  + ׳³ֲ© ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ§׳³ֳ—
 			else if (root.charAt(0) == 'e' && root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("het", "", 0, 0, 1, len, "");
@@ -1436,7 +1436,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("aet,tet,tet,iet,tet,net,tet,tet,iet,tet","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 1, len);
 				vgIP.generateImperative("het", "-,i,w,nh", "-,-,-,-", 0, 0, 1,len);
 			}
-			//		 ׳˜ ׳× - ׳₪ ׳”׳₪׳•׳¢׳�
+			//		 ׳³ֻ� ׳³ֳ— - ׳³ג‚× ׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½
 			//40
 			else if (root.charAt(0) == 'v' || root.charAt(0) == 't') 
 			{
@@ -1447,7 +1447,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("a,t,t,i,t,n,t,t,i,t","-,-,i,-,-,-,w,nh,w,nh", "", 0, 0, 0, len);
 				vgIP.generateImperative("h", "-,i,w,nh", "-,-,-,-", 0, 0, 0,len);
 			}
-			//43 26 ׳�'׳ 
+			//43 26 ׳³ן¿½'׳³ֲ 
 			else if (root.charAt(len - 1) == 'n') 
 			{
 				vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1457,7 +1457,7 @@ public class VerbGen extends ItemGen
 				vgIP.generateFuture("at,tt,tt,it,tt,nt,tt,tt,it,tt","-,-,i,-,-,-,w,h,w,h", "", 0, 2, 2, len);
 				vgIP.generateImperative("ht", "-,i,w,h", "-,-,-,-", 0, 2, 2,len);
 			}
-			//		27 ׳�'׳×
+			//		27 ׳³ן¿½'׳³ֳ—
 			else if (root.charAt(len - 1) == 't') 
 			{
 				vgIP.generateBareInfinitive("ht", "", 0, len, len, len, "");
@@ -1480,9 +1480,9 @@ public class VerbGen extends ItemGen
 		}
 	}
 
-	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳•׳›׳— ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳™׳›׳— - ׳�׳‘׳¨׳¨
-	//׳¢׳₪"׳™ ׳¨׳‘ ׳�׳™׳�׳™׳� ׳›׳×׳™׳‘ ׳�׳�׳� ׳×׳™׳§׳ ׳™ ׳•׳•
-	//׳”׳×׳•׳›׳—-׳™׳›׳—
+	//׳³ג€˜׳³ֲ¨׳³ג€˜ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ג€¢׳³ג€÷׳³ג€” ׳³ג€˜׳³ג€˜׳³ֲ¨׳³ֲ§׳³ן¿½׳³ג„¢ ׳³ג€¢׳³ג€˜׳³ן¿½׳³ֲ§׳³ֲ¡׳³ג„¢׳³ֲ§׳³ג€¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ג„¢׳³ג€÷׳³ג€” - ׳³ן¿½׳³ג€˜׳³ֲ¨׳³ֲ¨
+	//׳³ֲ¢׳³ג‚×"׳³ג„¢ ׳³ֲ¨׳³ג€˜ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ג€÷׳³ֳ—׳³ג„¢׳³ג€˜ ׳³ן¿½׳³ן¿½׳³ן¿½ ׳³ֳ—׳³ג„¢׳³ֲ§׳³ֲ ׳³ג„¢ ׳³ג€¢׳³ג€¢
+	//׳³ג€�׳³ֳ—׳³ג€¢׳³ג€÷׳³ג€”-׳³ג„¢׳³ג€÷׳³ג€”
 	//id = 3725
 	private void inflectPattern43() throws Exception 
 	{
@@ -1507,8 +1507,8 @@ public class VerbGen extends ItemGen
 		vgIP.generateImperative("htww", "-,i,w,nh", "-,-,-,-", 1, 3, 3, 3);
 	}
 
-	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳’׳�׳™ ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳’׳�׳” - ׳�׳‘׳¨׳¨
-	//׳”׳×׳’׳�׳™׳×׳™-׳’׳�׳”
+	//׳³ג€˜׳³ֲ¨׳³ג€˜ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ג€™׳³ן¿½׳³ג„¢ ׳³ג€˜׳³ג€˜׳³ֲ¨׳³ֲ§׳³ן¿½׳³ג„¢ ׳³ג€¢׳³ג€˜׳³ן¿½׳³ֲ§׳³ֲ¡׳³ג„¢׳³ֲ§׳³ג€¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ג€™׳³ן¿½׳³ג€� - ׳³ן¿½׳³ג€˜׳³ֲ¨׳³ֲ¨
+	//׳³ג€�׳³ֳ—׳³ג€™׳³ן¿½׳³ג„¢׳³ֳ—׳³ג„¢-׳³ג€™׳³ן¿½׳³ג€�
 	//id = 9086
 private void inflectPattern44() throws Exception {
 		setGenInflection();
@@ -1665,8 +1665,8 @@ private void inflectPattern44() throws Exception {
 			vgIP.generateImperative("ht", "h,i,w,inh", "-,-,-,-", 0, 2, 3, 3);
 		}
 	}
-	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳’׳�׳™ ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳’׳�׳” - ׳�׳‘׳¨׳¨
-	//׳§׳•׳� - ׳”׳×׳§׳•׳�׳�
+	//׳³ג€˜׳³ֲ¨׳³ג€˜ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ג€™׳³ן¿½׳³ג„¢ ׳³ג€˜׳³ג€˜׳³ֲ¨׳³ֲ§׳³ן¿½׳³ג„¢ ׳³ג€¢׳³ג€˜׳³ן¿½׳³ֲ§׳³ֲ¡׳³ג„¢׳³ֲ§׳³ג€¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ג€™׳³ן¿½׳³ג€� - ׳³ן¿½׳³ג€˜׳³ֲ¨׳³ֲ¨
+	//׳³ֲ§׳³ג€¢׳³ן¿½ - ׳³ג€�׳³ֳ—׳³ֲ§׳³ג€¢׳³ן¿½׳³ן¿½
 	//id = 12323
 	private void inflectPattern45() throws Exception {
 		setGenInflection();
@@ -1774,7 +1774,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳§׳•׳� - ׳”׳×׳§׳™׳™׳�
+	//׳³ֲ§׳³ג€¢׳³ן¿½ - ׳³ג€�׳³ֳ—׳³ֲ§׳³ג„¢׳³ג„¢׳³ן¿½
 	//id = 14695
 	private void inflectPattern46() throws Exception {
 		setGenInflection();
@@ -1823,7 +1823,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳›׳•׳� - ׳”׳×׳›׳•׳•׳�
+	//׳³ג€÷׳³ג€¢׳³ן¿½ - ׳³ג€�׳³ֳ—׳³ג€÷׳³ג€¢׳³ג€¢׳³ן¿½
 	//id = 12910
 	private void inflectPattern47() throws Exception {
 		setGenInflection();
@@ -1854,7 +1854,7 @@ private void inflectPattern44() throws Exception {
 	///Hif'il
 	/////////////////////////////////////////////////////////////////////////
 
-	//׳”׳₪׳§׳™׳“-׳₪׳§׳“
+	//׳³ג€�׳³ג‚×׳³ֲ§׳³ג„¢׳³ג€�-׳³ג‚×׳³ֲ§׳³ג€�
 	//id = 11820
 	private void inflectPattern48() throws Exception {
 		setGenInflection();
@@ -1942,7 +1942,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳”׳•׳¨׳™׳“-׳™׳¨׳“
+	//׳³ג€�׳³ג€¢׳³ֲ¨׳³ג„¢׳³ג€�-׳³ג„¢׳³ֲ¨׳³ג€�
 	//id = 8852
 	private void inflectPattern49() throws Exception {
 		setGenInflection();
@@ -1956,7 +1956,7 @@ private void inflectPattern44() throws Exception {
 		vgIP.generateImperative("hw", "-,i,w,nh", "-,i,i,-", 1, 2, 2, 3);
 	}
 
-	//׳”׳₪׳™׳�-׳ ׳₪׳�
+	//׳³ג€�׳³ג‚×׳³ג„¢׳³ן¿½-׳³ֲ ׳³ג‚×׳³ן¿½
 	//id = 13106
 	private void inflectPattern50() throws Exception {
 		setGenInflection();
@@ -1970,8 +1970,8 @@ private void inflectPattern44() throws Exception {
 		vgIP.generateImperative("h", "-,i,w,nh", "-,i,i,-", 1, 2, 2, 3);
 	}
 
-	//׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳©׳•׳¨׳© ׳§׳ ׳™ ׳‘׳‘׳¨׳§׳�׳™ ׳•׳‘׳�׳§׳¡׳™׳§׳•׳� ׳©׳•׳¨׳© ׳§׳ ׳” - ׳�׳‘׳¨׳¨
-	//׳”׳§׳ ׳”-׳§׳ ׳”
+	//׳³ג€˜׳³ֲ¨׳³ג€˜ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ֲ§׳³ֲ ׳³ג„¢ ׳³ג€˜׳³ג€˜׳³ֲ¨׳³ֲ§׳³ן¿½׳³ג„¢ ׳³ג€¢׳³ג€˜׳³ן¿½׳³ֲ§׳³ֲ¡׳³ג„¢׳³ֲ§׳³ג€¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ֲ§׳³ֲ ׳³ג€� - ׳³ן¿½׳³ג€˜׳³ֲ¨׳³ֲ¨
+	//׳³ג€�׳³ֲ§׳³ֲ ׳³ג€�-׳³ֲ§׳³ֲ ׳³ג€�
 	//id = 289
 	private void inflectPattern51() throws Exception {
 		setGenInflection();
@@ -2002,7 +2002,7 @@ private void inflectPattern44() throws Exception {
 					"h,h,i,h,h,h,w,inh,w,inh", "-,-,-,-,-,-,-,-,-,-", 1, 2, 3,
 					3);
 			vgIP.generateImperative("hw", "h,i,w,inh", "", 1, 2, 3, 3);
-			//׳¢׳‘׳•׳¨ ׳”׳ ׳—׳”
+			//׳³ֲ¢׳³ג€˜׳³ג€¢׳³ֲ¨ ׳³ג€�׳³ֲ ׳³ג€”׳³ג€�
 		} else if (root.equals("nxh")) {
 			vgIP.generateBareInfinitive("h", "w", 0, 2, 3, 3, "t");
 			vgIP.generateInfinitive("h", "w", 0, 1, 3, 3, "t");
@@ -2018,7 +2018,7 @@ private void inflectPattern44() throws Exception {
 					3);
 			vgIP.generateImperative("h", "h,i,w,inh", "", 0, 2, 3, 3);
 
-			//			׳”׳›׳” - ׳”׳©׳•׳¨׳© ׳ ׳›׳”׳”׳›׳” - ׳”׳©׳•׳¨׳© ׳ ׳›׳”
+			//			׳³ג€�׳³ג€÷׳³ג€� - ׳³ג€�׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ֲ ׳³ג€÷׳³ג€�׳³ג€�׳³ג€÷׳³ג€� - ׳³ג€�׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ© ׳³ֲ ׳³ג€÷׳³ג€�
 		} else if (root.charAt(0) == 'n') {
 			vgIP.generateBareInfinitive("h", "w", 1, 2, 3, 3, "t");
 			vgIP.generateInfinitive("h", "w", 1, 1, 3, 3, "t");
@@ -2051,7 +2051,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳”׳§׳™׳�-׳§׳•׳�
+	//׳³ג€�׳³ֲ§׳³ג„¢׳³ן¿½-׳³ֲ§׳³ג€¢׳³ן¿½
 	//id = 8067
 	private void inflectPattern52() throws Exception {
 		setGenInflection();
@@ -2076,7 +2076,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳”׳¡׳‘-׳¡׳‘׳‘
+	//׳³ג€�׳³ֲ¡׳³ג€˜-׳³ֲ¡׳³ג€˜׳³ג€˜
 	//id = 10616
 	private void inflectPattern53() throws Exception {
 		setGenInflection();
@@ -2094,7 +2094,7 @@ private void inflectPattern44() throws Exception {
 	///Huf'al
 	/////////////////////////////////////////////////////////////////////////
 
-	//׳”׳•׳–׳›׳¨-׳–׳›׳¨
+	//׳³ג€�׳³ג€¢׳³ג€“׳³ג€÷׳³ֲ¨-׳³ג€“׳³ג€÷׳³ֲ¨
 	//id = 2770
 	private void inflectPattern54() throws Exception {
 		setGenInflection();
@@ -2140,7 +2140,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳”׳•׳ ׳—׳�-׳ ׳—׳�
+	//׳³ג€�׳³ג€¢׳³ֲ ׳³ג€”׳³ן¿½-׳³ֲ ׳³ג€”׳³ן¿½
 	//id = 7328
 	private void inflectPattern55() throws Exception {
 		setGenInflection();
@@ -2151,7 +2151,7 @@ private void inflectPattern44() throws Exception {
 				"-,-,i,-,-,-,w,nh,w,nh", "", 0, 2, 2, 3);
 	}
 
-	//׳”׳•׳’׳�׳”-׳’׳�׳”
+	//׳³ג€�׳³ג€¢׳³ג€™׳³ן¿½׳³ג€�-׳³ג€™׳³ן¿½׳³ג€�
 	//id = 4251
 	private void inflectPattern56() throws Exception {
 		setGenInflection();
@@ -2172,7 +2172,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳”׳•׳§׳�-׳§׳•׳�
+	//׳³ג€�׳³ג€¢׳³ֲ§׳³ן¿½-׳³ֲ§׳³ג€¢׳³ן¿½
 	//id = 12844
 	private void inflectPattern57() throws Exception {
 		setGenInflection();
@@ -2195,11 +2195,11 @@ private void inflectPattern44() throws Exception {
 	///Nif'al
 	/////////////////////////////////////////////////////////////////////////
 
-	//׳ ׳©׳�׳¨-׳©׳�׳¨
+	//׳³ֲ ׳³ֲ©׳³ן¿½׳³ֲ¨-׳³ֲ©׳³ן¿½׳³ֲ¨
 	//id = 17811
-	//׳‘׳’׳–׳¨׳” ׳–׳• ׳™׳© ׳‘׳¢׳™׳™׳” ׳¢׳� ׳©׳•׳¨׳©׳™׳� ׳¢׳� ׳₪"׳™ ׳�׳₪׳¢׳�׳™׳� ׳™׳© ׳�׳”׳—׳�׳™׳£ ׳�׳•' ׳‘׳ ׳˜׳™׳™׳” ׳•׳�׳₪׳¢׳�׳™׳� ׳�׳�
-	// ׳•׳�׳™׳� ׳�׳™ ׳“׳¨׳� ׳�׳“׳¢׳×
-	//׳�׳ ׳™ ׳×׳�׳™׳“ ׳™׳”׳₪׳•׳� ׳�--׳• ׳‘׳�׳§׳¨׳™׳� ׳©׳�׳� ׳ ׳›׳•׳� ׳™׳© ׳�׳™׳™׳¦׳¨ ׳™׳•׳¦׳�׳™ ׳“׳•׳₪׳�
+	//׳³ג€˜׳³ג€™׳³ג€“׳³ֲ¨׳³ג€� ׳³ג€“׳³ג€¢ ׳³ג„¢׳³ֲ© ׳³ג€˜׳³ֲ¢׳³ג„¢׳³ג„¢׳³ג€� ׳³ֲ¢׳³ן¿½ ׳³ֲ©׳³ג€¢׳³ֲ¨׳³ֲ©׳³ג„¢׳³ן¿½ ׳³ֲ¢׳³ן¿½ ׳³ג‚×"׳³ג„¢ ׳³ן¿½׳³ג‚×׳³ֲ¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ג„¢׳³ֲ© ׳³ן¿½׳³ג€�׳³ג€”׳³ן¿½׳³ג„¢׳³ֲ£ ׳³ן¿½׳³ג€¢' ׳³ג€˜׳³ֲ ׳³ֻ�׳³ג„¢׳³ג„¢׳³ג€� ׳³ג€¢׳³ן¿½׳³ג‚×׳³ֲ¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ן¿½
+	// ׳³ג€¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ג„¢ ׳³ג€�׳³ֲ¨׳³ן¿½ ׳³ן¿½׳³ג€�׳³ֲ¢׳³ֳ—
+	//׳³ן¿½׳³ֲ ׳³ג„¢ ׳³ֳ—׳³ן¿½׳³ג„¢׳³ג€� ׳³ג„¢׳³ג€�׳³ג‚×׳³ג€¢׳³ן¿½ ׳³ן¿½--׳³ג€¢ ׳³ג€˜׳³ן¿½׳³ֲ§׳³ֲ¨׳³ג„¢׳³ן¿½ ׳³ֲ©׳³ן¿½׳³ן¿½ ׳³ֲ ׳³ג€÷׳³ג€¢׳³ן¿½ ׳³ג„¢׳³ֲ© ׳³ן¿½׳³ג„¢׳³ג„¢׳³ֲ¦׳³ֲ¨ ׳³ג„¢׳³ג€¢׳³ֲ¦׳³ן¿½׳³ג„¢ ׳³ג€�׳³ג€¢׳³ג‚×׳³ן¿½
 	private void inflectPattern58() throws Exception {
 		setGenInflection();
 		if (root.charAt(0) == 'i') {
@@ -2236,11 +2236,11 @@ private void inflectPattern44() throws Exception {
 			// exceptions
 			// (remove/replace)
 			setGenInflection();
-			//׳¢׳‘׳•׳¨ ׳₪"׳™ ׳©׳ ׳•׳˜׳™׳� ׳¢׳� ׳™ ׳•׳�׳� ׳¢׳� ׳•' ׳ ׳•׳¡׳™׳£ ׳�׳× ׳›׳� ׳”׳ ׳˜׳™׳™׳” ׳›׳™׳•׳¦׳�׳™ ׳“׳•׳₪׳�
-			// ׳™׳© ׳�׳�׳ ׳•׳¢ ׳¢׳•׳“׳£ ׳™׳¦׳™׳¨׳” ׳›׳™ ׳”׳©׳•׳¨׳•׳× ׳”׳‘׳�׳•׳× ׳ ׳›׳•׳ ׳•׳× ׳¨׳§ ׳�׳ ׳•׳˜׳™׳� ׳¢׳� ׳•
+			//׳³ֲ¢׳³ג€˜׳³ג€¢׳³ֲ¨ ׳³ג‚×"׳³ג„¢ ׳³ֲ©׳³ֲ ׳³ג€¢׳³ֻ�׳³ג„¢׳³ן¿½ ׳³ֲ¢׳³ן¿½ ׳³ג„¢ ׳³ג€¢׳³ן¿½׳³ן¿½ ׳³ֲ¢׳³ן¿½ ׳³ג€¢' ׳³ֲ ׳³ג€¢׳³ֲ¡׳³ג„¢׳³ֲ£ ׳³ן¿½׳³ֳ— ׳³ג€÷׳³ן¿½ ׳³ג€�׳³ֲ ׳³ֻ�׳³ג„¢׳³ג„¢׳³ג€� ׳³ג€÷׳³ג„¢׳³ג€¢׳³ֲ¦׳³ן¿½׳³ג„¢ ׳³ג€�׳³ג€¢׳³ג‚×׳³ן¿½
+			// ׳³ג„¢׳³ֲ© ׳³ן¿½׳³ן¿½׳³ֲ ׳³ג€¢׳³ֲ¢ ׳³ֲ¢׳³ג€¢׳³ג€�׳³ֲ£ ׳³ג„¢׳³ֲ¦׳³ג„¢׳³ֲ¨׳³ג€� ׳³ג€÷׳³ג„¢ ׳³ג€�׳³ֲ©׳³ג€¢׳³ֲ¨׳³ג€¢׳³ֳ— ׳³ג€�׳³ג€˜׳³ן¿½׳³ג€¢׳³ֳ— ׳³ֲ ׳³ג€÷׳³ג€¢׳³ֲ ׳³ג€¢׳³ֳ— ׳³ֲ¨׳³ֲ§ ׳³ן¿½׳³ֲ ׳³ג€¢׳³ֻ�׳³ג„¢׳³ן¿½ ׳³ֲ¢׳³ן¿½ ׳³ג€¢
 			int newReplaceExceptionListSize = vgIP.replaceExceptionList.size();
 			if (!(newReplaceExceptionListSize > 10)) {
-				//׳• ׳‘׳•׳“׳“׳× ׳‘׳�׳�׳¦׳¢ ׳�׳™׳�׳” ׳‘׳�׳§׳•׳� 2 ׳•׳•׳™׳�
+				//׳³ג€¢ ׳³ג€˜׳³ג€¢׳³ג€�׳³ג€�׳³ֳ— ׳³ג€˜׳³ן¿½׳³ן¿½׳³ֲ¦׳³ֲ¢ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג€� ׳³ג€˜׳³ן¿½׳³ֲ§׳³ג€¢׳³ן¿½ 2 ׳³ג€¢׳³ג€¢׳³ג„¢׳³ן¿½
 				vgIP.generateBareInfinitive("hiw", "", 1, 2, 3, 3, String
 						.valueOf(root.charAt(root.length() - 1)));
 				vgIP.generateInfinitive("hiw", "", 1, 1, 3, 3, String
@@ -2249,8 +2249,8 @@ private void inflectPattern44() throws Exception {
 						"-,-,i,-,-,-,w,nh,w,nh", "", 1, 2, 2, 3);
 				vgIP.generateImperative("hiw", "-,i,w,nh", "", 1, 2, 2, 3);
 			}
-			//׳₪' ׳”׳₪׳•׳¢׳� ׳•׳¢' ׳”׳₪׳•׳¢׳� ׳�׳� ׳�׳™׳•׳—׳“׳™׳� - ׳�׳‘׳� ׳¦׳¨׳™׳� ׳�׳‘׳“׳•׳§ ׳�׳× ׳�' ׳”׳₪׳•׳¢׳� (׳�׳§׳¨׳™׳�
-			// ׳�׳™׳•׳—׳“׳™׳� ׳  ׳•-׳×
+			//׳³ג‚×' ׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ ׳³ג€¢׳³ֲ¢' ׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ ׳³ן¿½׳³ן¿½ ׳³ן¿½׳³ג„¢׳³ג€¢׳³ג€”׳³ג€�׳³ג„¢׳³ן¿½ - ׳³ן¿½׳³ג€˜׳³ן¿½ ׳³ֲ¦׳³ֲ¨׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ג€˜׳³ג€�׳³ג€¢׳³ֲ§ ׳³ן¿½׳³ֳ— ׳³ן¿½' ׳³ג€�׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ (׳³ן¿½׳³ֲ§׳³ֲ¨׳³ג„¢׳³ן¿½
+			// ׳³ן¿½׳³ג„¢׳³ג€¢׳³ג€”׳³ג€�׳³ג„¢׳³ן¿½ ׳³ֲ  ׳³ג€¢-׳³ֳ—
 		} else {
 			vgIP.generateBareInfinitive("hi", "", 0, 2, 3, 3, String
 					.valueOf(root.charAt(root.length() - 1)));
@@ -2306,7 +2306,7 @@ private void inflectPattern44() throws Exception {
 
 	}
 
-	//׳ ׳™׳’׳£-׳ ׳’׳£
+	//׳³ֲ ׳³ג„¢׳³ג€™׳³ֲ£-׳³ֲ ׳³ג€™׳³ֲ£
 	//id = 13137
 	private void inflectPattern59() throws Exception {
 		setGenInflection();
@@ -2354,7 +2354,7 @@ private void inflectPattern44() throws Exception {
 		} else {
 			vgIP.generateBareInfinitive("hi", "", 0, 2, 2, 3, "");
 			vgIP.generateInfinitive("hi", "", 0, 2, 2, 3, "");
-			//׳ ׳•׳¦׳¨׳•׳× ׳›׳ ׳™׳¡׳•׳× ׳�׳™׳•׳×׳¨׳•׳× ׳‘׳�׳§׳¨׳” ׳©׳� ׳™׳•׳¦׳� ׳“׳•׳₪׳� ׳�׳©׳� ׳₪׳•׳¢׳� ׳�׳�׳©׳� ׳ ׳™׳’׳©
+			//׳³ֲ ׳³ג€¢׳³ֲ¦׳³ֲ¨׳³ג€¢׳³ֳ— ׳³ג€÷׳³ֲ ׳³ג„¢׳³ֲ¡׳³ג€¢׳³ֳ— ׳³ן¿½׳³ג„¢׳³ג€¢׳³ֳ—׳³ֲ¨׳³ג€¢׳³ֳ— ׳³ג€˜׳³ן¿½׳³ֲ§׳³ֲ¨׳³ג€� ׳³ֲ©׳³ן¿½ ׳³ג„¢׳³ג€¢׳³ֲ¦׳³ן¿½ ׳³ג€�׳³ג€¢׳³ג‚×׳³ן¿½ ׳³ן¿½׳³ֲ©׳³ן¿½ ׳³ג‚×׳³ג€¢׳³ֲ¢׳³ן¿½ ׳³ן¿½׳³ן¿½׳³ֲ©׳³ן¿½ ׳³ֲ ׳³ג„¢׳³ג€™׳³ֲ©
 			//vgIP.setSpelling(STANDARD_SPELLING);
 			//vgIP.generateBareInfinitive("h", "", 0, 2, 2, 3, "");
 			//vgIP.generateInfinitive("h", "", 0, 2, 2, 3, "");
@@ -2379,7 +2379,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	//׳ ׳’׳�׳”-׳’׳�׳”
+	//׳³ֲ ׳³ג€™׳³ן¿½׳³ג€�-׳³ג€™׳³ן¿½׳³ג€�
 	//id = 4052
 	private void inflectPattern60() throws Exception {
 		setGenInflection();
@@ -2419,15 +2419,15 @@ private void inflectPattern44() throws Exception {
 
 	}
 
-	//׳ ׳₪׳¢׳� ׳ ׳—׳™ ׳¢"׳• ׳¢"׳™
-	//׳ ׳¡׳•׳’
+	//׳³ֲ ׳³ג‚×׳³ֲ¢׳³ן¿½ ׳³ֲ ׳³ג€”׳³ג„¢ ׳³ֲ¢"׳³ג€¢ ׳³ֲ¢"׳³ג„¢
+	//׳³ֲ ׳³ֲ¡׳³ג€¢׳³ג€™
 	private void inflectPattern61() throws Exception {
 		setGenInflection();
 		String pastPrefix = "";
 		String presentPrefix = "";
 
 		vgIP.generateBareInfinitive("hi", "w", 0, 1, 2, 3, "");
-		//			׳‘׳¨׳‘ ׳�׳™׳�׳™׳� ׳�׳”׳™׳“׳•׳� ׳•׳�׳™׳�׳• ׳�׳¦׳� ׳©׳�׳�׳” ׳�׳”׳“׳•׳�
+		//			׳³ג€˜׳³ֲ¨׳³ג€˜ ׳³ן¿½׳³ג„¢׳³ן¿½׳³ג„¢׳³ן¿½ ׳³ן¿½׳³ג€�׳³ג„¢׳³ג€�׳³ג€¢׳³ן¿½ ׳³ג€¢׳³ן¿½׳³ג„¢׳³ן¿½׳³ג€¢ ׳³ן¿½׳³ֲ¦׳³ן¿½ ׳³ֲ©׳³ן¿½׳³ן¿½׳³ג€� ׳³ן¿½׳³ג€�׳³ג€�׳³ג€¢׳³ן¿½
 		vgIP.generateInfinitive("hi", "w", 0, 1, 2, 3, "");
 
 		//			if (transliterated.charAt(1) != 'i') {
@@ -2460,8 +2460,8 @@ private void inflectPattern44() throws Exception {
 
 	}
 
-	//		׳ ׳₪׳¢׳� ׳ ׳—׳™ ׳¢"׳• ׳¢"׳™
-	//׳ ׳¦׳•׳“
+	//		׳³ֲ ׳³ג‚×׳³ֲ¢׳³ן¿½ ׳³ֲ ׳³ג€”׳³ג„¢ ׳³ֲ¢"׳³ג€¢ ׳³ֲ¢"׳³ג„¢
+	//׳³ֲ ׳³ֲ¦׳³ג€¢׳³ג€�
 	private void inflectPattern62() throws Exception {
 		setGenInflection();
 		String pastPrefix = "";
@@ -2500,7 +2500,7 @@ private void inflectPattern44() throws Exception {
 		String htBase = "ht" + transliterated.substring(2);
 		vgIP.setBaseTransliterated(htBase);
 		vgIP.setBaseUndot(Translate.Eng2Heb(htBase));
-		String newDottedItem = dottedLexiconItem.replaceFirst("׳ ײ´", "׳”ײ´");
+		String newDottedItem = dottedLexiconItem.replaceFirst("׳³ֲ ׳²ֲ´", "׳³ג€�׳²ֲ´");
 		vgIP.setDottedLexiconItem(newDottedItem);
 		if (transliterated.endsWith("h")) {
 			String baseForm = transliterated.substring(0, transliterated
@@ -2519,7 +2519,7 @@ private void inflectPattern44() throws Exception {
 		}
 	}
 
-	protected void inflect() throws Exception 
+	public void generateInflects() throws Exception  //TODO was protected
 	{
 		ArrayList<String> badVerbs = new ArrayList<String>(); //TODO delete
 		try{

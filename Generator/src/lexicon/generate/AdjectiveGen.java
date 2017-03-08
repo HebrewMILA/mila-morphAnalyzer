@@ -418,33 +418,24 @@ public class AdjectiveGen extends ItemGen {
 			populateDatabase();
 		}
 	}
-
-	public void inflect() throws Exception 
-	{
-		//Get lexicon Item (for which pos = adjective ) attributes
-		//The lexicon item can have any attributes for example
-		//single masculine/single feminine/ plural feminine etc
-		analyzeAdjective();
-		//Get list of exceptions of type replace for this lexicon Item
-		getException("replace");
-		//Get list of exceptions of type remove for this lexicon Item
-		getException("remove");
-
-		handleDoublingVavForAdjectivesStartsWithVav();
-
-		//inflect exception type items of action add - if exist
-		inflectAddExceptions();
-		insertToDB();
-	}
 	
 	@Override
 	public void generateInflects() throws Exception{
-			analyzeAdjective();
-			getException("replace");
-			getException("remove");
-			handleDoublingVavForAdjectivesStartsWithVav();
-			inflectAddExceptions();
+		//Get lexicon Item (for which pos = adjective ) attributes
+				//The lexicon item can have any attributes for example
+				//single masculine/single feminine/ plural feminine etc
+				analyzeAdjective();
+				//Get list of exceptions of type replace for this lexicon Item
+				getException("replace");
+				//Get list of exceptions of type remove for this lexicon Item
+				getException("remove");
+
+				handleDoublingVavForAdjectivesStartsWithVav();
+
+				//inflect exception type items of action add - if exist
+				inflectAddExceptions();
 	}
+	
 
 	/**
 	 * This is a service method which is called before every generation

@@ -88,7 +88,7 @@ public class InterrogativeGen extends ItemGen
 		type = item.getInterrogative().getInterrogativeType();
 	}
 
-	public void inflect() throws Exception 
+	public void generateInflects() throws Exception 
 	{
 		//There is no logic for remove functionality
 		analyse();

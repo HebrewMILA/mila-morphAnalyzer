@@ -57,7 +57,7 @@ public class ExistentialGen extends ItemGen {
 				suffixFunction = "unspecified";
 			populateDatabase();
 			if (!definiteness.equals("prohibited")) {
-				// הישנם , הישנן
+				// ׳”׳™׳©׳ ׳� , ׳”׳™׳©׳ ׳�
 				addH();
 			}
 		}
@@ -105,7 +105,7 @@ public class ExistentialGen extends ItemGen {
 		}
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		try {
 			analyse();
 			inflectedItem = transliterated;

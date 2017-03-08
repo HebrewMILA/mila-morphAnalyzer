@@ -98,7 +98,7 @@ public class MultiWordPrepositionGen extends ItemGen {
 	}
     }
 
-    public void inflect() throws Exception {
+    public void generateInflects() throws Exception {
 	analyse();
 	try {
 	    StringTokenizer st = new StringTokenizer(transliterated);

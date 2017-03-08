@@ -270,7 +270,7 @@ public class NumeralGen extends ItemGen {
 		this.suffixFunction = suffixFunction;
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		String feminineBase = "";
 		String pluralBase = "";
 		analyse();

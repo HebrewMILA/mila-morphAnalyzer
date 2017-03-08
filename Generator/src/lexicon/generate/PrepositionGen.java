@@ -178,7 +178,7 @@ public class PrepositionGen extends ItemGen {
 		dottedLexiconItem = item.getDotted();
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		analyse();
 		getException("replace");
 		getException("remove");

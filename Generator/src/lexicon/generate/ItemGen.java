@@ -753,7 +753,11 @@ public abstract class ItemGen implements ItemInterface {
 		return false;
 	}
 
-	abstract void inflect() throws Exception;
-	public void generateInflects() throws Exception {};
+	public void inflect() throws Exception{
+		generateInflects();
+		insertToDB();
+	}
+	
+	public abstract void generateInflects() throws Exception;
 
 }

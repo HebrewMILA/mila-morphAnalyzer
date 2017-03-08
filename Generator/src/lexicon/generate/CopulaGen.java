@@ -168,7 +168,7 @@ public class CopulaGen extends ItemGen {
 
 	}
 
-	public void inflect() throws Exception 
+	public void generateInflects() throws Exception 
 	{
 		try 
 		{

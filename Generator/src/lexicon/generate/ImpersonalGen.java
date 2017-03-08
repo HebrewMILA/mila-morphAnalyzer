@@ -26,7 +26,7 @@ public class ImpersonalGen extends ItemGen {
 		analyseItem();
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		analyse();
 		inflectedItem = transliterated;
 		surface = undot;

@@ -89,11 +89,11 @@ public class AcronymGen extends ItemGen {
 		System.out.println(gender);
 		if (inflectConstructP && number.equals("plural")) {
 			findRule(inflectedItem, "", "constructMasculinePlural" + basePos, 2);
-			//						handle גדי
+			//						handle ׳’׳“׳™
 			if (gender.equals("masculine")
 					&& baseTransliteratedItem.endsWith("i")
 					&& !baseTransliteratedItem.endsWith("ai")
-					//handle שה
+					//handle ׳©׳”
 					|| (baseTransliteratedItem.endsWith("h") && baseTransliteratedItem
 							.length() == 2))
 				inflectedItem = inflectedItem + "i";
@@ -111,8 +111,8 @@ public class AcronymGen extends ItemGen {
 			findRule(inflectedItem, "", "constructFeminineSingular" + basePos,
 					2);
 
-			//				//deny problems of translation for אמ"נ and אמ"ן פילטרופ
-			// סירופ
+			//				//deny problems of translation for ׳�׳�"׳  and ׳�׳�"׳� ׳₪׳™׳�׳˜׳¨׳•׳₪
+			// ׳¡׳™׳¨׳•׳₪
 			if (inflectedItem.endsWith("n") || inflectedItem.endsWith("p")
 					|| inflectedItem.endsWith("c")
 					&& inflectedItem.equals(transliterated))
@@ -123,8 +123,8 @@ public class AcronymGen extends ItemGen {
 			populateDatabase();
 		} else if (inflectConstructS && gender.equals("masculine")
 				&& number.equals("singular")) {
-			//				//deny problems of translation for אמ"נ and אמ"ן פילטרופ
-			// סירופ
+			//				//deny problems of translation for ׳�׳�"׳  and ׳�׳�"׳� ׳₪׳™׳�׳˜׳¨׳•׳₪
+			// ׳¡׳™׳¨׳•׳₪
 			if ((inflectedItem.endsWith("n") || inflectedItem.endsWith("p") || inflectedItem.endsWith("c"))
 					&& inflectedItem.equals(transliterated))
 				surface = undot;
@@ -243,10 +243,12 @@ private void analyseExceptionList(List exceptionList) throws Exception {
 
 		}
 	}
-	public void inflect() throws Exception {
+
+	@Override
+	public void generateInflects() throws Exception {
 		analyzeAcronym();
 		inflectLexiconItem();
-		inflectAddExceptions();
+		inflectAddExceptions();	
 	}
 
 	/**
@@ -303,7 +305,7 @@ private void analyseExceptionList(List exceptionList) throws Exception {
 		//System.out.println("||||||||||generateHForm||||||||||||");
 
 		inflectedItem = "h" + inflectedItem;
-		surface = "ה" + surface;
+		surface = "׳”" + surface;
 
 		populateDatabase();
 		removeInvertedCommas();
@@ -315,11 +317,11 @@ private void analyseExceptionList(List exceptionList) throws Exception {
 	protected void generateInternalDefiniteness() throws Exception {
 		inflectedItem = inflectedItem.replaceAll("\"", "h\"");
 		surface = Translate.Eng2Heb(inflectedItem);
-		value = value.replaceAll(" ", " ה");
+		value = value.replaceAll(" ", " ׳”");
 		populateDatabase();
 		inflectedItem = inflectedItem.replaceAll("h\"", "\"");
 		surface = Translate.Eng2Heb(inflectedItem);
-		value = value.replaceAll(" ה", " ");
+		value = value.replaceAll(" ׳”", " ");
 	}
 
 	protected void removeInvertedCommas() throws Exception {
@@ -481,4 +483,6 @@ private void analyseExceptionList(List exceptionList) throws Exception {
 		}
 
 	}
+
+	
 }

@@ -65,7 +65,7 @@ public class WPrefixGen extends ItemGen {
 			polarityVal = "u";
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		analyse();
 		definitnessVal = "tf";
 		inflectedItem = transliterated;

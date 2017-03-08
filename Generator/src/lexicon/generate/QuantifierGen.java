@@ -276,7 +276,7 @@ public class QuantifierGen extends ItemGen {
 		definitnessVal = "unspecified";
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		//לא נייצר לכמתים צורת נפרד רק מיודע (אם אפשר ונסמך)
 		//הטיות מתווספות ע"י הוספת יוצאי דופן
 		analyse();

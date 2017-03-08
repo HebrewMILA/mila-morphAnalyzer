@@ -36,7 +36,7 @@ public class TitleGen extends ItemGen {
 		surface = undot;
 	}
 
-	public void inflect() throws Exception {
+	public void generateInflects() throws Exception {
 		analyse();
 		populateDatabase();
 	}

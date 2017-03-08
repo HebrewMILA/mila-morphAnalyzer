@@ -144,7 +144,8 @@ public class AdverbGen extends ItemGen {
 		}
 	}
 
-	public void inflect() throws Exception {
+	@Override
+	public void generateInflects() throws Exception {
 		analyse();
 		replaceException();
 		removeException();
@@ -161,7 +162,7 @@ public class AdverbGen extends ItemGen {
 			if (!inflectionBase.equals(""))
 				inflectionBaseHandling();
 			inflectPronomial("pronomial");
-		}
+		}		
 	}
 
 }
