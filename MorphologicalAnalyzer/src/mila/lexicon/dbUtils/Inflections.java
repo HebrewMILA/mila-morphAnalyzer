@@ -119,12 +119,13 @@ public class Inflections extends Connected {
 					inflectionsRecDB.setType(rs.getString("type"));
 					inflectionsRecDB.setDottedLexiconItem(rs.getString("dottedLexiconItem"));
 					inflectionsRecDB.setPolarity(rs.getString("polarity"));
-					inflectionsRecDB.setValue(rs.getString("value"));
+					inflectionsRecDB.setValue(rs.getString("value"));			
 					String foreign = rs.getString("hebForeign");
 					if (foreign.length() > 0) {
 						inflectionsRecDB.setForeign(Integer.parseInt(rs.getString("hebForeign")));
 					}
 					inflectionsRecDB.setPrefixPerEntry(rs.getString("prefix").charAt(0));
+					inflectionsRecDB.setBaseAlternatePointer(rs.getString("baseAlternatePointer")); //TODO might need to delete
 					result.add(inflectionsRecDB);
 				}
 				rs.close();

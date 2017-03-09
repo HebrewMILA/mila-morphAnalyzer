@@ -21,6 +21,7 @@ public class DBInflectionsRecord {
 	 * generated
 	 */
 	String baseLexiconPointer = "";
+	String baseAlternatePointer = ""; //TODO add shit
 	/** The lexicon item from which the inflected form was generated */
 	String baseUndottedLItem = "";
 	/**
@@ -109,6 +110,10 @@ public class DBInflectionsRecord {
 	 */
 	public String getBaseLexiconPointer() {
 		return baseLexiconPointer;
+	}
+	
+	public String getBaseAlternatePointer() {
+		return baseAlternatePointer;
 	}
 
 	/**
@@ -284,6 +289,10 @@ public class DBInflectionsRecord {
 	 */
 	public void setBaseLexiconPointer(String baseLexiconPointer) {
 		this.baseLexiconPointer = baseLexiconPointer;
+	}
+	
+	public void setBaseAlternatePointer(String baseAlternatePointer) {
+		this.baseAlternatePointer = baseAlternatePointer;
 	}
 
 	/**
