@@ -593,8 +593,10 @@ public abstract class ItemGen implements ItemInterface {
 	}
 	
 	public void switchBaseLexicalPointerAndInsert(String newId){
-		for(Inflections inf : infList)
+		for(Inflections inf : infList){
+			inf.setBaseAlternatePointer(inf.getBaseLexiconPointer());
 			inf.setBaseLexiconPointer(newId);
+		}
 		insertToDB();
 	}
 
