@@ -57,7 +57,7 @@ public class Connected {
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest",
 			// "tommy", "tammy2010!)");
 			pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
-					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/generatorTest", "morphuser", "qetu");
+					"jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_lexiconTest", "morphuser", "qetu");
 			pool.setCaching(false);
 			// pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 			// "jdbc:mysql://yeda.cs.technion.ac.il:3306/mwGenerator",

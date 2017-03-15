@@ -89,7 +89,7 @@ public class TextOutput {
 		String lexiconPointer = inflectionRecDB.getBaseLexiconPointer();
 		String alternatePointer = inflectionRecDB.getBaseAlternatePointer();
 		
-		lexiconPointer = (alternatePointer != null && !alternatePointer.equals("") && alternatePointer.length() > 0) ?
+		lexiconPointer = (alternatePointer != null && !alternatePointer.equals("") && alternatePointer.length() > 0 && !alternatePointer.equals("0")) ?
 				alternatePointer : lexiconPointer; //TODO work on this
 
 		String register = inflectionRecDB.getRegister();
