@@ -36,6 +36,8 @@ public class Inflections extends Connected {
 	private String baseUndottedLItem;
 
 	private String baseLexiconPointer;
+	
+	private String baseAlternatePointer;
 
 	private String binyan = "";
 
