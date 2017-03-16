@@ -98,6 +98,7 @@ public class Inflections extends Connected {
 		try {
 			rs = getData(sql, input);
 			if (rs != null) {
+				boolean filterNeeded = false;
 				while (rs.next()) {
 					DBInflectionsRecord inflectionsRecDB = new DBInflectionsRecord();
 					inflectionsRecDB.setBaseLexiconPointer(rs.getString("baseLexiconPointer"));
@@ -128,9 +129,13 @@ public class Inflections extends Connected {
 					}
 					inflectionsRecDB.setPrefixPerEntry(rs.getString("prefix").charAt(0));
 					inflectionsRecDB.setBaseAlternatePointer(rs.getString("baseAlternatePointer")); //TODO might need to delete
+					if(inflectionsRecDB.getBaseAlternatePointer()!=null && !inflectionsRecDB.getBaseAlternatePointer().equals("0"))
+						filterNeeded = true;
 					result.add(inflectionsRecDB);
 				}
 				rs.close();
+				if(filterNeeded)
+					filterList(result);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -138,7 +143,25 @@ public class Inflections extends Connected {
 		} finally {
 			releaseConnection();
 		}
+		
 		return result;
+	}
+	
+	private void filterList(ArrayList<DBInflectionsRecord> result){
+		DBInflectionsRecord basicRecord = null;
+		for(DBInflectionsRecord r : result)
+			if( !r.getBaseAlternatePointer().equals("0")){
+				basicRecord = r;
+				break;
+			}
+		if(basicRecord == null) return;
+		ArrayList<DBInflectionsRecord> tempList = new ArrayList<DBInflectionsRecord>();
+		for(DBInflectionsRecord r : result)
+			if(r.getBaseLexiconPointer().equals(basicRecord.getBaseLexiconPointer()))
+				if(!tempList.contains(r))
+					tempList.add(r);
+		
+		result = tempList;
 	}
 
 	/**
