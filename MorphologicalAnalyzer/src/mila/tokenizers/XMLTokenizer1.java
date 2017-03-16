@@ -52,7 +52,7 @@ public class XMLTokenizer1 {
 	static {
 		populateKitzurim();
 	}
-
+ 
 	static private void populateKitzurim() {
 		kitzurim.add("елг'");
 		kitzurim.add("елге'");
