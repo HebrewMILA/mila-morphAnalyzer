@@ -87,10 +87,7 @@ public class TextOutput {
 			transliteratedLexiconItem = inflectionRecDB.getBaseTransliteratedLItem();
 
 		String lexiconPointer = inflectionRecDB.getBaseLexiconPointer();
-		String alternatePointer = inflectionRecDB.getBaseAlternatePointer();
 		
-		lexiconPointer = (alternatePointer != null && !alternatePointer.equals("") && !alternatePointer.equals("0")) ?
-				alternatePointer : lexiconPointer; //TODO work on this
 
 		String register = inflectionRecDB.getRegister();
 		String spelling = inflectionRecDB.getSpelling();
