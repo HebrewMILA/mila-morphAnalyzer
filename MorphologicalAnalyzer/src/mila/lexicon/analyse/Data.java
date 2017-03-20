@@ -2,6 +2,9 @@ package mila.lexicon.analyse;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 import mila.dataStructures.DBInflectionsRecord;
@@ -438,8 +441,23 @@ public class Data  {
 			}
 
 		}
-
-		return inflectionsList;
+		
+		
+		//TODO document these changes
+		for(DBInflectionsRecord inf : inflectionsList){
+			String lexiconPointer = inf.getBaseLexiconPointer();
+			String alternatePointer = inf.getBaseAlternatePointer();
+			lexiconPointer = (alternatePointer != null && !alternatePointer.equals("0")) ? alternatePointer : lexiconPointer; //TODO work on this
+			inf.setBaseLexiconPointer(lexiconPointer);
+		}
+		
+		List<DBInflectionsRecord> al = new ArrayList<>(inflectionsList);
+		Set<DBInflectionsRecord> hs = new HashSet<DBInflectionsRecord>();
+		hs.addAll(al);
+		al.clear();
+		al.addAll(hs);
+		
+		return (ArrayList<DBInflectionsRecord>) al;
 	}
 
 	/**
