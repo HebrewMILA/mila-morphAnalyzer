@@ -150,16 +150,20 @@ public class Inflections extends Connected {
 	private void filterList(ArrayList<DBInflectionsRecord> result){
 		DBInflectionsRecord basicRecord = null;
 		for(DBInflectionsRecord r : result)
-			if( !r.getBaseAlternatePointer().equals("0")){
+			if( r.getBaseAlternatePointer().equals("0")){
 				basicRecord = r;
 				break;
 			}
 		if(basicRecord == null) return;
+		//TODO delete
+		System.out.println("basic record: " + basicRecord);
 		ArrayList<DBInflectionsRecord> tempList = new ArrayList<DBInflectionsRecord>();
 		for(DBInflectionsRecord r : result)
-			if(r.getBaseLexiconPointer().equals(basicRecord.getBaseLexiconPointer()))
-				if(!tempList.contains(r))
-					tempList.add(r);
+			if(!tempList.contains(r)){
+				tempList.add(r);
+				System.out.println("---------------------------\n" + r); //TODO delete
+			}
+					
 		
 		result = tempList;
 	}

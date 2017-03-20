@@ -457,27 +457,49 @@ public class DBInflectionsRecord {
 	}
 
 	@Override
+	public String toString() {
+		return "transliterated: " + transliterated
+				+"\nsurface: " + surface
+				+"\nbasePos: " + basePos
+				+"\nbaseLexiconPointer: " + baseLexiconPointer
+				+"\nbaseAlternatePointer: " + baseAlternatePointer
+				+"\nbaseUndottedLItem: " + baseUndottedLItem
+				+"\nbaseTransliteratedLItem: " + baseTransliteratedLItem
+				+"\nregister: " + register
+				+"\nspelling: " + spelling
+				+"\nstatus: " + status
+				+"\nsuffixFunction: " + suffixFunction
+				+"\nPGN: " + PGN
+				+"\nbinyan: " + binyan
+				+"\ntense: " + tense
+				+"\nroot: " + root
+				+"\nbaseNumber: " + baseNumber
+				+"\nbaseGender: " + baseGender
+				+"\nbasePerson: " + basePerson
+				+"\ntype: " + type
+				+"\nhAttribute: " + hAttribute
+				+"\ndottedLexiconItem: " + dottedLexiconItem
+				+"\npolarity: " + polarity
+				+"\nvalue: " + value
+				+"\nmood: " + mood
+				+"\nprefixPerEntry: " + prefixPerEntry
+				+"\nforeign: " + foreign;
+
+				
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((baseAlternatePointer == null) ? 0 : baseAlternatePointer.hashCode());
 		result = prime * result + ((baseGender == null) ? 0 : baseGender.hashCode());
 		result = prime * result + ((baseLexiconPointer == null) ? 0 : baseLexiconPointer.hashCode());
 		result = prime * result + ((baseNumber == null) ? 0 : baseNumber.hashCode());
-		result = prime * result + ((basePerson == null) ? 0 : basePerson.hashCode());
-		result = prime * result + ((basePos == null) ? 0 : basePos.hashCode());
 		result = prime * result + ((baseTransliteratedLItem == null) ? 0 : baseTransliteratedLItem.hashCode());
 		result = prime * result + ((baseUndottedLItem == null) ? 0 : baseUndottedLItem.hashCode());
-		result = prime * result + ((binyan == null) ? 0 : binyan.hashCode());
 		result = prime * result + ((dottedLexiconItem == null) ? 0 : dottedLexiconItem.hashCode());
-		result = prime * result + foreign;
-		result = prime * result + ((hAttribute == null) ? 0 : hAttribute.hashCode());
-		result = prime * result + ((root == null) ? 0 : root.hashCode());
+		result = prime * result + ((register == null) ? 0 : register.hashCode());
 		result = prime * result + ((spelling == null) ? 0 : spelling.hashCode());
-		result = prime * result + ((surface == null) ? 0 : surface.hashCode());
-		result = prime * result + ((tense == null) ? 0 : tense.hashCode());
-		result = prime * result + ((transliterated == null) ? 0 : transliterated.hashCode());
-		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
 
@@ -490,11 +512,6 @@ public class DBInflectionsRecord {
 		if (getClass() != obj.getClass())
 			return false;
 		DBInflectionsRecord other = (DBInflectionsRecord) obj;
-		if (baseAlternatePointer == null) {
-			if (other.baseAlternatePointer != null)
-				return false;
-		} else if (!baseAlternatePointer.equals(other.baseAlternatePointer))
-			return false;
 		if (baseGender == null) {
 			if (other.baseGender != null)
 				return false;
@@ -510,16 +527,6 @@ public class DBInflectionsRecord {
 				return false;
 		} else if (!baseNumber.equals(other.baseNumber))
 			return false;
-		if (basePerson == null) {
-			if (other.basePerson != null)
-				return false;
-		} else if (!basePerson.equals(other.basePerson))
-			return false;
-		if (basePos == null) {
-			if (other.basePos != null)
-				return false;
-		} else if (!basePos.equals(other.basePos))
-			return false;
 		if (baseTransliteratedLItem == null) {
 			if (other.baseTransliteratedLItem != null)
 				return false;
@@ -530,52 +537,20 @@ public class DBInflectionsRecord {
 				return false;
 		} else if (!baseUndottedLItem.equals(other.baseUndottedLItem))
 			return false;
-		if (binyan == null) {
-			if (other.binyan != null)
-				return false;
-		} else if (!binyan.equals(other.binyan))
-			return false;
 		if (dottedLexiconItem == null) {
 			if (other.dottedLexiconItem != null)
 				return false;
 		} else if (!dottedLexiconItem.equals(other.dottedLexiconItem))
 			return false;
-		if (foreign != other.foreign)
-			return false;
-		if (hAttribute == null) {
-			if (other.hAttribute != null)
+		if (register == null) {
+			if (other.register != null)
 				return false;
-		} else if (!hAttribute.equals(other.hAttribute))
-			return false;
-		if (root == null) {
-			if (other.root != null)
-				return false;
-		} else if (!root.equals(other.root))
+		} else if (!register.equals(other.register))
 			return false;
 		if (spelling == null) {
 			if (other.spelling != null)
 				return false;
 		} else if (!spelling.equals(other.spelling))
-			return false;
-		if (surface == null) {
-			if (other.surface != null)
-				return false;
-		} else if (!surface.equals(other.surface))
-			return false;
-		if (tense == null) {
-			if (other.tense != null)
-				return false;
-		} else if (!tense.equals(other.tense))
-			return false;
-		if (transliterated == null) {
-			if (other.transliterated != null)
-				return false;
-		} else if (!transliterated.equals(other.transliterated))
-			return false;
-		if (type == null) {
-			if (other.type != null)
-				return false;
-		} else if (!type.equals(other.type))
 			return false;
 		return true;
 	}
