@@ -3,8 +3,6 @@ package mila.lexicon.analyse;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 import java.util.StringTokenizer;
 
 import mila.dataStructures.DBInflectionsRecord;
@@ -421,21 +419,19 @@ public class Data  {
 	public static ArrayList<DBInflectionsRecord> getInflections(final String key) throws Exception {
 		ArrayList<DBInflectionsRecord> inflectionsList = new ArrayList<DBInflectionsRecord>();
 		ArrayList<String> dataFileInflectionsList = new ArrayList<String>();
-		// get from database
-		if (webFlag) {
-			// System.out.println("(F) Data:getInflections() webFlag = TRUE ");
+		
+		if (webFlag)  // get from database
 			inflectionsList = webGetInflections(key);
-			// get from data file
-		} else {
+		
+		else { // get from data file
 			dataFileInflectionsList = inflections.get(key);
 			DBInflectionsRecord dbInflectionsRec = null;
 			if (dataFileInflectionsList != null) {
 				int dataFileInflectionsListSize = dataFileInflectionsList.size();
 
-				for (int dataFileInflectionsListIndex = 0; dataFileInflectionsListIndex < dataFileInflectionsListSize; dataFileInflectionsListIndex++) {
+				for (int dataFileInflectionsListIndex = 0;
+						dataFileInflectionsListIndex < dataFileInflectionsListSize; dataFileInflectionsListIndex++) {
 					dbInflectionsRec = extractDataFileData(dataFileInflectionsList, dataFileInflectionsListIndex);
-					// System.out.println("(F) getInflections() root =
-					// "+dbInflectionsRec.getRoot());
 					inflectionsList.add(dbInflectionsRec);
 				}
 			}
@@ -443,21 +439,28 @@ public class Data  {
 		}
 		
 		
-		//TODO document these changes
+		/*
+		 * This piece of code checks for every inflection if  its not a basic one (i.e if it has an alternateLexiconPointer != 0)
+		 * and if it isn't a one changes the lexiconPointer to be the alternatePointer
+		 */
 		for(DBInflectionsRecord inf : inflectionsList){
-			String lexiconPointer = inf.getBaseLexiconPointer();
 			String alternatePointer = inf.getBaseAlternatePointer();
-			lexiconPointer = (alternatePointer != null && !alternatePointer.equals("0")) ? alternatePointer : lexiconPointer; //TODO work on this
-			inf.setBaseLexiconPointer(lexiconPointer);
+			if(alternatePointer != null && !alternatePointer.equals("0")) inf.setBaseLexiconPointer(alternatePointer);
 		}
 		
-		List<DBInflectionsRecord> al = new ArrayList<>(inflectionsList);
-		Set<DBInflectionsRecord> hs = new HashSet<DBInflectionsRecord>();
+		
+		/*
+		 * Since Alon wanted the inflections from the base word be included together with the inflections of alternate words for each
+		 * alternate word (i.e alternate words include both their own inflections and the basic word's inflcetions) the previous action
+		 * creates duplicates hence we filter them out here.
+		 */
+		ArrayList<DBInflectionsRecord> al = new ArrayList<DBInflectionsRecord>(inflectionsList);
+		HashSet<DBInflectionsRecord> hs = new HashSet<DBInflectionsRecord>();
 		hs.addAll(al);
 		al.clear();
 		al.addAll(hs);
 		
-		return (ArrayList<DBInflectionsRecord>) al;
+		return al;
 	}
 
 	/**
@@ -641,13 +644,13 @@ public class Data  {
 	 * @return an arrayList of all the analysis conform to the key
 	 */
 	private static ArrayList<DBInflectionsRecord> webGetInflections(final String key) {
+		
 		ArrayList<DBInflectionsRecord> inflectionsList = new ArrayList<DBInflectionsRecord>();
-
 		mila.lexicon.dbUtils.Inflections inf = new mila.lexicon.dbUtils.Inflections();
+
 		try {
 			inflectionsList = inf.get(key);
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return inflectionsList;
@@ -656,8 +659,7 @@ public class Data  {
 	/**
 	 * Empty constructor
 	 */
-	public Data() {
-	}
+	public Data() {}
 
 	/**
 	 * In case of data files mode working we initialize the data file with the

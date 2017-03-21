@@ -90,11 +90,20 @@ public class Inflections extends Connected {
 	PrintStream pInflections = null; // declare a print stream object
 
 	// ------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * This method receives a transliterated form of a word and returns all inflections corresponding to the input
+	 * i.e executes 'SELECT * FROM inflections WHERE transliterated=?' where ? = input.
+	 * @param input - transliterated form of a word
+	 * @return all inflections fitting to the input.
+	 * @throws UnsupportedEncodingException
+	 */
 	public ArrayList<DBInflectionsRecord> get(String input) throws UnsupportedEncodingException {
+		
 		ArrayList<DBInflectionsRecord> result = new ArrayList<DBInflectionsRecord>();
-		String sql = "SELECT * FROM inflections WHERE transliterated=?";
-		// System.out.println(sql);
 		ResultSet rs = null;
+
+		String sql = "SELECT * FROM inflections WHERE transliterated=?";
+		
 		try {
 			rs = getData(sql, input);
 			if (rs != null) {
