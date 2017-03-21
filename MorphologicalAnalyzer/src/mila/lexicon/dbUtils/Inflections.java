@@ -98,7 +98,6 @@ public class Inflections extends Connected {
 		try {
 			rs = getData(sql, input);
 			if (rs != null) {
-				boolean filterNeeded = false;
 				while (rs.next()) {
 					DBInflectionsRecord inflectionsRecDB = new DBInflectionsRecord();
 					inflectionsRecDB.setBaseLexiconPointer(rs.getString("baseLexiconPointer"));
@@ -129,8 +128,7 @@ public class Inflections extends Connected {
 					}
 					inflectionsRecDB.setPrefixPerEntry(rs.getString("prefix").charAt(0));
 					inflectionsRecDB.setBaseAlternatePointer(rs.getString("baseAlternatePointer")); //TODO might need to delete
-					if(inflectionsRecDB.getBaseAlternatePointer()!=null && !inflectionsRecDB.getBaseAlternatePointer().equals("0"))
-						filterNeeded = true;
+
 					result.add(inflectionsRecDB);
 				}
 				rs.close();
