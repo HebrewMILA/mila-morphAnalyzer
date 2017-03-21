@@ -127,7 +127,7 @@ public class Inflections extends Connected {
 						inflectionsRecDB.setForeign(Integer.parseInt(rs.getString("hebForeign")));
 					}
 					inflectionsRecDB.setPrefixPerEntry(rs.getString("prefix").charAt(0));
-					inflectionsRecDB.setBaseAlternatePointer(rs.getString("baseAlternatePointer")); //TODO might need to delete
+					inflectionsRecDB.setBaseAlternatePointer(rs.getString("baseAlternatePointer"));
 
 					result.add(inflectionsRecDB);
 				}
