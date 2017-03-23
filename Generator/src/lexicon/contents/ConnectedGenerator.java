@@ -53,7 +53,7 @@ public class ConnectedGenerator {
     private static void initPool() {
 
 	pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
-			"jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_lexiconTest",
+			"jdbc:mariadb://yeda.cs.technion.ac.il:3306/lexiconTest",
 			"tommy", "tammy2010!)");
 //    pool = new ConnectionPool("mysqlLexiocn", 10, 20, 18000,
 //		"jdbc:mysql://yeda.cs.technion.ac.il:3306/playground_lexiconTest",
