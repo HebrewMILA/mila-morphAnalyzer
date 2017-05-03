@@ -445,7 +445,7 @@ public class Data  {
 		 */
 		for(DBInflectionsRecord inf : inflectionsList){
 			String alternatePointer = inf.getBaseAlternatePointer();
-			if(alternatePointer != null && !alternatePointer.equals("0")) inf.setBaseLexiconPointer(alternatePointer);
+			if(alternatePointer != null && !alternatePointer.equals("0") && !alternatePointer.equals("null")) inf.setBaseLexiconPointer(alternatePointer);
 		}
 		
 		
