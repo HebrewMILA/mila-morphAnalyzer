@@ -8,7 +8,6 @@ package lexicon.generate;
 
 import java.util.List;
 
-import lexicon.contents.exception_types.PronounExceptionType;
 import lexicon.contents.exception_types.WprefixExceptionType;
 import lexicon.contents.types.ItemType;
 

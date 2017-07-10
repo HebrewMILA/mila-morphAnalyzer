@@ -34,7 +34,7 @@ public class SynsetType extends Content implements lexicon.jaxb.SynsetType {
 		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += getId();
 		sql += ", " + sneseID + ")";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

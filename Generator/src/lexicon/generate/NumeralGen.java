@@ -130,11 +130,11 @@ public class NumeralGen extends ItemGen {
 				suffixes = "ii,ik,iik,iw,ih,inw,ikm,ikn,ihm,ihn";
 			else if (number.equals("plural") && gender.equals("masculine"))
 				suffixes = "i,k,ik,w,h,nw,km,kn,hm,hn";
-			StringTokenizer stPossessive = new StringTokenizer(inflectedItem, ",");
+			new StringTokenizer(inflectedItem, ",");
 			StringTokenizer stPGN = new StringTokenizer(PGNTokens10, ",");
-			StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-			StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-			StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
+			new StringTokenizer(personTokens10, ",");
+			new StringTokenizer(numberTokens10, ",");
+			new StringTokenizer(genderTokens10, ",");
 			StringTokenizer stSuffix = new StringTokenizer(suffixes, ",");
 			while (stPGN.hasMoreTokens()) {
 				PGN = stPGN.nextToken();

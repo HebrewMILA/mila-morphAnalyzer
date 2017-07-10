@@ -79,7 +79,7 @@ public class ExistentialExceptionType extends Content implements lexicon.jaxb.Ex
 		sql += ", '" + getRegister() + "'";
 		sql += ", '" + getSpelling() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

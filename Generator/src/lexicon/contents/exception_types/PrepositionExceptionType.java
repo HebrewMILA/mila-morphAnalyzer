@@ -99,7 +99,7 @@ public class PrepositionExceptionType extends Content implements lexicon.jaxb.Pr
 		sql += ", '" + getSpelling() + "'";
 		sql += ", '" + getPersonGenderNumber() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

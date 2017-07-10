@@ -19,10 +19,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.ModalLexiconType.class);
-    }
-
     public java.lang.String getTense() {
         if (_Tense == null) {
             return "unspecified";
@@ -243,10 +239,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.ModalLexiconType.Add.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -528,7 +520,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -721,10 +712,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.ModalLexiconType.Remove.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1006,7 +993,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1199,10 +1185,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.ModalLexiconType.Replace.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1484,7 +1466,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1873,7 +1854,6 @@ public class ModalLexiconTypeImpl implements lexicon.jaxb.ModalLexiconType, com.
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {

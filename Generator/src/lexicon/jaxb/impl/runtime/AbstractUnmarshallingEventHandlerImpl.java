@@ -193,7 +193,7 @@ public abstract class AbstractUnmarshallingEventHandlerImpl implements Unmarshal
 // spawn a new child object
 //
 //    
-    private UnmarshallingEventHandler spawnChild( Class clazz, int memento ) {
+    private UnmarshallingEventHandler spawnChild( Class<?> clazz, int memento ) {
         
         UnmarshallableObject child;
         try {
@@ -209,21 +209,21 @@ public abstract class AbstractUnmarshallingEventHandlerImpl implements Unmarshal
         return handler;
     }
     
-    protected final Object spawnChildFromEnterElement(Class clazz, int memento, String uri, String local, String qname, Attributes atts)
+    protected final Object spawnChildFromEnterElement(Class<?> clazz, int memento, String uri, String local, String qname, Attributes atts)
             throws SAXException {
         UnmarshallingEventHandler ueh = spawnChild(clazz,memento);
         ueh.enterElement(uri,local,qname,atts);
         return ueh.owner();
     }
     
-    protected final Object spawnChildFromEnterAttribute(Class clazz, int memento, String uri, String local, String qname)
+    protected final Object spawnChildFromEnterAttribute(Class<?> clazz, int memento, String uri, String local, String qname)
             throws SAXException {
         UnmarshallingEventHandler ueh = spawnChild(clazz,memento);
         ueh.enterAttribute(uri,local,qname);
         return ueh.owner();
     }
     
-    protected final Object spawnChildFromText(Class clazz, int memento, String value)
+    protected final Object spawnChildFromText(Class<?> clazz, int memento, String value)
             throws SAXException {
         UnmarshallingEventHandler ueh = spawnChild(clazz,memento);
         ueh.text(value);
@@ -231,14 +231,14 @@ public abstract class AbstractUnmarshallingEventHandlerImpl implements Unmarshal
     }
 
     // these methods can be used if a child object can be nullable
-    protected final Object spawnChildFromLeaveElement(Class clazz, int memento, String uri, String local, String qname)
+    protected final Object spawnChildFromLeaveElement(Class<?> clazz, int memento, String uri, String local, String qname)
             throws SAXException {
         UnmarshallingEventHandler ueh = spawnChild(clazz,memento);
         ueh.leaveElement(uri,local,qname);
         return ueh.owner();
     }
 
-    protected final Object spawnChildFromLeaveAttribute(Class clazz, int memento, String uri, String local, String qname)
+    protected final Object spawnChildFromLeaveAttribute(Class<?> clazz, int memento, String uri, String local, String qname)
             throws SAXException {
         UnmarshallingEventHandler ueh = spawnChild(clazz,memento);
         ueh.leaveAttribute(uri,local,qname);

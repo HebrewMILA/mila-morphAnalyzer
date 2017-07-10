@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.StringTokenizer;
 import lexicon.contents.exception_types.VerbExceptionType;
 import lexicon.dbUtils.Inflections;
-import lexicon.stringUtils.StrUtils;
 import lexicon.stringUtils.Translate;
 
 /**
@@ -56,8 +55,6 @@ public class VerbGenIP implements VerbInterface {
 	public List replaceExceptionList = null;
 	public List removeExceptionList = null;
 	public String suffixFunction = "unspecified";
-	private String definitenessVal = "f";
-
 	boolean inflectInfinitivel;
 	boolean inflectInfinitiveb;
 	boolean inflectBeinoni;
@@ -289,9 +286,6 @@ public class VerbGenIP implements VerbInterface {
 	 * @throws Exception
 	 */
 	public void AddException(List exceptionList) throws Exception {
-		// System.out.println("exceptionList.size()" + exceptionList.size());
-		StringTokenizer accusativeTokens = null;
-		StringTokenizer PGNTokens = null;
 		int size = exceptionList.size();
 		for (int i = 0; i < size; i++) {
 			VerbExceptionType verbExceptionType = new VerbExceptionType();
@@ -663,7 +657,7 @@ public class VerbGenIP implements VerbInterface {
 			StringTokenizer stSuff = null;
 
 			stSuff = new StringTokenizer(suffix, ",");
-			StringTokenizer stPGN9 = new StringTokenizer(PGNTokens9, ",");
+			new StringTokenizer(PGNTokens9, ",");
 			StringTokenizer stPerson9 = new StringTokenizer(personTokens9, ",");
 			StringTokenizer stGender9 = new StringTokenizer(genderTokens9, ",");
 			StringTokenizer stNumber9 = new StringTokenizer(numberTokens9, ",");
@@ -724,7 +718,7 @@ public class VerbGenIP implements VerbInterface {
 		String lsuffix = "";
 
 		stSuff = new StringTokenizer(suffix, ",");
-		StringTokenizer stPGN9 = new StringTokenizer(PGNTokens9, ",");
+		new StringTokenizer(PGNTokens9, ",");
 		StringTokenizer stPerson9 = new StringTokenizer(personTokens9, ",");
 		StringTokenizer stGender9 = new StringTokenizer(genderTokens9, ",");
 		StringTokenizer stNumber9 = new StringTokenizer(numberTokens9, ",");
@@ -1067,7 +1061,6 @@ public class VerbGenIP implements VerbInterface {
 			stSuff = new StringTokenizer(suffix, ",");
 
 			String linside = "";
-			String loutside = "";
 			String lsuffix = "";
 			// System.out.println();
 			// System.out.println("generate imperative");
@@ -1241,17 +1234,12 @@ public class VerbGenIP implements VerbInterface {
 						replaceExceptionList, true, REPLACE);
 
 				if (!rtRemove && !rtReplace) {
-					// עבור צורות הנסמך תכונת היידוע לא רלבנטית
-					definitenessVal = "unspecified";
-					// רק שם עצם יכול להיות נסמך
-
 					if (surface.equals("קטוע") || surface.equals("נטול"))
 						participleType = "adjective";
 					else
 						participleType = "noun";
 
 					populateDBTable();
-					definitenessVal = "tf";
 					// possessive flag is false for nifal, hufal and pual - the
 					// possessive form will
 					// not be created for these binyanim
@@ -1325,9 +1313,9 @@ public class VerbGenIP implements VerbInterface {
 		// System.out.println();
 		// System.out.println("generatePossessive");
 		StringTokenizer stSuff = null;
-		StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
+		new StringTokenizer(personTokens10, ",");
+		new StringTokenizer(numberTokens10, ",");
+		new StringTokenizer(genderTokens10, ",");
 		String suff;
 
 		setAttributes(tense, pos, "unspecified", basePerson, baseGender, baseNumber, "false", "unspecified", "possessive",
@@ -1382,9 +1370,9 @@ public class VerbGenIP implements VerbInterface {
 		// System.out.println();
 		// System.out.println("generateAccusativenNominative");
 		StringTokenizer stSuff = null;
-		StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
+		new StringTokenizer(personTokens10, ",");
+		new StringTokenizer(numberTokens10, ",");
+		new StringTokenizer(genderTokens10, ",");
 		String suff;
 
 		setAttributes(tense, pos, "unspecified", basePerson, baseGender, baseNumber, "false", "unspecified",

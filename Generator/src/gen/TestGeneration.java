@@ -102,8 +102,6 @@ public class TestGeneration {
 	// ---------------------------------------------------------------------------------------------------------------------------
 	public String ShowRemoveExceptions(String lexiconId) {
 		String output = "";
-		ResultSet rs = null;
-
 		try {
 			Connection connection = null;
 			PreparedStatement statement = null;
@@ -111,7 +109,7 @@ public class TestGeneration {
 			connection = DriverManager.getConnection(lexiconTestURL, "maital", "AnaXAd3Ke@aJ8F");
 			statement = connection.prepareStatement("SELECT * FROM inflections WHERE baseLexiconPointer= ?");
 			statement.setObject(1, lexiconId);
-			rs = statement.executeQuery();
+			statement.executeQuery();
 			connection.close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -309,11 +307,6 @@ public class TestGeneration {
 	// --------------------------------------------------------------------------------------------------------------------------
 
 	public static void main(String[] args) {
-		Connection connection = null;
-		Statement statement = null;
-		String query = "empty";
-		String output = "";
-
 		try {
 			TestGeneration tg = new TestGeneration();
 			tg.RestoreRemoveInflectedEntry("13");

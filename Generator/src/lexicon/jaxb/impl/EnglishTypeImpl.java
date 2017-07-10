@@ -17,10 +17,6 @@ public class EnglishTypeImpl implements lexicon.jaxb.EnglishType, com.sun.xml.bi
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.EnglishType.class);
-    }
-
     public java.lang.String getWeight() {
         return _Weight;
     }
@@ -269,7 +265,6 @@ public class EnglishTypeImpl implements lexicon.jaxb.EnglishType, com.sun.xml.bi
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {

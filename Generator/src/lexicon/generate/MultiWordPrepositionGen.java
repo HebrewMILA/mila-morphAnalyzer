@@ -42,7 +42,6 @@ public class MultiWordPrepositionGen extends ItemGen {
 
 	protected void inflectPronomial(String transliteratedLexiconItem, String surfaceLexiconItem, String inflected,
 			String transliterated1) throws UnsupportedEncodingException, Exception {
-		String suffixFunction = "pronomial";
 		String suffixes = "";
 		StringTokenizer stPGN = null;
 		if (number.equals("plural")) {

@@ -99,7 +99,7 @@ public class InterjectionExceptionType extends Content implements lexicon.jaxb.I
 		sql += ", '" + getSpelling() + "'";
 		sql += ", '" + getPersonGenderNumber() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

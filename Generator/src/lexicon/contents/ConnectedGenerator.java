@@ -34,8 +34,6 @@ public class ConnectedGenerator {
 	static String mysqlUser = "";
 	static String mysqlPassword = "";
 	static String myurl = "";
-	private static String url = "";
-	private static boolean pc = false;
 	private static ConnectionPool pool = null;
 	static {
 		try {
@@ -81,11 +79,6 @@ public class ConnectedGenerator {
 	 * @see #conn
 	 */
 	protected static Statement stmt = null;
-
-	/**
-	 * A flag indicating if the properties were loaded or not.
-	 */
-	private boolean isLoaded = false;
 
 	/**
 	 * Commit a SELECT statement and returns a <code>ResultSet</code> containing the

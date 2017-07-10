@@ -3,7 +3,6 @@ package lexicon.generate;
 import java.util.List;
 import java.util.StringTokenizer;
 import lexicon.contents.exception_types.NounExceptionType;
-import lexicon.contents.exception_types.PrepositionExceptionType;
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
 
@@ -97,7 +96,7 @@ public class NounGen extends ItemGen {
 		if (!PGN.equals("unspecified")) {
 			suffixFunction = "possessive";
 			construct = "false";
-			StringTokenizer st = new StringTokenizer(PGN, "/");
+			new StringTokenizer(PGN, "/");
 
 			// String currentToken = st.nextToken();
 			// suffixPerson = String.valueOf(currentToken.charAt(0));
@@ -565,9 +564,9 @@ public class NounGen extends ItemGen {
 					|| ((number.equals("dual and plural") && inflectPossessiveP))) {
 				StringTokenizer stPossessive = new StringTokenizer(inflectedItem, ",");
 				StringTokenizer stPGN = new StringTokenizer(PGNTokens10, ",");
-				StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-				StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-				StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
+				new StringTokenizer(personTokens10, ",");
+				new StringTokenizer(numberTokens10, ",");
+				new StringTokenizer(genderTokens10, ",");
 				while (stPGN.hasMoreTokens()) {
 					PGN = stPGN.nextToken();
 					inflectedItem = stPossessive.nextToken();

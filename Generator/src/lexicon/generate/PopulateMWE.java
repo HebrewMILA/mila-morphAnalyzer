@@ -98,13 +98,10 @@ public class PopulateMWE extends ConnectedGenerator {
 	public void populateMweX(int x, String transliterated, String pos, String undottedLexiconItem, String mw1id,
 			StringTokenizer st, String dottedLexiconItem, String id, int len, String spelling, String register,
 			boolean prefix, String definitnessVal) throws SQLException, UnsupportedEncodingException {
-		String sqlSelect = "";
 		String sqlInsert = "";
-		String mweinflectionsId = "";
 		char consecutive = '1';
 		dottedLexiconItem = URLEncoder.encode(dottedLexiconItem, "UTF-8");
 		undottedLexiconItem = URLEncoder.encode(undottedLexiconItem, "UTF-8");
-		ResultSet rs = null;
 		int i = 1;
 
 		String mweLastId = mw1id;

@@ -31,12 +31,8 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
     protected boolean has_InflectConstructP;
     protected boolean _InflectConstructP;
     protected java.lang.String _AdjectiveLexicalLink;
-    public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+    public final static java.lang.Class<JAXBVersion> version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
-
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.AcronymLexiconType.class);
-    }
 
     public java.lang.String getFeminine() {
         if (_Feminine == null) {
@@ -543,12 +539,8 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
         implements lexicon.jaxb.AcronymLexiconType.Add, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
     {
 
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+        public final static java.lang.Class<JAXBVersion> version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AcronymLexiconType.Add.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -831,7 +823,6 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1022,12 +1013,8 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
         implements lexicon.jaxb.AcronymLexiconType.Remove, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
     {
 
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+        public final static java.lang.Class<JAXBVersion> version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AcronymLexiconType.Remove.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1310,7 +1297,6 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1501,12 +1487,8 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
         implements lexicon.jaxb.AcronymLexiconType.Replace, com.sun.xml.bind.RIElement, com.sun.xml.bind.JAXBObject, lexicon.jaxb.impl.runtime.UnmarshallableObject, lexicon.jaxb.impl.runtime.XMLSerializable, lexicon.jaxb.impl.runtime.ValidatableObject
     {
 
-        public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+        public final static java.lang.Class<JAXBVersion> version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AcronymLexiconType.Replace.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1789,7 +1771,6 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -2541,7 +2522,6 @@ public class AcronymLexiconTypeImpl implements lexicon.jaxb.AcronymLexiconType, 
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {

@@ -293,8 +293,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType {
 		} catch (Exception e) {
 		}
 		sql += ", '" + dotted + "', 0)";
-		// System.out.println("sql=" + sql);
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		// System.out.println("id======" + id);
 		addPos();
@@ -377,7 +376,7 @@ public class ItemType extends Content implements lexicon.jaxb.ItemType {
 			senses = new ArrayList();
 			String sql = "SELECT sid from sense WHERE id=" + id;
 			List sources = getContents(sql, "sid");
-			ArrayList result = new ArrayList();
+			new ArrayList();
 			for (int i = 0; i < sources.size(); i++) {
 				SenseType source = new SenseType();
 				source.open(((Integer) sources.get(i)).intValue());

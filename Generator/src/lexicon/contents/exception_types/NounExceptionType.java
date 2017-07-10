@@ -132,7 +132,7 @@ public class NounExceptionType extends Content implements lexicon.jaxb.NounExcep
 		sql += ", " + (isInflectConstructP() ? 1 : 0);
 		sql += ", " + (isInflectPossessiveP() ? 1 : 0);
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

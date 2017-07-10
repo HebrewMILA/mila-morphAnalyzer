@@ -6,7 +6,6 @@
  */
 package lexicon.contents.pos;
 
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,7 +83,7 @@ public class WprefixLexiconType extends Content implements lexicon.jaxb.WprefixL
 		sql += " , gender='" + getGender() + "'";
 		sql += " , number='" + getNumber() + "'";
 		sql += " WHERE id=" + getID();
-		int feedback = execute(sql);
+		execute(sql);
 		// System.out.println(sql);
 		return 1;
 	}

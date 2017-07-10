@@ -54,7 +54,6 @@ public class MorphMult2TaggerFormat implements Constants {
 	public static void main(String[] args) {
 		String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\output1.xml";
 		String outputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy1.txt";
-		String dprefixesDataFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\dprefixes.data";
 		// String inputFile = args[0];
 		// String outputFile = args[1];
 		MorphMult2TaggerFormat m = new MorphMult2TaggerFormat();
@@ -491,8 +490,8 @@ public class MorphMult2TaggerFormat implements Constants {
 			} else {
 				String status = base.getParticiple().getStatus();
 				String definiteness = base.getParticiple().getDefiniteness();
-				String gender = base.getParticiple().getGender();
-				String number = base.getParticiple().getNumber();
+				base.getParticiple().getGender();
+				base.getParticiple().getNumber();
 				// type=noun or type=adjective
 				if (status != null && status.equals("construct")) {
 					bw.write("\t");
@@ -624,8 +623,6 @@ public class MorphMult2TaggerFormat implements Constants {
 	// function simukates it
 	public String myMorp2Tagger(String inStr, String outputDir)
 			throws JAXBException, IOException {
-		// System.out.println("(F) MorphMult2TaggerFormat.myMorp2Tagger()");
-		String finalOutputString = "";
 		InputStream in = null;
 		FileOutputStream out = null;
 		try {
@@ -652,7 +649,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		String outputFileName = "/outputFile" + randomNum + ".nf";
 
 		PerformUniqeOutput p = new PerformUniqeOutput();
-		finalOutputString = p.myUniqueOutput(outputString.toString(), outputDir
+		p.myUniqueOutput(outputString.toString(), outputDir
 				+ outputFileName);
 		// return finalOutputString;
 		return outputFileName;
@@ -660,9 +657,6 @@ public class MorphMult2TaggerFormat implements Constants {
 
 	public String myWEBMorp2Tagger(String inStr, String outputDir)
 			throws JAXBException, IOException {
-		// System.out.println("(F) MorphMult2TaggerFormat.myWEBMorp2Tagger()");
-		// Data.webFlag = true;
-		String finalOutputString = "";
 		InputStream in = null;
 		FileOutputStream out = null;
 		try {
@@ -689,7 +683,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		String outputFileName = "/outputFile" + randomNum + ".nf";
 
 		PerformUniqeOutput p = new PerformUniqeOutput();
-		finalOutputString = p.myUniqueOutput(outputString.toString(), outputDir
+		p.myUniqueOutput(outputString.toString(), outputDir
 				+ outputFileName);
 		// return finalOutputString;
 		return outputFileName;

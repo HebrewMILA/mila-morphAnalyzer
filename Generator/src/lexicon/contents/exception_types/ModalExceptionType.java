@@ -79,7 +79,7 @@ public class ModalExceptionType extends Content implements lexicon.jaxb.ModalExc
 		sql += ", '" + getPerson() + "'";
 		sql += ", '" + getTense() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

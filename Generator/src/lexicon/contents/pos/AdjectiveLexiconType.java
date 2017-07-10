@@ -8,12 +8,14 @@
 package lexicon.contents.pos;
 
 import lexicon.contents.Content;
+import lexicon.contents.EmptyContent;
 
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import lexicon.contents.exception_types.NounExceptionType;;
+import lexicon.contents.exception_types.NounExceptionType;
+import lexicon.jaxb.impl.NounExceptionTypeImpl;;
 
 /**
  * ���� �� ����� ��� ������ ����
@@ -276,7 +278,7 @@ public class AdjectiveLexiconType extends Content implements lexicon.jaxb.Adject
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			NounExceptionType exceptionType = new NounExceptionType(
-					(lexicon.jaxb.impl.NounExceptionTypeImpl) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
@@ -287,7 +289,7 @@ public class AdjectiveLexiconType extends Content implements lexicon.jaxb.Adject
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			NounExceptionType exceptionType = new NounExceptionType(
-					(lexicon.jaxb.impl.NounExceptionTypeImpl) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
@@ -313,7 +315,7 @@ public class AdjectiveLexiconType extends Content implements lexicon.jaxb.Adject
 	}
 
 	public void load() {
-		List actions = getActions();
+		List<NounExceptionTypeImpl> actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
 		setGender(getString("gender"));
@@ -332,9 +334,9 @@ public class AdjectiveLexiconType extends Content implements lexicon.jaxb.Adject
 		setInflectConstructP(getInt("inflectConstructP") == 1);
 	}
 
-	public java.util.List getActions() {
-		List actions = getContents("noun_exception_type", "id", id);
-		ArrayList result = new ArrayList();
+	public java.util.List<NounExceptionTypeImpl> getActions() {
+		List<EmptyContent> actions = getContents("noun_exception_type", "id", id);
+		ArrayList<NounExceptionTypeImpl> result = new ArrayList<NounExceptionTypeImpl>();
 		for (int i = 0; i < actions.size(); i++) {
 			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
@@ -589,7 +591,7 @@ public class AdjectiveLexiconType extends Content implements lexicon.jaxb.Adject
 	 * {@link lexicon.jaxb.AdjectiveLexiconType.Replace}
 	 * 
 	 */
-	public java.util.List getAddOrReplaceOrRemove() {
+	public java.util.List<NounExceptionTypeImpl> getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}
 

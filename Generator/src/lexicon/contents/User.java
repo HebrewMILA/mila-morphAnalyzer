@@ -61,7 +61,7 @@ public class User extends Content {
 		sql += ", " + isEditor;
 		int isAdmin = getInt("is_admin");
 		sql += ", " + isAdmin + ")";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

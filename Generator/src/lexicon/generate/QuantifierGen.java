@@ -6,11 +6,7 @@
  */
 package lexicon.generate;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.List;
-import java.util.StringTokenizer;
-
 import lexicon.contents.exception_types.QuantifierExceptionType;
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
@@ -137,48 +133,7 @@ public class QuantifierGen extends ItemGen {
 
 	}
 
-	private void generateConstruct(String transliterated) throws Exception {
-		if (!gender.equals("masculine and feminine")) {
-			int index = transliterated.indexOf('-');
-			if (index == -1) {
-				String inputCondition = "";
-				inputCondition = "masculine";
-				if (gender.equals("masculine")) {
-					findRule(transliterated, inputCondition, "constructQuantifier", 3);
-					surface = Translate.Eng2Heb(inflectedItem);
-				}
-				construct = "true";
-				// if absolute and construct are the same don't produce separate
-				// entry
-				// if (!transliterated.equals(inflectedItem)) {
-				boolean match = false;
-				// Handle replace of construct
-				if (replaceExceptionList.size() > 0) {
-					for (int i = 0; i < replaceExceptionList.size(); i++) {
-						QuantifierExceptionType quantifierExceptionType = new QuantifierExceptionType();
-						quantifierExceptionType.open(((Integer) replaceExceptionList.get(i)).intValue());
-						String exceptionConstruct = quantifierExceptionType.getConstruct();
-						if (exceptionConstruct.equals("true")) {
-							inflectedItem = quantifierExceptionType.getTransliterated();
-							surface = Translate.Eng2Heb(inflectedItem);
-							inflectionBase = Translate.Eng2Heb(inflectedItem);
-							spelling = quantifierExceptionType.getSpelling();
-							register = quantifierExceptionType.getRegister();
-							PGN = quantifierExceptionType.getPgn();
-							populateDatabase();
-							match = true;
-							break;
-						}
-					}
-					// }
-					if (!match) {
-						inflectionBase = inflectedItem;
-						populateDatabase();
-					}
-				}
-			}
-		}
-	}
+	
 
 	// // replace exceptions are not defined for possessive for quantifier only
 	// for

@@ -1,7 +1,6 @@
 package lexicon;
 
 import lexicon.contents.EmptyContent;
-import lexicon.tools.LexiconUtils;
 
 /**
  * @author syjacob class for getting statictis from out lexicon

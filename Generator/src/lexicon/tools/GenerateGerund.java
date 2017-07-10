@@ -221,7 +221,7 @@ public class GenerateGerund extends ConnectedGenerator {
 
 					gerundNikud = handleShin(gerundNikud, dotted);
 					gerundNikud = bgdkft(gerundNikud);
-					String encodedGerund = URLEncoder.encode(gerundNikud, "UTF-8");
+					URLEncoder.encode(gerundNikud, "UTF-8");
 
 					pGerunds.print(id);
 					pGerunds.print(" 	" + surface);
@@ -264,7 +264,7 @@ public class GenerateGerund extends ConnectedGenerator {
 		String transliterated = "";
 		String dottedId = "";
 		String undottedId = "";
-		java.util.Date rightNow = new java.util.Date();
+		new java.util.Date();
 		try {
 			rs = null;
 			sql = "select transliterated,id from item where pos='noun' and dotted='" + encodedGerundNikudStr
@@ -272,7 +272,7 @@ public class GenerateGerund extends ConnectedGenerator {
 			rs = getData(sql);
 			while (rs.next()) {
 				transliterated = rs.getString("transliterated");
-				String surface = Translate.Eng2Heb(transliterated);
+				Translate.Eng2Heb(transliterated);
 				dottedId = rs.getString("id");
 				pGerunds.print("	" + dottedId);
 				found = true;
@@ -505,7 +505,7 @@ public class GenerateGerund extends ConnectedGenerator {
 				}
 
 				int indexd1 = dotted.indexOf('ù');
-				int indexd2 = gerundNikud.indexOf('ù');
+				gerundNikud.indexOf('ù');
 				if (indexd1 != -1) {
 					if (dotted.indexOf('Ì') == indexd1 + 1) {
 						gerundNikud = gerundNikud.replaceAll("ù", dotted.substring(indexd1, indexd1 + 3));
@@ -548,7 +548,6 @@ public class GenerateGerund extends ConnectedGenerator {
 		ResultSet rs = null;
 		String gerundNikud = "";
 		String gerund = "";
-		int index;
 		int rootLen;
 		pGerunds.println("Hitpael");
 		pGerunds.println("**********************************");
@@ -842,7 +841,7 @@ public class GenerateGerund extends ConnectedGenerator {
 					} else
 						gerundNikud = gerundNikud.replaceAll("ù", dotted.substring(indexd1, indexd1 + 2));
 				}
-				String encodedGerund = URLEncoder.encode(gerundNikud, "UTF-8");
+				URLEncoder.encode(gerundNikud, "UTF-8");
 
 				pGerunds.print(root);
 				pGerunds.print(" 	" + id);
@@ -966,7 +965,6 @@ public class GenerateGerund extends ConnectedGenerator {
 
 	public void findInExceptionNounTable(String encodedGerundNikudStr, String transliteratedGerund) {
 		ResultSet rs = null;
-		boolean found = false;
 		String sql = "";
 		String transliterated = "";
 		try {
@@ -976,10 +974,9 @@ public class GenerateGerund extends ConnectedGenerator {
 			// System.out.println("sql="+sql);
 			while (rs.next()) {
 				transliterated = rs.getString("transliterated");
-				String surface = Translate.Eng2Heb(transliterated);
+				Translate.Eng2Heb(transliterated);
 				String id = rs.getString("id");
 				pGerunds.print("	$" + id);
-				found = true;
 			}
 			rs.close();
 			releaseConnection();
@@ -996,8 +993,6 @@ public class GenerateGerund extends ConnectedGenerator {
 				String id = rs.getString("id");
 				pGerunds.print("	$|" + id);
 			}
-			// }
-			found = false;
 			pGerunds.println();
 			releaseConnection();
 		} catch (Exception e) {

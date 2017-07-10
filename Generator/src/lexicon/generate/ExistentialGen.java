@@ -7,8 +7,6 @@
 package lexicon.generate;
 
 import java.util.List;
-import java.util.StringTokenizer;
-
 import lexicon.contents.exception_types.ExistentialExceptionType;
 import lexicon.contents.types.ItemType;
 

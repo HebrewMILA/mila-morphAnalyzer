@@ -6,19 +6,13 @@
  */
 package lexicon.dbUtils;
 
-import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import lexicon.contents.Connected;
 import lexicon.contents.ConnectedGenerator;
-
-import lexicon.stringUtils.Translate;
 
 /**
  * @author daliabo
@@ -411,7 +405,6 @@ public class Download2File extends ConnectedGenerator {
 		String conjunctionTag;
 
 		StringBuffer decodedPrefixRecord = null;
-		BufferedOutputStream bf;
 		String sql = "select * from prefixes";
 		ResultSet rs = null;
 		if (pc)
@@ -1029,11 +1022,8 @@ public class Download2File extends ConnectedGenerator {
 		String interrogativeType = "";
 		String baseUndottedLItem = "";
 		String quantifierType = "";
-		String surface = "";
-
 		String field;
 		StringBuffer decodedInflectionRecord = null;
-		BufferedOutputStream bf;
 		// String sql =
 		// "select * from inflections where baseLexiconPointer=10521";
 		// String sql =
@@ -1086,10 +1076,9 @@ public class Download2File extends ConnectedGenerator {
 
 					// surface
 					field = rs.getString("surface");
-					if (field == null || field.equals("") || field.equals("unspecified"))
-						surface = "-";
-					else
-						surface = field;
+					if (field == null || field.equals("") || field.equals("unspecified")) {
+					} else {
+					}
 
 					// register
 					field = rs.getString("register");

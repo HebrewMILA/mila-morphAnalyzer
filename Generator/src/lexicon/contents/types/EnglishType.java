@@ -47,7 +47,7 @@ public class EnglishType extends Content implements lexicon.jaxb.EnglishType {
 		}
 		sql += ", '" + te + "'";
 		sql += ", '" + getWeight() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

@@ -80,7 +80,7 @@ public class ProperNameExceptionType extends Content implements lexicon.jaxb.Pro
 		sql += ", '" + getDefiniteness() + "'";
 		sql += ", '" + getDirection() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

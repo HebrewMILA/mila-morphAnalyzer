@@ -7,7 +7,6 @@
 package lexicon.generate;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,8 +17,6 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import lexicon.contents.exception_types.MultiWordNounExceptionType;
-import lexicon.contents.exception_types.NounExceptionType;
-
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
 
@@ -252,14 +249,13 @@ public class MultiWordNounGen extends ItemGen {
 				String exceptionRegister = multiWordNounExceptionType.getRegister();
 				exceptionTransliterated = multiWordNounExceptionType.getTransliterated();
 
-				// exception fields for add
-				String exceptionDefiniteness = multiWordNounExceptionType.getDefiniteness();
-				String exceptionDotted = multiWordNounExceptionType.getDotted();
-				String exceptionUndotted = multiWordNounExceptionType.getUndotted();
-				String exceptionFeminine = multiWordNounExceptionType.getFeminine();
-				String exceptionPlural = multiWordNounExceptionType.getPlural();
-				boolean exceptionInflectPossessiveS = multiWordNounExceptionType.isInflectPossessiveS();
-				boolean exceptionInflectPossessiveP = multiWordNounExceptionType.isInflectPossessiveP();
+				multiWordNounExceptionType.getDefiniteness();
+				multiWordNounExceptionType.getDotted();
+				multiWordNounExceptionType.getUndotted();
+				multiWordNounExceptionType.getFeminine();
+				multiWordNounExceptionType.getPlural();
+				multiWordNounExceptionType.isInflectPossessiveS();
+				multiWordNounExceptionType.isInflectPossessiveP();
 
 				/*
 				 * System.out.println("----------------------------"); System.out.println(action
@@ -538,7 +534,6 @@ public class MultiWordNounGen extends ItemGen {
 	protected void inflectPossessive(String transliterated2) throws UnsupportedEncodingException, Exception {
 		inflectConstruct();
 
-		boolean iiSuffix = false;
 		String transliterated1 = inflectedItem;
 		inflectedItem = transliterated2;
 
@@ -549,8 +544,8 @@ public class MultiWordNounGen extends ItemGen {
 		// base
 		// is inflections base
 		// System.out.println("inflectedItem sent to rule handling ="+ inflectedItem);
-		if (inflectedItem.substring(inflectedItem.length() - 2).equals("ii"))
-			iiSuffix = true;
+		if (inflectedItem.substring(inflectedItem.length() - 2).equals("ii")) {
+		}
 		if (!inflectionBase.equals("")) {
 			inflectionBaseHandling();
 			inflectedItem = inflectionBase;

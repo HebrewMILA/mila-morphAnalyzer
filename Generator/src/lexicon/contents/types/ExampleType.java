@@ -46,7 +46,7 @@ public class ExampleType extends Content implements lexicon.jaxb.ExampleType {
 		} catch (Exception e) {
 		}
 		sql += ", '" + phrase + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

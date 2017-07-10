@@ -7,8 +7,6 @@
 package lexicon.contents.exception_types;
 
 import java.net.URLEncoder;
-import java.util.List;
-
 import lexicon.contents.Content;
 import lexicon.tools.LexiconUtils;
 
@@ -81,7 +79,7 @@ public class CopulaExceptionType extends Content implements lexicon.jaxb.CopulaE
 		sql += ", '" + getPerson() + "'";
 		sql += ", '" + getTense() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

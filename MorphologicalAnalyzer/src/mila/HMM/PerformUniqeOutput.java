@@ -27,7 +27,6 @@ import java.util.Vector;
 public class PerformUniqeOutput {
 	public static void main(String[] args) throws IOException {
 		PerformUniqeOutput r = new PerformUniqeOutput();
-		String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy1.txt";
 		String outputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy2.txt";
 		r.myUniqueOutput("</paragraph>\n" + "#\n" + "hhzdmnwt\n"
 				+ "\t(NOUN hzdmnwt)" + "U\n" + "(yyQUOT yyQUOT)\n" + ".\n"
@@ -79,11 +78,9 @@ public class PerformUniqeOutput {
 
 	public String process(String input) throws IOException {
 		String line = "";
-		Vector lineVec = new Vector();
+		new Vector();
 		HashMap<String, String> hashmap = null;
 		String token = "";
-		String pos = "";
-
 		StringReader reader = new StringReader(input);
 		bi = new BufferedReader(reader);
 		// start handling tokens and analysis - loop through the file lines

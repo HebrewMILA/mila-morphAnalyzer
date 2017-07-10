@@ -52,16 +52,6 @@ public class PronounGen extends ItemGen {
 		}
 	}
 
-	private void replaceException() {
-		String sql = buildSql("replace", "pronoun_exception_type");
-		replaceExceptionList = handleException(sql);
-	}
-
-	private void removeException() {
-		String sql = buildSql("remove", "pronoun_exception_type");
-		removeExceptionList = handleException(sql);
-	}
-
 	protected void addException() throws Exception {
 		String sql = buildSql("add", "pronoun_exception_type");
 		List addExceptionList = handleException(sql);

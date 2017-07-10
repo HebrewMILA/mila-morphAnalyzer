@@ -6,8 +6,6 @@
  */
 package lexicon.contents.pos;
 
-import java.net.URLEncoder;
-
 import lexicon.contents.Content;
 
 /**
@@ -81,7 +79,7 @@ public class TitleLexiconType extends Content implements lexicon.jaxb.TitleLexic
 		sql += ", number='" + getNumber() + "'";
 		sql += ", definiteness=" + (isDefiniteness() ? 1 : 0);
 		sql += " WHERE id=" + getID();
-		int feedback = execute(sql);
+		execute(sql);
 		return 1;
 	}
 

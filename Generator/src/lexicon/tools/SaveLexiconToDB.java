@@ -10,8 +10,6 @@ import lexicon.contents.types.*;
 
 public class SaveLexiconToDB {
 
-	private static final String JAXB_PACKAGE = "lexicon.jaxb";
-
 	public static void main(String[] args) {
 		/*
 		 * 

@@ -1,10 +1,7 @@
 package lexicon.generate;
 
 import java.util.List;
-import java.util.StringTokenizer;
-
 import lexicon.contents.exception_types.AcronymExceptionType;
-import lexicon.contents.exception_types.NounExceptionType;
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
 
@@ -21,8 +18,6 @@ public class AcronymGen extends ItemGen {
 
 	private String feminineBase = "";
 
-	private String masculineBase = "";
-
 	private String pluralBase = "";
 
 	private boolean inflectConstructS = true;
@@ -34,8 +29,6 @@ public class AcronymGen extends ItemGen {
 	private String definiteness = "";
 
 	private String pluralFeminineBase = "";
-
-	private String lexiconSurface = "";
 
 	public AcronymGen(ItemType item) {
 		super(item);
@@ -70,7 +63,6 @@ public class AcronymGen extends ItemGen {
 			inflectConstructS = false;
 			inflectConstructP = false;
 		}
-		lexiconSurface = surface;
 		if (basePos.equals("conjunction"))
 			type = item.getAcronym().getConjunctionType();
 		else if (basePos.equals("propername"))
@@ -335,7 +327,6 @@ public class AcronymGen extends ItemGen {
 
 	private void inflectLexiconItem() throws Exception {
 
-		masculineBase = inflectedItem;
 		populateDatabase();
 
 		removeInvertedCommas();

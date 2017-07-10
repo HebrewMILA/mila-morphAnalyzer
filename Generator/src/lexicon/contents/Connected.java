@@ -44,10 +44,6 @@ public class Connected {
 	private static String connOwner = "";
 	private static StackTraceElement[] stackTrace = null;
 
-	private static String url = "";
-
-	private static boolean pc = false;
-
 	private static ConnectionPool pool = null;
 	static {
 		try {
@@ -90,11 +86,6 @@ public class Connected {
 	 * @see #conn
 	 */
 	protected static Statement stmt = null;
-
-	/**
-	 * A flag indicating if the properties were loaded or not.
-	 */
-	private boolean isLoaded = false;
 
 	/**
 	 * Commit a SELECT statement and returns a <code>ResultSet</code> containing the

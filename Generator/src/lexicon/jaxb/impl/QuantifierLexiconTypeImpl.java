@@ -20,10 +20,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.QuantifierLexiconType.class);
-    }
-
     public java.lang.String getType() {
         if (_Type == null) {
             return "unspecified";
@@ -241,10 +237,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.QuantifierLexiconType.Add.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -539,7 +531,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -748,10 +739,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.QuantifierLexiconType.Remove.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1047,7 +1034,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1256,10 +1242,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.QuantifierLexiconType.Replace.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1555,7 +1537,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1961,7 +1942,6 @@ public class QuantifierLexiconTypeImpl implements lexicon.jaxb.QuantifierLexicon
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {

@@ -6,7 +6,6 @@
 package lexicon.generate;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,11 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lexicon.contents.Connected;
-import lexicon.contents.exception_types.MultiWordFrozenExceptionType;
 import lexicon.contents.exception_types.MultiWordNounAdjectiveExceptionType;
-import lexicon.contents.exception_types.NounExceptionType;
-
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
 
@@ -255,14 +250,13 @@ public class MultiWordNounAdjectiveGen extends ItemGen {
 				String exceptionRegister = multiWordNounAdjectiveExceptionType.getRegister();
 				exceptionTransliterated = multiWordNounAdjectiveExceptionType.getTransliterated();
 
-				// exception fields for add
-				String exceptionDefiniteness = multiWordNounAdjectiveExceptionType.getDefiniteness();
-				String exceptionDotted = multiWordNounAdjectiveExceptionType.getDotted();
-				String exceptionUndotted = multiWordNounAdjectiveExceptionType.getUndotted();
-				String exceptionFeminine = multiWordNounAdjectiveExceptionType.getFeminine();
-				String exceptionPlural = multiWordNounAdjectiveExceptionType.getPlural();
-				boolean exceptionInflectPossessiveS = multiWordNounAdjectiveExceptionType.isInflectPossessiveS();
-				boolean exceptionInflectPossessiveP = multiWordNounAdjectiveExceptionType.isInflectPossessiveP();
+				multiWordNounAdjectiveExceptionType.getDefiniteness();
+				multiWordNounAdjectiveExceptionType.getDotted();
+				multiWordNounAdjectiveExceptionType.getUndotted();
+				multiWordNounAdjectiveExceptionType.getFeminine();
+				multiWordNounAdjectiveExceptionType.getPlural();
+				multiWordNounAdjectiveExceptionType.isInflectPossessiveS();
+				multiWordNounAdjectiveExceptionType.isInflectPossessiveP();
 
 				/*
 				 * System.out.println("----------------------------"); System.out.println(action
@@ -564,7 +558,6 @@ public class MultiWordNounAdjectiveGen extends ItemGen {
 	protected void inflectPossessive(String transliterated2) throws UnsupportedEncodingException, Exception {
 		inflectConstruct();
 
-		boolean iiSuffix = false;
 		String transliterated1 = inflectedItem;
 		inflectedItem = transliterated2;
 
@@ -575,8 +568,8 @@ public class MultiWordNounAdjectiveGen extends ItemGen {
 		// base
 		// is inflections base
 		// System.out.println("inflectedItem sent to rule handling ="+ inflectedItem);
-		if (inflectedItem.substring(inflectedItem.length() - 2).equals("ii"))
-			iiSuffix = true;
+		if (inflectedItem.substring(inflectedItem.length() - 2).equals("ii")) {
+		}
 		if (!inflectionBase.equals("")) {
 			inflectionBaseHandling();
 			inflectedItem = inflectionBase;

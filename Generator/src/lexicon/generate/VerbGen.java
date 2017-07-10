@@ -455,7 +455,6 @@ public class VerbGen extends ItemGen {
 		String suffixes = "ti,t,t," + root.charAt(2) + "," + root.charAt(2) + "h,nw,tm,tn," + root.charAt(2) + "w";
 		vgIP.generatePast("", suffixes, "w,w,w,-,-,w,w,w,-", 0, 2, 3, 3);
 		String inside1 = "w" + root.charAt(2) + ",";
-		String inside2 = inside1 + inside1 + inside1 + inside1;
 		vgIP.generatePresent("", "-,t,im,wt", "w,w,w,w", 0, 1, 1, 3);
 		vgIP.generateFuture("a,ti,ti,ii,ti,ni,ti,ti,ii,ti", "-,-,i,-,-,-,w,nh,w,nh", "w,w,w,w,w,w,w,w,w,w", 0, 1, 2, 3);
 		vgIP.setSpelling(IRREGULAR_SPELLING);
@@ -917,7 +916,6 @@ public class VerbGen extends ItemGen {
 		setGenInflection();
 		int len = root.length();
 		if (len < 3) {
-			int i = 0;
 		}
 		if ((root.charAt(len - 1) == 'h') || (root.charAt(len - 1) == 'i')) {
 			// vgIP.generatePresent("-,m,-,-", "-,h,-,-", "-,w,-,-", 0, 1, 1,
@@ -1072,7 +1070,6 @@ public class VerbGen extends ItemGen {
 			vgIP.setSpelling(IRREGULAR_SPELLING);
 		int len = root.length();
 		if (len < 3) {
-			int i = 0;
 		}
 		// הפועל התרוקן הוא יצא דופן - צריך להטות אותו כמקרה פרטי
 		if (root.equals("rqn")) {
@@ -2055,9 +2052,6 @@ public class VerbGen extends ItemGen {
 	// נסוג
 	private void inflectPattern61() throws Exception {
 		setGenInflection();
-		String pastPrefix = "";
-		String presentPrefix = "";
-
 		vgIP.generateBareInfinitive("hi", "w", 0, 1, 2, 3, "");
 		// ברב מילים להידון ואילו אצל שלמה להדון
 		vgIP.generateInfinitive("hi", "w", 0, 1, 2, 3, "");
@@ -2091,9 +2085,6 @@ public class VerbGen extends ItemGen {
 	// נצוד
 	private void inflectPattern62() throws Exception {
 		setGenInflection();
-		String pastPrefix = "";
-		String presentPrefix = "";
-
 		vgIP.generateBareInfinitive("hi", "w", 0, 1, 2, 3, "");
 
 		vgIP.generateInfinitive("hi", "w", 0, 1, 2, 3, "");

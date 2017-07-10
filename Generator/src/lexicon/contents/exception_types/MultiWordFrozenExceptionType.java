@@ -73,7 +73,7 @@ public class MultiWordFrozenExceptionType extends Content implements lexicon.jax
 		sql += ", " + (isDefiniteness() ? 1 : 0);
 		sql += ", " + (isAcceptDefiniteness() ? 1 : 0);
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

@@ -249,7 +249,11 @@ class GrammarInfoFacade implements GrammarInfo {
         final com.sun.msv.grammar.Expression top = pool.createChoice(g1.getTopLevel(),g2.getTopLevel());
         
         return new com.sun.msv.grammar.Grammar() {
-            public com.sun.msv.grammar.ExpressionPool getPool() {
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+				public com.sun.msv.grammar.ExpressionPool getPool() {
                 return pool;
             }
             public com.sun.msv.grammar.Expression getTopLevel() {

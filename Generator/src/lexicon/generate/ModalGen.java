@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import lexicon.contents.exception_types.ModalExceptionType;
-import lexicon.contents.exception_types.NumeralExceptionType;
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
 

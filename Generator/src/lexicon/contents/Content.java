@@ -41,7 +41,7 @@ public abstract class Content extends Connected {
 	 * Holds the content data from the DB. Each data field is accesible using set()
 	 * and getString() / getInt() methods, using the same name as in the DB record.
 	 */
-	protected HashMap info = new HashMap();
+	protected HashMap<String, Comparable> info = new HashMap<String, Comparable>();
 
 	/**
 	 * The name of the table of the current content, such as items, events etc. The
@@ -112,7 +112,7 @@ public abstract class Content extends Connected {
 		// Removing record from the content's table
 		String sql = "DELETE FROM " + getTableName() + " WHERE " + getIDName() + " = " + getID();
 		feedback = feedback + execute(sql);
-		info = new HashMap();
+		info = new HashMap<String, Comparable>();
 		id = 0;
 		return feedback;
 	}
@@ -224,7 +224,7 @@ public abstract class Content extends Connected {
 	protected void openRS(ResultSet rs) {
 		if (rs == null)
 			return;
-		info = new HashMap();
+		info = new HashMap<String, Comparable>();
 		int cType;
 		try {
 			ResultSetMetaData meta = rs.getMetaData();
@@ -604,8 +604,8 @@ public abstract class Content extends Connected {
 	 *           the id to compare the idName to.
 	 * @return
 	 */
-	public List getContents(String tableName, String idName, int id) {
-		ArrayList result = new ArrayList();
+	public List<EmptyContent> getContents(String tableName, String idName, int id) {
+		ArrayList<EmptyContent> result = new ArrayList<EmptyContent>();
 		String sql = "SELECT * FROM " + tableName + " WHERE " + idName + "=" + id;
 		try {
 			ResultSet rs = null;
@@ -640,9 +640,9 @@ public abstract class Content extends Connected {
 	 */
 	protected int removeContents(String tableName, String idName1, String idName2, int id) {
 		int result = 0;
-		List list = getContents(tableName, idName1, id);
+		List<EmptyContent> list = getContents(tableName, idName1, id);
 		for (int i = 0; i < list.size(); i++) {
-			Content content = (Content) list.get(i);
+			Content content = list.get(i);
 			content.id = content.getInt(idName2);
 			content.TABLE = tableName;
 			content.IDNAME = idName2;
@@ -658,8 +658,8 @@ public abstract class Content extends Connected {
 	 * @param field
 	 * @return
 	 */
-	public List getContents(String sql, String field) {
-		ArrayList result = new ArrayList();
+	public List<Integer> getContents(String sql, String field) {
+		ArrayList<Integer> result = new ArrayList<Integer>();
 		try {
 			ResultSet rs = null;
 			rs = getData(sql);
@@ -685,8 +685,8 @@ public abstract class Content extends Connected {
 	 * @param sql
 	 * @return
 	 */
-	public List getItems(String sql) {
-		ArrayList result = new ArrayList();
+	public List<SearchItem> getItems(String sql) {
+		ArrayList<SearchItem> result = new ArrayList<SearchItem>();
 		try {
 			ResultSet rs = null;
 			rs = getData(sql);
@@ -749,8 +749,8 @@ public abstract class Content extends Connected {
 	 * @param sql
 	 * @return
 	 */
-	public List getActions(String sql) {
-		ArrayList result = new ArrayList();
+	public List<ActionType> getActions(String sql) {
+		ArrayList<ActionType> result = new ArrayList<ActionType>();
 		try {
 			ResultSet rs = null;
 			rs = getData(sql);

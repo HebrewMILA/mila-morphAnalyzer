@@ -613,9 +613,9 @@ public abstract class ItemGen implements ItemInterface {
 		suffixFunction = input_suffixFunction;
 		StringTokenizer stSuff = new StringTokenizer(suffixes, ",");
 		StringTokenizer stPGN = new StringTokenizer(PGNPRONOMIALTokens10, ",");
-		StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
+		new StringTokenizer(personTokens10, ",");
+		new StringTokenizer(numberTokens10, ",");
+		new StringTokenizer(genderTokens10, ",");
 		definitnessVal = "unspecified";
 		while (stSuff.hasMoreTokens()) {
 			boolean removeFlag = false;

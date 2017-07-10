@@ -12,9 +12,6 @@ import java.util.List;
 
 import lexicon.contents.Content;
 import lexicon.contents.exception_types.PronounExceptionType;
-import lexicon.contents.pos.PronounLexiconType.Add;
-import lexicon.contents.pos.PronounLexiconType.Remove;
-import lexicon.contents.pos.PronounLexiconType.Replace;
 
 /**
  * ���� �� ���� ������ ��� ��

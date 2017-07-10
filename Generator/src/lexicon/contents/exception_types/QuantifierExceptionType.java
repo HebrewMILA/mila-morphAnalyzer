@@ -100,7 +100,7 @@ public class QuantifierExceptionType extends Content implements lexicon.jaxb.Qua
 		sql += ", '" + getConstruct() + "'";
 		sql += ", " + (isInflectConstruct() ? 1 : 0) + "";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

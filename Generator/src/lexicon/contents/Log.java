@@ -29,7 +29,7 @@ public class Log extends EmptyContent {
 		sql += ", '" + action + "'";
 		sql += ", " + aid;
 		sql += ", '" + formatDateSQL(rightNow) + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

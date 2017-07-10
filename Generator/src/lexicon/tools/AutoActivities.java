@@ -20,10 +20,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.StringTokenizer;
 
-import lexicon.contents.Connected;
 import lexicon.contents.ConnectedGenerator;
 import lexicon.contents.Log;
-import lexicon.generate.PopulateMWE;
 import lexicon.stringUtils.Translate;
 
 /**
@@ -128,8 +126,6 @@ public class AutoActivities extends ConnectedGenerator {
 		BufferedReader bi = new BufferedReader(new InputStreamReader(new FileInputStream("intransitive.txt"), "utf8"));
 		String line = "";
 		String id = "";
-		String transitiveWithoutPaul = "";
-		String transitiveWithPaul = "";
 		String verb = "";
 		while ((line = bi.readLine()) != null) {
 			// System.out.println("line=" + line);
@@ -165,9 +161,7 @@ public class AutoActivities extends ConnectedGenerator {
 	}
 
 	public void copyNathionalityToNouns() throws NumberFormatException, IOException, SQLException {
-		int counter = 24362;
 		BufferedReader bi = new BufferedReader(new InputStreamReader(new FileInputStream("adjectivesi1.txt"), "utf8"));
-		String line = "";
 		String id = "";
 
 		while ((id = bi.readLine()) != null) {
@@ -188,8 +182,6 @@ public class AutoActivities extends ConnectedGenerator {
 
 			String sql = "update noun_exception_type set script='colloquial' where  gender='masculine' and number='plural' and id="
 					+ id;
-			counter++;
-
 			execute(sql);
 			releaseConnection();
 		}
@@ -242,7 +234,6 @@ public class AutoActivities extends ConnectedGenerator {
 				"C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\capitalOut.txt")));
 		String line = "";
 		String transliterated = "";
-		String id = "";
 		String undotted = "";
 
 		while ((line = bi.readLine()) != null) {
@@ -285,7 +276,6 @@ public class AutoActivities extends ConnectedGenerator {
 				new FileInputStream("C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\mwtown.txt")));
 		String line = "";
 		String transliterated = "";
-		String id = "";
 		String undotted = "";
 		String t1 = "";
 		String t2 = "";
@@ -401,8 +391,6 @@ public class AutoActivities extends ConnectedGenerator {
 	}
 
 	public void translate() throws UnsupportedEncodingException, IOException {
-		int aid = 898;
-		String id = "";
 		String line = "";
 		String english = "";
 		String hebrew = "";
@@ -429,7 +417,6 @@ public class AutoActivities extends ConnectedGenerator {
 	public void findLemma() throws SQLException {
 		String line = "";
 		String transliterated = "";
-		String undotted = "";
 		BufferedReader bi = null;
 		try {
 			bi = new BufferedReader(new InputStreamReader(new FileInputStream(

@@ -7,12 +7,8 @@
 package lexicon.generate;
 
 import java.util.List;
-import java.util.StringTokenizer;
-
-import lexicon.contents.exception_types.InterjectionExceptionType;
 import lexicon.contents.exception_types.PrepositionExceptionType;
 import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
 
 /**
  * @author daliabo
@@ -36,16 +32,6 @@ public class PrepositionGen extends ItemGen {
 
 	public PrepositionGen(ItemType item) {
 		super(item);
-	}
-
-	private void replaceException() {
-		String sql = buildSql("replace", "preposition_exception_type");
-		replaceExceptionList = handleException(sql);
-	}
-
-	private void removeException() {
-		String sql = buildSql("remove", "preposition_exception_type");
-		removeExceptionList = handleException(sql);
 	}
 
 	protected void addException() throws Exception {
@@ -83,7 +69,7 @@ public class PrepositionGen extends ItemGen {
 			PrepositionExceptionType prepositionExceptionType = new PrepositionExceptionType();
 			prepositionExceptionType.open(((Integer) exceptionList.get(i)).intValue());
 			String exceptionPGN = prepositionExceptionType.getPersonGenderNumber();
-			String exceptionAction = prepositionExceptionType.getAction();
+			prepositionExceptionType.getAction();
 
 			if ((!exceptionPGN.equals("unspecified")) && (action.equals("replace"))) {
 				PGN = exceptionPGN;
