@@ -57,7 +57,7 @@ public class ExistentialGen extends ItemGen {
 				suffixFunction = "unspecified";
 			populateDatabase();
 			if (!definiteness.equals("prohibited")) {
-				// Χ³β€Χ³β„ΆΧ³Β©Χ³Β Χ³οΏ½ , Χ³β€Χ³β„ΆΧ³Β©Χ³Β Χ³οΏ½
+				// διωπν , διωπο
 				addH();
 			}
 		}

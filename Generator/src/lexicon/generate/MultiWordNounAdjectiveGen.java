@@ -196,7 +196,7 @@ public class MultiWordNounAdjectiveGen extends ItemGen
 			if (type.equals("NNA") &&  gender.equals("masculine")) 
 			{
 				restTransliterated += "im";
-				restSurface += "×³â„¢×³ï¿½";
+				restSurface += "éí";
 			}
 			
 			if (!plural.equals("unspecified") && lexiconNumber.equals("singular")) 
@@ -255,7 +255,7 @@ public class MultiWordNounAdjectiveGen extends ItemGen
 				inflectedItem = "w" + nounExceptionType.getTransliterated();
 				inflectedItem = inflectedItem.replaceAll("&#39;", "'");
 				inflectedItem = inflectedItem.replaceAll("&#60;", "`");
-				surface = "×³â€¢" + nounExceptionType.getUndotted();
+				surface = "å" + nounExceptionType.getUndotted();
 				spelling = IRREGULAR_SPELLING;
 				addExceptionListHandling(MultiWordNounExceptionType);
 			}
@@ -374,8 +374,8 @@ public class MultiWordNounAdjectiveGen extends ItemGen
 				if (!action.equals("")) 
 				{
 					//System.out.println("plural base = " + inflectedItem);
-					//comment because of ×³ï¿½×³Â©×³Ã—×³â€ - ×³ï¿½×³Â©×³Ã—×³ï¿½×³â€¢×³Ã—
-					//×³Â¦×³Â¨×³â„¢×³ï¿½ ×³ï¿½×³â€¢×³â€¢×³â€œ×³ï¿½ ×³Â©×³â€º×³â‚ª×³â„¢×³Ã—×³â€ ×³ï¿½×³ï¿½ ×³ï¿½×³Ã—×³Â§×³ï¿½×³Â§×³ï¿½ - ×³ï¿½×³Ã—×³Â ×³â€×³â€™×³â„¢×³ï¿½ ×³Â©×³â€¢×³Â ×³â€ ×³â€º×³â„¢ ×³â€×³ï¿½×³â„¢×³ï¿½ ×³Â©×³â€¢×³Â ×³â€
+					//comment because of îùúä - îùúàåú
+					//öøéê ìååãà ùëôéúä ìà îú÷ì÷ì - îúğäâéí ùåğä ëé äîéï ùåğä
 					if (inflectedItem.endsWith("th") && (gender.equals("feminine")))
 					{
 						findRule(inflectedItem, "th", action, pluralSuffixMaxLength);
@@ -512,11 +512,11 @@ public class MultiWordNounAdjectiveGen extends ItemGen
 				{
 					findRule(inflectedItem, "", "constructMasculinePlural"+ mwPos, 2);
 					
-					//handle ×³â€™×³â€œ×³â„¢
+					//handle âãé
 					if (gender.equals("masculine")
 							&& baseTransliteratedItem1.endsWith("i")
 							&& !baseTransliteratedItem1.endsWith("ai")
-							//handle ×³Â©×³â€
+							//handle ùä
 							|| (baseTransliteratedItem1.endsWith("h") && baseTransliteratedItem1.length() == 2))
 						inflectedItem = inflectedItem + "i";
 					if (inflectedItem.equals(transliterated))
@@ -599,8 +599,7 @@ public class MultiWordNounAdjectiveGen extends ItemGen
 		//String masculineSingularConstruct="";
 		try 
 		{
-//			connection = DriverManager.getConnection("jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest","dummy1", "health&happiness");
-			connection = DriverManager.getConnection("jdbc:mariadb://yeda.cs.technion.ac.il:3306/playground_generatorTest","dummy1", "health&happiness");
+			connection = DriverManager.getConnection("jdbc:mysql://yeda.cs.technion.ac.il:3306/generatorTest","dummy1", "health&happiness");
 			PreparedStatement statement = null;
 			statement = connection.prepareStatement("SELECT *  FROM inflections where baseTransliteratedLItem=? and PGN!= 'unspecified'  and basePos='noun'" );									  
 			statement.setObject(1, transliterated2);
@@ -737,7 +736,7 @@ throws UnsupportedEncodingException, Exception
 	protected void generateInternalDefiniteness(String inflectedItem,String restTransliterated, String restSurface) 
 	throws Exception 
 	{
-		String mwUndotted = Translate.Eng2Heb(inflectedItem) + " ×³â€"+ restSurface.replaceFirst(" ", " ×³â€");
+		String mwUndotted = Translate.Eng2Heb(inflectedItem) + " ä"+ restSurface.replaceFirst(" ", " ä");
 		String mwTransliterated = inflectedItem + " h"+ restTransliterated.replaceFirst(" ", " h");
 		popualteMWE.popualteMWETables(baseTransliteratedItem,
 				undottedLexiconItem, '1', mwPos, dottedLexiconItem, id, "unspecified",
@@ -749,7 +748,7 @@ throws UnsupportedEncodingException, Exception
 	protected void generateInternalAndExternalDefiniteness(String inflectedItem,String restTransliterated, String restSurface) 
 	throws Exception 
 	{
-		String mwUndotted = " ×³â€" +Translate.Eng2Heb(inflectedItem) + " ×³â€"+ restSurface.replaceFirst(" ", " ×³â€");
+		String mwUndotted = " ä" +Translate.Eng2Heb(inflectedItem) + " ä"+ restSurface.replaceFirst(" ", " ä");
 		String mwTransliterated = "h" + inflectedItem + " h"+ restTransliterated.replaceFirst(" ", " h");
 		popualteMWE.popualteMWETables(baseTransliteratedItem,
 				undottedLexiconItem, '1', mwPos, dottedLexiconItem, id, "unspecified",
@@ -761,7 +760,7 @@ throws UnsupportedEncodingException, Exception
 	protected void generateExternalDefiniteness(String inflectedItem,String restTransliterated, String restSurface) 
 	throws Exception 
 	{
-		String mwUndotted = " ×³â€" + Translate.Eng2Heb(inflectedItem) + " "+ restSurface;
+		String mwUndotted = " ä" + Translate.Eng2Heb(inflectedItem) + " "+ restSurface;
 		String mwTransliterated = "h" + inflectedItem + " "+ restTransliterated;				
 		
 		popualteMWE.popualteMWETables(baseTransliteratedItem,
@@ -1039,7 +1038,7 @@ throws UnsupportedEncodingException, Exception
 			if (type.equals("NNA") &&  gender.equals("masculine")) 
 			{
 				restTransliterated += "im";
-				restSurface += "×³â„¢×³ï¿½";
+				restSurface += "éí";
 			}
 			
 			if (!plural.equals("unspecified") && lexiconNumber.equals("singular")) 

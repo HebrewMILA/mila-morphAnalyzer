@@ -224,7 +224,7 @@ public class NounGen extends ItemGen
 				inflectedItem = "w" + nounExceptionType.getTransliterated();
 				//inflectedItem = inflectedItem.replaceAll("&#39;", "'");
 				inflectedItem = inflectedItem.replaceAll("&#60;", "`");
-				surface = "Χ³β€Ά" + nounExceptionType.getUndotted();
+				surface = "ε" + nounExceptionType.getUndotted();
 				spelling = IRREGULAR_SPELLING;
 				addExceptionListHandling(nounExceptionType);
 			}
@@ -279,7 +279,7 @@ public class NounGen extends ItemGen
 		// generate
 		// the possessive forms
 
-		//Χ³Β¦Χ³β€ΆΧ³Β¨Χ³Γ— Χ³β€Χ³β€Χ³Β΅Χ³β„ΆΧ³Β΅ Χ³οΏ½Χ³Β§Χ³Β Χ³β„ΆΧ³β„ΆΧ³οΏ½ Χ³β€Χ³β„ΆΧ³οΏ½ Χ³Β¦Χ³β€ΆΧ³Β¨Χ³Γ— Χ³β€Χ³Β Χ³Β΅Χ³οΏ½Χ³οΏ½
+		//φεψϊ δαριρ μχπιιο διΰ φεψϊ δπρξκ
 		if (inflectExceptionConstructS && inflectExceptionPossessiveS && lexiconNumber.equals("singular")) 
 		{
 			setAttributes(lexiconGender, lexiconNumber, "false", "tf",inflectedItem, "unspecified", "possessive");
@@ -305,7 +305,7 @@ public class NounGen extends ItemGen
 			//returnVal = generatePlural(plural);
 			generatePlural(plural);
 			exceptionPluralBase = inflectedItem;
-			//Χ³οΏ½Χ³οΏ½ Χ³β„ΆΧ³β„ΆΧ³Β¦Χ³Β¨ Χ³οΏ½Χ³β„ΆΧ³β€Χ³ΒΆ Χ³οΏ½Χ³β„ΆΧ³β€ΆΧ³Β¦Χ³οΏ½ Χ³β€Χ³β€ΆΧ³β‚ªΧ³οΏ½ Χ³Β¨Χ³β€Χ³β„ΆΧ³οΏ½ Χ³οΏ½Χ³οΏ½Χ³Β©Χ³οΏ½ Χ³β„ΆΧ³β€ΊΧ³ΛΧ³β€
+			//μΰ ιιφψ ξιγς μιεφΰ γετο ψαιν μξωμ ιλθδ
 			addH();
 		}
 		/////////////////////////////////////////////////////////////
@@ -347,14 +347,14 @@ public class NounGen extends ItemGen
 				generatePossessive();
 			}
 		}
-		//     Χ³ΒΆΧ³β„ΆΧ³β€ΆΧ³οΏ½Χ³β„ΆΧ³οΏ½ Χ³οΏ½Χ³β€Χ³β€Χ³β„ΆΧ³Β§Χ³β€ Χ³β€ΊΧ³Β©Χ³οΏ½Χ³Β©Χ³Β Χ³β„ΆΧ³οΏ½ - Χ³β„ΆΧ³β€ΊΧ³ΛΧ³β€, Χ³Β Χ³β€ΆΧ³Β΅Χ³β€”Χ³β€
-		// Χ³Β¦Χ³β€ΆΧ³β€ΆΧ³Γ— , Χ³Β©Χ³β€Χ³Β¨Χ³β€ΆΧ³β€™
+		//     ςιεμιν μαγιχδ λωξωπιν - ιλθδ, περηδ
+		// φεεϊ , ωγψεβ
 		////////////////////////////////////////////////////////////
 		//pluralBase inflections: construct, plural
 		///////////////////////////////////////////////////////////
 		if (!exceptionPluralBase.equals("")) 
 		{
-			//Χ³οΏ½Χ³οΏ½ Χ³β€Χ³Β¦Χ³β€ΆΧ³Β¨Χ³β€ Χ³Β©Χ³β€Χ³β€ΆΧ³β€ΊΧ³Β Χ³Β΅Χ³β€ Χ³β€Χ³β„ΆΧ³β€ΆΧ³Β¦Χ³οΏ½Χ³β„Ά Χ³β€Χ³β€Χ³β€ΆΧ³β‚ªΧ³οΏ½ Χ³οΏ½Χ³β„ΆΧ³Β Χ³β€ Χ³Β¨Χ³β€Χ³β„ΆΧ³οΏ½ Χ³β€ΆΧ³οΏ½Χ³Β Χ³β€”Χ³Β Χ³β€Ά Χ³β„ΆΧ³β„ΆΧ³Β¦Χ³Β¨Χ³Β Χ³β€Ά Χ³οΏ½Χ³β€ΆΧ³Γ—Χ³β€
+			//ΰν δφεψδ ωδελπρδ αιεφΰι δγετο ΰιπδ ψαιν εΰπηπε ιιφψπε ΰεϊδ
 			if (plural.equals("unspecifed")) 
 			{
 				setAttributes(lexiconGender, "plural", "false", "tt",exceptionPluralBase, "unspecified", "unspecified");
@@ -510,16 +510,16 @@ public class NounGen extends ItemGen
 			//System.out.println(gender);
 			if (inflectConstructP && (number.equals("plural") || number.equals("dual") || number.equals("dual and plural"))) 
 			{
-				// Χ³ΛΧ³β„ΆΧ³β‚ªΧ³β€ΆΧ³οΏ½ Χ³β€Χ³β€™Χ³β€Χ³β„Ά,Χ³β€”Χ³β„Ά,Χ³β€”Χ³β„ΆΧ³β„ΆΧ³οΏ½,Χ³Β©Χ³β€
-				//					//Χ³ΛΧ³β„ΆΧ³β‚ªΧ³β€ΆΧ³οΏ½ Χ³β€Χ³β„ΆΧ³β€
+				// θιτεμ αβγι,ηι,ηιιν,ωδ
+				//					//θιτεμ αιγ
 				//					
 				//System.out.println("(F) generateConstruct() trying to find a rule");
 				findRule(inflectedItem, "", "constructMasculinePlural" + basePos, 2);
-				//						handle Χ³β€™Χ³β€Χ³β„Ά
+				//						handle βγι
 				if (gender.equals("masculine")
 						&& baseTransliteratedItem.endsWith("i")
 						&& !baseTransliteratedItem.endsWith("ai")
-						//handle Χ³Β©Χ³β€
+						//handle ωδ
 						|| (baseTransliteratedItem.endsWith("h") && baseTransliteratedItem.length() == 2))
 					inflectedItem = inflectedItem + "i";
 				if (inflectedItem.equals(transliterated))
@@ -534,8 +534,8 @@ public class NounGen extends ItemGen
 			else if (inflectConstructS && (gender.equals("feminine") || gender.equals("masculine and feminine"))) 
 			{
 				findRule(inflectedItem, "", "constructFeminineSingular" + basePos, 2);
-				//				//deny problems of translation for Χ³οΏ½Χ³οΏ½"Χ³Β  and Χ³οΏ½Χ³οΏ½"Χ³οΏ½ Χ³β‚ªΧ³β„ΆΧ³οΏ½Χ³ΛΧ³Β¨Χ³β€ΆΧ³β‚ª
-				// Χ³Β΅Χ³β„ΆΧ³Β¨Χ³β€ΆΧ³β‚ª
+				//				//deny problems of translation for ΰξ"π and ΰξ"ο τιμθψετ
+				// ριψετ
 				if (inflectedItem.endsWith("n") || inflectedItem.endsWith("p")
 						|| inflectedItem.endsWith("c")
 						&& inflectedItem.equals(transliterated))
@@ -543,7 +543,7 @@ public class NounGen extends ItemGen
 				else
 					{surface = Translate.Eng2Heb(inflectedItem);}
 				
-				// Χ³ΛΧ³β„ΆΧ³β‚ªΧ³β€ΆΧ³οΏ½ Χ³β€Χ³Β§Χ³Β¨Χ³β„ΆΧ³β€ Χ³β„ΆΧ³Β© Χ³Β¦Χ³β€ΆΧ³Β¨Χ³οΏ½ Χ³οΏ½Χ³β„ΆΧ³Β¦Χ³β€ΆΧ³Β¨ Χ³Β§Χ³Β¨Χ³β„ΆΧ³β„ΆΧ³Γ—
+				// θιτεμ αχψιδ ιω φεψκ μιφεψ χψιιϊ
 				if (inflectedItem.endsWith("ih"))
 				{
 					//System.out.println("(F) generateConstruct() : GOING TO CREATE DOUBLE i");
@@ -555,8 +555,8 @@ public class NounGen extends ItemGen
 			} 
 			else if (inflectConstructS && gender.equals("masculine") && number.equals("singular")) 
 			{
-				//				//deny problems of translation for Χ³οΏ½Χ³οΏ½"Χ³Β  and Χ³οΏ½Χ³οΏ½"Χ³οΏ½ Χ³β‚ªΧ³β„ΆΧ³οΏ½Χ³ΛΧ³Β¨Χ³β€ΆΧ³β‚ª
-				// Χ³Β΅Χ³β„ΆΧ³Β¨Χ³β€ΆΧ³β‚ª
+				//				//deny problems of translation for ΰξ"π and ΰξ"ο τιμθψετ
+				// ριψετ
 				if ((inflectedItem.endsWith("n") || inflectedItem.endsWith("p") || inflectedItem.endsWith("c"))
 						&& inflectedItem.equals(transliterated))
 					{surface = undot;}
@@ -567,7 +567,7 @@ public class NounGen extends ItemGen
 				populateDatabase();
 			}
 			else if (gender.equals("feminine"))
-			{	// Χ³ΛΧ³β„ΆΧ³β‚ªΧ³β€ΆΧ³οΏ½ Χ³β€Χ³Β§Χ³Β¨Χ³β„ΆΧ³β€ Χ³β„ΆΧ³Β© Χ³Β¦Χ³β€ΆΧ³Β¨Χ³οΏ½ Χ³οΏ½Χ³β„ΆΧ³Β¦Χ³β€ΆΧ³Β¨ Χ³Β§Χ³Β¨Χ³β„ΆΧ³β„ΆΧ³Γ—
+			{	// θιτεμ αχψιδ ιω φεψκ μιφεψ χψιιϊ
 				if (inflectedItem.endsWith("ih"))
 				{
 					//System.out.println("(F) generateConstruct() : GOING TO CREATE DOUBLE i");
@@ -624,8 +624,8 @@ public class NounGen extends ItemGen
 				StringTokenizer stGender = new StringTokenizer(genderTokens10,",");
 				while (stPGN.hasMoreTokens()) 
 				{
-					inflectedItem = stPossessive.nextToken();
 					PGN = stPGN.nextToken();
+					inflectedItem = stPossessive.nextToken();
 					if (!replaceRemoveException(PGN, gender, number, "false",
 							removeExceptionList, "remove") && !replaceRemoveException(PGN, gender, number, "false",replaceExceptionList, "replace")) 
 					{
@@ -692,8 +692,8 @@ public class NounGen extends ItemGen
 			if (!action.equals("")) 
 			{
 				//System.out.println("plural base = " + inflectedItem);
-				//comment because of Χ³οΏ½Χ³Β©Χ³Γ—Χ³β€ - Χ³οΏ½Χ³Β©Χ³Γ—Χ³οΏ½Χ³β€ΆΧ³Γ—
-				//Χ³Β¦Χ³Β¨Χ³β„ΆΧ³οΏ½ Χ³οΏ½Χ³β€ΆΧ³β€ΆΧ³β€Χ³οΏ½ Χ³Β©Χ³β€ΊΧ³β‚ªΧ³β„ΆΧ³Γ—Χ³β€ Χ³οΏ½Χ³οΏ½ Χ³οΏ½Χ³Γ—Χ³Β§Χ³οΏ½Χ³Β§Χ³οΏ½ - Χ³οΏ½Χ³Γ—Χ³Β Χ³β€Χ³β€™Χ³β„ΆΧ³οΏ½ Χ³Β©Χ³β€ΆΧ³Β Χ³β€ Χ³β€ΊΧ³β„Ά Χ³β€Χ³οΏ½Χ³β„ΆΧ³οΏ½ Χ³Β©Χ³β€ΆΧ³Β Χ³β€
+				//comment because of ξωϊδ - ξωϊΰεϊ
+				//φψικ μεεγΰ ωλτιϊδ μΰ ξϊχμχμ - ξϊπδβιν ωεπδ λι δξιο ωεπδ
 				if (inflectedItem.endsWith("th") && (gender.equals("feminine")))
 					findRule(inflectedItem, "th", action, pluralSuffixMaxLength);
 				else
@@ -822,7 +822,7 @@ public class NounGen extends ItemGen
 			transliterated = "w" + transliterated;
 			surface = Translate.Eng2Heb(transliterated);
 			inflectedItem = transliterated;
-			//Χ³β€ΆΧ³β€ΆΧ³β„ΆΧ³οΏ½Χ³β€ΆΧ³οΏ½ - Χ³β€Χ³β€ΊΧ³β‚ªΧ³οΏ½Χ³Γ— Χ³β€ΆΧ³β€Ά Χ³οΏ½Χ³οΏ½Χ³β€Ά Χ³Γ—
+			//εειμεο - δλτμϊ εε μμε ϊ
 			spelling = IRREGULAR_SPELLING;
 			pluralBase = "";
 			doebleVavHandling = true;
@@ -852,7 +852,7 @@ public class NounGen extends ItemGen
 			spelling = STANDARD_SPELLING;
 		//////////////////////////////////////////////////////////////////
 		inflectedItem = "h" + inflectedItem;
-		surface = "Χ³β€" + surface;
+		surface = "δ" + surface;
 
 		populateDatabase();
 
@@ -863,8 +863,8 @@ public class NounGen extends ItemGen
 	private void inflectLexiconItem() throws Exception 
 	{
 		//Populate database with the original lexicon Item
-		//Χ³οΏ½Χ³Β Χ³β€™Χ³Β Χ³β€ΆΧ³οΏ½ Χ³Β©Χ³οΏ½Χ³οΏ½Χ³β‚ªΧ³Β©Χ³Β¨ Χ³οΏ½Χ³οΏ½Χ³β€ΊΧ³οΏ½Χ³Β΅ Χ³β€Χ³Β¦Χ³β€ΆΧ³Β¨Χ³Γ— Χ³β€Χ³Β Χ³Β΅Χ³οΏ½Χ³οΏ½ Χ³οΏ½Χ³οΏ½Χ³οΏ½ Χ³Β¦Χ³β€ΆΧ³Β¨Χ³Γ— Χ³β€Χ³β€Χ³Β΅Χ³β„ΆΧ³Β΅ Χ³ΒΆΧ³β€Χ³β€ΆΧ³Β¨ Χ³Β¦Χ³β€ΆΧ³Β¨Χ³β€ΆΧ³Γ— Χ³Β©Χ³β„ΆΧ³β€ΆΧ³β‚ªΧ³β„ΆΧ³ΒΆΧ³β€Ά Χ³Β¨Χ³Β§
-		// Χ³β€Χ³Β Χ³οΏ½Χ³οΏ½ Χ³οΏ½Χ³οΏ½Χ³Β©Χ³οΏ½ Χ³Β©Χ³οΏ½Χ³Λ
+		//ξπβπεο ωξΰτωψ μΰλμρ αφεψϊ δπρξκ μμΰ φεψϊ δαριρ ςαεψ φεψεϊ ωιετιςε ψχ
+		// απξκ μξωμ ωΰθ
 		if (!replaceRemoveException("unspecified", lexiconGender,lexiconNumber, "false", removeExceptionList, "remove")) 
 		{
 			populateDatabase();

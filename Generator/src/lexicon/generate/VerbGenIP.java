@@ -225,7 +225,7 @@ public class VerbGenIP implements VerbInterface {
 						// System.out.println("exception transliterated  ="+
 						// surface);
 						if (tense.equals("infinitive")) {
-							// Χ‘Χ•Χ“Χ§Χ™Χ Χ‘Χ›Χ"Χ
+							//αεγχιν αλμ"ξ
 							if (inflectedVerb.charAt(0) == orifinalInflectedVerb
 									.charAt(0)) {
 								populateDBTable();
@@ -326,7 +326,7 @@ public class VerbGenIP implements VerbInterface {
 			PGN = verbExceptionType.getPgn();
 			suffixFunction = "unspecified";
 			boolean isBeinoniConstruct = verbExceptionType.isBeinoniConstruct();
-			// Χ”Χ—ΧΧΧ Χ• ΧΧ ΧΧ™Χ™Χ¦Χ¨ ΧΧ§Χ•Χ¨
+			//δημθπε μΰ μιιφψ ξχεψ
 			if (tense.equals("bareInfinitive"))
 				continue;
 			if (tense.equals("beinoni")) {
@@ -424,7 +424,7 @@ public class VerbGenIP implements VerbInterface {
 		// System.out.println("(F) VerbGenIP: generateBareInfinitive()");
 		if (inflectBareInfinitive) {
 			// Bare infinitive is like 'to infinitive' with out the 'to':
-			// - by shuly definition ΧΧ©ΧΧ•Χ¨ -- Χ©ΧΧ•Χ¨
+			// - by shuly definition μωξεψ -- ωξεψ
 			setAttributes("bareInfinitive", "verb", "unspecified",
 					"unspecified", "unspecified", "unspecified", "unspecified",
 					"unspecified", "unspecified", "unspecified", "unspecified",
@@ -446,7 +446,7 @@ public class VerbGenIP implements VerbInterface {
 							"unspecified", "unspecified", "unspecified",
 							removeExceptionList, false, REMOVE))
 				populateDBTable();
-			// used for inflectPattern58() for Χ ΧΧ΅ - if we enter exception type
+			//used for inflectPattern58() for πξρ - if we enter exception type
 			// of tense bareInfinitive we will create duplicates
 			else
 				bareInfinitiveException = true;
@@ -458,27 +458,27 @@ public class VerbGenIP implements VerbInterface {
 					.append(root.substring(index3, index4)).append(suffix);
 
 			inflectedVerb = inflected.toString();
-			// System.out.println("(F) VerbGenIP: generateBareInfinitive() -- "+inflectedVerb);
+			//System.out.println("(F) VerbGenIP: generateBareInfinitive() -- "+inflectedVerb);
 			surface = Translate.Eng2Heb(inflectedVerb);
 		}
-		// Χ”Χ©ΧªΧ Χ• Χ”Χ’Χ“Χ¨Χ•Χª - ΧΧ Χ Χ›Χ•Χ!!
-		// if (inflectInfinitiveIndependent) {
-		// setAttributes("infinitive", "verb", "unspecified", "unspecified",
-		// "unspecified", "unspecified", "unspecified", "unspecified",
-		// "unspecified", "unspecified", "unspecified", "unspecified",
-		// "f");
-		//
-		// if (!replaceRemoveException("unspecified", tense, "unspecified",
-		// "unspecified", "unspecified", replaceExceptionList, false,
-		// REPLACE)
-		// && !replaceRemoveException("unspecified", tense,
-		// "unspecified", "unspecified", "unspecified",
-		// removeExceptionList, false, REMOVE)) {
-		// replaceRemoveInfinitive = false;
-		// populateDBTable();
-		// } else
-		// replaceRemoveInfinitive = true;
-		// }
+		//δωϊπε δβγψεϊ - μΰ πλεο!!
+//		if (inflectInfinitiveIndependent) {
+//			setAttributes("infinitive", "verb", "unspecified", "unspecified",
+//					"unspecified", "unspecified", "unspecified", "unspecified",
+//					"unspecified", "unspecified", "unspecified", "unspecified",
+//					"f");
+//
+//			if (!replaceRemoveException("unspecified", tense, "unspecified",
+//					"unspecified", "unspecified", replaceExceptionList, false,
+//					REPLACE)
+//					&& !replaceRemoveException("unspecified", tense,
+//							"unspecified", "unspecified", "unspecified",
+//							removeExceptionList, false, REMOVE)) {
+//				replaceRemoveInfinitive = false;
+//				populateDBTable();
+//			} else
+//				replaceRemoveInfinitive = true;
+//		}
 
 	}
 
@@ -513,7 +513,7 @@ public class VerbGenIP implements VerbInterface {
 	public void generateInfinitive(String prefix, String inside, int index1,
 			int index2, int index3, int index4, String suffix) throws Exception {
 		// Bare infinitive is like 'to infinitive' with out the 'to':
-		// - by shuly definition ΧΧ©ΧΧ•Χ¨ -- Χ©ΧΧ•Χ¨
+		// - by shuly definition μωξεψ -- ωξεψ
 		// /////////////////bklm+non inflected infinitive//////////////
 
 		if (this.isInflectInfinitive()) {
@@ -806,7 +806,7 @@ public class VerbGenIP implements VerbInterface {
 	 * This method generate the beinoni form <br>
 	 * The construct from is generated from the 123/M/Sg form We create the
 	 * possessive form from the construct form for all binyans except for <br>
-	 * Χ Χ¤ΧΆΧ , Χ¤Χ•ΧΆΧ Χ• Χ•Χ”Χ•Χ¤ΧΆΧ
+	 * πτςμ , τεςμ ε εδετςμ
 	 * 
 	 * @param prefix
 	 *            - concatenate to the begining of the root
@@ -886,13 +886,13 @@ public class VerbGenIP implements VerbInterface {
 				baseGender = stGender4.nextToken();
 				basePerson = stPerson4.nextToken();
 
-				// I don't remember why the following commented lines exists
+				//I don't remember why the following commented lines exists
 				// ????????????????????
-				// if (lsuffix.equals("") && linside.equals("") &&
-				// lprefix.equals("")) {
-				// constructFlag = true;
-				// continue;
-				// }
+				//				if (lsuffix.equals("") && linside.equals("") &&
+				//				 lprefix.equals("")) {
+				//					constructFlag = true;
+				//					continue;
+				//				}
 
 				StringBuffer inflected = new StringBuffer().append(lprefix)
 						.append(root.substring(index1, index2)).append(linside)
@@ -925,7 +925,7 @@ public class VerbGenIP implements VerbInterface {
 								false, REMOVE)) {
 					PGN = "unspecified";
 
-					// - Χ”Χ›Χ Χ™Χ›Χ•Χ ΧΧ”Χ™Χ•Χª - ΧΧ ΧΧ™Χ•Χ“ΧΆ, ΧΧ Χ§Χ Χ™Χ™Χ , ΧΧ Χ Χ΅ΧΧ
+					// - δλμ ιλεμ μδιεϊ - μΰ ξιεγς, μΰ χπιιο , μΰ πρξκ
 					participleType = "noun";
 					populateDBTable();
 					participleType = "verb";
@@ -935,7 +935,7 @@ public class VerbGenIP implements VerbInterface {
 
 				}
 
-				// generate h + beinoni - Χ”Χ©Χ•ΧΧ¨
+				//generate h + beinoni - δωεξψ
 				inflectedVerb = "h" + inflectedVerb;
 				setAttributes("beinoni", "participle", "unspecified",
 						basePerson, baseGender, baseNumber, "false",
@@ -1067,7 +1067,7 @@ public class VerbGenIP implements VerbInterface {
 								baseGender, baseNumber, basePerson,
 								replaceExceptionList, false, REMOVE))
 					populateDBTable();
-				// Χ™Χ™Χ¦Χ•Χ¨ Χ¦Χ•Χ¨Χª ΧΆΧªΧ™Χ“ Χ™Χ—Χ™Χ“ ΧΧ• Χ¨Χ‘Χ™Χ Χ’Χ•Χ£ Χ©ΧΧ™Χ©Χ™ ΧΆΧ Χ™ ΧΧ—Χª Χ‘ΧΧ§Χ•Χ Χ©ΧªΧ™Χ™Χ
+				//ιιφεψ φεψϊ ςϊιγ ιηιγ ΰε ψαιν βεσ ωμιωι ςν ι ΰηϊ αξχεν ωϊιιν
 				if (binyan.equals("Nif\\'al")) {
 					if ((baseGender.equals("masculine")
 							&& baseNumber.equals("singular") && basePerson
@@ -1327,11 +1327,11 @@ public class VerbGenIP implements VerbInterface {
 						replaceExceptionList, true, REPLACE);
 
 				if (!rtRemove && !rtReplace) {
-					// ΧΆΧ‘Χ•Χ¨ Χ¦Χ•Χ¨Χ•Χª Χ”Χ Χ΅ΧΧ ΧªΧ›Χ•Χ Χª Χ”Χ™Χ™Χ“Χ•ΧΆ ΧΧ Χ¨ΧΧ‘Χ ΧΧ™Χª
+					//ςαεψ φεψεϊ δπρξκ ϊλεπϊ διιγες μΰ ψμαπθιϊ
 					definitenessVal = "unspecified";
-					// Χ¨Χ§ Χ©Χ ΧΆΧ¦Χ Χ™Χ›Χ•Χ ΧΧ”Χ™Χ•Χª Χ Χ΅ΧΧ
+					//ψχ ων ςφν ιλεμ μδιεϊ πρξκ
 
-					if (surface.equals("Χ§ΧΧ•ΧΆ") || surface.equals("Χ ΧΧ•Χ"))
+					if (surface.equals("χθες") || surface.equals("πθεμ"))
 						participleType = "adjective";
 					else
 						participleType = "noun";
@@ -1394,10 +1394,10 @@ public class VerbGenIP implements VerbInterface {
 				populateDBTable();
 			}
 			spelling = currentSpelling;
-			// if (currentScript.equals("formal"))
-			// script = "formal";
-			// else if (currentScript.equals("slang"))
-			// script = "slang";
+			//			if (currentScript.equals("formal"))
+			//				script = "formal";
+			//			else if (currentScript.equals("slang"))
+			//				script = "slang";
 		}
 	}
 
@@ -1447,9 +1447,9 @@ public class VerbGenIP implements VerbInterface {
 						inflectedVerb.length() - 1);
 			// System.out.println(inflectedVerb);
 			surface = Translate.Eng2Heb(inflectedVerb);
-			// System.out.print("surface =" + surface);
-			// System.out.println();
-			// Χ¨Χ§ Χ©Χ ΧΆΧ¦Χ Χ™Χ›Χ•Χ ΧΧ”Χ™Χ•Χª ΧΆΧ Χ§Χ Χ™Χ™Χ
+			//System.out.print("surface =" + surface);
+			//System.out.println();
+			//ψχ ων ςφν ιλεμ μδιεϊ ςν χπιιο
 
 			participleType = "noun";
 			populateDBTable();
@@ -1514,7 +1514,7 @@ public class VerbGenIP implements VerbInterface {
 				pos = "verb";
 			}
 
-			// generate l + inflectedInfinitive just for Χ™Χ•Χ¦Χ or ΧΆΧ•ΧΧ“ with
+			//generate l + inflectedInfinitive just for ιεφΰ or ςεξγ with
 			// inflectInfinitive = true
 			if (this.isInflectInfinitive() && inflectInfinitivel){
 				inflectedVerb = "l" + inflectedVerb;

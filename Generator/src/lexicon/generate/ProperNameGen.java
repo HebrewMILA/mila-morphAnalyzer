@@ -28,7 +28,7 @@ public class ProperNameGen extends ItemGen
 	{
 		analyseItem();
 
-		//fix a bug in the lexicon for propername with period like Χ³οΏ½Χ³β„Ά.Χ³Β΅Χ³β„Ά.Χ³οΏ½Χ³β„Ά
+		//fix a bug in the lexicon for propername with period like ΰι.ρι.ΰι
 		//remove after fixing lexicon code
 		//transliterated = Translate.Heb2Eng(undot);
 		//transliterated = transliterated.replaceAll("&#39;", "'");
@@ -74,7 +74,7 @@ public class ProperNameGen extends ItemGen
 			{
 				inflectedItem = "w"+ properNameExceptionType.getTransliterated();
 				//inflectedItem = inflectedItem.replaceAll("&#39;", "'");
-				surface = "Χ³β€Ά" + properNameExceptionType.getUndotted();
+				surface = "ε" + properNameExceptionType.getUndotted();
 				addExceptionListHandling(properNameExceptionType);
 			}
 			else
@@ -128,7 +128,7 @@ public class ProperNameGen extends ItemGen
     			System.out.println("surface =" + surface);
     			System.out.println();
     			populateDatabase();
-    			//Χ³Β©Χ³οΏ½Χ³β€ΆΧ³Γ— Χ³β‚ªΧ³Β¨Χ³ΛΧ³β„ΆΧ³β„ΆΧ³οΏ½ Χ³Β©Χ³οΏ½Χ³Β΅Χ³β€ΆΧ³Β¨ Χ³Β©Χ³β„ΆΧ³β€Χ³β„ΆΧ³β€Ά Χ³οΏ½Χ³β„ΆΧ³β€ΆΧ³β€Χ³ΒΆΧ³β„ΆΧ³οΏ½  Χ³β€ΊΧ³οΏ½Χ³β€Ά Χ³Β§Χ³β€ΆΧ³οΏ½Χ³β€ΆΧ³Β¨Χ³β€Χ³β€Ά
+    			//ωξεϊ τψθιιν ωΰρεψ ωιδιε ξιεγςιν  λξε χεμεψγε
     		} 
     		else 
     		{
@@ -152,7 +152,7 @@ public class ProperNameGen extends ItemGen
 	{
 		analyse();
 		handleDefiniteness(inflectedItem);
-		//Χ³ΛΧ³β„ΆΧ³β‚ªΧ³β€ΆΧ³οΏ½ Χ³β€Χ³Β©Χ³οΏ½Χ³β€ΆΧ³Γ— Χ³Β©Χ³οΏ½Χ³Γ—Χ³β€”Χ³β„ΆΧ³οΏ½Χ³β„ΆΧ³οΏ½ Χ³β€-Χ³β€Ά Χ³β€ΊΧ³οΏ½Χ³β€Ά Χ³β€ΆΧ³β„ΆΧ³Β Χ³β€ Χ³Β©Χ³β„ΆΧ³β€“Χ³β€Χ³β€ Χ³β€™Χ³οΏ½ Χ³β€Χ³β€ΆΧ³β€ΆΧ³β„ΆΧ³Β Χ³β€
+		//θιτεμ αωξεϊ ωξϊηιμιν α-ε λξε ειπδ ωιζδδ βν αεειπδ
 		if (transliterated.startsWith("w") && !transliterated.startsWith("ww")) 
 		{
 			inflectedItem = "w" + transliterated;

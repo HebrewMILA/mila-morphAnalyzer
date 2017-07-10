@@ -119,7 +119,7 @@ public class AdjectiveGen extends ItemGen {
 			if (exceptionBase.startsWith("w")
 					&& !exceptionBase.startsWith("ww")) {
 				exceptionBase = "w" + exceptionBase;
-				surface = "׳³ג€¢" + nounExceptionType.getUndotted();
+				surface = "ו" + nounExceptionType.getUndotted();
 				inflectAddException("add", exceptionBase);
 			}
 
@@ -497,7 +497,7 @@ public class AdjectiveGen extends ItemGen {
 			spelling = STANDARD_SPELLING;
 		//////////////////////////////////////////////////////////////////
 		inflectedItem = "h" + inflectedItem;
-		surface = "׳³ג€�" + surface;
+		surface = "ה" + surface;
 
 	
 		populateDatabase();
