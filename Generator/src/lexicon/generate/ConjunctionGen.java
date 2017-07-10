@@ -6,21 +6,19 @@
  */
 package lexicon.generate;
 
-
 import lexicon.contents.types.ItemType;
 
 /**
  * @author daliabo
  *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class ConjunctionGen extends ItemGen {
-	
+
 	public ConjunctionGen(ItemType item) {
 		super(item);
 	}
-
 
 	private void analyse() {
 		analyseItem();
@@ -34,7 +32,7 @@ public class ConjunctionGen extends ItemGen {
 		inflectedItem = transliterated;
 		surface = undot;
 		populateDatabase();
-		
+
 	}
 
 }

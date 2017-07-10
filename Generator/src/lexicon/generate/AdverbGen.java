@@ -20,8 +20,8 @@ import lexicon.stringUtils.Translate;
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class AdverbGen extends ItemGen {
 
@@ -144,7 +144,8 @@ public class AdverbGen extends ItemGen {
 				suffixes = "i,k,k,w,h,nw,km,kn,hm,hn";
 			else
 				suffixes = "i,k,k,w,h,nw,km,kn,m,n";
-			//PGNTokens = "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/M/Pl,2p/F/Pl,3p/M/Pl,3p/F/Pl";
+			// PGNTokens =
+			// "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/M/Pl,2p/F/Pl,3p/M/Pl,3p/F/Pl";
 			if (!inflectionBase.equals(""))
 				inflectionBaseHandling();
 			inflectPronomial("pronomial");

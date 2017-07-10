@@ -15,8 +15,8 @@ import lexicon.stringUtils.Translate;
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class PronounGen extends ItemGen {
 	boolean isDefinite = false;
@@ -28,8 +28,7 @@ public class PronounGen extends ItemGen {
 	private void analyseExceptionList(List exceptionList) throws Exception {
 		for (int i = 0; i < exceptionList.size(); i++) {
 			PronounExceptionType pronounExceptionType = new PronounExceptionType();
-			pronounExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
+			pronounExceptionType.open(((Integer) exceptionList.get(i)).intValue());
 			inflectedItem = pronounExceptionType.getTransliterated();
 			surface = pronounExceptionType.getUndotted();
 			spelling = pronounExceptionType.getSpelling();
@@ -160,12 +159,10 @@ public class PronounGen extends ItemGen {
 		} else {
 			for (int i = 0; i < size; i++) {
 				PronounExceptionType pronounExceptionType = new PronounExceptionType();
-				pronounExceptionType
-						.open(((Integer) removeExceptionList.get(i)).intValue());
+				pronounExceptionType.open(((Integer) removeExceptionList.get(i)).intValue());
 				String exceptionPGN = pronounExceptionType.getPgn();
 				String action = pronounExceptionType.getAction();
-				if (exceptionPGN.equals("unspecified")
-						&& action.equals("remove"))
+				if (exceptionPGN.equals("unspecified") && action.equals("remove"))
 					;
 
 				else {
@@ -219,7 +216,7 @@ public class PronounGen extends ItemGen {
 				System.out.println("surface =" + surface);
 				System.out.println();
 				populateDatabase();
-				//שמות פרטיים שאסור שיהיו מיודעים כמו קולורדו
+				// שמות פרטיים שאסור שיהיו מיודעים כמו קולורדו
 			} else if (definitness.equals("prohibited")) {
 				definitnessVal = "f";
 				populateDatabase();
@@ -301,13 +298,13 @@ public class PronounGen extends ItemGen {
 		handleBaseForm();
 		addException();
 
-		//		definitnessVal = "tt";
-		//		inflectedItem = "h" + transliterated;
-		//		System.out.println();
-		//		System.out.println("inflectedItem =" + inflectedItem);
-		//		surface = Translate.Eng2Heb(inflectedItem);
-		//		System.out.println("surface =" + surface);
-		//		System.out.println();
-		//		populateDatabase();
+		// definitnessVal = "tt";
+		// inflectedItem = "h" + transliterated;
+		// System.out.println();
+		// System.out.println("inflectedItem =" + inflectedItem);
+		// surface = Translate.Eng2Heb(inflectedItem);
+		// System.out.println("surface =" + surface);
+		// System.out.println();
+		// populateDatabase();
 	}
 }
