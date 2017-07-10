@@ -131,7 +131,7 @@ public class Names {
 	private static void initActions() {
 		actions = new HashMap();
 		actions.put("add", "הוספה");
-		actions.put("replace", "הח�?פה");
+		actions.put("replace", "החלפה");
 		actions.put("remove", "הסרה");
 	}	
 }
