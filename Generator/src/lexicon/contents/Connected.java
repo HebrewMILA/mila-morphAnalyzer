@@ -38,8 +38,8 @@ public class Connected {
 
 	static String myurl = "";
 	/*
-	 * we make sure the place that called prepeareConnection calls
-	 * releaseConnection as well.
+	 * we make sure the place that called prepeareConnection calls releaseConnection
+	 * as well.
 	 */
 	private static String connOwner = "";
 	private static StackTraceElement[] stackTrace = null;
@@ -65,9 +65,8 @@ public class Connected {
 			pool = null;
 		}
 
-		pool = new ConnectionPool("mysqlLexiocn", 20, 50, 18000,
-				"jdbc:mariadb://yeda.cs.technion.ac.il:3306/lexiconP",
-		  		"lexiconUser", "!adgj?");
+		pool = new ConnectionPool("mysqlLexiocn", 20, 50, 18000, "jdbc:mariadb://yeda.cs.technion.ac.il:3306/lexiconP",
+				"lexiconUser", "!adgj?");
 		pool.setCaching(false);
 	}
 
@@ -82,10 +81,10 @@ public class Connected {
 	protected static Connection conn = null;
 
 	/**
-	 * A Statement object used to commit a DB command or to retrieve data from
-	 * the DB. The object must be closed after the execution of the DB
-	 * transaction, using <code>stmt.close()</code>. The object is created by
-	 * the <code>Connection</code> object.
+	 * A Statement object used to commit a DB command or to retrieve data from the
+	 * DB. The object must be closed after the execution of the DB transaction,
+	 * using <code>stmt.close()</code>. The object is created by the
+	 * <code>Connection</code> object.
 	 *
 	 * @see java.sql.Connection
 	 * @see #conn
@@ -98,15 +97,15 @@ public class Connected {
 	private boolean isLoaded = false;
 
 	/**
-	 * Commit a SELECT statement and returns a <code>ResultSet</code> containing
-	 * the query output. Calls <code>connect()</code> in order to connect with
-	 * the DB and commit the statement using <code>Statement.executeQuery</code>
-	 * . There might be a performence problem becuase the method does not close
-	 * the <code>ResultSet</code>, <code>Statement</code> and
-	 * <code>Connection</code> objects.
+	 * Commit a SELECT statement and returns a <code>ResultSet</code> containing the
+	 * query output. Calls <code>connect()</code> in order to connect with the DB
+	 * and commit the statement using <code>Statement.executeQuery</code> . There
+	 * might be a performence problem becuase the method does not close the
+	 * <code>ResultSet</code>, <code>Statement</code> and <code>Connection</code>
+	 * objects.
 	 *
 	 * @param sql
-	 *            The SQL statement to be executed
+	 *           The SQL statement to be executed
 	 * @return The ResultSet recieved from the DB
 	 */
 	public ResultSet getData(String sql) {
@@ -139,11 +138,10 @@ public class Connected {
 
 	/**
 	 * Opens the <code>conn</code> Connection object. The method default opening
-	 * method is using the <code>DriverManager.getConnection</code> method,
-	 * using a connection pool to retrieve an open conenction from. If the
-	 * variable <code>directConnection</code> is used, then the method would
-	 * open a conenction directly, using the
-	 * <code>prepareDirectConnection</code> method.
+	 * method is using the <code>DriverManager.getConnection</code> method, using a
+	 * connection pool to retrieve an open conenction from. If the variable
+	 * <code>directConnection</code> is used, then the method would open a
+	 * conenction directly, using the <code>prepareDirectConnection</code> method.
 	 *
 	 * @see DriverManager#getConnection
 	 * @see #conn
@@ -152,11 +150,10 @@ public class Connected {
 	protected static void prepareConnection() throws SQLException {
 		/*
 		 * if (cpds == null) { Context ctx = null; try {
-		 * System.out.println("*****   Starting the DB connection!   ****"); ctx
-		 * = new InitialContext(); if(ctx == null )
-		 * System.out.println("Boom - no cotext"); Context envCtx = (Context)
-		 * ctx.lookup("java:comp/env"); DataSource ds = (DataSource)
-		 * envCtx.lookup("jdbc/mysqlDBlexicon"); Connected.setCPDS(ds);
+		 * System.out.println("*****   Starting the DB connection!   ****"); ctx = new
+		 * InitialContext(); if(ctx == null ) System.out.println("Boom - no cotext");
+		 * Context envCtx = (Context) ctx.lookup("java:comp/env"); DataSource ds =
+		 * (DataSource) envCtx.lookup("jdbc/mysqlDBlexicon"); Connected.setCPDS(ds);
 		 *
 		 * } catch (NamingException ne) {
 		 * System.out.println("Exception in creating the DataSource!");
@@ -165,16 +162,15 @@ public class Connected {
 		long timeout = 18000; // longer timeout
 		if (conn != null) {
 			RuntimeException e = new RuntimeException(
-					"Detected resource leak!  Opened: " + connOwner
-							+ " Closed: " + getCaller());
+					"Detected resource leak!  Opened: " + connOwner + " Closed: " + getCaller());
 			e.setStackTrace(stackTrace);
 			throw e;
 		}
 		conn = pool.getConnection(timeout);
 		if (conn == null) {
 			/*
-			 * XXX: We have a bad resource leak, somewhere. This is a horrible
-			 * band-aid around that issue.
+			 * XXX: We have a bad resource leak, somewhere. This is a horrible band-aid
+			 * around that issue.
 			 */
 			initPool();
 			/* la di da doo */
@@ -199,13 +195,13 @@ public class Connected {
 	}
 
 	/**
-	 * Serves as a super method for DB actions that require an "execute" mode,
-	 * such as INSERT ,UPDATE or DELETE.
+	 * Serves as a super method for DB actions that require an "execute" mode, such
+	 * as INSERT ,UPDATE or DELETE.
 	 *
 	 * @param sql
-	 *            The SQL statement to be executed.
-	 * @return Number of rows affected (0, if nothing happened, 1 if one row
-	 *         added, ..., -1 if the statement is a SELECT statement).
+	 *           The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row added,
+	 *         ..., -1 if the statement is a SELECT statement).
 	 */
 	protected static int execute(String sql) {
 		if (sql == null) {
@@ -227,9 +223,9 @@ public class Connected {
 
 	/**
 	 * The method release a connection, used by the current Content object. The
-	 * releasing is done by calling <code>conn.close()</code>. Please note that
-	 * the use of some conenction pooling devices may cause the connection not
-	 * to be actually closed, even if this action is performed.
+	 * releasing is done by calling <code>conn.close()</code>. Please note that the
+	 * use of some conenction pooling devices may cause the connection not to be
+	 * actually closed, even if this action is performed.
 	 *
 	 * @see Connection#close
 	 * @see #prepareConenction
@@ -237,8 +233,7 @@ public class Connected {
 	public static void releaseConnection() {
 		if (null != conn && connOwner != getCaller()) {
 			RuntimeException e = new RuntimeException(
-					"Connection closed by non-owner: Opened: " + connOwner
-							+ " Closed: " + getCaller());
+					"Connection closed by non-owner: Opened: " + connOwner + " Closed: " + getCaller());
 			e.setStackTrace(stackTrace);
 			throw e;
 		}

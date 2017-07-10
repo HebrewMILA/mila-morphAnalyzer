@@ -15,8 +15,8 @@ import lexicon.tools.Names;
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class Translate {
 
@@ -62,14 +62,14 @@ public class Translate {
 
 	public static String MixedHebEng(String inStr) {
 		StringBuffer result = new StringBuffer();
-		
+
 		String encodedStr = "";
 		for (int i = 0; i < inStr.length(); i++) {
 			char curChar = inStr.charAt(i);
-			
-			if (curChar == '%'){
+
+			if (curChar == '%') {
 				StringBuffer tempStr = new StringBuffer();
-				while ((i< inStr.length()) && (curChar != '[')){
+				while ((i < inStr.length()) && (curChar != '[')) {
 					curChar = inStr.charAt(i);
 					i++;
 					tempStr.append(String.valueOf(curChar));
@@ -81,17 +81,13 @@ public class Translate {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				result.append(encodedStr);	
-			}
-			else if ((curChar >= 'a' && curChar <= 'z')
-					|| ((curChar >= 'A' && curChar <= 'Z'))){
+				result.append(encodedStr);
+			} else if ((curChar >= 'a' && curChar <= 'z') || ((curChar >= 'A' && curChar <= 'Z'))) {
+				result.append(String.valueOf(curChar));
+			} else if ((curChar == '[') || (curChar == ']') || (curChar == '+') || (curChar == '/')) {
 				result.append(String.valueOf(curChar));
 			}
-			else if ((curChar == '[') || (curChar == ']') || (curChar == '+')
-					|| (curChar == '/')){			
-					result.append(String.valueOf(curChar));
-				}
-			}
+		}
 		return result.toString();
 	}
 
@@ -105,30 +101,25 @@ public class Translate {
 			hebString = Names.getEngToHeb(String.valueOf(engString.charAt(i)));
 			try {
 				encodedHeb = URLDecoder.decode(hebString, "UTF-8");
-				if (((encodedHeb.equals("ê") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ê") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ê") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ê") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ë";
-				if (((encodedHeb.equals("í") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("í") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("í") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("í") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "î";
-				if (((encodedHeb.equals("ï") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ï") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ï") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ï") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ð";
-				if (((encodedHeb.equals("ó") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ó") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ó") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ó") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ô";
-				if (((encodedHeb.equals("õ") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("õ") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("õ") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("õ") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ö";
 			} catch (Exception e) {
 			}
@@ -138,7 +129,7 @@ public class Translate {
 	}
 
 	public static String saebEng2Heb(String engString) {
-		engString= engString.replaceAll("U","\\\"");
+		engString = engString.replaceAll("U", "\\\"");
 		engString = engString.toLowerCase();
 		StringBuffer result = new StringBuffer();
 		String hebString = "";
@@ -149,30 +140,25 @@ public class Translate {
 			hebString = Names.getEngToHeb(String.valueOf(engString.charAt(i)));
 			try {
 				encodedHeb = URLDecoder.decode(hebString, "UTF-8");
-				if (((encodedHeb.equals("ê") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ê") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ê") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ê") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ë";
-				if (((encodedHeb.equals("í") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("í") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("í") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("í") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "î";
-				if (((encodedHeb.equals("ï") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ï") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ï") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ï") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ð";
-				if (((encodedHeb.equals("ó") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("ó") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("ó") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("ó") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ô";
-				if (((encodedHeb.equals("õ") && i < (engString.length() - 1) && engString
-						.charAt(i + 1) != '-'))
-						|| ((encodedHeb.equals("õ") && (i == engString.length() - 1)) && (engString
-								.charAt(engString.length() - 2) == '"')))
+				if (((encodedHeb.equals("õ") && i < (engString.length() - 1) && engString.charAt(i + 1) != '-'))
+						|| ((encodedHeb.equals("õ") && (i == engString.length() - 1))
+								&& (engString.charAt(engString.length() - 2) == '"')))
 					encodedHeb = "ö";
 			} catch (Exception e) {
 			}
@@ -180,6 +166,7 @@ public class Translate {
 		}
 		return result.toString();
 	}
+
 	public static String Heb2Eng(String hebStr) {
 		String transliteratedStr = "";
 		StringBuffer transliterated = new StringBuffer();

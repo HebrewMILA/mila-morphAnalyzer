@@ -13,12 +13,10 @@ import java.net.URLEncoder;
 import lexicon.contents.Content;
 import lexicon.tools.LexiconUtils;
 
-public class MultiWordNounExceptionType extends Content implements
-		lexicon.jaxb.MultiWordNounExceptionType {
+public class MultiWordNounExceptionType extends Content implements lexicon.jaxb.MultiWordNounExceptionType {
 	protected lexicon.jaxb.MultiWordNounExceptionType content;
 
-	public MultiWordNounExceptionType(
-			lexicon.jaxb.MultiWordNounExceptionType content) {
+	public MultiWordNounExceptionType(lexicon.jaxb.MultiWordNounExceptionType content) {
 		this.content = content;
 		TABLE = "multiWordNoun_exception_type";
 		IDNAME = "aid";
@@ -43,10 +41,9 @@ public class MultiWordNounExceptionType extends Content implements
 	 * subclasses of Content. Connects to the DB, commits the different SQL
 	 * statements and return feedback.
 	 * 
-	 * @param sql -
-	 *            The SQL statement to be executed.
-	 * @return Number of rows affected (0, if nothing happened, 1 if one row
-	 *         added).
+	 * @param sql
+	 *           - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row added).
 	 */
 	public int add(int id) {
 		String sql = "INSERT INTO " + getTableName() + " VALUES (";
@@ -60,8 +57,7 @@ public class MultiWordNounExceptionType extends Content implements
 		sql += ", '" + undotted + "'";
 		String transliterated = LexiconUtils.getTransliteration(undotted);
 		try {
-			transliterated = URLEncoder.encode(transliterated,
-					Content.ADD_ENCODING);
+			transliterated = URLEncoder.encode(transliterated, Content.ADD_ENCODING);
 		} catch (Exception e) {
 		}
 		sql += ", '" + transliterated + "'";
@@ -89,14 +85,13 @@ public class MultiWordNounExceptionType extends Content implements
 	}
 
 	/**
-	 * Updates the current record in the DB, so it would resemble the current
-	 * object state. The method uses ResultSet.updateRow method in order to
-	 * implement the generic update process. The method finds the record of the
-	 * current object, generates the meta data (the names and types of the
-	 * columns) , Runs on the columns and updateing each one, according with the
-	 * column type. After these stages, the method calls
-	 * <code>ResultSet.updateRow</code> in order to execute the update in the
-	 * DB.
+	 * Updates the current record in the DB, so it would resemble the current object
+	 * state. The method uses ResultSet.updateRow method in order to implement the
+	 * generic update process. The method finds the record of the current object,
+	 * generates the meta data (the names and types of the columns) , Runs on the
+	 * columns and updateing each one, according with the column type. After these
+	 * stages, the method calls <code>ResultSet.updateRow</code> in order to execute
+	 * the update in the DB.
 	 * 
 	 * @see #info
 	 * @see ResultSet#updateRow
@@ -114,8 +109,7 @@ public class MultiWordNounExceptionType extends Content implements
 		sql += " undotted='" + undotted + "'";
 		String transliterated = LexiconUtils.getTransliteration(undotted);
 		try {
-			transliterated = URLEncoder.encode(transliterated,
-					Content.UPDATE_ENCODING);
+			transliterated = URLEncoder.encode(transliterated, Content.UPDATE_ENCODING);
 		} catch (Exception e) {
 		}
 		sql += ", transliterated='" + transliterated + "'";
@@ -180,7 +174,7 @@ public class MultiWordNounExceptionType extends Content implements
 	 * Sets the value of the undotted property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setUndotted(java.lang.String value) {
 		content.setUndotted(value);
@@ -202,7 +196,7 @@ public class MultiWordNounExceptionType extends Content implements
 	 * Sets the value of the dotted property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setDotted(java.lang.String value) {
 		content.setDotted(value);
@@ -222,7 +216,7 @@ public class MultiWordNounExceptionType extends Content implements
 	 * Sets the value of the script property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setRegister(java.lang.String value) {
 		content.setRegister(value);
@@ -241,7 +235,7 @@ public class MultiWordNounExceptionType extends Content implements
 	 * Sets the value of the script property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setSpelling(java.lang.String value) {
 		content.setSpelling(value);
@@ -263,7 +257,7 @@ public class MultiWordNounExceptionType extends Content implements
 	 * Sets the value of the transliterated property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setTransliterated(java.lang.String value) {
 		content.setTransliterated(value);
@@ -276,8 +270,6 @@ public class MultiWordNounExceptionType extends Content implements
 	public void setInflectPossessiveS(boolean value) {
 		content.setInflectPossessiveS(value);
 	}
-
-	
 
 	public boolean isInflectPossessiveP() {
 		return content.isInflectPossessiveP();

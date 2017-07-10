@@ -12,12 +12,21 @@ import java.util.List;
 import java.util.ArrayList;
 import lexicon.contents.Content;
 import lexicon.contents.types.TransliterationType;
+
 /**
- * �� ��������, ����, ���� ������, ����� ����� �����, �� ����� �����, ���"� �� ����� �����, ����� ������, ����� �����, ����� ������� ������ �����.
+ * �� ��������, ����, ����
+ * ������, ����� ����� �����, ��
+ * ����� �����, ���"� �� �����
+ * �����, ����� ������, �����
+ * �����, ����� ������� ������
+ * �����.
  * 
  * Java content class for MetadataType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 44)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 44)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="MetadataType">
  *   &lt;complexContent>
@@ -40,150 +49,172 @@ import lexicon.contents.types.TransliterationType;
  * </pre>
  * 
  */
-public class MetadataType extends Content implements lexicon.jaxb.MetadataType{
+public class MetadataType extends Content implements lexicon.jaxb.MetadataType {
 	lexicon.jaxb.MetadataType content;
-	
+
 	public MetadataType(lexicon.jaxb.MetadataType content) {
 		this.content = content;
 		TABLE = "metadata";
-		IDNAME = "mid"; 
+		IDNAME = "mid";
 	}
+
 	public MetadataType() {
 		content = new lexicon.jaxb.impl.MetadataTypeImpl();
 		TABLE = "metadata";
-		IDNAME = "mid"; 
+		IDNAME = "mid";
 	}
+
 	public lexicon.jaxb.impl.MetadataTypeImpl getImpl() {
-		return (lexicon.jaxb.impl.MetadataTypeImpl)content;
+		return (lexicon.jaxb.impl.MetadataTypeImpl) content;
 	}
+
 	public int add(int id) {
 		return 0;
 	}
-    /**
-     * Gets the value of the content property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getComment() {
-    	return content.getComment();
-    }
+
 	/**
-	*An empty implementation to the method add() methods in the different subclasses of Content.
-	*Connects to the DB, commits the different SQL statements and return feedback.
-	*@param		sql - The SQL statement to be executed.
-	*@return	Number of rows affected (0, if nothing happened, 1 if one row added).
-	*/
+	 * Gets the value of the content property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getComment() {
+		return content.getComment();
+	}
+
+	/**
+	 * An empty implementation to the method add() methods in the different
+	 * subclasses of Content. Connects to the DB, commits the different SQL
+	 * statements and return feedback.
+	 * 
+	 * @param sql
+	 *           - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row added).
+	 */
 	public int add() {
-		String sql = "INSERT INTO "+ getTableName() + " VALUES (";
+		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += "0";
-		sql += ", '"+getName()+"'";
-		sql += ", '"+ getVersion() +"'";
-		sql += ", '"+ getRevision() +"'";
-		sql += ", '"+ getDate() +"'";
-		sql += ", '"+ getMaintainer() +"'";
-		sql += ", '"+ getEmail() +"'";
+		sql += ", '" + getName() + "'";
+		sql += ", '" + getVersion() + "'";
+		sql += ", '" + getRevision() + "'";
+		sql += ", '" + getDate() + "'";
+		sql += ", '" + getMaintainer() + "'";
+		sql += ", '" + getEmail() + "'";
 		String license = getLicense();
 		try {
-			license = URLEncoder.encode(license, Content.ADD_ENCODING);			
-		}catch (Exception e) {} 
-		sql += ", '"+license+"'";
+			license = URLEncoder.encode(license, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + license + "'";
 		String comment = getComment();
 		if (comment == null) {
 			comment = "";
 		}
 		try {
-			comment = URLEncoder.encode(comment, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+comment+"')";
+			comment = URLEncoder.encode(comment, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + comment + "')";
 		int feedback = 0;
 		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		addSource();
-		TransliterationType trans = new TransliterationType((lexicon.jaxb.TransliterationType)getTransliteration());
+		TransliterationType trans = new TransliterationType((lexicon.jaxb.TransliterationType) getTransliteration());
 		trans.add(id);
 		return feedback;
 	}
+
 	/**
-	*Updates the current record in the DB, so it would resemble the current object state.
-	*The method uses ResultSet.updateRow method in order to implement the generic update process.
-	*The method finds the record of the current object, generates the meta data (the names and types of the columns)
-	*, Runs on the columns and updateing each one, according with the column type. After these stages, the
-	*method calls <code>ResultSet.updateRow</code> in order to execute the update in the DB.
-	*@see   #info
-	*@see   ResultSet#updateRow
-	*@see   #openRS
-	*@return	The number of rows that were affected from the action. If 0, then nothing happened
-	*/
+	 * Updates the current record in the DB, so it would resemble the current object
+	 * state. The method uses ResultSet.updateRow method in order to implement the
+	 * generic update process. The method finds the record of the current object,
+	 * generates the meta data (the names and types of the columns) , Runs on the
+	 * columns and updateing each one, according with the column type. After these
+	 * stages, the method calls <code>ResultSet.updateRow</code> in order to execute
+	 * the update in the DB.
+	 * 
+	 * @see #info
+	 * @see ResultSet#updateRow
+	 * @see #openRS
+	 * @return The number of rows that were affected from the action. If 0, then
+	 *         nothing happened
+	 */
 	public int update() {
-		String sql = "UPDATE "+ getTableName() + " SET";
+		String sql = "UPDATE " + getTableName() + " SET";
 		sql += ", mid=0";
-		sql += ", name='"+getName()+"'";
-		sql += ", version='"+ getVersion() +"'";
-		sql += ", revision='"+ getRevision() +"'";
-		sql += ", date='"+ getDate() +"'";
-		sql += ", maintainer='"+ getMaintainer() +"'";
-		sql += ", email='"+ getEmail() +"'";
+		sql += ", name='" + getName() + "'";
+		sql += ", version='" + getVersion() + "'";
+		sql += ", revision='" + getRevision() + "'";
+		sql += ", date='" + getDate() + "'";
+		sql += ", maintainer='" + getMaintainer() + "'";
+		sql += ", email='" + getEmail() + "'";
 		String license = getLicense();
 		try {
-			license = URLEncoder.encode(license, Content.UPDATE_ENCODING);			
-		}catch (Exception e) {} 
-		sql += ", license='"+ license +"'";
+			license = URLEncoder.encode(license, Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", license='" + license + "'";
 		String comment = getComment();
 		if (comment == null) {
 			comment = "";
-		} 
+		}
 		try {
-			comment = URLEncoder.encode(comment, Content.UPDATE_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", comment='"+ comment +"'";
+			comment = URLEncoder.encode(comment, Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", comment='" + comment + "'";
 		int feedback = execute(sql);
 		updateSource(id);
-		
+
 		updateTransliterated(id);
 		return feedback;
 	}
+
 	public int addSource() {
 		int result = 0;
-		for (int i=0; i< getSource().size(); i++) {
-			SourceType source = new SourceType((lexicon.jaxb.SourceType)getSource().get(i));
-			result += source.add(id); 
+		for (int i = 0; i < getSource().size(); i++) {
+			SourceType source = new SourceType((lexicon.jaxb.SourceType) getSource().get(i));
+			result += source.add(id);
 		}
 		return result;
 	}
+
 	public int updateSource(int id) {
 		int result = 0;
-		for (int i=0; i< getSource().size(); i++) {
-			SourceType source = new SourceType((lexicon.jaxb.SourceType)getSource().get(i));
+		for (int i = 0; i < getSource().size(); i++) {
+			SourceType source = new SourceType((lexicon.jaxb.SourceType) getSource().get(i));
 			result += source.update();
 			int sid = getCurrentID(source.getTableName(), "source_id");
-			String sql = "IUPDATE source_metadata_links SET source_id="+sid+", metadata_id="+id+")";
+			String sql = "IUPDATE source_metadata_links SET source_id=" + sid + ", metadata_id=" + id + ")";
 			execute(sql);
 		}
 		return result;
 	}
+
 	public int updateTransliterated(int id) {
 		int result = 0;
-		TransliterationType trans = new TransliterationType((lexicon.jaxb.TransliterationType)getTransliteration());
+		TransliterationType trans = new TransliterationType((lexicon.jaxb.TransliterationType) getTransliteration());
 		result += trans.update();
 		int tid = getCurrentID(trans.getTableName(), "transliteration_id");
-		String sql = "UPDATE transliteration_metadata_links SET transliteration_id="+tid+", metadata_id="+id+")";
+		String sql = "UPDATE transliteration_metadata_links SET transliteration_id=" + tid + ", metadata_id=" + id + ")";
 		execute(sql);
-		for (int i=0; i< getTransliteration().getString().size(); i++) {
-			StringType stringType = new StringType((lexicon.jaxb.TransliterationType.StringType)getTransliteration().getString().get(i));
+		for (int i = 0; i < getTransliteration().getString().size(); i++) {
+			StringType stringType = new StringType(
+					(lexicon.jaxb.TransliterationType.StringType) getTransliteration().getString().get(i));
 			stringType.add(tid);
 		}
-		
+
 		return result;
 	}
+
 	public int updateSource() {
 		return 0;
-		
+
 	}
+
 	public int updateTransliterated() {
 		return 0;
 	}
+
 	public void load() {
 		setName(getString("name"));
 		setVersion(getFloat("version"));
@@ -197,7 +228,7 @@ public class MetadataType extends Content implements lexicon.jaxb.MetadataType{
 			comment = null;
 		}
 		setComment(comment);
-		// TODO - 
+		// TODO -
 		List sources = getSources(getID());
 		getSource().clear();
 		getSource().addAll(sources);
@@ -205,221 +236,202 @@ public class MetadataType extends Content implements lexicon.jaxb.MetadataType{
 		trans.open(id);
 		setTransliteration(trans.getImpl());
 	}
+
 	protected java.util.List getSources(int id) {
-		String sql = "SELECT source_id from source WHERE metadata_id="+id;
+		String sql = "SELECT source_id from source WHERE metadata_id=" + id;
 		List sources = getContents(sql, "source_id");
 		ArrayList result = new ArrayList();
-		for (int i=0; i< sources.size(); i++) {
+		for (int i = 0; i < sources.size(); i++) {
 			SourceType source = new SourceType();
-			source.open(((Integer)sources.get(i)).intValue());
+			source.open(((Integer) sources.get(i)).intValue());
 			result.add(source.getImpl());
 		}
 		return result;
 	}
+
 	/**
-     * Sets the value of the content property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setComment(java.lang.String value) {
-    	content.setComment(value);
-    }
+	 * Sets the value of the content property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
+	public void setComment(java.lang.String value) {
+		content.setComment(value);
+	}
 
-    /**
-     * Gets the value of the email property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getEmail() {
-    	return content.getEmail();
-    }
+	/**
+	 * Gets the value of the email property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getEmail() {
+		return content.getEmail();
+	}
 
-    /**
-     * Sets the value of the email property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setEmail(java.lang.String value)  {
-    	content.setEmail(value);
-    }
+	/**
+	 * Sets the value of the email property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
+	public void setEmail(java.lang.String value) {
+		content.setEmail(value);
+	}
 
-    /**
-     * Gets the value of the version property.
-     * 
-     */
-    public float getVersion() {
-    	return content.getVersion();
-    }
+	/**
+	 * Gets the value of the version property.
+	 * 
+	 */
+	public float getVersion() {
+		return content.getVersion();
+	}
 
-    /**
-     * Sets the value of the version property.
-     * 
-     */
-    public void setVersion(float value)  {
-    	content.setVersion(value);
-    }
+	/**
+	 * Sets the value of the version property.
+	 * 
+	 */
+	public void setVersion(float value) {
+		content.setVersion(value);
+	}
 
-    /**
-     * Gets the value of the license property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getLicense() {
-    	return content.getLicense();
-    }
+	/**
+	 * Gets the value of the license property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getLicense() {
+		return content.getLicense();
+	}
 
-    /**
-     * Sets the value of the license property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setLicense(java.lang.String value)  {
-    	content.setLicense(value);
-    }
+	/**
+	 * Sets the value of the license property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
+	public void setLicense(java.lang.String value) {
+		content.setLicense(value);
+	}
 
-    /**
-     * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getDate() {
-    	return content.getDate();
-    }
+	/**
+	 * Gets the value of the date property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getDate() {
+		return content.getDate();
+	}
 
-    /**
-     * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setDate(java.lang.String value)  {
-    	content.setDate(value);
-    }
+	/**
+	 * Sets the value of the date property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
+	public void setDate(java.lang.String value) {
+		content.setDate(value);
+	}
 
-    /**
-     * Gets the value of the transliteration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link lexicon.jaxb.TransliterationType}
-     */
-    public lexicon.jaxb.TransliterationType getTransliteration() {
-    	return content.getTransliteration();
-    }
+	/**
+	 * Gets the value of the transliteration property.
+	 * 
+	 * @return possible object is {@link lexicon.jaxb.TransliterationType}
+	 */
+	public lexicon.jaxb.TransliterationType getTransliteration() {
+		return content.getTransliteration();
+	}
 
-    /**
-     * Sets the value of the transliteration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link lexicon.jaxb.TransliterationType}
-     */
-    public void setTransliteration(lexicon.jaxb.TransliterationType value)  {
-    	content.setTransliteration(value);
-    }
+	/**
+	 * Sets the value of the transliteration property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link lexicon.jaxb.TransliterationType}
+	 */
+	public void setTransliteration(lexicon.jaxb.TransliterationType value) {
+		content.setTransliteration(value);
+	}
 
-    /**
-     * Gets the value of the maintainer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getMaintainer() {
-    	return content.getMaintainer();
-    }
+	/**
+	 * Gets the value of the maintainer property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getMaintainer() {
+		return content.getMaintainer();
+	}
 
-    /**
-     * Sets the value of the maintainer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setMaintainer(java.lang.String value)  {
-    	content.setMaintainer(value);
-    }
+	/**
+	 * Sets the value of the maintainer property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
+	public void setMaintainer(java.lang.String value) {
+		content.setMaintainer(value);
+	}
 
-    /**
-     * Gets the value of the Source property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the Source property.
-     * 
-     * <p>
-     * For example, to add a new content, do as follows:
-     * <pre>
-     *    getSource().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.SourceType}
-     * 
-     */
-    public java.util.List getSource() {
-    	return content.getSource() ;
-    }
+	/**
+	 * Gets the value of the Source property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the Source property.
+	 * 
+	 * <p>
+	 * For example, to add a new content, do as follows:
+	 * 
+	 * <pre>
+	 * getSource().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.SourceType}
+	 * 
+	 */
+	public java.util.List getSource() {
+		return content.getSource();
+	}
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getName() {
-    	return content.getName();
-    }
+	/**
+	 * Gets the value of the name property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getName() {
+		return content.getName();
+	}
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setName(java.lang.String value)  {
-    	content.setName(value);
-    }
+	/**
+	 * Sets the value of the name property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
+	public void setName(java.lang.String value) {
+		content.setName(value);
+	}
 
-    /**
-     * Gets the value of the revision property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-    public java.lang.String getRevision() {
-    	return content.getRevision();
-    }
+	/**
+	 * Gets the value of the revision property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getRevision() {
+		return content.getRevision();
+	}
 
-    /**
-     * Sets the value of the revision property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
-    public void setRevision(java.lang.String value) {
-    	content.setRevision(value);
-    }
+	/**
+	 * Sets the value of the revision property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
+	public void setRevision(java.lang.String value) {
+		content.setRevision(value);
+	}
 
 }

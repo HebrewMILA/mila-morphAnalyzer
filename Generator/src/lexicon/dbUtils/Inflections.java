@@ -23,11 +23,10 @@ import lexicon.stringUtils.Translate;
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
-public class Inflections extends ConnectedGenerator 
-{
+public class Inflections extends ConnectedGenerator {
 	private String surface;
 	private String transliterated;
 	private String register;
@@ -56,8 +55,8 @@ public class Inflections extends ConnectedGenerator
 	private boolean consecutive;
 	private int subId;
 	private int multiWordLen;
-	
-	private String table ="";
+
+	private String table = "";
 
 	/**
 	 * @return Returns the consecutive.
@@ -68,7 +67,7 @@ public class Inflections extends ConnectedGenerator
 
 	/**
 	 * @param consecutive
-	 *            The consecutive to set.
+	 *           The consecutive to set.
 	 */
 	public void setConsecutive(boolean consecutive) {
 		this.consecutive = consecutive;
@@ -83,7 +82,7 @@ public class Inflections extends ConnectedGenerator
 
 	/**
 	 * @param inflections
-	 *            The pInflections to set.
+	 *           The pInflections to set.
 	 */
 	public void setPInflections(PrintStream inflections) {
 		pInflections = inflections;
@@ -98,7 +97,7 @@ public class Inflections extends ConnectedGenerator
 
 	/**
 	 * @param out
-	 *            The pOut to set.
+	 *           The pOut to set.
 	 */
 	public void setPOut(PrintStream out) {
 		pOut = out;
@@ -169,231 +168,214 @@ public class Inflections extends ConnectedGenerator
 
 	/**
 	 * @param hebForeign
-	 *            The hebForeign to set.
+	 *           The hebForeign to set.
 	 */
-	public void setHebForeign(String hebForeign) 
-	{
+	public void setHebForeign(String hebForeign) {
 		this.hebForeign = hebForeign;
 	}
 
 	private String hebForeign = "";
 
-	//private int baseId;
+	// private int baseId;
 
-	//private String comment;
+	// private String comment;
 
 	PrintStream pOut = null; // declare a print stream object
 
 	PrintStream pInflections = null; // declare a print stream object
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		Inflections inflections = new Inflections();
 		inflections.getWholeNouns();
 
 	}
 
-	//	public void insertItem() {
-	//		transliterated = apostropheHandling(transliterated);
-	//		baseTransliteratedLItem = apostropheHandling(baseTransliteratedLItem);
+	// public void insertItem() {
+	// transliterated = apostropheHandling(transliterated);
+	// baseTransliteratedLItem = apostropheHandling(baseTransliteratedLItem);
 	//
-	//		//Hebrew in saved in the database in "ISO-8859-1"
-	//		try {
-	//			setSurface(URLEncoder.encode(getSurface(), "UTF-8"));
-	//			setBaseundottedLItem(URLEncoder.encode(getBaseundottedLItem(),
-	//					"UTF-8"));
-	//			//setSuffixSurface(URLEncoder.encode(suffixSurface, "UTF-8"));
-	//			setRoot(URLEncoder.encode(root, "UTF-8"));
-	//			setDottedLexiconItem(URLEncoder.encode(dottedLexiconItem, "UTF-8"));
-	//			String sql = "INSERT INTO inflections "
-	//				+ "(surface, transliterated, basePos, baseTransliteratedLItem," +
-	//						"baseLexiconPointer,baseUndottedLItem,script,PGN," +
-	//						"baseNamedEntityType,baseGender,baseNumber," +
-	//						"baseDefinitness,baseConjunctionType,baseQuantifierType," +
-	//						"baseNumeralType,basePronounType,basePerson,suffixStatus" +
-	//						",suffixGender,suffixNumber,suffixFunction, " +
-	//						"suffixTransliterated, suffixPerson,binyan,tense," +
-	//						"root,accusativeSuffix,accusativeNominativeNumber, " +
-	//						"accusativeNominativeGender,accusativeNominativePerson ," +
-	//						"accusativeNominativePGN, dottedLexiconItem,polarity,hebForeign" +
-	//						", consecutive,subId,multiWordLen" +
-	//						") VALUES ("
-	//				+ "'" + surface + "','" + transliterated + "','" + basePos
-	//				+ "','" + baseTransliteratedLItem + "','" + baseLexiconPointer
-	//				+ "','" + baseUndottedLItem + "','" + script + "','" + PGN
-	//				+ "','" + baseNamedEntityType + "','" + baseGender + "','"
-	//				+ baseNumber + "','" + baseDefinitness + "','"
-	//				+ baseConjunctionType + "','" + baseQuantifierType + "','"
-	//				+ baseNumeralType + "','"
-	//				+ basePronounType + "','" + basePerson + "','" + suffixStatus
-	//				+ "','" + suffixGender + "','" + suffixNumber + "','"
-	//				+ suffixFunction + "','" + suffixTransliterated + "','"
-	//				+ suffixPerson + "','" + binyan + "','"+ tense + "','"
-	//				+ root + "','" + accusativeSuffix + "','" + accusativeNominativeNumber +
-	//				"','" + accusativeNominativeGender + "','" + accusativeNominativePerson +
-	//				"','" + accusativeNominativePGN + "','" + dottedLexiconItem + "','" +
-	//				polarity + "','" + hebForeign + "'" +
-	//				"," + consecutive+ "," + subId+"," + multiWordLen+
-	//				")";
-	//		System.out.println("sql="+sql);
-	//		int feedback = execute(sql);
-	//		} catch (Exception e) {
-	//			e.printStackTrace();
-	//			System.exit(0);
-	//		}
-	//		
-	//	}
+	// //Hebrew in saved in the database in "ISO-8859-1"
+	// try {
+	// setSurface(URLEncoder.encode(getSurface(), "UTF-8"));
+	// setBaseundottedLItem(URLEncoder.encode(getBaseundottedLItem(),
+	// "UTF-8"));
+	// //setSuffixSurface(URLEncoder.encode(suffixSurface, "UTF-8"));
+	// setRoot(URLEncoder.encode(root, "UTF-8"));
+	// setDottedLexiconItem(URLEncoder.encode(dottedLexiconItem, "UTF-8"));
+	// String sql = "INSERT INTO inflections "
+	// + "(surface, transliterated, basePos, baseTransliteratedLItem," +
+	// "baseLexiconPointer,baseUndottedLItem,script,PGN," +
+	// "baseNamedEntityType,baseGender,baseNumber," +
+	// "baseDefinitness,baseConjunctionType,baseQuantifierType," +
+	// "baseNumeralType,basePronounType,basePerson,suffixStatus" +
+	// ",suffixGender,suffixNumber,suffixFunction, " +
+	// "suffixTransliterated, suffixPerson,binyan,tense," +
+	// "root,accusativeSuffix,accusativeNominativeNumber, " +
+	// "accusativeNominativeGender,accusativeNominativePerson ," +
+	// "accusativeNominativePGN, dottedLexiconItem,polarity,hebForeign" +
+	// ", consecutive,subId,multiWordLen" +
+	// ") VALUES ("
+	// + "'" + surface + "','" + transliterated + "','" + basePos
+	// + "','" + baseTransliteratedLItem + "','" + baseLexiconPointer
+	// + "','" + baseUndottedLItem + "','" + script + "','" + PGN
+	// + "','" + baseNamedEntityType + "','" + baseGender + "','"
+	// + baseNumber + "','" + baseDefinitness + "','"
+	// + baseConjunctionType + "','" + baseQuantifierType + "','"
+	// + baseNumeralType + "','"
+	// + basePronounType + "','" + basePerson + "','" + suffixStatus
+	// + "','" + suffixGender + "','" + suffixNumber + "','"
+	// + suffixFunction + "','" + suffixTransliterated + "','"
+	// + suffixPerson + "','" + binyan + "','"+ tense + "','"
+	// + root + "','" + accusativeSuffix + "','" + accusativeNominativeNumber +
+	// "','" + accusativeNominativeGender + "','" + accusativeNominativePerson +
+	// "','" + accusativeNominativePGN + "','" + dottedLexiconItem + "','" +
+	// polarity + "','" + hebForeign + "'" +
+	// "," + consecutive+ "," + subId+"," + multiWordLen+
+	// ")";
+	// System.out.println("sql="+sql);
+	// int feedback = execute(sql);
+	// } catch (Exception e) {
+	// e.printStackTrace();
+	// System.exit(0);
+	// }
+	//
+	// }
 
-	//	//without multiWord
-	public void insertItem() 
-	{
+	// //without multiWord
+	public void insertItem() {
 		transliterated = apostropheHandling(transliterated);
 		baseTransliteratedLItem = apostropheHandling(baseTransliteratedLItem);
-		//Hebrew in saved in the database in "ISO-8859-1"
-		try 
-		{
+		// Hebrew in saved in the database in "ISO-8859-1"
+		try {
 			setSurface(URLEncoder.encode(getSurface(), "UTF-8"));
-			setBaseundottedLItem(URLEncoder.encode(getBaseundottedLItem(),"UTF-8"));
-			//setSuffixSurface(URLEncoder.encode(suffixSurface, "UTF-8"));
+			setBaseundottedLItem(URLEncoder.encode(getBaseundottedLItem(), "UTF-8"));
+			// setSuffixSurface(URLEncoder.encode(suffixSurface, "UTF-8"));
 			setRoot(URLEncoder.encode(root, "UTF-8"));
 			setDottedLexiconItem(URLEncoder.encode(dottedLexiconItem, "UTF-8"));
 			if (!value.equals(""))
 				setValue(URLEncoder.encode(value, "UTF-8"));
-			
+
 			// check that this inflection is not removed
 			InflectionEntry iEntry = new InflectionEntry(this);
-			if (iEntry.CheckIfInflectionRemoved()) return;  // if it in the removed list then dont add it
-			
-			String sql = "INSERT INTO inflections "
-					+ "(surface, transliterated, basePos, baseTransliteratedLItem,"
-					+ "baseLexiconPointer,baseUndottedLItem,register,spelling,PGN,"
-					+ "baseGender,baseNumber,"
-					+ "baseDefinitness,"
-					+ "type,basePerson,suffixStatus"
-					+ ",suffixFunction, "
-					+ "binyan,tense,"
-					+ "root, dottedLexiconItem,polarity,value, hebForeign, prefix, baseAlternatePointer"
-					+
-					//", consecutive,subId" +
-					") VALUES (" + "'" + surface + "','" + transliterated
-					+ "','" + basePos + "','" + baseTransliteratedLItem + "','"
-					+ baseLexiconPointer + "','" + baseUndottedLItem + "','"
-					+ register + "','" + spelling + "','"  + PGN + "','" + baseGender + "','" + baseNumber + "','"
-					+ baseDefinitness + "','" + type + "','"
-					+ basePerson + "','" + suffixStatus + "','"
-					+ suffixFunction +  "','"
-					+ binyan + "','" + tense + "','" + root + "','"
-					+ dottedLexiconItem + "','" + polarity + "','" + value
-					+ "','" + hebForeign + "','" + prefix + "','" + baseAlternatePointer + "'" +
-					//"," + consecutive+ "," + subId+
+			if (iEntry.CheckIfInflectionRemoved())
+				return; // if it in the removed list then dont add it
+
+			String sql = "INSERT INTO inflections " + "(surface, transliterated, basePos, baseTransliteratedLItem,"
+					+ "baseLexiconPointer,baseUndottedLItem,register,spelling,PGN," + "baseGender,baseNumber,"
+					+ "baseDefinitness," + "type,basePerson,suffixStatus" + ",suffixFunction, " + "binyan,tense,"
+					+ "root, dottedLexiconItem,polarity,value, hebForeign, prefix, baseAlternatePointer" +
+					// ", consecutive,subId" +
+					") VALUES (" + "'" + surface + "','" + transliterated + "','" + basePos + "','" + baseTransliteratedLItem
+					+ "','" + baseLexiconPointer + "','" + baseUndottedLItem + "','" + register + "','" + spelling + "','"
+					+ PGN + "','" + baseGender + "','" + baseNumber + "','" + baseDefinitness + "','" + type + "','"
+					+ basePerson + "','" + suffixStatus + "','" + suffixFunction + "','" + binyan + "','" + tense + "','"
+					+ root + "','" + dottedLexiconItem + "','" + polarity + "','" + value + "','" + hebForeign + "','"
+					+ prefix + "','" + baseAlternatePointer + "'" +
+					// "," + consecutive+ "," + subId+
 					")";
-			//System.out.println("sql=" + sql);
+			// System.out.println("sql=" + sql);
 			int feedback = execute(sql);
-		} 
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);
 		}
 
 	}
 
-	//	public void insertVerbInflection() {
-	//		try {
-	//			setSurface(URLEncoder.encode(getSurface(), "UTF-8"));
-	//			setBaseundottedLItem(URLEncoder.encode(getBaseundottedLItem(),
-	//					"UTF-8"));
-	//			setRoot(URLEncoder.encode(root, "UTF-8"));
-	//			String sql = "INSERT INTO inflections "
-	//				+ "(surface, transliterated, basePos,baseUndottedLItem,
+	// public void insertVerbInflection() {
+	// try {
+	// setSurface(URLEncoder.encode(getSurface(), "UTF-8"));
+	// setBaseundottedLItem(URLEncoder.encode(getBaseundottedLItem(),
+	// "UTF-8"));
+	// setRoot(URLEncoder.encode(root, "UTF-8"));
+	// String sql = "INSERT INTO inflections "
+	// + "(surface, transliterated, basePos,baseUndottedLItem,
 	// baseTransliteratedLItem,baseLexiconPointer,binyan,root,PGN,tense,script,suffixStatus)
 	// "
-	//				+ "VALUES (" + "'" + surface + "','" + transliterated + "','"
-	//				+ basePos + "','" + baseUndottedLItem + "','"
-	//				+ baseTransliteratedLItem + "','" + baseLexiconPointer + "','"
-	//				+ binyan + "','" + root + "','" + PGN + "','" + tense + "','"
-	//				+ script + "','" + suffixStatus + "')";
-	//		int feedback = execute(sql);
+	// + "VALUES (" + "'" + surface + "','" + transliterated + "','"
+	// + basePos + "','" + baseUndottedLItem + "','"
+	// + baseTransliteratedLItem + "','" + baseLexiconPointer + "','"
+	// + binyan + "','" + root + "','" + PGN + "','" + tense + "','"
+	// + script + "','" + suffixStatus + "')";
+	// int feedback = execute(sql);
 	//
-	//		} catch (Exception e) {
-	//			// TODO Auto-generated catch block
-	//			e.printStackTrace();
-	//			System.exit(0);
-	//		}
-	//	}
+	// } catch (Exception e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// System.exit(0);
+	// }
+	// }
 
-	//	public List getInflectionRecord(String input)
-	//			throws UnsupportedEncodingException {
+	// public List getInflectionRecord(String input)
+	// throws UnsupportedEncodingException {
 	//
-	//		input = apostropheHandling(input);
+	// input = apostropheHandling(input);
 	//
-	//		ArrayList result = new ArrayList();
-	//		String sql = "SELECT * FROM inflections where transliterated ='"
-	//				+ input + "'";
-	//		ResultSet rs = null;
-	//		try {
-	//			rs = getData(sql);
-	//			if (rs != null) {
+	// ArrayList result = new ArrayList();
+	// String sql = "SELECT * FROM inflections where transliterated ='"
+	// + input + "'";
+	// ResultSet rs = null;
+	// try {
+	// rs = getData(sql);
+	// if (rs != null) {
 	//
-	//				while (rs.next()) {
+	// while (rs.next()) {
 	//
-	//					InflectRecord infRec = new InflectRecord();
-	//					infRec.setBaseLexiconPointer(rs
-	//							.getString("baseLexiconPointer"));
-	//					infRec.setBasePos(rs.getString("basePos"));
-	//					infRec.setBaseTransliteratedLItem(rs
-	//							.getString("baseTransliteratedLItem"));
-	//					infRec.setScript(rs.getString("script"));
-	//					infRec.setSuffixFunction(rs.getString("suffixFunction"));
-	//					infRec.setSuffixGender(rs.getString("suffixGender"));
-	//					infRec.setSuffixNumber(rs.getString("suffixNumber"));
-	//					infRec.setSuffixStatus(rs.getString("suffixStatus"));
-	//					infRec.setSurface(rs.getString("surface"));
-	//					infRec.setTransliterated(rs.getString("transliterated"));
-	//					infRec.setPGN(rs.getString("PGN"));
-	//					infRec.setBaseUndottedLItem(rs
-	//							.getString("baseUndottedLItem"));
-	//					infRec.setBinyan(rs.getString("binyan"));
-	//					infRec.setTense(rs.getString("tense"));
-	//					infRec.setRoot(rs.getString("root"));
-	//					infRec.setBaseNumber(rs.getString("baseNumber"));
-	//					infRec.setBaseGender(rs.getString("baseGender"));
-	//					infRec.setBaseNamedEntityType(rs
-	//							.getString("baseNamedEntityType"));
-	//					infRec.setBaseDefinitness(rs.getString("baseDefinitness"));
-	//					infRec.setBaseConjunctionType(rs
-	//							.getString("BaseConjunctionType"));
-	//					infRec.setBaseQuantifierType(rs
-	//							.getString("baseQuantifierType"));
-	//					infRec.setBasePronounType(rs.getString("basePronounType"));
-	//					infRec.setBasePerson(rs.getString("basePerson"));
-	//					infRec.setSuffixPerson(rs.getString("suffixPerson"));
-	//					infRec.setDottedLexiconItem(rs.getString("dottedLexiconItem"));
-	//					infRec.setPolarity(rs.getString("polarity"));
-	//					infRec.setConsecutive(rs.getBoolean("consecutive"));
-	//					infRec.setSubId(rs.getInt("subId"));
-	//					result.add(infRec);
-	//				}
-	//				rs.close();
-	//			}
-	//		} catch (SQLException e) {
-	//			e.printStackTrace();
-	//			System.exit(1);
-	//		} finally {
-	//			releaseConnection();
-	//		}
-	//		return result;
-	//	}
-	//	
+	// InflectRecord infRec = new InflectRecord();
+	// infRec.setBaseLexiconPointer(rs
+	// .getString("baseLexiconPointer"));
+	// infRec.setBasePos(rs.getString("basePos"));
+	// infRec.setBaseTransliteratedLItem(rs
+	// .getString("baseTransliteratedLItem"));
+	// infRec.setScript(rs.getString("script"));
+	// infRec.setSuffixFunction(rs.getString("suffixFunction"));
+	// infRec.setSuffixGender(rs.getString("suffixGender"));
+	// infRec.setSuffixNumber(rs.getString("suffixNumber"));
+	// infRec.setSuffixStatus(rs.getString("suffixStatus"));
+	// infRec.setSurface(rs.getString("surface"));
+	// infRec.setTransliterated(rs.getString("transliterated"));
+	// infRec.setPGN(rs.getString("PGN"));
+	// infRec.setBaseUndottedLItem(rs
+	// .getString("baseUndottedLItem"));
+	// infRec.setBinyan(rs.getString("binyan"));
+	// infRec.setTense(rs.getString("tense"));
+	// infRec.setRoot(rs.getString("root"));
+	// infRec.setBaseNumber(rs.getString("baseNumber"));
+	// infRec.setBaseGender(rs.getString("baseGender"));
+	// infRec.setBaseNamedEntityType(rs
+	// .getString("baseNamedEntityType"));
+	// infRec.setBaseDefinitness(rs.getString("baseDefinitness"));
+	// infRec.setBaseConjunctionType(rs
+	// .getString("BaseConjunctionType"));
+	// infRec.setBaseQuantifierType(rs
+	// .getString("baseQuantifierType"));
+	// infRec.setBasePronounType(rs.getString("basePronounType"));
+	// infRec.setBasePerson(rs.getString("basePerson"));
+	// infRec.setSuffixPerson(rs.getString("suffixPerson"));
+	// infRec.setDottedLexiconItem(rs.getString("dottedLexiconItem"));
+	// infRec.setPolarity(rs.getString("polarity"));
+	// infRec.setConsecutive(rs.getBoolean("consecutive"));
+	// infRec.setSubId(rs.getInt("subId"));
+	// result.add(infRec);
+	// }
+	// rs.close();
+	// }
+	// } catch (SQLException e) {
+	// e.printStackTrace();
+	// System.exit(1);
+	// } finally {
+	// releaseConnection();
+	// }
+	// return result;
+	// }
+	//
 
-	public List getInflectionRecord(String input)
-			throws UnsupportedEncodingException {
+	public List getInflectionRecord(String input) throws UnsupportedEncodingException {
 
 		input = apostropheHandling(input);
 
 		ArrayList result = new ArrayList();
-		String sql = "SELECT * FROM inflections where transliterated ='"
-				+ input + "'";
+		String sql = "SELECT * FROM inflections where transliterated ='" + input + "'";
 		ResultSet rs = null;
 		try {
 			rs = getData(sql);
@@ -402,13 +384,10 @@ public class Inflections extends ConnectedGenerator
 				while (rs.next()) {
 
 					InflectRecord infRec = new InflectRecord();
-					infRec.setBaseLexiconPointer(rs
-							.getString("baseLexiconPointer"));
-					infRec.setBaseLexiconPointer(rs
-									.getString("baseAlternatePointer"));
+					infRec.setBaseLexiconPointer(rs.getString("baseLexiconPointer"));
+					infRec.setBaseLexiconPointer(rs.getString("baseAlternatePointer"));
 					infRec.setBasePos(rs.getString("basePos"));
-					infRec.setBaseTransliteratedLItem(rs
-							.getString("baseTransliteratedLItem"));
+					infRec.setBaseTransliteratedLItem(rs.getString("baseTransliteratedLItem"));
 					infRec.setRegister(rs.getString("register"));
 					infRec.setSpelling(rs.getString("spelling"));
 					infRec.setSuffixFunction(rs.getString("suffixFunction"));
@@ -416,21 +395,18 @@ public class Inflections extends ConnectedGenerator
 					infRec.setSurface(rs.getString("surface"));
 					infRec.setTransliterated(rs.getString("transliterated"));
 					infRec.setPGN(rs.getString("PGN"));
-					infRec.setBaseUndottedLItem(rs
-							.getString("baseUndottedLItem"));
+					infRec.setBaseUndottedLItem(rs.getString("baseUndottedLItem"));
 					infRec.setBinyan(rs.getString("binyan"));
 					infRec.setTense(rs.getString("tense"));
 					infRec.setRoot(rs.getString("root"));
 					infRec.setBaseNumber(rs.getString("baseNumber"));
 					infRec.setBaseGender(rs.getString("baseGender"));
-					infRec.setType(rs
-							.getString("type"));
+					infRec.setType(rs.getString("type"));
 					infRec.setBasePerson(rs.getString("basePerson"));
-					infRec.setDottedLexiconItem(rs
-							.getString("dottedLexiconItem"));
+					infRec.setDottedLexiconItem(rs.getString("dottedLexiconItem"));
 					infRec.setPolarity(rs.getString("polarity"));
-					//infRec.setConsecutive(rs.getBoolean("consecutive"));
-					//infRec.setSubId(rs.getInt("subId"));
+					// infRec.setConsecutive(rs.getBoolean("consecutive"));
+					// infRec.setSubId(rs.getInt("subId"));
 					result.add(infRec);
 				}
 				rs.close();
@@ -444,8 +420,7 @@ public class Inflections extends ConnectedGenerator
 		return result;
 	}
 
-	public void getWholeInflections() 
-	{
+	public void getWholeInflections() {
 		String dir = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\";
 		FileOutputStream inflections; // declare a file output object
 		try {
@@ -461,28 +436,28 @@ public class Inflections extends ConnectedGenerator
 			System.err.println("Error writing to file");
 		}
 		try {
-			//String sql = "select transliterated from inflections order by id
+			// String sql = "select transliterated from inflections order by id
 			// ";
-			//String sql = "select * from item,adjective,noun_exception_type
+			// String sql = "select * from item,adjective,noun_exception_type
 			// where item.id=adjective.id and item.id=noun_exception_type.id and
 			// adjective.number='singular' and adjective.gender='masculine' and
 			// noun_exception_type.transliterated like '%im'";
-			//			String sql = "select * from item, noun, noun_exception_type " +
-			//					"where item.id=noun.id and noun.id=noun_exception_type.id " +
-			//					"and item.transliterated like '%iih' and
+			// String sql = "select * from item, noun, noun_exception_type " +
+			// "where item.id=noun.id and noun.id=noun_exception_type.id " +
+			// "and item.transliterated like '%iih' and
 			// noun_exception_type.transliterated " +
 			//// "like '%ih' and noun_exception_type.script ='colloquial'";
-			//			String sql = "select * from item, noun " +
-			//			"where item.id=noun.id " +
-			//			"and item.transliterated like '%ii%' and item.transliterated not
+			// String sql = "select * from item, noun " +
+			// "where item.id=noun.id " +
+			// "and item.transliterated like '%ii%' and item.transliterated not
 			// like '%iih' ";
-			//			
-			//			sql = "select * from item, noun, noun_exception_type " +
-			//			"where item.id=noun.id and noun.id=noun_exception_type.id " +
-			//			"and item.transliterated like '%ii%' and item.transliterated not
+			//
+			// sql = "select * from item, noun, noun_exception_type " +
+			// "where item.id=noun.id and noun.id=noun_exception_type.id " +
+			// "and item.transliterated like '%ii%' and item.transliterated not
 			// " +
-			//			"like '%iih' and noun_exception_type.transliterated " +
-			//			"like '%i%' and noun_exception_type.script ='colloquial'";
+			// "like '%iih' and noun_exception_type.transliterated " +
+			// "like '%i%' and noun_exception_type.script ='colloquial'";
 
 			String sql = "select * from noun";
 
@@ -522,7 +497,7 @@ public class Inflections extends ConnectedGenerator
 				rs.getRow();
 				id = rs.getString("id");
 				transliterated = rs.getString("transliterated");
-				//				undotted = rs.getString("undotted");
+				// undotted = rs.getString("undotted");
 				//// dotted = rs.getString("dotted");
 				String surface = Translate.Eng2Heb(transliterated);
 				//// String description = rs.getString("description");
@@ -560,10 +535,10 @@ public class Inflections extends ConnectedGenerator
 				//// binyan= rs.getString("binyan");
 				//// tense = rs.getString("tense");
 				//// try {
-				//					//surface = URLDecoder.decode(surface, "UTF-8");
+				// //surface = URLDecoder.decode(surface, "UTF-8");
 				//// undotted = URLDecoder.decode(undotted, "UTF-8");
 				//// } catch (UnsupportedEncodingException e) {
-				//					// TODO Auto-generated catch block
+				// // TODO Auto-generated catch block
 				//// e.printStackTrace();
 				//// }
 				pInflections.print(surface);
@@ -584,7 +559,7 @@ public class Inflections extends ConnectedGenerator
 				//// pInflections.print(" ");
 				//// pInflections.print(dotted);
 				//// pInflections.print(" ");
-				//		
+				//
 				//// pInflections.print(baseTransliteratedLItem);
 				//// pInflections.print(" ");
 				//// pInflections.print(baseUndottedLItem);
@@ -622,7 +597,7 @@ public class Inflections extends ConnectedGenerator
 				////// pInflections.print(" ");
 				//// pInflections.print(script);
 				//// pInflections.print(" ");
-				//				pInflections.println();
+				// pInflections.println();
 			}
 			rs.close();
 		} catch (SQLException E) {
@@ -635,7 +610,7 @@ public class Inflections extends ConnectedGenerator
 		}
 	}
 
-public void getWholeNouns() {
+	public void getWholeNouns() {
 		String gender = "";
 		String number = "";
 		String feminine;
@@ -656,114 +631,109 @@ public void getWholeNouns() {
 		}
 		try {
 
-			
-		String sql = "  select undotted from " +
-				" lexiconP.item where pos='wPrefix'";	
-		
+			String sql = "  select undotted from " + " lexiconP.item where pos='wPrefix'";
+
 			String transliterated = "";
 			ResultSet rs = null;
 			rs = getData(sql);
 			int i = 0;
-			//			pInflections.print("num");
-			//			pInflections.print(" ");
-			//			pInflections.print("surface");
-			//			pInflections.print(" ");
-			//			pInflections.print("gender");
-			//			pInflections.print(" ");
-			//			pInflections.print("number");
-			//			pInflections.println();
+			// pInflections.print("num");
+			// pInflections.print(" ");
+			// pInflections.print("surface");
+			// pInflections.print(" ");
+			// pInflections.print("gender");
+			// pInflections.print(" ");
+			// pInflections.print("number");
+			// pInflections.println();
 			pInflections.println("*************************************");
 			pInflections.println();
 			while (rs.next()) {
 				i++;
 				surface = rs.getString("undotted");
-				//String dotted= rs.getString("dotted");
-		//		String p =rs.getString("p");
-			//	String type= rs.getString("type");
-			//	String definiteness= rs.getString("definiteness");
-			//	String type= rs.getString("basePronounType");
-			//	String surface= rs.getString("dotted");
-			//	String id= rs.getString("id");
-				//gender = rs.getString("gender");
-				//number = rs.getString("number");
-				//				feminine = rs.getString("feminine");
-				//				root = rs.getString("root");
+				// String dotted= rs.getString("dotted");
+				// String p =rs.getString("p");
+				// String type= rs.getString("type");
+				// String definiteness= rs.getString("definiteness");
+				// String type= rs.getString("basePronounType");
+				// String surface= rs.getString("dotted");
+				// String id= rs.getString("id");
+				// gender = rs.getString("gender");
+				// number = rs.getString("number");
+				// feminine = rs.getString("feminine");
+				// root = rs.getString("root");
 
-				//				root = rs.getString("root");
-				//				String inflectConstructS =
+				// root = rs.getString("root");
+				// String inflectConstructS =
 				// rs.getString("inflectConstructS");;
-				//				String inflectConstructP =
+				// String inflectConstructP =
 				// rs.getString("inflectConstructP");;
-				//				System.out.println(transliterated);
-				//				String gender = rs.getString("gender");
-				//				//String surface = Translate.Eng2Heb(transliterated);
-				//				//surface = apostropheHandling(surface);
-				//				String number = rs.getString("number");
-				//				String pos = rs.getString("pos");
-							//	String definiteness = rs.getString("baseDefinitness");
+				// System.out.println(transliterated);
+				// String gender = rs.getString("gender");
+				// //String surface = Translate.Eng2Heb(transliterated);
+				// //surface = apostropheHandling(surface);
+				// String number = rs.getString("number");
+				// String pos = rs.getString("pos");
+				// String definiteness = rs.getString("baseDefinitness");
 				try {
-				//	surface = URLDecoder.decode(surface, "UTF-8");
-					//dotted = URLDecoder.decode(dotted, "UTF-8");
-				//	dottedPlural = URLDecoder.decode(dottedPlural, "UTF-8");
-				//	undotted = URLDecoder.decode(undotted, "UTF-8");
+					// surface = URLDecoder.decode(surface, "UTF-8");
+					// dotted = URLDecoder.decode(dotted, "UTF-8");
+					// dottedPlural = URLDecoder.decode(dottedPlural, "UTF-8");
+					// undotted = URLDecoder.decode(undotted, "UTF-8");
 					surface = URLDecoder.decode(surface, "UTF-8");
-				//	dotted =URLDecoder.decode(dotted, "UTF-8");
+					// dotted =URLDecoder.decode(dotted, "UTF-8");
 				} catch (UnsupportedEncodingException e) {
-					//	 TODO Auto-generated catch block
+					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				//				pInflections.print(i);
+				// pInflections.print(i);
 
-				//				pInflections.print(" ");
-		//						pInflections.print(id);
-				//				pInflections.print(" ");
+				// pInflections.print(" ");
+				// pInflections.print(id);
+				// pInflections.print(" ");
 
-				
-		//		pInflections.print("	");
+				// pInflections.print(" ");
 				pInflections.print(surface);
 				pInflections.print("	");
-			//	pInflections.print(dotted);
-			//	pInflections.print("	");
-			//	pInflections.print(p	);
-			//	pInflections.print("	");
-			
-		
-	//			pInflections.print(dottedPlural);
-//				pInflections.print(" ");
-//				pInflections.print("�" +surface);
-//				pInflections.print(" ");
-//				pInflections.print("�" +surface);
-//				pInflections.print(" ");
-//				pInflections.print("�" +surface);
-//				pInflections.print(" ");
-			
-				
-//				pInflections.print(type);
-//				pInflections.print(" ");
-				//pInflections.print(number);
-				//pInflections.print(" ");
-				//				pInflections.print(feminine);
-				//				pInflections.print(" ");
-				//				pInflections.print(root);
-				//				pInflections.print(" ");
-				//	pInflections.print(transliterated);
-					//pInflections.print(" ");
-		//						pInflections.print(definiteness);
-					//			pInflections.print(root);
-				//				pInflections.print(" ");
-				//	pInflections.print(pos);
+				// pInflections.print(dotted);
+				// pInflections.print(" ");
+				// pInflections.print(p );
+				// pInflections.print(" ");
 
-				//				pInflections.print(" ");
-				//				pInflections.print(" ");
-				//				pInflections.print(number);
-				//				pInflections.print(" ");
-				//				pInflections.print(" ");
-				//				pInflections.print(person);
-				//				pInflections.print(" ");
-				//				pInflections.print(" ");
-				//				pInflections.print(inflectConstructS);
-				//				pInflections.print(" ");
-				//				pInflections.print(inflectConstructP);
+				// pInflections.print(dottedPlural);
+				// pInflections.print(" ");
+				// pInflections.print("�" +surface);
+				// pInflections.print(" ");
+				// pInflections.print("�" +surface);
+				// pInflections.print(" ");
+				// pInflections.print("�" +surface);
+				// pInflections.print(" ");
+
+				// pInflections.print(type);
+				// pInflections.print(" ");
+				// pInflections.print(number);
+				// pInflections.print(" ");
+				// pInflections.print(feminine);
+				// pInflections.print(" ");
+				// pInflections.print(root);
+				// pInflections.print(" ");
+				// pInflections.print(transliterated);
+				// pInflections.print(" ");
+				// pInflections.print(definiteness);
+				// pInflections.print(root);
+				// pInflections.print(" ");
+				// pInflections.print(pos);
+
+				// pInflections.print(" ");
+				// pInflections.print(" ");
+				// pInflections.print(number);
+				// pInflections.print(" ");
+				// pInflections.print(" ");
+				// pInflections.print(person);
+				// pInflections.print(" ");
+				// pInflections.print(" ");
+				// pInflections.print(inflectConstructS);
+				// pInflections.print(" ");
+				// pInflections.print(inflectConstructP);
 				pInflections.println();
 			}
 
@@ -777,7 +747,9 @@ public void getWholeNouns() {
 			System.out.println("******file is ready**********");
 		}
 
-	}	public void getWholeVerbs() {
+	}
+
+	public void getWholeVerbs() {
 		String dir = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\";
 		FileOutputStream inflections; // declare a file output object
 		try {
@@ -856,13 +828,10 @@ public void getWholeNouns() {
 		return result;
 	}
 
-	public boolean checkInflectionExistence(String baseLexiconPointer,
-			String inflectedVerb, String tense, String PGN) {
+	public boolean checkInflectionExistence(String baseLexiconPointer, String inflectedVerb, String tense, String PGN) {
 		boolean exist = false;
-		String sql = "SELECT * from inflections where baseLexiconPointer = "
-				+ "'" + baseLexiconPointer + "' and transliterated ='"
-				+ inflectedVerb + "' and tense='" + tense + "' and PGN='" + PGN
-				+ "'";
+		String sql = "SELECT * from inflections where baseLexiconPointer = " + "'" + baseLexiconPointer
+				+ "' and transliterated ='" + inflectedVerb + "' and tense='" + tense + "' and PGN='" + PGN + "'";
 		System.out.println("sql exist=" + sql);
 		ResultSet rs = null;
 		rs = getData(sql);
@@ -884,25 +853,23 @@ public void getWholeNouns() {
 
 	private String apostropheHandling(String strIn) {
 		String strOut = strIn;
-		//case of single apostrophe
+		// case of single apostrophe
 		int index1 = strIn.indexOf('\'');
 		if (index1 != -1) {
 			if (index1 == 1) {
 				strOut = strIn.charAt(0) + "\\" + strIn.substring(index1);
-				//System.out.println("strOut = " + strOut);
+				// System.out.println("strOut = " + strOut);
 			} else {
-				strOut = strIn.substring(0, index1) + "\\"
-						+ strIn.substring(index1);
-				//System.out.println("strOut1 = " + strOut);
+				strOut = strIn.substring(0, index1) + "\\" + strIn.substring(index1);
+				// System.out.println("strOut1 = " + strOut);
 			}
-			//case of two apostrophe
+			// case of two apostrophe
 			int index2 = (strIn.substring(index1 + 1)).indexOf('\'');
 			if (index2 != -1) {
 				index2 = strOut.lastIndexOf('\'');
-				//System.out.println("index2 = " + index2);
-				strOut = strOut.substring(0, index2) + "\\"
-						+ strOut.substring(index2);
-				//System.out.println("strOut2 = " + strOut);
+				// System.out.println("index2 = " + index2);
+				strOut = strOut.substring(0, index2) + "\\" + strOut.substring(index2);
+				// System.out.println("strOut2 = " + strOut);
 			}
 		} else
 			strOut = strIn;
@@ -912,113 +879,113 @@ public void getWholeNouns() {
 	/**
 	 * @return Returns the baseBinyan.
 	 */
-	//	public String getBaseBinyan() {
-	//		return baseBinyan;
-	//	}
+	// public String getBaseBinyan() {
+	// return baseBinyan;
+	// }
 	/**
 	 * @param baseBinyan
-	 *            The baseBinyan to set.
+	 *           The baseBinyan to set.
 	 */
-	//	public void setBaseBinyan(String baseBinyan) {
-	//		this.baseBinyan = baseBinyan;
-	//	}
+	// public void setBaseBinyan(String baseBinyan) {
+	// this.baseBinyan = baseBinyan;
+	// }
 	/**
 	 * @return Returns the baseConjunctionType.
 	 */
-	//	public String getBaseConjunctionType() {
-	//		return baseConjunctionType;
-	//	}
+	// public String getBaseConjunctionType() {
+	// return baseConjunctionType;
+	// }
 	/**
 	 * @param baseConjunctionType
-	 *            The baseConjunctionType to set.
+	 *           The baseConjunctionType to set.
 	 */
-	//	public void setBaseConjunctionType(String baseConjunctionType) {
-	//		this.baseConjunctionType = baseConjunctionType;
-	//	}
+	// public void setBaseConjunctionType(String baseConjunctionType) {
+	// this.baseConjunctionType = baseConjunctionType;
+	// }
 	/**
 	 * @return Returns the baseGender.
 	 */
-	//	public String getBaseGender() {
-	//		return baseGender;
-	//	}
+	// public String getBaseGender() {
+	// return baseGender;
+	// }
 	/**
 	 * @param baseGender
-	 *            The baseGender to set.
+	 *           The baseGender to set.
 	 */
-	//	public void setBaseGender(String baseGender) {
-	//		this.baseGender = baseGender;
-	//	}
+
+	// public void setBaseGender(String baseGender) {
+	// this.baseGender = baseGender;
+	// }
 	/**
 	 * @return Returns the baseLexiconPointer.
 	 */
-	public String getBaseLexiconPointer() 
-	{
+	public String getBaseLexiconPointer() {
 		return baseLexiconPointer;
 	}
 
 	/**
 	 * @param baseLexiconPointer
-	 *            The baseLexiconPointer to set.
+	 *           The baseLexiconPointer to set.
 	 */
-	public void setBaseLexiconPointer(String baseLexiconPointer) 
-	{
+	public void setBaseLexiconPointer(String baseLexiconPointer) {
 		this.baseLexiconPointer = baseLexiconPointer;
 	}
-	
+
 	/**
 	 * @return Returns the baseAlternatePointer.
 	 */
-	public String getBaseAlternatePointer(){
+	public String getBaseAlternatePointer() {
 		return baseAlternatePointer;
 	}
 
 	/**
 	 * @param baseAlternatePointer
-	 *            The baseAlternatePointer to set.
+	 *           The baseAlternatePointer to set.
 	 */
-	public void setBaseAlternatePointer(String baseAlternatePointer){
+	public void setBaseAlternatePointer(String baseAlternatePointer) {
 		this.baseAlternatePointer = baseAlternatePointer;
 	}
 
 	/**
 	 * @return Returns the baseNamedEntityType.
 	 */
-	//	public String getBaseNamedEntityType() {
-	//		return baseNamedEntityType;
-	//	}
+	// public String getBaseNamedEntityType() {
+	// return baseNamedEntityType;
+	// }
 	/**
 	 * @param baseNamedEntityType
-	 *            The baseNamedEntityType to set.
+	 *           The baseNamedEntityType to set.
 	 */
-	//	public void setBaseNamedEntityType(String baseNamedEntityType) {
-	//		this.baseNamedEntityType = baseNamedEntityType;
-	//	}
+	// public void setBaseNamedEntityType(String baseNamedEntityType) {
+	// this.baseNamedEntityType = baseNamedEntityType;
+	// }
 	/**
 	 * @return Returns the baseNumber.
 	 */
-	//	public String getBaseNumber() {
-	//		return baseNumber;
-	//	}
+	// public String getBaseNumber() {
+	// return baseNumber;
+	// }
 	/**
 	 * @param baseNumber
-	 *            The baseNumber to set.
+	 *           The baseNumber to set.
 	 */
-	//	public void setBaseNumber(String baseNumber) {
-	//		this.baseNumber = baseNumber;
-	//	}
+	// public void setBaseNumber(String baseNumber) {
+	// this.baseNumber = baseNumber;
+	// }
 	/**
 	 * @return Returns the basePerson.
 	 */
-	//	public String getBasePerson() {
-	//		return basePerson;
-	//	}
+	// public String getBasePerson() {
+	// return basePerson;
+	// }
 	/**
 	 * @param basePerson
-	 *            The basePerson to set.
+	 *           The basePerson to set.
 	 */
-	//	public void setBasePerson(String basePerson) {
-	//		this.basePerson = basePerson;
-	//	}
+
+	// public void setBasePerson(String basePerson) {
+	// this.basePerson = basePerson;
+	// }
 	/**
 	 * @return Returns the basePos.
 	 */
@@ -1028,7 +995,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param basePos
-	 *            The basePos to set.
+	 *           The basePos to set.
 	 */
 	public void setBasePos(String basePos) {
 		this.basePos = basePos;
@@ -1037,81 +1004,82 @@ public void getWholeNouns() {
 	/**
 	 * @return Returns the basePronounType.
 	 */
-	//	public String getBasePronounType() {
-	//		return basePronounType;
-	//	}
+	// public String getBasePronounType() {
+	// return basePronounType;
+	// }
 	/**
 	 * @param basePronounType
-	 *            The basePronounType to set.
+	 *           The basePronounType to set.
 	 */
-	//	public void setBasePronounType(String basePronounType) {
-	//		this.basePronounType = basePronounType;
-	//	}
+	// public void setBasePronounType(String basePronounType) {
+	// this.basePronounType = basePronounType;
+	// }
 	/**
 	 * @return Returns the basePunctuationType.
 	 */
-	//	public String getBasePunctuationType() {
-	//		return basePunctuationType;
-	//	}
+	// public String getBasePunctuationType() {
+	// return basePunctuationType;
+	// }
 	/**
 	 * @param basePunctuationType
-	 *            The basePunctuationType to set.
+	 *           The basePunctuationType to set.
 	 */
-	//	public void setBasePunctuationType(String basePunctuationType) {
-	//		this.basePunctuationType = basePunctuationType;
-	//	}
+	// public void setBasePunctuationType(String basePunctuationType) {
+	// this.basePunctuationType = basePunctuationType;
+	// }
 	/**
 	 * @return Returns the baseQuantifierType.
 	 */
-	//	public String getBaseQuantifierType() {
-	//		return baseQuantifierType;
-	//	}
+	// public String getBaseQuantifierType() {
+	// return baseQuantifierType;
+	// }
 	/**
 	 * @param baseQuantifierType
-	 *            The baseQuantifierType to set.
+	 *           The baseQuantifierType to set.
 	 */
-	//	public void setBaseQuantifierType(String baseQuantifierType) {
-	//		this.baseQuantifierType = baseQuantifierType;
-	//	}
+	// public void setBaseQuantifierType(String baseQuantifierType) {
+	// this.baseQuantifierType = baseQuantifierType;
+	// }
 	/**
 	 * @return Returns the baseRoot.
 	 */
-	//	public String getBaseRoot() {
-	//		return baseRoot;
-	//	}
+	// public String getBaseRoot() {
+	// return baseRoot;
+	// }
 	/**
 	 * @param baseRoot
-	 *            The baseRoot to set.
+	 *           The baseRoot to set.
 	 */
-	//	public void setBaseRoot(String baseRoot) {
-	//		this.baseRoot = baseRoot;
-	//	}
+	// public void setBaseRoot(String baseRoot) {
+	// this.baseRoot = baseRoot;
+	// }
 	/**
 	 * @return Returns the baseStstus.
 	 */
-	//	public String getBaseStstus() {
-	//		return baseStstus;
-	//	}
+	// public String getBaseStstus() {
+	// return baseStstus;
+	// }
 	/**
 	 * @param baseStstus
-	 *            The baseStstus to set.
+	 *           The baseStstus to set.
 	 */
-	//	public void setBaseStstus(String baseStstus) {
-	//		this.baseStstus = baseStstus;
-	//	}
+	// public void setBaseStstus(String baseStstus) {
+	// this.baseStstus = baseStstus;
+	// }
 	/**
 	 * @return Returns the baseTense.
 	 */
-	//	public String getBaseTense() {
-	//		return baseTense;
-	//	}
+	// public String getBaseTense() {
+	// return baseTense;
+	// }
 	/**
 	 * @param baseTense
-	 *            The baseTense to set.
+	 *           The baseTense to set.
 	 */
-	//	public void setBaseTense(String baseTense) {
-	//		this.baseTense = baseTense;
-	//	}
+
+	// public void setBaseTense(String baseTense) {
+	// this.baseTense = baseTense;
+	// }
 	/**
 	 * @return Returns the baseTransliteratedLItem.
 	 */
@@ -1121,7 +1089,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param baseTransliteratedLItem
-	 *            The baseTransliteratedLItem to set.
+	 *           The baseTransliteratedLItem to set.
 	 */
 	public void setBaseTransliteratedLItem(String baseTransliteratedLItem) {
 		this.baseTransliteratedLItem = baseTransliteratedLItem;
@@ -1130,16 +1098,17 @@ public void getWholeNouns() {
 	/**
 	 * @return Returns the comment.
 	 */
-	//	public String getComment() {
-	//		return comment;
-	//	}
+	// public String getComment() {
+	// return comment;
+	// }
 	/**
 	 * @param comment
-	 *            The comment to set.
+	 *           The comment to set.
 	 */
-	//	public void setComment(String comment) {
-	//		this.comment = comment;
-	//	}
+
+	// public void setComment(String comment) {
+	// this.comment = comment;
+	// }
 	/**
 	 * @return Returns the suffixFunction.
 	 */
@@ -1149,7 +1118,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param suffixFunction
-	 *            The suffixFunction to set.
+	 *           The suffixFunction to set.
 	 */
 	public void setSuffixFunction(String suffixFunction) {
 		this.suffixFunction = suffixFunction;
@@ -1164,13 +1133,12 @@ public void getWholeNouns() {
 
 	/**
 	 * @param suffixSurface
-	 *            The suffixSurface to set.
+	 *           The suffixSurface to set.
 	 */
 	public void setSuffixSurface(String suffixSurface) {
 		this.suffixSurface = suffixSurface;
 	}
 
-	
 	/**
 	 * @return Returns the surface.
 	 */
@@ -1180,7 +1148,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param surface
-	 *            The surface to set.
+	 *           The surface to set.
 	 */
 	public void setSurface(String surface) {
 		this.surface = surface;
@@ -1195,7 +1163,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param transliterated
-	 *            The transliterated to set.
+	 *           The transliterated to set.
 	 */
 	public void setTransliterated(String transliterated) {
 		this.transliterated = transliterated;
@@ -1204,16 +1172,17 @@ public void getWholeNouns() {
 	/**
 	 * @return Returns the baseId.
 	 */
-	//	public int getBaseId() {
-	//		return baseId;
-	//	}
+	// public int getBaseId() {
+	// return baseId;
+	// }
 	/**
 	 * @param baseId
-	 *            The baseId to set.
+	 *           The baseId to set.
 	 */
-	//	public void setBaseId(int baseId) {
-	//		this.baseId = baseId;
-	//	}
+
+	// public void setBaseId(int baseId) {
+	// this.baseId = baseId;
+	// }
 	/**
 	 * @return Returns the baseundottedLItem.
 	 */
@@ -1223,7 +1192,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param baseundottedLItem
-	 *            The baseundottedLItem to set.
+	 *           The baseundottedLItem to set.
 	 */
 	public void setBaseundottedLItem(String baseundottedLItem) {
 		this.baseUndottedLItem = baseundottedLItem;
@@ -1231,7 +1200,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param script
-	 *            The script to set.
+	 *           The script to set.
 	 */
 	public void setRegister(String register) {
 		this.register = register;
@@ -1239,21 +1208,19 @@ public void getWholeNouns() {
 
 	/**
 	 * @param suffixStatus
-	 *            The suffixStatus to set.
+	 *           The suffixStatus to set.
 	 */
 	public void setSuffixStatus(String suffixStatus) {
 		this.suffixStatus = suffixStatus;
 	}
-	
-	public void setTable(String _table)
-	{
+
+	public void setTable(String _table) {
 		this.table = _table;
 	}
-	
-	
+
 	/**
 	 * @param pgn
-	 *            The pGN to set.
+	 *           The pGN to set.
 	 */
 	public void setPGN(String pgn) {
 		PGN = pgn;
@@ -1261,7 +1228,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param baseUndottedLItem
-	 *            The baseUndottedLItem to set.
+	 *           The baseUndottedLItem to set.
 	 */
 	public void setBaseUndottedLItem(String baseUndottedLItem) {
 		this.baseUndottedLItem = baseUndottedLItem;
@@ -1269,7 +1236,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param binyan
-	 *            The binyan to set.
+	 *           The binyan to set.
 	 */
 	public void setBinyan(String binyan) {
 		this.binyan = binyan;
@@ -1277,7 +1244,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param root
-	 *            The root to set.
+	 *           The root to set.
 	 */
 	public void setRoot(String root) {
 		this.root = root;
@@ -1285,7 +1252,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param tense
-	 *            The tense to set.
+	 *           The tense to set.
 	 */
 	public void setTense(String tense) {
 		this.tense = tense;
@@ -1293,7 +1260,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param type
-	 *            The type to set.
+	 *           The type to set.
 	 */
 	public void setType(String type) {
 		this.type = type;
@@ -1301,7 +1268,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param baseGender
-	 *            The baseGender to set.
+	 *           The baseGender to set.
 	 */
 	public void setBaseGender(String baseGender) {
 		this.baseGender = baseGender;
@@ -1309,7 +1276,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param baseNumber
-	 *            The baseNumber to set.
+	 *           The baseNumber to set.
 	 */
 	public void setBaseNumber(String baseNumber) {
 		this.baseNumber = baseNumber;
@@ -1338,12 +1305,11 @@ public void getWholeNouns() {
 
 	/**
 	 * @param baseDefinitness
-	 *            The baseDefinitness to set.
+	 *           The baseDefinitness to set.
 	 */
 	public void setBaseDefinitness(String baseDefinitness) {
 		this.baseDefinitness = baseDefinitness;
 	}
-
 
 	/**
 	 * @return Returns the basePerson.
@@ -1354,12 +1320,11 @@ public void getWholeNouns() {
 
 	/**
 	 * @param basePerson
-	 *            The basePerson to set.
+	 *           The basePerson to set.
 	 */
 	public void setBasePerson(String basePerson) {
 		this.basePerson = basePerson;
 	}
-
 
 	/**
 	 * @return Returns the dottedLexiconItem.
@@ -1370,7 +1335,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param dottedLexiconItem
-	 *            The dottedLexiconItem to set.
+	 *           The dottedLexiconItem to set.
 	 */
 	public void setDottedLexiconItem(String dottedLexiconItem) {
 		this.dottedLexiconItem = dottedLexiconItem;
@@ -1385,7 +1350,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param polarity
-	 *            The polarity to set.
+	 *           The polarity to set.
 	 */
 	public void setPolarity(String polarity) {
 		this.polarity = polarity;
@@ -1400,7 +1365,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param subId
-	 *            The subId to set.
+	 *           The subId to set.
 	 */
 	public void setSubId(int subId) {
 		this.subId = subId;
@@ -1415,7 +1380,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param multiWordLen
-	 *            The multiWordLen to set.
+	 *           The multiWordLen to set.
 	 */
 	public void setMultiWordLen(int multiWordLen) {
 		this.multiWordLen = multiWordLen;
@@ -1430,7 +1395,7 @@ public void getWholeNouns() {
 
 	/**
 	 * @param acronymMeaning
-	 *            The acronymMeaning to set.
+	 *           The acronymMeaning to set.
 	 */
 	public void setValue(String value) {
 		this.value = value;
@@ -1445,27 +1410,25 @@ public void getWholeNouns() {
 
 	/**
 	 * @param prefix
-	 *            The prefix to set.
+	 *           The prefix to set.
 	 */
 	public void setPrefix(String prefix) {
 		this.prefix = prefix;
 	}
 
 	/**
-     * @param string
-     */
-    public String getSpelling() 
-    {
-        return spelling;
-    }
-	
+	 * @param string
+	 */
+	public String getSpelling() {
+		return spelling;
+	}
+
 	/**
 	 * @param string
 	 */
-	public void setSpelling(String spelling) 
-	{
+	public void setSpelling(String spelling) {
 		this.spelling = spelling;
-		
+
 	}
-	
+
 }

@@ -5,8 +5,9 @@ package lexicon.exceptions;
  */
 public class NullItemListException extends AException {
 	public NullItemListException() {
-		super();		
+		super();
 	}
+
 	public NullItemListException(String msg) {
 		super(msg);
 	}

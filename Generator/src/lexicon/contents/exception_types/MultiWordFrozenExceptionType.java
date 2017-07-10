@@ -13,12 +13,10 @@ import java.net.URLEncoder;
 import lexicon.contents.Content;
 import lexicon.tools.LexiconUtils;
 
-public class MultiWordFrozenExceptionType extends Content implements
-		lexicon.jaxb.MultiWordFrozenExceptionType {
+public class MultiWordFrozenExceptionType extends Content implements lexicon.jaxb.MultiWordFrozenExceptionType {
 	protected lexicon.jaxb.MultiWordFrozenExceptionType content;
 
-	public MultiWordFrozenExceptionType(
-			lexicon.jaxb.MultiWordFrozenExceptionType content) {
+	public MultiWordFrozenExceptionType(lexicon.jaxb.MultiWordFrozenExceptionType content) {
 		this.content = content;
 		TABLE = "multiWordFrozen_exception_type";
 		IDNAME = "aid";
@@ -29,7 +27,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 		TABLE = "multiWordFrozen_exception_type";
 		IDNAME = "aid";
 	}
-	
+
 	public lexicon.jaxb.impl.MultiWordFrozenExceptionTypeImpl getImpl() {
 		return (lexicon.jaxb.impl.MultiWordFrozenExceptionTypeImpl) content;
 	}
@@ -43,10 +41,9 @@ public class MultiWordFrozenExceptionType extends Content implements
 	 * subclasses of Content. Connects to the DB, commits the different SQL
 	 * statements and return feedback.
 	 * 
-	 * @param sql -
-	 *            The SQL statement to be executed.
-	 * @return Number of rows affected (0, if nothing happened, 1 if one row
-	 *         added).
+	 * @param sql
+	 *           - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row added).
 	 */
 	public int add(int id) {
 		String sql = "INSERT INTO " + getTableName() + " VALUES (";
@@ -60,8 +57,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 		sql += ", '" + undotted + "'";
 		String transliterated = LexiconUtils.getTransliteration(undotted);
 		try {
-			transliterated = URLEncoder.encode(transliterated,
-					Content.ADD_ENCODING);
+			transliterated = URLEncoder.encode(transliterated, Content.ADD_ENCODING);
 		} catch (Exception e) {
 		}
 		sql += ", '" + transliterated + "'";
@@ -74,8 +70,8 @@ public class MultiWordFrozenExceptionType extends Content implements
 		sql += ", '" + dotted + "'";
 		sql += ", '" + getRegister() + "'";
 		sql += ", '" + getSpelling() + "'";
-		sql += ", "+(isDefiniteness()?1:0);
-		sql += ", "+(isAcceptDefiniteness()?1:0);		
+		sql += ", " + (isDefiniteness() ? 1 : 0);
+		sql += ", " + (isAcceptDefiniteness() ? 1 : 0);
 		sql += ", '" + getAction() + "')";
 		int feedback = execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
@@ -83,14 +79,13 @@ public class MultiWordFrozenExceptionType extends Content implements
 	}
 
 	/**
-	 * Updates the current record in the DB, so it would resemble the current
-	 * object state. The method uses ResultSet.updateRow method in order to
-	 * implement the generic update process. The method finds the record of the
-	 * current object, generates the meta data (the names and types of the
-	 * columns) , Runs on the columns and updateing each one, according with the
-	 * column type. After these stages, the method calls
-	 * <code>ResultSet.updateRow</code> in order to execute the update in the
-	 * DB.
+	 * Updates the current record in the DB, so it would resemble the current object
+	 * state. The method uses ResultSet.updateRow method in order to implement the
+	 * generic update process. The method finds the record of the current object,
+	 * generates the meta data (the names and types of the columns) , Runs on the
+	 * columns and updateing each one, according with the column type. After these
+	 * stages, the method calls <code>ResultSet.updateRow</code> in order to execute
+	 * the update in the DB.
 	 * 
 	 * @see #info
 	 * @see ResultSet#updateRow
@@ -108,8 +103,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 		sql += " undotted='" + undotted + "'";
 		String transliterated = LexiconUtils.getTransliteration(undotted);
 		try {
-			transliterated = URLEncoder.encode(transliterated,
-					Content.UPDATE_ENCODING);
+			transliterated = URLEncoder.encode(transliterated, Content.UPDATE_ENCODING);
 		} catch (Exception e) {
 		}
 		sql += ", transliterated='" + transliterated + "'";
@@ -121,8 +115,8 @@ public class MultiWordFrozenExceptionType extends Content implements
 		sql += ", dotted='" + dotted + "'";
 		sql += ", register='" + getRegister() + "'";
 		sql += ", spelling='" + getSpelling() + "'";
-		sql += ", definiteness="+ (isDefiniteness()?1:0);
-		sql += ", acceptDefiniteness="+ (isAcceptDefiniteness()?1:0);
+		sql += ", definiteness=" + (isDefiniteness() ? 1 : 0);
+		sql += ", acceptDefiniteness=" + (isAcceptDefiniteness() ? 1 : 0);
 		sql += ", action='" + getAction() + "' WHERE aid=" + getID();
 		int feedback = execute(sql);
 		return feedback;
@@ -148,7 +142,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 		setTransliterated(getString("transliterated"));
 		setDefiniteness(getInt("definiteness") == 1);
 		setAcceptDefiniteness(getInt("acceptDefiniteness") == 1);
-		//setValue(getString("value"));
+		// setValue(getString("value"));
 	}
 
 	public java.lang.String getUndotted() {
@@ -162,7 +156,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 	 * Sets the value of the undotted property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setUndotted(java.lang.String value) {
 		content.setUndotted(value);
@@ -184,7 +178,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 	 * Sets the value of the dotted property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setDotted(java.lang.String value) {
 		content.setDotted(value);
@@ -204,7 +198,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 	 * Sets the value of the script property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setRegister(java.lang.String value) {
 		content.setRegister(value);
@@ -223,7 +217,7 @@ public class MultiWordFrozenExceptionType extends Content implements
 	 * Sets the value of the script property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setSpelling(java.lang.String value) {
 		content.setSpelling(value);
@@ -240,18 +234,16 @@ public class MultiWordFrozenExceptionType extends Content implements
 		}
 		return content.getTransliterated();
 	}
-	
+
 	/**
 	 * Sets the value of the transliterated property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
 	public void setTransliterated(java.lang.String value) {
 		content.setTransliterated(value);
 	}
-
-	
 
 	public java.lang.String getValue() {
 		return content.getValue();
@@ -260,25 +252,21 @@ public class MultiWordFrozenExceptionType extends Content implements
 	public void setValue(java.lang.String value) {
 		content.setValue(value);
 	}
-	
+
 	public boolean isDefiniteness() {
 		return content.isDefiniteness();
 	}
 
-   
 	public void setDefiniteness(boolean value) {
 		content.setDefiniteness(value);
-	}	
-	
+	}
+
 	public boolean isAcceptDefiniteness() {
 		return content.isAcceptDefiniteness();
 	}
 
-   
 	public void setAcceptDefiniteness(boolean value) {
 		content.setAcceptDefiniteness(value);
-	}	
-
-	
+	}
 
 }

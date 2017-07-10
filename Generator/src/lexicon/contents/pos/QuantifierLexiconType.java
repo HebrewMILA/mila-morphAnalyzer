@@ -5,7 +5,6 @@
 // Generated on: 2005.02.17 at 12:10:17 GMT+02:00 
 //
 
-
 package lexicon.contents.pos;
 
 import java.net.URLEncoder;
@@ -16,20 +15,32 @@ import lexicon.contents.exception_types.QuantifierExceptionType;
 import lexicon.contents.Content;
 
 /**
- * ���� �� ����� ����� ������� ����� ����. ������� �� �"� Glinert "The grammar of Modern Hebrew".
- * ����� ������� ����� ���� ��� ����� ���� ����. ����, ����� ����� ���� �� ���� �����.
- * ���� ���� ������� �:
- * * ������ ������
- * * ������ �����
- * * ������ ������ (�����)
- * ��� ���� ������ �������� ������ ���������.
- * ����� ���� �� ��� ���� ���� ���� ����� ������, ���� ���� ���� ����� ����.
- * ��� �������� ����� ��� ���� ��� �� ���/��� ����� ��� ���� ������� ����� ��� �� ��� �� ������� ������ ��� ������.
- * �� ���� �� �� �� ���� ��� ������� ��� ����� acronym ���� true.
+ * ���� �� ����� ����� �������
+ * ����� ����. ������� �� �"� Glinert
+ * "The grammar of Modern Hebrew". ����� �������
+ * ����� ���� ��� ����� ����
+ * ����. ����, ����� ����� ����
+ * �� ���� �����. ���� ����
+ * ������� �: * ������ ������ *
+ * ������ ����� * ������ ������
+ * (�����) ��� ���� ������
+ * �������� ������ ���������.
+ * ����� ���� �� ��� ���� ����
+ * ���� ����� ������, ���� ����
+ * ���� ����� ����. ��� ��������
+ * ����� ��� ���� ��� �� ���/���
+ * ����� ��� ���� ������� �����
+ * ��� �� ��� �� ������� ������
+ * ��� ������. �� ���� �� �� ��
+ * ���� ��� ������� ��� �����
+ * acronym ���� true.
  * 
  * Java content class for QuantifierLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 1034)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 1034)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="QuantifierLexiconType">
  *   &lt;complexContent>
@@ -51,132 +62,155 @@ import lexicon.contents.Content;
  * </pre>
  * 
  */
-public class QuantifierLexiconType extends Content implements lexicon.jaxb.QuantifierLexiconType{
+public class QuantifierLexiconType extends Content implements lexicon.jaxb.QuantifierLexiconType {
 	lexicon.jaxb.QuantifierLexiconType content;
-	
+
 	public QuantifierLexiconType(lexicon.jaxb.QuantifierLexiconType content) {
 		this.content = content;
 		TABLE = "quantifier";
-		IDNAME = "id"; 
+		IDNAME = "id";
 	}
+
 	public QuantifierLexiconType() {
 		content = new lexicon.jaxb.impl.QuantifierLexiconTypeImpl();
 		TABLE = "quantifier";
-		IDNAME = "id"; 
+		IDNAME = "id";
 	}
+
 	public lexicon.jaxb.impl.QuantifierLexiconTypeImpl getImpl() {
-		return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl)content;
+		return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl) content;
 	}
+
 	public int add() {
 		return 0;
 	}
+
 	/**
-	*An empty implementation to the method add() methods in the different subclasses of Content.
-	*Connects to the DB, commits the different SQL statements and return feedback.
-	*@param		sql - The SQL statement to be executed.
-	*@return	Number of rows affected (0, if nothing happened, 1 if one row added).
-	*/
+	 * An empty implementation to the method add() methods in the different
+	 * subclasses of Content. Connects to the DB, commits the different SQL
+	 * statements and return feedback.
+	 * 
+	 * @param sql
+	 *           - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row added).
+	 */
 	public int add(int id) {
-		String sql = "INSERT INTO "+ getTableName() + " VALUES (";
+		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += id;
-		sql += ", '"+getType()+"'";
-		sql += ", '"+ getDefiniteness() +"'";
-		sql += ", "+ (isInflect()?1:0);
-		String inflectionBase = getInflectionBase();
-		if (inflectionBase == null) {
-			inflectionBase = "";
-		} 
-		try {
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.ADD_ENCODING); 
-		}catch (Exception e) {}
-		sql += ", '"+ inflectionBase +"')";
-		int feedback = execute(sql);
-		id = getCurrentID(getTableName(), getIDName()); 
-		addActions(id);
-		return feedback;
-	}
-	/**
-	*Updates the current record in the DB, so it would resemble the current object state.
-	*The method uses ResultSet.updateRow method in order to implement the generic update process.
-	*The method finds the record of the current object, generates the meta data (the names and types of the columns)
-	*, Runs on the columns and updateing each one, according with the column type. After these stages, the
-	*method calls <code>ResultSet.updateRow</code> in order to execute the update in the DB.
-	*@see   #info
-	*@see   ResultSet#updateRow
-	*@see   #openRS
-	*@return	The number of rows that were affected from the action. If 0, then nothing happened
-	*/
-	public int update() {
-		String sql = "UPDATE "+ getTableName() + " SET";
-		sql += " type='"+getType()+"'";
-		sql += ", definiteness='"+ getDefiniteness() +"'";
-		sql += ", inflect="+ (isInflect()?1:0);
+		sql += ", '" + getType() + "'";
+		sql += ", '" + getDefiniteness() + "'";
+		sql += ", " + (isInflect() ? 1 : 0);
 		String inflectionBase = getInflectionBase();
 		if (inflectionBase == null) {
 			inflectionBase = "";
 		}
 		try {
-			inflectionBase = URLEncoder.encode(inflectionBase, Content.UPDATE_ENCODING);			
-		}catch (Exception e) {} 
-		sql += ", inflectionBase='"+ inflectionBase +"' WHERE id="+getID();
-		int feedback = execute(sql); 
-		//updateActions();
+			inflectionBase = URLEncoder.encode(inflectionBase, Content.ADD_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", '" + inflectionBase + "')";
+		int feedback = execute(sql);
+		id = getCurrentID(getTableName(), getIDName());
+		addActions(id);
 		return feedback;
 	}
+
+	/**
+	 * Updates the current record in the DB, so it would resemble the current object
+	 * state. The method uses ResultSet.updateRow method in order to implement the
+	 * generic update process. The method finds the record of the current object,
+	 * generates the meta data (the names and types of the columns) , Runs on the
+	 * columns and updateing each one, according with the column type. After these
+	 * stages, the method calls <code>ResultSet.updateRow</code> in order to execute
+	 * the update in the DB.
+	 * 
+	 * @see #info
+	 * @see ResultSet#updateRow
+	 * @see #openRS
+	 * @return The number of rows that were affected from the action. If 0, then
+	 *         nothing happened
+	 */
+	public int update() {
+		String sql = "UPDATE " + getTableName() + " SET";
+		sql += " type='" + getType() + "'";
+		sql += ", definiteness='" + getDefiniteness() + "'";
+		sql += ", inflect=" + (isInflect() ? 1 : 0);
+		String inflectionBase = getInflectionBase();
+		if (inflectionBase == null) {
+			inflectionBase = "";
+		}
+		try {
+			inflectionBase = URLEncoder.encode(inflectionBase, Content.UPDATE_ENCODING);
+		} catch (Exception e) {
+		}
+		sql += ", inflectionBase='" + inflectionBase + "' WHERE id=" + getID();
+		int feedback = execute(sql);
+		// updateActions();
+		return feedback;
+	}
+
 	protected int addActions(int id) {
 		int result = 0;
-		for (int i=0; i< getAddOrReplaceOrRemove().size(); i++) {
-			QuantifierExceptionType exceptionType = new QuantifierExceptionType((lexicon.jaxb.QuantifierExceptionType)getAddOrReplaceOrRemove().get(i));
+		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
+			QuantifierExceptionType exceptionType = new QuantifierExceptionType(
+					(lexicon.jaxb.QuantifierExceptionType) getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
 		return result;
 	}
+
 	protected int updateActions() {
 		int result = 0;
-		for (int i=0; i< getAddOrReplaceOrRemove().size(); i++) {
-			QuantifierExceptionType exceptionType = new QuantifierExceptionType((lexicon.jaxb.QuantifierExceptionType)getAddOrReplaceOrRemove().get(i));
+		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
+			QuantifierExceptionType exceptionType = new QuantifierExceptionType(
+					(lexicon.jaxb.QuantifierExceptionType) getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
 		return result;
-	} 
-	protected int removeActions(int id) {
-		return removeContents("quantifier_exception_type", "id", "aid", id);  
 	}
+
+	protected int removeActions(int id) {
+		return removeContents("quantifier_exception_type", "id", "aid", id);
+	}
+
 	public int remove() {
 		removeActions(id);
 		int result = super.remove();
 		return result;
 	}
+
 	protected String getAction(Object obj) {
 		String name = obj.getClass().getName();
-		if (name.indexOf("Add") >=0) {
+		if (name.indexOf("Add") >= 0) {
 			return "add";
 		}
-		if (name.indexOf("Replace") >=0) {
+		if (name.indexOf("Replace") >= 0) {
 			return "replace";
 		}
-		if (name.indexOf("Remove") >=0) {
+		if (name.indexOf("Remove") >= 0) {
 			return "remove";
 		}
 		return "";
 	}
+
 	public void load() {
 		List actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
-		
+
 		setType(getString("type"));
 		setDefiniteness(getString("definiteness"));
-		setInflectionBase(getString("inflectionBase")); 
-		setInflect(getInt("inflect") == 1); 
+		setInflectionBase(getString("inflectionBase"));
+		setInflect(getInt("inflect") == 1);
 	}
+
 	public java.util.List getActions() {
 		List actions = getContents("quantifier_exception_type", "id", id);
 		ArrayList result = new ArrayList();
-		for (int i=0; i< actions.size(); i++) {
-			Content content = (Content)actions.get(i);
+		for (int i = 0; i < actions.size(); i++) {
+			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
 				Add action = new Add();
 				action.open(content.getInt("aid"));
@@ -194,65 +228,58 @@ public class QuantifierLexiconType extends Content implements lexicon.jaxb.Quant
 			}
 		}
 		return result;
-	}		
-   
+	}
 
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Gets the value of the gender property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
 	public java.lang.String getType() {
 		return content.getType();
 	}
 
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Sets the value of the gender property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
 	public void setType(java.lang.String value) {
 		content.setType(value);
 	}
 
-    /**
-     * Gets the value of the inflect property.
-     * 
-     */
+	/**
+	 * Gets the value of the inflect property.
+	 * 
+	 */
 	public boolean isInflect() {
 		return content.isInflect();
 	}
 
-    /**
-     * Sets the value of the inflect property.
-     * 
-     */
+	/**
+	 * Sets the value of the inflect property.
+	 * 
+	 */
 	public void setInflect(boolean value) {
 		content.setInflect(value);
 	}
 
-    /**
-     * Gets the value of the inflectionBase property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Gets the value of the inflectionBase property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
 	public java.lang.String getInflectionBase() {
 		return content.getInflectionBase();
 	}
 
-    /**
-     * Sets the value of the inflectionBase property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Sets the value of the inflectionBase property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
 	public void setInflectionBase(java.lang.String value) {
 		content.setInflectionBase(value);
 	}
@@ -260,128 +287,173 @@ public class QuantifierLexiconType extends Content implements lexicon.jaxb.Quant
 	/**
 	 * Gets the value of the definiteness property.
 	 * 
-	 * @return
-	 *     possible object is
-	 *     {@link java.lang.String}
+	 * @return possible object is {@link java.lang.String}
 	 */
 	public java.lang.String getDefiniteness() {
 		return content.getDefiniteness();
 	}
-	
+
 	/**
 	 * Sets the value of the definiteness property.
 	 * 
 	 * @param value
-	 *     allowed object is
-	 *     {@link java.lang.String}
+	 *           allowed object is {@link java.lang.String}
 	 */
-	public void setDefiniteness (java.lang.String value) {
+	public void setDefiniteness(java.lang.String value) {
 		content.setDefiniteness(value);
 	}
-    /**
-     * Gets the value of the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the AddOrReplaceOrRemove property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddOrReplaceOrRemove().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link lexicon.jaxb.QuantifierLexiconType.Add}
-     * {@link lexicon.jaxb.QuantifierLexiconType.Replace}
-     * {@link lexicon.jaxb.QuantifierLexiconType.Remove}
-     * 
-     */
+
+	/**
+	 * Gets the value of the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the AddOrReplaceOrRemove property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddOrReplaceOrRemove().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link lexicon.jaxb.QuantifierLexiconType.Add}
+	 * {@link lexicon.jaxb.QuantifierLexiconType.Replace}
+	 * {@link lexicon.jaxb.QuantifierLexiconType.Remove}
+	 * 
+	 */
 	public java.util.List getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}
-    /**
-     * ���� �� ���� ������ ����� ������.
-     * ���� -- ���� ����, ����� ����, �������� ������ ������ �������.
-     * ������ ����, �� ����� ���� ��� ��� �������� ����� ���� ������ (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����), ��� ����� �� ����� ������. ��� ���� ������ ��� �� ������ ������� inflectPossessive="false" �-inflectConstruct="false".
-     * 
-     * Java content class for add element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 231)
-     * <p>
-     * <pre>
-     * &lt;element name="add" type="{}QuantifierExceptionType"/>
-     * </pre>
-     * 
-     */
-    public class Add extends QuantifierExceptionType implements lexicon.jaxb.QuantifierLexiconType.Add  {
-    	public Add() {
-    		super ();
-    		content = new lexicon.jaxb.impl.QuantifierLexiconTypeImpl.AddImpl();
-    	}
-    	public Add(lexicon.jaxb.QuantifierExceptionType content) {
-    		super (content);
-    	}
-    	public lexicon.jaxb.impl.QuantifierLexiconTypeImpl.AddImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl.AddImpl)content;
-    	}
-    }
 
+	/**
+	 * ���� �� ���� ������ �����
+	 * ������. ���� -- ���� ����,
+	 * ����� ����, �������� ������
+	 * ������ �������. ������ ����,
+	 * �� ����� ���� ��� ���
+	 * �������� ����� ���� ������
+	 * (����, ���� ��� ���� �����, ��
+	 * ���� �����, �� ���� �����), ���
+	 * ����� �� ����� ������. ���
+	 * ���� ������ ��� �� ������
+	 * ������� inflectPossessive="false" �-inflectConstruct="false".
+	 * 
+	 * Java content class for add element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd
+	 * line 231)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="add" type="{}QuantifierExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public class Add extends QuantifierExceptionType implements lexicon.jaxb.QuantifierLexiconType.Add {
+		public Add() {
+			super();
+			content = new lexicon.jaxb.impl.QuantifierLexiconTypeImpl.AddImpl();
+		}
 
-    /**
-     * ���� �� ���� ����� ����� ������ ����� �������, ���� ���� ����� ����� ����� ����� ��������, ��� ����� (���� ������ �� ������ ����, �� ��� ����� ���).
-     * ������ ��� ����� ��� ����� ��� ���� ��� ����� ���� ������, �� ����� �� �� ����� ����� �� ������ ��� �� ���, ����� �����, �� ����� �� ������.
-     * ����� ����, �� ������ ����� ��� �- add ��- replace ��� ������ �- remove, ��� ���� �� ������ ���� ����� ������ ���� ����� ��������.
-     * 
-     * Java content class for remove element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 249)
-     * <p>
-     * <pre>
-     * &lt;element name="remove" type="{}QuantifierExceptionType"/>
-     * </pre>
-     * 
-     */
-    public class Remove extends QuantifierExceptionType implements lexicon.jaxb.QuantifierLexiconType.Remove  {
-    	public Remove(lexicon.jaxb.QuantifierExceptionType content) {
-    		super (content);
-    	}
-    	public Remove() {
-    		super ();
-    		content = new lexicon.jaxb.impl.QuantifierLexiconTypeImpl.RemoveImpl();
-    	}
-    	public lexicon.jaxb.impl.QuantifierLexiconTypeImpl.RemoveImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl.RemoveImpl)content;
-    	}
-    }
+		public Add(lexicon.jaxb.QuantifierExceptionType content) {
+			super(content);
+		}
 
+		public lexicon.jaxb.impl.QuantifierLexiconTypeImpl.AddImpl getActionImpl() {
+			return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl.AddImpl) content;
+		}
+	}
 
-    /**
-     * ���� �� ���� ������ ����� ������ ������.
-     * ���� -- ����� ���� ����, ������ ��'.
-     * ������ ����, �� ������ ���� ��� ��� �������� ����� ���� ������ (����, ���� ��� ���� �����, �� ���� �����, �� ���� �����), ��� ����� �� ����� ������, ��� ������ �� ������ ������� ������. ��� ���� ������ ��� �� ������ ������� inflectPossessive="false" �-inflectConstruct="false".
-     * 
-     * Java content class for replace element declaration.
-     * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd line 240)
-     * <p>
-     * <pre>
-     * &lt;element name="replace" type="{}QuantifierExceptionType"/>
-     * </pre>
-     * 
-     */
-    public class Replace extends QuantifierExceptionType implements lexicon.jaxb.QuantifierLexiconType.Replace  {
-    	public Replace(lexicon.jaxb.QuantifierExceptionType content) {
-    		super (content);
-    	}
-    	public Replace() {
-    		super ();
-    		content = new lexicon.jaxb.impl.QuantifierLexiconTypeImpl.ReplaceImpl();
-    	}
-    	public lexicon.jaxb.impl.QuantifierLexiconTypeImpl.ReplaceImpl getActionImpl() {
-    		return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl.ReplaceImpl)content;
-    	}
-    }
+	/**
+	 * ���� �� ���� ����� �����
+	 * ������ ����� �������, ����
+	 * ���� ����� ����� ����� �����
+	 * ��������, ��� ����� (����
+	 * ������ �� ������ ����, �� ���
+	 * ����� ���). ������ ��� �����
+	 * ��� ����� ��� ���� ��� �����
+	 * ���� ������, �� ����� �� ��
+	 * ����� ����� �� ������ ��� ��
+	 * ���, ����� �����, �� ����� ��
+	 * ������. ����� ����, �� ������
+	 * ����� ��� �- add ��- replace ���
+	 * ������ �- remove, ��� ���� ��
+	 * ������ ���� ����� ������
+	 * ���� ����� ��������.
+	 * 
+	 * Java content class for remove element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd
+	 * line 249)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="remove" type="{}QuantifierExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public class Remove extends QuantifierExceptionType implements lexicon.jaxb.QuantifierLexiconType.Remove {
+		public Remove(lexicon.jaxb.QuantifierExceptionType content) {
+			super(content);
+		}
+
+		public Remove() {
+			super();
+			content = new lexicon.jaxb.impl.QuantifierLexiconTypeImpl.RemoveImpl();
+		}
+
+		public lexicon.jaxb.impl.QuantifierLexiconTypeImpl.RemoveImpl getActionImpl() {
+			return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl.RemoveImpl) content;
+		}
+	}
+
+	/**
+	 * ���� �� ���� ������ �����
+	 * ������ ������. ���� -- �����
+	 * ���� ����, ������ ��'. ������
+	 * ����, �� ������ ���� ��� ���
+	 * �������� ����� ���� ������
+	 * (����, ���� ��� ���� �����, ��
+	 * ���� �����, �� ���� �����), ���
+	 * ����� �� ����� ������, ���
+	 * ������ �� ������ �������
+	 * ������. ��� ���� ������ ���
+	 * �� ������ ������� inflectPossessive="false"
+	 * �-inflectConstruct="false".
+	 * 
+	 * Java content class for replace element declaration.
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this java content object. (defined at file:/C:/files/hebrew_lexicon_new.xsd
+	 * line 240)
+	 * <p>
+	 * 
+	 * <pre>
+	 * &lt;element name="replace" type="{}QuantifierExceptionType"/>
+	 * </pre>
+	 * 
+	 */
+	public class Replace extends QuantifierExceptionType implements lexicon.jaxb.QuantifierLexiconType.Replace {
+		public Replace(lexicon.jaxb.QuantifierExceptionType content) {
+			super(content);
+		}
+
+		public Replace() {
+			super();
+			content = new lexicon.jaxb.impl.QuantifierLexiconTypeImpl.ReplaceImpl();
+		}
+
+		public lexicon.jaxb.impl.QuantifierLexiconTypeImpl.ReplaceImpl getActionImpl() {
+			return (lexicon.jaxb.impl.QuantifierLexiconTypeImpl.ReplaceImpl) content;
+		}
+	}
 
 }

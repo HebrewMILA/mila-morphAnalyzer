@@ -13,18 +13,18 @@ import java.util.Properties;
 /**
  * @author daliabo
  *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class PropertiesUtils {
 	static String inputFile = "";
-	static String outputFile ="";
+	static String outputFile = "";
 	static String lexiconDatabaseOutput = "";
 	static String dir = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\";
-	//String dir ="";
-	static String mysqlUser="";
-	static String mysqlPassword="";
-	
+	// String dir ="";
+	static String mysqlUser = "";
+	static String mysqlPassword = "";
+
 	public static void handlePropertiesFile() {
 		Properties properties = new Properties();
 		try {
@@ -43,7 +43,7 @@ public class PropertiesUtils {
 			System.out.println("mysqlUser=" + mysqlUser);
 			mysqlPassword = properties.getProperty("mysqlPassword");
 			System.out.println("mysqlPassword=" + mysqlPassword);
-			
+
 			System.out.println("--------------------");
 			System.out.println();
 			System.out.println("analyzer output:");
@@ -54,51 +54,62 @@ public class PropertiesUtils {
 
 	public static void main(String[] args) {
 	}
+
 	/**
 	 * @return Returns the inputFile.
 	 */
 	public String getInputFile() {
 		return inputFile;
 	}
+
 	/**
-	 * @param inputFile The inputFile to set.
+	 * @param inputFile
+	 *           The inputFile to set.
 	 */
 	public void setInputFile(String inputFile) {
 		this.inputFile = inputFile;
 	}
+
 	/**
 	 * @return Returns the outputFile.
 	 */
 	public static String getOutputFile() {
 		return outputFile;
 	}
+
 	/**
-	 * @param outputFile The outputFile to set.
+	 * @param outputFile
+	 *           The outputFile to set.
 	 */
 	public void setOutputFile(String outputFile) {
 		this.outputFile = outputFile;
 	}
-	
+
 	/**
 	 * @return Returns the directory.
 	 */
 	public static String getDir() {
 		return dir;
 	}
+
 	/**
-	 * @param directory The directory to set.
+	 * @param directory
+	 *           The directory to set.
 	 */
 	public void setDir(String directory) {
 		this.dir = directory;
 	}
+
 	/**
 	 * @return Returns the lexiconDatabaseOutput.
 	 */
 	public static String getLexiconDatabaseOutput() {
 		return lexiconDatabaseOutput;
 	}
+
 	/**
-	 * @param lexiconDatabaseOutput The lexiconDatabaseOutput to set.
+	 * @param lexiconDatabaseOutput
+	 *           The lexiconDatabaseOutput to set.
 	 */
 	public void setLexiconDatabaseOutput(String lexiconDatabaseOutput) {
 		this.lexiconDatabaseOutput = lexiconDatabaseOutput;

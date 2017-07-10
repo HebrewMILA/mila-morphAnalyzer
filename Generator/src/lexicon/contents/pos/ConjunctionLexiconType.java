@@ -13,8 +13,11 @@ import lexicon.contents.Content;
  * ���� �� ���� ���� �����.
  * 
  * Java content class for ConjunctionLexiconType complex type.
- * <p>The following schema fragment specifies the expected content contained within this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 871)
  * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this java content object. (defined at file:/C:/hebrew_lexicon.xsd line 871)
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="ConjunctionLexiconType">
  *   &lt;complexContent>
@@ -26,79 +29,90 @@ import lexicon.contents.Content;
  * </pre>
  * 
  */
-public class ConjunctionLexiconType extends Content implements lexicon.jaxb.ConjunctionLexiconType{
+public class ConjunctionLexiconType extends Content implements lexicon.jaxb.ConjunctionLexiconType {
 	lexicon.jaxb.ConjunctionLexiconType content;
-	
+
 	public ConjunctionLexiconType(lexicon.jaxb.ConjunctionLexiconType content) {
 		this.content = content;
 		TABLE = "conjunction";
-		IDNAME = "id"; 
+		IDNAME = "id";
 	}
+
 	public ConjunctionLexiconType() {
 		content = new lexicon.jaxb.impl.ConjunctionLexiconTypeImpl();
 		TABLE = "conjunction";
-		IDNAME = "id"; 
+		IDNAME = "id";
 	}
+
 	public lexicon.jaxb.impl.ConjunctionLexiconTypeImpl getImpl() {
-		return (lexicon.jaxb.impl.ConjunctionLexiconTypeImpl)content;
+		return (lexicon.jaxb.impl.ConjunctionLexiconTypeImpl) content;
 	}
+
 	public int add() {
 		return 0;
 	}
+
 	/**
-	*An empty implementation to the method add() methods in the different subclasses of Content.
-	*Connects to the DB, commits the different SQL statements and return feedback.
-	*@param		sql - The SQL statement to be executed.
-	*@return	Number of rows affected (0, if nothing happened, 1 if one row added).
-	*/
+	 * An empty implementation to the method add() methods in the different
+	 * subclasses of Content. Connects to the DB, commits the different SQL
+	 * statements and return feedback.
+	 * 
+	 * @param sql
+	 *           - The SQL statement to be executed.
+	 * @return Number of rows affected (0, if nothing happened, 1 if one row added).
+	 */
 	public int add(int id) {
-		String sql = "INSERT INTO "+ getTableName() + " VALUES (";
+		String sql = "INSERT INTO " + getTableName() + " VALUES (";
 		sql += id;
-		sql += ", '"+ getType() +"')";
+		sql += ", '" + getType() + "')";
 		int feedback = execute(sql);
-		id = getCurrentID(getTableName(), getIDName()); 
+		id = getCurrentID(getTableName(), getIDName());
 		return feedback;
 	}
+
 	/**
-	*Updates the current record in the DB, so it would resemble the current object state.
-	*The method uses ResultSet.updateRow method in order to implement the generic update process.
-	*The method finds the record of the current object, generates the meta data (the names and types of the columns)
-	*, Runs on the columns and updateing each one, according with the column type. After these stages, the
-	*method calls <code>ResultSet.updateRow</code> in order to execute the update in the DB.
-	*@see   #info
-	*@see   ResultSet#updateRow
-	*@see   #openRS
-	*@return	The number of rows that were affected from the action. If 0, then nothing happened
-	*/
+	 * Updates the current record in the DB, so it would resemble the current object
+	 * state. The method uses ResultSet.updateRow method in order to implement the
+	 * generic update process. The method finds the record of the current object,
+	 * generates the meta data (the names and types of the columns) , Runs on the
+	 * columns and updateing each one, according with the column type. After these
+	 * stages, the method calls <code>ResultSet.updateRow</code> in order to execute
+	 * the update in the DB.
+	 * 
+	 * @see #info
+	 * @see ResultSet#updateRow
+	 * @see #openRS
+	 * @return The number of rows that were affected from the action. If 0, then
+	 *         nothing happened
+	 */
 	public int update() {
-		String sql = "UPDATE "+ getTableName() + " SET"; 
-		sql += " type='"+ getType() +"' WHERE id="+getID();
-		int feedback = execute(sql);  
+		String sql = "UPDATE " + getTableName() + " SET";
+		sql += " type='" + getType() + "' WHERE id=" + getID();
+		int feedback = execute(sql);
 		return feedback;
 	}
+
 	public void load() {
 		setType(getString("type"));
 	}
-	/**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link java.lang.String}
-     */
-	public java.lang.String getType() {
-    	return content.getType();
-    }
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link java.lang.String}
-     */
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link java.lang.String}
+	 */
+	public java.lang.String getType() {
+		return content.getType();
+	}
+
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *           allowed object is {@link java.lang.String}
+	 */
 	public void setType(java.lang.String value) {
-		content.setType(value);		
+		content.setType(value);
 	}
 
 }

@@ -6,7 +6,6 @@
  */
 package lexicon.generate;
 
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.List;
@@ -18,12 +17,11 @@ import lexicon.contents.exception_types.PrepositionExceptionType;
 import lexicon.contents.types.ItemType;
 import lexicon.stringUtils.Translate;
 
-
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class AdverbGen extends ItemGen {
 
@@ -41,24 +39,20 @@ public class AdverbGen extends ItemGen {
 		removeExceptionList = handleException(sql);
 	}
 
-	
-	
-	
 	protected boolean replaceExceptionExist() throws Exception {
 		boolean match = false;
 		for (int i = 0; i < replaceExceptionList.size(); i++) {
 			AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-			adverbExceptionType.open(((Integer) replaceExceptionList.get(i))
-					.intValue());
+			adverbExceptionType.open(((Integer) replaceExceptionList.get(i)).intValue());
 			String exceptionPGN = adverbExceptionType.getPossessiveSuffix();
-			
+
 			if (exceptionPGN.equals(PGN)) {
 				PGN = exceptionPGN;
 				inflectedItem = adverbExceptionType.getTransliterated();
 				surface = adverbExceptionType.getUndotted();
 				register = adverbExceptionType.getRegister();
 				spelling = adverbExceptionType.getSpelling();
-				//populateAcussativeAttribues();
+				// populateAcussativeAttribues();
 				match = true;
 				populateDatabase();
 				break;
@@ -66,16 +60,12 @@ public class AdverbGen extends ItemGen {
 		}
 		return match;
 	}
-	
-	
-	
-	
+
 	protected boolean removeExceptionExist() throws Exception {
 		boolean match = false;
 		for (int i = 0; i < removeExceptionList.size(); i++) {
 			AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-			adverbExceptionType.open(((Integer) removeExceptionList.get(i))
-					.intValue());
+			adverbExceptionType.open(((Integer) removeExceptionList.get(i)).intValue());
 			String exceptionPGN = adverbExceptionType.getPossessiveSuffix();
 			if (exceptionPGN.equals(PGN)) {
 				match = true;
@@ -96,16 +86,15 @@ public class AdverbGen extends ItemGen {
 	private void analyseExceptionList(List exceptionList) throws Exception {
 		for (int i = 0; i < exceptionList.size(); i++) {
 			AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-			adverbExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
+			adverbExceptionType.open(((Integer) exceptionList.get(i)).intValue());
 			inflectedItem = adverbExceptionType.getTransliterated();
 			surface = adverbExceptionType.getUndotted();
 			spelling = adverbExceptionType.getSpelling();
 			register = adverbExceptionType.getRegister();
 			PGN = adverbExceptionType.getPossessiveSuffix();
-			if (!PGN.equals("unspecified")){
+			if (!PGN.equals("unspecified")) {
 				suffixFunction = "pronomial";
-				//populateAcussativeAttribues();
+				// populateAcussativeAttribues();
 			}
 			populateDatabase();
 		}
@@ -117,10 +106,10 @@ public class AdverbGen extends ItemGen {
 		surface = undot;
 		inflect = item.getAdverb().isInflect();
 		inflectionBase = item.getAdverb().getInflectionBase();
-		suffixFunction="unspecified";
-		PGN="unspecified";
+		suffixFunction = "unspecified";
+		PGN = "unspecified";
 	}
-	
+
 	protected void handleBaseForm() throws Exception {
 		int size = removeExceptionList.size();
 		if (size == 0)
@@ -128,17 +117,14 @@ public class AdverbGen extends ItemGen {
 		else {
 			for (int i = 0; i < size; i++) {
 				AdverbExceptionType adverbExceptionType = new AdverbExceptionType();
-				adverbExceptionType.open(((Integer) removeExceptionList.get(i))
-						.intValue());
+				adverbExceptionType.open(((Integer) removeExceptionList.get(i)).intValue());
 				String exceptionPGN = adverbExceptionType.getPossessiveSuffix();
 				String action = adverbExceptionType.getAction();
-				if (exceptionPGN.equals("unspecified")
-						&& action.equals("remove")) 
+				if (exceptionPGN.equals("unspecified") && action.equals("remove"))
 					;
-				
-				else		
+
+				else
 					populateDatabase();
-				
 
 			}
 		}
@@ -149,20 +135,21 @@ public class AdverbGen extends ItemGen {
 		analyse();
 		replaceException();
 		removeException();
-		handleBaseForm() ;
-		//populateDatabase();
+		handleBaseForm();
+		// populateDatabase();
 		addException();
-		
+
 		if (inflect) {
 			if (transliterated.charAt(transliterated.length() - 1) == 'i')
 				suffixes = "i,k,k,w,h,nw,km,kn,hm,hn";
 			else
 				suffixes = "i,k,k,w,h,nw,km,kn,m,n";
-			//PGNTokens = "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/M/Pl,2p/F/Pl,3p/M/Pl,3p/F/Pl";
+			// PGNTokens =
+			// "1p/MF/Sg,2p/M/Sg,2p/F/Sg,3p/M/Sg,3p/F/Sg,1p/MF/Pl,2p/M/Pl,2p/F/Pl,3p/M/Pl,3p/F/Pl";
 			if (!inflectionBase.equals(""))
 				inflectionBaseHandling();
 			inflectPronomial("pronomial");
-		}		
+		}
 	}
 
 }

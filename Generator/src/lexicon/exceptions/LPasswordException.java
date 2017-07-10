@@ -5,28 +5,30 @@
  */
 package lexicon.exceptions;
 
-
 /**
- * A specialized <b>security</b> Exception class for the Lexicon system. The class holds special 
- * about the page that was involved in the Exception.
+ * A specialized <b>security</b> Exception class for the Lexicon system. The
+ * class holds special about the page that was involved in the Exception.
+ * 
  * @author Danny Shacham
  */
-public class LPasswordException extends AException {	
+public class LPasswordException extends AException {
 	/**
 	 * Empty constructor
 	 */
-	public LPasswordException()	{
+	public LPasswordException() {
 		super("");
 	}
-	
+
 	/**
 	 * A constructor that saves the reason and the page name
-	 * @param reason	What had happened.
-	 * @param thePage	The page where the security problem occured
+	 * 
+	 * @param reason
+	 *           What had happened.
+	 * @param thePage
+	 *           The page where the security problem occured
 	 */
-	public LPasswordException(String reason)	{
-		super(reason);		
+	public LPasswordException(String reason) {
+		super(reason);
 	}
-	
-	
+
 }
