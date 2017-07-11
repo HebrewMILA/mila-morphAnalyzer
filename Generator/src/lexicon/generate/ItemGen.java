@@ -594,6 +594,11 @@ public abstract class ItemGen implements ItemInterface {
 			inf.insertItem();
 	}
 
+	/**
+	 * Sets the base lexical pointer of all inflections of current item to be newId.
+	 * The base alternate pointer is the original base lexical pointer.
+	 * @param newId
+	 */
 	public void switchBaseLexicalPointerAndInsert(String newId) {
 		for (Inflections inf : infList) {
 			inf.setBaseAlternatePointer(inf.getBaseLexiconPointer());

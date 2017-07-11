@@ -35,12 +35,13 @@ public class Generation {
 		int i;
 		try {
 			EmptyContent eContent = new EmptyContent();
-			List list = eContent.getContents(sql, "id");
+			List<Integer> list = eContent.getContents(sql, "id");
 			int listSize = list.size();
+			//Iterating over all the items we got (depends on the commands obviously).
 			for (i = 0; i < listSize; i++) {
 
 				ItemType item = new ItemType();
-				item.open(((Integer) list.get(i)).intValue());
+				item.open(list.get(i).intValue());
 				System.out
 						.println(" ---lexicon Item count =" + i + " Item transliterated = " + item.getUndotted() + "----");
 				String pos = item.getPos();
@@ -66,6 +67,10 @@ public class Generation {
 				itemArgsConstructor = genClassDef.getConstructor(itemArgsClass);
 				itemGen = (ItemGen) createObject(itemArgsConstructor, itemArgs);
 				itemGen.inflect();
+				//Finished inflecting one word.
+				
+				//Checking whether the word has an alternate word or not, if yes set base id's of all inflected words to be the id of
+				//the alternate word.
 				String alternateId = item.getAlternateId();
 				if (!alternateId.equals("0")) {
 					String oldId = item.getId();
