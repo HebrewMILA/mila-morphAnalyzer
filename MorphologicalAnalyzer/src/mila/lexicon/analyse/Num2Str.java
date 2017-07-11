@@ -1,5 +1,7 @@
 package mila.lexicon.analyse;
+
 import static mila.lexicon.analyse.Constants.*;
+
 /**
  * 
  * Num2Str.java Used when using data files to translate the digits values to
@@ -127,9 +129,9 @@ public class Num2Str {
 	 * This method translates data file codes for binyan to strings
 	 * 
 	 * @param binyani
-	 *            - the encoded value of the Binyan in the inflections.data
+	 *           - the encoded value of the Binyan in the inflections.data
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return - the decoded Binyan value
 	 * @throws Exception
 	 */
@@ -163,8 +165,8 @@ public class Num2Str {
 			break;
 
 		default:
-			throw new Exception("Num2Str:strNum2StrBinyan illegal value " + "for binyan=" + binyan
-					+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
+			throw new Exception("Num2Str:strNum2StrBinyan illegal value " + "for binyan=" + binyan + " for lexiconItem: "
+					+ lexiconItem + " for input token: " + word);
 		}
 		return binyan;
 	}
@@ -173,9 +175,9 @@ public class Num2Str {
 	 * This method translates data file codes for gender to strings
 	 * 
 	 * @param genderi
-	 *            - the encoded value of the gender in the inflections.data
+	 *           - the encoded value of the gender in the inflections.data
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return - the decoded Gender value
 	 * @throws Exception
 	 */
@@ -252,9 +254,9 @@ public class Num2Str {
 	 * This method translates data file codes for number to strings
 	 * 
 	 * @param numberi
-	 *            - the encoded value of the number in the inflections.data
+	 *           - the encoded value of the number in the inflections.data
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return - the decoded Number value
 	 * @throws Exception
 	 */
@@ -293,10 +295,10 @@ public class Num2Str {
 	 * suffix) to strings
 	 * 
 	 * @param PGNi
-	 *            - the encoded value of the PERSON/GENDER/NUMBER in the
-	 *            inflections.data
+	 *           - the encoded value of the PERSON/GENDER/NUMBER in the
+	 *           inflections.data
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return - the decoded PGN value
 	 * @throws Exception
 	 */
@@ -472,9 +474,9 @@ public class Num2Str {
 	 * This method translates data file codes for part of register to strings
 	 * 
 	 * @param scripti
-	 *            - the encoded value of the script in the inflections.data file
+	 *           - the encoded value of the script in the inflections.data file
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return the decoded script value
 	 * @throws Exception
 	 */
@@ -502,9 +504,9 @@ public class Num2Str {
 	 * This method translates data file codes for spelling to strings
 	 * 
 	 * @param scripti
-	 *            - the encoded value of the script in the inflections.data file
+	 *           - the encoded value of the script in the inflections.data file
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return the decoded script value
 	 * @throws Exception
 	 */
@@ -635,8 +637,8 @@ public class Num2Str {
 	 * @return
 	 * @throws Exception
 	 */
-	public static String strNum2StrSuffixFunction(String suffixFunctionCode, final String lexiconItem,
-			final String word) throws Exception {
+	public static String strNum2StrSuffixFunction(String suffixFunctionCode, final String lexiconItem, final String word)
+			throws Exception {
 		String suffixFunction = "";
 		switch (suffixFunctionCode.charAt(0)) {
 		case '1':
@@ -705,9 +707,9 @@ public class Num2Str {
 	 * This method translates data file codes for tense to strings
 	 * 
 	 * @param tensei
-	 *            - the encoded value of the tensei in the inflections.data
+	 *           - the encoded value of the tensei in the inflections.data
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return - the decoded tense value
 	 * @throws Exception
 	 */
@@ -747,19 +749,19 @@ public class Num2Str {
 	}
 
 	/**
-	 * This method translates data file codes for type to strings It serves all
-	 * the part of speech - so it has a parameter of part of speech in addition
-	 * to a parameter of type
+	 * This method translates data file codes for type to strings It serves all the
+	 * part of speech - so it has a parameter of part of speech in addition to a
+	 * parameter of type
 	 * 
 	 * @param baseNamedEntityTypei
-	 *            - the encoded value of the number in the inflections.data
+	 *           - the encoded value of the number in the inflections.data
 	 * @param transliterated
-	 *            - the transliterated form of the inflection
+	 *           - the transliterated form of the inflection
 	 * @return -the decoded BaseNamedEntityType value
 	 * @throws Exception
 	 */
-	public static String strNum2StrType(final String numType, String numPos, final String lexiconItem,
-			final String word) throws Exception {
+	public static String strNum2StrType(final String numType, String numPos, final String lexiconItem, final String word)
+			throws Exception {
 		String type = "";
 		switch (numPos.charAt(0)) {
 		case '1': // quantifier
@@ -778,8 +780,8 @@ public class Num2Str {
 					type = "unspecified";
 					break;
 				default:
-					throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
-							+ " for numPos: " + numPos);
+					throw new Exception(
+							"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 				}
 			} else {
 				switch (numPos.charAt(1)) {
@@ -822,8 +824,8 @@ public class Num2Str {
 						type = "unspecified";
 						break;
 					default:
-						throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
-								+ " for numPos: " + numPos);
+						throw new Exception(
+								"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 					}
 					break;
 				case '3': // participle
@@ -841,8 +843,8 @@ public class Num2Str {
 						type = "unspecified";
 						break;
 					default:
-						throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
-								+ " for numPos: " + numPos);
+						throw new Exception(
+								"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 					}
 					break;
 				case '4':// numeral
@@ -860,8 +862,8 @@ public class Num2Str {
 						type = "unspecified";
 						break;
 					default:
-						throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
-								+ " for numPos: " + numPos);
+						throw new Exception(
+								"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 
 					}
 				}
@@ -884,8 +886,8 @@ public class Num2Str {
 					type = "unspecified";
 					break;
 				default:
-					throw new Exception("Num2Str:strNum2StrType illegal value " + "for numType=" + numType
-							+ " for numPos: " + numPos);
+					throw new Exception(
+							"Num2Str:strNum2StrType illegal value " + "for numType=" + numType + " for numPos: " + numPos);
 
 				}
 			break;

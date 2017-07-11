@@ -105,13 +105,13 @@ public class CustomResult {
 
 	public void Print() {
 		System.out.println(spelling + ", " + register + ", " + gender + ", " + number + ", " + definiteness + ", "
-				+ mwTransliterated + ", " + mwUndotted + ", " + lexiconId + ", " + ", " + undottedLexiconItem + ", "
-				+ PGN + ", " + dottedLexiconItem + ", " + transliteratedLexiconItem + ", " + pos + ", " + type);
+				+ mwTransliterated + ", " + mwUndotted + ", " + lexiconId + ", " + ", " + undottedLexiconItem + ", " + PGN
+				+ ", " + dottedLexiconItem + ", " + transliteratedLexiconItem + ", " + pos + ", " + type);
 	}
 
 	/*
-	 * public void setId(String id) { this.id = id; } public String getId() {
-	 * return id; }
+	 * public void setId(String id) { this.id = id; } public String getId() { return
+	 * id; }
 	 */
 
 	public void setDefiniteness(String definiteness) {

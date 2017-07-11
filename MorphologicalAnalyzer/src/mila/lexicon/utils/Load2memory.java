@@ -17,10 +17,11 @@ import mila.lexicon.dbUtils.MWErecord;
 /**
  * @author daliabo
  * 
- * use sort of unix to create files "dindlections.data" and "dprefixes.data" 
- *         
- * sort inflections.data > dinflections.data
- * sort prefixes.data > dprefixes.data 
+ *         use sort of unix to create files "dindlections.data" and
+ *         "dprefixes.data"
+ * 
+ *         sort inflections.data > dinflections.data sort prefixes.data >
+ *         dprefixes.data
  */
 public class Load2memory {
 
@@ -140,12 +141,12 @@ public class Load2memory {
 				MWE1record mwe1Rec = new MWE1record();
 				StringTokenizer inflectionsFields = new StringTokenizer(decodedMwe1Record, "|"); // tokenize
 
-				transliterated = inflectionsFields.nextToken(); 
-				id = inflectionsFields.nextToken(); 
-				surface = inflectionsFields.nextToken(); 
-				pos = inflectionsFields.nextToken(); 
-				consecutive = inflectionsFields.nextToken(); 
-				type = inflectionsFields.nextToken(); 
+				transliterated = inflectionsFields.nextToken();
+				id = inflectionsFields.nextToken();
+				surface = inflectionsFields.nextToken();
+				pos = inflectionsFields.nextToken();
+				consecutive = inflectionsFields.nextToken();
+				type = inflectionsFields.nextToken();
 
 				mwe1Rec.setTransliterated(transliterated); // create record
 				mwe1Rec.setSurface(surface);
@@ -207,27 +208,27 @@ public class Load2memory {
 
 			while ((decodedMweRecord = in.readLine()) != null) {
 				MWErecord mweRec = new MWErecord();
-				String[] array = decodedMweRecord.split("\\|", -1); 
+				String[] array = decodedMweRecord.split("\\|", -1);
 				// cause stringtokenizer cant get empty tokens
 				int index = 0;
 
-				transliterated = array[index++]; 
-				aid = array[index++]; 
-				id = array[index++]; 
-				formerItemId = array[index++]; 
-				surface = array[index++]; 
-				consecutive = array[index++]; 
-				lexiconId = array[index++]; 
-				transliteratedLexiconItem = array[index++]; 
-				dottedLexiconItem = array[index++]; 
-				undottedLexiconItem = array[index++]; 
-				mwTransliterated = array[index++]; 
-				mwUndotted = array[index++]; 
-				PGN = array[index++]; 
-				spelling = array[index++]; 
-				register = array[index++]; 
-				gender = array[index++]; 
-				number = array[index++]; 
+				transliterated = array[index++];
+				aid = array[index++];
+				id = array[index++];
+				formerItemId = array[index++];
+				surface = array[index++];
+				consecutive = array[index++];
+				lexiconId = array[index++];
+				transliteratedLexiconItem = array[index++];
+				dottedLexiconItem = array[index++];
+				undottedLexiconItem = array[index++];
+				mwTransliterated = array[index++];
+				mwUndotted = array[index++];
+				PGN = array[index++];
+				spelling = array[index++];
+				register = array[index++];
+				gender = array[index++];
+				number = array[index++];
 				definiteness = array[index++];
 				mweRec.setTransliterated(transliterated); // create record
 				mweRec.setAid(aid);
@@ -301,28 +302,28 @@ public class Load2memory {
 
 			while ((decodedMweRecord = in.readLine()) != null) {
 				MWErecord mweRec = new MWErecord();
-				String[] array = decodedMweRecord.split("\\|", -1); 
+				String[] array = decodedMweRecord.split("\\|", -1);
 				// cause string tokenizer cant get empty tokens
 				int index = 0;
 
-				transliterated = array[index++]; 
-				aid = array[index++]; 
-				id = array[index++]; 
-				formerItemId = array[index++]; 
-				surface = array[index++]; 
-				consecutive = array[index++]; 
-				lexiconId = array[index++]; 
-				transliteratedLexiconItem = array[index++]; 
-				dottedLexiconItem = array[index++]; 
-				undottedLexiconItem = array[index++]; 
-				mwTransliterated = array[index++]; 
-				mwUndotted = array[index++]; 
-				PGN = array[index++]; 
-				spelling = array[index++]; 
-				register = array[index++]; 
-				gender = array[index++]; 
-				number = array[index++]; 
-				definiteness = array[index++]; 
+				transliterated = array[index++];
+				aid = array[index++];
+				id = array[index++];
+				formerItemId = array[index++];
+				surface = array[index++];
+				consecutive = array[index++];
+				lexiconId = array[index++];
+				transliteratedLexiconItem = array[index++];
+				dottedLexiconItem = array[index++];
+				undottedLexiconItem = array[index++];
+				mwTransliterated = array[index++];
+				mwUndotted = array[index++];
+				PGN = array[index++];
+				spelling = array[index++];
+				register = array[index++];
+				gender = array[index++];
+				number = array[index++];
+				definiteness = array[index++];
 				mweRec.setTransliterated(transliterated); // create record
 				mweRec.setAid(aid);
 				mweRec.setId(id);
@@ -412,25 +413,25 @@ public class Load2memory {
 				String[] array = decodedMweRecord.split("\\|", -1);
 				int index = 0;
 
-				transliterated = array[index++]; 
-				aid = array[index++]; 
-				id = array[index++]; 
-				formerItemId = array[index++]; 
-				surface = array[index++]; 
-				consecutive = array[index++]; 
-				lexiconId = array[index++]; 
-				transliteratedLexiconItem = array[index++]; 
-				dottedLexiconItem = array[index++]; 
-				undottedLexiconItem = array[index++]; 
-				mwTransliterated = array[index++]; 
-				mwUndotted = array[index++]; 
-				PGN = array[index++]; 
-				spelling = array[index++]; 
-				register = array[index++]; 
-				gender = array[index++]; 
-				number = array[index++]; 
-				definiteness = array[index++]; 
-				
+				transliterated = array[index++];
+				aid = array[index++];
+				id = array[index++];
+				formerItemId = array[index++];
+				surface = array[index++];
+				consecutive = array[index++];
+				lexiconId = array[index++];
+				transliteratedLexiconItem = array[index++];
+				dottedLexiconItem = array[index++];
+				undottedLexiconItem = array[index++];
+				mwTransliterated = array[index++];
+				mwUndotted = array[index++];
+				PGN = array[index++];
+				spelling = array[index++];
+				register = array[index++];
+				gender = array[index++];
+				number = array[index++];
+				definiteness = array[index++];
+
 				mweRec.setTransliterated(transliterated); // create record
 				mweRec.setAid(aid);
 				mweRec.setId(id);
@@ -452,15 +453,15 @@ public class Load2memory {
 
 				switch (tableNum) {
 				case 2: {
-					mwe2.put(transliterated, mweRec); 
+					mwe2.put(transliterated, mweRec);
 					break;
 				}
 				case 3: {
-					mwe3.put(transliterated, mweRec); 
+					mwe3.put(transliterated, mweRec);
 					break;
 				}
 				case 4: {
-					mwe4.put(transliterated, mweRec); 
+					mwe4.put(transliterated, mweRec);
 					break;
 				}
 				}
@@ -510,13 +511,13 @@ public class Load2memory {
 			while ((decodedMwinflectionRecord = in.readLine()) != null) {
 				MWEinflectionsRecord mwInfRec = new MWEinflectionsRecord();
 				StringTokenizer inflectionsFields = new StringTokenizer(decodedMwinflectionRecord, "|"); // tokenize
-				transliterated = inflectionsFields.nextToken(); 
-				surface = inflectionsFields.nextToken(); 
-				pos = inflectionsFields.nextToken(); 
-				mweId = inflectionsFields.nextToken(); 
-				type = inflectionsFields.nextToken(); 
+				transliterated = inflectionsFields.nextToken();
+				surface = inflectionsFields.nextToken();
+				pos = inflectionsFields.nextToken();
+				mweId = inflectionsFields.nextToken();
+				type = inflectionsFields.nextToken();
 				prefix = (inflectionsFields.nextToken()).equals("0") ? false : true;
-				
+
 				mwInfRec.setTransliterated(transliterated); // create record
 				mwInfRec.setSurface(surface);
 				mwInfRec.setPos(pos);
@@ -524,7 +525,7 @@ public class Load2memory {
 				mwInfRec.setType(type);
 				mwInfRec.setPrefix(prefix);
 
-				mwinflections.put(transliterated, mwInfRec); 
+				mwinflections.put(transliterated, mwInfRec);
 			}
 
 			in.close();

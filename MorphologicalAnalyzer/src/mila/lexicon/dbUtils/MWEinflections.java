@@ -22,8 +22,8 @@ public class MWEinflections extends Connected {
 		ArrayList<MWEinflectionsRecord> result = new ArrayList<MWEinflectionsRecord>();
 		input = input.replaceAll("'", "\\\\'");
 		/*****
-		 * UPDATE checking input does not contain "\" character so it will not
-		 * cause an SQL error - yossi 16.11.10
+		 * UPDATE checking input does not contain "\" character so it will not cause an
+		 * SQL error - yossi 16.11.10
 		 */
 		if (input.endsWith("\\")) {
 			// System.out.println("BEFORE \\ to \\\\ in " + input );

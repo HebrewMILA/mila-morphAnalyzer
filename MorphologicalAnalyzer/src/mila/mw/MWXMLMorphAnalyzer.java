@@ -21,6 +21,7 @@ import mila.lexicon.analyse.Data;
 import mila.lexicon.analyse.XMLMorphAnalyzer;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
+
 /**
  *
  * <p>
@@ -60,11 +61,11 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * data files mode working
 	 *
 	 * @param dinflectionsFile
-	 *            dinflections input data file path
+	 *           dinflections input data file path
 	 * @param dprefixesFile
-	 *            dprefixes data file path
+	 *           dprefixes data file path
 	 * @param gimatriasFile
-	 *            gimatrias data file path
+	 *           gimatrias data file path
 	 */
 	public static void dataLoad(String dinflectionsFile, String dprefixesFile, String gimatriasFile,
 			String dmwinflectionsFile, String mwe1File, String mwe2File, String mwe3File, String mwe4File) {
@@ -135,17 +136,15 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 			output = args[2];
 			System.out.println("output=" + output);
 			/*
-			 * dinflectionsFile = args[3]; System.out.println(
-			 * "dinflections File=" + dinflectionsFile); dprefixesFile =
-			 * args[4]; System.out.println("dprefixes File=" + dprefixesFile);
-			 * gimartiasFile = args[5]; System.out.println("gimatrias File=" +
-			 * gimartiasFile);
+			 * dinflectionsFile = args[3]; System.out.println( "dinflections File=" +
+			 * dinflectionsFile); dprefixesFile = args[4];
+			 * System.out.println("dprefixes File=" + dprefixesFile); gimartiasFile =
+			 * args[5]; System.out.println("gimatrias File=" + gimartiasFile);
 			 */
 			for (final String filename : files) {
 				if (filename == null || filename.length() < 3) {
 					System.err.println("Bad configuration file " + configFileName);
-					System.err.println(
-							"Delete file " + configFileName + " to force default configuration file generation.");
+					System.err.println("Delete file " + configFileName + " to force default configuration file generation.");
 					System.exit(0);
 				}
 			}
@@ -172,15 +171,15 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 				if (webFlag) {
 					a.processDirectory(input, output);
 				} else {
-					a.processDirectory(input, output, dinflectionsFile, dprefixesFile, gimartiasFile,
-							dmwinflectionsFile, dmwe1File, dmwe2File, dmwe3File, dmwe4File);
+					a.processDirectory(input, output, dinflectionsFile, dprefixesFile, gimartiasFile, dmwinflectionsFile,
+							dmwe1File, dmwe2File, dmwe3File, dmwe4File);
 				}
 			} else if (!in.isDirectory() && !out.isDirectory()) {
 				if (webFlag) {
 					a.processSingleFile(input, output);
 				} else {
-					a.processSingleFile(input, output, dinflectionsFile, dprefixesFile, gimartiasFile,
-							dmwinflectionsFile, dmwe1File, dmwe2File, dmwe3File, dmwe4File);
+					a.processSingleFile(input, output, dinflectionsFile, dprefixesFile, gimartiasFile, dmwinflectionsFile,
+							dmwe1File, dmwe2File, dmwe3File, dmwe4File);
 				}
 			} else {
 				System.out.println("Input and output should both be files or should both be existing directories.");
@@ -317,15 +316,15 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	}
 
 	/**
-	 * This method is used when the input is a single token - we skip the
-	 * tokenizer and get an analysis.<br>
-	 * This method should be used in cases when we have the text already
-	 * tokenized. It is quicker than any other way.<br>
+	 * This method is used when the input is a single token - we skip the tokenizer
+	 * and get an analysis.<br>
+	 * This method should be used in cases when we have the text already tokenized.
+	 * It is quicker than any other way.<br>
 	 *
 	 * @param pw
-	 *            output XML format according to Mila standards
+	 *           output XML format according to Mila standards
 	 * @param inputSt
-	 *            input Hebrew single token string
+	 *           input Hebrew single token string
 	 */
 	@Override
 	public void analyzeSingleToken(PrintWriter pw, String inputSt) {
@@ -366,8 +365,8 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	}
 
 	/**
-	 * This method is used only when input is a single token it simulates
-	 * tokenizer kitzurim handling
+	 * This method is used only when input is a single token it simulates tokenizer
+	 * kitzurim handling
 	 *
 	 * @param hebWord
 	 * @return
@@ -482,15 +481,14 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 		 * catch (Exception e) { System.out.println("ERROR");
 		 * System.out.println("bad configuration file " + filename + " " );
 		 * System.out.println("delete file " + filename +
-		 * " to force deafult configuration file creation" );
-		 * e.printStackTrace(); }
+		 * " to force deafult configuration file creation" ); e.printStackTrace(); }
 		 */
 		return line;
 	}
 
 	/**
-	 * In this method we assume that the data files are already loaded We use it
-	 * in Client server architecture.
+	 * In this method we assume that the data files are already loaded We use it in
+	 * Client server architecture.
 	 *
 	 * @param pw
 	 * @param tokenizationOutputStr
@@ -510,16 +508,16 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * standards
 	 *
 	 * @param tokenizationOutputStr
-	 *            input string containing tokenized Hebrew in XML format - the
-	 *            output of Mila tokenizer
+	 *           input string containing tokenized Hebrew in XML format - the output
+	 *           of Mila tokenizer
 	 * @param pw
-	 *            output XML analysis according to Mila standards
+	 *           output XML analysis according to Mila standards
 	 * @param dinflectionsFile
-	 *            input data inflections file
+	 *           input data inflections file
 	 * @param dprefixesFile
-	 *            input data prefixes file
+	 *           input data prefixes file
 	 * @param gimatriasFile
-	 *            input data gimatria file
+	 *           input data gimatria file
 	 */
 	@Override
 	public void morphologicalAnalyzer(String tokenizationOutputStr, PrintWriter pw, String dinflectionsFile,
@@ -531,8 +529,8 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	}
 
 	/**
-	 * In this method we assume that the data files are already loaded We use it
-	 * in Client server architecture.
+	 * In this method we assume that the data files are already loaded We use it in
+	 * Client server architecture.
 	 *
 	 * @param pw
 	 * @param tokenizationOutputStr
@@ -562,22 +560,22 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	}
 
 	/**
-	 * This method is used for mass processing in data files mode working- It
-	 * can process a directory of files/directories. It is especially useful for
+	 * This method is used for mass processing in data files mode working- It can
+	 * process a directory of files/directories. It is especially useful for
 	 * processing corpora.
 	 *
 	 * @param inputDirectory
-	 *            path of directory which contains either xml tokenized files or
-	 *            directories of xml tokenized file
+	 *           path of directory which contains either xml tokenized files or
+	 *           directories of xml tokenized file
 	 * @param outputDirectory
-	 *            path to the output created files. This directory will contain
-	 *            output file with the same structure of the input files
+	 *           path to the output created files. This directory will contain
+	 *           output file with the same structure of the input files
 	 * @param dinflectionsFile
-	 *            inflections data file path
+	 *           inflections data file path
 	 * @param dprefixesFile
-	 *            prefixes data file path
+	 *           prefixes data file path
 	 * @param gimartiasFile
-	 *            gimatrias data file path
+	 *           gimatrias data file path
 	 */
 	public void processDirectory(String inputDirectory, String outputDirectory, String dinflectionsFile,
 			String dprefixesFile, String gimartiasFile, String dmwinflectionsFile, String mwe1File, String mwe2File,
@@ -592,9 +590,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	}
 
 	/**
-	 * This method is used for mass processing without dataLoading- It can
-	 * process directory of files/directories. It is especially useful for
-	 * processing corpora.
+	 * This method is used for mass processing without dataLoading- It can process
+	 * directory of files/directories. It is especially useful for processing
+	 * corpora.
 	 *
 	 * @param inputDirectory
 	 * @param outputDirectory
@@ -611,9 +609,9 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * database mode working. This input file is prepared with Mila tokenizer.
 	 *
 	 * @param inputFile
-	 *            - xml tokenized file
+	 *           - xml tokenized file
 	 * @param outputFile
-	 *            - xml output morphololgically analyzed file
+	 *           - xml output morphololgically analyzed file
 	 */
 	@Override
 	public void processSingleFile(String inputFile, String outputFile) {
@@ -644,15 +642,15 @@ public class MWXMLMorphAnalyzer extends XMLMorphAnalyzer {
 	 * data files mode working. This input file is prepared with Mila tokenizer.
 	 *
 	 * @param inputFile
-	 *            xml tokenized file to be morphologically analyzed
+	 *           xml tokenized file to be morphologically analyzed
 	 * @param outputFile
-	 *            morphologically analyzed xml file to be created path and name
+	 *           morphologically analyzed xml file to be created path and name
 	 * @param dinflectionsFile
-	 *            inflections data file path
+	 *           inflections data file path
 	 * @param dprefixesFile
-	 *            prefixes data file path
+	 *           prefixes data file path
 	 * @param gimartiasFile
-	 *            gimatrias data file path
+	 *           gimatrias data file path
 	 */
 	public void processSingleFile(String inputFile, String outputFile, String dinflectionsFile, String dprefixesFile,
 			String gimartiasFile, String dmwinflectionsFile, String mwe1File, String mwe2File, String mwe3File,

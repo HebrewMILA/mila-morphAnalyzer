@@ -32,8 +32,7 @@ public class MWE1record {
 	public String getType() {
 		return type;
 	}
-	
-	
+
 	public String getAlternateId() {
 		return alternateId;
 	}
@@ -41,8 +40,6 @@ public class MWE1record {
 	public void setAlternateId(String alternateId) {
 		this.alternateId = alternateId;
 	}
-	
-	
 
 	public void setConsecutive(String consecutive) {
 		this.consecutive = consecutive;

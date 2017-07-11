@@ -128,19 +128,13 @@ public interface Constants {
 
 	// //////////////////////////////////////////////////////////////////////////////
 
-	static final String[] prefixArray = { "b", "bk", "e", "eb", "ebk", "eh",
-			"ek", "eke", "ekeb", "ekeh", "ekek", "ekel", "ekem", "el", "elk",
-			"elke", "elkeb", "elkeh", "elkek", "elkel", "elkem", "em", "eme",
-			"emeb", "emeh", "emek", "emel", "emem", "emk", "k", "ke", "keb",
-			"keh", "kek", "kel", "kem", "l", "lk", "lke", "lkeb", "lkeh",
-			"lkek", "lkel", "lkem", "m", "me", "meb", "meh", "mek", "mel",
-			"mem", "mh", "mk", "mlk", "w", "wh", "wb", "wbk", "we", "web",
-			"webk", "weh", "wek", "wek", "weke", "wekeb", "wekeh", "wekek",
-			"wekel", "wekem", "wel", "welk", "welke", "welkeb", "welkeh",
-			"welkek", "welkel", "welkem", "wem", "weme", "wemeb", "wemeh",
-			"wemek", "wemel", "wemem", "wemk", "wk", "wke", "wkeb", "wkeh",
-			"wkek", "wkel", "wkem", "wl", "wlk", "wlke", "wlkeb", "wlkeh",
-			"wlkek", "wlkel", "wlkem", "wm", "wme", "wmeb", "wmeh", "wmek",
-			"wmel", "wmelk", "wmem", "wmh", "wmk", "h" };
+	static final String[] prefixArray = { "b", "bk", "e", "eb", "ebk", "eh", "ek", "eke", "ekeb", "ekeh", "ekek", "ekel",
+			"ekem", "el", "elk", "elke", "elkeb", "elkeh", "elkek", "elkel", "elkem", "em", "eme", "emeb", "emeh", "emek",
+			"emel", "emem", "emk", "k", "ke", "keb", "keh", "kek", "kel", "kem", "l", "lk", "lke", "lkeb", "lkeh", "lkek",
+			"lkel", "lkem", "m", "me", "meb", "meh", "mek", "mel", "mem", "mh", "mk", "mlk", "w", "wh", "wb", "wbk", "we",
+			"web", "webk", "weh", "wek", "wek", "weke", "wekeb", "wekeh", "wekek", "wekel", "wekem", "wel", "welk",
+			"welke", "welkeb", "welkeh", "welkek", "welkel", "welkem", "wem", "weme", "wemeb", "wemeh", "wemek", "wemel",
+			"wemem", "wemk", "wk", "wke", "wkeb", "wkeh", "wkek", "wkel", "wkem", "wl", "wlk", "wlke", "wlkeb", "wlkeh",
+			"wlkek", "wlkel", "wlkem", "wm", "wme", "wmeb", "wmeh", "wmek", "wmel", "wmelk", "wmem", "wmh", "wmk", "h" };
 
 }

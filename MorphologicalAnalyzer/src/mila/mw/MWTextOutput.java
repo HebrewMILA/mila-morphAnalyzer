@@ -27,8 +27,7 @@ public class MWTextOutput extends TextOutput {
 		String pos = mweinflectionsRec.getPos();
 		String type = mweinflectionsRec.getType();
 		boolean prefix = mweinflectionsRec.isPrefix();
-		createXML.createMWEAnalysis("", transliterated, surface, mweBaseFormId, pos, mweId, type, prefix,
-				"unspecified");
+		createXML.createMWEAnalysis("", transliterated, surface, mweBaseFormId, pos, mweId, type, prefix, "unspecified");
 	}
 
 	static public void buildPrefixMWXMLOutput(PrefixRecord pr, MWCreateCorpusXML createXML,

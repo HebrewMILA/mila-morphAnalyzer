@@ -11,6 +11,7 @@ import mila.lexicon.dbUtils.PrefixRecord;
 import mila.lexicon.utils.Load2memory;
 import mila.lexicon.utils.Translate;
 import static mila.lexicon.analyse.Constants.*;
+
 /**
  *
  * Data.java Purpose: interface to the databse
@@ -19,7 +20,7 @@ import static mila.lexicon.analyse.Constants.*;
  * @version %G%
  */
 
-public class Data  {
+public class Data {
 
 	/** path to the inflections data file */
 	public static String dinflectionsFile = "";
@@ -51,9 +52,8 @@ public class Data  {
 	public static boolean webFlag = true;
 
 	/**
-	 * Every entry in the prefixes table can also be break to several prefixes
-	 * for example wl consists of two sub prefixes w and l this arrayList holds
-	 * them
+	 * Every entry in the prefixes table can also be break to several prefixes for
+	 * example wl consists of two sub prefixes w and l this arrayList holds them
 	 */
 	static ArrayList<?> prefixesList = null;
 
@@ -82,8 +82,8 @@ public class Data  {
 	public static mila.lexicon.utils.Gimatria gimatrias = null;
 
 	/**
-	 * This method populate a data structure with values from the prefix table/
-	 * data file the value - means unspecified
+	 * This method populate a data structure with values from the prefix table/ data
+	 * file the value - means unspecified
 	 *
 	 * @param j
 	 * @return
@@ -252,14 +252,14 @@ public class Data  {
 	}
 
 	/**
-	 * This method is used in data files mode Each line in the data file matches
-	 * an entry in the inflections table. The various fields in the inflections
-	 * table appears in the data file line separated by the delimiter|
+	 * This method is used in data files mode Each line in the data file matches an
+	 * entry in the inflections table. The various fields in the inflections table
+	 * appears in the data file line separated by the delimiter|
 	 *
 	 * @param inflectionsList
-	 *            - all the inflections data file entries relevant to the key
+	 *           - all the inflections data file entries relevant to the key
 	 * @param i
-	 *            - index of the current item in the inflections list
+	 *           - index of the current item in the inflections list
 	 * @return - populated data structure (record)
 	 * @throws Exception
 	 */
@@ -386,12 +386,12 @@ public class Data  {
 
 	/**
 	 * The method handles gimatria identification It looks in the gimatria
-	 * table/data file for the existence of the gimatria provided as a key In
-	 * this case as opposed to prefixes or inflections, the return value is not
-	 * an array list but the numeric value of the gimatria
+	 * table/data file for the existence of the gimatria provided as a key In this
+	 * case as opposed to prefixes or inflections, the return value is not an array
+	 * list but the numeric value of the gimatria
 	 *
 	 * @param key
-	 *            - candidate to be gimatria
+	 *           - candidate to be gimatria
 	 * @return - the numeric value of the gimatria
 	 * @throws Exception
 	 */
@@ -408,66 +408,66 @@ public class Data  {
 	}
 
 	/**
-	 * This method handles getting all the relevant analysis according to the
-	 * key from the inflections table or from the data file table
+	 * This method handles getting all the relevant analysis according to the key
+	 * from the inflections table or from the data file table
 	 *
 	 * @param key
-	 *            - the transliterated form of the inflected item
+	 *           - the transliterated form of the inflected item
 	 * @return
 	 * @throws Exception
 	 */
 	public static ArrayList<DBInflectionsRecord> getInflections(final String key) throws Exception {
 		ArrayList<DBInflectionsRecord> inflectionsList = new ArrayList<DBInflectionsRecord>();
 		ArrayList<String> dataFileInflectionsList = new ArrayList<String>();
-		
-		if (webFlag)  // get from database
+
+		if (webFlag) // get from database
 			inflectionsList = webGetInflections(key);
-		
+
 		else { // get from data file
 			dataFileInflectionsList = inflections.get(key);
 			DBInflectionsRecord dbInflectionsRec = null;
 			if (dataFileInflectionsList != null) {
 				int dataFileInflectionsListSize = dataFileInflectionsList.size();
 
-				for (int dataFileInflectionsListIndex = 0;
-						dataFileInflectionsListIndex < dataFileInflectionsListSize; dataFileInflectionsListIndex++) {
+				for (int dataFileInflectionsListIndex = 0; dataFileInflectionsListIndex < dataFileInflectionsListSize; dataFileInflectionsListIndex++) {
 					dbInflectionsRec = extractDataFileData(dataFileInflectionsList, dataFileInflectionsListIndex);
 					inflectionsList.add(dbInflectionsRec);
 				}
 			}
 
 		}
-		
-		
+
 		/*
-		 * This piece of code checks for every inflection if  its not a basic one (i.e if it has an alternateLexiconPointer != 0)
-		 * and if it isn't a one changes the lexiconPointer to be the alternatePointer
+		 * This piece of code checks for every inflection if its not a basic one (i.e if
+		 * it has an alternateLexiconPointer != 0) and if it isn't a one changes the
+		 * lexiconPointer to be the alternatePointer
 		 */
-		for(DBInflectionsRecord inf : inflectionsList){
+		for (DBInflectionsRecord inf : inflectionsList) {
 			String alternatePointer = inf.getBaseAlternatePointer();
-			if(alternatePointer != null && !alternatePointer.equals("0") && !alternatePointer.equals("null")) inf.setBaseLexiconPointer(alternatePointer);
+			if (alternatePointer != null && !alternatePointer.equals("0") && !alternatePointer.equals("null"))
+				inf.setBaseLexiconPointer(alternatePointer);
 		}
-		
-		
+
 		/*
-		 * Since Alon wanted the inflections from the base word be included together with the inflections of alternate words for each
-		 * alternate word (i.e alternate words include both their own inflections and the basic word's inflcetions) the previous action
-		 * creates duplicates hence we filter them out here.
+		 * Since Alon wanted the inflections from the base word be included together
+		 * with the inflections of alternate words for each alternate word (i.e
+		 * alternate words include both their own inflections and the basic word's
+		 * inflcetions) the previous action creates duplicates hence we filter them out
+		 * here.
 		 */
 		ArrayList<DBInflectionsRecord> al = new ArrayList<DBInflectionsRecord>(inflectionsList);
 		HashSet<DBInflectionsRecord> hs = new HashSet<DBInflectionsRecord>();
 		hs.addAll(al);
 		al.clear();
 		al.addAll(hs);
-		
+
 		return al;
 	}
 
 	/**
-	 * The method handles getting all the relevant prefixes from the prefix
-	 * table or prefix data file for example there can be two options for the
-	 * prefix wb option 1 - w + b which is not definited option 2 - w + b which
-	 * is definited
+	 * The method handles getting all the relevant prefixes from the prefix table or
+	 * prefix data file for example there can be two options for the prefix wb
+	 * option 1 - w + b which is not definited option 2 - w + b which is definited
 	 *
 	 * @param key
 	 * @return the number of relevant prefixes which were found
@@ -564,9 +564,9 @@ public class Data  {
 	}
 
 	/**
-	 * This method populate a data structure with values from the inflections
-	 * table/ data file The values are codes for making performance better when
-	 * doing equality tests
+	 * This method populate a data structure with values from the inflections table/
+	 * data file The values are codes for making performance better when doing
+	 * equality tests
 	 *
 	 * @param dbInfRec
 	 * @param word
@@ -627,8 +627,7 @@ public class Data  {
 			infRecNum.setType(quantifierTypei);
 		} else if (posi == ENUM_POS.INTERROGATIVE) {
 			String interrogativeType = dbInfRec.getType();
-			int interrogativei = Str2Num.str2NumStrInterrogativeType(interrogativeType, transliteratedLexiconItem,
-					word);
+			int interrogativei = Str2Num.str2NumStrInterrogativeType(interrogativeType, transliteratedLexiconItem, word);
 			infRecNum.setType(interrogativei);
 		}
 
@@ -636,15 +635,15 @@ public class Data  {
 	}
 
 	/**
-	 * This method handles getting all the relevant analysis according to the
-	 * key from the inflections table
+	 * This method handles getting all the relevant analysis according to the key
+	 * from the inflections table
 	 *
 	 * @param key
-	 *            - the transliterated form of the inflected item
+	 *           - the transliterated form of the inflected item
 	 * @return an arrayList of all the analysis conform to the key
 	 */
 	private static ArrayList<DBInflectionsRecord> webGetInflections(final String key) {
-		
+
 		ArrayList<DBInflectionsRecord> inflectionsList = new ArrayList<DBInflectionsRecord>();
 		mila.lexicon.dbUtils.Inflections inf = new mila.lexicon.dbUtils.Inflections();
 
@@ -659,21 +658,22 @@ public class Data  {
 	/**
 	 * Empty constructor
 	 */
-	public Data() {}
+	public Data() {
+	}
 
 	/**
-	 * In case of data files mode working we initialize the data file with the
-	 * data files paths
+	 * In case of data files mode working we initialize the data file with the data
+	 * files paths
 	 *
 	 * @param dinflectionsFile
-	 *            - inflections data file path
+	 *           - inflections data file path
 	 * @param dprefixesFile
-	 *            - prefixes data file path
+	 *           - prefixes data file path
 	 * @param gimatriaFile
-	 *            - gimatria data file path
+	 *           - gimatria data file path
 	 * @param webFlag
-	 *            - a flag to indicate whether it is working in data file mode
-	 *            or database mode
+	 *           - a flag to indicate whether it is working in data file mode or
+	 *           database mode
 	 */
 	public Data(String dinflectionsFile, String dprefixesFile, String gimatriaFile, String dmwinflections,
 			String dmwe1File, String dmwe2File, String dmwe3File, String dmwe4File, boolean webFlag) {

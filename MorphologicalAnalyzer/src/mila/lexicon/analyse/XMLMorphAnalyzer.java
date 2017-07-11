@@ -13,6 +13,7 @@ import java.util.Arrays;
 import mila.corpus.CreateCorpusXML;
 import mila.lexicon.utils.StringUtils;
 import mila.lexicon.utils.Translate;
+
 /**
  *
  * XMLMorphAnalyzer.java Purpose: interface to the morphological analyzer -
@@ -22,10 +23,10 @@ import mila.lexicon.utils.Translate;
  * @version %G%
  */
 
-public class XMLMorphAnalyzer  {
+public class XMLMorphAnalyzer {
 	/**
-	 * boolean flag implies whether to print messages of upload data duration
-	 * during the run
+	 * boolean flag implies whether to print messages of upload data duration during
+	 * the run
 	 */
 	static boolean myVerboseFlag = false;
 
@@ -44,11 +45,11 @@ public class XMLMorphAnalyzer  {
 	 * data files mode working
 	 *
 	 * @param dinflectionsFile
-	 *            dinflections input data file path
+	 *           dinflections input data file path
 	 * @param dprefixesFile
-	 *            dprefixes data file path
+	 *           dprefixes data file path
 	 * @param gimatriasFile
-	 *            gimatrias data file path
+	 *           gimatrias data file path
 	 */
 	public static void dataLoad(String dinflectionsFile, String dprefixesFile, String gimatriasFile) {
 		final long startTime = System.currentTimeMillis();
@@ -213,8 +214,8 @@ public class XMLMorphAnalyzer  {
 	 * @param inputDirectory
 	 * @param outputDirectory
 	 * @param pos
-	 *            - index in the string which holds the input directory, it is
-	 *            used for building the input directories tree in the output
+	 *           - index in the string which holds the input directory, it is used
+	 *           for building the input directories tree in the output
 	 */
 	private void analyzeDirectory(File inputDirectory, String outputDirectory, final int pos) {
 		if (inputDirectory.isDirectory()) {
@@ -276,15 +277,15 @@ public class XMLMorphAnalyzer  {
 	}
 
 	/**
-	 * This method is used when the input is a single token - we skip the
-	 * tokenizer and get an analysis.<br>
-	 * This method should be used in cases when we have the text already
-	 * tokenized. It is quicker than any other way.<br>
+	 * This method is used when the input is a single token - we skip the tokenizer
+	 * and get an analysis.<br>
+	 * This method should be used in cases when we have the text already tokenized.
+	 * It is quicker than any other way.<br>
 	 *
 	 * @param pw
-	 *            output XML format according to Mila standards
+	 *           output XML format according to Mila standards
 	 * @param inputSt
-	 *            input Hebrew single token string
+	 *           input Hebrew single token string
 	 */
 	public void analyzeSingleToken(PrintWriter pw, String inputSt) {
 		System.out.println("inputSt=" + inputSt);
@@ -327,8 +328,8 @@ public class XMLMorphAnalyzer  {
 	}
 
 	/**
-	 * This method is used only when input is a single token it simulates
-	 * tokenizer kitzurim handling
+	 * This method is used only when input is a single token it simulates tokenizer
+	 * kitzurim handling
 	 *
 	 * @param hebWord
 	 * @return
@@ -373,8 +374,8 @@ public class XMLMorphAnalyzer  {
 	}
 
 	/**
-	 * In this method we assume that the data files are already loaded We use it
-	 * in Client server architecture.
+	 * In this method we assume that the data files are already loaded We use it in
+	 * Client server architecture.
 	 *
 	 * @param pw
 	 * @param tokenizationOutputStr
@@ -392,16 +393,16 @@ public class XMLMorphAnalyzer  {
 	 * standards hebrew_MWcorpus.xsd
 	 *
 	 * @param tokenizationOutputStr
-	 *            input string containing tokenized Hebrew in XML format - the
-	 *            output of Mila tokenizer
+	 *           input string containing tokenized Hebrew in XML format - the output
+	 *           of Mila tokenizer
 	 * @param pw
-	 *            output XML analysis according to Mila standards
+	 *           output XML analysis according to Mila standards
 	 * @param dinflectionsFile
-	 *            input data inflections file
+	 *           input data inflections file
 	 * @param dprefixesFile
-	 *            input data prefixes file
+	 *           input data prefixes file
 	 * @param gimatriasFile
-	 *            input data gimatria file
+	 *           input data gimatria file
 	 */
 	public void morphologicalAnalyzer(String tokenizationOutputStr, PrintWriter pw, String dinflectionsFile,
 			String dprefixesFile, String gimatriasFile) {
@@ -412,8 +413,8 @@ public class XMLMorphAnalyzer  {
 	}
 
 	/**
-	 * In this method we assume that the data files are already loaded We use it
-	 * in data files mode.
+	 * In this method we assume that the data files are already loaded We use it in
+	 * data files mode.
 	 *
 	 * @param pw
 	 * @param tokenizationOutputStr
@@ -441,23 +442,23 @@ public class XMLMorphAnalyzer  {
 	}
 
 	/**
-	 * This method is used for mass processing in data files mode working- It
-	 * can process a directory of files/directories. It is especially useful for
+	 * This method is used for mass processing in data files mode working- It can
+	 * process a directory of files/directories. It is especially useful for
 	 * processing corpora.
 	 *
 	 * @param inputDirectory
-	 *            path of directory which contains either xml tokenized files or
-	 *            directories of xml tokenized file
+	 *           path of directory which contains either xml tokenized files or
+	 *           directories of xml tokenized file
 	 * @param outputDirectory
-	 *            path to the output created files. This directory will contain
-	 *            output file with the same structure of the input files ( the
-	 *            directories tree will be generated automaticaly)
+	 *           path to the output created files. This directory will contain
+	 *           output file with the same structure of the input files ( the
+	 *           directories tree will be generated automaticaly)
 	 * @param dinflectionsFile
-	 *            inflections data file path
+	 *           inflections data file path
 	 * @param dprefixesFile
-	 *            prefixes data file path
+	 *           prefixes data file path
 	 * @param gimartiasFile
-	 *            gimatrias data file path
+	 *           gimatrias data file path
 	 */
 	public void processDirectory(String inputDirectory, String outputDirectory, String dinflectionsFile,
 			String dprefixesFile, String gimartiasFile) {
@@ -470,9 +471,9 @@ public class XMLMorphAnalyzer  {
 	}
 
 	/**
-	 * This method is used for mass processing without dataLoading- It can
-	 * process a directory of files/directories. It is especially useful for
-	 * processing corpora. it is used in case data was loaded externally
+	 * This method is used for mass processing without dataLoading- It can process a
+	 * directory of files/directories. It is especially useful for processing
+	 * corpora. it is used in case data was loaded externally
 	 *
 	 * @param inputDirectory
 	 * @param outputDirectory
@@ -485,14 +486,14 @@ public class XMLMorphAnalyzer  {
 
 	/**
 	 * This method is used for processing a single xml already tokenized file in
-	 * database mode working. This input file is prepared with Mila tokenizer.
-	 * There is no need to provide the paths of the data files. Database
-	 * detailes appears as hard coded in the connected file
+	 * database mode working. This input file is prepared with Mila tokenizer. There
+	 * is no need to provide the paths of the data files. Database detailes appears
+	 * as hard coded in the connected file
 	 *
 	 * @param inputFile
-	 *            - xml tokenized file
+	 *           - xml tokenized file
 	 * @param outputFile
-	 *            - xml output morphololgically analyzed file
+	 *           - xml output morphololgically analyzed file
 	 */
 	public void processSingleFile(String inputFile, String outputFile) {
 		dataLoad();
@@ -505,17 +506,17 @@ public class XMLMorphAnalyzer  {
 	 * Mila tokenizer in data files mode working.
 	 *
 	 * @param inputFile
-	 *            the output of Mila tokenizer - an XML file by Mila standards (
-	 *            path and name)
+	 *           the output of Mila tokenizer - an XML file by Mila standards ( path
+	 *           and name)
 	 * @param outputFile
-	 *            morphologically analyzed xml file according to
-	 *            hebrew_MWcorpus.xsd ( path and name)
+	 *           morphologically analyzed xml file according to hebrew_MWcorpus.xsd
+	 *           ( path and name)
 	 * @param dinflectionsFile
-	 *            inflections data file path
+	 *           inflections data file path
 	 * @param dprefixesFile
-	 *            prefixes data file path
+	 *           prefixes data file path
 	 * @param gimartiasFile
-	 *            gimatrias data file path
+	 *           gimatrias data file path
 	 */
 	public void processSingleFile(String inputFile, String outputFile, String dinflectionsFile, String dprefixesFile,
 			String gimartiasFile) {
@@ -526,8 +527,8 @@ public class XMLMorphAnalyzer  {
 
 	/**
 	 * This method is used for handling an input string containing an XML
-	 * tokenization according to Mila standards It handles building the output
-	 * XML using jaxb The input XML is parsed using SAX
+	 * tokenization according to Mila standards It handles building the output XML
+	 * using jaxb The input XML is parsed using SAX
 	 */
 	private void ReadXMLFile(String tokenizationOutputStr, PrintWriter pw) {
 		final CreateCorpusXML createXML = new CreateCorpusXML();
@@ -544,8 +545,8 @@ public class XMLMorphAnalyzer  {
 
 	/**
 	 * This method is used for handling an input XML file which contains the
-	 * tokenization It handles building the output XML using jaxb The input XML
-	 * is parsed using SAX
+	 * tokenization It handles building the output XML using jaxb The input XML is
+	 * parsed using SAX
 	 */
 	private void ReadXMLFile(String inputFile, String outputFile) {
 		final CreateCorpusXML createXML = new CreateCorpusXML(outputFile);

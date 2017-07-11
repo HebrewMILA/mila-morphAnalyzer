@@ -36,7 +36,7 @@ public class Inflections extends Connected {
 	private String baseUndottedLItem;
 
 	private String baseLexiconPointer;
-	
+
 	private String baseAlternatePointer;
 
 	private String binyan = "";
@@ -91,19 +91,22 @@ public class Inflections extends Connected {
 
 	// ------------------------------------------------------------------------------------------------------------------------------
 	/**
-	 * This method receives a transliterated form of a word and returns all inflections corresponding to the input
-	 * i.e executes 'SELECT * FROM inflections WHERE transliterated=?' where ? = input.
-	 * @param input - transliterated form of a word
+	 * This method receives a transliterated form of a word and returns all
+	 * inflections corresponding to the input i.e executes 'SELECT * FROM
+	 * inflections WHERE transliterated=?' where ? = input.
+	 * 
+	 * @param input
+	 *           - transliterated form of a word
 	 * @return all inflections fitting to the input.
 	 * @throws UnsupportedEncodingException
 	 */
 	public ArrayList<DBInflectionsRecord> get(String input) throws UnsupportedEncodingException {
-		
+
 		ArrayList<DBInflectionsRecord> result = new ArrayList<DBInflectionsRecord>();
 		ResultSet rs = null;
 
 		String sql = "SELECT * FROM inflections WHERE transliterated=?";
-		
+
 		try {
 			rs = getData(sql, input);
 			if (rs != null) {
@@ -130,7 +133,7 @@ public class Inflections extends Connected {
 					inflectionsRecDB.setType(rs.getString("type"));
 					inflectionsRecDB.setDottedLexiconItem(rs.getString("dottedLexiconItem"));
 					inflectionsRecDB.setPolarity(rs.getString("polarity"));
-					inflectionsRecDB.setValue(rs.getString("value"));			
+					inflectionsRecDB.setValue(rs.getString("value"));
 					String foreign = rs.getString("hebForeign");
 					if (foreign.length() > 0) {
 						inflectionsRecDB.setForeign(Integer.parseInt(rs.getString("hebForeign")));
@@ -148,10 +151,9 @@ public class Inflections extends Connected {
 		} finally {
 			releaseConnection();
 		}
-		
+
 		return result;
 	}
-	
 
 	/**
 	 * @return Returns the baseConjunctionType.
@@ -278,7 +280,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseConjunctionType
-	 *            The baseConjunctionType to set.
+	 *           The baseConjunctionType to set.
 	 */
 	public void setBaseConjunctionType(String baseConjunctionType) {
 		this.baseConjunctionType = baseConjunctionType;
@@ -286,7 +288,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseDefinitness
-	 *            The baseDefinitness to set.
+	 *           The baseDefinitness to set.
 	 */
 	public void setBaseDefinitness(String baseDefinitness) {
 		this.baseDefinitness = baseDefinitness;
@@ -294,7 +296,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseGender
-	 *            The baseGender to set.
+	 *           The baseGender to set.
 	 */
 	public void setBaseGender(String baseGender) {
 		this.baseGender = baseGender;
@@ -302,7 +304,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseNamedEntityType
-	 *            The baseNamedEntityType to set.
+	 *           The baseNamedEntityType to set.
 	 */
 	public void setBaseNamedEntityType(String baseNamedEntityType) {
 		this.baseNamedEntityType = baseNamedEntityType;
@@ -310,7 +312,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseNumber
-	 *            The baseNumber to set.
+	 *           The baseNumber to set.
 	 */
 	public void setBaseNumber(String baseNumber) {
 		this.baseNumber = baseNumber;
@@ -318,7 +320,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param basePerson
-	 *            The basePerson to set.
+	 *           The basePerson to set.
 	 */
 	public void setBasePerson(String basePerson) {
 		this.basePerson = basePerson;
@@ -326,7 +328,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param basePos
-	 *            The basePos to set.
+	 *           The basePos to set.
 	 */
 	public void setBasePos(String basePos) {
 		this.basePos = basePos;
@@ -334,7 +336,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param basePronounType
-	 *            The basePronounType to set.
+	 *           The basePronounType to set.
 	 */
 	public void setBasePronounType(String basePronounType) {
 		this.basePronounType = basePronounType;
@@ -342,7 +344,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseTransliteratedLItem
-	 *            The baseTransliteratedLItem to set.
+	 *           The baseTransliteratedLItem to set.
 	 */
 	public void setBaseTransliteratedLItem(String baseTransliteratedLItem) {
 		this.baseTransliteratedLItem = baseTransliteratedLItem;
@@ -350,7 +352,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseundottedLItem
-	 *            The baseundottedLItem to set.
+	 *           The baseundottedLItem to set.
 	 */
 	public void setBaseundottedLItem(String baseundottedLItem) {
 		this.baseUndottedLItem = baseundottedLItem;
@@ -358,7 +360,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param baseUndottedLItem
-	 *            The baseUndottedLItem to set.
+	 *           The baseUndottedLItem to set.
 	 */
 	public void setBaseUndottedLItem(String baseUndottedLItem) {
 		this.baseUndottedLItem = baseUndottedLItem;
@@ -366,7 +368,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param binyan
-	 *            The binyan to set.
+	 *           The binyan to set.
 	 */
 	public void setBinyan(String binyan) {
 		this.binyan = binyan;
@@ -374,7 +376,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param pgn
-	 *            The pGN to set.
+	 *           The pGN to set.
 	 */
 	public void setPGN(String pgn) {
 		PGN = pgn;
@@ -382,7 +384,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param script
-	 *            The script to set.
+	 *           The script to set.
 	 */
 	public void setRegister(String register) {
 		this.register = register;
@@ -390,7 +392,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param root
-	 *            The root to set.
+	 *           The root to set.
 	 */
 	public void setRoot(String root) {
 		this.root = root;
@@ -398,7 +400,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param script
-	 *            The script to set.
+	 *           The script to set.
 	 */
 	public void setSpelling(String spelling) {
 		this.spelling = spelling;
@@ -406,7 +408,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param suffixFunction
-	 *            The suffixFunction to set.
+	 *           The suffixFunction to set.
 	 */
 	public void setSuffixFunction(String suffixFunction) {
 		this.suffixFunction = suffixFunction;
@@ -414,7 +416,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param suffixGender
-	 *            The suffixGender to set.
+	 *           The suffixGender to set.
 	 */
 	public void setSuffixGender(String suffixGender) {
 		this.suffixGender = suffixGender;
@@ -422,7 +424,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param suffixNumber
-	 *            The suffixNumber to set.
+	 *           The suffixNumber to set.
 	 */
 	public void setSuffixNumber(String suffixNumber) {
 		this.suffixNumber = suffixNumber;
@@ -430,7 +432,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param suffixPerson
-	 *            The suffixPerson to set.
+	 *           The suffixPerson to set.
 	 */
 	public void setSuffixPerson(String suffixPerson) {
 		this.suffixPerson = suffixPerson;
@@ -438,7 +440,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param suffixStatus
-	 *            The suffixStatus to set.
+	 *           The suffixStatus to set.
 	 */
 	public void setSuffixStatus(String suffixStatus) {
 		this.suffixStatus = suffixStatus;
@@ -446,7 +448,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param suffixSurface
-	 *            The suffixSurface to set.
+	 *           The suffixSurface to set.
 	 */
 	public void setSuffixSurface(String suffixSurface) {
 		this.suffixSurface = suffixSurface;
@@ -454,7 +456,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param suffixTransliterated
-	 *            The suffixTransliterated to set.
+	 *           The suffixTransliterated to set.
 	 */
 	public void setSuffixTransliterated(String suffixTransliterated) {
 		this.suffixTransliterated = suffixTransliterated;
@@ -462,7 +464,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param surface
-	 *            The surface to set.
+	 *           The surface to set.
 	 */
 	public void setSurface(String surface) {
 		this.surface = surface;
@@ -470,7 +472,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param tense
-	 *            The tense to set.
+	 *           The tense to set.
 	 */
 	public void setTense(String tense) {
 		this.tense = tense;
@@ -478,7 +480,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param transliterated
-	 *            The transliterated to set.
+	 *           The transliterated to set.
 	 */
 	public void setTransliterated(String transliterated) {
 		this.transliterated = transliterated;
@@ -486,7 +488,7 @@ public class Inflections extends Connected {
 
 	/**
 	 * @param type
-	 *            The type to set.
+	 *           The type to set.
 	 */
 	public void setType(String type) {
 		this.type = type;

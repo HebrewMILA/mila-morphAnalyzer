@@ -360,8 +360,8 @@ public final class HMM2Morph {
 					GenderNumberStatusDefinitenessType noun = base.getNoun();
 					String status = noun.getStatus();
 					String definiteness = noun.getDefiniteness();
-					if (status != null && definiteness != null && status.charAt(0) == 'a'
-							&& definiteness.charAt(0) == 'f' && analysis.getSuffix() == null) {
+					if (status != null && definiteness != null && status.charAt(0) == 'a' && definiteness.charAt(0) == 'f'
+							&& analysis.getSuffix() == null) {
 						analysis.setScore(1.0);
 						scoreCounter++;
 					}
@@ -1461,8 +1461,7 @@ public final class HMM2Morph {
 								break;
 							case PROPERNAME:
 								if (unknownFlag && morphSurface.charAt(0) == 'ä') {
-									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface,
-											newAnalysisIndex);
+									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface, newAnalysisIndex);
 									token.getAnalysis().add(newAnalysis1);
 								} else if (unknownFlag) {
 									if (hmmPrefixListSize > 0)
@@ -1477,8 +1476,7 @@ public final class HMM2Morph {
 
 							case PROPERNAMEDEF:
 								if (unknownFlag) {
-									AnalysisType newAnalysis1 = handleProperNameAnalysis(morphSurface, newAnalysisIndex,
-											1.0);
+									AnalysisType newAnalysis1 = handleProperNameAnalysis(morphSurface, newAnalysisIndex, 1.0);
 									token.getAnalysis().add(newAnalysis1);
 								}
 								newAnalysis = handleProperNameDefAnalysis(morphSurface, newAnalysisIndex);
@@ -1586,8 +1584,8 @@ public final class HMM2Morph {
 	 * @param in
 	 * @param dprefixesFile
 	 * @param taggedFilePath
-	 *            - this paramter is not being used in the function excpect for
-	 *            printing it
+	 *           - this paramter is not being used in the function excpect for
+	 *           printing it
 	 * @return
 	 * @throws JAXBException
 	 */
@@ -1640,8 +1638,8 @@ public final class HMM2Morph {
 							analysis.setScore(0.0);
 
 							if (analysis.getBase() == null && analysis.getPrefix() != null) {
-								if (prefixSpecialCases(tokenTypeList, tokenTypeListSize, tokenIndex, analysis,
-										analysisIndex, hmmPrefixList, hmmPos))
+								if (prefixSpecialCases(tokenTypeList, tokenTypeListSize, tokenIndex, analysis, analysisIndex,
+										hmmPrefixList, hmmPos))
 									scoreCounter++;
 							} else if (analysis.getBase().getForeign() != null) {
 								analysis.setScore(1.0);
@@ -1693,8 +1691,7 @@ public final class HMM2Morph {
 								break;
 							case PROPERNAME:
 								if (unknownFlag && morphSurface.charAt(0) == 'ä') {
-									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface,
-											newAnalysisIndex);
+									AnalysisType newAnalysis1 = handleProperNameDefAnalysis(morphSurface, newAnalysisIndex);
 									token.getAnalysis().add(newAnalysis1);
 								} else if (unknownFlag) {
 									if (hmmPrefixListSize > 0)
@@ -1708,8 +1705,7 @@ public final class HMM2Morph {
 
 							case PROPERNAMEDEF:
 								if (unknownFlag) {
-									AnalysisType newAnalysis1 = handleProperNameAnalysis(morphSurface, newAnalysisIndex,
-											1.0);
+									AnalysisType newAnalysis1 = handleProperNameAnalysis(morphSurface, newAnalysisIndex, 1.0);
 									token.getAnalysis().add(newAnalysis1);
 								}
 								newAnalysis = handleProperNameDefAnalysis(morphSurface, newAnalysisIndex);
