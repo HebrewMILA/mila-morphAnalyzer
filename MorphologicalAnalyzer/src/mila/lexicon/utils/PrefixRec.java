@@ -41,7 +41,7 @@ public class PrefixRec {
 
 	/**
 	 * @param function
-	 *            The function to set.
+	 *           The function to set.
 	 */
 	public void setFunction(String function) {
 		this.function = function;
@@ -49,7 +49,7 @@ public class PrefixRec {
 
 	/**
 	 * @param surface
-	 *            The surface to set.
+	 *           The surface to set.
 	 */
 	public void setSurface(String surface) {
 		this.surface = surface;
@@ -57,7 +57,7 @@ public class PrefixRec {
 
 	/**
 	 * @param transliterated
-	 *            The transliterated to set.
+	 *           The transliterated to set.
 	 */
 	public void setTransliterated(String transliterated) {
 		this.transliterated = transliterated;

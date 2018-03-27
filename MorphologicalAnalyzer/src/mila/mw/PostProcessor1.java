@@ -75,7 +75,7 @@ public class PostProcessor1 extends Connected {
 	// -----------------------------------------------------------------------------------------------------------------------------------
 	public boolean checkBackwords(String id, String expectedPrevId, String prevId, String transliterated,
 			ArrayList<String> prevTransliteratedList, AnalysisType analysis, TokenType prevToken, TokenType token)
-					throws UnsupportedEncodingException, JAXBException {
+			throws UnsupportedEncodingException, JAXBException {
 		if (this.useDataFiles) {
 			return this.checkBackwordsNew(id, expectedPrevId, prevId, transliterated, prevTransliteratedList, analysis,
 					prevToken, token);
@@ -87,7 +87,7 @@ public class PostProcessor1 extends Connected {
 
 	public boolean checkBackwordsNew(String id, String expectedPrevId, String prevId, String transliterated,
 			ArrayList<String> prevTransliteratedList, AnalysisType analysis, TokenType prevToken, TokenType token)
-					throws UnsupportedEncodingException, JAXBException {
+			throws UnsupportedEncodingException, JAXBException {
 		// System.out.println("\n(F) PostProcessor1:checkBackwords(id =
 		// "+id+",expecedPrevId = "+expectedPrevId+",prevId =
 		// "+prevId+","+transliterated+")");
@@ -130,8 +130,8 @@ public class PostProcessor1 extends Connected {
 			prevTransliterated = prevTransliterated.replaceAll("'", "\\\\'");
 
 			final ArrayList<CustomResult> customResultSet = new ArrayList<CustomResult>(); // the
-																							// result
-																							// set
+			// result
+			// set
 			if (expectedPrevId.equals("1")) {
 				String.format(
 						"SELECT mwe2.spelling, mwe2.register, mwe2.gender, mwe2.number,mwe2.definiteness, mwe2.mwTransliterated, mwe2.mwUndotted, "
@@ -144,9 +144,9 @@ public class PostProcessor1 extends Connected {
 				// this part replaces the mysql part by using data files instead
 				// and simulating the queries
 				final ArrayList<MWE1record> result = MWE1data.getMWE1records(prevTransliterated); // get
-																									// first
+				// first
 				final ArrayList<MWErecord> result2 = MWEdata.getMWErecords(transliterated, 2); // get
-																								// 2nd
+				// 2nd
 				final Iterator<MWE1record> itr = result.iterator();
 				while (itr.hasNext()) // goind over first list and finding match
 				// in 2nd
@@ -203,19 +203,18 @@ public class PostProcessor1 extends Connected {
 				// this part replaces the mysql part by using data files instead
 				// and simulating the queries
 				final ArrayList<MWE1record> result = MWE1data.getMWE1records(firstWord); // get
-																							// first
+				// first
 				final ArrayList<MWErecord> result2 = MWEdata.getMWErecords(prevTransliterated, 2); // get
-																									// 2nd
+				// 2nd
 				final ArrayList<MWErecord> result3 = MWEdata.getMWErecords(transliterated, 3); // get
-																								// 3nd
+				// 3nd
 
 				final Iterator<MWErecord> itr = result3.iterator();
 				while (itr.hasNext()) // going over first list and finding match
 				// in 3rd
 				{
 					final MWErecord mwe3rec = itr.next();
-					if (mwe3rec.getMwTransliterated().equals(phraze)
-							&& mwe3rec.getTransliterated().equals(transliterated)) {
+					if (mwe3rec.getMwTransliterated().equals(phraze) && mwe3rec.getTransliterated().equals(transliterated)) {
 						final Iterator<MWErecord> itr2 = result2.iterator();
 						while (itr2.hasNext()) {
 							final MWErecord mwe2rec = itr2.next();
@@ -229,10 +228,10 @@ public class PostProcessor1 extends Connected {
 									if (mwe1rec.getId().equals(mwe2rec.getFormerItemId())) {
 										final CustomResult cRes = new CustomResult();
 										cRes.LoadRecord(mwe1rec, mwe3rec); // load
-																			// values
+										// values
 										customResultSet.add(cRes); // add to
-																	// result
-																	// set
+										// result
+										// set
 									}
 								}
 							}
@@ -263,22 +262,21 @@ public class PostProcessor1 extends Connected {
 						id, expectedPrevId);
 
 				final ArrayList<MWE1record> result = MWE1data.getMWE1records(firstWord); // get
-																							// first
+				// first
 				final ArrayList<MWErecord> result2 = MWEdata.getMWErecords(secondWord, 2); // get
-																							// 2nd
+				// 2nd
 				final ArrayList<MWErecord> result3 = MWEdata.getMWErecords(prevTransliterated, 3); // get
-																									// 3nd
+				// 3nd
 				final ArrayList<MWErecord> result4 = MWEdata.getMWErecords(transliterated, 4); // get
-																								// 3nd
+				// 3nd
 				final Iterator<MWErecord> itr4 = result4.iterator();
 				while (itr4.hasNext()) // going over first list and finding
-										// match in 4rd
+				// match in 4rd
 				{
 					final MWErecord mwe4rec = itr4.next();
-					if (mwe4rec.getMwTransliterated().equals(phraze)
-							&& mwe4rec.getTransliterated().equals(transliterated)) // MwTransliterated
-																					// ==
-																					// phraze
+					if (mwe4rec.getMwTransliterated().equals(phraze) && mwe4rec.getTransliterated().equals(transliterated)) // MwTransliterated
+					// ==
+					// phraze
 					{
 						final Iterator<MWErecord> itr3 = result3.iterator();
 						while (itr3.hasNext()) {
@@ -303,11 +301,11 @@ public class PostProcessor1 extends Connected {
 											{
 												final CustomResult cRes = new CustomResult();
 												cRes.LoadRecord(mwe1rec, mwe4rec); // load
-																					// values
+												// values
 												customResultSet.add(cRes); // add
-																			// to
-																			// result
-																			// set
+												// to
+												// result
+												// set
 											}
 										}
 									}
@@ -322,16 +320,14 @@ public class PostProcessor1 extends Connected {
 			// selectSql);
 
 			/*
-			 * ResultSet rs = null; try { rs = getData(selectSql); try {
-			 * rs.last();
+			 * ResultSet rs = null; try { rs = getData(selectSql); try { rs.last();
 			 *
 			 * if (resultSetSize != rs.getRow()) { System.out.println(
 			 * "(F) PostProcessor1:checkBackwords THIS IS NOT GOOD !!! expectedPrevId="
-			 * +expectedPrevId); System.out.println("    resultSetSize="
-			 * +resultSetSize +" rs.getRow()="+rs.getRow());
-			 * System.out.println(selectSql); try { System.in.read(); } catch
-			 * (IOException e) { e.printStackTrace(); } } } catch (SQLException
-			 * e) { e.printStackTrace(); } } finally { releaseConnection(); if
+			 * +expectedPrevId); System.out.println("    resultSetSize=" +resultSetSize
+			 * +" rs.getRow()="+rs.getRow()); System.out.println(selectSql); try {
+			 * System.in.read(); } catch (IOException e) { e.printStackTrace(); } } } catch
+			 * (SQLException e) { e.printStackTrace(); } } finally { releaseConnection(); if
 			 * (rs == null) return false; }
 			 */
 
@@ -339,13 +335,11 @@ public class PostProcessor1 extends Connected {
 				for (final CustomResult cRes : customResultSet) {
 
 					/*
-					 * if (expectedPrevId.equals("3")) { resultSetSize--;
-					 * System.out.println(
-					 * "(F) PostProcessor1:checkBackwords RS is not empty !!!");
-					 * if (resultSetSize < 0 ) { System.out.println(
-					 * "(F) PostProcessor1:checkBackwords THIS IS NOT GOOD !!!"
-					 * ); try { System.in.read(); } catch (IOException e) {
-					 * e.printStackTrace(); } } }
+					 * if (expectedPrevId.equals("3")) { resultSetSize--; System.out.println(
+					 * "(F) PostProcessor1:checkBackwords RS is not empty !!!"); if (resultSetSize <
+					 * 0 ) { System.out.println(
+					 * "(F) PostProcessor1:checkBackwords THIS IS NOT GOOD !!!" ); try {
+					 * System.in.read(); } catch (IOException e) { e.printStackTrace(); } } }
 					 */
 
 					if (!prevId.equals(expectedPrevId)) {
@@ -399,8 +393,7 @@ public class PostProcessor1 extends Connected {
 						if (!definiteness.equals("unspecified")) {
 							if (definiteness.equals("tt") || definiteness.equals("true")) {
 								definiteness = "true";
-							} else if (definiteness.equals("tf") || definiteness.equals("f")
-									|| definiteness.equals("false")) {
+							} else if (definiteness.equals("tf") || definiteness.equals("f") || definiteness.equals("false")) {
 								definiteness = "false";
 							}
 							mwtype.setDefiniteness(definiteness);
@@ -499,7 +492,7 @@ public class PostProcessor1 extends Connected {
 	// -----------------------------------------------------------------------------------------------------------------------------------
 	public boolean checkBackwordsOld(String id, String expectedPrevId, String prevId, String transliterated,
 			ArrayList<String> prevTransliteratedList, AnalysisType analysis, TokenType prevToken, TokenType token)
-					throws UnsupportedEncodingException, JAXBException {
+			throws UnsupportedEncodingException, JAXBException {
 		boolean rt = false;
 		final int prevTransliteratedListSize = prevTransliteratedList.size();
 		final int intId = Integer.parseInt(id);
@@ -615,8 +608,7 @@ public class PostProcessor1 extends Connected {
 
 								if (dottedLexiconItem != null && dottedLexiconItem.length() > 0
 										&& dottedLexiconItem.charAt(0) != 'u') {
-									analysis.getBase()
-											.setDottedLexiconItem(URLDecoder.decode(dottedLexiconItem, "UTF-8"));
+									analysis.getBase().setDottedLexiconItem(URLDecoder.decode(dottedLexiconItem, "UTF-8"));
 								}
 								analysis.getBase().setLexiconPointer(lexiconId);
 								analysis.getBase().setTransliteratedLexiconItem(transliteratedLexiconItem);
@@ -645,8 +637,7 @@ public class PostProcessor1 extends Connected {
 								}
 
 								analysis.getBase().getMWE().setMultiWordTransliterated(mwTransliterated);
-								analysis.getBase().getMWE()
-										.setMultiWordUndotted(URLDecoder.decode(mwUndotted, "UTF-8"));
+								analysis.getBase().getMWE().setMultiWordUndotted(URLDecoder.decode(mwUndotted, "UTF-8"));
 								if (expectedPrevId.equals("1")) {
 									pos = rs.getString("pos");
 									removeAnalysisByPos(prevToken, pos);
@@ -797,13 +788,13 @@ public class PostProcessor1 extends Connected {
 		nextTransliterated = nextTransliterated.replaceAll("'", "\\\\'");
 
 		final ArrayList<MWE1record> result = MWE1data.getMWE1records(transliterated); // get
-																						// first
-																						// from
-																						// mwe1
+		// first
+		// from
+		// mwe1
 		final ArrayList<MWErecord> result2 = MWEdata.getMWErecords(nextTransliterated, 2); // get
-																							// 2nd
-																							// from
-																							// mwe2
+		// 2nd
+		// from
+		// mwe2
 
 		final Iterator<MWE1record> itr = result.iterator();
 		while (itr.hasNext()) // going over first list and finding match in 2nd
@@ -821,7 +812,7 @@ public class PostProcessor1 extends Connected {
 						// they have the same id then we have a match
 						{
 							return true; // found one so return true testB =
-											// true;
+												// true;
 						}
 					}
 				}
@@ -839,8 +830,8 @@ public class PostProcessor1 extends Connected {
 		try {
 			if (pos.equals("propername")) {
 				rs = getData("SELECT mwe1.id  FROM  mwe1, mwe2  WHERE mwe1.transliterated=? "
-						+ "AND mwe2.transliterated=? AND mwe1.pos=? AND mwe2.formerItemId=mwe1.id "
-						+ "AND mwe1.type=? ", transliterated, nextTransliterated, pos, type);
+						+ "AND mwe2.transliterated=? AND mwe1.pos=? AND mwe2.formerItemId=mwe1.id " + "AND mwe1.type=? ",
+						transliterated, nextTransliterated, pos, type);
 			} else {
 				rs = getData(
 						"SELECT mwe1.id FROM  mwe1, mwe2 WHERE mwe1.transliterated=? "
@@ -1013,13 +1004,13 @@ public class PostProcessor1 extends Connected {
 				final String prefixTranslietarted = Translate.getHebToEng(prefix.getSurface());
 
 				final ArrayList<MWE1record> result = MWE1data.getMWE1records(transliterated); // get
-																								// first
-																								// from
-																								// mwe1
+				// first
+				// from
+				// mwe1
 				final ArrayList<MWErecord> result2 = MWEdata.getMWErecords(prefixTranslietarted, 2); // get
-																										// 2nd
-																										// from
-																										// mwe2
+				// 2nd
+				// from
+				// mwe2
 
 				final Iterator<MWE1record> itr = result.iterator();
 				while (itr.hasNext()) // goind over first list and finding match
@@ -1060,9 +1051,8 @@ public class PostProcessor1 extends Connected {
 
 					ResultSet rs = null;
 					try {
-						rs = getData(
-								"SELECT mwe1.id FROM  mwe1, mwe2  "
-										+ " WHERE mwe1.transliterated=? AND mwe2.transliterated=? AND mwe1.pos=? AND mwe2.formerItemId=mwe1.id",
+						rs = getData("SELECT mwe1.id FROM  mwe1, mwe2  "
+								+ " WHERE mwe1.transliterated=? AND mwe2.transliterated=? AND mwe1.pos=? AND mwe2.formerItemId=mwe1.id",
 								transliterated, prefixTranslietarted, pos);
 						if (rs != null) {
 							try {
@@ -1735,8 +1725,7 @@ public class PostProcessor1 extends Connected {
 					createMWWAnalysis(token, currentBase, currentAnalysisIndex, multiWord, "2");
 					if (nextToken != null) {
 						for (int l = 0; l < prefixListsize; l++) {
-							final AnalysisType nextAnalysis = (AnalysisType) nextToken.getAnalysis()
-									.get(currentAnalysisIndex);
+							final AnalysisType nextAnalysis = (AnalysisType) nextToken.getAnalysis().get(currentAnalysisIndex);
 
 							final PrefixType pref = (PrefixType) nextAnalysis.getPrefix().get(l);
 
@@ -1749,10 +1738,10 @@ public class PostProcessor1 extends Connected {
 				if (nextToken != null) {
 					final int nextBaseListSize = nextBaseList.size();
 					for (int j = 0; j < nextBaseListSize; j++) {
-						if (((AnalysisType) nextToken.getAnalysis().get(nextAnalysisIndexList.get(j).intValue()))
-								.getPrefix().size() == 0) {
-							processProperNameToken(i, j, prevBaseList, nextBaseList, currentBase, token, prevToken,
-									nextToken, currentAnalysisIndex, prevAnalysisIndexList, nextAnalysisIndexList);
+						if (((AnalysisType) nextToken.getAnalysis().get(nextAnalysisIndexList.get(j).intValue())).getPrefix()
+								.size() == 0) {
+							processProperNameToken(i, j, prevBaseList, nextBaseList, currentBase, token, prevToken, nextToken,
+									currentAnalysisIndex, prevAnalysisIndexList, nextAnalysisIndexList);
 						}
 					}
 				}

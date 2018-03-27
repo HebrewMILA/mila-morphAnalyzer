@@ -17,10 +17,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.PrepositionLexiconType.class);
-    }
-
     public java.lang.String getCase() {
         if (_Case == null) {
             return "unspecified";
@@ -188,10 +184,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.PrepositionLexiconType.Add.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -428,7 +420,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -573,10 +564,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.PrepositionLexiconType.Remove.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -813,7 +800,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -958,10 +944,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.PrepositionLexiconType.Replace.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1198,7 +1180,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1479,7 +1460,6 @@ public class PrepositionLexiconTypeImpl implements lexicon.jaxb.PrepositionLexic
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {

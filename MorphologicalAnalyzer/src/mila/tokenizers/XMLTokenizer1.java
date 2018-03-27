@@ -96,8 +96,7 @@ public class XMLTokenizer1 {
 				t.processSingleFile(in, out);
 
 			} else {
-				System.err.println(
-						"Both input parameters should be files or both input parameters should be directories");
+				System.err.println("Both input parameters should be files or both input parameters should be directories");
 				System.err.println("output directory must be an existing directory !!");
 				System.err.println("exiting...");
 			}
@@ -128,11 +127,11 @@ public class XMLTokenizer1 {
 	 * A recursive handling of the provided input directory
 	 *
 	 * @param inputDirectory
-	 *            inputDirectory containing UTF-8 text files
+	 *           inputDirectory containing UTF-8 text files
 	 * @param outputDirectory
-	 *            outputDirectory an existing or not existing directory which
-	 *            will contain the output XML files in the same staructure they
-	 *            appear in the input directory
+	 *           outputDirectory an existing or not existing directory which will
+	 *           contain the output XML files in the same staructure they appear in
+	 *           the input directory
 	 * @param pos
 	 */
 	private void analyzeDirectory(File inputDirectory, String outputDirectory, final int pos) {
@@ -251,12 +250,10 @@ public class XMLTokenizer1 {
 
 					int tokenWithoutPrefixWithSuffixLen = tokenWithoutPrefixWithSuffix.length();
 
-					String tokenSuffix = tokenWithoutPrefixWithSuffix
-							.substring(tokenWithoutPrefixWithSuffixLen - suffixLen);
+					String tokenSuffix = tokenWithoutPrefixWithSuffix.substring(tokenWithoutPrefixWithSuffixLen - suffixLen);
 
 					int suffixStartIndex = tokenWithoutPrefixWithSuffixLen - suffixLen;
-					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix.substring(0,
-							suffixStartIndex);
+					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix.substring(0, suffixStartIndex);
 					if (tokenWithoutPrefixWithoutSuffix.length() > 0) {
 						xmlTokenizer.createTokens(tokenWithoutPrefixWithoutSuffix);
 					}
@@ -278,10 +275,10 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * We need to take a decision for tokens which ends with ' like g'wrg' The '
-	 * can be the end of quote or belongs to the token like in g'wrg' We defined
-	 * several letters for which there is a high chance that the ' belongs to
-	 * the token when they appear at the end of the token
+	 * We need to take a decision for tokens which ends with ' like g'wrg' The ' can
+	 * be the end of quote or belongs to the token like in g'wrg' We defined several
+	 * letters for which there is a high chance that the ' belongs to the token when
+	 * they appear at the end of the token
 	 *
 	 * @param token
 	 * @return
@@ -345,8 +342,8 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * dom4j is used for creating the xml document. this function handles
-	 * creating the new xml document
+	 * dom4j is used for creating the xml document. this function handles creating
+	 * the new xml document
 	 *
 	 * @throws IOException
 	 */
@@ -357,11 +354,11 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * Handling empty lines appear at the middle of the file. Empty lines
-	 * separates between paragraphes. This is the way ynet articles separates
-	 * paragraphes. After the last empty line and the first text line - we close
-	 * the last paragraph and start a new paragraph and a new sentence. In case
-	 * there are no more text lines - the new sentence tag will be removed.
+	 * Handling empty lines appear at the middle of the file. Empty lines separates
+	 * between paragraphes. This is the way ynet articles separates paragraphes.
+	 * After the last empty line and the first text line - we close the last
+	 * paragraph and start a new paragraph and a new sentence. In case there are no
+	 * more text lines - the new sentence tag will be removed.
 	 *
 	 * @return
 	 * @throws IOException
@@ -391,10 +388,10 @@ public class XMLTokenizer1 {
 
 	/**
 	 * drops empty lines at the begining of the file. We allow maximum
-	 * MAX_EMPTY_LINES empty lines at the begining of the file until text
-	 * appears. If there are more than MAX_EMPTY_LINES we will assume that the
-	 * file is empty. BOM is also handled, if there are empty lines after the
-	 * BOM they are also removed until text is reached
+	 * MAX_EMPTY_LINES empty lines at the begining of the file until text appears.
+	 * If there are more than MAX_EMPTY_LINES we will assume that the file is empty.
+	 * BOM is also handled, if there are empty lines after the BOM they are also
+	 * removed until text is reached
 	 *
 	 * @return first line whic is not empty
 	 */
@@ -441,9 +438,8 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * This method recognize non alphabet character in the beginning of the
-	 * token or sometimes there are cases where the token is just non alphabet
-	 * characters
+	 * This method recognize non alphabet character in the beginning of the token or
+	 * sometimes there are cases where the token is just non alphabet characters
 	 *
 	 * @param token
 	 * @param result
@@ -468,16 +464,16 @@ public class XMLTokenizer1 {
 					if (!(index + 1 < resultLen && index + 2 < resultLen && result[index].equals("?")
 							&& result[index + 2].equals("."))
 
-					&& !(index + 1 < resultLen && index + 2 < resultLen && result[index].equals("!")
-							&& result[index + 2].equals("."))
+							&& !(index + 1 < resultLen && index + 2 < resultLen && result[index].equals("!")
+									&& result[index + 2].equals("."))
 
-					&& !(index + 1 < resultLen && result[index].equals("?") && result[index + 1].equals(")"))
+							&& !(index + 1 < resultLen && result[index].equals("?") && result[index + 1].equals(")"))
 
-					&& !(index + 1 < resultLen && result[index].equals("!") && result[index + 1].equals(")"))
+							&& !(index + 1 < resultLen && result[index].equals("!") && result[index + 1].equals(")"))
 
-					&& !(index + 1 < resultLen && result[index].equals("!") && result[index + 1].equals("\""))
+							&& !(index + 1 < resultLen && result[index].equals("!") && result[index + 1].equals("\""))
 
-					&& !(index + 1 < resultLen && result[index].equals("?") && result[index + 1].equals("\""))) {
+							&& !(index + 1 < resultLen && result[index].equals("?") && result[index + 1].equals("\""))) {
 						xmlTokenizer.createSentences();
 					}
 				}
@@ -789,9 +785,9 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * This method handles cases like prefix + " + some quote or prefix+"+quote
-	 * or prefix+-+quote In these cases we know for sure that there is a
-	 * standalone prefix
+	 * This method handles cases like prefix + " + some quote or prefix+"+quote or
+	 * prefix+-+quote In these cases we know for sure that there is a standalone
+	 * prefix
 	 *
 	 * @param token
 	 * @return
@@ -914,8 +910,8 @@ public class XMLTokenizer1 {
 					currentChar = token.charAt(i);
 					if (currentChar >= 'א' && currentChar <= 'ת') {
 						i++;
-					} else if ((currentChar == '"' || currentChar == '\\') && i + 1 < tokenLen
-							&& token.charAt(i + 1) >= 'א' && token.charAt(i + 1) <= 'ת') {
+					} else if ((currentChar == '"' || currentChar == '\\') && i + 1 < tokenLen && token.charAt(i + 1) >= 'א'
+							&& token.charAt(i + 1) <= 'ת') {
 						i++;
 					} else {
 						found = true;
@@ -1014,11 +1010,9 @@ public class XMLTokenizer1 {
 						|| tokenLen == 6 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}" + "\\.")
 						|| tokenLen == 3 && token.matches(ALEFBAIT + "{2}" + "\\.")
 						// בי.ג'יי. ארמסטרונג
-						|| tokenLen == 8
-								&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "\\'" + ALEFBAIT + "{2}\\.")
-						|| tokenLen == 5 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}")
-						|| tokenLen == 8 && token
-								.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}\\.")) {
+						|| tokenLen == 8 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "\\'" + ALEFBAIT + "{2}\\.")
+						|| tokenLen == 5 && token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}") || tokenLen == 8
+								&& token.matches(ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}" + "\\." + ALEFBAIT + "{2}\\.")) {
 					xmlTokenizer.createTokens(token);
 					returnValue = null;
 				} else {
@@ -1107,8 +1101,8 @@ public class XMLTokenizer1 {
 
 	/**
 	 * We must recognize known acronym ends with ' because our default is to
-	 * separate the ' from the token In this specific case we need to leave it
-	 * as a token
+	 * separate the ' from the token In this specific case we need to leave it as a
+	 * token
 	 *
 	 * @param token
 	 * @return
@@ -1136,8 +1130,7 @@ public class XMLTokenizer1 {
 
 				while (i > 0) {
 					currentChar = token.charAt(i);
-					if (!(currentChar >= 'א' && currentChar <= 'ת') && currentChar != '\''
-							&& token.charAt(i - 1) == '\'') {
+					if (!(currentChar >= 'א' && currentChar <= 'ת') && currentChar != '\'' && token.charAt(i - 1) == '\'') {
 						xmlTokenizer.createTokens(token.substring(0, i));
 						break;
 					} else {
@@ -1161,15 +1154,15 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * Handle the case when both input and output are directories Output
-	 * directory can be an already existing diectory otherwise the program will
-	 * create a new directory with the providede name
+	 * Handle the case when both input and output are directories Output directory
+	 * can be an already existing diectory otherwise the program will create a new
+	 * directory with the providede name
 	 *
 	 * @param inputDirectory
-	 *            containing UTF-8 text files
+	 *           containing UTF-8 text files
 	 * @param outputDirectory
-	 *            an existing or not existing directory which will contain the
-	 *            output XML files
+	 *           an existing or not existing directory which will contain the output
+	 *           XML files
 	 */
 	public void processDirectory(String inputDirectory, String outputDirectory) {
 		try {
@@ -1186,9 +1179,9 @@ public class XMLTokenizer1 {
 	 * This method is used when handling input directory
 	 *
 	 * @param inputFile
-	 *            UTF-8 text file
+	 *           UTF-8 text file
 	 * @param outputFile
-	 *            XML output file
+	 *           XML output file
 	 */
 	public void processFile(final String inputFile, final String outputFile) {
 		int index = outputFile.lastIndexOf(".");
@@ -1204,13 +1197,13 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * This method handles the case in which the input parameter is a single
-	 * file and not a directory
+	 * This method handles the case in which the input parameter is a single file
+	 * and not a directory
 	 *
 	 * @param inputFile
-	 *            UTF-8 text file
+	 *           UTF-8 text file
 	 * @param outputFile
-	 *            XML output file
+	 *           XML output file
 	 */
 	public void processSingleFile(final String inputFile, final String outputFile) {
 		if (outputFile.indexOf("xml") == -1) {
@@ -1302,15 +1295,15 @@ public class XMLTokenizer1 {
 
 	// --------------------------------------------------------------------------------------------------------------------------
 	/**
-	 * ADDED 21.11.10 by yossi jacob. This method ensures that the output String
-	 * has only valid XML unicode characters as specified by the XML 1.0
-	 * standard. For reference, please see
+	 * ADDED 21.11.10 by yossi jacob. This method ensures that the output String has
+	 * only valid XML unicode characters as specified by the XML 1.0 standard. For
+	 * reference, please see
 	 * <a href="http://www.w3.org/TR/2000/REC-xml-20001006#NT-Char">the
-	 * standard</a>. This method will return an empty String if the input is
-	 * null or empty.
+	 * standard</a>. This method will return an empty String if the input is null or
+	 * empty.
 	 *
 	 * @param in
-	 *            The String whose non-valid characters we want to remove.
+	 *           The String whose non-valid characters we want to remove.
 	 * @return The in String, stripped of non-valid characters.
 	 */
 	public String stripNonValidXMLCharacters(String in) {
@@ -1416,15 +1409,15 @@ public class XMLTokenizer1 {
 	}
 
 	/**
-	 * This method is used in the Client Server architecture This method get a
-	 * UTF-8 Hebrew text as inputStream, the text is tokenized, and it also
-	 * activate the morphological analyzer.
+	 * This method is used in the Client Server architecture This method get a UTF-8
+	 * Hebrew text as inputStream, the text is tokenized, and it also activate the
+	 * morphological analyzer.
 	 *
 	 * @param in
 	 * @param pw
 	 * @param xmlMorphAnalyzer
-	 *            - an instance of the morphological analyzer - so that the data
-	 *            can be loaded only once
+	 *           - an instance of the morphological analyzer - so that the data can
+	 *           be loaded only once
 	 * @return
 	 */
 	public int tokenizeAndAnalyze(InputStream in, PrintWriter pw, XMLMorphAnalyzer xmlMorphAnalyzer) {
@@ -1452,7 +1445,7 @@ public class XMLTokenizer1 {
 	 * This method tokenize and analyze an input String of Hebrew text
 	 *
 	 * @param inputText
-	 *            input String of hebrew text
+	 *           input String of hebrew text
 	 * @param dinflectionsFile
 	 * @param dprefixesFile
 	 * @param gimartiasFile
@@ -1557,12 +1550,10 @@ public class XMLTokenizer1 {
 
 					int tokenWithoutPrefixWithSuffixLen = tokenWithoutPrefixWithSuffix.length();
 
-					String tokenSuffix = tokenWithoutPrefixWithSuffix
-							.substring(tokenWithoutPrefixWithSuffixLen - suffixLen);
+					String tokenSuffix = tokenWithoutPrefixWithSuffix.substring(tokenWithoutPrefixWithSuffixLen - suffixLen);
 
 					int suffixStartIndex = tokenWithoutPrefixWithSuffixLen - suffixLen;
-					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix.substring(0,
-							suffixStartIndex);
+					String tokenWithoutPrefixWithoutSuffix = tokenWithoutPrefixWithSuffix.substring(0, suffixStartIndex);
 					if (tokenWithoutPrefixWithoutSuffix.length() > 0) {
 						xmlTokenizer.createTokens(tokenWithoutPrefixWithoutSuffix);
 					}

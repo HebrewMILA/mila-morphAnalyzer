@@ -1,6 +1,7 @@
 package lexicon.tools;
 
 import java.util.HashMap;
+
 /**
  * @author Danny Shacham
  */
@@ -10,13 +11,14 @@ public class Names {
 	private static HashMap actions;
 	private static HashMap hebToEng;
 	private static HashMap engToHeb;
-	
+
 	public static String getPos(String eng) {
 		if (pos == null) {
 			initPos();
 		}
-		return (String)pos.get(eng);
+		return (String) pos.get(eng);
 	}
+
 	private static void initPos() {
 		pos = new HashMap();
 		pos.put("adjective", "שם תואר");
@@ -32,6 +34,7 @@ public class Names {
 		pos.put("quantifier", "כמת");
 		pos.put("verb", "פועל");
 	}
+
 	private static void initEngToHeb() {
 		engToHeb = new HashMap();
 		engToHeb.put("a", "%D7%90");
@@ -56,21 +59,22 @@ public class Names {
 		engToHeb.put("r", "%D7%A8");
 		engToHeb.put("e", "%D7%A9");
 		engToHeb.put("t", "%D7%AA");
-		
+
 		// Sofiot
 		engToHeb.put("k", "%D7%9A");
 		engToHeb.put("m", "%D7%9D");
 		engToHeb.put("n", "%D7%9F");
 		engToHeb.put("p", "%D7%A3");
 		engToHeb.put("c", "%D7%A5");
-		
+
 		// Punctuation marks
 		engToHeb.put("-", "-");
 		engToHeb.put("'", "%27");
 		engToHeb.put("`", "%60");
 		engToHeb.put("\"", "%22");
-		
+
 	}
+
 	private static void initHebToEng() {
 		hebToEng = new HashMap();
 		hebToEng.put("%D7%90", "a");
@@ -95,43 +99,47 @@ public class Names {
 		hebToEng.put("%D7%A8", "r");
 		hebToEng.put("%D7%A9", "e");
 		hebToEng.put("%D7%AA", "t");
-		
+
 		// Sofiot
 		hebToEng.put("%D7%9A", "k");
 		hebToEng.put("%D7%9D", "m");
 		hebToEng.put("%D7%9F", "n");
 		hebToEng.put("%D7%A3", "p");
 		hebToEng.put("%D7%A5", "c");
-		
+
 		// Punctuation marks
 		hebToEng.put("-", "-");
 		hebToEng.put("%27", "'");
 		hebToEng.put("%22", "\"");
 		hebToEng.put("%60", "`");
-		
+
 	}
+
 	public static String getEngToHeb(String eng) {
 		if (engToHeb == null) {
 			initEngToHeb();
 		}
-		return (String)engToHeb.get(eng);
+		return (String) engToHeb.get(eng);
 	}
+
 	public static String getHebToEng(String heb) {
 		if (hebToEng == null) {
 			initHebToEng();
 		}
-		return (String)hebToEng.get(heb);
+		return (String) hebToEng.get(heb);
 	}
+
 	public static String getAction(String eng) {
 		if (actions == null) {
 			initActions();
 		}
-		return (String)actions.get(eng);
+		return (String) actions.get(eng);
 	}
+
 	private static void initActions() {
 		actions = new HashMap();
 		actions.put("add", "הוספה");
-		actions.put("replace", "הח�?פה");
+		actions.put("replace", "החלפה");
 		actions.put("remove", "הסרה");
-	}	
+	}
 }

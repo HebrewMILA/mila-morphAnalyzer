@@ -100,7 +100,7 @@ public class AdverbExceptionType extends Content implements lexicon.jaxb.AdverbE
 		sql += ", '" + getSpelling() + "'";
 		sql += ", '" + getPossessiveSuffix() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

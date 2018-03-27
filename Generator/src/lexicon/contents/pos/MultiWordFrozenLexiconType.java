@@ -6,7 +6,6 @@
  */
 package lexicon.contents.pos;
 
-import java.util.List;
 import lexicon.contents.Content;
 
 /**

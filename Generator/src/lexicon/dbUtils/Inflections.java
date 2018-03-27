@@ -56,8 +56,6 @@ public class Inflections extends ConnectedGenerator {
 	private int subId;
 	private int multiWordLen;
 
-	private String table = "";
-
 	/**
 	 * @return Returns the consecutive.
 	 */
@@ -273,8 +271,7 @@ public class Inflections extends ConnectedGenerator {
 					+ prefix + "','" + baseAlternatePointer + "'" +
 					// "," + consecutive+ "," + subId+
 					")";
-			// System.out.println("sql=" + sql);
-			int feedback = execute(sql);
+			execute(sql);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);
@@ -462,37 +459,15 @@ public class Inflections extends ConnectedGenerator {
 			String sql = "select * from noun";
 
 			String transliterated = "";
-			String baseTransliteratedLItem = "";
-			String baseUndottedLItem = "";
-			String baseGender = "";
-			String baseNumber = "";
-			String basePronounType = "";
-			String PGN = "";
-			String suffixGender = "";
-			String suffixNumber = "";
-			String suffixPerson = "";
-			String suffixStatus = "";
-			String baseConjunctionType = "";
-			String basenameEntityType = "";
-			String basePerson = "";
-			String root = "";
 			String gender = "";
 			String number = "";
 			String feminine;
 			String plural;
-			String binyan = "";
-			String tense = "";
 			String id = "";
-			String basePos = "";
-			String script = "";
-			String baseNumeralType = "";
-			String accusativeNominativePGN = "";
-			String undotted = "";
-			String dotted = "";
 			ResultSet rs = null;
 			rs = getData(sql);
 			rs.last();
-			int num = rs.getRow();
+			rs.getRow();
 			while (rs.next()) {
 				rs.getRow();
 				id = rs.getString("id");
@@ -611,10 +586,6 @@ public class Inflections extends ConnectedGenerator {
 	}
 
 	public void getWholeNouns() {
-		String gender = "";
-		String number = "";
-		String feminine;
-		String plural;
 		String dir = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\";
 		FileOutputStream inflections; // declare a file output object
 		try {
@@ -633,10 +604,8 @@ public class Inflections extends ConnectedGenerator {
 
 			String sql = "  select undotted from " + " lexiconP.item where pos='wPrefix'";
 
-			String transliterated = "";
 			ResultSet rs = null;
 			rs = getData(sql);
-			int i = 0;
 			// pInflections.print("num");
 			// pInflections.print(" ");
 			// pInflections.print("surface");
@@ -648,7 +617,6 @@ public class Inflections extends ConnectedGenerator {
 			pInflections.println("*************************************");
 			pInflections.println();
 			while (rs.next()) {
-				i++;
 				surface = rs.getString("undotted");
 				// String dotted= rs.getString("dotted");
 				// String p =rs.getString("p");
@@ -835,7 +803,6 @@ public class Inflections extends ConnectedGenerator {
 		System.out.println("sql exist=" + sql);
 		ResultSet rs = null;
 		rs = getData(sql);
-		int size = 0;
 		try {
 			while (rs.next()) {
 				exist = true;
@@ -1215,7 +1182,6 @@ public class Inflections extends ConnectedGenerator {
 	}
 
 	public void setTable(String _table) {
-		this.table = _table;
 	}
 
 	/**

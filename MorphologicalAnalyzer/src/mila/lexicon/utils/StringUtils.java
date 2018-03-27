@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 
 import static mila.lexicon.analyse.Constants.*;
 
-public class StringUtils  {
+public class StringUtils {
 	public static boolean analyzeForeign(String token) {
 		if (token.length() == 0) {
 			return false;
@@ -132,8 +132,7 @@ public class StringUtils  {
 				// return a "UNSPECIFIED"
 				if (subs.indexOf(".") != -1) {
 					return ENUM_OUTPUT_PATTERN.UNSPECIFIED;
-				} else 
-				{
+				} else {
 					// there is no point in second part - 75:787
 					Integer.parseInt(subs);
 				}
@@ -154,9 +153,9 @@ public class StringUtils  {
 				num1 = Integer.valueOf(token.substring(0, index)).intValue();
 				String subs = token.substring(index + 1);
 				if (subs.indexOf(".") != -1) { // point in second part like
-												// swimming time - 12:47.74 -
-												// for now i return a
-												// "UNSPECIFIED"
+					// swimming time - 12:47.74 -
+					// for now i return a
+					// "UNSPECIFIED"
 					return ENUM_OUTPUT_PATTERN.UNSPECIFIED;
 				} else if (subs.indexOf(":") != -1) {
 					int index2 = subs.indexOf(":");

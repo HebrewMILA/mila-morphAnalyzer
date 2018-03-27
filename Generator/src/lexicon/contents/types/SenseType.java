@@ -49,7 +49,7 @@ public class SenseType extends Content implements lexicon.jaxb.SenseType {
 		}
 		sql += ", '" + definition + "'";
 		sql += ", '" + getWeight() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		addEnglish();
 		addExample();

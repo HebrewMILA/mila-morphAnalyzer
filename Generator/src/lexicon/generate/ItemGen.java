@@ -71,8 +71,8 @@ public abstract class ItemGen implements ItemInterface {
 	protected boolean hebForeign = false;
 	protected String value = "";
 	protected String prefix = "unspecified";
-	
-	//TODO changes
+
+	// TODO changes
 	protected List<Inflections> infList;
 
 	// ----------------------------------------------------------------------------------
@@ -155,7 +155,7 @@ public abstract class ItemGen implements ItemInterface {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	public String geAlternatetId() {
 		return alternateId;
 	}
@@ -439,8 +439,7 @@ public abstract class ItemGen implements ItemInterface {
 	}
 
 	protected String buildSql(String action, String table) {
-		String sql = "select * from " + table + " where action= '" + action
-				+ "' and id = " + id;
+		String sql = "select * from " + table + " where action= '" + action + "' and id = " + id;
 		return sql;
 	}
 
@@ -469,8 +468,8 @@ public abstract class ItemGen implements ItemInterface {
 
 	/**
 	 * This method is a service method used by nouns and preposition <br>
-	 * It is used as a basis for possessive generation, in case the basis is not
-	 * the construct form
+	 * It is used as a basis for possessive generation, in case the basis is not the
+	 * construct form
 	 * 
 	 * @throws UnsupportedEncodingException
 	 */
@@ -480,9 +479,10 @@ public abstract class ItemGen implements ItemInterface {
 	}
 
 	/**
-	 * This methos is the interface to the rules handling class The relevant
-	 * rule is selected by 3 parameters: <br>
-	 * 1) The action - a text describing the rule action for example pluralWTnoun <br>
+	 * This methos is the interface to the rules handling class The relevant rule is
+	 * selected by 3 parameters: <br>
+	 * 1) The action - a text describing the rule action for example pluralWTnoun
+	 * <br>
 	 * It means that this rule is applicable for generating the plural with the
 	 * suffix WT <br>
 	 * For the nouns - the actions chosen according to the rules files of xfst <br>
@@ -492,20 +492,20 @@ public abstract class ItemGen implements ItemInterface {
 	 * transliterated <br>
 	 * 
 	 * @param transliterated
-	 *            - the word on which rules will take place
+	 *           - the word on which rules will take place
 	 * @param inputCondition
-	 *            - parameter which allows us to differntiate in case there is a
-	 *            simmilar action
+	 *           - parameter which allows us to differntiate in case there is a
+	 *           simmilar action
 	 * @param action
-	 *            - each rule is identified by the action and inputCondition
+	 *           - each rule is identified by the action and inputCondition
 	 * @param maxLen
-	 *            - the translitered suffix length to start comparing to the
-	 *            inputPattern
+	 *           - the translitered suffix length to start comparing to the
+	 *           inputPattern
 	 * @throws Exception
 	 */
-	protected void findRule(String transliterated, String inputCondition,
-			String action, int maxLen) throws Exception {
-		// System.out.println("(F) findRule("+transliterated+","+inputCondition+","+action+")");
+	protected void findRule(String transliterated, String inputCondition, String action, int maxLen) throws Exception {
+		// System.out.println("(F)
+		// findRule("+transliterated+","+inputCondition+","+action+")");
 		rules1 rules = new rules1();
 		rules.setAction(action);
 		rules.setInputCondition(inputCondition);
@@ -518,10 +518,11 @@ public abstract class ItemGen implements ItemInterface {
 	}
 
 	/**
-	 * Tis method is used by all the generation classes to get the shared
-	 * attributes <br>
+	 * Tis method is used by all the generation classes to get the shared attributes
+	 * <br>
 	 * Such as: id,script,basePos etc <br>
-	 * The specific attributes per pos are got specifically by each of the poses <br>
+	 * The specific attributes per pos are got specifically by each of the poses
+	 * <br>
 	 */
 	protected void analyseItem() {
 		// System.out.println(" analyseItem");
@@ -534,7 +535,7 @@ public abstract class ItemGen implements ItemInterface {
 		transliterated = transliterated.replaceAll("&#60;", "`");
 		baseTransliteratedItem = transliterated;
 		// System.out.println("transliterated = " + transliterated);
-		//TODO I DID THIS
+		// TODO I DID THIS
 		id = item.getId();
 		alternateId = item.getAlternateId();
 		register = item.getRegister();
@@ -554,7 +555,8 @@ public abstract class ItemGen implements ItemInterface {
 	protected void populateDatabase() throws Exception {
 
 		Inflections inf = new Inflections();
-		// ����� ������ �' ����� ���� ���"�
+		// ����� ������ �' ����� ����
+		// ���"�
 		if (undot.endsWith("%D7%9D")) {
 			if (surface.endsWith("%D7%9E"))
 				surface.replaceAll("%D7%9E", "%D7%9D");
@@ -583,17 +585,22 @@ public abstract class ItemGen implements ItemInterface {
 		inf.setValue(value);
 		inf.setPrefix(prefix);
 		inf.setBaseAlternatePointer(this.alternateId);
-		//TODO inf.insertItem();
+		// TODO inf.insertItem();
 		infList.add(inf);
 	}
-	
-	protected void insertToDB(){
-		for(Inflections inf : infList)
+
+	protected void insertToDB() {
+		for (Inflections inf : infList)
 			inf.insertItem();
 	}
-	
-	public void switchBaseLexicalPointerAndInsert(String newId){
-		for(Inflections inf : infList){
+
+	/**
+	 * Sets the base lexical pointer of all inflections of current item to be newId.
+	 * The base alternate pointer is the original base lexical pointer.
+	 * @param newId
+	 */
+	public void switchBaseLexicalPointerAndInsert(String newId) {
+		for (Inflections inf : infList) {
 			inf.setBaseAlternatePointer(inf.getBaseLexiconPointer());
 			inf.setBaseLexiconPointer(newId);
 		}
@@ -607,14 +614,13 @@ public abstract class ItemGen implements ItemInterface {
 	 * @throws UnsupportedEncodingException
 	 * @throws Exception
 	 */
-	protected void inflectPronomial(String input_suffixFunction)
-			throws UnsupportedEncodingException, Exception {
+	protected void inflectPronomial(String input_suffixFunction) throws UnsupportedEncodingException, Exception {
 		suffixFunction = input_suffixFunction;
 		StringTokenizer stSuff = new StringTokenizer(suffixes, ",");
 		StringTokenizer stPGN = new StringTokenizer(PGNPRONOMIALTokens10, ",");
-		StringTokenizer stPerson = new StringTokenizer(personTokens10, ",");
-		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
-		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
+		new StringTokenizer(personTokens10, ",");
+		new StringTokenizer(numberTokens10, ",");
+		new StringTokenizer(genderTokens10, ",");
 		definitnessVal = "unspecified";
 		while (stSuff.hasMoreTokens()) {
 			boolean removeFlag = false;
@@ -689,16 +695,15 @@ public abstract class ItemGen implements ItemInterface {
 
 	/**
 	 * This method is a service method used by noun and adjective <br>
-	 * The action string is used for applying the rules table The method also
-	 * set pluralSuffixMaxLength needed for applying the rules table
+	 * The action string is used for applying the rules table The method also set
+	 * pluralSuffixMaxLength needed for applying the rules table
 	 * 
 	 * @param pluralSuffix
-	 *            - this value is defined for each lexicon item
+	 *           - this value is defined for each lexicon item
 	 * @return action string - used for applying the rules table
 	 */
 	protected String identifyPluralAction(String pluralSuffix) {
-		StringBuffer action = new StringBuffer().append("plural")
-				.append(pluralSuffix.toUpperCase()).append(basePos);
+		StringBuffer action = new StringBuffer().append("plural").append(pluralSuffix.toUpperCase()).append(basePos);
 		if (pluralSuffix.equals("wt")) {
 			pluralSuffixMaxLength = 3;
 		} else if (pluralSuffix.equals("iwt")) {
@@ -724,8 +729,7 @@ public abstract class ItemGen implements ItemInterface {
 	 * @return action string used for applying the rules table
 	 */
 	protected String identifyFeminineAction() {
-		StringBuffer action = new StringBuffer().append("feminine")
-				.append(feminine.toUpperCase()).append("Singular")
+		StringBuffer action = new StringBuffer().append("feminine").append(feminine.toUpperCase()).append("Singular")
 				.append(basePos);
 		return action.toString();
 	}
@@ -745,21 +749,19 @@ public abstract class ItemGen implements ItemInterface {
 
 	}
 
-	protected boolean replaceExceptionExist()
-			throws UnsupportedEncodingException, Exception {
+	protected boolean replaceExceptionExist() throws UnsupportedEncodingException, Exception {
 		return false;
 	}
 
-	protected boolean removeExceptionExist()
-			throws UnsupportedEncodingException, Exception {
+	protected boolean removeExceptionExist() throws UnsupportedEncodingException, Exception {
 		return false;
 	}
 
-	public void inflect() throws Exception{
+	public void inflect() throws Exception {
 		generateInflects();
 		insertToDB();
 	}
-	
+
 	public abstract void generateInflects() throws Exception;
 
 }

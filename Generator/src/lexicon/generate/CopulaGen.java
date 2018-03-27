@@ -16,8 +16,8 @@ import lexicon.stringUtils.Translate;
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class CopulaGen extends ItemGen {
 	String definiteness = "";
@@ -27,20 +27,16 @@ public class CopulaGen extends ItemGen {
 
 	}
 
-	protected void addException() throws Exception 
-	{
+	protected void addException() throws Exception {
 		String sql = buildSql("add", "copula_exception_type");
 		List addExceptionList = handleException(sql);
-		if (addExceptionList.size() > 0) 
-		{
+		if (addExceptionList.size() > 0) {
 			analyseExceptionList(addExceptionList);
 		}
 	}
 
-	private void analyseExceptionList(List exceptionList) throws Exception 
-	{
-		for (int i = 0; i < exceptionList.size(); i++) 
-		{
+	private void analyseExceptionList(List exceptionList) throws Exception {
+		for (int i = 0; i < exceptionList.size(); i++) {
 			CopulaExceptionType copulaExceptionType = new CopulaExceptionType();
 			copulaExceptionType.open(((Integer) exceptionList.get(i)).intValue());
 			inflectedItem = copulaExceptionType.getTransliterated();
@@ -53,23 +49,18 @@ public class CopulaGen extends ItemGen {
 			tense = copulaExceptionType.getTense();
 			populateDatabase();
 			if (tense.equals("bareInfinitive"))
-				try 
-				{
+				try {
 					String base = inflectedItem;
 					generatebklInfinitive(base);
 					generateInflectedInfinitive(base);
-				} 
-				catch (Exception e) 
-				{
+				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}		
+				}
 		}
 	}
 
-	
-	public String generatePGN(String gender, String number, String person) 
-	{
+	public String generatePGN(String gender, String number, String person) {
 		String pgn = "";
 		if (gender.equals("masculine"))
 			gender = "M";
@@ -85,8 +76,7 @@ public class CopulaGen extends ItemGen {
 		return pgn;
 	}
 
-	public void generateInflectedInfinitive(String base) throws Exception 
-	{
+	public void generateInflectedInfinitive(String base) throws Exception {
 		String suffix = "";
 		tense = "infinitive";
 		suffixFunction = "accusative or nominative";
@@ -94,8 +84,7 @@ public class CopulaGen extends ItemGen {
 		StringTokenizer stNumber = new StringTokenizer(numberTokens10, ",");
 		StringTokenizer stGender = new StringTokenizer(genderTokens10, ",");
 		StringTokenizer stSuffix = new StringTokenizer("i,k,k,w,h,nw,km,kn,m,n,", ",");
-		while (stSuffix.hasMoreTokens()) 
-		{
+		while (stSuffix.hasMoreTokens()) {
 			String number = stNumber.nextToken();
 			String person = stPerson.nextToken();
 			String gender = stGender.nextToken();
@@ -118,8 +107,7 @@ public class CopulaGen extends ItemGen {
 		PGN = "unspecified";
 	}
 
-	public void generatebklInfinitive(String base) throws Exception 
-	{
+	public void generatebklInfinitive(String base) throws Exception {
 		tense = "infinitive";
 		inflectedItem = "l" + base;
 		surface = Translate.Eng2Heb(inflectedItem);
@@ -134,11 +122,9 @@ public class CopulaGen extends ItemGen {
 		surface = Translate.Eng2Heb(inflectedItem);
 	}
 
-	public void inflectItem() 
-	{
+	public void inflectItem() {
 		if (tense.equals("bareInfinitive"))
-			try 
-			{
+			try {
 				String base = inflectedItem;
 				generatebklInfinitive(base);
 				generateInflectedInfinitive(base);
@@ -148,8 +134,7 @@ public class CopulaGen extends ItemGen {
 			}
 	}
 
-	private void analyse() 
-	{
+	private void analyse() {
 		analyseItem();
 		gender = item.getCopula().getGender();
 		number = item.getCopula().getNumber();
@@ -168,19 +153,15 @@ public class CopulaGen extends ItemGen {
 
 	}
 
-	public void generateInflects() throws Exception 
-	{
-		try 
-		{
+	public void generateInflects() throws Exception {
+		try {
 			analyse();
 			inflectedItem = transliterated;
 			surface = undot;
 			populateDatabase();
 			inflectItem();
 			addException();
-		}
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

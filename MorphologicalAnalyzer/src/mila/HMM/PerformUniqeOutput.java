@@ -27,11 +27,9 @@ import java.util.Vector;
 public class PerformUniqeOutput {
 	public static void main(String[] args) throws IOException {
 		PerformUniqeOutput r = new PerformUniqeOutput();
-		String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy1.txt";
 		String outputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy2.txt";
-		r.myUniqueOutput("</paragraph>\n" + "#\n" + "hhzdmnwt\n"
-				+ "\t(NOUN hzdmnwt)" + "U\n" + "(yyQUOT yyQUOT)\n" + ".\n"
-				+ "(yyDOT yyDOT)", outputFile);
+		r.myUniqueOutput("</paragraph>\n" + "#\n" + "hhzdmnwt\n" + "\t(NOUN hzdmnwt)" + "U\n" + "(yyQUOT yyQUOT)\n"
+				+ ".\n" + "(yyDOT yyDOT)", outputFile);
 	}
 
 	BufferedWriter bw = null;
@@ -40,11 +38,9 @@ public class PerformUniqeOutput {
 
 	StringBuffer outputString = new StringBuffer();
 
-	void ioHandling(String inputFile, String outputFile)
-			throws FileNotFoundException {
+	void ioHandling(String inputFile, String outputFile) throws FileNotFoundException {
 
-		bi = new BufferedReader(new InputStreamReader(new FileInputStream(
-				inputFile)));
+		bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
 		FileOutputStream out = null;
 		try {
 			out = new FileOutputStream(outputFile);
@@ -79,11 +75,9 @@ public class PerformUniqeOutput {
 
 	public String process(String input) throws IOException {
 		String line = "";
-		Vector lineVec = new Vector();
+		new Vector();
 		HashMap<String, String> hashmap = null;
 		String token = "";
-		String pos = "";
-
 		StringReader reader = new StringReader(input);
 		bi = new BufferedReader(reader);
 		// start handling tokens and analysis - loop through the file lines
@@ -107,7 +101,7 @@ public class PerformUniqeOutput {
 
 			} else {
 				boolean MWFlag = false;
-				hashmap = new HashMap();
+				hashmap = new HashMap<String, String>();
 				if (line.startsWith("\t(MWE")) {
 					token = line;
 					bw.write(token);
@@ -123,8 +117,7 @@ public class PerformUniqeOutput {
 					if (!hashmap.containsKey(line)) {
 						hashmap.put(line, line);
 					}
-					while ((line = bi.readLine()) != null
-							&& (line.startsWith("\t"))) {
+					while ((line = bi.readLine()) != null && (line.startsWith("\t"))) {
 						if (line.startsWith("\t(MWE")) {
 							token = line;
 							bw.write(token);

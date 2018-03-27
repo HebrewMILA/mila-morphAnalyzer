@@ -108,7 +108,7 @@ public class ExistentialLexiconType extends Content implements lexicon.jaxb.Exis
 		sql += ", pgn='" + getPgn() + "'";
 		sql += ", definiteness='" + getDefiniteness() + "'";
 		sql += " WHERE id=" + getID();
-		int feedback = execute(sql);
+		execute(sql);
 		return 1;
 	}
 

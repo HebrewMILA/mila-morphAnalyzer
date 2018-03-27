@@ -15,6 +15,7 @@ import mila.dataStructures.InflectedRecordNum;
 import mila.lexicon.dbUtils.PrefixRecord;
 import mila.lexicon.utils.Translate;
 import static mila.lexicon.analyse.Constants.*;
+
 /**
  * @author daliabo
  * 
@@ -74,7 +75,7 @@ public class TextOutput {
 
 	static public void buildXMLOutput(final DBInflectionsRecord input_inflectionRecDB,
 			final InflectedRecordNum inflectionRecNum, final CreateCorpusXML createXML, final String hebWord)
-					throws Exception {
+			throws Exception {
 		DBInflectionsRecord inflectionRecDB = input_inflectionRecDB;
 		boolean webFlag = Data.webFlag;
 		String transliteratedLexiconItem = "";
@@ -87,7 +88,6 @@ public class TextOutput {
 			transliteratedLexiconItem = inflectionRecDB.getBaseTransliteratedLItem();
 
 		String lexiconPointer = inflectionRecDB.getBaseLexiconPointer();
-		
 
 		String register = inflectionRecDB.getRegister();
 		String spelling = inflectionRecDB.getSpelling();
@@ -260,9 +260,9 @@ public class TextOutput {
 				PGN = Num2Str.strNum2StrPGN(PGN, lexiconItem, hebWord);
 			}
 
-			createXML.createPronounAnalysis(description, suffixFunctioni, hAttributei, baseGender, baseNumber,
-					basePerson, type, hAttribute, transliteratedLexiconItem, lexiconItem, lexiconPointer, hebWord,
-					register, spelling, dottedLexiconItem, PGN);
+			createXML.createPronounAnalysis(description, suffixFunctioni, hAttributei, baseGender, baseNumber, basePerson,
+					type, hAttribute, transliteratedLexiconItem, lexiconItem, lexiconPointer, hebWord, register, spelling,
+					dottedLexiconItem, PGN);
 			break;
 		case PROPERNAME:
 			baseGender = inflectionRecDB.getBaseGender();
@@ -331,8 +331,8 @@ public class TextOutput {
 			hAttributei = inflectionRecNum.getHAttribute();
 			hAttribute = setHAttribute(pr, hAttributei);
 
-			createXML.createNegationAnalysis(description, transliteratedLexiconItem, lexiconItem, lexiconPointer,
-					hebWord, register, spelling, dottedLexiconItem, hAttribute);
+			createXML.createNegationAnalysis(description, transliteratedLexiconItem, lexiconItem, lexiconPointer, hebWord,
+					register, spelling, dottedLexiconItem, hAttribute);
 			break;
 		case PARTICIPLE:
 			baseGender = inflectionRecDB.getBaseGender();
@@ -367,8 +367,8 @@ public class TextOutput {
 
 			expansion = URLDecoder.decode(expansion, "UTF-8");
 			createXML.createParticipleAnalysis(description, suffixFunctioni, constructi, hAttributei, baseGender,
-					baseNumber, construct, basePerson, transliteratedLexiconItem, lexiconItem, lexiconPointer, root,
-					binyan, hAttribute, hebWord, register, spelling, dottedLexiconItem, PGN, type, expansion);
+					baseNumber, construct, basePerson, transliteratedLexiconItem, lexiconItem, lexiconPointer, root, binyan,
+					hAttribute, hebWord, register, spelling, dottedLexiconItem, PGN, type, expansion);
 			break;
 		case PASSIVEPARTICIPLE:
 			baseGender = inflectionRecDB.getBaseGender();
@@ -395,8 +395,8 @@ public class TextOutput {
 			}
 
 			createXML.createPassiveParticipleAnalysis(description, constructi, hAttributei, baseGender, baseNumber,
-					construct, basePerson, transliteratedLexiconItem, lexiconItem, lexiconPointer, root, binyan,
-					hAttribute, hebWord, register, spelling, dottedLexiconItem, type);
+					construct, basePerson, transliteratedLexiconItem, lexiconItem, lexiconPointer, root, binyan, hAttribute,
+					hebWord, register, spelling, dottedLexiconItem, type);
 			break;
 		case WPREFIX:
 			hAttributei = inflectionRecNum.getHAttribute();
@@ -438,9 +438,9 @@ public class TextOutput {
 
 			}
 
-			createXML.createNumeralAnalysis(description, suffixFunctioni, hAttributei, constructi, baseGender,
-					baseNumber, construct, value, transliteratedLexiconItem, lexiconItem, lexiconPointer, hAttribute,
-					type, hebWord, register, spelling, dottedLexiconItem, PGN);
+			createXML.createNumeralAnalysis(description, suffixFunctioni, hAttributei, constructi, baseGender, baseNumber,
+					construct, value, transliteratedLexiconItem, lexiconItem, lexiconPointer, hAttribute, type, hebWord,
+					register, spelling, dottedLexiconItem, PGN);
 			break;
 		case EXISTENTIAL:
 			baseGender = inflectionRecDB.getBaseGender();
@@ -465,8 +465,8 @@ public class TextOutput {
 			}
 
 			createXML.createExistentialAnalysis(description, suffixFunctioni, baseGender, baseNumber,
-					transliteratedLexiconItem, lexiconItem, lexiconPointer, root, polarity, tense, hAttribute,
-					basePerson, hebWord, register, spelling, dottedLexiconItem, PGN);
+					transliteratedLexiconItem, lexiconItem, lexiconPointer, root, polarity, tense, hAttribute, basePerson,
+					hebWord, register, spelling, dottedLexiconItem, PGN);
 			break;
 		// case IMPERSONAL:
 		//
@@ -493,8 +493,8 @@ public class TextOutput {
 			}
 
 			createXML.createModalAnalysis(description, baseGender, baseNumber, basePerson, tense,
-					transliteratedLexiconItem, lexiconItem, lexiconPointer, hebWord, register, spelling,
-					dottedLexiconItem, hAttributei);
+					transliteratedLexiconItem, lexiconItem, lexiconPointer, hebWord, register, spelling, dottedLexiconItem,
+					hAttributei);
 			break;
 		case COPULA:
 			baseGender = inflectionRecDB.getBaseGender();
@@ -539,8 +539,7 @@ public class TextOutput {
 			}
 
 			createXML.createTitleAnalysis(description, baseGender, baseNumber, hAttribute, expansion,
-					transliteratedLexiconItem, lexiconItem, lexiconPointer, hebWord, register, spelling,
-					dottedLexiconItem);
+					transliteratedLexiconItem, lexiconItem, lexiconPointer, hebWord, register, spelling, dottedLexiconItem);
 			break;
 
 		}
@@ -548,7 +547,7 @@ public class TextOutput {
 
 	static public void buildXMLPrefixOutput(final PrefixRecord pr, DBInflectionsRecord inflectionRecDB,
 			InflectedRecordNum inflectionRecNum, final CreateCorpusXML createXML, final String baseHebWord)
-					throws Exception {
+			throws Exception {
 		ENUM_OUTPUT_PATTERN outputPatterni = inflectionRecNum.getOutputPattern();
 		ENUM_HATTRIBUTE hAttributei = inflectionRecNum.getHAttribute();
 
@@ -571,7 +570,8 @@ public class TextOutput {
 			if (pr == null) {
 				description = "definiteArticle";
 				// hAttribute = "true";
-				// �� ������ �������� �� ���� ���
+				// �� ������ �������� �� ����
+				// ���
 			} else if (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE) {
 				description = pr.getDescription();
 				// hAttribute = "true";
@@ -581,7 +581,8 @@ public class TextOutput {
 				description = pr.getDescription();
 				definiteArticleTag = pr.isDefiniteArticleTag();
 				if (definiteArticleTag)
-					return; // ����� �� ������� ��"� - ��� �� ����� ���� 2
+					return; // ����� �� ������� ��"� - ��� ��
+								// ����� ���� 2
 				// ������� - ����� ��� �����
 				else
 					hAttribute = "false";
@@ -652,8 +653,7 @@ public class TextOutput {
 				}
 
 				createXML.createQuantifierAnalysis(description, suffixFunctioni, transliteratedLexiconItem, lexiconItem,
-						lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem, PGN, construct, hAttribute,
-						type);
+						lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem, PGN, construct, hAttribute, type);
 				break;
 			case INTERJECTION:
 				PGN = inflectionRecDB.getPGN();
@@ -661,8 +661,8 @@ public class TextOutput {
 					PGN = Num2Str.strNum2StrPGN(PGN, lexiconItem, baseHebWord);
 				}
 
-				createXML.createInterjectionAnalysis(description, suffixFunctioni, transliteratedLexiconItem,
-						lexiconItem, lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem, PGN);
+				createXML.createInterjectionAnalysis(description, suffixFunctioni, transliteratedLexiconItem, lexiconItem,
+						lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem, PGN);
 				break;
 			case INTERROGATIVE:
 				PGN = inflectionRecDB.getPGN();
@@ -673,8 +673,8 @@ public class TextOutput {
 					PGN = Num2Str.strNum2StrPGN(PGN, lexiconItem, baseHebWord);
 				}
 
-				createXML.createInterrogativeAnalysis(description, transliteratedLexiconItem, lexiconItem,
-						lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem, PGN, suffixFunctioni, type);
+				createXML.createInterrogativeAnalysis(description, transliteratedLexiconItem, lexiconItem, lexiconPointer,
+						baseHebWord, register, spelling, dottedLexiconItem, PGN, suffixFunctioni, type);
 				break;
 			case CONJUNCTION:
 				type = inflectionRecDB.getType();
@@ -687,8 +687,8 @@ public class TextOutput {
 				}
 				expansion = URLDecoder.decode(expansion, "UTF-8");
 
-				createXML.createConjunctionAnalysis(description, expansion, type, transliteratedLexiconItem,
-						lexiconItem, lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem);
+				createXML.createConjunctionAnalysis(description, expansion, type, transliteratedLexiconItem, lexiconItem,
+						lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem);
 				break;
 			case ADVERB:
 				PGN = inflectionRecDB.getPGN();
@@ -741,8 +741,8 @@ public class TextOutput {
 				expansion = URLDecoder.decode(expansion, "UTF-8");
 
 				createXML.createAdjectiveAnalysis(description, foreign, expansion, baseGender, baseNumber, construct,
-						transliteratedLexiconItem, lexiconItem, lexiconPointer, hAttribute, baseHebWord, register,
-						spelling, dottedLexiconItem);
+						transliteratedLexiconItem, lexiconItem, lexiconPointer, hAttribute, baseHebWord, register, spelling,
+						dottedLexiconItem);
 				break;
 			case NOUN:
 				foreign = inflectionRecDB.getForeign();
@@ -794,8 +794,8 @@ public class TextOutput {
 				}
 
 				createXML.createPronounAnalysis(description, suffixFunctioni, hAttributei, baseGender, baseNumber,
-						basePerson, type, hAttribute, transliteratedLexiconItem, lexiconItem, lexiconPointer,
-						baseHebWord, register, spelling, dottedLexiconItem, PGN);
+						basePerson, type, hAttribute, transliteratedLexiconItem, lexiconItem, lexiconPointer, baseHebWord,
+						register, spelling, dottedLexiconItem, PGN);
 				break;
 			case PROPERNAME:
 				baseGender = inflectionRecDB.getBaseGender();
@@ -819,8 +819,8 @@ public class TextOutput {
 				expansion = URLDecoder.decode(expansion, "UTF-8");
 
 				createXML.createProperNameAnalysis(description, baseGender, baseNumber, type, expansion,
-						transliteratedLexiconItem, lexiconItem, lexiconPointer, hAttribute, baseHebWord, register,
-						spelling, dottedLexiconItem);
+						transliteratedLexiconItem, lexiconItem, lexiconPointer, hAttribute, baseHebWord, register, spelling,
+						dottedLexiconItem);
 				break;
 			case INDEPENDENTINFINITIVE:
 			case VERB:
@@ -848,9 +848,9 @@ public class TextOutput {
 				}
 
 				expansion = URLDecoder.decode(expansion, "UTF-8");
-				createXML.createVerbAnalysis(description, suffixFunctioni, binyan, baseGender, baseNumber, basePerson,
-						root, tense, transliteratedLexiconItem, lexiconItem, lexiconPointer, baseHebWord, register,
-						spelling, dottedLexiconItem, PGN, expansion);
+				createXML.createVerbAnalysis(description, suffixFunctioni, binyan, baseGender, baseNumber, basePerson, root,
+						tense, transliteratedLexiconItem, lexiconItem, lexiconPointer, baseHebWord, register, spelling,
+						dottedLexiconItem, PGN, expansion);
 
 				break;
 
@@ -933,9 +933,8 @@ public class TextOutput {
 					baseNumber = Num2Str.strNum2StrNumber(baseNumber, lexiconItem, baseHebWord);
 				}
 
-				createXML.createWprefixAnalysis(baseGender, baseNumber, description, transliteratedLexiconItem,
-						lexiconItem, lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem, hAttribute,
-						polarity);
+				createXML.createWprefixAnalysis(baseGender, baseNumber, description, transliteratedLexiconItem, lexiconItem,
+						lexiconPointer, baseHebWord, register, spelling, dottedLexiconItem, hAttribute, polarity);
 				break;
 			case NUMERAL:
 				baseGender = inflectionRecDB.getBaseGender();
@@ -959,8 +958,8 @@ public class TextOutput {
 				}
 
 				createXML.createNumeralAnalysis(description, suffixFunctioni, hAttributei, constructi, baseGender,
-						baseNumber, construct, value, transliteratedLexiconItem, lexiconItem, lexiconPointer,
-						hAttribute, type, baseHebWord, register, spelling, dottedLexiconItem, PGN);
+						baseNumber, construct, value, transliteratedLexiconItem, lexiconItem, lexiconPointer, hAttribute,
+						type, baseHebWord, register, spelling, dottedLexiconItem, PGN);
 				break;
 			case EXISTENTIAL:
 				baseGender = inflectionRecDB.getBaseGender();
@@ -984,8 +983,8 @@ public class TextOutput {
 				}
 
 				createXML.createExistentialAnalysis(description, suffixFunctioni, baseGender, baseNumber,
-						transliteratedLexiconItem, lexiconItem, lexiconPointer, root, polarity, tense, hAttribute,
-						basePerson, baseHebWord, register, spelling, dottedLexiconItem, PGN);
+						transliteratedLexiconItem, lexiconItem, lexiconPointer, root, polarity, tense, hAttribute, basePerson,
+						baseHebWord, register, spelling, dottedLexiconItem, PGN);
 				break;
 			// case IMPERSONAL:
 			//
@@ -1030,9 +1029,9 @@ public class TextOutput {
 					PGN = Num2Str.strNum2StrPGN(PGN, lexiconItem, baseHebWord);
 				}
 
-				createXML.createCopulaAnalysis(description, suffixFunctioni, baseGender, baseNumber, basePerson,
-						polarity, tense, transliteratedLexiconItem, lexiconItem, register, spelling, lexiconPointer,
-						baseHebWord, dottedLexiconItem, PGN);
+				createXML.createCopulaAnalysis(description, suffixFunctioni, baseGender, baseNumber, basePerson, polarity,
+						tense, transliteratedLexiconItem, lexiconItem, register, spelling, lexiconPointer, baseHebWord,
+						dottedLexiconItem, PGN);
 				break;
 			case TITLE:
 				baseGender = inflectionRecDB.getBaseGender();
@@ -1071,7 +1070,8 @@ public class TextOutput {
 		if (base.charAt(0) == 'w' && base.charAt(1) == 'w') {
 			inflectionsRecDB.setSpelling("standard");
 			inflectionsRecNum.setSpelling(1);
-			// ����� ��"� ������ ��� �� ������ �
+			// ����� ��"� ������ ��� ��
+			// ������ �
 		} else if (base.charAt(0) == 'w' && !prefix.endsWith("w")) {
 			inflectionsRecDB.setSpelling("irregular");
 			inflectionsRecNum.setSpelling(2);

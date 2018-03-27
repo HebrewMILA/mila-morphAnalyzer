@@ -87,7 +87,7 @@ public class ClientWorker implements Runnable {
 			// int tokensNumber = tokenizer.tokenizeAndAnalyze(in,pw,analyzer);
 			// // pw -> sw -> result
 			tokenizer.tokenizeAndAnalyze(in, pw); // MWXMLTokenizer version
-													// insted of the line above
+			// insted of the line above
 
 			// System.out.println("************************************************************");
 			// System.out.println("tokensNum \t tokenization&analysing \t
@@ -119,8 +119,8 @@ public class ClientWorker implements Runnable {
 			StringWriter ppSW = new StringWriter();
 			PrintWriter ppPW = new PrintWriter(ppSW);
 			PostProcessor1 p = new PostProcessor1(true); // true uses the data
-															// files and not the
-															// mysql server
+			// files and not the
+			// mysql server
 			p.process(myin, ppPW);
 			String postProcessorResult = ppSW.toString();
 			postProcessorResult = postProcessorResult.trim();
@@ -166,15 +166,15 @@ public class ClientWorker implements Runnable {
 			// String taggerFormat = mm.myMorp2Tagger(result,
 			// tempDirectoryPath); // convert to TAGGER format
 			String taggerFormat = mm.myMorp2Tagger(postProcessorResult, tempDirectoryPath); // convert
-																							// to
-																							// TAGGER
-																							// format
-																							// NEW
-																							// with
-																							// post
-																							// processor
-																							// 27.7.11
-																							// -yossi
+			// to
+			// TAGGER
+			// format
+			// NEW
+			// with
+			// post
+			// processor
+			// 27.7.11
+			// -yossi
 			String taggerInputFile = tempDirectoryPath + taggerFormat;
 
 			// Added by Gennadi 03/11/2008
@@ -217,9 +217,9 @@ public class ClientWorker implements Runnable {
 
 				// System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+ command);
 				Process process = Runtime.getRuntime().exec(command); // run
-																		// tagger
-																		// using
-																		// pearl
+				// tagger
+				// using
+				// pearl
 				process.waitFor();
 
 				// endHMMTagger = System.currentTimeMillis();

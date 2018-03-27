@@ -12,6 +12,7 @@ import java.util.List;
 
 import lexicon.contents.Content;
 import lexicon.contents.exception_types.AcronymExceptionType;
+import lexicon.jaxb.impl.AcronymExceptionTypeImpl;
 
 /**
  * @author daliabo
@@ -127,12 +128,12 @@ public class AcronymLexiconType extends Content implements lexicon.jaxb.AcronymL
 		}
 		sql += ", meaning='" + meaning + "'";
 		sql += " WHERE id=" + getID();
-		int feedback = execute(sql);
+		execute(sql);
 		return 1;
 	}
 
 	public void load() {
-		List actions = getActions();
+		List<AcronymExceptionTypeImpl> actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
 		setPos(getString("pos"));
@@ -163,7 +164,7 @@ public class AcronymLexiconType extends Content implements lexicon.jaxb.AcronymL
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			AcronymExceptionType exceptionType = new AcronymExceptionType(
-					(lexicon.jaxb.impl.AcronymExceptionTypeImpl) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
@@ -174,7 +175,7 @@ public class AcronymLexiconType extends Content implements lexicon.jaxb.AcronymL
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			AcronymExceptionType exceptionType = new AcronymExceptionType(
-					(lexicon.jaxb.impl.AcronymExceptionTypeImpl) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
@@ -199,9 +200,9 @@ public class AcronymLexiconType extends Content implements lexicon.jaxb.AcronymL
 		return "";
 	}
 
-	public java.util.List getActions() {
+	public java.util.List<AcronymExceptionTypeImpl> getActions() {
 		List actions = getContents("acronym_exception_type", "id", id);
-		ArrayList result = new ArrayList();
+		ArrayList<AcronymExceptionTypeImpl> result = new ArrayList<AcronymExceptionTypeImpl>();
 		for (int i = 0; i < actions.size(); i++) {
 			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
@@ -489,7 +490,7 @@ public class AcronymLexiconType extends Content implements lexicon.jaxb.AcronymL
 		content.setAdjectiveLexicalLink(value);
 	}
 
-	public java.util.List getAddOrReplaceOrRemove() {
+	public java.util.List<AcronymExceptionTypeImpl> getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}
 

@@ -8,14 +8,11 @@
 package lexicon.generate;
 
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import lexicon.contents.Connected;
 import lexicon.contents.exception_types.MultiWordFrozenExceptionType;
 import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
 
 /**
  * @author daliabo

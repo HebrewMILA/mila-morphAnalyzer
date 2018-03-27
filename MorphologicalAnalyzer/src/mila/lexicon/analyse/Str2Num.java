@@ -5,7 +5,9 @@
  * Window - Preferences - Java - Code Style - Code Templates
  */
 package mila.lexicon.analyse;
+
 import static mila.lexicon.analyse.Constants.*;
+
 /**
  * 
  * Str2Num.java Purpose: utility class for translating Strings to numbers - used
@@ -119,8 +121,8 @@ public class Str2Num {
 	}
 
 	/**
-	 * This method is used to translate baseNameEntityType (types of properName)
-	 * to codes
+	 * This method is used to translate baseNameEntityType (types of properName) to
+	 * codes
 	 * 
 	 * @param baseNamedEntityType
 	 * @param lexiconItem
@@ -201,8 +203,8 @@ public class Str2Num {
 				else if (binyan.charAt(2) == 't')
 					binyani = ENUM_BINYAN.HITPAEL;
 				else {
-					throw new Exception("Str2Num:str2NumBinyan illegal value for binyan =" + binyan
-							+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
+					throw new Exception("Str2Num:str2NumBinyan illegal value for binyan =" + binyan + " for lexiconItem: "
+							+ lexiconItem + " for input token: " + word);
 				}
 				break;
 			case 'N':
@@ -216,8 +218,8 @@ public class Str2Num {
 				else if (binyan.charAt(1) == 'u')
 					binyani = ENUM_BINYAN.PUAL;
 				else {
-					throw new Exception("Str2Num:str2NumBinyan illegal value for binyan =" + binyan
-							+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
+					throw new Exception("Str2Num:str2NumBinyan illegal value for binyan =" + binyan + " for lexiconItem: "
+							+ lexiconItem + " for input token: " + word);
 				}
 				break;
 			case '-':
@@ -314,8 +316,8 @@ public class Str2Num {
 	 * @return
 	 * @throws Exception
 	 */
-	public static ENUM_HATTRIBUTE str2NumHAttribute(final String hAttribute, final String lexiconItem,
-			final String word) throws Exception {
+	public static ENUM_HATTRIBUTE str2NumHAttribute(final String hAttribute, final String lexiconItem, final String word)
+			throws Exception {
 		ENUM_HATTRIBUTE hAttributei = null;
 		if (hAttribute != null && hAttribute.length() > 0) {
 			char hAttributeStartChar = hAttribute.charAt(0);
@@ -645,7 +647,7 @@ public class Str2Num {
 	 * This methods is used to translate output patters strings to codes
 	 * 
 	 * @param outputPattern
-	 *            - used when building the XML output
+	 *           - used when building the XML output
 	 * @param lexiconItem
 	 * @param word
 	 * @return
@@ -761,7 +763,7 @@ public class Str2Num {
 	 * This method is used for translating the part of speech values to codes
 	 * 
 	 * @param pos
-	 *            - part of speech
+	 *           - part of speech
 	 * @param lexiconItem
 	 * @param word
 	 * @return
@@ -776,13 +778,11 @@ public class Str2Num {
 			posStartChar = Character.toLowerCase(posStartChar);
 
 			/*
-			 * char pos_charAt_1 = 'o'; char pos_charAt_2 = 'v'; char
-			 * pos_charAt_3 = 'e'; char pos_charAt_5 = 'j'; if (pos.length() >
-			 * 1) { pos_charAt_1 = Character.toLowerCase(pos.charAt(1)); if
-			 * (pos.length() > 2) { pos_charAt_2 =
-			 * Character.toLowerCase(pos.charAt(2)); if (pos.length() > 3) {
-			 * pos_charAt_3 = Character.toLowerCase(pos.charAt(3)); if
-			 * (pos.length() > 5) { pos_charAt_5 =
+			 * char pos_charAt_1 = 'o'; char pos_charAt_2 = 'v'; char pos_charAt_3 = 'e';
+			 * char pos_charAt_5 = 'j'; if (pos.length() > 1) { pos_charAt_1 =
+			 * Character.toLowerCase(pos.charAt(1)); if (pos.length() > 2) { pos_charAt_2 =
+			 * Character.toLowerCase(pos.charAt(2)); if (pos.length() > 3) { pos_charAt_3 =
+			 * Character.toLowerCase(pos.charAt(3)); if (pos.length() > 5) { pos_charAt_5 =
 			 * Character.toLowerCase(pos.charAt(5)); } } } } /*** UPDATE END
 			 */
 			switch (posStartChar) {
@@ -882,8 +882,8 @@ public class Str2Num {
 				posi = ENUM_POS.ZEVEL;
 				break;
 			default:
-				throw new Exception("Str2Num:str2NumPos illegal value for pos =" + pos + " for lexiconItem: "
-						+ lexiconItem + " for input token: " + word);
+				throw new Exception("Str2Num:str2NumPos illegal value for pos =" + pos + " for lexiconItem: " + lexiconItem
+						+ " for input token: " + word);
 
 			}
 		}
@@ -919,8 +919,8 @@ public class Str2Num {
 				registeri = ENUM_REGISTER.UNSPECIFIED;
 				break;
 			default:
-				throw new Exception("Str2Num:str2NumRegister illegal value for register =" + register
-						+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
+				throw new Exception("Str2Num:str2NumRegister illegal value for register =" + register + " for lexiconItem: "
+						+ lexiconItem + " for input token: " + word);
 			}
 		}
 		return registeri;
@@ -951,8 +951,8 @@ public class Str2Num {
 				spellingi = ENUM_SPELLING.UNSPECIFIED;
 				break;
 			default:
-				throw new Exception("Str2Num:str2NumSpelling illegal value for spelling =" + spelling
-						+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
+				throw new Exception("Str2Num:str2NumSpelling illegal value for spelling =" + spelling + " for lexiconItem: "
+						+ lexiconItem + " for input token: " + word);
 			}
 		}
 		return spellingi;
@@ -1116,8 +1116,8 @@ public class Str2Num {
 				suffixFunctioni = ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_UNSPECIFIED;
 				break;
 			default:
-				throw new Exception("Str2Num:str2NumSuffixFunction illegal value " + "for suffixFunction ="
-						+ suffixFunction + " for lexiconItem: " + lexiconItem + " for input token: " + word);
+				throw new Exception("Str2Num:str2NumSuffixFunction illegal value " + "for suffixFunction =" + suffixFunction
+						+ " for lexiconItem: " + lexiconItem + " for input token: " + word);
 			}
 		}
 		return suffixFunctioni;

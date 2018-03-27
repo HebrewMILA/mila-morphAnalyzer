@@ -7,10 +7,7 @@
 package lexicon.contents.exception_types;
 
 import java.net.URLEncoder;
-import java.util.List;
-
 import lexicon.contents.Content;
-import lexicon.jaxb.impl.WprefixExceptionTypeImpl;
 import lexicon.tools.LexiconUtils;
 
 /**
@@ -80,8 +77,7 @@ public class WprefixExceptionType extends Content implements lexicon.jaxb.Wprefi
 		sql += ", '" + getGender() + "'";
 		sql += ", '" + getNumber() + "'";
 		sql += ", '" + getAction() + "')";
-		// System.out.println("sql=" + sql);
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

@@ -30,8 +30,8 @@ import lexicon.stringUtils.Translate;
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class GenerateGerund extends ConnectedGenerator {
 
@@ -72,8 +72,7 @@ public class GenerateGerund extends ConnectedGenerator {
 
 	protected void inputFileHandling() {
 		try {
-			bi = new BufferedReader(new InputStreamReader(new FileInputStream(
-					inputFile), "UTF8"));
+			bi = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile), "UTF8"));
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -105,9 +104,8 @@ public class GenerateGerund extends ConnectedGenerator {
 
 	public String bgdkft(String inputStr) {
 		String outputStr = inputStr;
-		if (inputStr.charAt(0) == 'á' || inputStr.charAt(0) == 'â'
-				|| inputStr.charAt(0) == 'ã' || inputStr.charAt(0) == 'ë'
-				|| inputStr.charAt(0) == 'ô' || inputStr.charAt(0) == 'ú') {
+		if (inputStr.charAt(0) == 'á' || inputStr.charAt(0) == 'â' || inputStr.charAt(0) == 'ã'
+				|| inputStr.charAt(0) == 'ë' || inputStr.charAt(0) == 'ô' || inputStr.charAt(0) == 'ú') {
 			outputStr = inputStr.charAt(0) + "Ì" + inputStr.substring(1);
 		}
 		return outputStr;
@@ -117,9 +115,8 @@ public class GenerateGerund extends ConnectedGenerator {
 		String outputStr = inputStr;
 		int indexd = dotted.indexOf('ù');
 		if (indexd != -1) {
-			outputStr = inputStr.replaceAll("ù", dotted.substring(indexd,
-					indexd + 2));
-			//System.out.println(outputStr);
+			outputStr = inputStr.replaceAll("ù", dotted.substring(indexd, indexd + 2));
+			// System.out.println(outputStr);
 		}
 
 		return outputStr;
@@ -148,30 +145,20 @@ public class GenerateGerund extends ConnectedGenerator {
 					root = URLDecoder.decode(root, "UTF-8");
 					String transliteratedRoot = Translate.Heb2Eng(root);
 					if (transliteratedRoot.charAt(2) != 'h') {
-						if (transliteratedRoot.charAt(1) == 'w'
-								&& surface.length() == 2) {
-							gerund = transliteratedRoot.charAt(0) + "i"
-									+ transliteratedRoot.charAt(2) + "h";
-						} else if (transliteratedRoot.charAt(1) == 'w'
-								&& surface.length() == 4) {
-							gerund = transliteratedRoot.substring(0, 2) + "wi"
-									+ transliteratedRoot.substring(2) + "h";
+						if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 2) {
+							gerund = transliteratedRoot.charAt(0) + "i" + transliteratedRoot.charAt(2) + "h";
+						} else if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 4) {
+							gerund = transliteratedRoot.substring(0, 2) + "wi" + transliteratedRoot.substring(2) + "h";
 						} else
-							gerund = transliteratedRoot.substring(0, 2) + "i"
-									+ transliteratedRoot.substring(2) + "h";
+							gerund = transliteratedRoot.substring(0, 2) + "i" + transliteratedRoot.substring(2) + "h";
 
 					} else {
-						if (transliteratedRoot.charAt(1) == 'w'
-								&& surface.length() == 2) {
-							gerund = transliteratedRoot.charAt(0) + "i"
-									+ transliteratedRoot.charAt(2) + "h";
-						} else if (transliteratedRoot.charAt(1) == 'w'
-								&& surface.length() == 4) {
-							gerund = transliteratedRoot.substring(0, 2)
-									+ "wiih";
+						if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 2) {
+							gerund = transliteratedRoot.charAt(0) + "i" + transliteratedRoot.charAt(2) + "h";
+						} else if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 4) {
+							gerund = transliteratedRoot.substring(0, 2) + "wiih";
 						} else
-							gerund = transliteratedRoot.substring(0, 2) + "ii"
-									+ "h";
+							gerund = transliteratedRoot.substring(0, 2) + "ii" + "h";
 					}
 
 					String hebGerund = Translate.Eng2Heb(gerund);
@@ -182,33 +169,23 @@ public class GenerateGerund extends ConnectedGenerator {
 						case 'h':
 						case 'x':
 						case 'y':
-							if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 2) {
-								gerundNikud = hebGerund.charAt(0) + "Äé"
-										+ hebGerund.charAt(2) + "Èä";
+							if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 2) {
+								gerundNikud = hebGerund.charAt(0) + "Äé" + hebGerund.charAt(2) + "Èä";
 
-							} else if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 4) {
-								gerundNikud = hebGerund.charAt(0) + "Â"
-										+ hebGerund.charAt(1) + "Ä" + "é"
+							} else if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 4) {
+								gerundNikud = hebGerund.charAt(0) + "Â" + hebGerund.charAt(1) + "Ä" + "é"
 										+ hebGerund.substring(4, 5) + "Èä";
 							} else
-								gerundNikud = hebGerund.charAt(0) + "Â"
-										+ hebGerund.charAt(1) + "Ä" + "éÌÈä";
+								gerundNikud = hebGerund.charAt(0) + "Â" + hebGerund.charAt(1) + "Ä" + "éÌÈä";
 							break;
 						default:
-							if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 2) {
-								gerundNikud = hebGerund.charAt(0) + "Äé"
-										+ hebGerund.charAt(2) + "Èä";
+							if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 2) {
+								gerundNikud = hebGerund.charAt(0) + "Äé" + hebGerund.charAt(2) + "Èä";
 
-							} else if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 4) {
-								gerundNikud = hebGerund.charAt(0) + "À"
-										+ hebGerund.charAt(1) + "Ä" + "éÌÈä";
+							} else if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 4) {
+								gerundNikud = hebGerund.charAt(0) + "À" + hebGerund.charAt(1) + "Ä" + "éÌÈä";
 							} else
-								gerundNikud = hebGerund.charAt(0) + "À"
-										+ hebGerund.charAt(1) + "Ä" + "éÌÈä";
+								gerundNikud = hebGerund.charAt(0) + "À" + hebGerund.charAt(1) + "Ä" + "éÌÈä";
 							break;
 						}
 						break;
@@ -218,34 +195,24 @@ public class GenerateGerund extends ConnectedGenerator {
 						case 'h':
 						case 'x':
 						case 'y':
-							if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 2) {
-								gerundNikud = hebGerund.charAt(0) + "Äé"
-										+ hebGerund.charAt(2) + "Èä";
-							} else if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 4) {
-								gerundNikud = hebGerund.charAt(0) + "Â"
-										+ hebGerund.charAt(1) + "Ä" + "é"
+							if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 2) {
+								gerundNikud = hebGerund.charAt(0) + "Äé" + hebGerund.charAt(2) + "Èä";
+							} else if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 4) {
+								gerundNikud = hebGerund.charAt(0) + "Â" + hebGerund.charAt(1) + "Ä" + "é"
 										+ hebGerund.substring(4, 5) + "Èä";
 							} else
-								gerundNikud = hebGerund.charAt(0) + "Â"
-										+ hebGerund.charAt(1) + "Ä" + "é"
+								gerundNikud = hebGerund.charAt(0) + "Â" + hebGerund.charAt(1) + "Ä" + "é"
 										+ hebGerund.substring(3, 4) + "Èä";
 							break;
 
 						default:
-							if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 2) {
-								gerundNikud = hebGerund.charAt(0) + "Äé"
-										+ hebGerund.charAt(2) + "Èä";
-							} else if (transliteratedRoot.charAt(1) == 'w'
-									&& surface.length() == 4) {
-								gerundNikud = hebGerund.charAt(0) + "À"
-										+ hebGerund.charAt(1) + "Ä" + "é"
+							if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 2) {
+								gerundNikud = hebGerund.charAt(0) + "Äé" + hebGerund.charAt(2) + "Èä";
+							} else if (transliteratedRoot.charAt(1) == 'w' && surface.length() == 4) {
+								gerundNikud = hebGerund.charAt(0) + "À" + hebGerund.charAt(1) + "Ä" + "é"
 										+ hebGerund.substring(4, 5) + "Èä";
 							} else
-								gerundNikud = hebGerund.charAt(0) + "À"
-										+ hebGerund.charAt(1) + "Ä" + "é"
+								gerundNikud = hebGerund.charAt(0) + "À" + hebGerund.charAt(1) + "Ä" + "é"
 										+ hebGerund.substring(3, 4) + "Èä";
 							break;
 						}
@@ -254,19 +221,18 @@ public class GenerateGerund extends ConnectedGenerator {
 
 					gerundNikud = handleShin(gerundNikud, dotted);
 					gerundNikud = bgdkft(gerundNikud);
-					String encodedGerund = URLEncoder.encode(gerundNikud,
-							"UTF-8");
+					URLEncoder.encode(gerundNikud, "UTF-8");
 
 					pGerunds.print(id);
 					pGerunds.print(" 	" + surface);
 					pGerunds.print(" 	" + root);
 					pGerunds.print(" 	" + gerund);
 					pGerunds.print(" 	" + gerundNikud);
-					//pGerunds.print(" " + encodedGerund);
+					// pGerunds.print(" " + encodedGerund);
 					pGerunds.print(" 	" + hebGerund);
-					//pGerunds.println();
-					//findInNounTable(encodedGerund, gerund, id);
-					//findInExceptionNounTable(encodedGerund, gerund);
+					// pGerunds.println();
+					// findInNounTable(encodedGerund, gerund, id);
+					// findInExceptionNounTable(encodedGerund, gerund);
 				}
 				releaseConnection();
 			} catch (SQLException e1) {
@@ -290,8 +256,7 @@ public class GenerateGerund extends ConnectedGenerator {
 
 	}
 
-	public void findInNounTable(String encodedGerundNikudStr,
-			String transliteratedGerund, String id)
+	public void findInNounTable(String encodedGerundNikudStr, String transliteratedGerund, String id)
 			throws FileNotFoundException {
 		ResultSet rs = null;
 		boolean found = false;
@@ -299,33 +264,33 @@ public class GenerateGerund extends ConnectedGenerator {
 		String transliterated = "";
 		String dottedId = "";
 		String undottedId = "";
-		java.util.Date rightNow = new java.util.Date();
+		new java.util.Date();
 		try {
 			rs = null;
-			sql = "select transliterated,id from item where pos='noun' and dotted='"
-					+ encodedGerundNikudStr + "' and deleted=0";
+			sql = "select transliterated,id from item where pos='noun' and dotted='" + encodedGerundNikudStr
+					+ "' and deleted=0";
 			rs = getData(sql);
 			while (rs.next()) {
 				transliterated = rs.getString("transliterated");
-				String surface = Translate.Eng2Heb(transliterated);
+				Translate.Eng2Heb(transliterated);
 				dottedId = rs.getString("id");
 				pGerunds.print("	" + dottedId);
 				found = true;
 			}
 			releaseConnection();
-			//if the form with nikud was not found perhaps there is an entry
+			// if the form with nikud was not found perhaps there is an entry
 			// without nikud
-			//so we only need to update the dotted field and not create a new
+			// so we only need to update the dotted field and not create a new
 			// entry in the noun table
-			//if (!found) {
+			// if (!found) {
 			rs = null;
-			sql = "select transliterated,id from item where pos='noun' and transliterated='"
-					+ transliteratedGerund + "' and deleted=0";
+			sql = "select transliterated,id from item where pos='noun' and transliterated='" + transliteratedGerund
+					+ "' and deleted=0";
 			rs = getData(sql);
 			while (rs.next()) {
 				undottedId = rs.getString("id");
 				pGerunds.print("	|" + undottedId);
-				//if (dottedId.equals(undottedId)){
+				// if (dottedId.equals(undottedId)){
 				if (found) {
 					pUpdateGerunds.print(id);
 					pUpdateGerunds.print(" " + dottedId);
@@ -333,12 +298,12 @@ public class GenerateGerund extends ConnectedGenerator {
 					found = false;
 				}
 			}
-			//}
-			//found = false;
+			// }
+			// found = false;
 			pGerunds.println();
 			releaseConnection();
 			rs.close();
-			//updateNounTable();
+			// updateNounTable();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -347,8 +312,8 @@ public class GenerateGerund extends ConnectedGenerator {
 	}
 
 	public void updateNounTable() throws IOException {
-		BufferedReader bi = new BufferedReader(new InputStreamReader(
-				new FileInputStream(dir + "PielGerundVerbListUpdate.txt")));
+		BufferedReader bi = new BufferedReader(
+				new InputStreamReader(new FileInputStream(dir + "PielGerundVerbListUpdate.txt")));
 		String line = "";
 		String id = "";
 		String dottedId = "";
@@ -360,12 +325,10 @@ public class GenerateGerund extends ConnectedGenerator {
 				System.out.println("id =" + id);
 				dottedId = st.nextToken();
 				System.out.println("dottedId =" + dottedId);
-				String sqlUpdate = "update noun set lexicalLink='" + id
-						+ "'where id='" + dottedId + "'";
+				String sqlUpdate = "update noun set lexicalLink='" + id + "'where id='" + dottedId + "'";
 				System.out.println("sqlUpdate =" + sqlUpdate);
 				execute(sqlUpdate);
-				Log log = new Log(1000005, Integer.parseInt(dottedId), 0,
-						"Auto update lexicalLink");
+				Log log = new Log(1000005, Integer.parseInt(dottedId), 0, "Auto update lexicalLink");
 				log.add();
 			}
 
@@ -393,8 +356,7 @@ public class GenerateGerund extends ConnectedGenerator {
 				dotted = URLDecoder.decode(dotted, "UTF-8");
 				root = URLDecoder.decode(root, "UTF-8");
 				String transliteratedRoot = Translate.Heb2Eng(root);
-				if (transliteratedRoot.charAt(2) == 'h'
-						|| transliteratedRoot.charAt(2) == 'i') {
+				if (transliteratedRoot.charAt(2) == 'h' || transliteratedRoot.charAt(2) == 'i') {
 					gerund = "hi" + transliteratedRoot.substring(0, 2) + "wt";
 				} else
 					gerund = "hi" + transliteratedRoot + "wt";
@@ -411,14 +373,12 @@ public class GenerateGerund extends ConnectedGenerator {
 					case 'h':
 					case 'x':
 					case 'y':
-						gerundNikud = "äÅ" + hebGerund.charAt(2) + "È"
-								+ hebGerund.charAt(3) + "Â"
-								+ hebGerund.charAt(4) + "åÌú";
+						gerundNikud = "äÅ" + hebGerund.charAt(2) + "È" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4)
+								+ "åÌú";
 						break;
 					default:
-						gerundNikud = "äÅ" + hebGerund.charAt(2) + "È"
-								+ hebGerund.charAt(3) + "À"
-								+ hebGerund.charAt(4) + "åÌú";
+						gerundNikud = "äÅ" + hebGerund.charAt(2) + "È" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4)
+								+ "åÌú";
 
 						break;
 					}
@@ -429,23 +389,18 @@ public class GenerateGerund extends ConnectedGenerator {
 					case 'h':
 					case 'x':
 					case 'y':
-						gerundNikud = "äÄ" + hebGerund.charAt(2) + "ÈÌ"
-								+ hebGerund.charAt(3) + "Â"
-								+ hebGerund.charAt(4) + "åÌú";
+						gerundNikud = "äÄ" + hebGerund.charAt(2) + "ÈÌ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4)
+								+ "åÌú";
 						break;
 					default:
-						gerundNikud = "äÄ" + hebGerund.charAt(2) + "ÈÌ"
-								+ hebGerund.charAt(3) + "À"
-								+ hebGerund.charAt(4) + "åÌú";
+						gerundNikud = "äÄ" + hebGerund.charAt(2) + "ÈÌ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4)
+								+ "åÌú";
 						break;
 					}
 				}
 
-				if (transliteratedRoot.charAt(2) == 'h'
-						|| transliteratedRoot.charAt(2) == 'i') {
-					gerundNikud = gerundNikud.substring(0,
-							gerundNikud.length() - 5)
-							+ "åÌú";
+				if (transliteratedRoot.charAt(2) == 'h' || transliteratedRoot.charAt(2) == 'i') {
+					gerundNikud = gerundNikud.substring(0, gerundNikud.length() - 5) + "åÌú";
 				}
 
 				gerundNikud = handleShin(gerundNikud, dotted);
@@ -458,7 +413,7 @@ public class GenerateGerund extends ConnectedGenerator {
 				pGerunds.print(" 	" + gerundNikud);
 				pGerunds.print(" 	" + encodedGerund);
 				pGerunds.print(" 	" + hebGerund);
-				//pGerunds.println();
+				// pGerunds.println();
 				findInNounTable(encodedGerund, gerund, id);
 				findInExceptionNounTable(encodedGerund, gerund);
 			}
@@ -503,11 +458,9 @@ public class GenerateGerund extends ConnectedGenerator {
 				root = URLDecoder.decode(root, "UTF-8");
 				String transliteratedRoot = Translate.Heb2Eng(root);
 				if (transliteratedRoot.charAt(2) == 'h') {
-					gerund = transliteratedRoot.charAt(0) + "i"
-							+ transliteratedRoot.charAt(1) + "w" + "i";
+					gerund = transliteratedRoot.charAt(0) + "i" + transliteratedRoot.charAt(1) + "w" + "i";
 				} else
-					gerund = transliteratedRoot.charAt(0) + "i"
-							+ transliteratedRoot.charAt(1) + "w"
+					gerund = transliteratedRoot.charAt(0) + "i" + transliteratedRoot.charAt(1) + "w"
 							+ transliteratedRoot.substring(2);
 				String hebGerund = Translate.Eng2Heb(gerund);
 				switch (transliteratedRoot.charAt(2)) {
@@ -516,22 +469,16 @@ public class GenerateGerund extends ConnectedGenerator {
 					switch (transliteratedRoot.charAt(1)) {
 					case 'a':
 					case 'r':
-						gerundNikud = hebGerund.charAt(0) + "Å"
-								+ hebGerund.charAt(1) + "åÌ"
-								+ hebGerund.charAt(3) + "Ç";
+						gerundNikud = hebGerund.charAt(0) + "Å" + hebGerund.charAt(1) + "åÌ" + hebGerund.charAt(3) + "Ç";
 						break;
 					case 'h':
 					case 'x':
 					case 'y':
-						gerundNikud = hebGerund.charAt(0) + "Ä"
-								+ hebGerund.charAt(1) + "åÌ"
-								+ hebGerund.charAt(3) + "Ç";
+						gerundNikud = hebGerund.charAt(0) + "Ä" + hebGerund.charAt(1) + "åÌ" + hebGerund.charAt(3) + "Ç";
 						break;
 
 					default:
-						gerundNikud = hebGerund.charAt(0) + "Ä"
-								+ hebGerund.charAt(1) + "ÌåÌ"
-								+ hebGerund.charAt(3) + "Ç";
+						gerundNikud = hebGerund.charAt(0) + "Ä" + hebGerund.charAt(1) + "ÌåÌ" + hebGerund.charAt(3) + "Ç";
 						break;
 					}
 					break;
@@ -539,43 +486,32 @@ public class GenerateGerund extends ConnectedGenerator {
 					switch (transliteratedRoot.charAt(1)) {
 					case 'a':
 					case 'r':
-						gerundNikud = hebGerund.charAt(0) + "Å"
-								+ hebGerund.charAt(1) + "åÌ"
-								+ hebGerund.charAt(3);
+						gerundNikud = hebGerund.charAt(0) + "Å" + hebGerund.charAt(1) + "åÌ" + hebGerund.charAt(3);
 						break;
 					case 'h':
 					case 'x':
 					case 'y':
-						gerundNikud = hebGerund.charAt(0) + "Ä"
-								+ hebGerund.charAt(1) + "åÌ"
-								+ hebGerund.charAt(3);
+						gerundNikud = hebGerund.charAt(0) + "Ä" + hebGerund.charAt(1) + "åÌ" + hebGerund.charAt(3);
 						break;
 					default:
-						gerundNikud = hebGerund.charAt(0) + "Ä"
-								+ hebGerund.charAt(1) + "ÌåÌ"
-								+ hebGerund.charAt(3);
+						gerundNikud = hebGerund.charAt(0) + "Ä" + hebGerund.charAt(1) + "ÌåÌ" + hebGerund.charAt(3);
 						break;
 					}
 
 				}
 
 				if (transliteratedRoot.charAt(2) == 'h') {
-					gerundNikud = gerundNikud.substring(0,
-							gerundNikud.length() - 1)
-							+ "é";
+					gerundNikud = gerundNikud.substring(0, gerundNikud.length() - 1) + "é";
 				}
 
 				int indexd1 = dotted.indexOf('ù');
-				int indexd2 = gerundNikud.indexOf('ù');
+				gerundNikud.indexOf('ù');
 				if (indexd1 != -1) {
 					if (dotted.indexOf('Ì') == indexd1 + 1) {
-						gerundNikud = gerundNikud.replaceAll("ù", dotted
-								.substring(indexd1, indexd1 + 3));
-						gerundNikud = gerundNikud.substring(0, indexd1 + 3)
-								+ gerundNikud.substring(indexd1 + 4);
+						gerundNikud = gerundNikud.replaceAll("ù", dotted.substring(indexd1, indexd1 + 3));
+						gerundNikud = gerundNikud.substring(0, indexd1 + 3) + gerundNikud.substring(indexd1 + 4);
 					} else
-						gerundNikud = gerundNikud.replaceAll("ù", dotted
-								.substring(indexd1, indexd1 + 2));
+						gerundNikud = gerundNikud.replaceAll("ù", dotted.substring(indexd1, indexd1 + 2));
 				}
 				String encodedGerund = URLEncoder.encode(gerundNikud, "UTF-8");
 
@@ -612,7 +548,6 @@ public class GenerateGerund extends ConnectedGenerator {
 		ResultSet rs = null;
 		String gerundNikud = "";
 		String gerund = "";
-		int index;
 		int rootLen;
 		pGerunds.println("Hitpael");
 		pGerunds.println("**********************************");
@@ -631,81 +566,69 @@ public class GenerateGerund extends ConnectedGenerator {
 				root = URLDecoder.decode(root, "UTF-8");
 				String transliteratedRoot = Translate.Heb2Eng(root);
 				rootLen = transliteratedRoot.length();
-				int inflectionPattren = Integer.valueOf(
-						rs.getString("inflectionPattern")).intValue();
+				int inflectionPattren = Integer.valueOf(rs.getString("inflectionPattern")).intValue();
 				if (inflectionPattren <= 47) {
 					if (transliterated.endsWith("wh"))
-						gerund = transliterated.substring(0, transliterated
-								.length() - 2)
-								+ "wt";
+						gerund = transliterated.substring(0, transliterated.length() - 2) + "wt";
 					else if (transliterated.endsWith("h") && rootLen == 3)
-						gerund = transliterated.substring(0, transliterated
-								.length() - 1)
-								+ "wt";
+						gerund = transliterated.substring(0, transliterated.length() - 1) + "wt";
 					else
 						gerund = transliterated + "wt";
 				} else {
 					if (transliteratedRoot.charAt(1) == transliteratedRoot.charAt(2))
-						gerund = "hi"
-							+ transliteratedRoot +  "wt";
+						gerund = "hi" + transliteratedRoot + "wt";
 					else if (transliterated.startsWith("nw"))
-						gerund = "hiw"
-								+ transliterated.substring(1) + "wt";
+						gerund = "hiw" + transliterated.substring(1) + "wt";
 					else if (transliterated.startsWith("ni"))
-						gerund = "hin"
-								+ transliterated.substring(2) + "wt";
+						gerund = "hin" + transliterated.substring(2) + "wt";
 					else if (transliterated.endsWith("wh"))
-						gerund = "hi"
-								+ transliterated.substring(1, transliterated
-										.length() - 1) + "t";
+						gerund = "hi" + transliterated.substring(1, transliterated.length() - 1) + "t";
 					else if (transliterated.endsWith("h"))
-						gerund = "hi"
-								+ transliterated.substring(1, transliterated
-										.length() - 1) + "wt";
+						gerund = "hi" + transliterated.substring(1, transliterated.length() - 1) + "wt";
 					else
 						gerund = "hi" + transliterated.substring(1) + "wt";
 				}
-				//				switch (transliteratedRoot.charAt(0)) {
-				//				case 'z':
-				//					gerund = "hzd" + transliteratedRoot.substring(1) + "wt";
-				//					break;
-				//				case 's':
-				//					gerund = "hst" + transliteratedRoot.substring(1) + "wt";
-				//					break;
-				//				case 'e':
-				//					gerund = "het" + transliteratedRoot.substring(1) + "wt";
-				//					break;
-				//				case 'c':
-				//					gerund = "hcv" + transliteratedRoot.substring(1) + "wt";
-				//					break;
-				//				default:
-				//					if (transliteratedRoot.charAt(2) == 'h')
-				//						gerund = "ht" + transliteratedRoot.substring(0, 2)
-				//								+ "wt";
-				//					else if (transliteratedRoot.charAt(1) == transliteratedRoot
-				//							.charAt(2))
-				//						gerund = "ht" + transliteratedRoot.charAt(0) + "w"
-				//								+ transliteratedRoot.substring(1) + "wt";
-				//					else if (transliteratedRoot.charAt(1) == 'w' &&
+				// switch (transliteratedRoot.charAt(0)) {
+				// case 'z':
+				// gerund = "hzd" + transliteratedRoot.substring(1) + "wt";
+				// break;
+				// case 's':
+				// gerund = "hst" + transliteratedRoot.substring(1) + "wt";
+				// break;
+				// case 'e':
+				// gerund = "het" + transliteratedRoot.substring(1) + "wt";
+				// break;
+				// case 'c':
+				// gerund = "hcv" + transliteratedRoot.substring(1) + "wt";
+				// break;
+				// default:
+				// if (transliteratedRoot.charAt(2) == 'h')
+				// gerund = "ht" + transliteratedRoot.substring(0, 2)
+				// + "wt";
+				// else if (transliteratedRoot.charAt(1) == transliteratedRoot
+				// .charAt(2))
+				// gerund = "ht" + transliteratedRoot.charAt(0) + "w"
+				// + transliteratedRoot.substring(1) + "wt";
+				// else if (transliteratedRoot.charAt(1) == 'w' &&
 				// transliteratedRoot.length()==4)
-				//						gerund = "ht" + transliteratedRoot.charAt(0) + "w"
-				//								+ transliteratedRoot.substring(1, 2) + "wt";
-				//					else if (transliteratedRoot.charAt(1) == 'w' && rootLen==3)
-				//						gerund = "ht" + transliteratedRoot +
+				// gerund = "ht" + transliteratedRoot.charAt(0) + "w"
+				// + transliteratedRoot.substring(1, 2) + "wt";
+				// else if (transliteratedRoot.charAt(1) == 'w' && rootLen==3)
+				// gerund = "ht" + transliteratedRoot +
 				// transliteratedRoot.charAt(2)+ "wt";
-				//					else if ((index = transliteratedRoot.indexOf("i")) !=-1)
-				//						gerund = "ht" + transliteratedRoot.substring(index) + "i"
-				//								+ transliteratedRoot.substring(index) + "wt";
-				//					else
-				//						gerund = "ht" + transliteratedRoot + "wt";
-				//					break;
-				//				}
+				// else if ((index = transliteratedRoot.indexOf("i")) !=-1)
+				// gerund = "ht" + transliteratedRoot.substring(index) + "i"
+				// + transliteratedRoot.substring(index) + "wt";
+				// else
+				// gerund = "ht" + transliteratedRoot + "wt";
+				// break;
+				// }
 
 				String hebGerund = Translate.Eng2Heb(gerund);
 
 				if (rootLen == 3) {
 
-					//ò äôåòì âøåğéú
+					// ò äôåòì âøåğéú
 					switch (transliteratedRoot.charAt(1)) {
 					case 'a':
 					case 'h':
@@ -713,34 +636,28 @@ public class GenerateGerund extends ConnectedGenerator {
 					case 'y':
 						switch (transliteratedRoot.charAt(0)) {
 						case 'z':
-							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 's':
-							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'e':
-							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'c':
-							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'a':
 						case 'h':
 						case 'x':
 						case 'r':
 						case 'y':
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç"
-									+ hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4)
+									+ "åÌú";
 							break;
 						default:
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ"
-									+ hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4)
+									+ "åÌú";
 
 							break;
 						}
@@ -750,23 +667,19 @@ public class GenerateGerund extends ConnectedGenerator {
 					case 'd':
 					case 'k':
 					case 'p':
-					case 't': //ò äôåòì áâãëôú
+					case 't': // ò äôåòì áâãëôú
 						switch (transliteratedRoot.charAt(0)) {
 						case 'z':
-							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3)
-									+ "ÌÀ" + hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "ÌÀ" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 's':
-							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3)
-									+ "ÌÀ" + hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "ÌÀ" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'e':
-							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3)
-									+ "ÌÀ" + hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "ÌÀ" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'c':
-							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "ÌÀ"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "ÌÀ" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'a':
 						case 'h':
@@ -774,43 +687,33 @@ public class GenerateGerund extends ConnectedGenerator {
 						case 'r':
 						case 'y':
 							if (transliteratedRoot.charAt(2) == 'h')
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "Ç" + hebGerund.charAt(3) + "Ì"
-										+ "åÌú";
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç" + hebGerund.charAt(3) + "Ì" + "åÌú";
 							else
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "Ç" + hebGerund.charAt(3) + "ÌÀ"
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç" + hebGerund.charAt(3) + "ÌÀ"
 										+ hebGerund.charAt(4) + "åÌú";
 							break;
 						default:
 							if (transliteratedRoot.charAt(2) == 'h')
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "ÌÇ" + hebGerund.charAt(3) + "Ì "
-										+ "åÌú";
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "Ì " + "åÌú";
 							else
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "ÌÇ" + hebGerund.charAt(3) + "ÌÀ"
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "ÌÀ"
 										+ hebGerund.charAt(4) + "åÌú";
 							break;
 						}
 						break;
-					default: //  ò äôåòì ìà âøåğéú åìà áâãëôú
+					default: // ò äôåòì ìà âøåğéú åìà áâãëôú
 						switch (transliteratedRoot.charAt(0)) {
 						case 'z':
-							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 's':
-							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'e':
-							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'c':
-							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "åÌú";
+							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "åÌú";
 							break;
 						case 'a':
 						case 'h':
@@ -818,29 +721,23 @@ public class GenerateGerund extends ConnectedGenerator {
 						case 'r':
 						case 'y':
 							if (transliteratedRoot.charAt(2) == 'h')
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "Ç" + hebGerund.charAt(3) + "Ì"
-										+ "åÌú";
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç" + hebGerund.charAt(3) + "Ì" + "åÌú";
 							else
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "Ç" + hebGerund.charAt(3) + "À"
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç" + hebGerund.charAt(3) + "À"
 										+ hebGerund.charAt(4) + "åÌú";
 							break;
 
 						default:
 							if (transliteratedRoot.charAt(2) == 'h')
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "ÌÇ" + hebGerund.charAt(3) + "Ì"
-										+ "åÌú";
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "Ì" + "åÌú";
 							else
-								gerundNikud = "äÄúÀ" + hebGerund.charAt(2)
-										+ "ÌÇ" + hebGerund.charAt(3) + "À"
+								gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "À"
 										+ hebGerund.charAt(4) + "åÌú";
 							break;
 						}
 					}
 
-					//ROOT LEN = 4
+					// ROOT LEN = 4
 				} else {
 					switch (transliteratedRoot.charAt(1)) {
 					case 'a':
@@ -849,23 +746,19 @@ public class GenerateGerund extends ConnectedGenerator {
 					case 'y':
 						switch (transliteratedRoot.charAt(0)) {
 						case 'z':
-							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 's':
-							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 'e':
-							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 'c':
-							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 'a':
@@ -873,16 +766,12 @@ public class GenerateGerund extends ConnectedGenerator {
 						case 'x':
 						case 'r':
 						case 'y':
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç"
-									+ hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "À"
-									+ hebGerund.charAt(5) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4)
+									+ "À" + hebGerund.charAt(5) + "åÌú";
 							break;
 						default:
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ"
-									+ hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "À"
-									+ hebGerund.charAt(5) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4)
+									+ "À" + hebGerund.charAt(5) + "åÌú";
 
 							break;
 						}
@@ -893,10 +782,8 @@ public class GenerateGerund extends ConnectedGenerator {
 						case 'k':
 						case 'p':
 						case 't':
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ"
-									+ hebGerund.charAt(3) + "Â"
-									+ hebGerund.charAt(4) + "ÌÀ"
-									+ hebGerund.charAt(5) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "Â" + hebGerund.charAt(4)
+									+ "ÌÀ" + hebGerund.charAt(5) + "åÌú";
 
 							break;
 						}
@@ -904,23 +791,19 @@ public class GenerateGerund extends ConnectedGenerator {
 					default:
 						switch (transliteratedRoot.charAt(0)) {
 						case 'z':
-							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄæÀãÇÌ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 's':
-							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄñÀúÌÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 'e':
-							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄùÀúÌÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 'c':
-							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "À"
+							gerundNikud = "äÄöÀèÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4) + "À"
 									+ hebGerund.charAt(5) + "åÌú";
 							break;
 						case 'b':
@@ -929,26 +812,20 @@ public class GenerateGerund extends ConnectedGenerator {
 						case 'k':
 						case 'p':
 						case 't':
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ"
-									+ hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "ÌÀ"
-									+ hebGerund.charAt(5) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4)
+									+ "ÌÀ" + hebGerund.charAt(5) + "åÌú";
 							break;
 						case 'a':
 						case 'h':
 						case 'x':
 						case 'r':
 						case 'y':
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç"
-									+ hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "À"
-									+ hebGerund.charAt(5) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "Ç" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4)
+									+ "À" + hebGerund.charAt(5) + "åÌú";
 							break;
 						default:
-							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ"
-									+ hebGerund.charAt(3) + "À"
-									+ hebGerund.charAt(4) + "À"
-									+ hebGerund.charAt(5) + "åÌú";
+							gerundNikud = "äÄúÀ" + hebGerund.charAt(2) + "ÌÇ" + hebGerund.charAt(3) + "À" + hebGerund.charAt(4)
+									+ "À" + hebGerund.charAt(5) + "åÌú";
 
 							break;
 						}
@@ -959,15 +836,12 @@ public class GenerateGerund extends ConnectedGenerator {
 				int indexd2 = gerundNikud.indexOf('ù');
 				if (indexd1 != -1) {
 					if (dotted.indexOf('Ì') == indexd1 + 1) {
-						gerundNikud = gerundNikud.replaceAll("ù", dotted
-								.substring(indexd1, indexd1 + 3));
-						gerundNikud = gerundNikud.substring(0, indexd2 + 1)
-								+ gerundNikud.substring(indexd2 + 2);
+						gerundNikud = gerundNikud.replaceAll("ù", dotted.substring(indexd1, indexd1 + 3));
+						gerundNikud = gerundNikud.substring(0, indexd2 + 1) + gerundNikud.substring(indexd2 + 2);
 					} else
-						gerundNikud = gerundNikud.replaceAll("ù", dotted
-								.substring(indexd1, indexd1 + 2));
+						gerundNikud = gerundNikud.replaceAll("ù", dotted.substring(indexd1, indexd1 + 2));
 				}
-				String encodedGerund = URLEncoder.encode(gerundNikud, "UTF-8");
+				URLEncoder.encode(gerundNikud, "UTF-8");
 
 				pGerunds.print(root);
 				pGerunds.print(" 	" + id);
@@ -975,63 +849,63 @@ public class GenerateGerund extends ConnectedGenerator {
 				pGerunds.print(" 	" + transliterated);
 				pGerunds.print(" 	" + gerund);
 				pGerunds.print(" 	" + gerundNikud);
-				//pGerunds.print(" " + encodedGerund);
+				// pGerunds.print(" " + encodedGerund);
 				pGerunds.print(" 	" + hebGerund);
 				pGerunds.println();
 				///////////////////////////////////////////////////////////////
-				//More inflection
+				// More inflection
 				///////////////////////////////////////////////////////////////
-				//				switch (transliteratedRoot.charAt(0)) {
-				//				case 'd':
-				//				case 'v':
-				//				case 't':
-				//					gerund = transliterated.charAt(0,index) +
+				// switch (transliteratedRoot.charAt(0)) {
+				// case 'd':
+				// case 'v':
+				// case 't':
+				// gerund = transliterated.charAt(0,index) +
 				// transliterated.substring(2) + "wt";
-				//					hebGerund = Translate.Eng2Heb(gerund);
+				// hebGerund = Translate.Eng2Heb(gerund);
 				//
-				//					switch (transliteratedRoot.charAt(1)) {
-				//					case 'a':
-				//					case 'h':
-				//					case 'x':
-				//					case 'y':
-				//						gerundNikud = "äÄ" + hebGerund.charAt(1) + "ÌÇ"
-				//								+ hebGerund.charAt(2) + "Â"
-				//								+ hebGerund.charAt(3) + "åÌú";
-				//						break;
-				//					default:
-				//						gerundNikud = "äÄ" + gerundNikud.substring(4);
-				//						break;
-				//					}
-				//				}
+				// switch (transliteratedRoot.charAt(1)) {
+				// case 'a':
+				// case 'h':
+				// case 'x':
+				// case 'y':
+				// gerundNikud = "äÄ" + hebGerund.charAt(1) + "ÌÇ"
+				// + hebGerund.charAt(2) + "Â"
+				// + hebGerund.charAt(3) + "åÌú";
+				// break;
+				// default:
+				// gerundNikud = "äÄ" + gerundNikud.substring(4);
+				// break;
+				// }
+				// }
 				//
-				//				if (transliteratedRoot.charAt(0) == 'd'
-				//						|| transliteratedRoot.charAt(0) == 'v'
-				//						|| transliteratedRoot.charAt(0) == 't') {
-				//					// indexd1 = dotted.indexOf('ù');
-				//					// indexd2 = gerundNikud.indexOf('ù');
-				//					// if (indexd1 != -1) {
-				//					// if (dotted.indexOf('Ì') == indexd1 + 1) {
-				//					// gerundNikud = gerundNikud.replaceAll("ù", dotted
-				//					// .substring(indexd1, indexd1 + 3));
-				//					// gerundNikud = gerundNikud.substring(0, indexd1 + 3)
-				//					// + gerundNikud.substring(indexd1 + 4);
-				//					// } else
-				//					// gerundNikud = gerundNikud.replaceAll("ù", dotted
-				//					// .substring(indexd1, indexd1 + 2));
-				//					// }
-				//					// encodedGerund = URLEncoder.encode(gerundNikud, "UTF-8");
+				// if (transliteratedRoot.charAt(0) == 'd'
+				// || transliteratedRoot.charAt(0) == 'v'
+				// || transliteratedRoot.charAt(0) == 't') {
+				// // indexd1 = dotted.indexOf('ù');
+				// // indexd2 = gerundNikud.indexOf('ù');
+				// // if (indexd1 != -1) {
+				// // if (dotted.indexOf('Ì') == indexd1 + 1) {
+				// // gerundNikud = gerundNikud.replaceAll("ù", dotted
+				// // .substring(indexd1, indexd1 + 3));
+				// // gerundNikud = gerundNikud.substring(0, indexd1 + 3)
+				// // + gerundNikud.substring(indexd1 + 4);
+				// // } else
+				// // gerundNikud = gerundNikud.replaceAll("ù", dotted
+				// // .substring(indexd1, indexd1 + 2));
+				// // }
+				// // encodedGerund = URLEncoder.encode(gerundNikud, "UTF-8");
 				//
-				//					pGerunds.print(root);
-				//					pGerunds.print(" " + id);
-				//					pGerunds.print(" " + surface);
-				//					pGerunds.print(" " + transliterated);
-				//					pGerunds.print(" " + gerundNikud);
-				//					//pGerunds.print(" " + encodedGerund);
-				//					pGerunds.print(" " + hebGerund);
-				//					pGerunds.println();
+				// pGerunds.print(root);
+				// pGerunds.print(" " + id);
+				// pGerunds.print(" " + surface);
+				// pGerunds.print(" " + transliterated);
+				// pGerunds.print(" " + gerundNikud);
+				// //pGerunds.print(" " + encodedGerund);
+				// pGerunds.print(" " + hebGerund);
+				// pGerunds.println();
 				//
-				//					//findInNounTable(encodedGerund, gerund, id);
-				//				}
+				// //findInNounTable(encodedGerund, gerund, id);
+				// }
 			}
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
@@ -1089,43 +963,36 @@ public class GenerateGerund extends ConnectedGenerator {
 
 	}
 
-	public void findInExceptionNounTable(String encodedGerundNikudStr,
-			String transliteratedGerund) {
+	public void findInExceptionNounTable(String encodedGerundNikudStr, String transliteratedGerund) {
 		ResultSet rs = null;
-		boolean found = false;
 		String sql = "";
 		String transliterated = "";
 		try {
 			rs = null;
-			sql = "select transliterated,id from noun_exception_type where dotted='"
-					+ encodedGerundNikudStr + "'";
+			sql = "select transliterated,id from noun_exception_type where dotted='" + encodedGerundNikudStr + "'";
 			rs = getData(sql);
-			//System.out.println("sql="+sql);
+			// System.out.println("sql="+sql);
 			while (rs.next()) {
 				transliterated = rs.getString("transliterated");
-				String surface = Translate.Eng2Heb(transliterated);
+				Translate.Eng2Heb(transliterated);
 				String id = rs.getString("id");
 				pGerunds.print("	$" + id);
-				found = true;
 			}
 			rs.close();
 			releaseConnection();
-			//if the form with nikud was not found perhaps there is an entry
+			// if the form with nikud was not found perhaps there is an entry
 			// without nikud
-			//so we only need to update the dotted field and not create a new
+			// so we only need to update the dotted field and not create a new
 			// entry in the noun table
-			//if (!found) {
+			// if (!found) {
 			rs = null;
-			sql = "select transliterated,id from noun_exception_type  where transliterated='"
-					+ transliteratedGerund + "'";
-			//System.out.println("sql="+sql);
+			sql = "select transliterated,id from noun_exception_type  where transliterated='" + transliteratedGerund + "'";
+			// System.out.println("sql="+sql);
 			rs = getData(sql);
 			while (rs.next()) {
 				String id = rs.getString("id");
 				pGerunds.print("	$|" + id);
 			}
-			//}
-			found = false;
 			pGerunds.println();
 			releaseConnection();
 		} catch (Exception e) {
@@ -1156,31 +1023,30 @@ public class GenerateGerund extends ConnectedGenerator {
 
 	public static void main(String[] args) {
 		GenerateGerund g = new GenerateGerund();
-		//g.generateNounsEndWithTList();
+		// g.generateNounsEndWithTList();
 
-		//			g.pUpdateGerunds = new PrintStream(g.updateGerunds);
+		// g.pUpdateGerunds = new PrintStream(g.updateGerunds);
 
 		try {
-			//g.generateGerundPaal();
-			//g.generateGerundNifal();
-			//g.generateGerundPiel();
-			g.gerunds = new FileOutputStream(g.dir
-					+ "PielGerundVerbListAll.txt");
+			// g.generateGerundPaal();
+			// g.generateGerundNifal();
+			// g.generateGerundPiel();
+			g.gerunds = new FileOutputStream(g.dir + "PielGerundVerbListAll.txt");
 			g.pGerunds = new PrintStream(g.gerunds);
-			//g.generateNounsEndWithTList();
-			//g.updateGerunds = new FileOutputStream(g.dir
-			//		+ "PielGerundVerbListUpdate.txt");
+			// g.generateNounsEndWithTList();
+			// g.updateGerunds = new FileOutputStream(g.dir
+			// + "PielGerundVerbListUpdate.txt");
 			g.generateGerundHitpael();
-			//g.updateNounTable();
-			//g.pUpdateGerunds.close();
-			//g.gerunds.close();
-			//} catch (FileNotFoundException e1) {
+			// g.updateNounTable();
+			// g.pUpdateGerunds.close();
+			// g.gerunds.close();
+			// } catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
-			//	e1.printStackTrace();
+			// e1.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 }

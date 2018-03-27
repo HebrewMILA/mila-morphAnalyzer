@@ -6,7 +6,7 @@ import java.util.Map;
 
 public abstract class ListMap<T> implements java.io.Serializable {
 	private static final long serialVersionUID = 5845745764593500541L;
-	
+
 	private final Map<String, ArrayList<T>> map;
 
 	public ListMap(int initialCapacity) {

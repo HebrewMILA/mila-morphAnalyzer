@@ -80,7 +80,7 @@ public class InflectedRecordNum {
 	public int getId() {
 		return id;
 	}
-	
+
 	public int getAlternateId() {
 		return alternateId;
 	}
@@ -188,7 +188,7 @@ public class InflectedRecordNum {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public void setAlternateId(int alternateId) {
 		this.alternateId = alternateId;
 	}

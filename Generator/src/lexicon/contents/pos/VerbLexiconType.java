@@ -181,7 +181,6 @@ public class VerbLexiconType extends Content implements lexicon.jaxb.VerbLexicon
 		}
 		sql += ", '" + root + "'";
 		String binyan = getBinyan();
-		String temp = binyan;
 		binyan = binyan.replaceAll("'", "\\\\'");
 		sql += ", '" + binyan + "'";
 		sql += ", " + (isForeign() ? 1 : 0);
@@ -243,7 +242,6 @@ public class VerbLexiconType extends Content implements lexicon.jaxb.VerbLexicon
 		}
 		sql += ", root='" + root + "'";
 		String binyan = getBinyan();
-		String temp = binyan;
 		binyan = binyan.replaceAll("'", "\\\\'");
 		sql += ", binyan='" + binyan + "'";
 		sql += ", inflectionPattern='" + getInflectionPattern() + "'";

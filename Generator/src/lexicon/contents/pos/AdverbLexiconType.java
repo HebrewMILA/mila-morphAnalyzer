@@ -11,7 +11,9 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import lexicon.contents.exception_types.AdverbExceptionType;
+import lexicon.jaxb.impl.AdverbExceptionTypeImpl;
 import lexicon.contents.Content;
+import lexicon.contents.EmptyContent;
 
 /**
  * ���� �� ���� ���� ����. �����
@@ -185,7 +187,7 @@ public class AdverbLexiconType extends Content implements lexicon.jaxb.AdverbLex
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			AdverbExceptionType exceptionType = new AdverbExceptionType(
-					(lexicon.jaxb.AdverbExceptionType) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
@@ -196,7 +198,7 @@ public class AdverbLexiconType extends Content implements lexicon.jaxb.AdverbLex
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			AdverbExceptionType exceptionType = new AdverbExceptionType(
-					(lexicon.jaxb.AdverbExceptionType) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
@@ -228,7 +230,7 @@ public class AdverbLexiconType extends Content implements lexicon.jaxb.AdverbLex
 	}
 
 	public void load() {
-		List actions = getActions();
+		List<AdverbExceptionTypeImpl> actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
 		setInterrogative(getInt("interrogative") == 1);
@@ -241,9 +243,9 @@ public class AdverbLexiconType extends Content implements lexicon.jaxb.AdverbLex
 		setInflectionBase(getString("inflectionBase"));
 	}
 
-	public java.util.List getActions() {
-		List actions = getContents("adverb_exception_type", "id", id);
-		ArrayList result = new ArrayList();
+	public java.util.List<AdverbExceptionTypeImpl> getActions() {
+		List<EmptyContent> actions = getContents("adverb_exception_type", "id", id);
+		ArrayList<AdverbExceptionTypeImpl> result = new ArrayList<AdverbExceptionTypeImpl>();
 		for (int i = 0; i < actions.size(); i++) {
 			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
@@ -397,7 +399,7 @@ public class AdverbLexiconType extends Content implements lexicon.jaxb.AdverbLex
 	 * {@link lexicon.jaxb.AdverbLexiconType.Replace}
 	 * 
 	 */
-	public java.util.List getAddOrReplaceOrRemove() {
+	public java.util.List<AdverbExceptionTypeImpl> getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}
 

@@ -17,10 +17,6 @@ public class TransliterationTypeImpl implements lexicon.jaxb.TransliterationType
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.TransliterationType.class);
-    }
-
     protected com.sun.xml.bind.util.ListImpl _getString() {
         if (_String == null) {
             _String = new com.sun.xml.bind.util.ListImpl(new java.util.ArrayList());
@@ -167,10 +163,6 @@ public class TransliterationTypeImpl implements lexicon.jaxb.TransliterationType
         protected java.lang.String _Hebrew;
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.TransliterationType.StringType.class);
-        }
 
         public java.lang.String getLatin() {
             return _Latin;
@@ -369,7 +361,6 @@ public class TransliterationTypeImpl implements lexicon.jaxb.TransliterationType
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -633,7 +624,6 @@ public class TransliterationTypeImpl implements lexicon.jaxb.TransliterationType
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {

@@ -79,7 +79,7 @@ public class AcronymExceptionType extends Content implements lexicon.jaxb.Acrony
 		sql += ", '" + getProperNameType() + "'";
 		sql += ", '" + getConjunctionType() + "'";
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

@@ -62,9 +62,9 @@ public class MWXMLTokenizer extends XMLTokenizer1 {
 		Document document = null;
 		try {
 			bi = new BufferedReader(new InputStreamReader(in, "UTF8")); // read
-																		// into
-																		// buffer
-																		// reader
+			// into
+			// buffer
+			// reader
 			webProcess();
 			xmlTokenizer.finalizeDoc();
 			document = xmlTokenizer.getDocument();

@@ -183,7 +183,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param adverbKAF
-	 *            The adverbKAF to set.
+	 *           The adverbKAF to set.
 	 */
 	public void setAdverbKAF(boolean adverbKAF) {
 		this.adverbKAF = adverbKAF;
@@ -191,7 +191,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param conjunctionTag
-	 *            The conjunctionTag to set.
+	 *           The conjunctionTag to set.
 	 */
 	public void setConjunctionTag(boolean conjunctionTag) {
 		this.conjunctionTag = conjunctionTag;
@@ -199,7 +199,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param defArtHE
-	 *            The defArtHE to set.
+	 *           The defArtHE to set.
 	 */
 	public void setDefArtHE(boolean defArtHE) {
 		this.defArtHE = defArtHE;
@@ -207,7 +207,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param definiteArticleTag
-	 *            The definiteArticleTag to set.
+	 *           The definiteArticleTag to set.
 	 */
 	public void setDefiniteArticleTag(boolean definiteArticleTag) {
 		this.definiteArticleTag = definiteArticleTag;
@@ -215,7 +215,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param description
-	 *            The description to set.
+	 *           The description to set.
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -223,7 +223,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param prefix
-	 *            The prefix to set.
+	 *           The prefix to set.
 	 */
 	public void setPrefix(String prefix) {
 		this.prefix = prefix;
@@ -231,7 +231,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param prefPartUnit
-	 *            The prefPartUnit to set.
+	 *           The prefPartUnit to set.
 	 */
 	public void setPrefPartUnit(boolean prefPartUnit) {
 		this.prefPartUnit = prefPartUnit;
@@ -239,7 +239,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param prepBET
-	 *            The prepBET to set.
+	 *           The prepBET to set.
 	 */
 	public void setPrepBET(boolean prepBET) {
 		this.prepBET = prepBET;
@@ -247,7 +247,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param prepKAF
-	 *            The prepKAF to set.
+	 *           The prepKAF to set.
 	 */
 	public void setPrepKAF(boolean prepKAF) {
 		this.prepKAF = prepKAF;
@@ -255,7 +255,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param prepLAMED
-	 *            The prepLAMED to set.
+	 *           The prepLAMED to set.
 	 */
 	public void setPrepLAMED(boolean prepLAMED) {
 		this.prepLAMED = prepLAMED;
@@ -263,7 +263,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param prepMEM
-	 *            The prepMEM to set.
+	 *           The prepMEM to set.
 	 */
 	public void setPrepMEM(boolean prepMEM) {
 		this.prepMEM = prepMEM;
@@ -271,7 +271,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param prepositionTag
-	 *            The prepositionTag to set.
+	 *           The prepositionTag to set.
 	 */
 	public void setPrepositionTag(boolean prepositionTag) {
 		this.prepositionTag = prepositionTag;
@@ -279,7 +279,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param relativizerTag
-	 *            The relativizerTag to set.
+	 *           The relativizerTag to set.
 	 */
 	public void setRelativizerTag(boolean relativizerTag) {
 		this.relativizerTag = relativizerTag;
@@ -287,7 +287,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param relHE
-	 *            The relHE to set.
+	 *           The relHE to set.
 	 */
 	public void setRelHE(boolean relHE) {
 		this.relHE = relHE;
@@ -295,7 +295,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param subConOrRelSHIN
-	 *            The subConOrRelSHIN to set.
+	 *           The subConOrRelSHIN to set.
 	 */
 	public void setSubConOrRelSHIN(boolean subConOrRelSHIN) {
 		this.subConOrRelSHIN = subConOrRelSHIN;
@@ -303,7 +303,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param subordinatingConjunctionTag
-	 *            The subordinatingConjunctionTag to set.
+	 *           The subordinatingConjunctionTag to set.
 	 */
 	public void setSubordinatingConjunctionTag(boolean subordinatingConjunctionTag) {
 		this.subordinatingConjunctionTag = subordinatingConjunctionTag;
@@ -311,7 +311,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param temporalSubConjTag
-	 *            The temporalSubConjTag to set.
+	 *           The temporalSubConjTag to set.
 	 */
 	public void setTemporalSubConjTag(boolean temporalSubConjTag) {
 		this.temporalSubConjTag = temporalSubConjTag;
@@ -319,7 +319,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param tempSubConBETSHIN
-	 *            The tempSubConBETSHIN to set.
+	 *           The tempSubConBETSHIN to set.
 	 */
 	public void setTempSubConBETSHIN(boolean tempSubConBETSHIN) {
 		this.tempSubConBETSHIN = tempSubConBETSHIN;
@@ -327,7 +327,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param tempSubConKAFSHIN
-	 *            The tempSubConKAFSHIN to set.
+	 *           The tempSubConKAFSHIN to set.
 	 */
 	public void setTempSubConKAFSHIN(boolean tempSubConKAFSHIN) {
 		this.tempSubConKAFSHIN = tempSubConKAFSHIN;
@@ -335,7 +335,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param tempSubConLAMEDKAFSHIN
-	 *            The tempSubConLAMEDKAFSHIN to set.
+	 *           The tempSubConLAMEDKAFSHIN to set.
 	 */
 	public void setTempSubConLAMEDKAFSHIN(boolean tempSubConLAMEDKAFSHIN) {
 		this.tempSubConLAMEDKAFSHIN = tempSubConLAMEDKAFSHIN;
@@ -343,7 +343,7 @@ public class PrefixRecord {
 
 	/**
 	 * @param tempSubConMEMSHIN
-	 *            The tempSubConMEMSHIN to set.
+	 *           The tempSubConMEMSHIN to set.
 	 */
 	public void setTempSubConMEMSHIN(boolean tempSubConMEMSHIN) {
 		this.tempSubConMEMSHIN = tempSubConMEMSHIN;

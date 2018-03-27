@@ -107,7 +107,7 @@ public class VerbExceptionType extends Content implements lexicon.jaxb.VerbExcep
 		sql += ", " + (isBeinoniDefiniteness() ? 1 : 0);
 		sql += ", " + (isInflectBeinoniPossessive() ? 1 : 0);
 		sql += ", '" + getAction() + "')";
-		int feedback = execute(sql);
+		execute(sql);
 		id = getCurrentID(getTableName(), getIDName());
 		return id;
 	}

@@ -16,10 +16,6 @@ public class LexiconImpl
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.Lexicon.class);
-    }
-
     public java.lang.String ____jaxb_ri____getNamespaceURI() {
         return "";
     }
@@ -132,7 +128,6 @@ public class LexiconImpl
         public void enterElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname, org.xml.sax.Attributes __atts)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {
@@ -166,7 +161,6 @@ public class LexiconImpl
         public void leaveElement(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {
@@ -192,7 +186,6 @@ public class LexiconImpl
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {
@@ -211,7 +204,6 @@ public class LexiconImpl
         public void leaveAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {
@@ -230,7 +222,6 @@ public class LexiconImpl
         public void handleText(final java.lang.String value)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 try {

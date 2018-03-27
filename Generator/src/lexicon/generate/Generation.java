@@ -22,10 +22,8 @@ import lexicon.contents.types.ItemType;
 
 public class Generation {
 	// --------------------------------------------------------------------------------------------------------------------------
-	public static Object createObject(Constructor constructor,
-			Object[] arguments) throws IllegalArgumentException,
-			InstantiationException, IllegalAccessException,
-			InvocationTargetException {
+	public static Object createObject(Constructor constructor, Object[] arguments)
+			throws IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException {
 		Object object = null;
 		object = constructor.newInstance(arguments);
 		return object;
@@ -37,21 +35,21 @@ public class Generation {
 		int i;
 		try {
 			EmptyContent eContent = new EmptyContent();
-			List list = eContent.getContents(sql, "id");
+			List<Integer> list = eContent.getContents(sql, "id");
 			int listSize = list.size();
+			//Iterating over all the items we got (depends on the commands obviously).
 			for (i = 0; i < listSize; i++) {
 
 				ItemType item = new ItemType();
-				item.open(((Integer) list.get(i)).intValue());
-				System.out.println(" ---lexicon Item count =" + i + " Item transliterated = "+item.getUndotted()+"----");
+				item.open(list.get(i).intValue());
+				System.out
+						.println(" ---lexicon Item count =" + i + " Item transliterated = " + item.getUndotted() + "----");
 				String pos = item.getPos();
-				
+
 				// Using reflection for avoiding multy dispatch and for generic
 				// considerations
-				StringBuffer className = new StringBuffer()
-						.append("lexicon.generate.")
-						.append(pos.substring(0, 1).toUpperCase())
-						.append(pos.substring(1)).append("Gen");
+				StringBuffer className = new StringBuffer().append("lexicon.generate.")
+						.append(pos.substring(0, 1).toUpperCase()).append(pos.substring(1)).append("Gen");
 
 				ItemGen itemGen;
 				Class genClassDef;
@@ -69,15 +67,17 @@ public class Generation {
 				itemArgsConstructor = genClassDef.getConstructor(itemArgsClass);
 				itemGen = (ItemGen) createObject(itemArgsConstructor, itemArgs);
 				itemGen.inflect();
+				//Finished inflecting one word.
+				
+				//Checking whether the word has an alternate word or not, if yes set base id's of all inflected words to be the id of
+				//the alternate word.
 				String alternateId = item.getAlternateId();
-				if(!alternateId.equals("0")){
+				if (!alternateId.equals("0")) {
 					String oldId = item.getId();
 					item.open(Integer.parseInt(alternateId));
 					itemArgs = new Object[] { item };
 					pos = item.getPos();
-					className = new StringBuffer()
-							.append("lexicon.generate.")
-							.append(pos.substring(0, 1).toUpperCase())
+					className = new StringBuffer().append("lexicon.generate.").append(pos.substring(0, 1).toUpperCase())
 							.append(pos.substring(1)).append("Gen");
 					itemArgs = new Object[] { item };
 					classNameStr = className.toString();
@@ -90,8 +90,7 @@ public class Generation {
 				// }
 			}
 			System.out.println("finished generating");
-			System.out.println(" ---Total lexicon items used for generating ="
-					+ i + "----");
+			System.out.println(" ---Total lexicon items used for generating =" + i + "----");
 		} catch (Exception e) {
 			System.out.println("Exiting with Error: " + e.getMessage());
 			e.printStackTrace();
@@ -108,30 +107,24 @@ public class Generation {
 		switch (args.length) {
 		case 0:
 			System.out.println("Generator: missing command line arguments");
-			System.out
-					.println("Running generator by pos: java -jar generator.jar -pos <pos>");
-			System.out
-					.println("pos={adjective,adverb,conjunction,interjection,interrogative,noun,preposition,pronoun,properName,quantifier,verb,negation}");
-			System.out
-					.println("Running generator by lexicon id: java -id generator.jar -id <id>");
-			System.out
-					.println("Running generator for all lexicon items : java -jar generator.jar all");
+			System.out.println("Running generator by pos: java -jar generator.jar -pos <pos>");
+			System.out.println(
+					"pos={adjective,adverb,conjunction,interjection,interrogative,noun,preposition,pronoun,properName,quantifier,verb,negation}");
+			System.out.println("Running generator by lexicon id: java -id generator.jar -id <id>");
+			System.out.println("Running generator for all lexicon items : java -jar generator.jar all");
 			System.out
 					.println("Running generator for a provided transliterated : java -jar -transliterated <transliterated>");
 			// System.exit(1);
 		case 1:
 			if (param.equals("-help")) {
 				System.out.println("Generator: help");
-				System.out
-						.println("Running generator by POS: java -jar generator.jar -pos <pos>");
-				System.out
-						.println("pos={adjective,adverb,conjunction,interjection,interrogative,noun,preposition,pronoun,properName,quantifier,verb,negation}");
-				System.out
-						.println("Running generator by lexicon id: java -id generator.jar -id <id>");
-				System.out
-						.println("Running generator for all lexicon items : java -jar generator.jar -all");
-				System.out
-						.println("Running generator for a provided transliterated : java -jar -transliterated <transliterated>");
+				System.out.println("Running generator by POS: java -jar generator.jar -pos <pos>");
+				System.out.println(
+						"pos={adjective,adverb,conjunction,interjection,interrogative,noun,preposition,pronoun,properName,quantifier,verb,negation}");
+				System.out.println("Running generator by lexicon id: java -id generator.jar -id <id>");
+				System.out.println("Running generator for all lexicon items : java -jar generator.jar -all");
+				System.out.println(
+						"Running generator for a provided transliterated : java -jar -transliterated <transliterated>");
 				// System.exit(1);
 			} else if (param.equals("-all"))
 				sql = "SELECT id FROM item where deleted = 0";
@@ -139,23 +132,18 @@ public class Generation {
 
 		case 2:
 			if (param.equals("-id"))
-				sql = "SELECT id FROM item where id=" + args[1]
-						+ " and deleted = 0";
+				sql = "SELECT id FROM item where id=" + args[1] + " and deleted = 0";
 			else if (param.equals("-pos"))
-				sql = "SELECT id FROM item where pos='" + args[1]
-						+ "' and deleted = 0";
+				sql = "SELECT id FROM item where pos='" + args[1] + "' and deleted = 0";
 			else if (param.equals("-transliterated"))
-				sql = "SELECT id FROM item where transliterated='" + args[1]
-						+ "' and deleted = 0";
+				sql = "SELECT id FROM item where transliterated='" + args[1] + "' and deleted = 0";
 			else {
-				System.out
-						.println("Wrong/missing command line arguments, run java -jar generator.jar -help");
+				System.out.println("Wrong/missing command line arguments, run java -jar generator.jar -help");
 				// System.exit(1);
 			}
 			break;
 		default:
-			System.out
-					.println("Wrong/missing command line arguments, run java -jar generator.jar -help");
+			System.out.println("Wrong/missing command line arguments, run java -jar generator.jar -help");
 			// System.exit(1);
 			break;
 		}
@@ -163,22 +151,19 @@ public class Generation {
 	}
 
 	// --------------------------------------------------------------------------------------------------------------------------
-	public void generate(String[] args) throws ClassNotFoundException,
-			InvocationTargetException, IllegalAccessException,
+	public void generate(String[] args) throws ClassNotFoundException, InvocationTargetException, IllegalAccessException,
 			InstantiationException, NoSuchMethodException {
 		String sql = commandLineHandling(args);
-		if (sql.isEmpty()){
+		if (sql.isEmpty()) {
 			return;
 		}
 		getItem(sql);
 	}
 
 	// --------------------------------------------------------------------------------------------------------------------------
-	public void testGenerate(String lexiconId) throws ClassNotFoundException,
-			InvocationTargetException, IllegalAccessException,
-			InstantiationException, NoSuchMethodException {
-		String sql = "SELECT id FROM item where id=" + lexiconId
-				+ " and deleted = 0";
+	public void testGenerate(String lexiconId) throws ClassNotFoundException, InvocationTargetException,
+			IllegalAccessException, InstantiationException, NoSuchMethodException {
+		String sql = "SELECT id FROM item where id=" + lexiconId + " and deleted = 0";
 		getItem(sql);
 	}
 

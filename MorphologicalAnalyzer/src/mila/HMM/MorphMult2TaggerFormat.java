@@ -54,7 +54,6 @@ public class MorphMult2TaggerFormat implements Constants {
 	public static void main(String[] args) {
 		String inputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\output1.xml";
 		String outputFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy1.txt";
-		String dprefixesDataFile = "C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\dprefixes.data";
 		// String inputFile = args[0];
 		// String outputFile = args[1];
 		MorphMult2TaggerFormat m = new MorphMult2TaggerFormat();
@@ -69,8 +68,7 @@ public class MorphMult2TaggerFormat implements Constants {
 
 	StringBuffer outputString = new StringBuffer();
 
-	public void handleAdjective(BaseType base, String hebWord,
-			boolean prefixExistFlag) throws IOException {
+	public void handleAdjective(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
 		GenderNumberStatusDefinitenessType adjective = base.getAdjective();
 		ParticipleType participle = base.getParticiple();
 		String definiteness = "";
@@ -85,8 +83,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		if (definiteness != null && definiteness.equals("true")) {
 			if (!prefixExistFlag) {
 				bw.write("\t");
-				outputString.append("\t" + "(ADJECTIVE-DEF " + hebWord + ")"
-						+ "\n");
+				outputString.append("\t" + "(ADJECTIVE-DEF " + hebWord + ")" + "\n");
 			} else
 				outputString.append("(ADJECTIVE-DEF " + hebWord + ")" + "\n");
 			bw.write("(ADJECTIVE-DEF " + hebWord + ")");
@@ -95,20 +92,17 @@ public class MorphMult2TaggerFormat implements Constants {
 		} else if (status != null && status.equals("construct")) {
 			if (!prefixExistFlag) {
 				bw.write("\t");
-				outputString.append("\t" + "(ADJECTIVE-CONST " + hebWord + ")"
-						+ "\n");
+				outputString.append("\t" + "(ADJECTIVE-CONST " + hebWord + ")" + "\n");
 			} else
 				outputString.append("(ADJECTIVE-CONST " + hebWord + ")" + "\n");
 			bw.write("(ADJECTIVE-CONST " + hebWord + ")");
 			bw.newLine();
 
 			// �� ������������ ���� ������ �status=absolute
-		} else if (status != null && status.equals("absolute")
-				|| status.equals("unspecified")) {
+		} else if (status != null && status.equals("absolute") || status.equals("unspecified")) {
 			if (!prefixExistFlag) {
 				bw.write("\t");
-				outputString
-						.append("\t" + "(ADJECTIVE " + hebWord + ")" + "\n");
+				outputString.append("\t" + "(ADJECTIVE " + hebWord + ")" + "\n");
 			} else
 				outputString.append("(ADJECTIVE " + hebWord + ")" + "\n");
 			bw.write("(ADJECTIVE " + hebWord + ")");
@@ -117,12 +111,10 @@ public class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public void handleDefinitedProperName(String hebWord,
-			boolean prefixExistFlag) throws IOException {
+	public void handleDefinitedProperName(String hebWord, boolean prefixExistFlag) throws IOException {
 		if (!prefixExistFlag) {
 			bw.write("\t");
-			outputString.append("\t" + "(PROPERNAME-DEF " + hebWord + ")"
-					+ "\n");
+			outputString.append("\t" + "(PROPERNAME-DEF " + hebWord + ")" + "\n");
 		} else
 			outputString.append("(PROPERNAME-DEF " + hebWord + ")" + "\n");
 
@@ -130,13 +122,11 @@ public class MorphMult2TaggerFormat implements Constants {
 		bw.newLine();
 	}
 
-	public boolean handleHebWordAndPunctuation(String hebWord, List analysisList)
-			throws IOException {
+	public boolean handleHebWordAndPunctuation(String hebWord, List analysisList) throws IOException {
 		boolean punctuation = false;
 		if (analysisList.size() > 0) {
 			AnalysisType analysis = (AnalysisType) analysisList.get(0);
-			if (analysis.getBase() != null
-					&& analysis.getBase().getPunctuation() != null) {
+			if (analysis.getBase() != null && analysis.getBase().getPunctuation() != null) {
 				if (hebWord.length() == 1) {
 					if (hebWord.charAt(0) == '%') {
 						bw.write("O");
@@ -333,8 +323,7 @@ public class MorphMult2TaggerFormat implements Constants {
 						bw.write("\t");
 						bw.write("(yyDASH yyDASH)");
 						bw.newLine();
-						outputString
-								.append(hebWord + "\n\t(yyDDASH yyDDASH)\n");
+						outputString.append(hebWord + "\n\t(yyDDASH yyDDASH)\n");
 						punctuation = true;
 					} else if (hebWord.charAt(0) == '�') {
 						bw.write(hebWord);
@@ -342,8 +331,7 @@ public class MorphMult2TaggerFormat implements Constants {
 						bw.write("\t");
 						bw.write("(yyUDASH yyUDASH)");
 						bw.newLine();
-						outputString
-								.append(hebWord + "\n\t(yyUDASH yyUDASH)\n");
+						outputString.append(hebWord + "\n\t(yyUDASH yyUDASH)\n");
 						punctuation = true;
 					} else if (hebWord.equals("=")) {
 						bw.write(hebWord);
@@ -414,8 +402,8 @@ public class MorphMult2TaggerFormat implements Constants {
 	// return outputFileName;
 	// }
 
-	public void handleNoun(AnalysisType analysis, BaseType base,
-			String hebWord, boolean prefixExistFlag) throws IOException {
+	public void handleNoun(AnalysisType analysis, BaseType base, String hebWord, boolean prefixExistFlag)
+			throws IOException {
 		ParticipleType participle = base.getParticiple();
 		GenderNumberStatusDefinitenessType noun = base.getNoun();
 		String definiteness = "";
@@ -430,12 +418,9 @@ public class MorphMult2TaggerFormat implements Constants {
 		if (analysis.getSuffix() != null) {
 			if (!prefixExistFlag) {
 				bw.write("\t");
-				outputString.append("\t")
-						.append("(NOUN-POSSESSIVE " + hebWord + ")")
-						.append("\n");
+				outputString.append("\t").append("(NOUN-POSSESSIVE " + hebWord + ")").append("\n");
 			} else
-				outputString.append("(NOUN-POSSESSIVE " + hebWord + ")")
-						.append("\n");
+				outputString.append("(NOUN-POSSESSIVE " + hebWord + ")").append("\n");
 			bw.write("(NOUN-POSSESSIVE " + hebWord + ")");
 			bw.newLine();
 
@@ -451,8 +436,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		} else if (status != null && status.equals("construct")) {
 			if (!prefixExistFlag) {
 				bw.write("\t");
-				outputString.append("\t" + "(NOUN-CONST " + hebWord + ")"
-						+ "\n");
+				outputString.append("\t" + "(NOUN-CONST " + hebWord + ")" + "\n");
 			} else
 				outputString.append("(NOUN-CONST " + hebWord + ")" + "\n");
 			bw.write("(NOUN-CONST " + hebWord + ")");
@@ -470,8 +454,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public void handleParticiple(AnalysisType analysis, String hebWord,
-			boolean prefixExistFlag) throws IOException {
+	public void handleParticiple(AnalysisType analysis, String hebWord, boolean prefixExistFlag) throws IOException {
 		BaseType base = analysis.getBase();
 		ParticipleType participle = base.getParticiple();
 		String type = participle.getType();
@@ -491,8 +474,8 @@ public class MorphMult2TaggerFormat implements Constants {
 			} else {
 				String status = base.getParticiple().getStatus();
 				String definiteness = base.getParticiple().getDefiniteness();
-				String gender = base.getParticiple().getGender();
-				String number = base.getParticiple().getNumber();
+				base.getParticiple().getGender();
+				base.getParticiple().getNumber();
 				// type=noun or type=adjective
 				if (status != null && status.equals("construct")) {
 					bw.write("\t");
@@ -552,22 +535,19 @@ public class MorphMult2TaggerFormat implements Constants {
 		return prefixSurfaceSB.toString();
 	}
 
-	public void handlePrefixProperName(String hebWord, boolean prefixExistFlag)
-			throws IOException {
+	public void handlePrefixProperName(String hebWord, boolean prefixExistFlag) throws IOException {
 		outputString.append("(PROPERNAME " + hebWord + ")" + "\n");
 		bw.write("(PROPERNAME " + hebWord + ")");
 		bw.newLine();
 	}
 
-	public void handleProperName(BaseType base, String hebWord,
-			boolean prefixExistFlag) throws IOException {
+	public void handleProperName(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
 		ProperNameType properName = base.getProperName();
 		String definiteness = properName.getDefiniteness();
 		if (definiteness != null && definiteness.equals("true")) {
 			if (!prefixExistFlag) {
 				bw.write("\t");
-				outputString.append("\t" + "(PROPERNAME-DEF " + hebWord + ")"
-						+ "\n");
+				outputString.append("\t" + "(PROPERNAME-DEF " + hebWord + ")" + "\n");
 			} else
 				outputString.append("(PROPERNAME-DEF " + hebWord + ")" + "\n");
 			bw.write("(PROPERNAME-DEF " + hebWord + ")");
@@ -576,8 +556,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		} else {
 			if (!prefixExistFlag) {
 				bw.write("\t");
-				outputString.append("\t" + "(PROPERNAME " + hebWord + ")"
-						+ "\n");
+				outputString.append("\t" + "(PROPERNAME " + hebWord + ")" + "\n");
 			} else
 				outputString.append("(PROPERNAME " + hebWord + ")" + "\n");
 			bw.write("(PROPERNAME " + hebWord + ")");
@@ -586,8 +565,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public void handleSimplePos(BaseType base, String hebWord, String pos,
-			boolean prefixExistFlag) throws IOException {
+	public void handleSimplePos(BaseType base, String hebWord, String pos, boolean prefixExistFlag) throws IOException {
 		if (!prefixExistFlag) {
 			bw.write("\t");
 			outputString.append("\t" + "(" + pos + " " + hebWord + ")" + "\n");
@@ -597,8 +575,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		bw.newLine();
 	}
 
-	public void handleVerb(BaseType base, String hebWord,
-			boolean prefixExistFlag) throws IOException {
+	public void handleVerb(BaseType base, String hebWord, boolean prefixExistFlag) throws IOException {
 		VerbType verb = base.getVerb();
 		String tense = verb.getTense();
 		if (tense != null && tense.equals("infinitive")) {
@@ -622,10 +599,7 @@ public class MorphMult2TaggerFormat implements Constants {
 
 	// This is the function that is actually used in HMM web GUI - the above
 	// function simukates it
-	public String myMorp2Tagger(String inStr, String outputDir)
-			throws JAXBException, IOException {
-		// System.out.println("(F) MorphMult2TaggerFormat.myMorp2Tagger()");
-		String finalOutputString = "";
+	public String myMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
 		InputStream in = null;
 		FileOutputStream out = null;
 		try {
@@ -652,17 +626,12 @@ public class MorphMult2TaggerFormat implements Constants {
 		String outputFileName = "/outputFile" + randomNum + ".nf";
 
 		PerformUniqeOutput p = new PerformUniqeOutput();
-		finalOutputString = p.myUniqueOutput(outputString.toString(), outputDir
-				+ outputFileName);
+		p.myUniqueOutput(outputString.toString(), outputDir + outputFileName);
 		// return finalOutputString;
 		return outputFileName;
 	}
 
-	public String myWEBMorp2Tagger(String inStr, String outputDir)
-			throws JAXBException, IOException {
-		// System.out.println("(F) MorphMult2TaggerFormat.myWEBMorp2Tagger()");
-		// Data.webFlag = true;
-		String finalOutputString = "";
+	public String myWEBMorp2Tagger(String inStr, String outputDir) throws JAXBException, IOException {
 		InputStream in = null;
 		FileOutputStream out = null;
 		try {
@@ -689,14 +658,12 @@ public class MorphMult2TaggerFormat implements Constants {
 		String outputFileName = "/outputFile" + randomNum + ".nf";
 
 		PerformUniqeOutput p = new PerformUniqeOutput();
-		finalOutputString = p.myUniqueOutput(outputString.toString(), outputDir
-				+ outputFileName);
+		p.myUniqueOutput(outputString.toString(), outputDir + outputFileName);
 		// return finalOutputString;
 		return outputFileName;
 	}
 
-	public void parseXML(InputStream in, boolean webFlag) throws JAXBException,
-			IOException {
+	public void parseXML(InputStream in, boolean webFlag) throws JAXBException, IOException {
 		// System.out.println("(F) parseXML");
 		// for running in my PC with eclipse uncomment Data.webFlag = true;
 		if (webFlag)
@@ -722,14 +689,12 @@ public class MorphMult2TaggerFormat implements Constants {
 		int paragraphTypeListSize = paragraphTypeList.size();
 		for (int paragraphIndex = 0; paragraphIndex < paragraphTypeListSize; paragraphIndex++) {
 
-			ParagraphType paragraph = (ParagraphType) paragraphTypeList
-					.get(paragraphIndex);
+			ParagraphType paragraph = (ParagraphType) paragraphTypeList.get(paragraphIndex);
 			sentenceTypeList = paragraph.getSentence();
 			int sentenceTypeListSize = sentenceTypeList.size();
 			for (int sentenceIndex = 0; sentenceIndex < sentenceTypeListSize; sentenceIndex++) {
 
-				SentenceType sentence = (SentenceType) sentenceTypeList
-						.get(sentenceIndex);
+				SentenceType sentence = (SentenceType) sentenceTypeList.get(sentenceIndex);
 				tokenTypeList = sentence.getToken();
 				int tokenTypeListSize = tokenTypeList.size();
 				for (int tokenIndex = 0; tokenIndex < tokenTypeListSize; tokenIndex++) {
@@ -742,11 +707,9 @@ public class MorphMult2TaggerFormat implements Constants {
 					if (surface.startsWith("#"))
 						continue; // if its '#' then skip to next token
 					/*
-					 * if (surface.startsWith(";")) continue; // if its ';' then
-					 * skip to next token if (surface.startsWith("&")) continue;
-					 * // if its '&' then skip to next token if
-					 * (surface.startsWith("-")) continue; // if its '-' then
-					 * skip to next token
+					 * if (surface.startsWith(";")) continue; // if its ';' then skip to next token
+					 * if (surface.startsWith("&")) continue; // if its '&' then skip to next token
+					 * if (surface.startsWith("-")) continue; // if its '-' then skip to next token
 					 */
 					String hebWord = Translate.HMMHeb2Eng(surface);
 
@@ -754,8 +717,7 @@ public class MorphMult2TaggerFormat implements Constants {
 
 					String originalHebWord = hebWord;
 
-					boolean punctuatuionFlag = handleHebWordAndPunctuation(
-							hebWord, analysisTypeList);
+					boolean punctuatuionFlag = handleHebWordAndPunctuation(hebWord, analysisTypeList);
 					if (!punctuatuionFlag) {
 						hebWord = hebWord.replaceAll("\"", "U");
 						hebWord = hebWord.replaceAll("\'", "A");
@@ -764,8 +726,7 @@ public class MorphMult2TaggerFormat implements Constants {
 						outputString.append(hebWord).append("\n");
 
 						for (int analysisIndex = 0; analysisIndex < analysisTypeListSize; analysisIndex++) {
-							AnalysisType analysis = (AnalysisType) analysisTypeList
-									.get(analysisIndex);
+							AnalysisType analysis = (AnalysisType) analysisTypeList.get(analysisIndex);
 							BaseType base = analysis.getBase();
 
 							if (analysis.getPrefix().size() > 0) {
@@ -775,26 +736,23 @@ public class MorphMult2TaggerFormat implements Constants {
 								// Translate.HMMHeb2Eng(gatheredPrefixSurface));
 								// System.out.println("(F) parseXML originalHebWord "
 								// + originalHebWord);
-								int gatheredPrefixLen = gatheredPrefixSurface
-										.length();
-								int originalHebWordLen = originalHebWord
-										.length(); // added 3.5.11
+								int gatheredPrefixLen = gatheredPrefixSurface.length();
+								int originalHebWordLen = originalHebWord.length(); // added 3.5.11
 								// gatheredPrefixLen = (gatheredPrefixLen >
 								// originalHebWordLen) ? (originalHebWordLen +
 								// 1) : gatheredPrefixLen; // added 3.5.11
 								// protection from
 								// StringIndexOutOfBoundsException
 								if (gatheredPrefixLen > originalHebWordLen) // if
-																			// its
-																			// longer
-																			// then
-																			// cant
-																			// read
+								// its
+								// longer
+								// then
+								// cant
+								// read
 								{
 									hebWord = "";
 								} else {
-									hebWord = originalHebWord
-											.substring(gatheredPrefixLen);
+									hebWord = originalHebWord.substring(gatheredPrefixLen);
 								}
 								prefixExistFlag = true;
 							} else
@@ -802,179 +760,131 @@ public class MorphMult2TaggerFormat implements Constants {
 
 							if (base != null) {
 								if (base.getAdjective() != null)
-									handleAdjective(base, hebWord,
-											prefixExistFlag);
+									handleAdjective(base, hebWord, prefixExistFlag);
 								else if (base.getNoun() != null)
-									handleNoun(analysis, base, hebWord,
-											prefixExistFlag);
+									handleNoun(analysis, base, hebWord, prefixExistFlag);
 								else if (base.getParticiple() != null) {
-									ParticipleType participle = base
-											.getParticiple();
-									String participleType = participle
-											.getType();
+									ParticipleType participle = base.getParticiple();
+									String participleType = participle.getType();
 									switch (participleType.charAt(0)) {
 									case 'n':
-										handleNoun(analysis, base, hebWord,
-												prefixExistFlag);
+										handleNoun(analysis, base, hebWord, prefixExistFlag);
 										break;
 									case 'a':
-										handleAdjective(base, hebWord,
-												prefixExistFlag);
+										handleAdjective(base, hebWord, prefixExistFlag);
 										break;
 									case 'v':
-										handleParticiple(analysis, hebWord,
-												prefixExistFlag);
+										handleParticiple(analysis, hebWord, prefixExistFlag);
 										break;
 									}
 								} else if (base.getProperName() != null) {
-									handleProperName(base, hebWord,
-											prefixExistFlag);
+									handleProperName(base, hebWord, prefixExistFlag);
 								} else if (base.getVerb() != null) {
 									handleVerb(base, hebWord, prefixExistFlag);
 								} else if (base.getAdverb() != null) {
 									pos = "ADVERB";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getConjunction() != null) {
 									pos = "CONJUNCTION";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getMWE() != null) {
 									pos = "MWE";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getCopula() != null) {
 									pos = "COPULA";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getExistential() != null) {
 									pos = "EXISTENTIAL";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getForeign() != null) {
 									pos = "FOREIGN";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getInterjection() != null) {
 									pos = "INTERJECTION";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getInterrogative() != null) {
 									pos = "INTERROGATIVE";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getModal() != null) {
 									pos = "MODAL";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getModal() != null) {
 									pos = "MODAL";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getNegation() != null) {
 									pos = "NEGATION";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getNumberExpression() != null) {
 									pos = "NUMBEREXPRESSION";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getPreposition() != null) {
 									pos = "PREPOSITION";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getPronoun() != null) {
 									pos = "PRONOUN";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getQuantifier() != null) {
 									pos = "QUANTIFIER";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getTitle() != null) {
 									pos = "TITLE";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 									// ////////////////////////////////////////////////
 								} else if (base.getUnknown() != null) {
 									pos = "PROPERNAME";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 
 									if (hebWord.charAt(0) == 'h') {
 										hebWord = hebWord.substring(1);
 										prefixExistFlag = false;
-										handleDefinitedProperName(hebWord,
-												prefixExistFlag);
+										handleDefinitedProperName(hebWord, prefixExistFlag);
 
 									}
 									// handle prefix + propername
 									// Data.init(dprefixesFile);
 
-									for (int i = 1; i < 6
-											&& i < hebWord.length(); i++) {
-										String properNamePrefix = hebWord
-												.substring(0, i);
-										String properNameBase = hebWord
-												.substring(i);
-										if (StringUtils
-												.moshevkaleb(properNamePrefix)) {
+									for (int i = 1; i < 6 && i < hebWord.length(); i++) {
+										String properNamePrefix = hebWord.substring(0, i);
+										String properNameBase = hebWord.substring(i);
+										if (StringUtils.moshevkaleb(properNamePrefix)) {
 											int prefixListSize = 0;
 											try {
 
-												prefixListSize = Data
-														.getPrefixes(properNamePrefix);
+												prefixListSize = Data.getPrefixes(properNamePrefix);
 											} catch (Exception e) {
 												// TODO Auto-generated catch
 												// block
 												e.printStackTrace();
 											}
 											for (int prefixIndex = 0; prefixIndex < prefixListSize; prefixIndex++) {
-												PrefixRecord pr = Data
-														.analyzePrefixList(prefixIndex);
-												String description = pr
-														.getDescription();
+												PrefixRecord pr = Data.analyzePrefixList(prefixIndex);
+												String description = pr.getDescription();
 												List list = null;
-												list = Translate
-														.analyzeMixedHebEng(description);
+												list = Translate.analyzeMixedHebEng(description);
 												int size = list.size();
 												for (int prefixesCounter = 0; prefixesCounter < size; prefixesCounter++) {
-													PrefixRec prefixRec = (PrefixRec) list
-															.get(prefixesCounter);
-													String prefixSurface = prefixRec
-															.getSurface();
-													String transliteratedPrefix = Translate
-															.Heb2Eng(prefixSurface);
+													PrefixRec prefixRec = (PrefixRec) list.get(prefixesCounter);
+													String prefixSurface = prefixRec.getSurface();
+													String transliteratedPrefix = Translate.Heb2Eng(prefixSurface);
 													bw.write("\t");
-													bw.write("(PREFIX "
-															+ transliteratedPrefix
-															+ ")");
-													outputString
-															.append("\t"
-																	+ "(PREFIX "
-																	+ transliteratedPrefix
-																	+ ")");
+													bw.write("(PREFIX " + transliteratedPrefix + ")");
+													outputString.append("\t" + "(PREFIX " + transliteratedPrefix + ")");
 
 												}
-												handlePrefixProperName(
-														properNameBase,
-														prefixExistFlag);
+												handlePrefixProperName(properNameBase, prefixExistFlag);
 											}
 										}
 									}
 									// ////////////////////////////////////////////////
 								} else if (base.getUrl() != null) {
 									pos = "URL";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getNumeral() != null) {
 									pos = "NUMERAL";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								} else if (base.getWPrefix() != null) {
 									pos = "WPREFIX";
-									handleSimplePos(base, hebWord, pos,
-											prefixExistFlag);
+									handleSimplePos(base, hebWord, pos, prefixExistFlag);
 								}
 
 								// ������ �� ������ ���� ��� �5-
@@ -1012,8 +922,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		}
 	}
 
-	public void readMorphFile(String TaggedMorphFile, String outputFile)
-			throws IOException, JAXBException {
+	public void readMorphFile(String TaggedMorphFile, String outputFile) throws IOException, JAXBException {
 		// System.out.println("(F) MorphMult2TaggerFormat.readMorphFile()");
 		FileOutputStream out = null;
 		try {
@@ -1030,8 +939,7 @@ public class MorphMult2TaggerFormat implements Constants {
 		bw.close();
 		// System.out.println("input to uniq"+outputString.toString());
 		PerformUniqeOutput p = new PerformUniqeOutput();
-		p.myUniqueOutput(
-				outputString.toString(),
+		p.myUniqueOutput(outputString.toString(),
 				"C:\\Documents and Settings\\daliabo\\My Documents\\lexicon\\diffTests\\outputRoy2.txt");
 	}
 }

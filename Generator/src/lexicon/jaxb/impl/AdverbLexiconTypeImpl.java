@@ -25,10 +25,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
     public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
     private static com.sun.msv.grammar.Grammar schemaFragment;
 
-    private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-        return (lexicon.jaxb.AdverbLexiconType.class);
-    }
-
     public java.lang.String getType() {
         if (_Type == null) {
             return "unspecified";
@@ -338,10 +334,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
 
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AdverbLexiconType.Add.class);
-        }
-
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
         }
@@ -577,7 +569,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -722,10 +713,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AdverbLexiconType.Remove.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -962,7 +949,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1107,10 +1093,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
 
         public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
         private static com.sun.msv.grammar.Grammar schemaFragment;
-
-        private final static java.lang.Class PRIMARY_INTERFACE_CLASS() {
-            return (lexicon.jaxb.AdverbLexiconType.Replace.class);
-        }
 
         public java.lang.String ____jaxb_ri____getNamespaceURI() {
             return "";
@@ -1347,7 +1329,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
             public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
                 throws org.xml.sax.SAXException
             {
-                int attIdx;
                 outer:
                 while (true) {
                     switch (state) {
@@ -1810,7 +1791,6 @@ public class AdverbLexiconTypeImpl implements lexicon.jaxb.AdverbLexiconType, co
         public void enterAttribute(java.lang.String ___uri, java.lang.String ___local, java.lang.String ___qname)
             throws org.xml.sax.SAXException
         {
-            int attIdx;
             outer:
             while (true) {
                 switch (state) {

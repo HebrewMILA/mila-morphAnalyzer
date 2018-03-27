@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lexicon.contents.Content;
+import lexicon.contents.EmptyContent;
 import lexicon.contents.exception_types.ModalExceptionType;
+import lexicon.jaxb.impl.ModalExceptionTypeImpl;
 
 /**
  * Java content class for ProperNameLexiconType complex type.
@@ -110,7 +112,7 @@ public class ModalLexiconType extends Content implements lexicon.jaxb.ModalLexic
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			ModalExceptionType exceptionType = new ModalExceptionType(
-					(lexicon.jaxb.ModalExceptionType) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
@@ -121,7 +123,7 @@ public class ModalLexiconType extends Content implements lexicon.jaxb.ModalLexic
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			ModalExceptionType exceptionType = new ModalExceptionType(
-					(lexicon.jaxb.ModalExceptionType) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
@@ -147,7 +149,7 @@ public class ModalLexiconType extends Content implements lexicon.jaxb.ModalLexic
 	}
 
 	public void load() {
-		List actions = getActions();
+		List<ModalExceptionTypeImpl> actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
 		setGender(getString("gender"));
@@ -156,9 +158,9 @@ public class ModalLexiconType extends Content implements lexicon.jaxb.ModalLexic
 		setInflectionType(getString("inflectionType"));
 	}
 
-	public java.util.List getActions() {
-		List actions = getContents("modal_exception_type", "id", id);
-		ArrayList result = new ArrayList();
+	public java.util.List<ModalExceptionTypeImpl> getActions() {
+		List<EmptyContent> actions = getContents("modal_exception_type", "id", id);
+		ArrayList<ModalExceptionTypeImpl> result = new ArrayList<ModalExceptionTypeImpl>();
 		for (int i = 0; i < actions.size(); i++) {
 			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
@@ -236,7 +238,7 @@ public class ModalLexiconType extends Content implements lexicon.jaxb.ModalLexic
 
 	}
 
-	public java.util.List getAddOrReplaceOrRemove() {
+	public java.util.List<ModalExceptionTypeImpl> getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}
 

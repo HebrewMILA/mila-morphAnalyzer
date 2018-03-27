@@ -49,10 +49,8 @@ public class rules1 extends ConnectedGenerator {
 	 * defaultPossessiveRulesHandling()<br>
 	 */
 	private void getDefaultRule() {
-		String inflectedPattern = "";
 		String sql = "select * from rules1 where  action = '" + action + "' and inputPattern = 'default'";
 		rs = getData(sql);
-		int indexToken;
 		try {
 			while (rs.next()) {
 				tInputPattern = rs.getString("inputPattern");
@@ -64,7 +62,7 @@ public class rules1 extends ConnectedGenerator {
 
 				if (tInputCondition.equals(inputCondition)) {
 
-					if (((indexToken = tInflectedPattern.indexOf(",")) != -1)) {
+					if (((tInflectedPattern.indexOf(",")) != -1)) {
 						defaultPossessiveRulesHandling();
 					} else {
 						// System.out.println("found default rule");

@@ -8,21 +8,20 @@ package lexicon.generate;
 
 import java.util.List;
 
-import lexicon.contents.exception_types.PronounExceptionType;
 import lexicon.contents.exception_types.WprefixExceptionType;
 import lexicon.contents.types.ItemType;
 
 /**
  * @author daliabo
  *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class WPrefixGen extends ItemGen {
-	
+
 	public WPrefixGen(ItemType item) {
 		super(item);
-		
+
 	}
 
 	protected void addException() throws Exception {
@@ -32,12 +31,11 @@ public class WPrefixGen extends ItemGen {
 			analyseExceptionList(addExceptionList);
 		}
 	}
-	
+
 	private void analyseExceptionList(List exceptionList) throws Exception {
 		for (int i = 0; i < exceptionList.size(); i++) {
 			WprefixExceptionType wprefixExceptionType = new WprefixExceptionType();
-			wprefixExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
+			wprefixExceptionType.open(((Integer) exceptionList.get(i)).intValue());
 			definitnessVal = "tf";
 			inflectedItem = wprefixExceptionType.getTransliterated();
 			surface = wprefixExceptionType.getUndotted();
@@ -75,6 +73,5 @@ public class WPrefixGen extends ItemGen {
 		addH();
 		addException();
 	}
-
 
 }

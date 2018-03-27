@@ -21,12 +21,12 @@ public class DBInflectionsRecord {
 	 * generated
 	 */
 	String baseLexiconPointer = "";
-	String baseAlternatePointer = ""; //TODO add shit
+	String baseAlternatePointer = ""; // TODO add shit
 	/** The lexicon item from which the inflected form was generated */
 	String baseUndottedLItem = "";
 	/**
-	 * The transliterated form of the lexicon item from which the inflected form
-	 * was generated
+	 * The transliterated form of the lexicon item from which the inflected form was
+	 * generated
 	 */
 	String baseTransliteratedLItem = "";
 	/** The register of the inflected form */
@@ -61,8 +61,7 @@ public class DBInflectionsRecord {
 	/** The person of the inflected form */
 	String basePerson = "";
 	/**
-	 * The type of the inflected form - it is relevant for several part of
-	 * speech
+	 * The type of the inflected form - it is relevant for several part of speech
 	 */
 	String type = "";
 	/**
@@ -73,8 +72,8 @@ public class DBInflectionsRecord {
 	/** The dotted form of the lexicon item relevant to the inflected form */
 	String dottedLexiconItem = "";
 	/**
-	 * The polarity of the inflected form - relevant only for several part of
-	 * speech such as copula
+	 * The polarity of the inflected form - relevant only for several part of speech
+	 * such as copula
 	 */
 	String polarity = "";
 	/**
@@ -88,13 +87,13 @@ public class DBInflectionsRecord {
 	 */
 	String mood = "";
 	/**
-	 * The prefix per entry is relevant only for pronouns - it enables to define
-	 * per lexicon entry which entry can be added cklm
+	 * The prefix per entry is relevant only for pronouns - it enables to define per
+	 * lexicon entry which entry can be added cklm
 	 */
 	char prefixPerEntry = 'u';
 	/**
-	 * nouns and adjectives which are originated from foreign source like
-	 * ainplcih are indicated
+	 * nouns and adjectives which are originated from foreign source like ainplcih
+	 * are indicated
 	 */
 	int foreign = -1;
 
@@ -111,7 +110,7 @@ public class DBInflectionsRecord {
 	public String getBaseLexiconPointer() {
 		return baseLexiconPointer;
 	}
-	
+
 	public String getBaseAlternatePointer() {
 		return baseAlternatePointer;
 	}
@@ -290,7 +289,7 @@ public class DBInflectionsRecord {
 	public void setBaseLexiconPointer(String baseLexiconPointer) {
 		this.baseLexiconPointer = baseLexiconPointer;
 	}
-	
+
 	public void setBaseAlternatePointer(String baseAlternatePointer) {
 		this.baseAlternatePointer = baseAlternatePointer;
 	}
@@ -458,34 +457,16 @@ public class DBInflectionsRecord {
 
 	@Override
 	public String toString() {
-		return "transliterated: " + transliterated
-				+"\nsurface: " + surface
-				+"\nbasePos: " + basePos
-				+"\nbaseLexiconPointer: " + baseLexiconPointer
-				+"\nbaseAlternatePointer: " + baseAlternatePointer
-				+"\nbaseUndottedLItem: " + baseUndottedLItem
-				+"\nbaseTransliteratedLItem: " + baseTransliteratedLItem
-				+"\nregister: " + register
-				+"\nspelling: " + spelling
-				+"\nstatus: " + status
-				+"\nsuffixFunction: " + suffixFunction
-				+"\nPGN: " + PGN
-				+"\nbinyan: " + binyan
-				+"\ntense: " + tense
-				+"\nroot: " + root
-				+"\nbaseNumber: " + baseNumber
-				+"\nbaseGender: " + baseGender
-				+"\nbasePerson: " + basePerson
-				+"\ntype: " + type
-				+"\nhAttribute: " + hAttribute
-				+"\ndottedLexiconItem: " + dottedLexiconItem
-				+"\npolarity: " + polarity
-				+"\nvalue: " + value
-				+"\nmood: " + mood
-				+"\nprefixPerEntry: " + prefixPerEntry
-				+"\nforeign: " + foreign;
+		return "transliterated: " + transliterated + "\nsurface: " + surface + "\nbasePos: " + basePos
+				+ "\nbaseLexiconPointer: " + baseLexiconPointer + "\nbaseAlternatePointer: " + baseAlternatePointer
+				+ "\nbaseUndottedLItem: " + baseUndottedLItem + "\nbaseTransliteratedLItem: " + baseTransliteratedLItem
+				+ "\nregister: " + register + "\nspelling: " + spelling + "\nstatus: " + status + "\nsuffixFunction: "
+				+ suffixFunction + "\nPGN: " + PGN + "\nbinyan: " + binyan + "\ntense: " + tense + "\nroot: " + root
+				+ "\nbaseNumber: " + baseNumber + "\nbaseGender: " + baseGender + "\nbasePerson: " + basePerson + "\ntype: "
+				+ type + "\nhAttribute: " + hAttribute + "\ndottedLexiconItem: " + dottedLexiconItem + "\npolarity: "
+				+ polarity + "\nvalue: " + value + "\nmood: " + mood + "\nprefixPerEntry: " + prefixPerEntry + "\nforeign: "
+				+ foreign;
 
-				
 	}
 
 	@Override

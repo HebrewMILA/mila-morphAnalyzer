@@ -7,16 +7,14 @@
 package lexicon.generate;
 
 import java.util.List;
-import java.util.StringTokenizer;
-
 import lexicon.contents.exception_types.ExistentialExceptionType;
 import lexicon.contents.types.ItemType;
 
 /**
  * @author daliabo
  * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class ExistentialGen extends ItemGen {
 	String definiteness = "";
@@ -37,8 +35,7 @@ public class ExistentialGen extends ItemGen {
 	private void analyseExceptionList(List exceptionList) throws Exception {
 		for (int i = 0; i < exceptionList.size(); i++) {
 			ExistentialExceptionType existentialExceptionType = new ExistentialExceptionType();
-			existentialExceptionType.open(((Integer) exceptionList.get(i))
-					.intValue());
+			existentialExceptionType.open(((Integer) exceptionList.get(i)).intValue());
 			inflectedItem = existentialExceptionType.getTransliterated();
 			surface = existentialExceptionType.getUndotted();
 			spelling = existentialExceptionType.getSpelling();
@@ -57,7 +54,7 @@ public class ExistentialGen extends ItemGen {
 				suffixFunction = "unspecified";
 			populateDatabase();
 			if (!definiteness.equals("prohibited")) {
-				// Χ³β€Χ³β„ΆΧ³Β©Χ³Β Χ³οΏ½ , Χ³β€Χ³β„ΆΧ³Β©Χ³Β Χ³οΏ½
+				// διωπν , διωπο
 				addH();
 			}
 		}
@@ -84,7 +81,7 @@ public class ExistentialGen extends ItemGen {
 			;
 		else {
 			suffixFunction = "pronomial";
-			//populateAcussativeAttribues();
+			// populateAcussativeAttribues();
 		}
 		root = item.getExistential().getRoot();
 		String polarity = item.getExistential().getPolarity();

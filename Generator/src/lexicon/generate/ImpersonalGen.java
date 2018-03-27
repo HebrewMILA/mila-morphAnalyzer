@@ -11,16 +11,15 @@ import lexicon.contents.types.ItemType;
 /**
  * @author daliabo
  *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
  */
 public class ImpersonalGen extends ItemGen {
-	
+
 	public ImpersonalGen(ItemType item) {
 		super(item);
-		
-	}
 
+	}
 
 	private void analyse() {
 		analyseItem();
@@ -32,6 +31,5 @@ public class ImpersonalGen extends ItemGen {
 		surface = undot;
 		populateDatabase();
 	}
-
 
 }

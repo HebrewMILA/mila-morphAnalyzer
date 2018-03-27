@@ -239,8 +239,8 @@ public class XMLProcessor {
 		 * transliteration.addElement("string ").addAttribute("hebrew",
 		 * "ú").addAttribute("latin", "t");
 		 */
-		metadata.addElement("comment").addText(
-				"Tokenized corpuses and the segmentation program are available at http://mila.cs.technion.ac.il/");
+		metadata.addElement("comment")
+				.addText("Tokenized corpuses and the segmentation program are available at http://mila.cs.technion.ac.il/");
 	}
 
 	public void createParapraphes() {
@@ -352,7 +352,7 @@ public class XMLProcessor {
 	 *
 	 * @param document
 	 *
-	 *            The document to set.
+	 *           The document to set.
 	 *
 	 */
 	public void setDocument(Document document) {

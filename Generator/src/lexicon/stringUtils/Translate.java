@@ -95,7 +95,6 @@ public class Translate {
 		StringBuffer result = new StringBuffer();
 		String hebString = "";
 		String encodedHeb = "";
-		int index = 0;
 		for (int i = 0; i < engString.length(); i++) {
 
 			hebString = Names.getEngToHeb(String.valueOf(engString.charAt(i)));
@@ -134,7 +133,6 @@ public class Translate {
 		StringBuffer result = new StringBuffer();
 		String hebString = "";
 		String encodedHeb = "";
-		int index = 0;
 		for (int i = 0; i < engString.length(); i++) {
 
 			hebString = Names.getEngToHeb(String.valueOf(engString.charAt(i)));

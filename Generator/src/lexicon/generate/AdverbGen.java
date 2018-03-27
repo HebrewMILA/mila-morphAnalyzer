@@ -6,16 +6,9 @@
  */
 package lexicon.generate;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.List;
-import java.util.StringTokenizer;
-
 import lexicon.contents.exception_types.AdverbExceptionType;
-import lexicon.contents.exception_types.InterjectionExceptionType;
-import lexicon.contents.exception_types.PrepositionExceptionType;
 import lexicon.contents.types.ItemType;
-import lexicon.stringUtils.Translate;
 
 /**
  * @author daliabo

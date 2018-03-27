@@ -23,6 +23,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 import static mila.lexicon.analyse.Constants.*;
+
 /**
  * 
  * TokenizationParse.java Purpose: parse input XML file which contains
@@ -32,7 +33,7 @@ import static mila.lexicon.analyse.Constants.*;
  * @version %G%
  */
 
-public class TokenizationParser extends DefaultHandler  {
+public class TokenizationParser extends DefaultHandler {
 	String outputFile = "";
 
 	/**
@@ -72,12 +73,12 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * This methos is used only for handling a token containing ' or '' it is
-	 * very similar to the method used for tokens that don't contain ' or '' -
+	 * This methos is used only for handling a token containing ' or '' it is very
+	 * similar to the method used for tokens that don't contain ' or '' -
 	 * analyzeBaseAndPrefix the only difference is that we call
-	 * analyzePrefixGimatriaAndInvertedCommas and not analyzeBase - in this case
-	 * we search in both inflections and Gimatria tables and not only in
-	 * inflectiosn table
+	 * analyzePrefixGimatriaAndInvertedCommas and not analyzeBase - in this case we
+	 * search in both inflections and Gimatria tables and not only in inflectiosn
+	 * table
 	 * 
 	 * @param transliterated
 	 * @throws Exception
@@ -101,9 +102,9 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * We check the possibility that the token is composed of prefix and base
-	 * This method is searching in the inflections table/data file and in the
-	 * prefixes table/data file
+	 * We check the possibility that the token is composed of prefix and base This
+	 * method is searching in the inflections table/data file and in the prefixes
+	 * table/data file
 	 * 
 	 * @param base
 	 * @param prefix
@@ -135,8 +136,8 @@ public class TokenizationParser extends DefaultHandler  {
 			// file/table according to the key=base
 			inflectionsList = Data.getInflections(base);
 		} catch (Exception e) {
-			System.out.println(
-					"XMLMorphAnalyzer:analyzeBase - Exception while getting inflections list for base = " + base);
+			System.out
+					.println("XMLMorphAnalyzer:analyzeBase - Exception while getting inflections list for base = " + base);
 			e.printStackTrace();
 		}
 		baseListSize = inflectionsList.size();
@@ -150,8 +151,8 @@ public class TokenizationParser extends DefaultHandler  {
 					inflectionsRecDB = inflectionsList.get(i);
 					inflectionsRecNum = Data.Str2NumBeforeValidation(inflectionsRecDB, hebWord);
 				} catch (Exception e1) {
-					System.out.println(
-							"XMLMorphAnalyzer:analyzeBase - Exception while analyzeInflectionList for word=" + base);
+					System.out
+							.println("XMLMorphAnalyzer:analyzeBase - Exception while analyzeInflectionList for word=" + base);
 					e1.printStackTrace();
 				}
 
@@ -199,9 +200,8 @@ public class TokenizationParser extends DefaultHandler  {
 							TextOutput.buildXMLPrefixOutput(pr, inflectionsRecDB, inflectionsRecNum, createXML,
 									Translate.Eng2Heb(base));
 						} catch (Exception e3) {
-							System.out.println(
-									"XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
-											+ base + " and prefix=" + prefix);
+							System.out.println("XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
+									+ base + " and prefix=" + prefix);
 							e3.printStackTrace();
 						}
 					}
@@ -212,9 +212,8 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * Check whether the token is comprised of prefix + subToken Special
-	 * treatment is given to prefix (bklm) per entry - currently implemented for
-	 * pronouns only
+	 * Check whether the token is comprised of prefix + subToken Special treatment
+	 * is given to prefix (bklm) per entry - currently implemented for pronouns only
 	 * 
 	 * @param hebWord
 	 * @param transliterated
@@ -254,9 +253,9 @@ public class TokenizationParser extends DefaultHandler  {
 
 	/**
 	 * Check whether the token is comprised of prefix + subToken - when it is
-	 * already known that at least one of the analyses contains prefixPreEntry
-	 * (from analysing the whole token) Special treatment is given to prefix
-	 * (bklm) per entry - currently implemented for pronouns only
+	 * already known that at least one of the analyses contains prefixPreEntry (from
+	 * analysing the whole token) Special treatment is given to prefix (bklm) per
+	 * entry - currently implemented for pronouns only
 	 * 
 	 * @param hebWord
 	 * @param transliterated
@@ -291,8 +290,8 @@ public class TokenizationParser extends DefaultHandler  {
 					inflectionsRecNum = Data.Str2NumBeforeValidation(inflectionsRecDB, hebWord);
 
 				} catch (Exception e1) {
-					System.out.println("TokenizationParser: Exception occured while analyzeBaseNoPrefix for word="
-							+ transliterated);
+					System.out.println(
+							"TokenizationParser: Exception occured while analyzeBaseNoPrefix for word=" + transliterated);
 					e1.printStackTrace();
 				}
 				// there are special entries for which we define prefix per
@@ -322,8 +321,8 @@ public class TokenizationParser extends DefaultHandler  {
 							try {
 								prefixListSize = Data.getPrefixes(prefix);
 							} catch (Exception e2) {
-								System.out.println(
-										"XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
+								System.out
+										.println("XMLMorphAnalyzer:analyzeBase - Exception while getting prefixes list for word="
 												+ base + "and prefix=" + prefix);
 								e2.printStackTrace();
 							}
@@ -337,8 +336,8 @@ public class TokenizationParser extends DefaultHandler  {
 									try {
 										foundAnalysis = true;
 
-										TextOutput.buildXMLPrefixOutput(pr, inflectionsRecDB, inflectionsRecNum,
-												createXML, Translate.Eng2Heb(base));
+										TextOutput.buildXMLPrefixOutput(pr, inflectionsRecDB, inflectionsRecNum, createXML,
+												Translate.Eng2Heb(base));
 									} catch (Exception e3) {
 										System.out.println(
 												"XMLMorphAnalyzer:analyzeBase - Exception while buildXMLPrefixOutput for word="
@@ -356,8 +355,8 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * This method handles separating the token to prefix + base combinations
-	 * for looking in the inflections and prefixes table
+	 * This method handles separating the token to prefix + base combinations for
+	 * looking in the inflections and prefixes table
 	 * 
 	 * @param hebWord
 	 * @param transliterated
@@ -387,8 +386,8 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * look for the whole token in the inflections table without trying to break
-	 * it to prefix + base
+	 * look for the whole token in the inflections table without trying to break it
+	 * to prefix + base
 	 * 
 	 * @param hebWord
 	 * @param transliterated
@@ -451,9 +450,8 @@ public class TokenizationParser extends DefaultHandler  {
 										+ transliterated);
 						e2.printStackTrace();
 					} catch (JAXBException e2) {
-						System.out
-								.println("XMLAnalyzer:handlePrefix JAXBException occured while buildXMLOutput for word="
-										+ transliterated);
+						System.out.println("XMLAnalyzer:handlePrefix JAXBException occured while buildXMLOutput for word="
+								+ transliterated);
 						e2.printStackTrace();
 					}
 				}
@@ -615,9 +613,8 @@ public class TokenizationParser extends DefaultHandler  {
 
 	/**
 	 * This method is handling tokens containing ' or '' it get combination of
-	 * prefix and base and looks for the base in the Gimatria table - it is
-	 * similar to analyzeBase Analyze base look for the base in the inflections
-	 * table
+	 * prefix and base and looks for the base in the Gimatria table - it is similar
+	 * to analyzeBase Analyze base look for the base in the inflections table
 	 * 
 	 * @param base
 	 * @param prefix
@@ -774,16 +771,16 @@ public class TokenizationParser extends DefaultHandler  {
 					// look for the word with the apostrophe at the end
 					foundAnalysis = true;
 
-					createXML.createNumeralAnalysis("", null, null, null, "", "", "", String.valueOf(gimatriaVal), "",
-							"", "", "", "gematria", "", "", "", "", "");
+					createXML.createNumeralAnalysis("", null, null, null, "", "", "", String.valueOf(gimatriaVal), "", "",
+							"", "", "gematria", "", "", "", "", "");
 					// ///////////////////////////////////////////////
 					// Non Gimatria analysis
 					// /////////////////////////////////////////////
 				}
 				// ייתן לב' ניתוח של גימטריא וגם של יום ב'
 				// else {
-				foundAnalysis = analyzeBaseNoPrefix(hebWord, transliterated)
-						| analyzeBaseAndPrefix(hebWord, transliterated) | analyzeAcronymsBaseAndPrefix(transliterated);
+				foundAnalysis = analyzeBaseNoPrefix(hebWord, transliterated) | analyzeBaseAndPrefix(hebWord, transliterated)
+						| analyzeAcronymsBaseAndPrefix(transliterated);
 				// }
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
@@ -803,8 +800,8 @@ public class TokenizationParser extends DefaultHandler  {
 					// The whole token was found in Gimatria table
 					// /////////////////////////////////////////////////////////
 					// create gimatria analysis
-					createXML.createNumeralAnalysis("", null, null, null, "", "", "", String.valueOf(gimatriaVal), "",
-							"", "", "", "gematria", "", "", "", "", "");
+					createXML.createNumeralAnalysis("", null, null, null, "", "", "", String.valueOf(gimatriaVal), "", "",
+							"", "", "gematria", "", "", "", "", "");
 					// /////////////////////////////////////////////////////////////////
 					// The whole token was ***not found*** in Gimatria table
 					// ////////////////////////////////////////////////////////////////
@@ -838,9 +835,9 @@ public class TokenizationParser extends DefaultHandler  {
 
 	/**
 	 * handle cases like רצ סירופ where the letter at the end of the word can be
-	 * sofit or not sofit and we want to keep it as it is originally written
-	 * This problem occures because we don't differentiate between sofit and not
-	 * sofit in the transliteration
+	 * sofit or not sofit and we want to keep it as it is originally written This
+	 * problem occures because we don't differentiate between sofit and not sofit in
+	 * the transliteration
 	 * 
 	 * @param transliterated
 	 * @param hebWord
@@ -871,8 +868,8 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/*
-	 * (non-Javadoc) This method relates to the SAX parsing of the XML (the
-	 * output of the tokenizer)
+	 * (non-Javadoc) This method relates to the SAX parsing of the XML (the output
+	 * of the tokenizer)
 	 * 
 	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
 	 * java.lang.String, java.lang.String)
@@ -889,10 +886,10 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * This function handles cases of a combination of token and " and a token -
-	 * we identify these cases in tokenization stage we set prefix= in the
-	 * surface attribute - we know for sure that we have three tokens here we
-	 * also know that the first must be prefix
+	 * This function handles cases of a combination of token and " and a token - we
+	 * identify these cases in tokenization stage we set prefix= in the surface
+	 * attribute - we know for sure that we have three tokens here we also know that
+	 * the first must be prefix
 	 * 
 	 * @param hebPrefix
 	 */
@@ -926,8 +923,8 @@ public class TokenizationParser extends DefaultHandler  {
 			try {
 				prefixListSize = Data.getPrefixes(prefix);
 			} catch (Exception e1) {
-				System.out.println(
-						"XMLAnalyzer:handlePrefix Exception occured while getting prefixes for prefix=" + prefix);
+				System.out
+						.println("XMLAnalyzer:handlePrefix Exception occured while getting prefixes for prefix=" + prefix);
 				e1.printStackTrace();
 			}
 			if (prefixListSize > 0) {
@@ -947,8 +944,8 @@ public class TokenizationParser extends DefaultHandler  {
 							TextOutput.buildXMLPrefixOutput(pr, inflectionRecDB, inflectionRecNum, createXML, "");
 
 						} catch (Exception e) {
-							System.out.println(
-									"XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix="
+							System.out
+									.println("XMLAnalyzer:handlePrefix Exception occured while buildXMLPrefixOutput for prefix="
 											+ prefix);
 							e.printStackTrace();
 						}
@@ -987,8 +984,8 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/**
-	 * This is an important method because this is the intesection from which
-	 * all options to analyze are checked
+	 * This is an important method because this is the intesection from which all
+	 * options to analyze are checked
 	 * 
 	 * @param hebWord
 	 * @throws IOException
@@ -1008,8 +1005,7 @@ public class TokenizationParser extends DefaultHandler  {
 						// System.out.println(hebWord);
 						// it is important to be & and not && because we
 						// want both to be done anyway
-						if (!analyzeBaseNoPrefix(hebWord, transliterated)
-								& !analyzeBaseAndPrefix(hebWord, transliterated)
+						if (!analyzeBaseNoPrefix(hebWord, transliterated) & !analyzeBaseAndPrefix(hebWord, transliterated)
 								& !analyzeHebrewDotSingleLetter(hebWord) & !analyzeHebrewSingleLetter(hebWord))
 							noEntryInInflections(hebWord, transliterated);
 					}
@@ -1019,8 +1015,8 @@ public class TokenizationParser extends DefaultHandler  {
 	}
 
 	/*
-	 * (non-Javadoc) This method relates to the SAX parsing of the XML (the
-	 * output of the tokenizer)
+	 * (non-Javadoc) This method relates to the SAX parsing of the XML (the output
+	 * of the tokenizer)
 	 * 
 	 * @see org.xml.sax.helpers.DefaultHandler#startElement(java.lang.String,
 	 * java.lang.String, java.lang.String, org.xml.sax.Attributes)
@@ -1119,14 +1115,14 @@ public class TokenizationParser extends DefaultHandler  {
 	// MODIFED VERSION BY ALON
 	/**
 	 * This method contains the rules for concatenation a prefix to base The
-	 * decision whether the concatenation is valid depends on the part of speech
-	 * of the base and more attributes
+	 * decision whether the concatenation is valid depends on the part of speech of
+	 * the base and more attributes
 	 * 
 	 * @param base
 	 * @param prefix
 	 * @param inflectedRecordNum
 	 * @param pr
-	 *            - data structure of the current prefix
+	 *           - data structure of the current prefix
 	 * @return
 	 */
 	protected boolean validateByRules(final String base, final String prefix,
@@ -1232,29 +1228,29 @@ public class TokenizationParser extends DefaultHandler  {
 			}
 			return false;
 		}
-			// ///////////////////////////////////////////////////////////////////////
-			// למנוע ל+לגביך
-			// - נחליף את החוק הבא בחוקים יותר מעודנים
-			// צריך עוד לבדוק אפשרות זאת
-			/***************************************************************
-			 * case PREPOSITION: //if (posi == ENUM_POS.PREPOSITION) {
-			 * if(prepositionTag || adverbKAF) { return false; } return true; }
-			 ***************************************************************/
+		// ///////////////////////////////////////////////////////////////////////
+		// למנוע ל+לגביך
+		// - נחליף את החוק הבא בחוקים יותר מעודנים
+		// צריך עוד לבדוק אפשרות זאת
+		/***************************************************************
+		 * case PREPOSITION: //if (posi == ENUM_POS.PREPOSITION) { if(prepositionTag ||
+		 * adverbKAF) { return false; } return true; }
+		 ***************************************************************/
 
-			// /////////////////////////////////////////////////////////////////////////
-			// Pronoun
-			// /////////////////////////////////////////////////////////////////////////
+		// /////////////////////////////////////////////////////////////////////////
+		// Pronoun
+		// /////////////////////////////////////////////////////////////////////////
 
-			// למנוע הופעת ניתוח כינוי גוף ל- בהם, להם - הניתוח צריך להיות
-			// של מילת יחס
-			// אבל אנחנו רוצים לאפשר בכל"ם עם מספרים נטויים - בשלושתנו
-			// בארבעתנו
+		// למנוע הופעת ניתוח כינוי גוף ל- בהם, להם - הניתוח צריך להיות
+		// של מילת יחס
+		// אבל אנחנו רוצים לאפשר בכל"ם עם מספרים נטויים - בשלושתנו
+		// בארבעתנו
 
-			// לפי רשימה של נועם - כזה הלזו זהו לא יקבלו בכלם
-			// כינויי גוף מסוג שאלה מקבלים בכל"ם עלפ"י העיול הספציפי - לכן
-			// נכליל שלא ועבוא עיולים מסויימים נשתמש בשדה
-			// תחילית בטבלת inflections
-			// לסמן אם מקבל תחילית בכל"ם או לא
+		// לפי רשימה של נועם - כזה הלזו זהו לא יקבלו בכלם
+		// כינויי גוף מסוג שאלה מקבלים בכל"ם עלפ"י העיול הספציפי - לכן
+		// נכליל שלא ועבוא עיולים מסויימים נשתמש בשדה
+		// תחילית בטבלת inflections
+		// לסמן אם מקבל תחילית בכל"ם או לא
 		case PRONOUN:
 		// if(posi == ENUM_POS.PRONOUN)
 		{
@@ -1273,9 +1269,9 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// /////////////////////////////////////////////////////////////////
-			// ///////////QUANTIFIER
-			// //////////////////////////////////////////////////////////
+		// /////////////////////////////////////////////////////////////////
+		// ///////////QUANTIFIER
+		// //////////////////////////////////////////////////////////
 		case QUANTIFIER:
 		// if(posi == ENUM_POS.QUANTIFIER)
 		{
@@ -1290,11 +1286,11 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// /////////////////////////////////////////////////////////////////////////
-			// / verbs
-			// /////////////////////////////////////////////////////////////////////////
-			// אנו מעוניינים למנוע הופעה של ב\כ\ל\מ\ש\לכש\ ועוד כתחילית עם
-			// ציווי אבל כן נאפשר הופעת ו+ ציווי - ולכי
+		// /////////////////////////////////////////////////////////////////////////
+		// / verbs
+		// /////////////////////////////////////////////////////////////////////////
+		// אנו מעוניינים למנוע הופעה של ב\כ\ל\מ\ש\לכש\ ועוד כתחילית עם
+		// ציווי אבל כן נאפשר הופעת ו+ ציווי - ולכי
 		case VERB:
 		// if(posi == ENUM_POS.VERB)
 		{
@@ -1330,7 +1326,7 @@ public class TokenizationParser extends DefaultHandler  {
 			}
 			return true;
 		}
-			// מקור מוחלט לא מקבל מילות יחס
+		// מקור מוחלט לא מקבל מילות יחס
 		case INDEPENDENTINFINITIVE:
 		// if(posi == ENUM_POS.INDEPENDENTINFINITIVE)
 		{
@@ -1340,9 +1336,9 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// //////////////////////////////////////////////////////////////////////
-			// / (conjunction) מילת חיובר
-			// /////////////////////////////////////////////////////////////////////
+		// //////////////////////////////////////////////////////////////////////
+		// / (conjunction) מילת חיובר
+		// /////////////////////////////////////////////////////////////////////
 
 		case CONJUNCTION:
 		// if(posi == ENUM_POS.CONJUNCTION)
@@ -1355,9 +1351,9 @@ public class TokenizationParser extends DefaultHandler  {
 			}
 			return true;
 		}
-			// //////////////////////////////////////////////////////////////////////
-			// / (interjection) מילת קריאה
-			// /////////////////////////////////////////////////////////////////////
+		// //////////////////////////////////////////////////////////////////////
+		// / (interjection) מילת קריאה
+		// /////////////////////////////////////////////////////////////////////
 		case INTERJECTION:
 		// if(posi == ENUM_POS.INTERJECTION)
 		{
@@ -1378,9 +1374,9 @@ public class TokenizationParser extends DefaultHandler  {
 			}
 			return true;
 		}
-			// //////////////////////////////////////////////////////////////////////
-			// / (interogative) מילת שאלה
-			// /////////////////////////////////////////////////////////////////////
+		// //////////////////////////////////////////////////////////////////////
+		// / (interogative) מילת שאלה
+		// /////////////////////////////////////////////////////////////////////
 		case INTERROGATIVE:
 		// if((posi == ENUM_POS.INTERROGATIVE) && (type !=
 		// INTERROGATIVE_TYPE_PRONOUN))
@@ -1400,10 +1396,10 @@ public class TokenizationParser extends DefaultHandler  {
 			}
 		}
 
-			// /////////////////////////////////////////////////////////////////////////////
-			// ///////////// שם פרטי
-			// ////////////////////////////////////////////////////////////////////////////
-			// למנוע הופעה של שם פרטי עם תחילית בש - כמו בשדליה
+		// /////////////////////////////////////////////////////////////////////////////
+		// ///////////// שם פרטי
+		// ////////////////////////////////////////////////////////////////////////////
+		// למנוע הופעה של שם פרטי עם תחילית בש - כמו בשדליה
 		case PROPERNAME:
 		// if(posi == ENUM_POS.PROPERNAME)
 		{
@@ -1413,9 +1409,9 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// //////////////////////////////////////////////////////////////////////////////
-			// תואר הפועל
-			// ///////////////////////////////////////////////////////////////////////////////
+		// //////////////////////////////////////////////////////////////////////////////
+		// תואר הפועל
+		// ///////////////////////////////////////////////////////////////////////////////
 		case ADVERB:
 		// if(posi == ENUM_POS.ADVERB)
 		{
@@ -1425,9 +1421,9 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// /////////////////////////////////////////////////////////////////////
+		// /////////////////////////////////////////////////////////////////////
 
-			// למנוע כ+אל ב+יש
+		// למנוע כ+אל ב+יש
 		case MODAL:
 		// if(posi == ENUM_POS.MODAL)
 		{
@@ -1437,7 +1433,7 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ
+		// לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ
 		case COPULA:
 		// if(posi == ENUM_POS.COPULA)
 		{
@@ -1447,7 +1443,7 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// participleType handling
+		// participleType handling
 		case PARTICIPLE:
 		case PASSIVEPARTICIPLE:
 		// if(posi == ENUM_POS.PARTICIPLE || posi == ENUM_POS.PASSIVEPARTICIPLE)
@@ -1461,12 +1457,12 @@ public class TokenizationParser extends DefaultHandler  {
 			return true;
 		}
 
-			// /////////////////////////////////////////////////////////////////
-			// ///////////PREPOSITION
-			// //////////////////////////////////////////////////////////
-			// לא לאפשר ש+לי - מותר רק שלי
-			// כן לאפשר ש+בי - לכן אי אפשר חוק כללי וצריך לבדוק שמדובר בעיול
-			// ספציפי
+		// /////////////////////////////////////////////////////////////////
+		// ///////////PREPOSITION
+		// //////////////////////////////////////////////////////////
+		// לא לאפשר ש+לי - מותר רק שלי
+		// כן לאפשר ש+בי - לכן אי אפשר חוק כללי וצריך לבדוק שמדובר בעיול
+		// ספציפי
 		case PREPOSITION:
 		// if(posi == ENUM_POS.PREPOSITION
 		// && suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL)
@@ -1479,9 +1475,9 @@ public class TokenizationParser extends DefaultHandler  {
 				return false;
 			}
 			if (suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL) {
-				if (prefix.equals("e") && (base.equals("li") || base.equals("lk") || base.equals("lw")
-						|| base.equals("lh") || base.equals("lnw") || base.equals("lkm") || base.equals("lkn")
-						|| base.equals("lhm") || base.equals("lhn"))) {
+				if (prefix.equals("e") && (base.equals("li") || base.equals("lk") || base.equals("lw") || base.equals("lh")
+						|| base.equals("lnw") || base.equals("lkm") || base.equals("lkn") || base.equals("lhm")
+						|| base.equals("lhn"))) {
 					return false;
 				}
 			}
@@ -1497,23 +1493,22 @@ public class TokenizationParser extends DefaultHandler  {
 
 	/**
 	 * This method contains the rules for concatenation a prefix to base The
-	 * decision whether the concatenation is valid depends on the part of speech
-	 * of the base and more attributes
+	 * decision whether the concatenation is valid depends on the part of speech of
+	 * the base and more attributes
 	 * 
 	 * @param base
 	 * @param prefix
 	 * @param inflectedRecordNum
 	 * @param pr
-	 *            - data structure of the current prefix
+	 *           - data structure of the current prefix
 	 * @return
 	 */
 	/*
 	 * protected boolean validateByRules(final String base, final String
-	 * prefix,final InflectedRecordNum inflectedRecordNum, final PrefixRecord
-	 * pr) {
+	 * prefix,final InflectedRecordNum inflectedRecordNum, final PrefixRecord pr) {
 	 * 
-	 * ENUM_TENSE tensei = inflectedRecordNum.getTense(); ENUM_HATTRIBUTE
-	 * haaributei = inflectedRecordNum.getHAttribute(); ENUM_POS posi =
+	 * ENUM_TENSE tensei = inflectedRecordNum.getTense(); ENUM_HATTRIBUTE haaributei
+	 * = inflectedRecordNum.getHAttribute(); ENUM_POS posi =
 	 * inflectedRecordNum.getPos(); ENUM_SUFFIX_FUNCTION suffixFunctioni =
 	 * inflectedRecordNum.getSuffixFunction(); ENUM_STATUS constructi =
 	 * inflectedRecordNum.getStatus(); ENUM_HATTRIBUTE hAttributei =
@@ -1531,42 +1526,39 @@ public class TokenizationParser extends DefaultHandler  {
 	 * pr.isTempSubConLAMEDKAFSHIN(); boolean relativizerTag =
 	 * pr.isRelativizerTag(); boolean subordinatingConjunctionTag =
 	 * pr.isSubordinatingConjunctionTag(); boolean temporalSubConjTag =
-	 * pr.isTemporalSubConjTag(); boolean prepBET = pr.isPrepBET(); boolean
-	 * prepKAF = pr.isPrepKAF(); boolean prepLAMED = pr.isPrepLAMED(); boolean
-	 * prepMEM = pr.isPrepMEM(); boolean prefPartUnit = pr.isPrefPartUnit();
-	 * boolean prepositionTag = pr.isPrepositionTag(); boolean conjunctionTag =
+	 * pr.isTemporalSubConjTag(); boolean prepBET = pr.isPrepBET(); boolean prepKAF
+	 * = pr.isPrepKAF(); boolean prepLAMED = pr.isPrepLAMED(); boolean prepMEM =
+	 * pr.isPrepMEM(); boolean prefPartUnit = pr.isPrefPartUnit(); boolean
+	 * prepositionTag = pr.isPrepositionTag(); boolean conjunctionTag =
 	 * pr.isConjunctionTag();
 	 * 
 	 * if (
 	 * 
-	 * //
-	 * ///////////////////////////////////////////////////////////////////////
-	 * ////////////////// // // חוקים מנוונים //
-	 * ////////////////////////////////
-	 * ///////////////////////////////////////////////////////// // כל החוקים
-	 * הבאים מנוטרלים - לאור העובדה שעבור צורות מיודעות - אנו // מייצרים את
-	 * הצורה המיודעת // וטבלת התחיליות לא כוללת את ה' הידיעה // במקרים בהם יש ה'
-	 * חבויה למשל ב(ה)בית - יש עדיין להשתמש // בחוקים!!!!!!!!!!!!!!!!!!!!!!!! //
-	 * /
+	 * // ///////////////////////////////////////////////////////////////////////
+	 * ////////////////// // // חוקים מנוונים // ////////////////////////////////
+	 * ///////////////////////////////////////////////////////// // כל החוקים הבאים
+	 * מנוטרלים - לאור העובדה שעבור צורות מיודעות - אנו // מייצרים את הצורה המיודעת
+	 * // וטבלת התחיליות לא כוללת את ה' הידיעה // במקרים בהם יש ה' חבויה למשל
+	 * ב(ה)בית - יש עדיין להשתמש // בחוקים!!!!!!!!!!!!!!!!!!!!!!!! // /
 	 * /////////////////////////////////////////////////////////////////////////
-	 * ////////////// // !((definiteArticleTag || defArtHE || relHE) && (posi ==
-	 * // INTERROGATIVE)) // ה' הידיעה לא תופיע לפני מילת שאלה
+	 * ////////////// // !((definiteArticleTag || defArtHE || relHE) && (posi == //
+	 * INTERROGATIVE)) // ה' הידיעה לא תופיע לפני מילת שאלה
 	 * 
-	 * // && !((definiteArticleTag || defArtHE) && (posi == CONJUNCTION))// ה'
-	 * // הידיעה לא תופיע לפני מילת חיבור
+	 * // && !((definiteArticleTag || defArtHE) && (posi == CONJUNCTION))// ה' //
+	 * הידיעה לא תופיע לפני מילת חיבור
 	 * 
-	 * // && !(definiteArticleTag && posi == INTERJECTION) //ה' הידיעה לא תופיע
-	 * // לפני מילת קריאה
+	 * // && !(definiteArticleTag && posi == INTERJECTION) //ה' הידיעה לא תופיע //
+	 * לפני מילת קריאה
 	 * 
-	 * // && // ה' הידיעה לא תופיע לפני צורת נסמך - בילדת !(definiteArticleTag
-	 * && constructi == ENUM_STATUS.CONSTRUCT_TRUE) // חוק // זה // חשוב // עבור
-	 * ה' חבויה // למשל כילדייך
+	 * // && // ה' הידיעה לא תופיע לפני צורת נסמך - בילדת !(definiteArticleTag &&
+	 * constructi == ENUM_STATUS.CONSTRUCT_TRUE) // חוק // זה // חשוב // עבור ה'
+	 * חבויה // למשל כילדייך
 	 * 
 	 * // && !(definiteArticleTag && posi != VERB && suffixFunctioni == //
 	 * SUFFIX_FUNCTION_POSSESSIVE)
 	 * 
-	 * // ה' הידיעה לא תופיע לפני צירוף קנייני - חוק זה חשוב עבור ה' // חבויה
-	 * למשל כילדייך && !(definiteArticleTag && suffixFunctioni ==
+	 * // ה' הידיעה לא תופיע לפני צירוף קנייני - חוק זה חשוב עבור ה' // חבויה למשל
+	 * כילדייך && !(definiteArticleTag && suffixFunctioni ==
 	 * ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_POSSESSIVE)
 	 * 
 	 * && !(definiteArticleTag && suffixFunctioni ==
@@ -1578,102 +1570,93 @@ public class TokenizationParser extends DefaultHandler  {
 	 * // כינויי גוף לא מקבלים ה' הידיעה // && !(definiteArticleTag && posi ==
 	 * PRONOUN)
 	 * 
-	 * // לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ // && //
-	 * !(definiteArticleTag && posi == COPULA) // && // !(definiteArticleTag &&
-	 * basePronounTypei == // BASE_PRONOUN_TYPE_INTERROGATIVE) // && //
-	 * !(definiteArticleTag && basePronounTypei == //
-	 * BASE_PRONOUN_TYPE_RELATIVIZER) // && // !(definiteArticleTag && posi ==
-	 * ADVERB)
+	 * // לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ // && // !(definiteArticleTag &&
+	 * posi == COPULA) // && // !(definiteArticleTag && basePronounTypei == //
+	 * BASE_PRONOUN_TYPE_INTERROGATIVE) // && // !(definiteArticleTag &&
+	 * basePronounTypei == // BASE_PRONOUN_TYPE_RELATIVIZER) // && //
+	 * !(definiteArticleTag && posi == ADVERB)
 	 * 
-	 * //
-	 * ///////////////////////////////////////////////////////////////////////
-	 * //////// // ////// סוף חוקים מנוונים //
-	 * //////////////////////////////////
+	 * // ///////////////////////////////////////////////////////////////////////
+	 * //////// // ////// סוף חוקים מנוונים // //////////////////////////////////
 	 * //////////////////////////////////////////
 	 * 
-	 * // ארגון השומר חייב להיות מיודע - אסור שיופיע בשומר ללא יידוע רק //
-	 * ב(ה)שומר && !(!definiteArticleTag && (posi == ENUM_POS.PROPERNAME) &&
-	 * (hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE))
+	 * // ארגון השומר חייב להיות מיודע - אסור שיופיע בשומר ללא יידוע רק // ב(ה)שומר
+	 * && !(!definiteArticleTag && (posi == ENUM_POS.PROPERNAME) && (hAttributei ==
+	 * ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE))
 	 * 
-	 * // להקים - יש שם פרטי קים - אסור שיופיע מיודע אם מצטרף אליו // תחילית ואם
-	 * לא && !(hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE)
+	 * // להקים - יש שם פרטי קים - אסור שיופיע מיודע אם מצטרף אליו // תחילית ואם לא
+	 * && !(hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE)
 	 * 
-	 * //
-	 * /////////////////////////////////////////////////////////////////////////
+	 * // /////////////////////////////////////////////////////////////////////////
 	 * // Existential //
-	 * /////////////////////////////////////////////////////////////////////////
-	 * // כמת ישיי יופיע רק עם תחיליות ו' וש && !(posi == ENUM_POS.EXISTENTIAL
-	 * && !((subordinatingConjunctionTag && relativizerTag) || conjunctionTag))
+	 * ///////////////////////////////////////////////////////////////////////// //
+	 * כמת ישיי יופיע רק עם תחיליות ו' וש && !(posi == ENUM_POS.EXISTENTIAL &&
+	 * !((subordinatingConjunctionTag && relativizerTag) || conjunctionTag))
 	 * 
 	 * // למנוע הופעת והיש שהיש && !(hAttributei ==
-	 * ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE && posi ==
-	 * ENUM_POS.EXISTENTIAL)
+	 * ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE && posi == ENUM_POS.EXISTENTIAL)
 	 * 
-	 * //
-	 * /////////////////////////////////////////////////////////////////////////
+	 * // /////////////////////////////////////////////////////////////////////////
 	 * // Pronoun //
 	 * /////////////////////////////////////////////////////////////////////////
 	 * 
-	 * // למנוע הופעת ניתוח כינוי גוף ל- בהם, להם - הניתוח צריך להיות // של מילת
-	 * יחס // אבל אנחנו רוצים לאפשר בכל"ם עם מספרים נטויים - בשלושתנו //
-	 * בארבעתנו // && !(prepositionTag // && basePronounTypei ==
-	 * BASE_PRONOUN_TYPE_PERSONAL && // suffixFunctioni !=
-	 * SUFFIX_FUNCTION_PRONOMIAL) // לפי רשימה של נועם - כזה הלזו זהו לא יקבלו
-	 * בכלם // && !(prepositionTag && basePronounTypei == //
-	 * BASE_PRONOUN_TYPE_DEMONSTRATIVE) // כינויי גוף מסוג שאלה מקבלים בכל
-	 * "ם עלפ"י העיול הספציפי - לכן // נכליל שלא ועבוא עיולים מסויימים נשתמש
-	 * בשדה // תחילית בטבלת inflections // לסמן אם מקבל תחילית בכל"ם או לא &&
-	 * !((prepLAMED || prepBET || prepMEM || prepKAF || adverbKAF) && posi ==
-	 * ENUM_POS.PRONOUN && prefixPerEntry == 'u')
+	 * // למנוע הופעת ניתוח כינוי גוף ל- בהם, להם - הניתוח צריך להיות // של מילת יחס
+	 * // אבל אנחנו רוצים לאפשר בכל"ם עם מספרים נטויים - בשלושתנו // בארבעתנו // &&
+	 * !(prepositionTag // && basePronounTypei == BASE_PRONOUN_TYPE_PERSONAL && //
+	 * suffixFunctioni != SUFFIX_FUNCTION_PRONOMIAL) // לפי רשימה של נועם - כזה הלזו
+	 * זהו לא יקבלו בכלם // && !(prepositionTag && basePronounTypei == //
+	 * BASE_PRONOUN_TYPE_DEMONSTRATIVE) // כינויי גוף מסוג שאלה מקבלים בכל "ם עלפ"י
+	 * העיול הספציפי - לכן // נכליל שלא ועבוא עיולים מסויימים נשתמש בשדה // תחילית
+	 * בטבלת inflections // לסמן אם מקבל תחילית בכל"ם או לא && !((prepLAMED ||
+	 * prepBET || prepMEM || prepKAF || adverbKAF) && posi == ENUM_POS.PRONOUN &&
+	 * prefixPerEntry == 'u')
 	 * 
 	 * && !((prepBET && prepKAF) && posi == ENUM_POS.PRONOUN) && !(posi ==
 	 * ENUM_POS.PRONOUN && hAttributei == ENUM_HATTRIBUTE.UNSPECIFIED &&
-	 * definiteArticleTag) // && !(prefixPerEntry.equals("unspecified") && posi
-	 * == PRONOUN) // && !(prefix.endsWith(prefixPerEntry) && prepositionTag &&
-	 * // basePronounTypei == BASE_PRONOUN_TYPE_INTERROGATIVE) // מתנהגים כמו
-	 * כינויי גוף שאלה // && !(prefix.endsWith(prefixPerEntry) && prepositionTag
-	 * && // basePronounTypei == BASE_PRONOUN_TYPE_PERSONAL) //
+	 * definiteArticleTag) // && !(prefixPerEntry.equals("unspecified") && posi ==
+	 * PRONOUN) // && !(prefix.endsWith(prefixPerEntry) && prepositionTag && //
+	 * basePronounTypei == BASE_PRONOUN_TYPE_INTERROGATIVE) // מתנהגים כמו כינויי
+	 * גוף שאלה // && !(prefix.endsWith(prefixPerEntry) && prepositionTag && //
+	 * basePronounTypei == BASE_PRONOUN_TYPE_PERSONAL) //
 	 * ///////////////Quantifier//////////////////////////////////////// &&
 	 * !(definiteArticleTag && posi == ENUM_POS.QUANTIFIER && type !=
 	 * QUANTIFIER_TYPE_PARTITIVE)
 	 * 
-	 * //
-	 * /////////////////////////////////////////////////////////////////////////
+	 * // /////////////////////////////////////////////////////////////////////////
 	 * // / verbs //
-	 * /////////////////////////////////////////////////////////////////////////
-	 * // אנו מעוניינים למנוע הופעה של ב\כ\ל\מ\ש\לכש\ ועוד כתחילית עם // ציווי
-	 * אבל כן נאפשר הופעת ו+ ציווי - ולכי && !(posi == ENUM_POS.VERB && tensei
-	 * == ENUM_TENSE.IMPERATIVE && (prepLAMED || prepBET || prepMEM || prepKAF
-	 * || adverbKAF || subConOrRelSHIN || tempSubConKAFSHIN || tempSubConBETSHIN
-	 * || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN))
+	 * ///////////////////////////////////////////////////////////////////////// //
+	 * אנו מעוניינים למנוע הופעה של ב\כ\ל\מ\ש\לכש\ ועוד כתחילית עם // ציווי אבל כן
+	 * נאפשר הופעת ו+ ציווי - ולכי && !(posi == ENUM_POS.VERB && tensei ==
+	 * ENUM_TENSE.IMPERATIVE && (prepLAMED || prepBET || prepMEM || prepKAF ||
+	 * adverbKAF || subConOrRelSHIN || tempSubConKAFSHIN || tempSubConBETSHIN ||
+	 * tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN))
 	 * 
 	 * // לא יופיעו בכל"ם לפני פעלים בעבר ועתיד && !(prepositionTag && (posi ==
-	 * ENUM_POS.VERB && (tensei == ENUM_TENSE.PAST || tensei ==
-	 * ENUM_TENSE.FUTURE)))
+	 * ENUM_POS.VERB && (tensei == ENUM_TENSE.PAST || tensei == ENUM_TENSE.FUTURE)))
 	 * 
 	 * // למנוע ניתוח של כ+מלאך מ+מלאך ל+מלאך ב+מלאך אבל לאפשר ניתוח של // למלאך
-	 * במלאך כלומר תחיליות ב ול יופיעו // כחלק מהצורה ולא כתחיליות כי מייצרים
-	 * אותן // לאפשר ניתוח של בלהלביש ובלשמור && !(prepositionTag && tensei ==
+	 * במלאך כלומר תחיליות ב ול יופיעו // כחלק מהצורה ולא כתחיליות כי מייצרים אותן
+	 * // לאפשר ניתוח של בלהלביש ובלשמור && !(prepositionTag && tensei ==
 	 * ENUM_TENSE.INFINITIVE && suffixFunctioni ==
 	 * ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_ACCUSATIVE_OR_NOMINATIVE &&
 	 * base.charAt(0) != 'l' && base.charAt(0) != 'b')
 	 * 
-	 * // למנוע ניתוח של בבשמור && !(prepBET && posi == ENUM_POS.VERB && tensei
-	 * == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'b')
+	 * // למנוע ניתוח של בבשמור && !(prepBET && posi == ENUM_POS.VERB && tensei ==
+	 * ENUM_TENSE.INFINITIVE && base.charAt(0) == 'b')
 	 * 
-	 * // למנוע ניתוח של ככשמור && !(prepKAF && posi == ENUM_POS.VERB && tensei
-	 * == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'k')
+	 * // למנוע ניתוח של ככשמור && !(prepKAF && posi == ENUM_POS.VERB && tensei ==
+	 * ENUM_TENSE.INFINITIVE && base.charAt(0) == 'k')
 	 * 
-	 * // למנוע ניתוח של ממשמור && !(prepMEM && posi == ENUM_POS.VERB && tensei
-	 * == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'm')
+	 * // למנוע ניתוח של ממשמור && !(prepMEM && posi == ENUM_POS.VERB && tensei ==
+	 * ENUM_TENSE.INFINITIVE && base.charAt(0) == 'm')
 	 * 
-	 * // למנוע ניתוח של ללשמור && !(prepLAMED && posi == ENUM_POS.VERB &&
-	 * tensei == ENUM_TENSE.INFINITIVE && base.charAt(0) == 'l')
+	 * // למנוע ניתוח של ללשמור && !(prepLAMED && posi == ENUM_POS.VERB && tensei ==
+	 * ENUM_TENSE.INFINITIVE && base.charAt(0) == 'l')
 	 * 
 	 * && !(prepositionTag && (posi == ENUM_POS.INDEPENDENTINFINITIVE))
 	 * 
-	 * // //////////////////////////////////////////////////////////////////////
-	 * // / (interjection) מילת שאלה ,(interrogative) מילת קריאה //
+	 * // ////////////////////////////////////////////////////////////////////// //
+	 * / (interjection) מילת שאלה ,(interrogative) מילת קריאה //
 	 * ///////////////////////////////////////////////////////////////////// &&
 	 * !((subConOrRelSHIN || tempSubConKAFSHIN || tempSubConMEMSHIN ||
 	 * tempSubConLAMEDKAFSHIN) && ( // כיכבתי כי לא נותן לנתח ש+הרי // (posi ==
@@ -1685,98 +1668,90 @@ public class TokenizationParser extends DefaultHandler  {
 	 * && !(prepositionTag && posi == ENUM_POS.INTERROGATIVE && type !=
 	 * INTERROGATIVE_TYPE_PRONOUN)
 	 * 
-	 * && !((relativizerTag || subordinatingConjunctionTag ||
-	 * temporalSubConjTag) && posi == ENUM_POS.INTERJECTION)
+	 * && !((relativizerTag || subordinatingConjunctionTag || temporalSubConjTag) &&
+	 * posi == ENUM_POS.INTERJECTION)
 	 * 
-	 * //
-	 * ///////////////////////////////////////////////////////////////////////
-	 * ///////////// // /////////// מילת חיבור //
-	 * ///////////////////////////////
-	 * ////////////////////////////////////////////////////// // כיכבתי כי לא
-	 * נותן לנתח ש+הרי // && !((relativizerTag || subordinatingConjunctionTag ||
-	 * // temporalSubConjTag) && posi == CONJUNCTION) && !(prepositionTag &&
-	 * posi == ENUM_POS.CONJUNCTION)
+	 * // ///////////////////////////////////////////////////////////////////////
+	 * ///////////// // /////////// מילת חיבור // ///////////////////////////////
+	 * ////////////////////////////////////////////////////// // כיכבתי כי לא נותן
+	 * לנתח ש+הרי // && !((relativizerTag || subordinatingConjunctionTag || //
+	 * temporalSubConjTag) && posi == CONJUNCTION) && !(prepositionTag && posi ==
+	 * ENUM_POS.CONJUNCTION)
 	 * 
-	 * //
-	 * ///////////////////////////////////////////////////////////////////////
-	 * ////// // ///////////// שם פרטי //
-	 * ///////////////////////////////////////
+	 * // ///////////////////////////////////////////////////////////////////////
+	 * ////// // ///////////// שם פרטי // ///////////////////////////////////////
 	 * /////////////////////////////////////
 	 * 
-	 * // למנוע הופעה של שם פרטי עם תחילית בש - כמו בשדליה &&
-	 * !(tempSubConBETSHIN && posi == ENUM_POS.PROPERNAME)
+	 * // למנוע הופעה של שם פרטי עם תחילית בש - כמו בשדליה && !(tempSubConBETSHIN &&
+	 * posi == ENUM_POS.PROPERNAME)
 	 * 
-	 * //
-	 * ///////////////////////////////////////////////////////////////////////
+	 * // ///////////////////////////////////////////////////////////////////////
 	 * ////////// // ////// ה' חבויה //
-	 * ///////////////////////////////////////////////////////////////////////
-	 * // כדי למנוע הופעת אנליזה ל-בהילד כהילד להילד && !((prepBET || prepKAF ||
+	 * /////////////////////////////////////////////////////////////////////// //
+	 * כדי למנוע הופעת אנליזה ל-בהילד כהילד להילד && !((prepBET || prepKAF ||
 	 * prepLAMED) && hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_TRUE)
 	 * 
-	 * //
-	 * ///////////////////////////////////////////////////////////////////////
-	 * /////// // תואר הפועל //
-	 * /////////////////////////////////////////////////
+	 * // ///////////////////////////////////////////////////////////////////////
+	 * /////// // תואר הפועל // /////////////////////////////////////////////////
 	 * //////////////////////////////
 	 * 
 	 * && !(prepositionTag && posi == ENUM_POS.ADVERB)
 	 * 
-	 * && !(adverbKAF && (posi == ENUM_POS.PROPERNAME || posi == ENUM_POS.VERB
-	 * // ושלכשעה, ושבכשעה // || posi == NOUN || posi == ENUM_POS.ADJECTIVE ||
-	 * posi == ENUM_POS.PRONOUN || posi == ENUM_POS.PREPOSITION || posi ==
-	 * ENUM_POS.ADVERB || posi == ENUM_POS.CONJUNCTION || posi ==
-	 * ENUM_POS.INTERJECTION || posi == ENUM_POS.INTERROGATIVE || posi ==
-	 * ENUM_POS.NEGATION || posi == ENUM_POS.PARTICIPLE))
+	 * && !(adverbKAF && (posi == ENUM_POS.PROPERNAME || posi == ENUM_POS.VERB //
+	 * ושלכשעה, ושבכשעה // || posi == NOUN || posi == ENUM_POS.ADJECTIVE || posi ==
+	 * ENUM_POS.PRONOUN || posi == ENUM_POS.PREPOSITION || posi == ENUM_POS.ADVERB
+	 * || posi == ENUM_POS.CONJUNCTION || posi == ENUM_POS.INTERJECTION || posi ==
+	 * ENUM_POS.INTERROGATIVE || posi == ENUM_POS.NEGATION || posi ==
+	 * ENUM_POS.PARTICIPLE))
 	 * 
-	 * // למנוע הופעה כפולה עבור תחיליות שמופיעות עם ה ובלי ה - למשל ש // ושה
-	 * כאשר מצטרפים לש"ע או שם פרטי מיודע // && !((prepMEM || subConOrRelSHIN ||
-	 * tempSubConKAFSHIN // || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN) //
-	 * && definiteArticleTag && baseDefinitnessi == //
-	 * BASE_DEFINITNESS_TRUE_TRUE) // רצים ניתוח ש+ב+יידוע +ש"ע שהוא לא נסמך //
-	 * && !((prepLAMED ||prepBET||prepMEM || subConOrRelSHIN || //
-	 * tempSubConKAFSHIN // || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN) &&
-	 * // definiteArticleTag && constructi == CONSTRUCT_TRUE)
+	 * // למנוע הופעה כפולה עבור תחיליות שמופיעות עם ה ובלי ה - למשל ש // ושה כאשר
+	 * מצטרפים לש"ע או שם פרטי מיודע // && !((prepMEM || subConOrRelSHIN ||
+	 * tempSubConKAFSHIN // || tempSubConMEMSHIN || tempSubConLAMEDKAFSHIN) // &&
+	 * definiteArticleTag && baseDefinitnessi == // BASE_DEFINITNESS_TRUE_TRUE) //
+	 * רצים ניתוח ש+ב+יידוע +ש"ע שהוא לא נסמך // && !((prepLAMED ||prepBET||prepMEM
+	 * || subConOrRelSHIN || // tempSubConKAFSHIN // || tempSubConMEMSHIN ||
+	 * tempSubConLAMEDKAFSHIN) && // definiteArticleTag && constructi ==
+	 * CONSTRUCT_TRUE)
 	 * 
-	 * && !((prefPartUnit) && hAttributei ==
-	 * ENUM_HATTRIBUTE.BASE_DEFINITNESS_FALSE && definiteArticleTag)
+	 * && !((prefPartUnit) && hAttributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_FALSE
+	 * && definiteArticleTag)
 	 * 
-	 * //
-	 * ///////////////////////////////////////////////////////////////////////
-	 * // למנוע ל+לגביך // - נחליף את החוק הבא בחוקים יותר מעודנים // צריך עוד
-	 * לבדוק אפשרות זאת && !(prepositionTag && posi == ENUM_POS.PREPOSITION) //
-	 * && !(subConOrRelSHIN && posi ==PREPOSITION) // && !(prefix.endsWith("k")
-	 * && base.startsWith("k") && posi == // PREPOSITION) // &&
-	 * !(prefix.endsWith("l") && base.startsWith("l") && posi == // PREPOSITION)
-	 * // /////////////////////////////////////////////////////////////////////
+	 * // /////////////////////////////////////////////////////////////////////// //
+	 * למנוע ל+לגביך // - נחליף את החוק הבא בחוקים יותר מעודנים // צריך עוד לבדוק
+	 * אפשרות זאת && !(prepositionTag && posi == ENUM_POS.PREPOSITION) // &&
+	 * !(subConOrRelSHIN && posi ==PREPOSITION) // && !(prefix.endsWith("k") &&
+	 * base.startsWith("k") && posi == // PREPOSITION) // && !(prefix.endsWith("l")
+	 * && base.startsWith("l") && posi == // PREPOSITION) //
+	 * /////////////////////////////////////////////////////////////////////
 	 * 
 	 * // למנוע כ+אל ב+יש && !(prepositionTag && posi == ENUM_POS.MODAL)
 	 * 
-	 * // לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ && !(prepositionTag && posi
-	 * == ENUM_POS.COPULA)
+	 * // לפי בקשת מני, אלון לא מסכים - נתווכח אח"כ && !(prepositionTag && posi ==
+	 * ENUM_POS.COPULA)
 	 * 
 	 * // participleType handling && !((posi == ENUM_POS.PARTICIPLE || posi ==
 	 * ENUM_POS.PASSIVEPARTICIPLE) && !conjunctionTag && type ==
 	 * PARTICIPLE_TYPE_ADJECTIVE) && !((posi == ENUM_POS.PARTICIPLE || posi ==
-	 * ENUM_POS.PASSIVEPARTICIPLE) && (!conjunctionTag && !subConOrRelSHIN) &&
-	 * type == PARTICIPLE_TYPE_VERB)
+	 * ENUM_POS.PASSIVEPARTICIPLE) && (!conjunctionTag && !subConOrRelSHIN) && type
+	 * == PARTICIPLE_TYPE_VERB)
 	 * 
 	 * // ///////////////////////////////////////////////////////////////// //
 	 * ///////////QUANTIFIER //
 	 * ////////////////////////////////////////////////////////// && !(posi ==
 	 * ENUM_POS.QUANTIFIER && type == QUANTIFIER_TYPE_PARTITIVE && constructi ==
-	 * ENUM_STATUS.CONSTRUCT_FALSE && !definiteArticleTag) // &&
-	 * !((conjunctionTag || definiteArticleTag || subConOrRelSHIN // ||
-	 * tempSubConKAFSHIN || tempSubConMEMSHIN || // tempSubConLAMEDKAFSHIN) //
-	 * && posi == VERB && tensei == TENSE_INFINITIVE) //
+	 * ENUM_STATUS.CONSTRUCT_FALSE && !definiteArticleTag) // && !((conjunctionTag
+	 * || definiteArticleTag || subConOrRelSHIN // || tempSubConKAFSHIN ||
+	 * tempSubConMEMSHIN || // tempSubConLAMEDKAFSHIN) // && posi == VERB && tensei
+	 * == TENSE_INFINITIVE) //
 	 * ///////////////////////////////////////////////////////////////// //
 	 * ///////////PREPOSITION //
-	 * ////////////////////////////////////////////////////////// // לא לאפשר
-	 * ש+לי - מותר רק שלי // כן לאפשר ש+בי - לכן אי אפשר חוק כללי וצריך לבדוק
-	 * שמדובר בעיול // ספציפי && !((base.equals("li") || base.equals("lk") ||
-	 * base.equals("lw") || base.equals("lh") || base.equals("lnw") ||
-	 * base.equals("lkm") || base.equals("lkn") || base.equals("lhm") || base
-	 * .equals("lhn")) && prefix.equals("e") && posi == ENUM_POS.PREPOSITION &&
-	 * suffixFunctioni == ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL))
+	 * ////////////////////////////////////////////////////////// // לא לאפשר ש+לי -
+	 * מותר רק שלי // כן לאפשר ש+בי - לכן אי אפשר חוק כללי וצריך לבדוק שמדובר בעיול
+	 * // ספציפי && !((base.equals("li") || base.equals("lk") || base.equals("lw")
+	 * || base.equals("lh") || base.equals("lnw") || base.equals("lkm") ||
+	 * base.equals("lkn") || base.equals("lhm") || base .equals("lhn")) &&
+	 * prefix.equals("e") && posi == ENUM_POS.PREPOSITION && suffixFunctioni ==
+	 * ENUM_SUFFIX_FUNCTION.SUFFIX_FUNCTION_PRONOMIAL))
 	 * 
 	 * validate = true;
 	 * 
@@ -1786,9 +1761,9 @@ public class TokenizationParser extends DefaultHandler  {
 	// ------------------------------------------------------------------------------------------------------------
 
 	/**
-	 * This method contains the rules for a token to stand alone without prefix
-	 * The decision whether it is valid depends on the part of speech of the
-	 * base and more attributes
+	 * This method contains the rules for a token to stand alone without prefix The
+	 * decision whether it is valid depends on the part of speech of the base and
+	 * more attributes
 	 * 
 	 * @param transliterated
 	 * @param inflectedRecordNum
@@ -1811,12 +1786,11 @@ public class TokenizationParser extends DefaultHandler  {
 		ENUM_SUFFIX_FUNCTION suffixFunctioni = inflectedRecordNum.getSuffixFunction();
 		ENUM_STATUS constructi = inflectedRecordNum.getStatus();
 
-		if (!(haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE)
-				&& !(posi == ENUM_POS.QUANTIFIER && haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_FALSE
-						&& constructi == ENUM_STATUS.CONSTRUCT_FALSE)
-						// שונה בגלל ליצואן
-						// && !((posi != ENUM_POS.PRONOUN )&& haaributei ==
-						// ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
+		if (!(haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_FALSE) && !(posi == ENUM_POS.QUANTIFIER
+				&& haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_TRUE_FALSE && constructi == ENUM_STATUS.CONSTRUCT_FALSE)
+		// שונה בגלל ליצואן
+		// && !((posi != ENUM_POS.PRONOUN )&& haaributei ==
+		// ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
 				&& !((posi != ENUM_POS.PRONOUN && posi != ENUM_POS.PROPERNAME)
 						&& haaributei == ENUM_HATTRIBUTE.BASE_DEFINITNESS_REQUIRED_TRUE)
 				&& !(posi == ENUM_POS.VERB && tensei == ENUM_TENSE.INFINITIVE

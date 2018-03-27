@@ -8,6 +8,9 @@
 
 package lexicon.jaxb;
 
+import javax.xml.namespace.QName;
+
+import lexicon.jaxb.impl.JAXBVersion;
 
 /**
  * This object contains factory methods for each 
@@ -27,10 +30,10 @@ public class ObjectFactory
     extends lexicon.jaxb.impl.runtime.DefaultJAXBContextImpl
 {
 
-    private static java.util.HashMap defaultImplementations = new java.util.HashMap(136, 0.75F);
-    private static java.util.HashMap rootTagMap = new java.util.HashMap();
+    private static java.util.HashMap<Class, String> defaultImplementations = new java.util.HashMap<Class, String>(136, 0.75F);
+    private static java.util.HashMap<QName, Class> rootTagMap = new java.util.HashMap<QName, Class>();
     public final static lexicon.jaxb.impl.runtime.GrammarInfo grammarInfo = new lexicon.jaxb.impl.runtime.GrammarInfoImpl(rootTagMap, defaultImplementations, (lexicon.jaxb.ObjectFactory.class));
-    public final static java.lang.Class version = (lexicon.jaxb.impl.JAXBVersion.class);
+    public final static java.lang.Class<JAXBVersion> version = (lexicon.jaxb.impl.JAXBVersion.class);
 
     static {
         defaultImplementations.put((lexicon.jaxb.AdverbExceptionType.class), "lexicon.jaxb.impl.AdverbExceptionTypeImpl");

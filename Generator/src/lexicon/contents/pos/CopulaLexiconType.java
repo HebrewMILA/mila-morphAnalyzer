@@ -9,8 +9,9 @@ package lexicon.contents.pos;
 import java.util.ArrayList;
 import java.util.List;
 import lexicon.contents.Content;
+import lexicon.contents.EmptyContent;
 import lexicon.contents.exception_types.CopulaExceptionType;
-import lexicon.contents.exception_types.VerbExceptionType;
+import lexicon.jaxb.impl.CopulaExceptionTypeImpl;
 
 /**
  * @author daliabo
@@ -91,7 +92,7 @@ public class CopulaLexiconType extends Content implements lexicon.jaxb.CopulaLex
 	}
 
 	public void load() {
-		List actions = getActions();
+		List<CopulaExceptionTypeImpl> actions = getActions();
 		getAddOrReplaceOrRemove().clear();
 		getAddOrReplaceOrRemove().addAll(actions);
 		setGender(getString("gender"));
@@ -105,7 +106,7 @@ public class CopulaLexiconType extends Content implements lexicon.jaxb.CopulaLex
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			CopulaExceptionType exceptionType = new CopulaExceptionType(
-					(lexicon.jaxb.CopulaExceptionType) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.add(id);
 		}
@@ -116,7 +117,7 @@ public class CopulaLexiconType extends Content implements lexicon.jaxb.CopulaLex
 		int result = 0;
 		for (int i = 0; i < getAddOrReplaceOrRemove().size(); i++) {
 			CopulaExceptionType exceptionType = new CopulaExceptionType(
-					(lexicon.jaxb.CopulaExceptionType) getAddOrReplaceOrRemove().get(i));
+					getAddOrReplaceOrRemove().get(i));
 			exceptionType.setAction(getAction(getAddOrReplaceOrRemove().get(i)));
 			result += exceptionType.update();
 		}
@@ -141,9 +142,9 @@ public class CopulaLexiconType extends Content implements lexicon.jaxb.CopulaLex
 		return "";
 	}
 
-	public java.util.List getActions() {
-		List actions = getContents("copula_exception_type", "id", id);
-		ArrayList result = new ArrayList();
+	public java.util.List<CopulaExceptionTypeImpl> getActions() {
+		List<EmptyContent> actions = getContents("copula_exception_type", "id", id);
+		ArrayList<CopulaExceptionTypeImpl> result = new ArrayList<CopulaExceptionTypeImpl>();
 		for (int i = 0; i < actions.size(); i++) {
 			Content content = (Content) actions.get(i);
 			if (content.getString("action").equals("add")) {
@@ -268,7 +269,7 @@ public class CopulaLexiconType extends Content implements lexicon.jaxb.CopulaLex
 
 	}
 
-	public java.util.List getAddOrReplaceOrRemove() {
+	public java.util.List<CopulaExceptionTypeImpl> getAddOrReplaceOrRemove() {
 		return content.getAddOrReplaceOrRemove();
 	}
 
