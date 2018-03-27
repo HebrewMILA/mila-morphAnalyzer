@@ -7,12 +7,22 @@
 	import = "java.util.regex.Pattern"
 %>
 <%!
-private static final Path mainTempDir = Paths.get(System.getProperty("java.io.tmpdir")+"/online_tagger");
+//private static final Path mainTempDir = Paths.get(System.getProperty("java.io.tmpdir")+"/online_tagger");
+private static final Path mainTempDir = Paths.get(System.getProperty("java.io.tmpdir"));
 private static final boolean runEntities = false;
 
 static Path makeTempPath() throws IOException {
-	Path res = Files.createTempDirectory(mainTempDir, null);
-	res.toFile().deleteOnExit();
+	Path res = null;
+	try
+	{
+		res = Files.createTempDirectory(mainTempDir, null);
+		res.toFile().deleteOnExit();
+	}
+	catch(Exception e)
+	{
+		System.out.println(e.getMessage());
+	}
+	
 	return res;
 }
 
