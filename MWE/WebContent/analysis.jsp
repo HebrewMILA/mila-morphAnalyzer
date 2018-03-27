@@ -97,8 +97,9 @@ final String raw_text = request.getParameter("input_text");
 if (raw_text == null || "".equals(raw_text.trim())) {
 	response.sendRedirect("error.xml");
 	return;
-}
-final Path localTempdir = makeTempPath();
+}%>
+<%final Path localTempdir = makeTempPath();%>
+
+<%
 response.sendRedirect(String.format("view.xml?id=%s", extractID(localTempdir)));
-final String entityTaggedFilename = prepareXML(raw_text.trim(), localTempdir.toString());
-%>
+final String entityTaggedFilename = prepareXML(raw_text.trim(), localTempdir.toString());%>
