@@ -317,7 +317,7 @@ public class MorphMult2TaggerFormat implements Constants {
 						outputString.append(hebWord + "\n\t(yyDASH yyDASH)\n");
 						punctuation = true;
 						// otherdash
-					} else if (hebWord.charAt(0) == '�') {
+					/*} else if (hebWord.charAt(0) == '�') {
 						bw.write(hebWord);
 						bw.newLine();
 						bw.write("\t");
@@ -332,7 +332,7 @@ public class MorphMult2TaggerFormat implements Constants {
 						bw.write("(yyUDASH yyUDASH)");
 						bw.newLine();
 						outputString.append(hebWord + "\n\t(yyUDASH yyUDASH)\n");
-						punctuation = true;
+						punctuation = true;*/
 					} else if (hebWord.equals("=")) {
 						bw.write(hebWord);
 						bw.newLine();

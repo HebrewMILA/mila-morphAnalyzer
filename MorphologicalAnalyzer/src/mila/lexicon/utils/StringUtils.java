@@ -384,9 +384,9 @@ public class StringUtils {
 		int possiblePrefixLen = possiblePrefix.length();
 		if (possiblePrefixLen > 0) {
 			char endChar = possiblePrefix.charAt(possiblePrefixLen - 1);
-			if (endChar == '�' || endChar == '�') {
+			/*if (endChar == '�' || endChar == '�') {
 				return rt;
-			}
+			}*/
 
 			possiblePrefix = Translate.Heb2Eng(possiblePrefix);
 
